@@ -149,6 +149,8 @@ def compose(f, incident):
     if s:
         L.append(("INSIDE: 3D scan of this floor" if f["scan_exact"] else f"INSIDE: no scan of {fl}; nearest is floor {s['floor']} (same core, layout may differ)")
                  + f"  |  {len(s['sweeps'])} scan points  |  {s['link']}")
+    else:  # never borrow rooms or routes from somewhere else: say plainly there is nothing
+        L.append("INSIDE: no interior scan" + (" with a known floor" if f["scans"] else " for this building"))
     v = f.get("vision")
     if v:
         w = v["scan_points_with"]

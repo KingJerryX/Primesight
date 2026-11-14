@@ -105,13 +105,14 @@ Make the briefing smart about the inside of the building, make the agent write i
 - **The Matterport code:**
   - It reads the floor from each scan's name and picks the exact floor, or the nearest scanned floor if that one isn't scanned.
   - It downloads the floorplan and builds a graph of the scan points that you can walk.
-- **The agent (`agent.py`, deepagents):** runs end to end in about 30 s for $0.30-0.37 (Opus 5.5).
+- **The agent (`agent.py`, deepagents):** runs end to end on Opus 5.5 (cost and time below, under Grader).
   - **Tools:** `find_building`, `gather_building`, `add_building_note` (append-only, dated).
   - **Files:** one virtual file system. `/buildings/` (crew notes on disk), `/scans/` (SAM 3 results on disk) and `/playbook/` (our rules, `primesight/agentfs/`) are read-only to the agent; everything else is per-run scratch.
   - **Memory:** `primesight/agentfs/AGENTS.md`, always loaded: SMS format, facts not orders, notes outrank data, how to handle crew replies.
   - **Skills:** `primesight/agentfs/skills/{fire,medical,hazmat}/SKILL.md`. The agent reads only the one for this call.
   - **Subagents, run in parallel:** `tenant-risk` returns structured flags (`tenant_flags`); `notify-writer` queues texts for the building engineer and property manager (`texts`).
   - **Threads:** each run_id is a checkpointed thread, so `/ask` answers crew follow-ups in about 3 s for $0.05.
+  - **Grader (RubricMiddleware):** every briefing is checked against a rubric (12 lines, facts only from tools, NOT KNOWN line, no orders, risks marked as guesses) and every crew answer against a shorter one. On a fail the agent revises; the verdict shows as `graded` in the trace. With the grader a run is about 50-60 s and $0.42-0.48.
   - **Trace:** subagent steps appear as `helper:<tool>` lines.
 
 ### Your tasks

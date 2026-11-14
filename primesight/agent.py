@@ -8,10 +8,11 @@ What deepagents does here:
 - memory: /playbook/AGENTS.md is always in the prompt; skills: one playbook per incident type, read on demand
 - subagents: tenant-risk (structured flags), notify-writer (texts for building staff), run in parallel
 - checkpointer: each run_id is a thread, so crew replies ("CREW: which elevator?") continue it
+- RubricMiddleware: a grader checks each answer against a rubric; on a fail the agent revises (max 2 rounds)
 """
 import csv, functools, json, os, re, sys
 from dotenv import load_dotenv
-from deepagents import FilesystemPermission, create_deep_agent
+from deepagents import FilesystemPermission, RubricMiddleware, create_deep_agent
 from deepagents.backends import CompositeBackend, FilesystemBackend, StateBackend
 from langchain_anthropic import ChatAnthropic
 from langchain_core.runnables import RunnableConfig
@@ -132,8 +133,25 @@ Steps:
 4. Read /buildings/<property_id>.md if it exists: crew notes from earlier incidents.
 5. Write the final briefing (rules in your memory and the skill), then save one line about this incident with add_building_note.
 
-Files: /buildings/ crew notes (read only; use add_building_note), /scans/<scan id>.json SAM 3 results per scan point, /playbook/ your rules.
+Files: /buildings/ crew notes (read only; use add_building_note), /playbook/ your rules, /scans/<scan id>.json SAM 3 results
+per scan point. gather_building already summarizes the scan results in "vision"; if vision is null there is no /scans file, so don't look.
 Reply with only the briefing text."""
+
+# Graded before anything goes out: a grader model checks the final text against these, and the agent revises on a fail.
+RUBRIC_BRIEF = """The final message is the crew briefing. Criteria:
+1. At most 12 lines, plain ASCII, no markdown or bullets.
+2. Every fact appears in a tool result in the transcript (gather_building, crew notes, tenant-risk). Nothing invented: no stair, standpipe or AED locations, names, entrances or arrival times that the tools did not give.
+3. It has a NOT KNOWN line, and if the 3D scan is from a different floor it says so.
+4. It states facts, not orders: no tactical instructions such as where to search or which stair to use.
+5. Tenant risks inferred from a name only are marked possible or "from name only".
+6. The first line after the header is the most urgent fact for this incident type (fire: people above; medical: elevator or patient location; hazmat: tenant risk)."""
+
+RUBRIC_REPLY = """The final message answers a crew reply (the latest message starting "CREW:"). Criteria:
+1. At most 3 lines, plain ASCII.
+2. Facts come only from tool results or crew notes in the transcript; anything else is said to be not known.
+3. If the crew reported something about the building, add_building_note was called for it."""
+
+GRADER = RubricMiddleware(model=ChatAnthropic(model=MODEL, max_tokens=2000), max_iterations=2)
 
 # One file view for the agent: persistent folders routed to disk, everything else is per-run scratch in graph state.
 BACKEND = CompositeBackend(default=StateBackend(), routes={
@@ -158,6 +176,7 @@ def build():
         permissions=READ_ONLY,
         backend=BACKEND,
         checkpointer=SAVER,
+        middleware=[GRADER],
     )
 
 
@@ -165,14 +184,16 @@ def _text(m):
     return m.content if isinstance(m.content, str) else "".join(b.get("text", "") for b in m.content if isinstance(b, dict))
 
 
-def run(call_text, run_id=None):
+def run(call_text, run_id=None, rubric=RUBRIC_BRIEF):
     """One turn on thread run_id (a new call, or a CREW: reply). The trace includes the subagents' own steps."""
     from langchain_core.callbacks import get_usage_metadata_callback
     run_id = run_id or "local"
+    cfg = {"configurable": {"thread_id": run_id}}
+    seen = len(build().get_state(cfg).values.get("_rubric_evaluations") or [])
     out = None
     with get_usage_metadata_callback() as usage:  # counts every model call, subagents included
-        for ns, step in build().stream({"messages": [{"role": "user", "content": call_text}]},
-                                       {"configurable": {"thread_id": run_id}}, stream_mode="updates", subgraphs=True):
+        for ns, step in build().stream({"messages": [{"role": "user", "content": call_text}], "rubric": rubric},
+                                       cfg, stream_mode="updates", subgraphs=True):
             who = "helper" if ns else "agent"  # ns is non-empty inside a subagent
             for upd in step.values():
                 for m in (upd or {}).get("messages", []) if isinstance(upd, dict) else []:
@@ -181,8 +202,11 @@ def run(call_text, run_id=None):
                         trace.log(run_id, tc["name"] if who == "agent" else f"helper:{tc['name']}", json.dumps(tc["args"])[:200])
                     if not ns and getattr(m, "name", None) == "task" and '"flags"' in _text(m):
                         FLAGS[run_id] = json.loads(_text(m))["flags"]
-                    if not ns:
+                    if not ns and m.type == "ai":  # grader feedback comes back as a human message: skip it
                         out = m
+    for ev in (build().get_state(cfg).values.get("_rubric_evaluations") or [])[seen:]:  # this turn's grades
+        gaps = "; ".join(f"{c['name']}: {c.get('gap', '')}" for c in ev["criteria"] if not c["passed"])
+        trace.log(run_id, "graded", f"{ev['result']}" + (f" - {gaps}" if gaps else ""))
     tin = sum(u.get("input_tokens", 0) for u in usage.usage_metadata.values())
     tout = sum(u.get("output_tokens", 0) for u in usage.usage_metadata.values())
     cost = f"{tin} in / {tout} out tokens, ~${(tin * 4 + tout * 20) / 1e6:.2f}"  # all Opus 5.5 list price, no cache discount
@@ -194,7 +218,7 @@ def run(call_text, run_id=None):
 def ask(run_id, text, call_text=None):
     """A crew reply on an earlier run's thread. If the thread is gone (server restart, replayed run), resend the call."""
     known = build().get_state({"configurable": {"thread_id": run_id}}).values.get("messages")
-    return run((f"Original call: {call_text}\n" if not known and call_text else "") + f"CREW: {text}", run_id)
+    return run((f"Original call: {call_text}\n" if not known and call_text else "") + f"CREW: {text}", run_id, RUBRIC_REPLY)
 
 
 if __name__ == "__main__":
