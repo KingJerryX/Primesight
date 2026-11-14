@@ -10,3 +10,6 @@ probes/out/
 output/
 
 __pycache__/
+
+# per-building caches (contain sponsor-derived data)
+cache/
