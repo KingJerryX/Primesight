@@ -1,0 +1,12 @@
+# secrets
+.env
+
+# sponsor data and materials: licensed for the hackathon, never publish
+costar-hackathon-kit/
+Vexcel_API_Hackathon_Tutorial_PDF_PY/
+
+# generated imagery (Vexcel / Matterport content)
+probes/out/
+output/
+
+__pycache__/
