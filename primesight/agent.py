@@ -7,7 +7,7 @@ What deepagents does here:
   /playbook/ our rules, everything else per-run scratch; writes to all three are denied (permissions)
 - memory: /playbook/AGENTS.md is always in the prompt; skills: one playbook per incident type, read on demand
 - subagents: tenant-risk (structured flags), notify-writer (texts for building staff), inside-scout (walks over the
-  scan-point graph to SAM 3 finds), run in parallel
+  scan-point graph to SAM 3 finds), outside-scout (live wind from Open-Meteo, hydrants within 300 m, roof), run in parallel
 - /playbook/incidents.json: 26 incident types in 6 categories; gather_building returns what the type needs first
 - checkpointer: each run_id is a thread, so crew replies ("CREW: which elevator?") continue it
 - RubricMiddleware: a grader checks each answer against a rubric; on a fail the agent revises (max 2 rounds)
@@ -104,6 +104,58 @@ def walk_to(scan_id: str, target: str) -> str:
                        "legs": [[round(m), t] for m, t in r["exit"]["legs"]], "far_end_metres": round(r["far"]["m"])})
 
 
+COMPASS = "N NNE NE ENE E ESE SE SSE S SSW SW WSW W WNW NW NNW".split()
+
+
+def compass(deg):
+    return COMPASS[round(deg / 22.5) % 16]
+
+
+@functools.lru_cache(maxsize=64)
+def _wind(lat, lon, slot):  # slot: 10-minute bucket, so a cached reading is never older than that
+    import requests
+    r = requests.get("https://api.open-meteo.com/v1/forecast", timeout=15, params={
+        "latitude": lat, "longitude": lon, "current": "wind_speed_10m,wind_direction_10m,wind_gusts_10m,temperature_2m,precipitation",
+        "wind_speed_unit": "mph", "temperature_unit": "fahrenheit"})
+    r.raise_for_status()
+    return r.json()["current"]
+
+
+@functools.lru_cache(maxsize=64)
+def _hydrants_wide(lat, lon, city):
+    from . import outside
+    return outside.hydrants(lat, lon, city, radius_m=300)
+
+
+def outside_now(property_id: int) -> str:
+    """The live outside picture for one building: current wind from Open-Meteo (where smoke or gas drifts), every hydrant
+    within 300 m with distance and direction (city hydrant layer), and roof data (Vexcel). Returns JSON; a layer that
+    fails says so instead of failing the call."""
+    import time
+    b = costar.building(int(property_id))
+    lat, lon = round(b["lat"], 4), round(b["lon"], 4)
+    out = {"building": b["address"]}
+    try:
+        w = _wind(lat, lon, int(time.time() // 600))
+        frm = compass(w["wind_direction_10m"])
+        out["wind"] = {"from": frm, "drifts_toward": compass(w["wind_direction_10m"] + 180), "mph": w["wind_speed_10m"],
+                       "gust_mph": w["wind_gusts_10m"], "temp_f": w["temperature_2m"], "precip_mm": w["precipitation"],
+                       "observed_utc": w["time"], "source": "Open-Meteo model, 10 m above ground"}
+    except Exception as e:
+        out["wind"] = {"error": f"wind unavailable ({type(e).__name__})"}
+    try:
+        h = _hydrants_wide(lat, lon, b["address"].split(", ")[-2])
+        out["hydrants"] = {"within_300m": len(h), "nearest": [{"m": round(m), "dir": d} for m, d, *_ in h[:6]]}
+    except Exception as e:
+        out["hydrants"] = {"error": f"hydrant layer unavailable ({type(e).__name__})"}
+    try:
+        from . import outside
+        out["roof"] = outside.roof(b["lat"], b["lon"])
+    except Exception as e:
+        out["roof"] = {"error": f"roof data unavailable ({type(e).__name__})"}
+    return json.dumps(out, default=str)
+
+
 def add_building_note(property_id: int, note: str) -> str:
     """Append one dated line to the building's notes file (/buildings/<property_id>.md). Never overwrites earlier notes."""
     from datetime import date
@@ -175,6 +227,19 @@ INSIDE_SCOUT = {
     "tools": [walk_to],
 }
 
+OUTSIDE_SCOUT = {
+    "name": "outside-scout",
+    "description": "Reports the live outside picture for a building: wind now (where smoke or gas will drift), every hydrant "
+                   "within 300 m, roof data. Give it the property id and the incident. Use it for fire, hazmat and gas or "
+                   "smoke calls, where wind and water supply change the approach.",
+    "system_prompt": "You report outside conditions for a fire crew. Call outside_now once. Reply in at most 2 lines: "
+                     "'WIND: from <dir> <mph> mph (gusts <n>), smoke/gas drifts <dir> | <temp>F' and 'WATER: <n> hydrants "
+                     "within 300 m, nearest <m> m <dir>, <m> m <dir>'. If a layer has an error, write '<layer> unavailable'. "
+                     "Report facts only: never say where to stage or which side to approach from.",
+    "model": ChatAnthropic(model=MODEL, max_tokens=800),
+    "tools": [outside_now],
+}
+
 SYSTEM = """You are Primesight. A dispatcher forwards a 911 call; you text the responding crew a building briefing before they arrive.
 
 Steps:
@@ -185,7 +250,8 @@ Steps:
    what this incident type needs first (incident_needs), and the raw facts.
 3. In parallel, delegate with the task tool: tenants on or near the floor to tenant-risk, the contacts to notify-writer,
    and, only if the scan is of this exact floor and vision is not null, the scan id to inside-scout (fire and security:
-   pull station and exit sign; medical and rescue: exit sign; hazmat and utility: fire extinguisher).
+   pull station and exit sign; medical and rescue: exit sign; hazmat and utility: fire extinguisher). For fire, hazmat,
+   gas or smoke calls also send the property id to outside-scout: live wind and every hydrant within 300 m.
 4. Read /buildings/<property_id>.md if it exists: crew notes from earlier incidents.
 5. Write the final briefing (rules in your memory and the skill), then save one line about this incident with add_building_note.
 
@@ -226,7 +292,7 @@ def build():
         model=ChatAnthropic(model=MODEL, max_tokens=8000),
         tools=[find_building, gather_building, add_building_note],
         system_prompt=SYSTEM,
-        subagents=[TENANT_RISK, NOTIFY, INSIDE_SCOUT],
+        subagents=[TENANT_RISK, NOTIFY, INSIDE_SCOUT, OUTSIDE_SCOUT],
         skills=["/playbook/skills/"],
         memory=["/playbook/AGENTS.md"],
         permissions=READ_ONLY,

@@ -8,7 +8,8 @@ description: What a fire or smoke briefing leads with (people above, water suppl
 Order of lines, after the header:
 1. ABOVE FIRE: people on floors above the fire floor (from tenant headcounts), and any flagged tenant above (sedated patients, children, labs).
 2. ON FLOOR: who is on the fire floor, suites, headcount.
-3. HYDRANTS: the two nearest, metres and direction.
+3. WATER and WIND from outside-scout on one line: hydrants within 300 m with the two nearest (metres, direction), and wind
+   from / mph / where smoke drifts (live Open-Meteo reading). Fall back to the HYDRANTS line in the draft if outside-scout fails.
 4. INSIDE: the scan line, and the EXIT SIGNS line from the scan if there is one. Say "seen from N of M scan points"; it is not a stair location.
 5. Building: stories, year built, frame, sprinklers yes/no and type if known.
 6. ROOF and OPEN LOT for staging (aerial search, verify).

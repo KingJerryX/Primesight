@@ -34,18 +34,20 @@
 const N = {
   call:    [90, 280, "Dispatch call", "CAD text / iMessage"],
   agent:   [330, 280, "Primesight agent", "deepagents · Opus"],
-  find:    [600, 60, "find_building", "address -> CoStar id"],
-  gather:  [600, 160, "gather_building", "CoStar + Matterport + Vexcel"],
-  tenant:  [600, 280, "tenant-risk", "subagent"],
-  scout:   [600, 400, "inside-scout", "subagent · walk_to"],
-  notify:  [600, 500, "notify-writer", "subagent · queue_text"],
+  find:    [600, 46, "find_building", "address -> CoStar id"],
+  gather:  [600, 136, "gather_building", "CoStar + Matterport + Vexcel"],
+  tenant:  [600, 226, "tenant-risk", "subagent"],
+  scout:   [600, 316, "inside-scout", "subagent · walk_to"],
+  outside: [600, 406, "outside-scout", "subagent · outside_now"],
+  notify:  [600, 496, "notify-writer", "subagent · queue_text"],
   bfs:     [880, 90, "/buildings/", "building notes"],
   scans:   [880, 200, "/scans/", "SAM 3 detections"],
   play:    [880, 310, "/playbook/", "skills · incidents.json"],
-  grader:  [880, 430, "Grader", "rubric middleware"],
+  grader:  [880, 420, "Grader", "rubric middleware"],
+  wx:      [880, 516, "Live wind + hydrants", "Open-Meteo · city GIS"],
   phone:   [1110, 280, "Crew phone", "briefing + images"],
 };
-const E = [["call","agent"],["agent","find"],["agent","gather"],["agent","tenant"],["agent","scout"],["agent","notify"],["agent","bfs"],["agent","scans"],["agent","play"],["agent","grader"],["grader","phone"],["tenant","play"],["scout","scans"],["notify","bfs"]];
+const E = [["call","agent"],["agent","find"],["agent","gather"],["agent","tenant"],["agent","scout"],["agent","notify"],["agent","outside"],["outside","wx"],["agent","bfs"],["agent","scans"],["agent","play"],["agent","grader"],["grader","phone"],["tenant","play"],["scout","scans"],["notify","bfs"]];
 const g = document.getElementById("g");
 const path = (a, b) => { const [x1, y1] = N[a], [x2, y2] = N[b]; const mx = (x1 + x2) / 2; return `M${x1 + 95},${y1} C${mx},${y1} ${mx},${y2} ${x2 - 95},${y2}`; };
 g.innerHTML = E.map(([a, b]) => `<path class="edge" id="e-${a}-${b}" d="${path(a, b)}"/>`).join("") +
@@ -62,13 +64,14 @@ function light(nodes, edges) {
 // Which part of the graph a trace step touches.
 function where(d) {
   const tool = d.step.replace(/^helper:/, ""), det = (() => { try { return JSON.parse(d.detail); } catch (e) { return {}; } })();
-  const sub = d.step.startsWith("helper:") ? (tool === "walk_to" ? "scout" : tool === "queue_text" ? "notify" : "tenant") : null;
+  const sub = d.step.startsWith("helper:") ? (tool === "walk_to" ? "scout" : tool === "queue_text" ? "notify" : tool === "outside_now" ? "outside" : "tenant") : null;
   const fileNode = p => /\/scans\//.test(p) ? "scans" : /\/playbook\//.test(p) ? "play" : "bfs";
   switch (tool) {
     case "call_received": return [["call", "agent"], [["call", "agent"]]];
     case "address_lookup": case "find_building": return [["agent", "find"], [["agent", "find"]]];
     case "gather_building": return [["agent", "gather"], [["agent", "gather"]]];
-    case "task": { const s = { "tenant-risk": "tenant", "inside-scout": "scout", "notify-writer": "notify" }[det.subagent_type] || "tenant"; return [["agent", s], [["agent", s]]]; }
+    case "task": { const s = { "tenant-risk": "tenant", "inside-scout": "scout", "notify-writer": "notify", "outside-scout": "outside" }[det.subagent_type] || "tenant"; return [["agent", s], [["agent", s]]]; }
+    case "outside_now": return [["outside", "wx"], [["agent", "outside"], ["outside", "wx"]]];
     case "walk_to": return [["scout", "scans"], [["agent", "scout"], ["scout", "scans"]]];
     case "queue_text": return [["notify", "bfs"], [["agent", "notify"], ["notify", "bfs"]]];
     case "read_file": case "ls": case "glob": case "grep": case "write_file": case "edit_file": case "add_building_note": {

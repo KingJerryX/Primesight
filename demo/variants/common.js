@@ -92,6 +92,7 @@ function stepLabel(d) {
     case "task": return [`Hands off to ${detail?.subagent_type || "a helper"}`, detail?.description || ""];
     case "queue_text": return ["Queues a text for building staff", detail ? `${detail.to}: ${detail.text}` : d.detail];
     case "walk_to": return ["Walks the scan graph", detail ? `to nearest ${detail.target}` : d.detail];
+    case "outside_now": return ["Checks wind and hydrants now", "Open-Meteo + city hydrant layer"];
     case "add_building_note": return ["Saves a building note", detail?.note || d.detail];    case "graded": return ["Grader verdict", d.detail];
     case "usage": return ["Cost", d.detail];
     case "done": return ["Briefing sent", d.detail];
