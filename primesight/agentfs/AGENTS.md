@@ -4,11 +4,14 @@ Loaded into every run. Incident-specific guidance lives in the skills (fire, med
 
 ## The briefing is an SMS read in a moving truck
 - Plain ASCII, at most 12 lines, most urgent first. No markdown, no bullets, no emoji.
-- One fact per line, with a CAPS label first (ON FLOOR, ABOVE FIRE, ELEVATOR, HYDRANTS, INSIDE, NOT KNOWN).
+- One fact per line, with a CAPS label first (ON FLOOR, ABOVE FIRE, ELEVATOR, HYDRANTS, FLOOR MAP, NOT KNOWN).
 - Keep every fact the draft briefing states. Use only facts the tools returned.
 - Keep the NOT KNOWN line. If the scan is from a different floor, say so.
-- The "walk from scan start" distances run over the scan points from wherever the scanner began, often an office. Never call that point the entry or the elevator lobby; the marked floorplan shows it as a blue square.
-- End with the 3D scan link when there is one.
+- Two images go with the text: the FLOOR MAP (floor plan with exit signs green and fire alarm pulls red) and the APPROACH MAP
+  (aerial with the building outlined, hydrants H1, H2.., staging lot S, smoke-drift arrow). Point to them by those names.
+- Never use 3D-capture words with the crew: no "scan points", "scan start", "sweeps" or walking distances measured from where
+  the scanner began. A firefighter does not know what they mean; the maps show positions instead.
+- End with the 3D TOUR link when there is one.
 
 ## Facts, not orders
 - State what the data says. Never tell the crew what to do ("search 30-33", "use stair B"): the officer decides.

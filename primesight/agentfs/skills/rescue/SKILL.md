@@ -10,7 +10,7 @@ Order of lines, after the header:
 2. WHO HAS KEYS: property manager or building engineer with phone, if known (elevator keys, machine room, fire panel). Never invent a name.
 3. ON FLOOR: tenants and headcount on the incident floor.
 4. BUILDING: construction frame and year built (collapse), roof type and AC units (suspended worker, roof access).
-5. INSIDE: scan line and link; walk distances from the scan start if the scan is this floor.
+5. FLOOR MAP and 3D TOUR lines from the draft.
 6. NOT KNOWN: machine room location, elevator car numbers, and anything else the data doesn't give.
 
 Facts only. Never say which shaft or car the people are in unless the call or a crew note says so.

@@ -21,7 +21,8 @@ def gather(pid, floor):
             gaps.append(f"{name} unavailable ({type(e).__name__})")
             return None
 
-    with ThreadPoolExecutor(6) as ex:
+    with ThreadPoolExecutor(7) as ex:
+        f_wind = ex.submit(soft, "wind", outside.wind, lat, lon)
         f_hyd = ex.submit(soft, "hydrants", outside.hydrants, lat, lon, b["address"].split(", ")[-2])
         f_roof = ex.submit(soft, "roof data", outside.roof, lat, lon)
         f_stage = ex.submit(soft, "staging search", outside.staging, lat, lon)
@@ -58,8 +59,15 @@ def gather(pid, floor):
         if plan_img and frame:
             plan_img = soft("floorplan markup", mark_plan, plan_img, frame, v["sweeps"], vision.get("route")) or plan_img
 
-    last[pid] = {"building": b, "floor": floor, "hydrants": f_hyd.result() or [], "roof": f_roof.result() or {},
-            "staging": f_stage.result() or [], "aerial": f_ortho.result(), "scans": scans, "scan": scan,
+    hyd, roof, stage, w, aerial = f_hyd.result() or [], f_roof.result() or {}, f_stage.result() or [], f_wind.result(), f_ortho.result()
+    if aerial:  # label the plain aerial for the crew; the plain one stays on disk
+        wt = (f"wind from {outside.DIRS[round(w['wind_direction_10m'] / 45) % 8]} {round(w['wind_speed_10m'])} mph, "
+              f"smoke drifts {outside.DIRS[round((w['wind_direction_10m'] + 180) / 45) % 8]}") if w else ""
+        aerial = soft("approach map", outside.approach_map, aerial, lat, lon, outside.HALF_M, roof.get("footprint.wkt"),
+                      f"{b['name'] or b['address'].split(',')[0]}, {b['stories']} fl", hyd, stage,
+                      w and w["wind_direction_10m"], wt, costar.neighbors(pid)) or aerial
+    last[pid] = {"building": b, "floor": floor, "hydrants": hyd, "roof": roof, "wind": w,
+            "staging": stage, "aerial": aerial, "scans": scans, "scan": scan,
             "scan_exact": exact, "floorplan": plan_img, "vision": vision, "gaps": gaps}
     return last[pid]
 
@@ -186,36 +194,45 @@ def compose(f, incident, label=None):
         below = _people(b["tenants"], set(range(1, fl)))
         L.append(f"BELOW: ~{below} people on floors 1-{fl - 1} (water runs down)  |  sprinklers: {b['sprinklers']}, type {b['sprinkler_type'].lower()}")
 
-    # Outside
+    # Outside: the approach map (labelled aerial) carries positions; the text says what is on it
+    amap = str(f.get("aerial") or "").endswith("_approach.jpg")
+    on = lambda la, lo: amap and outside.on_map(b["lat"], b["lon"], la, lo)
     if incident in ("fire", "hazmat") and f["hydrants"]:
-        L.append("HYDRANTS: " + ", ".join(f"{m} m {d}" for m, d, *_ in f["hydrants"][:2]))
+        labelled = [(m, d) for m, d, la, lo in f["hydrants"] if on(la, lo)][:2]
+        L.append("HYDRANTS: " + (", ".join(f"H{i} {m} m {d}" for i, (m, d) in enumerate(labelled, 1)) + " (approach map)" if labelled
+                                 else ", ".join(f"{m} m {d}" for m, d, *_ in f["hydrants"][:2])))
+    w = f.get("wind")
+    if incident in ("fire", "hazmat") and w:
+        frm = w["wind_direction_10m"]
+        L.append(f"WIND: from {outside.DIRS[round(frm / 45) % 8]} {round(w['wind_speed_10m'])} mph, smoke drifts "
+                 f"{outside.DIRS[round((frm + 180) / 45) % 8]}")
     if f["staging"]:
-        _, m, d, *_ = f["staging"][0]
-        L.append(f"OPEN LOT for staging ~{m} m {d} (aerial search, verify)")
+        _, m, d, la, lo = f["staging"][0]
+        L.append(f"STAGING: open lot ~{m} m {d}" + (" (S on approach map" if on(la, lo) else " (off the approach map")
+                 + ", from aerial search, verify)")
     roof = f["roof"]
     if incident == "fire" and roof.get("roof-characteristics.material.class"):
         L.append(f"ROOF: {roof['roof-characteristics.material.class']}"
                  + (f", {roof['roof-objects.ac-unit.count']} AC unit(s)" if roof.get("roof-objects.ac-unit.count") else ""))
 
     # Inside
-    s = f["scan"]
+    # Inside: the marked floor map carries positions; never scan jargon (scan points, scan start) in crew text
+    s, v = f["scan"], f.get("vision")
+    if s and f.get("floorplan"):
+        n = (v or {}).get("located") or {}
+        marks = [f"{n[k]} {lab}{'s' if n[k] > 1 else ''} ({col})"
+                 for k, lab, col in (("exit sign", "exit sign", "green"), ("fire alarm pull station", "fire alarm pull", "red")) if n.get(k)]
+        L.append((f"FLOOR MAP (floor {fl}, attached)" if f["scan_exact"] else f"FLOOR MAP is floor {s['floor']}, not {fl} (same core, layout may differ)")
+                 + (": " + ", ".join(marks) if marks else ""))
     if s:
-        L.append(("INSIDE: 3D scan of this floor" if f["scan_exact"] else f"INSIDE: no scan of {fl}; nearest is floor {s['floor']} (same core, layout may differ)")
-                 + f"  |  {len(s['sweeps'])} scan points  |  {s['link']}")
+        L.append(f"3D TOUR of floor {s['floor']}: {s['link']}")
     else:  # never borrow rooms or routes from somewhere else: say plainly there is nothing
         L.append("INSIDE: no interior scan" + (" with a known floor" if f["scans"] else " for this building"))
-    v = f.get("vision")
-    if v:
-        w, n = v["scan_points_with"], v.get("located") or {}
-        L.append(f"EXIT SIGNS: {n.get('exit sign', 0)} located (seen from {w['exit sign']} of {v['scan_points']} scan points)"
-                 + (f", pull stations: {n.get('fire alarm pull station', 0)} located" if w["fire alarm pull station"] else "")
-                 + ("" if f["scan_exact"] else f" (floor {s['floor']} scan)")
-                 + (f"; {walk_line(v['route'])}" if v.get("route") else ""))
     pm = next((c for c in b["contacts"] if c["role"] == "Property manager"), None)
     if pm:
         L.append(f"PROPERTY MGR: {pm['company']} {pm['phone']}")
 
-    unknown = [k for k, v in (("sprinkler type", b["sprinkler_type"] == "Unknown"), ("stair locations", True)) if v] + f["gaps"]
+    unknown = [k for k, v in (("sprinkler type", b["sprinkler_type"] == "Unknown"), ("stair and elevator locations", True)) if v] + f["gaps"]
     L.append("NOT KNOWN: " + ", ".join(unknown))
     return "\n".join(L)
 

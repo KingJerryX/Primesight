@@ -162,7 +162,7 @@ def neighbors(pid, radius_m=100, n=5):
             continue
         m, d = bearing(b["lat"], b["lon"], p["lat"], p["lon"])
         if m <= radius_m:
-            out.append({**{k: p[k] for k in ("name", "stories", "construction", "sprinklers", "type")}, "m": m, "dir": d})
+            out.append({**{k: p[k] for k in ("name", "stories", "construction", "sprinklers", "type", "lat", "lon")}, "m": m, "dir": d})
     return sorted(out, key=lambda x: x["m"])[:n]
 
 

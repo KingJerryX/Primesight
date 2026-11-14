@@ -69,7 +69,8 @@ def gather_building(property_id: int, floor: int, incident: str, incident_type: 
                              for t in b["tenants"] if t["floor"] == floor],
         "tenants_nearby_floors": [{"name": t["name"], "floor": t["floor"], "about": t["about"]} for t in b["tenants"]
                                   if t["floor"] and abs(t["floor"] - floor) <= 3 and t["floor"] != floor],
-        "hydrants": f["hydrants"][:3], "staging": f["staging"][:2], "roof": f["roof"],
+        "hydrants": f["hydrants"][:3], "staging": f["staging"][:2],
+        "roof": {k: x for k, x in f["roof"].items() if k != "footprint.wkt"},  # the outline is drawn on the map, not read
         "scan": {"id": (f["scan"] or {}).get("id"), "exact_floor": f["scan_exact"], "floor": (f["scan"] or {}).get("floor"),
                  "link": (f["scan"] or {}).get("link")},
         # SAM 3 counts from the scan's panoramas (exit signs, pull stations), if precomputed; the walk route is the
@@ -118,12 +119,8 @@ def compass(deg):
 
 @functools.lru_cache(maxsize=64)
 def _wind(lat, lon, slot):  # slot: 10-minute bucket, so a cached reading is never older than that
-    import requests
-    r = requests.get("https://api.open-meteo.com/v1/forecast", timeout=15, params={
-        "latitude": lat, "longitude": lon, "current": "wind_speed_10m,wind_direction_10m,wind_gusts_10m,temperature_2m,precipitation",
-        "wind_speed_unit": "mph", "temperature_unit": "fahrenheit"})
-    r.raise_for_status()
-    return r.json()["current"]
+    from . import outside
+    return outside.wind(lat, lon)
 
 
 @functools.lru_cache(maxsize=64)
@@ -155,7 +152,7 @@ def outside_now(property_id: int) -> str:
         out["hydrants"] = {"error": f"hydrant layer unavailable ({type(e).__name__})"}
     try:
         from . import outside
-        out["roof"] = outside.roof(b["lat"], b["lon"])
+        out["roof"] = {k: x for k, x in outside.roof(b["lat"], b["lon"]).items() if k != "footprint.wkt"}
     except Exception as e:
         out["roof"] = {"error": f"roof data unavailable ({type(e).__name__})"}
     # Exposures: only buildings in the CoStar kit, a sample, so an unlisted building may stand closer.
@@ -280,7 +277,9 @@ RUBRIC_BRIEF = """The final message is the crew briefing. Criteria:
 3. It has a NOT KNOWN line, and if the 3D scan is from a different floor it says so.
 4. It states facts, not orders: no tactical instructions such as where to search or which stair to use.
 5. Tenant risks inferred from a name only are marked possible or "from name only".
-6. The first line after the header is the most urgent fact for this incident type (fire: people above; medical: elevator or patient location; hazmat: tenant risk; rescue: elevators or keys; security: people on and near the floor; utility: sprinklers or elevators)."""
+6. The first line after the header is the most urgent fact for this incident type (fire: people above; medical: elevator or patient location; hazmat: tenant risk; rescue: elevators or keys; security: people on and near the floor; utility: sprinklers or elevators).
+7. No 3D-capture words a firefighter wouldn't know: no "scan points", "scan start", "sweeps", and no walking distances
+   measured from where the scanner began. Positions are shown on the attached FLOOR MAP and APPROACH MAP instead."""
 
 RUBRIC_REPLY = """The final message answers a crew reply (the latest message starting "CREW:"). Criteria:
 1. At most 3 lines, plain ASCII.

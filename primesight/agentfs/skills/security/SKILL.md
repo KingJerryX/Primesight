@@ -10,8 +10,8 @@ Order of lines, after the header:
 2. ON FLOOR: tenants and suites on the floor. Flag vulnerable occupants (clinic, school, daycare) from tenant-risk.
    Never call a tenant a possible target because of who it is (religion, ethnicity, nationality, politics): crews act on
    where people are, not on guesses about motive.
-3. EXITS: exit signs and pull stations seen in the scan, and walk distances from the scan start. Say these are from a 3D scan, not a plan.
-4. STAGING: open lots from the aerial search, with distance and direction. Say "verify" (a lot may be in line of sight).
+3. FLOOR MAP: the draft's FLOOR MAP line (exit signs and fire alarm pulls marked on the attached floor map, from a 3D scan, not a building plan).
+4. STAGING: the open lot from the aerial search (S on the approach map), with distance and direction. Say "verify" (a lot may be in line of sight).
 5. WHO HAS ACCESS: property manager with phone (badges, cameras, elevator recall). Security supervisor contacts are rarely in the data; say so if missing.
 6. NOT KNOWN: camera locations, door locks, stair locations.
 

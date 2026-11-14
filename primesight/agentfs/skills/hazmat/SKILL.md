@@ -11,6 +11,6 @@ Order of lines, after the header:
 3. ON FLOOR and people on floors near the incident floor.
 4. WIND from outside-scout: where it comes from, mph, and where gas or vapor drifts (live Open-Meteo reading, give its time).
    If outside-scout says wind is unavailable, wind goes on NOT KNOWN.
-5. OPEN LOT for staging with distance and direction (aerial search, verify), then WATER: hydrant count and the two nearest.
-6. INSIDE: the scan line and link.
+5. STAGING with distance and direction (S on the approach map, aerial search, verify), then WATER: hydrant count and the two nearest (H1, H2 on the approach map) and WIND.
+6. FLOOR MAP and 3D TOUR lines from the draft.
 7. NOT KNOWN: what is actually stored, plus the usual unknowns (and wind, if unavailable).
