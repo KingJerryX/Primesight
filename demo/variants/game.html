@@ -336,7 +336,7 @@ function finish(d) {
   for (const v of document.querySelectorAll(".view")) v.classList.toggle("on", v.id === "v-map");  // end on the building, the reported hydrant in green
   $("cue").innerHTML = `<b>Map</b>The hydrant you reported is green.`;
   $("result").innerHTML = `<div><div class="caps ok">Report received by the crew</div><ul>${d.report.map(l => `<li>${esc(l)}</li>`).join("")}</ul></div>` +
-    (d.rank ? `<form id="nameform"><label class="caps" for="name">Place ${d.rank} of the top 10. Enter a name</label>
+    (d.rank ? `<form id="nameform"><label class="caps" for="name">Enter a name for the leaderboard</label>
       <input id="name" maxlength="8" pattern="[A-Za-z0-9 _\\-]{1,8}" title="1 to 8 letters, digits, spaces, dashes or underscores" required autocomplete="off" autocapitalize="characters" spellcheck="false">
       <button class="btn">Save</button></form>` : "") +
     `<div><div class="caps dim">Fastest reports</div><ol class="board" id="board1"></ol></div><button class="btn" id="again">Take another call</button>`;
