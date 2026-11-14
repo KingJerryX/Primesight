@@ -32,7 +32,8 @@ class Photon:
         self.key, self.pid, self.api = api_key, project_id, api.rstrip("/")
 
     def call(self, method, path, body=None, headers=None, raw=None):
-        h = {"Authorization": f"Bearer {self.key}", **(headers or {})}
+        # Cloudflare in front of api.photon.codes blocks urllib's default UA with 403 "error code: 1010"
+        h = {"Authorization": f"Bearer {self.key}", "User-Agent": "primesight-photon-bridge/1.0", **(headers or {})}
         data = raw if raw is not None else (json.dumps(body).encode() if body is not None else None)
         if body is not None and raw is None:
             h["Content-Type"] = "application/json"
