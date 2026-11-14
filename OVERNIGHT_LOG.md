@@ -51,6 +51,7 @@ Running notes for the morning summary. Claude API budget: $25.
 - 05:50 Pre-morning cleanup: the 30 test crew notes written tonight were moved to cache/buildings_test_archive/ (only the 3 notes from Nov 13 stay on 233899). Morning summary filled in (MORNING_SUMMARY.md, local).
 - 05:53 SAM 3 finished all 90 ranked buildings (target was 50), no failures.
 - 05:57 Ranked 30 more (top 120, first 90 unchanged); two workers started on them.
+- 06:40 SAM 3 finished all 120 ranked buildings, no failures. Stopped there: the next buildings have little data, and the GPU stays free for the morning.
 
 ## Errors and fixes
 - Live active-threat run labelled an advocacy organization "possible target (from name only)". Profiling by religion/ethnicity/nationality/politics is now forbidden in AGENTS.md (always in the prompt), tenant-risk's prompt and the security skill (commit 82aae86). That run's recording gets deleted and re-recorded.
