@@ -140,7 +140,7 @@ Do them roughly in this order. Size: S is under 2 hours, M is 2 to 5, L is more.
    - **What:** build `vision.py`, which runs SAM 3 over the scan photos of floors 36 and 37 to find exit signs and doors. It saves each find with its scan point and position to `cache/`.
    - **Already known:**
      - SAM 3 finds exit signs (confidence 0.76 to 0.88) and doors reliably.
-     - It doesn't find sprinkler heads or fire extinguishers.
+     - It doesn't find sprinkler heads. It does find floor-standing fire extinguishers (0.8-0.97, even far away); 'stairs' is unreliable (dark grilles score 0.5-0.8).
      - It takes about 0.36 s per photo per label, so a full floor takes minutes. Always run it ahead of time, never live.
    - **How to run:** use the `sam3_env` conda env (`HF_HUB_OFFLINE=1 ~/miniconda3/envs/sam3_env/python.exe`). `probes/sam3_test.py` is a working starting point.
    - **Watch out:** photo links from Matterport expire, so fetch them right before you use them.
