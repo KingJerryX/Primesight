@@ -269,6 +269,13 @@ if __name__ == "__main__":
     assert parse_call("Smoke on floor 30") == (30, "fire")
     assert classify("Man collapsed in the break room")["id"] == "unconscious" and classify("smoke alarm going off")["id"] == "fire_alarm"
     assert parse_call("Two people stuck in elevator, 1000 Louisiana") == (1, "rescue") and classify("Shots fired, 12th floor")["category"] == "security"
+    for call, want in [("Electrical fire on the 5th floor", "electrical_fire"), ("Solar panel fire on the roof", "solar_fire"),
+                       ("E-bike battery caught fire in the lobby", "battery_fire"), ("Car into the lobby, drove into the glass", "vehicle_into_building"),
+                       ("Worker with heat stroke on the roof", "heat_illness"), ("Stroke symptoms, 11th floor", "stroke"),
+                       ("Strange odor on the 9th floor, people feel sick", "odor_unknown"), ("Strong gas odor, 20th floor", "gas_leak"),
+                       ("Smoke coming into the building from outside", "smoke"), ("Patient is sick on floor 3", "medical_other"),
+                       ("Something happened", "medical_other")]:
+        assert classify(call)["id"] == want, (call, classify(call)["id"], want)
     print(f"Primesight server on http://localhost:{PORT}  (agent: {'on' if os.environ.get('ANTHROPIC_API_KEY') else 'off, sending drafts'})")
     from . import photon_bridge  # real iMessage/SMS through Photon when PHOTON_API_KEY + PHOTON_PROJECT_ID are in .env
     print(f"Photon bridge: {'polling' if photon_bridge.start_from_env() else 'off (no PHOTON_API_KEY / PHOTON_PROJECT_ID); phone.html still works'}")

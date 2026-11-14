@@ -132,10 +132,11 @@ function projector(hooks) {
 // Which data layer a briefing line comes from, for source tags on the projector.
 function lineLayer(line) {
   const l = line.toUpperCase();
-  if (/^(HYDRANTS|OPEN LOT|ROOF|STAGING)/.test(l)) return "vexcel";
+  if (/^WIND/.test(l)) return "weather";
+  if (/^(HYDRANTS|OPEN LOT|ROOF|STAGING|WATER)/.test(l)) return "vexcel";
   if (/^(INSIDE|EXIT SIGNS|WALK|EXITS)/.test(l) || l.includes("SCAN")) return "matterport";
   if (/^(NOTE|CREW|LAST CREW)/.test(l)) return "notes";
   if (/^(PRIMESIGHT|NOT KNOWN|HTTPS?:)/.test(l)) return "meta";
   return "costar";
 }
-const LAYER_COLORS = { costar: "#3fa7ff", matterport: "#2ed3a7", vexcel: "#f5c400", notes: "#ff9f43", meta: "#8b98a5" };
+const LAYER_COLORS = { costar: "#3fa7ff", matterport: "#2ed3a7", vexcel: "#f5c400", weather: "#c084fc", notes: "#ff9f43", meta: "#8b98a5" };

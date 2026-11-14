@@ -26,10 +26,10 @@
 <div class="cols">
   <div class="col" id="costar" style="--c:#3fa7ff"><h2>CoStar</h2><div class="what">building record · tenants by floor · contacts</div><div class="body"></div></div>
   <div class="col" id="matterport" style="--c:#2ed3a7"><h2>Matterport + SAM 3</h2><div class="what">3D scan graph · exits, pull stations, extinguishers seen</div><div class="body"></div></div>
-  <div class="col" id="vexcel" style="--c:#f5c400"><h2>Vexcel + hydrants</h2><div class="what">aerial imagery · roof · open lots · hydrant distances</div><div class="body"></div></div>
+  <div class="col" id="vexcel" style="--c:#f5c400"><h2>Outside: Vexcel, hydrants, wind</h2><div class="what">aerial imagery · roof · open lots · hydrants · live wind</div><div class="body"></div></div>
   <div class="col" id="notes" style="--c:#ff9f43"><h2>Crew memory</h2><div class="what">notes earlier crews left · texts queued for staff</div><div class="body"></div></div>
 </div>
-<div class="brief"><div class="legend"><span>Briefing on the phone, each line tagged by source:</span><span><i style="background:#3fa7ff"></i>CoStar</span><span><i style="background:#2ed3a7"></i>Matterport</span><span><i style="background:#f5c400"></i>Vexcel</span><span><i style="background:#ff9f43"></i>Notes</span></div><div id="brief" class="dim">...</div></div>
+<div class="brief"><div class="legend"><span>Briefing on the phone, each line tagged by source:</span><span><i style="background:#3fa7ff"></i>CoStar</span><span><i style="background:#2ed3a7"></i>Matterport</span><span><i style="background:#f5c400"></i>Vexcel</span><span><i style="background:#c084fc"></i>Live wind</span><span><i style="background:#ff9f43"></i>Notes</span></div><div id="brief" class="dim">...</div></div>
 <script src="common.js"></script>
 <script>
 const $ = id => document.getElementById(id);
@@ -46,6 +46,7 @@ projector({
     if (d.step === "call_received") $("call").textContent = d.detail;
     if (d.step === "address_lookup") add("costar", `<b>Address matched</b> <span>${esc(d.detail)}</span>`);
     if (d.step === "gather_building") { ["costar", "matterport", "vexcel"].forEach(c => add(c, `<b>Pulled</b> <span>at ${d.t.toFixed(1)} s</span>`)); }
+    if (d.step.endsWith("outside_now")) add("vexcel", `<b>Live wind + hydrants within 300 m</b> <span>Open-Meteo, city GIS</span>`);
     if (d.step.endsWith("walk_to")) add("matterport", `<b>Walked the scan graph</b> <span>${esc(stepLabel(d)[1])}</span>`);
     if (d.step.endsWith("queue_text")) { const x = JSON.parse(d.detail || "{}"); add("notes", `<b>Text queued for ${esc(x.to)}</b> <span>${esc((x.text || "").slice(0, 120))}</span>`); }
     if (d.step.endsWith("add_building_note")) add("notes", `<b>Note saved</b> <span>${esc(stepLabel(d)[1]).slice(0, 120)}</span>`);

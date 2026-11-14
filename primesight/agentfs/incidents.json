@@ -157,6 +157,24 @@
    ]
   },
   {
+   "id": "vehicle_into_building",
+   "label": "Vehicle into building",
+   "category": "rescue",
+   "keywords": [
+    "car into",
+    "vehicle into",
+    "truck into",
+    "drove into",
+    "crashed into"
+   ],
+   "needs": "ground-floor tenants and headcount, construction type and year, aerial of the frontage, staging",
+   "layers": [
+    "costar",
+    "vexcel",
+    "notes"
+   ]
+  },
+  {
    "id": "collapse",
    "label": "Structural collapse / person trapped",
    "category": "rescue",
@@ -242,23 +260,43 @@
    ]
   },
   {
-   "id": "structure_fire",
-   "label": "Working structure fire",
+   "id": "solar_fire",
+   "label": "Rooftop / solar panel fire",
    "category": "fire",
    "keywords": [
-    "working fire",
-    "flames",
-    "fire on",
-    "structure fire",
-    "on fire",
-    "burning"
+    "solar panel",
+    "solar array",
+    "roof fire",
+    "rooftop fire",
+    "fire on the roof"
    ],
-   "needs": "people above the fire floor, stairs and standpipes, sprinklers, hydrants, staging, roof",
+   "needs": "roof material, solar panels and rooftop units from aerial data, building height, hydrants, wind",
+   "layers": [
+    "vexcel",
+    "costar",
+    "weather",
+    "hydrants",
+    "notes"
+   ]
+  },
+  {
+   "id": "battery_fire",
+   "label": "Lithium battery / e-bike fire",
+   "category": "fire",
+   "keywords": [
+    "lithium",
+    "battery fire",
+    "e-bike",
+    "ebike",
+    "scooter battery",
+    "battery room",
+    "battery storage"
+   ],
+   "needs": "people on the floor and above, tenants that store batteries, sprinkler type, wind for toxic smoke drift",
    "layers": [
     "costar",
-    "matterport",
     "sam3",
-    "vexcel",
+    "weather",
     "hydrants",
     "notes"
    ]
@@ -277,6 +315,28 @@
    "layers": [
     "costar",
     "sam3",
+    "notes"
+   ]
+  },
+  {
+   "id": "structure_fire",
+   "label": "Working structure fire",
+   "category": "fire",
+   "keywords": [
+    "working fire",
+    "flames",
+    "fire on",
+    "structure fire",
+    "on fire",
+    "burning"
+   ],
+   "needs": "people above the fire floor, stairs and standpipes, sprinklers, hydrants, staging, roof",
+   "layers": [
+    "costar",
+    "matterport",
+    "sam3",
+    "vexcel",
+    "hydrants",
     "notes"
    ]
   },
@@ -331,6 +391,24 @@
    "layers": [
     "costar",
     "matterport",
+    "notes"
+   ]
+  },
+  {
+   "id": "heat_illness",
+   "label": "Heat illness",
+   "category": "medical",
+   "keywords": [
+    "heat stroke",
+    "heatstroke",
+    "heat exhaustion",
+    "overheated",
+    "heat illness"
+   ],
+   "needs": "patient floor, stretcher-sized elevator, current temperature, building cooling unknown",
+   "layers": [
+    "costar",
+    "weather",
     "notes"
    ]
   },
@@ -432,6 +510,24 @@
    "layers": [
     "costar",
     "matterport",
+    "notes"
+   ]
+  },
+  {
+   "id": "odor_unknown",
+   "label": "Unknown odor / fumes investigation",
+   "category": "hazmat",
+   "keywords": [
+    "odor",
+    "odour",
+    "strange smell",
+    "weird smell",
+    "bad smell"
+   ],
+   "needs": "tenant industries on and near the floor, people on the floor, wind direction, HVAC unknown",
+   "layers": [
+    "costar",
+    "weather",
     "notes"
    ]
   },
