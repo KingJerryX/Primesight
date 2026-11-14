@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from deepagents import create_deep_agent
 from deepagents.backends import FilesystemBackend
 from langchain_anthropic import ChatAnthropic
-from . import briefing, costar
+from . import briefing, costar, trace
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv(os.path.join(ROOT, ".env"))
@@ -17,12 +17,12 @@ MODEL = "claude-opus-5-5"
 def find_building(address: str) -> str:
     """Find the building for a street address. Returns JSON list of {property_id, address, city} matches (best first)."""
     want = re.sub(r"[^a-z0-9 ]", "", address.lower()).split()
-    num = next((w for w in want if w.isdigit()), None)
+    nums = {w for w in want if w.isdigit()}  # a call may also say "floor 30": any number can be the street number
     hits = {}
     with open(os.path.join(costar.KIT, "commercial-properties.csv"), encoding="utf-8") as fh:
         for r in csv.DictReader(fh):
             words = re.sub(r"[^a-z0-9 ]", "", f'{r["Address"]} {r["City"]}'.lower()).split()
-            if num and words[:1] != [num]:
+            if nums and words[:1] and words[0] not in nums:
                 continue
             score = sum(w in words for w in want)
             if score >= 2:
@@ -89,7 +89,7 @@ def build():
     )
 
 
-def run(call_text):
+def run(call_text, run_id=None):
     agent = build()
     out = None
     for step in agent.stream({"messages": [{"role": "user", "content": call_text}]}, stream_mode="updates"):
@@ -97,12 +97,14 @@ def run(call_text):
             for m in (upd or {}).get("messages", []) if isinstance(upd, dict) else []:
                 for tc in getattr(m, "tool_calls", []) or []:
                     print(f"  [{node}] -> {tc['name']}({json.dumps(tc['args'])[:100]})", file=sys.stderr)
+                    trace.log(run_id, tc["name"], json.dumps(tc["args"])[:200])
                 out = m
     return out.content if isinstance(out.content, str) else "".join(b.get("text", "") for b in out.content if isinstance(b, dict))
 
 
 if __name__ == "__main__":
     assert json.loads(find_building("1000 Louisiana St, Houston"))[0]["property_id"] == 233899
+    assert json.loads(find_building("Smoke on floor 30, 1000 Louisiana St, Houston"))[0]["property_id"] == 233899
     if not os.environ.get("ANTHROPIC_API_KEY"):
         sys.exit("Add ANTHROPIC_API_KEY to .env to run the agent. (find_building self-check passed.)")
     print(run(" ".join(sys.argv[1:]) or "Cardiac arrest, 30th floor, 1000 Louisiana St, Houston. Caller is a coworker."))

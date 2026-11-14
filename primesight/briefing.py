@@ -6,6 +6,7 @@ from . import costar, matterport, outside
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "output")  # gitignored: sponsor imagery
 INCIDENTS = ("fire", "medical", "hazmat")
+last = {}  # pid -> latest gather() result, so the server can find the images the agent pulled
 
 
 def gather(pid, floor):
@@ -43,9 +44,10 @@ def gather(pid, floor):
     else:
         gaps.append("no 3D scan for this building")
 
-    return {"building": b, "floor": floor, "hydrants": f_hyd.result() or [], "roof": f_roof.result() or {},
+    last[pid] = {"building": b, "floor": floor, "hydrants": f_hyd.result() or [], "roof": f_roof.result() or {},
             "staging": f_stage.result() or [], "aerial": f_ortho.result(), "scans": scans, "scan": scan,
             "scan_exact": exact, "floorplan": plan_img, "gaps": gaps}
+    return last[pid]
 
 
 def _people(tenants, floors):
