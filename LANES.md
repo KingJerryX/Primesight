@@ -210,6 +210,40 @@ Make the outside of the building visible, and get every briefing onto the one de
 10. **Second demo building (Stretch, M).**
     - **What:** a low-rise industrial building in Houston from the kit, where the aerial view shows loading docks and the roof. Aerial detection works much better on low buildings than on downtown towers.
 
+### Photon 2.0: what we know (from our HackHarvard build and the beta API spec)
+
+We shipped a Photon 2.0 iMessage bot at HackHarvard (`apps/orchestrator/src/messenger.ts` and `voice.ts` there). Copy those patterns. SDK: `@photon-ai/api` 0.5.x. Spec: https://api.photon.codes/openapi.json.
+
+- **Setup.**
+  - `new Photon({ headers: { Authorization: `Bearer ${PHOTON_API_KEY}` } })`.
+  - The key needs project:read and project:write (and platforms:read/write for voice).
+  - Copy the project id (`pho_prj_...`) from the dashboard at app.beta.photon.codes. A `pho_sk_` key can't list projects (403).
+  - Env: `PHOTON_API_KEY`, `PHOTON_PROJECT_ID`, `PHOTON_PLATFORM=imessage`. Keys go in `.env` only.
+- **Shared iMessage lines (the free beta setup).**
+  - Register the demo phone first: `projects.platforms.imessage.assignments.create({ path, body: { handle }, headers: { idempotencyKey } })`. This returns the line's number. Up to 25 phones.
+  - The line can't text first. The phone must text the line once after it's registered (we used "START"). Do this before the demo starts.
+  - Sending works only in direct (1:1) threads. No group threads.
+  - Reply into the thread using the `spaceId` and `senderId` from the phone's inbound message. Don't build them yourself.
+  - Don't set `parentMessageId`; shared lines reject it.
+- **Receiving.**
+  - Poll `projects.listMessages({ path, query: { createdSince, direction: "received", order: "asc", pageSize: 100, platform } })` every 2 s, follow `pageToken`, and dedupe by message id.
+  - Crew replies go to `POST /feedback`.
+- **Sending text.**
+  - `projects.sendMessage({ path: { id }, headers: { "idempotency-key": uuid }, body: { spaceId, senderId, content: { type: "text", format: "plain", text } } })`.
+- **Sending images (floorplan, aerial).** Two calls per image:
+  1. `POST /v1/projects/{id}/attachments` with a `multipart/related` body (not form-data) in exactly two parts:
+     - JSON `{ contentType: "image/jpeg", sizeBytes, filename }`. `sizeBytes` must equal the file length.
+     - The file bytes.
+     - Headers: `content-length`, `content-type` (with the boundary) and `idempotency-key`.
+     - It returns `{ id }`.
+  2. `sendMessage` with `content: { type: "attachment", attachmentId: id, metadata: { caption: { format: "plain", text } } }`.
+  - Not live-tested yet. Images come from `GET /img/...` on our server (`image_urls` in the `/brief` reply).
+- **Voice (task 2, settled on paper).** Photon voice is a phone number plus a SIP trunk. Photon doesn't do speech itself; a voice agent does (we used ElevenLabs).
+  - **Outgoing calls:** `POST https://api.elevenlabs.io/v1/convai/sip-trunk/outbound-call` with `agent_id`, `agent_phone_number_id`, `to_number` and `conversation_initiation_client_data.dynamic_variables`. Put the briefing facts in `dynamic_variables`.
+  - **Incoming calls:** set the voice profile's inbound destination (`PUT .../platforms/voice/profiles/{profileId}/inbound` with a SIP `destinationUri`) to the voice agent.
+  - Needs an SMS number with a voice profile. A number costs money: check the price with the team before buying.
+  - Neither direction is tested on a real number yet. Task 9 stays a stretch goal.
+
 ### Your demo moments
 
 - The phone buzzing with the briefing.

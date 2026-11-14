@@ -45,7 +45,7 @@ def brief(text, run_id):
         trace.log(run_id, "gather_building", f"floor {floor}, {incident}")
         f = briefing.gather(pid, floor)
         text_out = briefing.compose(f, incident)
-    images = [p for p in ((f or {}).get("floorplan_marked") or (f or {}).get("floorplan"), (f or {}).get("aerial")) if p]
+    images = [p for p in ((f or {}).get("floorplan"), (f or {}).get("aerial")) if p]
     trace.log(run_id, "done", f"{len(text_out.splitlines())} lines, {len(images)} images")
     return {"briefing": text_out, "images": images, "image_urls": [img_url(p) for p in images], "property_id": pid,
             "_facts": facts(f, incident) if f else None}
