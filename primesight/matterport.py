@@ -1,14 +1,21 @@
 """Matterport Model API: pick the scan for a floor, pull its floorplan, sweep graph and panoramas."""
-import os, re, requests
+import os, re, time, requests
 from dotenv import load_dotenv
 
 load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
 URL = "https://api.matterport.com/api/models/graph"
 
 
-def gql(query, variables=None):
-    r = requests.post(URL, json={"query": query, "variables": variables or {}}, timeout=60,
-                      auth=(os.environ["MATTERPORT_TOKEN_ID"], os.environ["MATTERPORT_TOKEN_SECRET"]))
+def gql(query, variables=None, tries=4):
+    for k in range(tries):  # Wi-Fi drops (lid, power change) shouldn't kill a long batch
+        try:
+            r = requests.post(URL, json={"query": query, "variables": variables or {}}, timeout=60,
+                              auth=(os.environ["MATTERPORT_TOKEN_ID"], os.environ["MATTERPORT_TOKEN_SECRET"]))
+            break
+        except requests.ConnectionError:
+            if k == tries - 1:
+                raise
+            time.sleep(15 * (k + 1))
     r.raise_for_status()
     body = r.json()
     if body.get("errors") and not body.get("data"):

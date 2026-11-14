@@ -38,6 +38,21 @@ def detect(proc, model, img):
     return hits
 
 
+def fetch(mid, d, i, j, tries=4):
+    """One skybox face. Re-queries the model when the signed URL expired; waits out short network drops."""
+    for k in range(tries):
+        try:
+            r = requests.get(d["sweeps"][i]["faces"][j], timeout=60)
+            if r.headers.get("Content-Type", "").startswith("image"):
+                return r.content, d
+            d = matterport.detail(mid)  # signed URLs expire mid-scan on big models
+        except requests.ConnectionError:
+            if k == tries - 1:
+                raise
+            time.sleep(15 * (k + 1))
+    raise RuntimeError(f"no image for sweep {i} face {j}")
+
+
 def scan(proc, model, mid, floor):
     path = os.path.join(OUT, f"{mid}.json")
     if os.path.exists(path):
@@ -49,11 +64,8 @@ def scan(proc, model, mid, floor):
     for i, s in enumerate(d["sweeps"]):
         found = []
         for j in range(len(s["faces"])):
-            r = requests.get(d["sweeps"][i]["faces"][j], timeout=60)
-            if not r.headers.get("Content-Type", "").startswith("image"):  # signed URLs expire mid-scan on big models
-                d = matterport.detail(mid)
-                r = requests.get(d["sweeps"][i]["faces"][j], timeout=60)
-            img = Image.open(io.BytesIO(r.content)).convert("RGB").resize((SIDE, SIDE))
+            raw, d = fetch(mid, d, i, j)
+            img = Image.open(io.BytesIO(raw)).convert("RGB").resize((SIDE, SIDE))
             hits = detect(proc, model, img)
             for h in hits:
                 if h["label"] in SIGNS:
@@ -130,9 +142,10 @@ if __name__ == "__main__":
     for a in args:
         pid = int(a) if a.isdigit() else "-"
         mids = costar.property_ids_with_scans().get(pid, []) if a.isdigit() else [a]
-        for m in matterport.models(mids):
+        for mid in mids:
             try:
+                m = matterport.models([mid])[0]  # one at a time: a failed name lookup skips only this scan
                 r = scan(proc, model, m["id"], m["floor"])
                 print(pid, m["id"], f'floor {m["floor"]}', len(r["sweeps"]), "sweeps", r["sweeps_with"], f'{r["seconds"]}s', flush=True)
             except Exception as e:  # one bad scan (expired URL, empty model) shouldn't stop the batch
-                print(pid, m["id"], "FAILED", repr(e)[:150], flush=True)
+                print(pid, mid, "FAILED", repr(e)[:150], flush=True)
