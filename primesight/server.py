@@ -6,12 +6,10 @@ POST /feedback  {"property_id", "text"} -> {"ok": true}
 GET  /trace/<run_id>                  -> JSON lines, one per step
 """
 import json, os, re, uuid
-from datetime import date
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from . import briefing, trace
 
 PORT = int(os.environ.get("PRIMESIGHT_PORT", 8787))
-NOTES = os.path.join(briefing.ROOT, "cache", "buildings")
 
 
 def parse_call(text):
@@ -30,10 +28,10 @@ def brief(text, run_id):
     trace.log(run_id, "call_received", text[:120])
     hits = json.loads(find_building(text))
     if not hits:
-        trace.log(run_id, "find_building", "no match")
+        trace.log(run_id, "address_lookup", "no match")
         return {"briefing": "PRIMESIGHT: address not found in building data. Send the street address.", "images": [], "property_id": None}
     pid = hits[0]["property_id"]
-    trace.log(run_id, "find_building", f"{hits[0]['address']}, {hits[0]['city']} -> {pid}")
+    trace.log(run_id, "address_lookup", f"{hits[0]['address']}, {hits[0]['city']} -> {pid}")
     floor, incident = parse_call(text)
     if os.environ.get("ANTHROPIC_API_KEY"):
         from . import agent
@@ -50,9 +48,8 @@ def brief(text, run_id):
 
 
 def add_note(pid, text):
-    os.makedirs(NOTES, exist_ok=True)
-    with open(os.path.join(NOTES, f"{int(pid)}.md"), "a", encoding="utf-8") as fh:
-        fh.write(f"- {date.today().isoformat()} crew: {text.strip()}\n")
+    from .agent import add_building_note
+    add_building_note(pid, f"crew: {text}")
 
 
 class H(BaseHTTPRequestHandler):

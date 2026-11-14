@@ -50,6 +50,16 @@ def gather_building(property_id: int, floor: int, incident: str) -> str:
     }, default=str)
 
 
+def add_building_note(property_id: int, note: str) -> str:
+    """Append one dated line to the building's notes file (/buildings/<property_id>.md). Never overwrites earlier notes."""
+    from datetime import date
+    d = os.path.join(ROOT, "cache", "buildings")
+    os.makedirs(d, exist_ok=True)
+    with open(os.path.join(d, f"{int(property_id)}.md"), "a", encoding="utf-8") as fh:
+        fh.write(f"- {date.today().isoformat()} {' '.join(note.split())}\n")
+    return "saved"
+
+
 TENANT_RISK = {
     "name": "tenant-risk",
     "description": "Reads tenant names and descriptions for one building and flags occupants that change the response: "
@@ -69,7 +79,7 @@ Steps:
 2. Call gather_building. It returns a draft briefing built from the data plus the raw facts.
 3. If there are tenants on or near the floor, send them to the tenant-risk subagent.
 4. Read /buildings/<property_id>.md if it exists: notes from earlier incidents (wrong door, locked stairs) outrank the data.
-5. Write the final briefing and append a dated line about this incident to /buildings/<property_id>.md.
+5. Write the final briefing, then save one line about this incident with add_building_note (it adds the date; never use write_file on /buildings).
 
 The final briefing is SMS text, plain ASCII, at most 12 lines, most urgent first, read by a crew in a moving truck:
 - Lead with what this incident type needs (medical: elevator, suite, who to ask for; fire: people above, hydrants, standpipe/stairs unknowns; hazmat: tenant materials, approach upwind).
@@ -82,7 +92,7 @@ Reply with only the briefing text."""
 def build():
     return create_deep_agent(
         model=ChatAnthropic(model=MODEL, max_tokens=8000),
-        tools=[find_building, gather_building],
+        tools=[find_building, gather_building, add_building_note],
         system_prompt=SYSTEM,
         subagents=[TENANT_RISK],
         backend=FilesystemBackend(root_dir=os.path.join(ROOT, "cache"), virtual_mode=True),  # /buildings/*.md live in cache/
@@ -90,15 +100,22 @@ def build():
 
 
 def run(call_text, run_id=None):
+    from langchain_core.callbacks import get_usage_metadata_callback
     agent = build()
     out = None
-    for step in agent.stream({"messages": [{"role": "user", "content": call_text}]}, stream_mode="updates"):
-        for node, upd in step.items():  # trace for the second screen
-            for m in (upd or {}).get("messages", []) if isinstance(upd, dict) else []:
-                for tc in getattr(m, "tool_calls", []) or []:
-                    print(f"  [{node}] -> {tc['name']}({json.dumps(tc['args'])[:100]})", file=sys.stderr)
-                    trace.log(run_id, tc["name"], json.dumps(tc["args"])[:200])
-                out = m
+    with get_usage_metadata_callback() as usage:  # counts every model call, subagents included
+        for step in agent.stream({"messages": [{"role": "user", "content": call_text}]}, stream_mode="updates"):
+            for node, upd in step.items():  # trace for the second screen
+                for m in (upd or {}).get("messages", []) if isinstance(upd, dict) else []:
+                    for tc in getattr(m, "tool_calls", []) or []:
+                        print(f"  [{node}] -> {tc['name']}({json.dumps(tc['args'])[:100]})", file=sys.stderr)
+                        trace.log(run_id, tc["name"], json.dumps(tc["args"])[:200])
+                    out = m
+    tin = sum(u.get("input_tokens", 0) for u in usage.usage_metadata.values())
+    tout = sum(u.get("output_tokens", 0) for u in usage.usage_metadata.values())
+    cost = f"{tin} in / {tout} out tokens, ~${(tin * 4 + tout * 20) / 1e6:.2f}"  # Opus 5.5 list price, no cache discount
+    print(f"  usage: {cost}", file=sys.stderr)
+    trace.log(run_id, "usage", cost)
     return out.content if isinstance(out.content, str) else "".join(b.get("text", "") for b in out.content if isinstance(b, dict))
 
 
