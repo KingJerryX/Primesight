@@ -59,8 +59,8 @@ class Photon:
             if not token:
                 return out
 
-    def send_text(self, space, sender, text):
-        return self.call("POST", "/messages", {"spaceId": space, "senderId": sender,
+    def send_text(self, space, sender, text, parent=None):
+        return self.call("POST", "/messages", {"spaceId": space, "senderId": sender, **({"parentMessageId": parent} if parent else {}),
                                                "content": {"type": "text", "format": "plain", "text": text}},
                          {"idempotency-key": uuid.uuid4().hex})
 
@@ -109,12 +109,12 @@ class Bridge:
             ok = (m.get("status") == "received" and text and sent.get("handle") and space.get("id") and recv.get("id")
                   and "group" not in str(space.get("kind", "")).lower())
             if ok:
-                threading.Thread(target=self.answer, args=(sent["handle"], space["id"], recv["id"], text), daemon=True).start()
+                threading.Thread(target=self.answer, args=(sent["handle"], space["id"], recv["id"], text, m["id"]), daemon=True).start()
         if items:  # move the window only after paging finished; inclusive bound, `seen` dedupes
             self.since = items[-1]["createdAt"]
         return len(items)
 
-    def answer(self, handle, space, sender, text):
+    def answer(self, handle, space, sender, text, parent=None):
         phone = key_for(handle)
         sms.log(phone, "crew", {"type": "text", "text": text})  # mirrored on phone.html?id=ph-..., handle never shown
 
@@ -124,7 +124,7 @@ class Bridge:
                 if msg["type"] == "image" and msg.get("path") and os.path.exists(msg["path"]):
                     self.p.send_image(space, sender, msg["path"])
                 elif msg["type"] == "text":
-                    self.p.send_text(space, sender, msg["text"])
+                    self.p.send_text(space, sender, msg["text"], parent)  # threads the reply under the crew's text
             except Exception as e:
                 print(f"[photon] send failed for {phone}: {e}", file=sys.stderr)
                 if msg["type"] == "image":  # an image that won't upload becomes a link the crew can still open
@@ -217,7 +217,7 @@ def selftest():
             break
         time.sleep(0.1)
     m = got["messages"][0]
-    assert m["spaceId"] == "pho_spc_1" and m["senderId"] == "pho_usr_line" and m["content"]["text"] == sms.HELP, m
+    assert m["spaceId"] == "pho_spc_1" and m["senderId"] == "pho_usr_line" and m["content"]["text"] == sms.HELP and m["parentMessageId"] == "pho_msg_1", m
     assert len(got["messages"]) == 1, "group text must be ignored"
     assert got["typing"] == [True, False] and got["auth"] == {"Bearer pho_test_key"}
     assert b.poll_once() == 3 and len(got["messages"]) == 1  # same items again: deduped, no second reply

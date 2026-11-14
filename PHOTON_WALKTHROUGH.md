@@ -39,7 +39,7 @@ Open a projector on the laptop, for example http://localhost:8787/projector-grap
 Every text you send is mirrored on `phone.html?id=ph-<hash>`, and every run shows on the projectors. Live runs cost about $0.30-0.50 each. Replays are free.
 
 ## If something goes wrong
-- **No reply at all**: did you text START first? Is the console printing `[photon] poll failed`? A 401 means the key or project id is wrong.
+- **No reply at all**: did you text START first? Is the console printing `[photon] poll failed`? A 401 or 403 means the key or project id is wrong (Photon answers a bad key with 403).
 - **Reply arrives but no images**: Photon rejected the upload. The bridge falls back to a text link, which only opens if `PRIMESIGHT_PUBLIC_URL` points to a reachable address.
 - **Group chats** are ignored on purpose (a briefing goes to one crew).
 - **Fallback with no Photon**: `PRIMESIGHT_HOST=0.0.0.0 python -m primesight.server`, then open `http://<laptop Wi-Fi IP>:8787/phone.html` on the phone. It is the same conversation code as the Photon line. Windows may ask to let Python through the firewall; that is your call.
