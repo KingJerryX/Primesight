@@ -9,14 +9,16 @@
 <link rel="stylesheet" href="common.css">
 <link rel="stylesheet" href="site.css">
 <style>
-  /* Two steps: the location (building from the list, floor from the dropdown on the map), then the emergency. */
+  /* Two steps. 1: the location (building from the list, floor from the dropdown on the map). 2: the emergency, where the
+     panel widens and the map gives way to a slowly turning plan of the floor with its exit signs and alarm pulls lit. */
   [hidden] { display: none !important; }
   /* clip, not hidden: scrollIntoView on a row must not side-scroll the page or panel while a step is still sliding in */
   body { height: 100vh; padding-top: 64px; overflow: clip; }
   button:disabled { cursor: default; opacity: .35; }
   .nav { background: var(--ink); border-bottom: 1px solid var(--line); }
 
-  main { display: grid; grid-template-columns: 400px 1fr; height: 100%; min-height: 0; }
+  main { display: grid; grid-template-columns: 400px 1fr; height: 100%; min-height: 0; transition: grid-template-columns .6s var(--ease); }
+  body[data-step="2"] main { grid-template-columns: 58% 1fr; }
   #panel { position: relative; border-right: 1px solid var(--line); overflow: clip; background: var(--ink); }
   #trail { display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 20px; border-bottom: 1px solid var(--line); min-width: 0; }
   #trail button { background: none; padding: 4px 0; border-radius: 0; color: var(--dim); font: inherit; letter-spacing: inherit; text-transform: inherit; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -26,18 +28,19 @@
           transform: translateX(32px); transition: opacity .3s var(--ease), transform .3s var(--ease), visibility 0s .3s; }
   .step.past { transform: translateX(-32px); }
   .step.on { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
-  .step h2 { font: 400 30px/1.1 var(--grot); letter-spacing: -.01em; margin: 0 0 16px; }
+  .head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+  .step h2 { font: 400 30px/1.1 var(--grot); letter-spacing: -.01em; margin: 0; }
   .step input { margin-bottom: 12px; border-radius: 0; background: var(--ink); }
-  .rows { flex: 1; min-height: 0; overflow-y: auto; margin: 0 -20px; }
-  .row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; width: 100%; text-align: left; background: none;
-         border-radius: 0; border-left: 2px solid transparent; padding: 11px 20px 11px 18px; color: var(--text); font: 400 17px/1.3 var(--grot); }
+  .step input:focus { border-color: var(--accent); outline: none; }
+  .rows { flex: 1; min-height: 0; overflow-y: auto; margin: 0 -20px; scrollbar-color: var(--accent) #0000; }
   /* Black and orange: orange labels on black, and the chosen row turns solid orange. */
-  .rows { scrollbar-color: var(--accent) #0000; }
+  .row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; width: 100%; text-align: left; background: none;
+         border-radius: 0; padding: 11px 20px; color: var(--text); font: 400 17px/1.3 var(--grot); }
   .row span { color: var(--accent); font: 400 11px var(--code); letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; }
   .row:hover { color: var(--accent); }
   .row.sel, .row.sel span { background: var(--accent); color: var(--ink); }
-  .step input:focus { border-color: var(--accent); outline: none; }
   .none { padding: 11px 20px; color: var(--dim); }
+  .credit { margin: 10px 0 0; font-size: 10px; line-height: 1.4; color: #5d6873; }
   .cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 12px; }
   .cats button { display: flex; align-items: center; gap: 8px; background: none; border: 1px solid var(--line); border-radius: 0; color: var(--text);
                  font: 400 14px var(--grot); padding: 9px 10px; text-transform: capitalize; }
@@ -50,18 +53,29 @@
   .foot button { flex: 1; border-radius: 0; padding: 14px 16px; font: 400 12px var(--code); letter-spacing: .07em; text-transform: uppercase; }
   .foot .ghost { flex: 0 0 auto; }
   #sent { gap: 14px; } #sent b { flex: 1; font-weight: 400; color: var(--ok); }
+  /* The emergency step has the room: bigger type, all six categories in a row, the types in two columns. */
+  .step[data-s="2"] { padding: 40px clamp(24px, 4vw, 56px) 32px; }
+  .step[data-s="2"] h2 { font-size: clamp(34px, 3.4vw, 48px); margin-bottom: 28px; }
+  .step[data-s="2"] .cats { grid-template-columns: repeat(6, 1fr); gap: 8px; margin-bottom: 20px; }
+  .step[data-s="2"] .cats button { font-size: 15px; padding: 12px; }
+  .step[data-s="2"] .rows { margin: 0; display: grid; grid-template-columns: 1fr 1fr; align-content: start; column-gap: 8px; }
+  .step[data-s="2"] .row { font-size: 20px; padding: 15px 16px; }
+  .step[data-s="2"] #text { font-size: 20px; padding: 20px 0; }
+  .step[data-s="2"] .foot button { padding: 18px; font-size: 13px; }
 
-  #stage { position: relative; background: #05080c; overflow: hidden; }
-  .view { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .5s var(--ease), visibility 0s .5s; }
-  .view.on { opacity: 1; visibility: visible; transition-delay: 0s; }
-  #aimg { width: 100%; height: 100%; object-fit: contain; transition: opacity .3s; }
-  #aimg.loading { opacity: .2; }
-  .glass { background: #05080ccc; border: 1px solid var(--line); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
-  #caption { position: absolute; left: 16px; bottom: 16px; padding: 7px 12px; font-size: 13px; }
-  #caption:empty { display: none; }
-  /* Top right of the map: the floor of the chosen building, then the map / aerial switch. */
-  #tools { position: absolute; top: 16px; right: 16px; display: flex; gap: 8px; align-items: stretch; }
-  #floorbox { position: relative; }
+  /* Dropdowns (floor, city): the sheet unfurls from the button, wiping down while its rows settle in one after another. */
+  .drop { position: relative; }
+  .sheet { position: absolute; z-index: 3; top: calc(100% + 6px); right: 0; min-width: 100%; max-height: min(52vh, 420px); overflow-y: auto; background: var(--ink);
+           border: 1px solid var(--accent); scrollbar-color: var(--accent) #0000; clip-path: inset(0 0 100% 0); visibility: hidden; transition: clip-path .42s var(--ease), visibility 0s .42s; }
+  .drop.open .sheet { clip-path: inset(0); visibility: visible; transition-delay: 0s; }
+  .sheet button { display: block; width: 100%; text-align: left; white-space: nowrap; background: none; border-radius: 0; color: #fff; font: 400 16px var(--grot); padding: 10px 16px;
+                  opacity: 0; transform: translateY(-8px); transition: opacity .3s var(--ease), transform .3s var(--ease); }
+  .drop.open .sheet button { opacity: 1; transform: none; transition-delay: calc(min(var(--i), 16) * 22ms + 60ms); }
+  .sheet button[aria-selected="true"] { color: var(--accent); }
+  .sheet button:hover, .sheet button:focus-visible { background: var(--accent); color: var(--ink); outline: none; }
+  #citybtn { display: grid; place-items: center; width: 34px; height: 34px; padding: 0; border-radius: 0; background: none; border: 1px solid var(--line); color: var(--dim); }
+  #citybtn:hover, #citybox.open #citybtn { color: #fff; border-color: #fff; }
+  #citybox.active #citybtn { color: var(--ink); background: var(--accent); border-color: var(--accent); }
   #floorbtn { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-width: 200px; height: 48px; padding: 0 16px; border-radius: 0;
               background: var(--ink); border: 1px solid var(--accent); color: #fff; font: 500 17px var(--grot); }
   #floorbtn svg { transition: rotate .3s var(--ease); } #floorbox.open #floorbtn svg { rotate: 180deg; }
@@ -69,45 +83,69 @@
   #floorbox.unset #floorbtn { background: var(--accent); animation: nudge 1.8s var(--ease) infinite; }
   #floorbox.open #floorbtn { animation: none; }
   @keyframes nudge { 50% { box-shadow: 0 0 0 7px #ff5a3647; } }
-  /* The list unfurls from the button: the sheet wipes down while its rows settle in one after another. */
-  #floorlist { position: absolute; top: calc(100% + 6px); left: 0; right: 0; max-height: min(52vh, 420px); overflow-y: auto; background: var(--ink); border: 1px solid var(--accent);
-               scrollbar-color: var(--accent) #0000; clip-path: inset(0 0 100% 0); visibility: hidden; transition: clip-path .42s var(--ease), visibility 0s .42s; }
-  #floorbox.open #floorlist { clip-path: inset(0); visibility: visible; transition-delay: 0s; }
-  #floorlist button { display: block; width: 100%; text-align: left; background: none; border-radius: 0; color: #fff; font: 400 16px var(--grot); padding: 10px 16px;
-                      opacity: 0; transform: translateY(-8px); transition: opacity .3s var(--ease), transform .3s var(--ease); }
-  #floorbox.open #floorlist button { opacity: 1; transform: none; transition-delay: calc(min(var(--i), 16) * 22ms + 60ms); }
-  #floorlist button[aria-selected="true"] { color: var(--accent); }
-  #floorlist button:hover, #floorlist button:focus-visible { background: var(--accent); color: var(--ink); outline: none; }
-  #views { display: flex; padding: 3px; }
-  #views button, #compass button { background: none; color: var(--dim); border-radius: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; }
-  #views button { padding: 7px 14px; }
-  #views button.sel, #compass button.sel { background: var(--panel2); color: var(--text); }
-  #compass { position: absolute; right: 16px; bottom: 16px; display: grid; grid-template: repeat(3, 36px) / repeat(3, 36px); gap: 3px; padding: 3px; }
-  #compass button { padding: 0; }
+
+  #stage { position: relative; background: #05080c; overflow: hidden; }
+  .view { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .5s var(--ease), visibility 0s .5s; }
+  .view.on { opacity: 1; visibility: visible; transition-delay: 0s; }
+  #aimg { width: 100%; height: 100%; object-fit: contain; transition: opacity .3s; }
+  #aimg.loading { opacity: .2; }
+  .glass { background: #05080ccc; border: 1px solid var(--line); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  #tools { position: absolute; top: 16px; right: 16px; }
+  /* The views of the chosen building, as pictures: the 3D map, then the Vexcel aerial from above and from each side. */
+  #strip { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); display: flex; gap: 6px; padding: 6px; max-width: calc(100% - 32px); }
+  #strip button { position: relative; flex: none; width: 96px; height: 62px; padding: 0; border-radius: 0; overflow: hidden; border: 1px solid var(--line);
+                  background: #101820 repeating-linear-gradient(135deg, #ffffff0f 0 1px, #0000 1px 9px); }
+  #strip img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  #strip span { position: absolute; inset: auto 0 0; padding: 12px 6px 4px; text-align: left; color: #fff; background: linear-gradient(#0000, #000c); }
+  #strip button:hover { border-color: #fff; }
+  #strip button[aria-selected="true"] { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  /* The floor, tilted and turning. Each located sign is a lit dot with a beam standing on it. */
+  #floor3d { display: grid; place-items: center; perspective: 1500px; }
+  #plate { position: relative; transform-style: preserve-3d; transform: rotateX(55deg); animation: turn 80s linear infinite; }
+  @keyframes turn { from { transform: rotateX(55deg) rotateZ(0deg); } to { transform: rotateX(55deg) rotateZ(360deg); } }
+  #plate .img { position: absolute; inset: 0; background: center / 100% 100% no-repeat; filter: saturate(.5) brightness(.8) contrast(1.15); outline: 1px solid #ffffff2e; box-shadow: 0 0 90px #3fa7ff26; }
+  .pin { position: absolute; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 5px color-mix(in srgb, var(--c) 28%, #0000), 0 0 22px var(--c); transform-style: preserve-3d; }
+  .pin::before, .pin::after { content: ""; position: absolute; left: 6px; bottom: 7px; width: 2px; height: 90px; background: linear-gradient(to top, var(--c), #0000); transform-origin: bottom; transform: rotateX(-90deg); }
+  .pin::after { transform: rotateX(-90deg) rotateY(90deg); }  /* two crossed blades, so the beam shows from every side */
+  .pin.exit, .k.exit { --c: var(--ok); } .pin.alarm, .k.alarm { --c: var(--accent); }
+  #floornote { position: absolute; left: 20px; top: 20px; display: grid; gap: 6px; padding: 12px 14px; font-size: 14px; max-width: calc(100% - 40px); }
+  #floornote:empty { display: none; }
+  #floornote b { font-weight: 500; font-size: 16px; }
+  .k { display: flex; align-items: center; gap: 8px; color: var(--dim); }
+  .k::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--c); }
   .target { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--accent); box-shadow: 0 0 0 2px #05080c99; }
   .target::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--accent); animation: ping 2s var(--ease) infinite; }
   @keyframes ping { from { transform: scale(1); opacity: .9; } to { transform: scale(4.5); opacity: 0; } }
-  .maplibregl-ctrl.maplibregl-ctrl-attrib { font: 11px var(--grot); background: #05080ccc; color: var(--dim); }
-  .maplibregl-ctrl-attrib a { color: var(--dim); }
-  .maplibregl-ctrl-attrib-button { filter: invert(1); }
 
   @media (max-width: 820px) {
-    main { grid-template-columns: 1fr; grid-template-rows: 42vh 1fr; }
+    main, body[data-step="2"] main { grid-template-columns: 1fr; grid-template-rows: 42vh 1fr; }
     #stage { order: -1; } #panel { border-right: 0; border-top: 1px solid var(--line); }
+    .step[data-s="2"] .cats { grid-template-columns: repeat(3, 1fr); } .step[data-s="2"] .rows { grid-template-columns: 1fr; }
+    #strip button { width: 64px; height: 44px; }
   }
-  @media (prefers-reduced-motion: reduce) { .step, .view, #aimg { transition: none; } .target::after, #floorbox.unset #floorbtn { animation: none; } #floorlist, #floorlist button { transition: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    main, .step, .view, #aimg, .sheet, .sheet button { transition: none; }
+    .target::after, #floorbox.unset #floorbtn, #plate { animation: none; }
+  }
 </style>
 </head>
-<body>
-<nav class="nav caps" aria-label="Primesight"><a href="dispatch-judge.html" aria-current="page">First responder</a><a class="mark" href="home.html">Primesight</a><a href="game.html">Game</a></nav>
+<body data-step="1">
+<nav class="nav caps" aria-label="Primesight"><a href="dispatch-judge.html" aria-current="page">First responder</a><a class="mark" href="home.html">Primesight</a><span></span></nav>
 <main>
   <aside id="panel">
     <nav id="trail" class="caps" aria-label="Steps"></nav>
     <section class="step on" data-s="1">
-      <h2>Choose a building</h2>
+      <div class="head">
+        <h2>Choose a building</h2>
+        <div class="drop" id="citybox">
+          <button id="citybtn" aria-label="Filter by city" aria-haspopup="listbox" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 3.5h12M4.5 8h7M6.5 12.5h3"/></svg></button>
+          <div class="sheet" id="citylist" role="listbox" aria-label="City"></div>
+        </div>
+      </div>
       <input id="q" placeholder="Search address or city" aria-label="Search address or city" autocomplete="off">
       <div class="rows" id="blist"></div>
       <div class="foot"><button class="primary" id="next1" disabled>Confirm location</button></div>
+      <p class="credit">Imagery: Esri, Maxar. Map data: OpenStreetMap, OpenFreeMap. Aerial photos: Vexcel.</p>
     </section>
     <section class="step" data-s="2">
       <h2>What is the emergency?</h2>
@@ -120,24 +158,16 @@
   </aside>
   <div id="stage">
     <div class="view on" id="map"></div>
-    <div class="view" id="aerial">
-      <img id="aimg" alt="Aerial photo of the selected building">
-      <div class="glass caps" id="compass" role="group" aria-label="Aerial view direction">
-        <button data-side="north" style="grid-area:1/2" aria-label="Looking north">N</button>
-        <button data-side="west" style="grid-area:2/1" aria-label="Looking west">W</button>
-        <button data-side="top" style="grid-area:2/2" aria-label="Top down">Top</button>
-        <button data-side="east" style="grid-area:2/3" aria-label="Looking east">E</button>
-        <button data-side="south" style="grid-area:3/2" aria-label="Looking south">S</button>
-      </div>
-    </div>
+    <div class="view" id="aerial"><img id="aimg" alt="Aerial photo of the selected building"></div>
+    <div class="view" id="floor3d"><div id="plate"></div></div>
     <div id="tools" hidden>
-      <div id="floorbox" class="unset">
+      <div class="drop unset" id="floorbox">
         <button id="floorbtn" aria-haspopup="listbox" aria-expanded="false"><span id="floorlabel">Choose floor</span><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6l5 5 5-5"/></svg></button>
-        <div id="floorlist" role="listbox" aria-label="Floor"></div>
+        <div class="sheet" id="floorlist" role="listbox" aria-label="Floor"></div>
       </div>
-      <div class="glass caps" id="views"><button data-view="map">Map</button><button data-view="aerial">Aerial</button></div>
     </div>
-    <div class="glass" id="caption" aria-live="polite"></div>
+    <div class="glass caps" id="strip" role="tablist" aria-label="View of the building" hidden></div>
+    <div class="glass" id="floornote" aria-live="polite" hidden></div>
   </div>
 </main>
 <script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
@@ -146,12 +176,12 @@
 <script>
 const $ = id => document.getElementById(id);
 const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-const SIDES = { top: "top down", north: "looking north", east: "looking east", south: "looking south", west: "looking west" };
+const VIEWS = [["map", "Map"], ["top", "Top"], ["north", "North"], ["east", "East"], ["south", "South"], ["west", "West"]];
 let B = [], I = [];
-const s = { step: 1, b: null, f: null, cat: null, i: null, view: "map", side: "top" };
+const s = { step: 1, b: null, f: null, city: "", cat: null, i: null, view: "map", fv: null };
 
 // ---- Map (site.js): choosing a building flies in and circles it. One dot per building; a dot is clickable too.
-const { map, fly } = makeMap("map");
+const { map, fly, hold, resume } = makeMap("map");
 map.on("load", () => {
   map.addSource("pts", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
   map.addLayer({ id: "pts", type: "circle", source: "pts", paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 3, 2.5, 12, 5], "circle-color": "#fff", "circle-stroke-color": "#ff5a36", "circle-stroke-width": 1.5 } });
@@ -165,50 +195,89 @@ function dots() {
   if (src) src.setData({ type: "FeatureCollection", features: B.filter(b => b.lat).map(b => ({ type: "Feature", properties: { pid: b.pid }, geometry: { type: "Point", coordinates: [b.lon, b.lat] } })) });
 }
 
-// ---- Stage: the map or a Vexcel aerial of the chosen building, with the floor dropdown and view switch on top.
+// ---- Stage. Step 1: the map, or a Vexcel aerial picked from the strip. Step 2: the turning floor plan (the map if there is none).
+let mapOn = true;
 function stage() {
-  $("tools").hidden = !(s.step === 1 && s.b);
-  document.querySelectorAll("#views button").forEach(b => b.classList.toggle("sel", b.dataset.view === s.view));
-  for (const v of ["map", "aerial"]) $(v).classList.toggle("on", v === s.view);
-  $("caption").textContent = s.view === "aerial" ? `Vexcel aerial, ${SIDES[s.side]}` : "";
+  const picking = s.step === 1 && !!s.b;
+  $("tools").hidden = $("strip").hidden = !picking; $("floornote").hidden = s.step !== 2;
+  const view = s.step === 2 ? (s.fv ? "floor3d" : "map") : s.view === "map" ? "map" : "aerial";
+  for (const v of ["map", "aerial", "floor3d"]) $(v).classList.toggle("on", v === view);
+  if (mapOn && view !== "map") hold();  // the map only circles while it is on screen
+  if (!mapOn && view === "map" && s.b) resume();
+  mapOn = view === "map";
+  document.querySelectorAll("#strip button").forEach(b => b.setAttribute("aria-selected", b.dataset.v === s.view));
   $("next1").disabled = !(s.b && s.f);
   $("next1").textContent = s.b && !s.f ? "Choose a floor on the map" : "Confirm location";  // the button says what is missing
 }
-function aerial(side) {
-  s.side = side; $("aimg").classList.add("loading"); $("aimg").src = `/aerial/${s.b.pid}/${side}.jpg`;
-  document.querySelectorAll("#compass button").forEach(b => b.classList.toggle("sel", b.dataset.side === side));
+function setView(v) {
+  s.view = v;
+  if (v !== "map") { $("aimg").classList.add("loading"); $("aimg").src = `/aerial/${s.b.pid}/${v}.jpg`; }
   stage();
 }
 $("aimg").onload = () => $("aimg").classList.remove("loading");
-$("aimg").onerror = () => { if (s.view === "aerial") $("caption").textContent = `No Vexcel image ${SIDES[s.side]} for this building.`; };
-$("views").onclick = e => { const v = e.target.dataset.view; if (!v) return; s.view = v; v === "aerial" ? aerial(s.side) : stage(); };
-$("compass").onclick = e => { const side = e.target.dataset.side; if (side) aerial(side); };
-// The floor dropdown: a button that unfurls a list of the building's floors.
+$("strip").onclick = e => { const b = e.target.closest("button"); if (b) setView(b.dataset.v); };
+let thumbs;
+function renderStrip() {
+  $("strip").innerHTML = VIEWS.map(([v, name]) => `<button role="tab" data-v="${v}">${v === "map" ? "" : `<img data-src="/aerial/${s.b.pid}/${v}.jpg" alt="">`}<span>${name}</span></button>`).join("");
+  clearTimeout(thumbs);  // wait a moment before asking Vexcel, so arrowing through the list doesn't fetch five photos per building
+  thumbs = setTimeout(() => document.querySelectorAll("#strip img").forEach(i => { i.onerror = () => i.parentElement.hidden = true; i.src = i.dataset.src; }), 900);
+}
+
+// ---- The floor plan in step 2.
+let floorTick = 0;
+async function loadFloor() {
+  const t = ++floorTick; s.fv = null; $("floornote").textContent = "";
+  try {
+    const fv = await api(`/floor/${s.b.pid}/${s.f}`);
+    if (t !== floorTick) return;
+    const n = k => fv.points.filter(p => p.kind === k).length, some = (c, word) => `${c} ${word}${c === 1 ? "" : "s"}`;
+    s.fv = fv; $("plate").dataset.aspect = fv.aspect; sizePlate();
+    $("plate").innerHTML = `<div class="img" style="background-image:url(${fv.image})"></div>` + fv.points.map(p => `<i class="pin ${p.kind === "exit sign" ? "exit" : "alarm"}" style="left:${p.x * 100}%;top:${p.y * 100}%"></i>`).join("");
+    $("floornote").innerHTML = `<b>${fv.exact ? `Floor ${fv.floor}` : `No scan of floor ${s.f}. Showing floor ${fv.floor}.`}</b><span class="k exit">${some(n("exit sign"), "exit sign")}</span><span class="k alarm">${some(n("fire alarm pull station"), "alarm pull")}</span>`;
+  } catch (e) { if (t === floorTick) $("floornote").textContent = "No floor plan for this building."; }
+  if (t === floorTick) stage();
+}
+// The plate turns, so its diagonal has to fit the stage.
+function sizePlate() {
+  const a = +$("plate").dataset.aspect || 1, d = Math.min($("stage").clientWidth, $("stage").clientHeight * 1.2) * .98;
+  $("plate").style.width = d / Math.hypot(1, 1 / a) + "px"; $("plate").style.height = d / Math.hypot(1, a) + "px";
+}
+new ResizeObserver(sizePlate).observe($("stage"));
+
+// ---- Dropdowns: the floor (on the map) and the city filter (beside the heading).
+function openDrop(box, on) {
+  box.classList.toggle("open", on); box.querySelector("button").setAttribute("aria-expanded", on);
+  if (on) (box.querySelector('.sheet [aria-selected="true"]') || box.querySelector(".sheet button"))?.focus();
+}
+for (const box of document.querySelectorAll(".drop")) box.querySelector("button").onclick = () => openDrop(box, !box.classList.contains("open"));
+document.addEventListener("click", e => { for (const box of document.querySelectorAll(".drop")) if (!box.contains(e.target)) openDrop(box, false); });
 function setFloor(f) {
   s.f = f; $("floorlabel").textContent = f ? `Floor ${f}` : "Choose floor"; $("floorbox").classList.toggle("unset", !f);
   document.querySelectorAll("#floorlist button").forEach(b => b.setAttribute("aria-selected", +b.dataset.f === f));
   stage();
 }
-function openFloors(on) {
-  $("floorbox").classList.toggle("open", on); $("floorbtn").setAttribute("aria-expanded", on);
-  if (on) (document.querySelector('#floorlist [aria-selected="true"]') || $("floorlist").firstChild)?.focus();
+$("floorlist").onclick = e => { const b = e.target.closest("button"); if (b) { setFloor(+b.dataset.f); openDrop($("floorbox"), false); $("floorbtn").focus(); } };
+function setCity(c) {
+  s.city = c; $("citybox").classList.toggle("active", !!c);
+  $("citylist").innerHTML = ["", ...new Set(B.map(b => b.city))].map((x, k) => `<button role="option" aria-selected="${x === c}" data-c="${esc(x)}" style="--i:${k}">${esc(x || "All cities")}</button>`).join("");
+  renderBuildings();
+  const pts = hits().filter(b => b.lat);  // with no building chosen yet, show the city's buildings on the map
+  if (!s.b && pts.length) map.fitBounds([[Math.min(...pts.map(b => b.lon)), Math.min(...pts.map(b => b.lat))], [Math.max(...pts.map(b => b.lon)), Math.max(...pts.map(b => b.lat))]], { padding: 90, maxZoom: 11, duration: 1600 });
 }
-$("floorbtn").onclick = () => openFloors(!$("floorbox").classList.contains("open"));
-$("floorlist").onclick = e => { const b = e.target.closest("button"); if (b) { setFloor(+b.dataset.f); openFloors(false); $("floorbtn").focus(); } };
-document.addEventListener("click", e => { if (!e.target.closest("#floorbox")) openFloors(false); });
+$("citylist").onclick = e => { const b = e.target.closest("button"); if (b) { setCity(b.dataset.c); openDrop($("citybox"), false); $("citybtn").focus(); } };
 
 // ---- Panel: buildings, then the emergency.
+const hits = () => matchBuildings(B, $("q").value).filter(b => !s.city || b.city === s.city);
 function renderBuildings() {
-  const hits = matchBuildings(B, $("q").value);
-  $("blist").innerHTML = hits.map(b => `<button class="row ${s.b === b ? "sel" : ""}" data-pid="${b.pid}">${esc(b.address)}<span>${esc(b.city)}</span></button>`).join("") || `<div class="none">No building matches.</div>`;
+  $("blist").innerHTML = hits().map(b => `<button class="row ${s.b === b ? "sel" : ""}" data-pid="${b.pid}">${esc(b.address)}<span>${esc(b.city)}</span></button>`).join("") || `<div class="none">No building matches.</div>`;
 }
 function selectBuilding(b) {
   if (!b) return;
-  Object.assign(s, { b, f: null, view: "map", side: "top" });
+  Object.assign(s, { b, view: "map" });
   $("floorlist").innerHTML = floorOptions(b).map((o, k) => `<button role="option" aria-selected="false" data-f="${o.floor}" style="--i:${k}">Floor ${o.floor}</button>`).join("");
-  openFloors(false);
+  openDrop($("floorbox"), false);
   if (s.step !== 1) go(1);
-  renderBuildings(); setFloor(null); fly(b);
+  renderBuildings(); renderStrip(); setFloor(null); fly(b);
   document.querySelector("#blist .sel")?.scrollIntoView({ block: "nearest" });
 }
 function renderEmergency() {
@@ -225,10 +294,11 @@ function renderTrail() {
   $("trail").innerHTML = labels.map((l, k) => `${k ? '<span class="sep">/</span>' : ""}<button data-go="${k + 1}" ${k + 1 === s.step ? 'aria-current="step"' : ""} ${k + 1 > s.step ? "disabled" : ""}>${esc(l)}</button>`).join("");
 }
 function go(n) {
-  s.step = n;
+  s.step = n; document.body.dataset.step = n;
   document.querySelectorAll(".step").forEach(el => { el.classList.toggle("on", +el.dataset.s === n); el.classList.toggle("past", +el.dataset.s < n); });
-  if (n === 2) renderEmergency();
-  openFloors(false); renderTrail(); stage();
+  document.querySelectorAll(".drop").forEach(box => openDrop(box, false));
+  if (n === 2) { renderEmergency(); loadFloor(); }
+  renderTrail(); stage();
 }
 
 $("q").oninput = renderBuildings;
@@ -243,20 +313,23 @@ $("send").onclick = async () => {
   catch (e) { $("text").textContent = "Could not send. Check that the Primesight server is running, then try again."; $("send").disabled = false; }
 };
 $("again").onclick = () => location.reload();
-// Arrow keys move through the buildings like a selection screen; Enter takes the step's main button.
+// Keys. Up and down move through the buildings like a selection screen, left and right through the views of the chosen one,
+// Enter takes the step's main button. Inside a dropdown the arrows move through its rows and Escape closes it.
 document.addEventListener("keydown", e => {
-  const dir = e.key === "ArrowDown" ? 1 : e.key === "ArrowUp" ? -1 : 0;
-  if (e.target.closest("#floorbox")) {  // inside the floor dropdown: arrows move through the floors, Escape closes it
-    if (e.key === "Escape") { openFloors(false); $("floorbtn").focus(); }
-    if (dir && $("floorbox").classList.contains("open")) { e.preventDefault(); const o = [...document.querySelectorAll("#floorlist button")]; o[Math.max(0, Math.min(o.length - 1, o.indexOf(document.activeElement) + dir))].focus(); }
+  const dir = e.key === "ArrowDown" ? 1 : e.key === "ArrowUp" ? -1 : 0, turn = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+  const box = e.target.closest(".drop");
+  if (box) {
+    if (e.key === "Escape") { openDrop(box, false); box.querySelector("button").focus(); }
+    if (dir && box.classList.contains("open")) { e.preventDefault(); const o = [...box.querySelectorAll(".sheet button")]; o[Math.max(0, Math.min(o.length - 1, o.indexOf(document.activeElement) + dir))].focus(); }
     return;
   }
-  if (dir && s.step === 1) { e.preventDefault(); const hits = matchBuildings(B, $("q").value); selectBuilding(hits[Math.max(0, Math.min(hits.length - 1, hits.indexOf(s.b) + dir))]); }
-  if (e.key === "Enter" && !e.target.closest("button, a, select")) { const b = document.querySelector(".step.on .primary"); if (b && !b.disabled) b.click(); }
+  if (dir && s.step === 1) { e.preventDefault(); const h = hits(); selectBuilding(h[Math.max(0, Math.min(h.length - 1, h.indexOf(s.b) + dir))]); }
+  if (turn && s.step === 1 && s.b && e.target.id !== "q") { const v = [...document.querySelectorAll("#strip button:not([hidden])")].map(b => b.dataset.v); setView(v[(v.indexOf(s.view) + turn + v.length) % v.length]); }
+  if (e.key === "Enter" && !e.target.closest("button, a")) { const b = document.querySelector(".step.on .primary"); if (b && !b.disabled) b.click(); }
 });
 
 renderTrail();
-Promise.all([getBuildings(), getIncidents()]).then(([b, i]) => { B = b; I = i; renderBuildings(); dots(); })
+Promise.all([getBuildings(), getIncidents()]).then(([b, i]) => { B = b; I = i; setCity(""); dots(); })
   .catch(() => { $("blist").innerHTML = `<div class="none">Could not load the buildings. Check that the Primesight server is running.</div>`; });
 </script>
 </body>

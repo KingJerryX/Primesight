@@ -7,7 +7,8 @@ console.assert(inRing([1, 1], [[0, 0], [2, 0], [2, 2], [0, 2]]) && !inRing([3, 1
 
 function makeMap(container, opts = {}) {
   const map = new maplibregl.Map({
-    container, center: [-106.9, 32.2], zoom: 3.6, maxPitch: 70, attributionControl: { compact: true }, ...opts,
+    // No attribution button on the map: each page credits the imagery and map data in its own text instead.
+    container, center: [-106.9, 32.2], zoom: 3.6, maxPitch: 70, attributionControl: false, ...opts,
     style: { version: 8, projection: { type: "globe" },
       sky: { "sky-color": "#0a1320", "horizon-color": "#16263a", "fog-color": "#0a1320", "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 5, 1, 7, 0] },
       sources: {
@@ -17,20 +18,19 @@ function makeMap(container, opts = {}) {
         { id: "bg", type: "background", paint: { "background-color": "#05080c" } },
         { id: "sat", type: "raster", source: "sat", paint: { "raster-saturation": -0.6, "raster-brightness-max": 0.62, "raster-contrast": 0.15 } },
         { id: "bld", type: "fill-extrusion", source: "omt", "source-layer": "building", minzoom: 14.5,
-          paint: { "fill-extrusion-color": "#3b4a5c", "fill-extrusion-height": ["coalesce", ["get", "render_height"], 6], "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], 0], "fill-extrusion-opacity": 0.9 } }] } });
-  map.on("load", () => {
-    map.addSource("sel", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
-    map.addLayer({ id: "sel", type: "fill-extrusion", source: "sel", paint: { "fill-extrusion-color": "#ff5a36", "fill-extrusion-height": ["+", ["coalesce", ["get", "render_height"], 6], 0.5], "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], 0], "fill-extrusion-opacity": 0.8 } });
-  });
+          // The chosen building is recoloured in place through feature state. Drawing a second extrusion over it flickers:
+          // two shapes on the same walls fight for the same pixels as the camera moves.
+          paint: { "fill-extrusion-color": ["case", ["boolean", ["feature-state", "sel"], false], "#ff5a36", "#3b4a5c"], "fill-extrusion-height": ["coalesce", ["get", "render_height"], 6], "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], 0], "fill-extrusion-opacity": 0.9 } }] } });
   const target = document.createElement("div"); target.className = "target";
   const marker = new maplibregl.Marker({ element: target });
-  // The chosen building's own footprint, raised in the accent colour: the footprint that contains the building's point.
+  // Colour the chosen building: every footprint that contains the building's point (a tower can be several parts and tile pieces).
   function highlight(b) {
-    const src = map.getSource("sel");
-    if (!src) return false;
-    const hit = b ? map.querySourceFeatures("omt", { sourceLayer: "building" }).filter(f => (f.geometry.type === "Polygon" ? [f.geometry.coordinates] : f.geometry.type === "MultiPolygon" ? f.geometry.coordinates : []).some(poly => inRing([b.lon, b.lat], poly[0]))) : [];
-    src.setData({ type: "FeatureCollection", features: hit.map(f => ({ type: "Feature", properties: f.properties, geometry: f.geometry })) });
-    if (hit.length) marker.remove();  // the raised footprint marks it better than a ring that nearer towers can sit behind
+    if (!map.getSource("omt")) return false;
+    const where = { source: "omt", sourceLayer: "building" };
+    map.removeFeatureState(where);
+    const hit = b ? map.querySourceFeatures("omt", { sourceLayer: "building" }).filter(f => f.id != null && (f.geometry.type === "Polygon" ? [f.geometry.coordinates] : f.geometry.type === "MultiPolygon" ? f.geometry.coordinates : []).some(poly => inRing([b.lon, b.lat], poly[0]))) : [];
+    for (const id of new Set(hit.map(f => f.id))) map.setFeatureState({ ...where, id }, { sel: true });
+    if (hit.length) marker.remove();  // the coloured building marks it better than a ring that nearer towers can sit behind
     return hit.length > 0;
   }
   let orbit = 0;  // bumped whenever the camera gets a new job, so an old orbit stops itself
