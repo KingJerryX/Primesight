@@ -114,6 +114,16 @@ def walk_line(route):
     return f"walk from scan start: {to_exit}, far end ~{round(route['far']['m'])} m"
 
 
+SQFT_PER_PERSON = 100  # IBC business occupant load is 150 gross sqft/person; 100 leaves room for dense offices
+
+
+def _cap(emp, spaces):
+    """CoStar's employee count is sometimes company-wide (1505 staff in a 4535 sqft suite, 106 of 2572 tenants in our
+    60 buildings): cap it at what the leased space can hold, when every space has a size."""
+    sqft = [s.get("sqft") for s in spaces]
+    return min(emp, round(sum(sqft) / SQFT_PER_PERSON)) if emp and all(sqft) else emp
+
+
 def _people(tenants, floors):
     """Headcount on a set of floors, counting a multi-floor tenant once per floor share."""
     by_name = {}
@@ -121,7 +131,7 @@ def _people(tenants, floors):
         by_name.setdefault(t["name"], []).append(t)
     total = 0
     for spaces in by_name.values():
-        emp = spaces[0]["employees"] or 0
+        emp = _cap(spaces[0]["employees"] or 0, spaces)
         on = [s for s in spaces if s["floor"] in floors]
         total += round(emp * len(on) / len(spaces))
     return total
@@ -208,6 +218,8 @@ if __name__ == "__main__":
     t = [{"name": "A", "floor": 30, "employees": 100}, {"name": "A", "floor": 31, "employees": 100},
          {"name": "B", "floor": 30, "employees": None}]
     assert _people(t, {30}) == 50 and _people(t, {30, 31}) == 100
+    assert _people([{"name": "C", "floor": 1, "employees": 1505, "sqft": 4535}], {1}) == 45  # company-wide count capped
+    assert _people([{"name": "D", "floor": 1, "employees": 20, "sqft": None}], {1}) == 20  # no size: kept as is
     assert plan_px((1, 2), {"origin": (-1, 0), "res": 100}, 500) == (200, 300)  # y flips: 2 m up = 200 px from bottom
     assert walk_line({"exit": {"m": 23, "legs": [[4, ""], [3, "right"], [16, "left"]]}, "far": {"m": 38.4}}) == \
         "walk from scan start: exit sign ~23 m (4 m, right 3 m, left 16 m), far end ~38 m"

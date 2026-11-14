@@ -63,7 +63,10 @@ def gather_building(property_id: int, floor: int, incident: str, incident_type: 
         "draft_briefing": draft,
         "incident_needs": ty.get("needs"),  # what the crew needs first for this type, from the catalog
         "building": {k: b.get(k) for k in ("name", "address", "stories", "year_built", "construction", "sprinklers", "elevators", "contacts", "parking")},
-        "tenants_on_floor": [t for t in b["tenants"] if t["floor"] == floor],
+        # employee counts capped at what the space holds; employees_capped marks a company-wide figure
+        "tenants_on_floor": [{**t, "employees": briefing._cap(t["employees"], [t]),
+                              **({"employees_capped": True} if briefing._cap(t["employees"], [t]) != t["employees"] else {})}
+                             for t in b["tenants"] if t["floor"] == floor],
         "tenants_nearby_floors": [{"name": t["name"], "floor": t["floor"], "about": t["about"]} for t in b["tenants"]
                                   if t["floor"] and abs(t["floor"] - floor) <= 3 and t["floor"] != floor],
         "hydrants": f["hydrants"][:3], "staging": f["staging"][:2], "roof": f["roof"],
