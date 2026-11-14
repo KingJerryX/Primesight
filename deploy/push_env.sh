@@ -3,7 +3,7 @@
 # Run from the repo root:  bash deploy/push_env.sh      then redeploy:  vercel deploy --prod --yes
 set -euo pipefail
 cd "$(dirname "$0")/.."
-NAMES="ANTHROPIC_API_KEY VEXCEL_API_KEY MATTERPORT_TOKEN_ID MATTERPORT_TOKEN_SECRET PHOTON_API_KEY PHOTON_PROJECT_ID
+NAMES="ANTHROPIC_API_KEY VEXCEL_API_KEY MATTERPORT_TOKEN_ID MATTERPORT_TOKEN_SECRET MATTERPORT_SDK_KEY PHOTON_API_KEY PHOTON_PROJECT_ID
        PHOTON_WEBHOOK_SECRET SUPABASE_URL SUPABASE_SECRET_KEY PRIMESIGHT_PASSCODE PRIMESIGHT_MAX_LIVE"
 val() { { grep -E "^$1=" .env || true; } | tail -1 | tr -d '' | cut -d= -f2- | sed -e 's/^"//' -e 's/"$//'; }
 set_var() {  # name value
