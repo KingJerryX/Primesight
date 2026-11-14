@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primesight Judge Mode</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  body { height: 100vh; display: flex; flex-direction: column; }
+  header { display: flex; align-items: center; gap: 14px; padding: 12px 18px; border-bottom: 1px solid var(--line); }
+  header h1 { font-size: 17px; margin: 0; }
+  header .hint { color: var(--dim); font-size: 13px; }
+  .cols { flex: 1; display: grid; grid-template-columns: 1.3fr .55fr 1.2fr; gap: 12px; padding: 12px; min-height: 0; }
+  .col { display: flex; flex-direction: column; min-height: 0; }
+  .col h2 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); margin: 0 0 8px; }
+  .scroll { flex: 1; overflow-y: auto; border: 1px solid var(--line); border-radius: 10px; }
+  .b { padding: 9px 12px; border-bottom: 1px solid var(--line); cursor: pointer; }
+  .b.sel { background: #ff5a3622; box-shadow: inset 3px 0 var(--accent); }
+  .b small { color: var(--dim); }
+  .stack { display: flex; flex-direction: column-reverse; gap: 2px; padding: 6px; }
+  .fl { display: flex; align-items: center; gap: 6px; font-size: 12px; padding: 3px 6px; border-radius: 4px; cursor: pointer; background: var(--panel); }
+  .fl .bar { height: 8px; background: #3fa7ff66; border-radius: 2px; }
+  .fl.scan { outline: 1px solid var(--ok); }
+  .fl.sel { background: var(--accent); color: #fff; }
+  .inc { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 8px; }
+  .inc button { text-align: left; background: var(--panel); border: 1px solid var(--line); font-weight: 500; font-size: 13px; padding: 8px 10px; }
+  .inc button.sel { background: currentColor; }
+  .inc button.sel span { color: #000; }
+  .inc .cat { grid-column: 1 / -1; font-size: 11px; text-transform: uppercase; margin-top: 4px; }
+  footer { display: flex; gap: 10px; align-items: center; padding: 12px 18px; border-top: 1px solid var(--line); }
+  #text { flex: 1; font-family: var(--mono); font-size: 13px; }
+  @media (max-width: 900px) { .cols { grid-template-columns: 1fr; } .scroll { max-height: 260px; } }
+</style>
+</head>
+<body>
+<header><h1>PRIMESIGHT · Judge mode</h1><span class="hint">Pick any building, any floor, any emergency. The texts land on the phone (<a id="phonelink" target="_blank">open the phone</a>).</span></header>
+<div class="cols">
+  <div class="col"><h2>1 · Building <span id="n"></span></h2><input id="q" placeholder="Search address, name, city" style="margin-bottom:8px"><div class="scroll" id="blist"></div></div>
+  <div class="col"><h2>2 · Floor</h2><div class="scroll"><div class="stack" id="stack"></div></div></div>
+  <div class="col"><h2>3 · Emergency</h2><div class="scroll"><div class="inc" id="inc"></div></div></div>
+</div>
+<footer>
+  <div id="text" class="dim">Pick a building, a floor and an emergency.</div>
+  <button class="ghost" id="surprise">Surprise me</button>
+  <button id="go" disabled>Text it to the crew</button>
+</footer>
+<script src="common.js"></script>
+<script>
+const PHONE = "judge"; document.getElementById("phonelink").href = `phone.html?id=${PHONE}`;
+let B = [], I = [], s = {};
+const $ = id => document.getElementById(id);
+function list() {
+  const hits = matchBuildings(B, $("q").value); $("n").textContent = `(${hits.length})`;
+  $("blist").innerHTML = hits.map(b => `<div class="b ${s.b === b ? "sel" : ""}" data-pid="${b.pid}"><b>${b.address}</b>, ${b.city}<br><small>${b.name || b.type} · ${b.stories || "?"} fl · ${b.tenants} tenants${b.sam3 ? " · SAM 3" : ""}</small></div>`).join("");
+}
+function stack() {
+  if (!s.b) return;
+  const per = Object.fromEntries(s.b.tenant_floors.map(f => [f, 1]));
+  $("stack").innerHTML = floorOptions(s.b).map(o => `<div class="fl ${o.scanned ? "scan" : ""} ${s.f === o.floor ? "sel" : ""}" data-f="${o.floor}">
+    <span style="width:22px;text-align:right">${o.floor}</span><span class="bar" style="width:${o.tenants ? 40 : 4}px"></span>${o.scanned ? "<small>3D scan</small>" : ""}</div>`).join("");
+}
+function inc() {
+  const cats = [...new Set(I.map(t => t.category))];
+  $("inc").innerHTML = cats.map(c => `<div class="cat" style="color:${CATEGORY_COLORS[c]}">${c}</div>` + I.filter(t => t.category === c)
+    .map(t => `<button data-id="${t.id}" style="color:${CATEGORY_COLORS[c]}" class="${s.i === t ? "sel" : ""}"><span>${t.label}</span></button>`).join("")).join("");
+}
+function update() {
+  const ok = s.b && s.f && s.i;
+  $("text").textContent = ok ? dispatchText({ building: s.b, floor: s.f, incident: s.i }) : "Pick a building, a floor and an emergency.";
+  $("text").className = ok ? "" : "dim"; $("go").disabled = !ok;
+}
+$("q").oninput = list;
+$("blist").onclick = e => { const r = e.target.closest(".b"); if (!r) return; s.b = B.find(b => b.pid == r.dataset.pid); s.f = s.b.scan_floor; list(); stack(); update(); };
+$("stack").onclick = e => { const r = e.target.closest(".fl"); if (!r) return; s.f = +r.dataset.f; stack(); update(); };
+$("inc").onclick = e => { const r = e.target.closest("button"); if (!r) return; s.i = I.find(t => t.id === r.dataset.id); inc(); update(); };
+$("surprise").onclick = () => { s.b = pick(B); const fl = floorOptions(s.b); s.f = (pick([fl.find(o => o.scanned), pick(fl.filter(o => o.tenants)), pick(fl)].filter(Boolean))).floor; s.i = pick(I); list(); stack(); inc(); update();
+  document.querySelectorAll(".b.sel, .fl.sel, .inc button.sel").forEach(el => el.scrollIntoView({ block: "center", behavior: "smooth" })); };
+$("go").onclick = async () => { $("go").disabled = true; await api("/sms", { phone: PHONE, text: $("text").textContent }); $("go").textContent = "Sent: watch the phone"; setTimeout(() => { $("go").textContent = "Text it to the crew"; $("go").disabled = false; }, 2500); };
+Promise.all([getBuildings(), getIncidents()]).then(([b, i]) => { B = b; I = i; list(); inc(); });
+</script>
+</body>
+</html>

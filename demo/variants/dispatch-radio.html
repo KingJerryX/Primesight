@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primesight Free-text Dispatch</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  main { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .box { position: relative; margin-top: 18px; }
+  textarea { min-height: 110px; font-family: var(--mono); font-size: 16px; resize: vertical; }
+  #sug { position: absolute; left: 0; right: 0; top: 100%; z-index: 5; background: var(--panel2); border: 1px solid var(--line); border-radius: 8px; margin-top: 4px; display: none; max-height: 260px; overflow-y: auto; }
+  #sug div { padding: 8px 12px; cursor: pointer; } #sug div.on, #sug div:hover { background: #ffffff14; }
+  .parsed { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; }
+  .parsed .panel { padding: 10px 12px; } .parsed .k { font-size: 11px; color: var(--dim); text-transform: uppercase; } .parsed .v { font-weight: 600; margin-top: 2px; }
+  .row { display: flex; gap: 8px; margin-top: 14px; }
+  #out { margin-top: 18px; }
+  @media (max-width: 700px) { .parsed { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Free-text dispatch</h1>
+  <div class="dim">Type it the way a dispatcher would say it. Addresses and incidents autocomplete (Tab or click); Primesight parses the rest.</div>
+  <div class="box"><textarea id="t" placeholder="e.g. Two people stuck in an elevator, 12th floor, 1000 Louisiana..." autofocus></textarea><div id="sug"></div></div>
+  <div class="parsed">
+    <div class="panel"><div class="k">Building</div><div class="v" id="pb">-</div></div>
+    <div class="panel"><div class="k">Floor</div><div class="v" id="pf">-</div></div>
+    <div class="panel"><div class="k">Incident type</div><div class="v" id="pi">-</div></div>
+    <div class="panel"><div class="k">Category</div><div class="v" id="pc">-</div></div>
+  </div>
+  <div class="row"><button id="send">Send to Primesight</button><button id="draft" class="ghost">Fast draft</button><button id="phone" class="ghost">Text it to the phone</button></div>
+  <div id="out"></div>
+</main>
+<script src="common.js"></script>
+<script>
+let B = [], I = [], items = [], on = 0;
+const $ = id => document.getElementById(id);
+// Same keyword rule as the server's classify(): first catalog type with a keyword in the text.
+const classify = t => { const s = " " + t.toLowerCase().replace(/\s+/g, " ") + " "; return I.find(x => x.keywords.some(k => s.includes(k))) || null; };
+const floorOf = t => { const m = t.toLowerCase().match(/(\d+)(?:st|nd|rd|th)?\s*(?:floor|fl\b)/) || t.toLowerCase().match(/floor\s*(\d+)/); return m ? +m[1] : null; };
+const buildingOf = t => B.find(b => { const n = b.address.split(" ")[0]; return new RegExp(`\\b${n}\\b`).test(t) && t.toLowerCase().includes(b.address.split(" ")[1].toLowerCase()); });
+
+function parse() {
+  const t = $("t").value, b = buildingOf(t), f = floorOf(t), i = classify(t);
+  $("pb").textContent = b ? `${b.address}, ${b.city}` : "-";
+  $("pf").textContent = f ? f + (b && f === b.scan_floor ? " (3D scan)" : "") : "-";
+  $("pi").textContent = i ? i.label : "-";
+  $("pc").innerHTML = i ? `<span style="color:${CATEGORY_COLORS[i.category]}">${i.category}</span>` : "-";
+}
+function suggest() {
+  const t = $("t").value, word = (t.match(/([\w ]{2,})$/) || ["", ""])[1].trim().toLowerCase();
+  items = [];
+  if (word.length >= 2) {
+    if (/^\d/.test(word)) items = B.filter(b => b.address.toLowerCase().startsWith(word)).slice(0, 8).map(b => ({ label: `${b.address}, ${b.city}  ·  ${b.name || ""}`, insert: `${b.address}, ${b.city}` }));
+    else items = I.filter(i => i.label.toLowerCase().includes(word) || i.keywords.some(k => k.startsWith(word))).slice(0, 6).map(i => ({ label: `${i.label}  ·  ${i.category}`, insert: i.label }))
+      .concat(B.filter(b => `${b.name} ${b.address}`.toLowerCase().includes(word)).slice(0, 5).map(b => ({ label: `${b.address}, ${b.city}  ·  ${b.name || ""}`, insert: `${b.address}, ${b.city}` })));
+  }
+  on = 0; $("sug").style.display = items.length ? "block" : "none";
+  $("sug").innerHTML = items.map((x, k) => `<div class="${k === on ? "on" : ""}" data-k="${k}">${x.label}</div>`).join("");
+}
+function accept(k) {
+  const t = $("t").value, m = t.match(/([\w ]{2,})$/);
+  $("t").value = (m ? t.slice(0, m.index) + (m[1].startsWith(" ") ? " " : "") : t) + items[k].insert + ", ";
+  $("sug").style.display = "none"; $("t").focus(); parse();
+}
+$("t").addEventListener("input", () => { parse(); suggest(); });
+$("t").addEventListener("keydown", e => {
+  if ($("sug").style.display !== "block") return;
+  if (e.key === "Tab" || e.key === "Enter") { e.preventDefault(); accept(on); }
+  if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); on = (on + (e.key === "ArrowDown" ? 1 : items.length - 1)) % items.length; [...$("sug").children].forEach((d, k) => d.className = k === on ? "on" : ""); }
+  if (e.key === "Escape") $("sug").style.display = "none";
+});
+$("sug").onclick = e => { const d = e.target.closest("[data-k]"); if (d) accept(+d.dataset.k); };
+async function go(mode) {
+  const text = $("t").value.trim().replace(/,\s*$/, ""); if (!text) return;
+  $("out").innerHTML = `<div class="dim">${mode ? "Drafting" : "Agent working (30-60 s)"}...</div>`;
+  try { const o = await sendDispatch(text, mode); $("out").innerHTML = `<div class="panel brief">${o.briefing.replace(/</g, "&lt;")}</div>`; }
+  catch (e) { $("out").innerHTML = `<div style="color:var(--accent)">${e.message}</div>`; }
+}
+$("send").onclick = () => go(); $("draft").onclick = () => go("draft");
+$("phone").onclick = async () => { await api("/sms", { phone: "judge", text: $("t").value.trim().replace(/,\s*$/, "") }); $("out").innerHTML = `<div class="dim">Sent to <a href="phone.html?id=judge" target="_blank">the phone</a>.</div>`; };
+Promise.all([getBuildings(), getIncidents()]).then(([b, i]) => { B = b; I = i; });
+</script>
+</body>
+</html>

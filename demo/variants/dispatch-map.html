@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primesight Map Dispatch</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="common.css">
+<style>
+  body { height: 100vh; display: grid; grid-template-columns: 1fr 380px; }
+  #map { height: 100vh; background: #0d1117; }
+  aside { border-left: 1px solid var(--line); padding: 14px; overflow-y: auto; }
+  .city { display: flex; gap: 6px; margin-bottom: 10px; } .city button { flex: 1; }
+  .dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 3px #0005; }
+  .cats { display: flex; flex-wrap: wrap; gap: 6px; } .cats button { background: var(--panel2); border: 1px solid var(--line); font-size: 13px; padding: 6px 10px; }
+  .cats button.sel { background: currentColor; } .cats button.sel span { color: #000; }
+  select { margin-top: 6px; }
+  .leaflet-container { font: inherit; }
+  .dark-tiles { filter: invert(1) hue-rotate(180deg) brightness(.85) contrast(.9); }
+  @media (max-width: 800px) { body { grid-template-columns: 1fr; grid-template-rows: 55vh auto; } #map { height: 55vh; } }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<aside>
+  <div class="city"><button class="ghost" data-c="Houston">Houston</button><button class="ghost" data-c="Los Angeles">Los Angeles</button></div>
+  <div id="info" class="dim">Click a building on the map. Green rings: SAM 3 has scanned its floor for exits and pull stations.</div>
+  <div id="form" style="display:none">
+    <label>Floor</label><select id="floor"></select>
+    <label>Category</label><div class="cats" id="cats"></div>
+    <label>Incident</label><select id="type"></select>
+    <label>Dispatch text</label><div id="text" class="panel mono" style="font-size:13px"></div>
+    <div style="display:flex;gap:8px;margin-top:12px"><button id="send">Send to Primesight</button><button id="draft" class="ghost">Fast draft</button></div>
+    <div id="out" style="margin-top:12px"></div>
+  </div>
+</aside>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="common.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const map = L.map("map", { zoomControl: true }).setView([29.76, -95.37], 11);
+// CARTO's keyless dark_all tiles now draw "API KEY REQUIRED"; OSM tiles darkened with a CSS filter instead.
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution: "&copy; OpenStreetMap contributors", maxZoom: 19, className: "dark-tiles" }).addTo(map);
+let B = [], I = [], cur = null, cat = null;
+const icon = b => L.divIcon({ className: "", html: `<div class="dot" style="background:${b.sam3 ? "#2ed3a7" : "#ff5a36"}"></div>`, iconSize: [14, 14] });
+
+function choose(b) {
+  cur = b; $("form").style.display = "block";
+  $("info").innerHTML = `<h3 style="margin:0">${b.address}, ${b.city}</h3><div class="dim">${b.name || b.type} · ${b.stories || "?"} stories · ${b.tenants} current tenants · 3D scan of floor ${b.scan_floor}${b.sam3 ? " (SAM 3 done)" : ""}</div>`;
+  $("floor").innerHTML = floorOptions(b).map(o => `<option value="${o.floor}" ${o.scanned ? "selected" : ""}>Floor ${o.floor}${o.scanned ? " · 3D scan" : o.tenants ? " · tenants" : ""}</option>`).join("");
+  text();
+}
+function cats() {
+  const cs = [...new Set(I.map(t => t.category))];
+  $("cats").innerHTML = cs.map(c => `<button style="color:${CATEGORY_COLORS[c]}" class="${c === cat ? "sel" : ""}" data-c="${c}"><span>${c}</span></button>`).join("");
+  $("type").innerHTML = I.filter(t => t.category === cat).map(t => `<option value="${t.id}">${t.label}</option>`).join("");
+  text();
+}
+function text() {
+  const t = I.find(x => x.id === $("type").value);
+  $("text").textContent = cur && t ? dispatchText({ building: cur, floor: +$("floor").value, incident: t }) : "";
+}
+async function go(mode) {
+  $("out").innerHTML = `<div class="dim">${mode ? "Drafting" : "Agent working (30-60 s)"}...</div>`;
+  try { const o = await sendDispatch($("text").textContent, mode); $("out").innerHTML = `<div class="panel brief" style="font-size:12px">${o.briefing.replace(/</g, "&lt;")}</div>`; }
+  catch (e) { $("out").innerHTML = `<div style="color:var(--accent)">${e.message}</div>`; }
+}
+document.querySelector(".city").onclick = e => { const c = e.target.dataset.c; if (!c) return; const pts = B.filter(b => b.city.toLowerCase() === c.toLowerCase() && b.lat); map.fitBounds(pts.map(b => [b.lat, b.lon]), { padding: [40, 40] }); };
+$("cats").onclick = e => { const b = e.target.closest("button"); if (b) { cat = b.dataset.c; cats(); } };
+["floor", "type"].forEach(id => $(id).oninput = text);
+$("send").onclick = () => go(); $("draft").onclick = () => go("draft");
+Promise.all([getBuildings(), getIncidents()]).then(([b, i]) => {
+  B = b; I = i; cat = "fire"; cats();
+  for (const x of B.filter(x => x.lat)) L.marker([x.lat, x.lon], { icon: icon(x) }).addTo(map).bindTooltip(`${x.address} · ${x.stories || "?"} fl`).on("click", () => choose(x));
+});
+</script>
+</body>
+</html>

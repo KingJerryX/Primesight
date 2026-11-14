@@ -37,7 +37,7 @@
 <script src="common.js"></script>
 <script>
 // A simulator id, never a real phone number; kept per browser so a reload continues the thread.
-const ID = (() => { try { return localStorage.getItem("ps-sim") || (localStorage.setItem("ps-sim", "sim-" + Math.random().toString(36).slice(2, 8)), localStorage.getItem("ps-sim")); } catch (e) { return "sim-" + Math.random().toString(36).slice(2, 8); } })();
+const ID = new URLSearchParams(location.search).get("id") || (() => { try { return localStorage.getItem("ps-sim") || (localStorage.setItem("ps-sim", "sim-" + Math.random().toString(36).slice(2, 8)), localStorage.getItem("ps-sim")); } catch (e) { return "sim-" + Math.random().toString(36).slice(2, 8); } })();
 const $ = id => document.getElementById(id);
 let n = 0, waiting = false, B = [], I = [];
 

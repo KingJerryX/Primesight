@@ -245,7 +245,7 @@ class H(BaseHTTPRequestHandler):
         if self.path == "/buildings":
             return self._send(200, buildings())
         if self.path == "/incidents":
-            return self._send(200, [{k: t[k] for k in ("id", "label", "category", "needs", "layers")} for t in CATALOG])
+            return self._send(200, [{k: t[k] for k in ("id", "label", "category", "needs", "layers", "keywords")} for t in CATALOG])
         m = re.fullmatch(r"/(?:demo/)?([\w-]+\.(html|css|js|json))", self.path) or re.fullmatch(r"/()", self.path)
         if m:  # the demo pages, served from demo/ (strict names, no subfolders except variants)
             name = m.group(1) or "index.html"
