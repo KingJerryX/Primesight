@@ -26,8 +26,9 @@
   .inc button.sel { background: currentColor; }
   .inc button.sel span { color: #000; }
   .inc .cat { grid-column: 1 / -1; font-size: 11px; text-transform: uppercase; margin-top: 4px; }
-  footer { display: flex; gap: 10px; align-items: center; padding: 12px 18px; border-top: 1px solid var(--line); }
-  #text { flex: 1; font-family: var(--mono); font-size: 13px; }
+  footer { display: flex; gap: 10px; align-items: center; padding: 12px 18px; border-top: 1px solid var(--line); flex-wrap: wrap; }
+  footer select, footer input { width: auto; }
+  #text { flex: 1 1 100%; order: -1; font-family: var(--mono); font-size: 13px; }
   @media (max-width: 900px) { .cols { grid-template-columns: 1fr; } .scroll { max-height: 260px; } }
 </style>
 </head>
@@ -39,6 +40,8 @@
   <div class="col"><h2>3 · Emergency</h2><div class="scroll"><div class="inc" id="inc"></div></div></div>
 </div>
 <footer>
+  <select id="time" title="Time of call: headcounts are daytime figures"><option value="">Now</option><option>02:00 (night)</option><option>10:00 (business hours)</option><option>13:00 (lunch)</option><option>19:00 (evening)</option><option>Saturday 15:00</option></select>
+  <input id="details" placeholder="Details (optional): caller hiding, 2 patients..." style="max-width:260px">
   <div id="text" class="dim">Pick a building, a floor and an emergency.</div>
   <button class="ghost" id="surprise">Surprise me</button>
   <button id="go" disabled>Text it to the crew</button>
@@ -65,14 +68,14 @@ function inc() {
 }
 function update() {
   const ok = s.b && s.f && s.i;
-  $("text").textContent = ok ? dispatchText({ building: s.b, floor: s.f, incident: s.i }) : "Pick a building, a floor and an emergency.";
+  $("text").textContent = ok ? dispatchText({ building: s.b, floor: s.f, incident: s.i, details: $("details").value, time: $("time").value }) : "Pick a building, a floor and an emergency.";
   $("text").className = ok ? "" : "dim"; $("go").disabled = !ok;
 }
-$("q").oninput = list;
+$("q").oninput = list; $("time").oninput = update; $("details").oninput = update;
 $("blist").onclick = e => { const r = e.target.closest(".b"); if (!r) return; s.b = B.find(b => b.pid == r.dataset.pid); s.f = s.b.scan_floor; list(); stack(); update(); };
 $("stack").onclick = e => { const r = e.target.closest(".fl"); if (!r) return; s.f = +r.dataset.f; stack(); update(); };
 $("inc").onclick = e => { const r = e.target.closest("button"); if (!r) return; s.i = I.find(t => t.id === r.dataset.id); inc(); update(); };
-$("surprise").onclick = () => { s.b = pick(B); const fl = floorOptions(s.b); s.f = (pick([fl.find(o => o.scanned), pick(fl.filter(o => o.tenants)), pick(fl)].filter(Boolean))).floor; s.i = pick(I); list(); stack(); inc(); update();
+$("surprise").onclick = () => { s.b = pick(B); const fl = floorOptions(s.b); s.f = (pick([fl.find(o => o.scanned), pick(fl.filter(o => o.tenants)), pick(fl)].filter(Boolean))).floor; s.i = pick(I); $("time").selectedIndex = Math.floor(Math.random() * $("time").options.length); list(); stack(); inc(); update();
   document.querySelectorAll(".b.sel, .fl.sel, .inc button.sel").forEach(el => el.scrollIntoView({ block: "center", behavior: "smooth" })); };
 $("go").onclick = async () => { $("go").disabled = true; await api("/sms", { phone: PHONE, text: $("text").textContent }); $("go").textContent = "Sent: watch the phone"; setTimeout(() => { $("go").textContent = "Text it to the crew"; $("go").disabled = false; }, 2500); };
 Promise.all([getBuildings(), getIncidents()]).then(([b, i]) => { B = b; I = i; list(); inc(); });

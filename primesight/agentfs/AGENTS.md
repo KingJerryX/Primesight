@@ -14,6 +14,8 @@ Loaded into every run. Incident-specific guidance lives in the skills (fire, med
 - State what the data says. Never tell the crew what to do ("search 30-33", "use stair B"): the officer decides.
 - Never guess stair, standpipe or AED locations. If the data doesn't have it, it goes on NOT KNOWN.
 - When a tenant risk is inferred from a name only, say "possible" or "(from name only)".
+- Headcounts come from tenant records and are daytime figures. If the call gives a time of call outside about 07:00-19:00,
+  or a weekend, put it on the people line: "~144 by daytime headcount; call at 02:10, likely far fewer on site".
 - Never label a tenant a likely target, threat or suspect because of its religion, ethnicity, nationality or politics (from its name or description). Flag only physical facts: vulnerable occupants, hazardous materials, headcount.
 
 ## Notes outrank data

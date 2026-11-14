@@ -23,7 +23,7 @@ function ordinal(n) {
 function dispatchText({ building, floor, incident, details = "", time = "" }) {
   const where = `${building.address}, ${building.city}`;
   const parts = [`${incident.label} on the ${ordinal(floor)} floor, ${where}.`];
-  if (details) parts.push(details.trim().replace(/\.?$/, "."));
+  if (details.trim()) { const d = details.trim(); parts.push(d[0].toUpperCase() + d.slice(1).replace(/\.?$/, ".")); }
   if (time) parts.push(`Time of call: ${time}.`);
   return parts.join(" ");
 }
