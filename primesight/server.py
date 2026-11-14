@@ -197,6 +197,10 @@ class H(BaseHTTPRequestHandler):
         body = self._json()
         if body is None:
             return self._send(400, {"error": "body must be JSON"})
+        from . import console_api  # the game: /game/start, /game/answer, /game/name
+        r = console_api.post(self.path, body)
+        if r:
+            return self._send(*r)
         if self.path == "/brief":
             if not str(body.get("text", "")).strip():
                 return self._send(400, {"error": "text is required"})

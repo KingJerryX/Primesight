@@ -147,13 +147,14 @@ function pin(b, cls, html = "") {
   return el;
 }
 const SCENES = [
-  // First responder: the view pulls back over downtown and calls come in, one building after another.
-  () => {
-    fly(TOWER, { zoom: 15.5, pitch: 46 });
-    CALLS.forEach(([b, what, where], k) => later(() => { highlight(b, true); pin(b, "call", `<div><b>${what}</b><span class="caps">${where}</span></div>`); }, 3200 + k * 1900));
+  // First responder: the same view of downtown as home, and calls come in on one building after another.
+  // Home and this scene share a camera, so going between them the map just keeps circling: no jump, only the calls change.
+  from => {
+    if (from !== 1) fly(TOWER);
+    CALLS.forEach(([b, what, where], k) => later(() => { highlight(b, true); pin(b, "call", `<div><b>${what}</b><span class="caps">${where}</span></div>`); }, (from === 1 ? 900 : 3200) + k * 1900));
   },
   // Home: one building, circled.
-  () => fly(TOWER),
+  from => from === 0 ? highlight(TOWER) : fly(TOWER),
   // Game: straight down on one building, its real hydrants dropping in, a clock running and the objectives ticking off.
   () => {
     fly(TRAVIS, { zoom: 17.4, pitch: 0 });
@@ -179,11 +180,12 @@ let at = -1, timer, step = 1;
 const can = d => at + d >= 0 && at + d < slides.length;  // the slides don't loop: the ends are ends
 function show(k) {
   if (k === at || k < 0 || k >= slides.length) return;
+  const from = at;
   at = k;
   slides.forEach((el, n) => el.classList.toggle("on", n === at));
   dots.forEach((el, n) => el.setAttribute("aria-selected", n === at));
   undo.forEach(fn => fn()); undo = [];
-  SCENES[at]();
+  SCENES[at](from);
   clearTimeout(timer);
   if (!REDUCED) timer = setTimeout(() => { if (!can(step)) step = -step; show(at + step); }, 14000);  // on its own it goes there and back
   mark();

@@ -23,16 +23,33 @@ function makeMap(container, opts = {}) {
           paint: { "fill-extrusion-color": ["case", ["boolean", ["feature-state", "sel"], false], "#ff5a36", "#3b4a5c"], "fill-extrusion-height": ["coalesce", ["get", "render_height"], 6], "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], 0], "fill-extrusion-opacity": 0.9 } }] } });
   const target = document.createElement("div"); target.className = "target";
   const marker = new maplibregl.Marker({ element: target });
+  // Buildings with no height in OpenStreetMap arrive merged into one big feature per tile, and colouring that by feature
+  // state lights up the whole neighbourhood. For those, only the footprint that holds the point is drawn, in this overlay
+  // layer, grown a few percent and a little taller so its walls never sit exactly on the grey ones.
+  map.on("load", () => {
+    map.addSource("sel", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+    map.addLayer({ id: "sel", type: "fill-extrusion", source: "sel", paint: { "fill-extrusion-color": "#ff5a36", "fill-extrusion-height": ["+", ["coalesce", ["get", "render_height"], 6], 1.5], "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], 0], "fill-extrusion-opacity": 0.9 } });
+  });
+  const grow = (ring, k = 1.05) => { const cx = ring.reduce((t, p) => t + p[0], 0) / ring.length, cy = ring.reduce((t, p) => t + p[1], 0) / ring.length; return ring.map(([x, y]) => [cx + (x - cx) * k, cy + (y - cy) * k]); };
+  let lone = [];  // the overlay footprints on show
   // Colour the chosen building: every footprint that contains the building's point (a tower can be several parts and tile pieces).
   // keep = true adds this building to the ones already coloured instead of replacing them.
   function highlight(b, keep) {
-    if (!map.getSource("omt")) return false;
+    if (!map.getSource("omt") || !map.getSource("sel")) return false;
     const where = { source: "omt", sourceLayer: "building" };
-    if (!keep) map.removeFeatureState(where);
-    const hit = b ? map.querySourceFeatures("omt", { sourceLayer: "building" }).filter(f => f.id != null && (f.geometry.type === "Polygon" ? [f.geometry.coordinates] : f.geometry.type === "MultiPolygon" ? f.geometry.coordinates : []).some(poly => inRing([b.lon, b.lat], poly[0]))) : [];
-    for (const id of new Set(hit.map(f => f.id))) map.setFeatureState({ ...where, id }, { sel: true });
-    if (hit.length) marker.remove();  // the coloured building marks it better than a ring that nearer towers can sit behind
-    return hit.length > 0;
+    if (!keep) { map.removeFeatureState(where); lone = []; }
+    let found = 0;
+    for (const f of b ? map.querySourceFeatures("omt", { sourceLayer: "building" }) : []) {
+      const polys = f.geometry.type === "Polygon" ? [f.geometry.coordinates] : f.geometry.type === "MultiPolygon" ? f.geometry.coordinates : [];
+      const own = polys.filter(poly => inRing([b.lon, b.lat], poly[0]));
+      if (!own.length) continue;
+      found++;
+      if (f.id != null && polys.length <= 6) map.setFeatureState({ ...where, id: f.id }, { sel: true });  // one real building
+      else lone.push(...own.map(poly => ({ type: "Feature", properties: f.properties, geometry: { type: "Polygon", coordinates: [grow(poly[0])] } })));
+    }
+    map.getSource("sel").setData({ type: "FeatureCollection", features: lone });
+    if (found) marker.remove();  // the coloured building marks it better than a ring that nearer towers can sit behind
+    return found > 0;
   }
   let orbit = 0;  // bumped whenever the camera gets a new job, so an old orbit stops itself
   function spin(id) {

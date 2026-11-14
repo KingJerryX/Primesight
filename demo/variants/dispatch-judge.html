@@ -40,7 +40,6 @@
   .row:hover { color: var(--accent); }
   .row.sel, .row.sel span { background: var(--accent); color: var(--ink); }
   .none { padding: 11px 20px; color: var(--dim); }
-  .credit { margin: 10px 0 0; font-size: 10px; line-height: 1.4; color: #5d6873; }
   .cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 12px; }
   .cats button { display: flex; align-items: center; gap: 8px; background: none; border: 1px solid var(--line); border-radius: 0; color: var(--text);
                  font: 400 14px var(--grot); padding: 9px 10px; text-transform: capitalize; }
@@ -145,7 +144,6 @@
       <input id="q" placeholder="Search address or city" aria-label="Search address or city" autocomplete="off">
       <div class="rows" id="blist"></div>
       <div class="foot"><button class="primary" id="next1" disabled>Confirm location</button></div>
-      <p class="credit">Imagery: Esri, Maxar. Map data: OpenStreetMap, OpenFreeMap. Aerial photos: Vexcel.</p>
     </section>
     <section class="step" data-s="2">
       <h2>What is the emergency?</h2>
@@ -256,6 +254,9 @@ function setFloor(f) {
   document.querySelectorAll("#floorlist button").forEach(b => b.setAttribute("aria-selected", +b.dataset.f === f));
   stage();
 }
+function listFloors(floors) {
+  $("floorlist").innerHTML = floors.map((f, k) => `<button role="option" aria-selected="${f === s.f}" data-f="${f}" style="--i:${k}">Floor ${f}</button>`).join("");
+}
 $("floorlist").onclick = e => { const b = e.target.closest("button"); if (b) { setFloor(+b.dataset.f); openDrop($("floorbox"), false); $("floorbtn").focus(); } };
 function setCity(c) {
   s.city = c; $("citybox").classList.toggle("active", !!c);
@@ -274,7 +275,15 @@ function renderBuildings() {
 function selectBuilding(b) {
   if (!b) return;
   Object.assign(s, { b, view: "map" });
-  $("floorlist").innerHTML = floorOptions(b).map((o, k) => `<button role="option" aria-selected="false" data-f="${o.floor}" style="--i:${k}">Floor ${o.floor}</button>`).join("");
+  // Only floors with a 3D scan are offered: a briefing for any other floor would describe the wrong floor.
+  // The one scanned floor in the building list shows at once; the full list follows from the server.
+  listFloors([b.scan_floor].filter(Boolean));
+  api(`/scans/${b.pid}`).then(scans => {
+    const floors = [...new Set(scans.map(x => x.floor).filter(f => f != null))].sort((x, y) => x - y);
+    if (s.b !== b || !floors.length) return;
+    listFloors(floors);
+    if (floors.length === 1 && !s.f) setFloor(floors[0]);  // nothing to choose between
+  }).catch(() => {});
   openDrop($("floorbox"), false);
   if (s.step !== 1) go(1);
   renderBuildings(); renderStrip(); setFloor(null); fly(b);

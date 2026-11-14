@@ -5,21 +5,374 @@
 <title>Primesight Game</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
 <link rel="stylesheet" href="common.css">
 <link rel="stylesheet" href="site.css">
 <style>
-  /* Placeholder until the game is built: it holds the third spot in the navbar. */
-  main { min-height: 100vh; display: grid; place-content: center; justify-items: center; gap: 22px; padding: 96px 20px; text-align: center; }
-  h1 { font-weight: 400; letter-spacing: -.02em; font-size: clamp(48px, 7vw, 100px); line-height: 1; margin: 0; }
-  p { font-size: clamp(17px, 1.7vw, 24px); max-width: 26em; margin: 0 0 18px; }
+  /* The game: a call at a real building. A briefing names the building and three objectives, each with the view that holds
+     its answer; then the clock runs while the player reports the nearest hydrant (live map), the exit signs (floor plan)
+     and the elevators (building record). The server keeps the clock and checks every report (primesight/console_api.py). */
+  [hidden] { display: none !important; }
+  body { font-size: 17px; line-height: 1.5; }
+  h1, h2 { font-weight: 400; letter-spacing: -.02em; margin: 0; }
+  button:disabled { cursor: default; opacity: .35; }
+  .ok { color: var(--ok); }
+
+  #intro { min-height: 100vh; display: grid; align-content: center; justify-items: center; gap: 22px; padding: 120px 20px 72px; text-align: center;
+           background: linear-gradient(#05050600 40%, #050506 100%), repeating-linear-gradient(0deg, #ffffff0a 0 1px, #0000 1px 48px), repeating-linear-gradient(90deg, #ffffff0a 0 1px, #0000 1px 48px); }
+  #intro h1 { font-size: clamp(48px, 7vw, 100px); line-height: 1; }
+  #intro p { font-size: clamp(17px, 1.7vw, 24px); max-width: 31em; margin: 0 0 18px; }
+  #intro #err { font-size: 12px; margin: 0; color: var(--accent); } #err:empty { display: none; }
+  #intro .top { width: min(100%, 420px); margin-top: 40px; text-align: left; }
+
+  /* Leaderboard: place, name, time. */
+  .board { list-style: none; margin: 10px 0 0; padding: 0; font: 400 14px var(--code); font-variant-numeric: tabular-nums; }
+  .board li { display: grid; grid-template-columns: 3ch 1fr auto; gap: 14px; padding: 9px 0; border-top: 1px solid var(--line); color: var(--dim); }
+  .board li b { font-weight: 400; color: var(--text); letter-spacing: .12em; white-space: pre; }
+  .board li.mine, .board li.mine b { color: var(--ok); }
+  .board li.none { display: block; font-family: var(--grot); }
+
+  /* Briefing: over the map as it flies to the building. The objectives come up one by one; the countdown sits bottom right. */
+  #brief { position: fixed; z-index: 9; inset: 0; display: grid; align-content: center; gap: 14px; padding: 96px clamp(20px, 7vw, 120px) 150px; overflow-y: auto;
+           background: linear-gradient(90deg, #050506f2 30%, #050506b3 100%); }
+  #brief h1 { font-size: clamp(34px, 5vw, 68px); line-height: 1.05; max-width: 16em; }
+  #b-where { margin: 0 0 22px; font-size: clamp(17px, 1.6vw, 22px); color: #ffffffc7; }
+  #goals { list-style: none; margin: 0; padding: 0; max-width: 860px; }
+  #goals li { display: grid; grid-template-columns: 130px 1fr auto; gap: 18px; align-items: center; padding: 15px 0; border-top: 1px solid var(--rule);
+              opacity: 0; transform: translateY(12px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+  #goals li.in { opacity: 1; transform: none; }
+  #goals li b { font-weight: 400; font-size: clamp(18px, 1.7vw, 23px); letter-spacing: -.01em; }
+  #goals li i { font-style: normal; padding: 6px 10px; border: 1px solid var(--accent); color: var(--accent); white-space: nowrap; }
+  #count { position: fixed; right: clamp(20px, 4vw, 56px); bottom: clamp(20px, 4vh, 44px); display: grid; justify-items: end; gap: 6px; text-align: right; }
+  #b-n { font: 400 clamp(64px, 9vw, 112px)/.9 var(--code); letter-spacing: -.04em; font-variant-numeric: tabular-nums; color: var(--accent); }
+  #now { margin-top: 8px; }
+
+  /* Playing: the objectives on the left, the view of the active one on the right (the same split as the first responder page). */
+  body.playing { height: 100vh; overflow: clip; }
+  body.playing .nav { background: var(--ink); border-bottom: 1px solid var(--line); }
+  #play { display: grid; grid-template-columns: 400px 1fr; height: 100%; padding-top: 64px; }
+  #play.briefing #panel, #play.briefing #cue, #play.briefing #flat, #play.briefing .pin { visibility: hidden; }
+  #panel { display: flex; flex-direction: column; gap: 14px; padding: 18px 0 12px; border-right: 1px solid var(--line); overflow-y: auto; }
+  #panel > * { margin: 0 20px; } #panel > #cards { margin: 0; }
+  #call { margin: 4px 0 0; font-size: 18px; line-height: 1.25; letter-spacing: -.01em; }
+  #where { margin-top: 6px; }
+  .time { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  #clock { font: 400 44px/1 var(--code); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+  #clock.hit { animation: hit .8s var(--ease); } @keyframes hit { from { color: var(--accent); } }
+  #pen { color: var(--accent); text-align: right; } #pen.dim { color: var(--dim); }
+  /* One card per objective. The active one is open and its view is on the right; the tab names that view. */
+  .card { border-top: 1px solid var(--line); border-left: 2px solid transparent; } .card:last-child { border-bottom: 1px solid var(--line); }
+  .card.on { background: #ff5a3618; border-left-color: var(--accent); }
+  .tab { display: flex; justify-content: space-between; gap: 12px; width: 100%; padding: 13px 20px 13px 18px; border-radius: 0; background: none; color: var(--dim); text-align: left; }
+  .card.on .tab { color: var(--text); padding-bottom: 4px; } .tab:hover { color: var(--text); }
+  .card.on .tab span + span { color: var(--accent); } .card.done .tab span + span { color: var(--ok); }
+  .body { display: none; padding: 0 20px 14px 18px; } .card.on .body { display: block; }
+  .body h2 { font-size: 19px; line-height: 1.25; letter-spacing: -.01em; margin: 0 0 12px; }
+  .in { display: flex; align-items: end; gap: 12px; flex-wrap: wrap; } .in .btn { margin-left: auto; }
+  .msg { margin: 8px 0 0; color: var(--accent); } .msg:empty { display: none; }
+  .fact { display: none; margin: 0; padding: 0 20px 12px 18px; color: var(--dim); font-size: 15px; } .card.done .fact { display: block; } .card.done .tab { padding-bottom: 2px; }
+  .card label { margin: 0; }
+  .card input { display: block; width: 5.2ch; box-sizing: content-box; margin-top: 4px; padding: 5px 10px; border-radius: 0; background: #05050699; font: 400 22px var(--code); }
+  .opt { padding: 0; border: 1px solid var(--line); border-radius: 0; background: #05050699; color: var(--text); font: 400 12px var(--code); letter-spacing: .07em; text-transform: uppercase; transition: background-color .2s; }
+  .opt:hover { background: var(--panel2); }
+  .opt[aria-pressed="true"] { background: #fff; border-color: #fff; color: var(--ink); }
+  .yn { display: grid; grid-template-columns: 56px 56px; gap: 4px; } .yn span { grid-column: 1 / -1; margin-bottom: 2px; }
+  .yn .opt { height: 38px; }
+  #skip { align-self: start; margin-top: auto; padding: 8px 0; border: 0; color: var(--dim); } #skip:hover { color: var(--text); }
+  .credit { font-size: 10px; line-height: 1.4; color: #5d6873; }
+  #result { display: grid; gap: 14px; }
+  #result ul { margin: 0; padding: 0; list-style: none; } #result ul li { padding: 8px 0; border-top: 1px solid var(--line); }
+  #nameform { display: flex; align-items: end; gap: 12px; flex-wrap: wrap; padding: 14px; border: 1px solid var(--ok); }
+  #nameform label { flex: 1 0 100%; margin: 0; color: var(--ok); }
+  #name { flex: 1; width: auto; min-width: 0; padding: 8px 10px; border-radius: 0; background: none; font: 400 24px var(--code); letter-spacing: .2em; text-transform: uppercase; }
+  #result .btn { justify-self: start; }
+
+  #stage { position: relative; background: #05080c; overflow: hidden; }
+  .glass { background: #05080ccc; border: 1px solid var(--line); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  #cue { position: absolute; z-index: 2; top: 16px; left: 16px; max-width: calc(100% - 170px); padding: 8px 12px; line-height: 1.5; color: var(--dim); }
+  #cue b { font-weight: 400; color: var(--accent); margin-right: 10px; }
+  #flat { position: absolute; z-index: 2; top: 16px; right: 16px; padding: 8px 12px; border-radius: 0; color: var(--text); }
+  #flat[aria-pressed="true"] { background: #fff; color: var(--ink); }
+  .view { position: absolute; inset: 76px 24px 24px; display: grid; place-items: center; container-type: size; opacity: 0; visibility: hidden;
+          transition: opacity .4s var(--ease), visibility 0s .4s; }
+  .view.on { opacity: 1; visibility: visible; transition-delay: 0s; }
+  #v-map { inset: 0; } #map { position: absolute; inset: 0; }
+  #v-plan img { display: block; width: 100cqw; height: 100cqh; object-fit: contain; }
+  #record { width: min(100%, 620px); margin: 0; align-self: start; }
+  #record div { display: grid; grid-template-columns: 190px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  #record dt { color: var(--dim); padding-top: 4px; } #record dd { margin: 0; }
+  /* On the map: a hydrant is a button; the white ring is the building's address point, which distances are measured from. */
+  .target { display: none; }  /* site.js's own ring: the page draws .pin instead, which stays once the building is coloured */
+  .hyd { width: 18px; height: 18px; padding: 0; border-radius: 50%; background: var(--accent); border: 2px solid #fff; box-shadow: 0 0 0 2px #05080c99; cursor: pointer; }
+  .hyd::after { content: ""; position: absolute; inset: -9px; border-radius: 50%; }  /* a finger-sized target */
+  .hyd:hover { box-shadow: 0 0 0 4px #ffffff66; }
+  .hyd[aria-pressed="true"] { background: #fff; border-color: var(--accent); box-shadow: 0 0 0 5px #ff5a3699; }
+  /* ruled out, or the round is over: grey (MapLibre sets opacity on its markers inline, so not that). The reported one: green. */
+  .hyd:disabled { background: #3b4a5c; border-color: #8b98a5; box-shadow: none; cursor: default; }
+  .hyd.yes:disabled { background: var(--ok); border-color: #fff; box-shadow: 0 0 0 5px #2ed3a766; }
+  .pin { width: 20px; height: 20px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 2px #05080c99; pointer-events: none; }
+  .pin::after { content: ""; position: absolute; inset: -2px; border-radius: 50%; border: 2px solid #fff; animation: ping 2s var(--ease) infinite; }
+  @keyframes ping { from { transform: scale(1); opacity: .9; } to { transform: scale(3.5); opacity: 0; } }
+
+  @media (max-width: 820px) {
+    body.playing { height: auto; overflow: visible; }
+    #play { grid-template-columns: 1fr; grid-template-rows: 52vh auto; height: auto; }
+    #stage { order: -1; position: sticky; top: 64px; z-index: 3; }  /* the data stays in view while the report scrolls under it */
+    #panel { border-right: 0; border-top: 1px solid var(--line); overflow: visible; }
+    .view { inset: 96px 12px 12px; } #v-map { inset: 0; } #record div { grid-template-columns: 130px 1fr; }
+    #cue { max-width: calc(100% - 32px); } #flat { top: auto; bottom: 16px; }
+    #goals li { grid-template-columns: 1fr auto; } #goals li span { grid-column: 1 / -1; margin-bottom: -10px; }
+    #brief { align-content: start; padding-bottom: 120px; }
+    #count { left: 0; right: 0; bottom: 0; grid-template-columns: 1fr auto auto; align-items: center; gap: 14px; padding: 10px 16px; text-align: left; background: var(--ink); border-top: 1px solid var(--line); }
+    #b-n { font-size: 48px; } #now { margin: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { #goals li { transition: none; } .pin::after, #clock.hit { animation: none; } .view { transition: none; } }
 </style>
 </head>
 <body>
 <nav class="nav caps" aria-label="Primesight"><a href="dispatch-judge.html">First responder</a><a class="mark" href="home.html">Primesight</a><a href="game.html" aria-current="page">Game</a></nav>
-<main>
+
+<section id="intro">
   <h1>Game</h1>
-  <p>Find the exit signs, extinguishers and pull stations in real building scans. This mode is not built yet.</p>
-  <a class="btn" href="home.html">Back to home</a>
-</main>
+  <p>A call comes in at a real building. Find the nearest hydrant, the exits and the elevators, and report them to the crew. The fastest report wins.</p>
+  <button class="btn" id="go">Take a call</button>
+  <p class="caps" id="err" role="alert"></p>
+  <div class="top"><div class="caps dim">Fastest reports</div><ol class="board" id="board0"></ol></div>
+</section>
+
+<section id="play" hidden>
+  <aside id="panel">
+    <div><div class="caps dim">Incoming call</div><p id="call"></p><div class="caps dim" id="where"></div></div>
+    <div class="time"><output id="clock" aria-label="Seconds on the clock">0.0</output><span class="caps" id="pen"></span></div>
+    <div id="cards"></div>
+    <div id="result" hidden></div>
+    <button class="ghost caps" id="skip">Skip this call</button>
+    <p class="credit">Imagery: Esri, Maxar. Map data: OpenStreetMap, OpenFreeMap. Hydrants: city open data. 3D scans: Matterport. Building records: CoStar.</p>
+  </aside>
+  <div id="stage">
+    <div class="glass caps" id="cue"></div>
+    <div class="view on" id="v-map"><div id="map"></div><button class="glass caps" id="flat" aria-pressed="false">Top down</button></div>
+    <div class="view" id="v-plan"><img id="plan" alt="Floor map from the 3D scan. Exit signs are green circles, fire alarm pull stations are red."></div>
+    <div class="view" id="v-record"><dl id="record"></dl></div>
+  </div>
+  <div id="brief" role="dialog" aria-labelledby="b-call" hidden>
+    <div class="caps" style="color: var(--accent)">Incoming call</div>
+    <h1 id="b-call"></h1>
+    <p id="b-where"></p>
+    <div class="caps dim">Objectives</div>
+    <ol id="goals"></ol>
+    <div id="count"><span class="caps dim" id="b-label"></span><output id="b-n"></output><button class="btn" id="now">Start now</button></div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
+<script src="common.js"></script>
+<script src="site.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);  // everything from the server goes through this, names above all
+console.assert(esc(`<b a="1">&'`) === "&#60;b a=&#34;1&#34;&#62;&#38;&#39;");
+const secs = n => Number(n).toFixed(1);
+const COUNT = 9;  // seconds of briefing before the clock starts; the three objectives are all up by second 4
+// The three objectives: the view that holds each answer, what to do, and what that view shows.
+const QS = {
+  hydrant: { name: "Hydrant", view: "map", at: "Map", goal: () => "Click the hydrant nearest the building.", cue: "Orange dots are hydrants. The white ring is the building. Drag to look around, or go top down." },
+  exits: { name: "Exits", view: "plan", at: "Floor plan", goal: r => `Count the exit signs on floor ${r.floor}.`, cue: "Green circles are exit signs found in the 3D scan." },
+  elevators: { name: "Elevators", view: "record", at: "Building record", goal: () => "Report the elevators on record.", cue: "What CoStar holds on this building." } };
+let round, t0, wrong, timer, counter, lastCase, picked, M, cam, marks = [], fires = getIncidents().then(l => l.filter(t => t.category === "fire")).catch(() => []);
+
+// mine: the {name, seconds} just saved, shown in green
+const boardRows = (list, mine) => list.length ? list.map((e, i) =>
+  `<li class="${mine && e.name === mine.name && e.seconds === mine.seconds ? "mine" : ""}"><span>${String(i + 1).padStart(2, "0")}</span><b>${esc(e.name)}</b><span>${secs(e.seconds)} s</span></li>`).join("")
+  : `<li class="none">No runs yet. The first report sets the record.</li>`;
+const loadBoard = (el, mine) => api("/game/board").then(l => el.innerHTML = boardRows(l, mine)).catch(() => el.innerHTML = `<li class="none">The leaderboard needs the Primesight server.</li>`);
+loadBoard($("board0"));
+
+// One card per objective. The answers are not on the page: they are in the view the card names.
+function cards() {
+  const num = (label, aria) => `<label>${label}<input type="number" name="n" min="0" max="99" inputmode="numeric" required aria-label="${aria}"></label>`;
+  const inputs = { hydrant: `<span class="caps dim" id="pick">No hydrant selected</span>`, exits: num("Exit signs", "Number of exit signs"),
+    elevators: (round.ask.elevators.passenger ? num("Passenger", "Number of passenger elevators on record") : "") +
+      `<div class="yn" role="group" aria-label="Freight elevator on record"><span class="caps dim">Freight</span><button type="button" class="opt" data-v="yes" aria-pressed="false">Yes</button><button type="button" class="opt" data-v="no" aria-pressed="false">No</button></div>` };
+  return Object.keys(round.ask).map((q, i) => `<form class="card" data-q="${q}">
+    <button type="button" class="tab caps"><span>0${i + 1} ${QS[q].name}</span><span>${QS[q].at}</span></button>
+    <div class="body"><h2>${esc(QS[q].goal(round))}</h2><div class="in">${inputs[q]}<button class="btn">Report</button></div><p class="msg caps" aria-live="polite"></p></div>
+    <p class="fact"></p></form>`).join("");
+}
+
+// What the form says, in the shape the server checks. null: not filled in yet (no penalty for that).
+function read(form) {
+  const n = form.elements.n, on = form.querySelector('.opt[aria-pressed="true"]');
+  if (form.dataset.q === "hydrant") return picked;
+  if (form.dataset.q === "exits") return +n.value;
+  return on ? { freight: on.dataset.v === "yes", ...(n ? { passenger: +n.value } : {}) } : null;
+}
+
+// Open an objective: its card, and the view that holds its answer. The player never has to look for the right view.
+function activate(q) {
+  for (const c of $("cards").children) c.classList.toggle("on", c.dataset.q === q);
+  for (const v of document.querySelectorAll(".view")) v.classList.toggle("on", v.id === "v-" + QS[q].view);
+  $("cue").innerHTML = `<b>${QS[q].at}</b>${QS[q].cue}`;
+  const field = $("cards").querySelector(".card.on input");
+  if (field && matchMedia("(pointer: fine)").matches) field.focus({ preventScroll: true });
+}
+
+// The live map: fly to the building and circle it (site.js), wide enough to show the nearest hydrants.
+function aim(b) {
+  if (!M) {
+    M = makeMap("map");
+    M.ready = new Promise(r => M.map.on("load", r));
+    // ponytail: site.js colours the building by feature state, but OpenFreeMap merges buildings of equal height into one feature,
+    // so a building with no height in OpenStreetMap (drawn at the default 5 m) would light up every such building on the tile.
+    // Here those stay grey and the white ring alone marks the building. Drop this line once site.js colours one footprint.
+    M.ready.then(() => {
+      M.map.setPaintProperty("bld", "fill-extrusion-color", ["case", ["all", ["boolean", ["feature-state", "sel"], false], ["!=", ["get", "render_height"], 5]], "#ff5a36", "#3b4a5c"]);
+      M.map.setPaintProperty("bld", "fill-extrusion-opacity", .6);  // glassy, so the streets and hydrants read through downtown towers
+    });
+    M.pin = new maplibregl.Marker({ element: Object.assign(document.createElement("div"), { className: "pin" }) });
+  }
+  const box = $("map").getBoundingClientRect(), mpp = round.span_m / (.38 * Math.min(box.width, box.height));  // metres per pixel that fits span_m
+  const z = Math.log2(78271 * Math.cos(b.lat * Math.PI / 180) / mpp);
+  const stories = Math.max(b.stories || 0, 50 * (17.2 - z));  // fly() zooms to 17.2 - stories / 50 (at most 1.4 out): ask for the wider of tower and hydrants
+  cam = { center: [b.lon, b.lat], zoom: 17.2 - Math.min(1.4, stories / 50) };
+  $("flat").setAttribute("aria-pressed", false);
+  M.ready.then(() => { M.pin.setLngLat(cam.center).addTo(M.map); M.fly({ lat: b.lat, lon: b.lon, stories }); });
+}
+
+// A hydrant marker was clicked (or, with null, the choice is cleared).
+function pickHydrant(i) {
+  if (!$("cards").querySelector('[data-q="hydrant"]:not(.done)')) return;
+  picked = i;
+  marks.forEach((m, k) => m.getElement().setAttribute("aria-pressed", k === i));
+  $("pick").textContent = i === null ? "No hydrant selected" : "Hydrant selected";
+  if (i !== null) activate("hydrant");
+}
+
+async function start() {
+  if (typeof maplibregl === "undefined") return $("err").textContent = "The map could not load. Check the connection and reload.";
+  $("go").disabled = $("skip").disabled = true; $("err").textContent = "";
+  try { round = await api("/game/start", { avoid: lastCase }); }
+  catch (e) { $("err").textContent = "No call could be set up. Is the Primesight server running?"; back(); return; }
+  finally { $("go").disabled = $("skip").disabled = false; }
+  clearInterval(timer); clearInterval(counter);
+  marks.forEach(m => m.remove()); marks = [];
+  lastCase = round.case; wrong = 0; picked = null;
+  const fire = pick(await fires) || { label: "Fire alarm" }, b = round.building, where = [b.name, tidy(b.address), b.stories && `${b.stories} stories`].filter(Boolean);
+  $("call").textContent = `${fire.label}, ${ordinal(round.floor)} floor, ${tidy(b.address)}.`;
+  $("where").textContent = [b.name, b.stories && `${b.stories} stories`].filter(Boolean).join(" / ");
+  $("cards").innerHTML = cards();
+  $("plan").src = round.plan;
+  $("record").innerHTML = round.record.map(([k, v]) => `<div><dt class="caps">${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
+  $("clock").textContent = "0.0"; $("pen").textContent = ""; $("pen").className = "caps";
+  $("intro").hidden = $("result").hidden = true; $("play").hidden = $("cards").hidden = $("skip").hidden = false;
+  document.body.classList.add("playing"); $("play").classList.add("briefing");
+  for (const v of document.querySelectorAll(".view")) v.classList.toggle("on", v.id === "v-map");
+  $("cue").innerHTML = "";
+  aim(b);
+  // The briefing: who, where, and the objectives with the view each answer is in. Reading it is not timed.
+  $("b-call").textContent = `${fire.label}, ${ordinal(round.floor)} floor`;
+  $("b-where").textContent = where.join(" / ");
+  $("goals").innerHTML = Object.keys(round.ask).map((q, i) => `<li><span class="caps dim">0${i + 1} ${QS[q].name}</span><b>${esc(QS[q].goal(round))}</b><i class="caps">${QS[q].at}</i></li>`).join("") +
+    `<li><span class="caps dim">Scoring</span><b>Fastest time wins. A wrong report adds ${round.penalty} seconds.</b></li>`;
+  let n = COUNT;
+  $("b-label").textContent = "Clock starts in"; $("b-n").textContent = n; $("now").disabled = false; $("brief").hidden = false; $("now").focus();
+  const lines = [...$("goals").children], rid = round.round;  // one objective comes up every 1.4 s (a stale timer from a skipped call does nothing)
+  lines.forEach((li, i) => setTimeout(() => rid === round.round && li.classList.add("in"), 400 + i * 1400));
+  counter = setInterval(() => { $("b-n").textContent = --n; if (n <= 0) begin(); }, 1000);
+}
+
+// The countdown ended (or Start now): the server starts its clock, then the views open.
+async function begin() {
+  if ($("now").disabled) return;  // already starting
+  clearInterval(counter); $("now").disabled = true;
+  $("b-n").textContent = 0; $("b-label").textContent = "Loading the map";
+  await M.ready;  // a slow map must not eat the player's time: the clock waits for it
+  try { await api("/game/go", { round: round.round }); }
+  catch (e) { $("err").textContent = "That call was lost (the server restarted). Take a new one."; return back(); }
+  $("brief").hidden = true; $("play").classList.remove("briefing");
+  t0 = performance.now();  // for the display only: the server's clock is the score
+  timer = setInterval(() => $("clock").textContent = secs((performance.now() - t0) / 1000 + wrong * round.penalty), 100);
+  marks = round.hydrants.map(([lat, lon], i) => {
+    const el = Object.assign(document.createElement("button"), { type: "button", className: "hyd", onclick: () => pickHydrant(i) });
+    el.setAttribute("aria-label", `Hydrant ${i + 1}`); el.setAttribute("aria-pressed", false);
+    return new maplibregl.Marker({ element: el }).setLngLat([lon, lat]).addTo(M.map);
+  });
+  activate(Object.keys(round.ask)[0]);
+}
+
+function back() {  // to the intro, when a call can't start or was lost
+  clearInterval(timer); clearInterval(counter);
+  $("play").hidden = $("brief").hidden = true; $("intro").hidden = false; document.body.classList.remove("playing");
+  loadBoard($("board0"));
+}
+
+async function report(form) {
+  const msg = form.querySelector(".msg"), q = form.dataset.q, a = read(form);
+  if (a === null) return msg.textContent = q === "hydrant" ? "Click a hydrant on the map first" : "Choose an answer first";
+  let res;
+  try { res = await api("/game/answer", { round: round.round, q, answer: a }); }
+  catch (e) { $("err").textContent = "That call was lost (the server restarted). Take a new one."; return back(); }
+  if (!res.ok) {
+    wrong++;
+    $("pen").textContent = `${wrong} wrong: +${wrong * round.penalty} s`;
+    $("clock").classList.remove("hit"); void $("clock").offsetWidth; $("clock").classList.add("hit");  // restart the flash
+    if (q === "hydrant") { marks[a].getElement().disabled = true; pickHydrant(null); }  // that one is ruled out
+    return msg.textContent = `Not in the data. +${res.penalty} s`;
+  }
+  form.classList.add("done"); form.classList.remove("on");
+  form.querySelector(".tab span + span").textContent = "Confirmed";
+  form.querySelector(".fact").textContent = res.fact;
+  if (q === "hydrant") marks.forEach((m, k) => { const el = m.getElement(); el.disabled = true; el.classList.toggle("yes", k === a); });
+  if (res.done) return finish(res.done);
+  activate($("cards").querySelector(".card:not(.done)").dataset.q);
+}
+
+function finish(d) {
+  clearInterval(timer);
+  $("clock").textContent = secs(d.seconds);
+  $("pen").className = "caps dim";
+  $("pen").textContent = d.wrong ? `${secs(d.clock)} s + ${d.wrong} wrong x ${round.penalty} s` : "Seconds. No wrong reports";
+  $("cards").hidden = $("skip").hidden = true; $("result").hidden = false;
+  for (const v of document.querySelectorAll(".view")) v.classList.toggle("on", v.id === "v-map");  // end on the building, the reported hydrant in green
+  $("cue").innerHTML = `<b>Map</b>The hydrant you reported is green.`;
+  $("result").innerHTML = `<div><div class="caps ok">Report received by the crew</div><ul>${d.report.map(l => `<li>${esc(l)}</li>`).join("")}</ul></div>` +
+    (d.rank ? `<form id="nameform"><label class="caps" for="name">Place ${d.rank} of the top 10. Enter a name</label>
+      <input id="name" maxlength="8" pattern="[A-Za-z0-9 _\\-]{1,8}" title="1 to 8 letters, digits, spaces, dashes or underscores" required autocomplete="off" autocapitalize="characters" spellcheck="false">
+      <button class="btn">Save</button></form>` : "") +
+    `<div><div class="caps dim">Fastest reports</div><ol class="board" id="board1"></ol></div><button class="btn" id="again">Take another call</button>`;
+  loadBoard($("board1"));
+  (d.rank ? $("name") : $("again")).focus();
+  $("result").dataset.seconds = d.seconds;
+}
+
+$("go").onclick = $("skip").onclick = start;
+$("now").onclick = begin;
+// Top down: flat, north up, centred on the building (also brings the camera back if it was dragged away). Again: tilt and circle.
+$("flat").onclick = () => {
+  const flat = $("flat").getAttribute("aria-pressed") !== "true";
+  $("flat").setAttribute("aria-pressed", flat);
+  M.hold();
+  M.map.easeTo({ ...cam, pitch: flat ? 0 : 62, bearing: flat ? 0 : M.map.getBearing(), duration: REDUCED ? 0 : 800 });
+  if (!flat) M.map.once("moveend", M.resume);
+};
+$("cards").onclick = e => {
+  const tab = e.target.closest(".tab"), b = e.target.closest(".opt");
+  if (tab && !tab.parentElement.classList.contains("done")) activate(tab.parentElement.dataset.q);
+  if (b) for (const o of b.parentElement.querySelectorAll(".opt")) o.setAttribute("aria-pressed", o === b);  // yes/no: one pressed
+};
+$("cards").onsubmit = e => { e.preventDefault(); if (!e.target.classList.contains("done")) report(e.target); };
+$("result").onclick = e => { if (e.target.id === "again") start(); };  // a block: returning false here would cancel the Save button's submit
+$("result").onsubmit = async e => {
+  e.preventDefault();
+  const label = e.target.querySelector("label");
+  try {
+    const list = await api("/game/name", { round: round.round, name: $("name").value });
+    const mine = { name: $("name").value.toUpperCase().trim().split(/\s+/).join(" "), seconds: +$("result").dataset.seconds };
+    $("board1").innerHTML = boardRows(list, mine);
+    e.target.outerHTML = `<div class="caps ok">Saved to the leaderboard</div>`;
+    $("again").focus();
+  } catch (err) { label.textContent = "Not saved. Use 1 to 8 letters, digits, spaces or dashes"; }
+};
+</script>
 </body>
 </html>
