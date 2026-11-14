@@ -15,3 +15,6 @@ Running notes for the morning summary. Claude API budget: $25.
 
 ## Errors and fixes
 - load_dotenv refills a popped env var: set ANTHROPIC_API_KEY="" (not pop) to force the free path in self-checks.
+- 02:55 Server: POST /sms + GET /sms/<sim-id> (phone simulator), GET /latest (projectors follow the newest run), /buildings (60 ranked, SAM 3 status, tenant floors), /incidents, demo pages at /<name>.html, "mode": "draft" on /brief (no LLM), PRIMESIGHT_HOST for LAN access.
+- 03:00 demo/variants/dispatch-cad.html: CAD console (search over 60 buildings, floors marked scanned/tenants, 26 incident chips by category, time of call, people, caller, free text, live dispatch preview, Randomize, Fast draft). Tested: random CO alarm at MEDPLACE floor 18 drafted in ~30 s with clinic tenants, hydrants, staging, nearest scan floor 16.
+- 03:05 demo/variants/phone.html: iMessage-style simulator on the same conversation code as Photon. Tested with replays: help -> dispatch -> ack -> briefing -> floorplan + aerial -> follow-up answer.

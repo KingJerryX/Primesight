@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Primesight Phone</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  body { display: flex; justify-content: center; min-height: 100vh; background: #05070a; }
+  .phone { width: 100%; max-width: 430px; height: 100vh; max-height: 900px; display: flex; flex-direction: column; background: #000; border-left: 1px solid #1a1a1a; border-right: 1px solid #1a1a1a; }
+  header { padding: 14px 16px 10px; text-align: center; border-bottom: 1px solid #1c1c1e; background: #0b0b0c; }
+  .avatar { width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(135deg, #ff5a36, #b3261e); margin: 0 auto 4px; display: grid; place-items: center; font-weight: 800; }
+  header .name { font-size: 13px; }
+  header .sub { font-size: 11px; color: var(--dim); }
+  #msgs { flex: 1; overflow-y: auto; padding: 12px 12px 4px; display: flex; flex-direction: column; gap: 6px; }
+  .b { max-width: 82%; padding: 8px 12px; border-radius: 18px; white-space: pre-wrap; word-wrap: break-word; font-size: 15px; line-height: 1.35; }
+  .crew { align-self: flex-end; background: #0a84ff; color: #fff; border-bottom-right-radius: 5px; }
+  .primesight { align-self: flex-start; background: #26262a; border-bottom-left-radius: 5px; }
+  .primesight.brief { font-family: var(--mono); font-size: 12.5px; }
+  .img { align-self: flex-start; max-width: 82%; }
+  .img img { width: 100%; border-radius: 14px; display: block; }
+  .img .cap { font-size: 11px; color: var(--dim); margin-top: 2px; }
+  .typing { align-self: flex-start; color: var(--dim); font-size: 13px; padding: 4px 8px; }
+  .chips { display: flex; gap: 6px; overflow-x: auto; padding: 6px 10px; }
+  .chips button { flex: none; background: #1c1c1e; border: 1px solid #2c2c2e; font-weight: 500; font-size: 13px; padding: 6px 11px; border-radius: 99px; }
+  form { display: flex; gap: 8px; padding: 8px 10px calc(10px + env(safe-area-inset-bottom)); border-top: 1px solid #1c1c1e; }
+  form input { border-radius: 99px; background: #1c1c1e; border-color: #2c2c2e; }
+  form button { border-radius: 99px; background: #0a84ff; padding: 8px 14px; }
+</style>
+</head>
+<body>
+<div class="phone">
+  <header><div class="avatar">P</div><div class="name">Primesight</div><div class="sub">Simulated iMessage · same agent as the real Photon line</div></header>
+  <div id="msgs"></div>
+  <div class="chips" id="chips"></div>
+  <form id="f"><input id="t" placeholder="Text Primesight" autocomplete="off"><button>Send</button></form>
+</div>
+<script src="common.js"></script>
+<script>
+// A simulator id, never a real phone number; kept per browser so a reload continues the thread.
+const ID = (() => { try { return localStorage.getItem("ps-sim") || (localStorage.setItem("ps-sim", "sim-" + Math.random().toString(36).slice(2, 8)), localStorage.getItem("ps-sim")); } catch (e) { return "sim-" + Math.random().toString(36).slice(2, 8); } })();
+const $ = id => document.getElementById(id);
+let n = 0, waiting = false, B = [], I = [];
+
+function add(m) {
+  const el = document.createElement("div");
+  if (m.type === "image") {
+    el.className = "img"; el.innerHTML = `<img src="${API + m.url}" alt="${m.caption}"><div class="cap">${m.caption}</div>`;
+  } else {
+    el.className = `b ${m.from}` + (m.from === "primesight" && /^PRIMESIGHT\s+\|/.test(m.text) ? " brief" : "");
+    el.textContent = m.text;
+  }
+  $("msgs").appendChild(el);
+  $("msgs").scrollTop = 1e9;
+}
+
+async function poll() {
+  try {
+    const msgs = await api(`/sms/${ID}?after=${n}`);
+    for (const m of msgs) { add(m); n = m.n + 1; if (m.from === "primesight") setTyping(m.text && m.text.startsWith("PRIMESIGHT: got it")); }
+  } catch (e) { }
+  setTimeout(poll, 900);
+}
+function setTyping(on) {
+  waiting = on; let t = document.querySelector(".typing");
+  if (on && !t) { t = document.createElement("div"); t.className = "typing"; t.textContent = "Primesight is working..."; $("msgs").appendChild(t); }
+  if (!on && t) t.remove();
+  $("msgs").scrollTop = 1e9;
+}
+
+async function send(text) {
+  if (!text.trim()) return;
+  $("t").value = "";
+  await api("/sms", { phone: ID, text });
+  setTyping(true); chips(true);
+}
+
+function chips(followUp) {
+  const ideas = followUp ? ["Which elevator fits a stretcher?", "Nearest pull station?", "Who meets us at the door?", "How many people above us?", "NOTE main doors locked, used the side entrance"]
+    : Array.from({ length: 4 }, () => { const b = pick(B), i = pick(I); return b && i ? dispatchText({ building: b, floor: b.scan_floor || 1, incident: i }) : "help"; });
+  $("chips").innerHTML = ideas.map(x => `<button type="button">${x.replace(/</g, "&lt;")}</button>`).join("") + (followUp ? `<button type="button" data-new="1">New dispatch...</button>` : "");
+}
+
+$("chips").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; if (b.dataset.new) chips(false); else send(b.textContent); });
+$("f").addEventListener("submit", e => { e.preventDefault(); send($("t").value); });
+Promise.all([getBuildings(), getIncidents()]).then(([b, i]) => { B = b; I = i; chips(false); }).catch(() => chips(false));
+poll();
+</script>
+</body>
+</html>

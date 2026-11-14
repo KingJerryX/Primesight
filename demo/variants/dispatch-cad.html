@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primesight Dispatch (CAD)</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  main { display: grid; grid-template-columns: 420px 1fr; gap: 16px; padding: 16px; max-width: 1400px; margin: 0 auto; }
+  h1 { font-size: 18px; margin: 0; padding: 14px 16px; border-bottom: 1px solid var(--line); display: flex; gap: 12px; align-items: center; }
+  h1 .pill { background: var(--accent); border: 0; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  #preview { min-height: 66px; padding: 10px; background: var(--panel2); border-radius: 8px; font-family: var(--mono); font-size: 13px; }
+  .incidents { display: flex; flex-wrap: wrap; gap: 6px; max-height: 210px; overflow-y: auto; }
+  .incidents button { background: var(--panel2); border: 1px solid var(--line); padding: 5px 10px; font-weight: 500; font-size: 13px; }
+  .incidents button.sel { border-color: currentColor; background: #ffffff12; }
+  .cat { width: 100%; font-size: 11px; text-transform: uppercase; color: var(--dim); margin-top: 6px; }
+  .actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+  #result img { max-width: 100%; border-radius: 8px; margin-top: 10px; }
+  #status { margin-left: auto; font-size: 13px; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<h1>PRIMESIGHT <span class="pill">DISPATCH</span> <span class="dim" style="font-weight:400">CAD console</span><span id="status" class="dim"></span></h1>
+<main>
+  <section class="panel">
+    <label for="q">Building <span class="tag" id="count"></span></label>
+    <input id="q" placeholder="Type an address, building or city (e.g. Louisiana, Wilshire, Houston)" autocomplete="off">
+    <div class="list" id="blist" style="margin-top:6px; max-height:220px"></div>
+
+    <div class="grid2">
+      <div><label for="floor">Floor</label><select id="floor"></select></div>
+      <div><label for="time">Time of call</label>
+        <select id="time"><option value="">Now</option><option>02:00 (night)</option><option>10:00 (business hours)</option><option>13:00 (lunch)</option><option>19:00 (evening)</option><option>Saturday 15:00</option></select></div>
+    </div>
+
+    <label>Incident</label>
+    <div class="incidents" id="incidents"></div>
+
+    <div class="grid2">
+      <div><label for="patients">People involved</label>
+        <select id="patients"><option value="">Not given</option><option>1 patient</option><option>2 patients</option><option>5+ people</option><option>People trapped</option></select></div>
+      <div><label for="caller">Reported by</label>
+        <select id="caller"><option value="">Not given</option><option>Caller is a coworker</option><option>Caller is building security</option><option>Alarm company</option><option>Passerby outside</option><option>Caller is the patient</option></select></div>
+    </div>
+    <label for="extra">Extra details (free text)</label>
+    <input id="extra" placeholder="e.g. smoke visible from windows, caller says stairwell B locked">
+
+    <label>Dispatch text</label>
+    <div id="preview" class="dim">Pick a building and an incident.</div>
+    <div class="actions">
+      <button id="send">Send to Primesight</button>
+      <button id="draft" class="ghost" title="No LLM: the deterministic draft in about 4 s">Fast draft</button>
+      <button id="random" class="ghost">Randomize</button>
+    </div>
+  </section>
+
+  <section class="panel" id="result">
+    <div class="dim">The briefing the crew's phone receives appears here. Open a projector page to watch the agent work.</div>
+  </section>
+</main>
+<script src="common.js"></script>
+<script>
+let B = [], I = [], sel = { building: null, incident: null };
+const $ = id => document.getElementById(id);
+
+function renderList() {
+  const hits = matchBuildings(B, $("q").value);
+  $("count").textContent = `${hits.length} of ${B.length} preprocessed`;
+  $("blist").innerHTML = hits.map(b => `<div class="row ${sel.building === b ? "sel" : ""}" data-pid="${b.pid}">
+      <b>${b.address}</b>, ${b.city} <span class="tag">${b.name || ""}</span><br>
+      <span class="tag">${b.stories || "?"} stories · ${b.tenants} tenants · scan of floor ${b.scan_floor}${b.sam3 ? ' · <span class="scan">SAM 3 done</span>' : ""}</span></div>`).join("");
+}
+
+function pickBuilding(b) {
+  sel.building = b;
+  $("q").value = `${b.address}, ${b.city}`;
+  $("floor").innerHTML = floorOptions(b).map(o =>
+    `<option value="${o.floor}" ${o.scanned ? "selected" : ""}>${o.floor}${o.scanned ? "  (3D scan" + (b.sam3 ? " + SAM 3" : "") + ")" : o.tenants ? "  (tenants)" : ""}</option>`).join("");
+  renderList(); preview();
+}
+
+function renderIncidents() {
+  const cats = [...new Set(I.map(t => t.category))];
+  $("incidents").innerHTML = cats.map(c => `<div class="cat" style="color:${CATEGORY_COLORS[c]}">${c}</div>` +
+    I.filter(t => t.category === c).map(t => `<button data-id="${t.id}" style="color:${CATEGORY_COLORS[c]}" class="${sel.incident === t ? "sel" : ""}" title="${t.needs}">${t.label}</button>`).join("")).join("");
+}
+
+function text() {
+  if (!sel.building || !sel.incident) return "";
+  const details = [$("patients").value, $("caller").value, $("extra").value].filter(Boolean).join(". ");
+  return dispatchText({ building: sel.building, floor: +$("floor").value, incident: sel.incident, details, time: $("time").value });
+}
+function preview() { const t = text(); $("preview").textContent = t || "Pick a building and an incident."; $("preview").className = t ? "" : "dim"; }
+
+async function send(mode) {
+  const t = text(); if (!t) return;
+  $("send").disabled = $("draft").disabled = true;
+  $("status").textContent = mode ? "Drafting..." : "Agent working (30-60 s)...";
+  $("result").innerHTML = `<div class="dim">Sent: ${t}</div>`;
+  try {
+    const out = await sendDispatch(t, mode);
+    $("result").innerHTML = `<div class="tag">run ${out.run_id}${out.replayed ? " · replayed" : ""}</div><div class="brief">${out.briefing.replace(/</g, "&lt;")}</div>` +
+      (out.texts || []).map(x => `<div class="tag" style="margin-top:10px">Queued for ${x.to}: ${x.text}</div>`).join("") +
+      (out.image_urls || []).map(u => `<img src="${API + u}" alt="briefing image">`).join("");
+    $("status").textContent = "Sent.";
+  } catch (e) { $("result").innerHTML = `<div style="color:var(--accent)">Failed: ${e.message}</div>`; $("status").textContent = ""; }
+  $("send").disabled = $("draft").disabled = false;
+}
+
+$("q").addEventListener("input", renderList);
+$("blist").addEventListener("click", e => { const r = e.target.closest(".row"); if (r) pickBuilding(B.find(b => b.pid == r.dataset.pid)); });
+$("incidents").addEventListener("click", e => { const b = e.target.closest("button"); if (b) { sel.incident = I.find(t => t.id === b.dataset.id); renderIncidents(); preview(); } });
+["floor", "time", "patients", "caller", "extra"].forEach(id => $(id).addEventListener("input", preview));
+$("send").onclick = () => send();
+$("draft").onclick = () => send("draft");
+$("random").onclick = () => {
+  pickBuilding(pick(B.filter(b => b.sam3).length ? B.filter(b => Math.random() < .7 ? b.sam3 : true) : B));
+  const fl = floorOptions(sel.building); $("floor").value = (Math.random() < .5 ? fl.find(o => o.scanned) : pick(fl.filter(o => o.tenants)) || pick(fl)).floor;
+  sel.incident = pick(I); ["patients", "caller", "time"].forEach(id => { const o = $(id).options; $(id).selectedIndex = Math.floor(Math.random() * o.length); });
+  renderIncidents(); preview();
+};
+
+Promise.all([getBuildings(), getIncidents()]).then(([b, i]) => { B = b; I = i; renderList(); renderIncidents(); })
+  .catch(e => $("status").textContent = "Server not reachable: start python -m primesight.server");
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+// Shared helpers for every Primesight demo page. Pages are served by the Primesight server (python -m primesight.server),
+// so API calls are same-origin; opened from file:// they fall back to localhost:8787.
+const API = location.protocol.startsWith("http") ? "" : "http://localhost:8787";
+
+async function api(path, body) {
+  const r = await fetch(API + path, body === undefined ? {} : {
+    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  const ct = r.headers.get("content-type") || "";
+  if (!r.ok) throw new Error(`${path} -> ${r.status}`);
+  return ct.includes("json") ? r.json() : r.text();
+}
+
+const getBuildings = () => api("/buildings");
+const getIncidents = () => api("/incidents");
+const CATEGORY_COLORS = { fire: "#ff5a36", medical: "#3fa7ff", hazmat: "#f5c400", rescue: "#b07cff", security: "#ff4d8d", utility: "#2ed3a7" };
+
+function ordinal(n) {
+  const s = ["th", "st", "nd", "rd"], v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
+
+// One dispatch text from the console's choices; the agent parses it like a real CAD narrative.
+function dispatchText({ building, floor, incident, details = "", time = "" }) {
+  const where = `${building.address}, ${building.city}`;
+  const parts = [`${incident.label} on the ${ordinal(floor)} floor, ${where}.`];
+  if (details) parts.push(details.trim().replace(/\.?$/, "."));
+  if (time) parts.push(`Time of call: ${time}.`);
+  return parts.join(" ");
+}
+
+// Send a dispatch. mode "draft" skips the LLM (about 4 s); default runs the deepagents agent (30-60 s).
+const sendDispatch = (text, mode) => api("/brief", mode ? { text, mode } : { text });
+
+// Calls onRun(run_id) whenever a new run starts on the server (from any console or the phone simulator).
+function followLatest(onRun, every = 1000) {
+  let last = null;
+  const tick = async () => {
+    try {
+      const { run_id } = await api("/latest");
+      if (run_id && run_id !== last) { last = run_id; onRun(run_id); }
+    } catch (e) { /* server restarting: keep polling */ }
+  };
+  tick();
+  return setInterval(tick, every);
+}
+
+// Streams a run's trace: onStep({t, step, detail, who}) for each new line, onDone(facts) once /run answers.
+function streamTrace(runId, onStep, onDone) {
+  let seen = 0, stopped = false;
+  const tick = async () => {
+    if (stopped) return;
+    try {
+      const text = await api(`/trace/${runId}`);
+      const lines = text.split("\n").filter(Boolean);
+      for (const l of lines.slice(seen)) {
+        const d = JSON.parse(l);
+        d.who = d.step.startsWith("helper:") ? "helper" : ["call_received", "address_lookup", "mode", "done", "usage", "graded", "error", "crew_reply"].includes(d.step) ? "system" : "agent";
+        onStep(d);
+        if (d.step === "done" || d.step === "error") {
+          stopped = true;
+          try { onDone && onDone(await api(`/run/${runId}`)); } catch (e) { onDone && onDone(null); }
+        }
+      }
+      seen = lines.length;
+    } catch (e) { /* trace not written yet */ }
+    if (!stopped) setTimeout(tick, 600);
+  };
+  tick();
+  return () => { stopped = true; };
+}
+
+// Plain-language name for a trace step, for the projector.
+function stepLabel(d) {
+  const tool = d.step.replace(/^helper:/, "");
+  const detail = (() => { try { return JSON.parse(d.detail); } catch (e) { return null; } })();
+  switch (tool) {
+    case "call_received": return ["Call received", d.detail];
+    case "address_lookup": return ["Address matched", d.detail];
+    case "find_building": return ["Finds the building", detail?.address || d.detail];
+    case "read_file": return ["Reads a file", detail?.file_path || d.detail];
+    case "gather_building": return ["Pulls CoStar + Matterport + Vexcel", detail ? `floor ${detail.floor}, ${detail.incident_type || detail.incident}` : d.detail];
+    case "task": return [`Hands off to ${detail?.subagent_type || "a helper"}`, detail?.description || ""];
+    case "queue_text": return ["Queues a text for building staff", d.detail];
+    case "walk_to": return ["Walks the scan graph", detail ? `to nearest ${detail.target}` : d.detail];
+    case "add_building_note": return ["Saves a building note", detail?.note || d.detail];
+    case "graded": return ["Grader verdict", d.detail];
+    case "usage": return ["Cost", d.detail];
+    case "done": return ["Briefing sent", d.detail];
+    case "mode": return ["Mode", d.detail];
+    case "crew_reply": return ["Crew replied", d.detail];
+    default: return [tool, d.detail];
+  }
+}
+
+// Autocomplete list over buildings: filter by any word of name, address or city.
+function matchBuildings(list, q) {
+  const words = q.toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter(Boolean);
+  return list.filter(b => words.every(w => `${b.name} ${b.address} ${b.city} ${b.pid}`.toLowerCase().includes(w)));
+}
+
+// Floors worth offering first: the SAM 3-scanned floor, then floors with tenants, then the rest.
+function floorOptions(b) {
+  const top = b.stories || Math.max(...(b.tenant_floors.length ? b.tenant_floors : [1]));
+  const out = [];
+  for (let f = 1; f <= top; f++) out.push({ floor: f, scanned: f === b.scan_floor, tenants: b.tenant_floors.includes(f) });
+  return out;
+}
+
+const pick = arr => arr[Math.floor(Math.random() * arr.length)];

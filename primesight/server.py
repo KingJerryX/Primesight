@@ -1,7 +1,10 @@
 """Local server for Lane B (see LANES.md). Stdlib only.
 
 python -m primesight.server            # http://localhost:8787
-POST /brief     {"text", "thread"?}   -> {"briefing", "images", "property_id", "run_id"}
+POST /brief     {"text", "mode"?}     -> {"briefing", "images", "property_id", "run_id"}  mode "draft": no LLM, ~4 s
+POST /sms       {"phone", "text"}     -> phone simulator; replies on GET /sms/<phone>?after=n
+GET  /latest, /buildings, /incidents  -> newest run_id; ranked buildings; incident catalog
+GET  /<page>.html                     -> demo pages (demo/ and demo/variants/)
 POST /ask       {"run_id", "text"}      -> {"answer"}  crew reply, continues that run's agent thread
 POST /feedback  {"property_id", "text"} -> {"ok": true}
 GET  /trace/<run_id>                  -> JSON lines, one per step
@@ -33,7 +36,7 @@ def parse_call(text):
     return (int(m.group(1)) if m else 1), classify(text)["category"]
 
 
-def brief(text, run_id):
+def brief(text, run_id, mode=None):
     """Agent when a key is set; otherwise the deterministic draft. Same output shape either way."""
     from .agent import find_building
     trace.log(run_id, "call_received", text[:120])
@@ -44,7 +47,7 @@ def brief(text, run_id):
     pid = hits[0]["property_id"]
     trace.log(run_id, "address_lookup", f"{hits[0]['address']}, {hits[0]['city']} -> {pid}")
     floor, incident = parse_call(text)
-    if os.environ.get("ANTHROPIC_API_KEY"):
+    if os.environ.get("ANTHROPIC_API_KEY") and mode != "draft":
         from . import agent
         text_out = agent.run(text, run_id=run_id)
         f = briefing.last.get(pid)  # images from the agent's own gather call
@@ -100,14 +103,29 @@ def facts(f, incident):
 
 
 DEMO = os.path.join(briefing.ROOT, "cache", "demo")  # recorded runs, keyed by call text
+DEMO_PAGES = os.path.join(briefing.ROOT, "demo")  # console, projector and phone pages (and demo/variants/)
+
+
+def buildings():
+    """Every ranked building for the console's autocomplete: address, size, the scanned floor and whether SAM 3 ran."""
+    path = os.path.join(briefing.ROOT, "cache", "ranked.json")
+    out = []
+    for r in json.load(open(path, encoding="utf-8")) if os.path.exists(path) else []:
+        cp = os.path.join(briefing.ROOT, "cache", f"costar_{r['pid']}.json")
+        floors = sorted({t["floor"] for t in json.load(open(cp, encoding="utf-8"))["tenants"] if t["floor"]}) if os.path.exists(cp) else []
+        out.append({**{k: r.get(k) for k in ("pid", "name", "address", "city", "lat", "lon", "type", "stories", "tenants", "scan_floor", "scan_name")},
+                    "sam3": os.path.exists(os.path.join(VISION, f"{r['scan_id']}.json")), "tenant_floors": floors})
+    return out
 RUNS = {}  # run_id -> facts, for GET /run/<run_id>
+STARTED = []  # run_ids in start order, so every projector can follow the newest run (GET /latest)
 
 
-def brief_or_replay(text, run_id):
+def brief_or_replay(text, run_id, mode=None):
     """Live runs are recorded. With PRIMESIGHT_REPLAY=1 a recorded call returns instantly, trace included
     (each trace line keeps its original t, so the projector can animate it)."""
+    STARTED.append(run_id)
     path = os.path.join(DEMO, hashlib.sha1(" ".join(text.lower().split()).encode()).hexdigest()[:16] + ".json")
-    if os.environ.get("PRIMESIGHT_REPLAY") and os.path.exists(path):
+    if os.environ.get("PRIMESIGHT_REPLAY") and mode != "draft" and os.path.exists(path):
         rec = json.load(open(path, encoding="utf-8"))
         if rec["out"].get("_facts") is None:  # recorded before /run existed: rebuild facts once (~3 s, no LLM)
             floor, incident = parse_call(text)
@@ -116,8 +134,8 @@ def brief_or_replay(text, run_id):
         trace.write(run_id, rec["trace"])
         out = {**rec["out"], "replayed": True}
     else:
-        out = brief(text, run_id)
-        if out["property_id"]:
+        out = brief(text, run_id, mode)
+        if out["property_id"] and mode != "draft":  # only agent runs become recordings
             os.makedirs(DEMO, exist_ok=True)
             json.dump({"text": text, "out": out, "trace": trace.read(run_id)}, open(path, "w", encoding="utf-8"), indent=1)
     RUNS[run_id] = out.pop("_facts", None)
@@ -180,7 +198,7 @@ class H(BaseHTTPRequestHandler):
                 return self._send(400, {"error": "text is required"})
             run_id = uuid.uuid4().hex[:12]
             try:
-                out = brief_or_replay(body["text"], run_id)
+                out = brief_or_replay(body["text"], run_id, body.get("mode"))
             except Exception as e:  # the crew still needs *something*
                 trace.log(run_id, "error", repr(e)[:200])
                 out = {"briefing": f"PRIMESIGHT: briefing failed ({type(e).__name__}). Proceed on standard procedure.",
@@ -191,6 +209,13 @@ class H(BaseHTTPRequestHandler):
             if not f or not str(body.get("text", "")).strip():
                 return self._send(400, {"error": "run_id of a run on this server and text are required"})
             return self._send(200, {"answer": ask_or_replay(run_id, f["call"], body["text"])})
+        if self.path == "/sms":  # phone simulator: {"phone": "sim-1", "text"}; replies arrive on GET /sms/<phone>
+            phone = str(body.get("phone", ""))
+            if not re.fullmatch(r"[\w-]{1,32}", phone) or not str(body.get("text", "")).strip():
+                return self._send(400, {"error": "phone (a simulator id like sim-1, never a real number) and text are required"})
+            from . import sms
+            sms.simulate(phone, body["text"])
+            return self._send(200, {"ok": True})
         if self.path == "/feedback":
             if not body.get("property_id") or not str(body.get("text", "")).strip():
                 return self._send(400, {"error": "property_id and text are required"})
@@ -211,6 +236,22 @@ class H(BaseHTTPRequestHandler):
             p = os.path.join(VISION, *m.group(1).split("/")[1:]) if m.group(1).startswith("vision/") \
                 else os.path.join(briefing.OUT, m.group(1))
             return self._send(200, open(p, "rb").read(), "image/jpeg") if os.path.exists(p) else self._send(404, {"error": "no image"})
+        m = re.fullmatch(r"/sms/([\w-]{1,32})(?:\?after=(\d+))?", self.path)
+        if m:
+            from . import sms
+            return self._send(200, sms.LOG.get(m.group(1), [])[int(m.group(2) or 0):])
+        if self.path == "/latest":
+            return self._send(200, {"run_id": STARTED[-1] if STARTED else None, "done": bool(STARTED) and STARTED[-1] in RUNS})
+        if self.path == "/buildings":
+            return self._send(200, buildings())
+        if self.path == "/incidents":
+            return self._send(200, [{k: t[k] for k in ("id", "label", "category", "needs", "layers")} for t in CATALOG])
+        m = re.fullmatch(r"/(?:demo/)?([\w-]+\.(html|css|js|json))", self.path) or re.fullmatch(r"/()", self.path)
+        if m:  # the demo pages, served from demo/ (strict names, no subfolders except variants)
+            name = m.group(1) or "index.html"
+            p = os.path.join(DEMO_PAGES, name) if os.path.exists(os.path.join(DEMO_PAGES, name)) else os.path.join(DEMO_PAGES, "variants", name)
+            ctype = {"html": "text/html", "css": "text/css", "js": "application/javascript", "json": "application/json"}[name.rsplit(".", 1)[1]]
+            return self._send(200, open(p, "rb").read(), ctype + "; charset=utf-8") if os.path.exists(p) else self._send(404, {"error": "no page"})
         if self.path == "/health":
             return self._send(200, {"ok": True, "agent": bool(os.environ.get("ANTHROPIC_API_KEY"))})
         self._send(404, {"error": "not found"})
@@ -225,4 +266,5 @@ if __name__ == "__main__":
     assert classify("Man collapsed in the break room")["id"] == "unconscious" and classify("smoke alarm going off")["id"] == "fire_alarm"
     assert parse_call("Two people stuck in elevator, 1000 Louisiana") == (1, "rescue") and classify("Shots fired, 12th floor")["category"] == "security"
     print(f"Primesight server on http://localhost:{PORT}  (agent: {'on' if os.environ.get('ANTHROPIC_API_KEY') else 'off, sending drafts'})")
-    ThreadingHTTPServer(("127.0.0.1", PORT), H).serve_forever()
+    # PRIMESIGHT_HOST=0.0.0.0 lets a phone on the same Wi-Fi open the pages (Windows may ask to allow Python through the firewall)
+    ThreadingHTTPServer((os.environ.get("PRIMESIGHT_HOST", "127.0.0.1"), PORT), H).serve_forever()
