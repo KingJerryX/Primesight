@@ -8,6 +8,8 @@ Running notes for the morning summary. Claude API budget: $25.
 | 02:40 | sms.py self-check accidentally ran the live agent (load_dotenv refilled the popped key) | $0.35 |
 | 03:30-03:45 | Live batch 1: 8 calls, all 6 categories (now instant replays) | $4.10 |
 | 03:50 | Live batch 2: re-recorded active threat + gas leak, new types solar / battery / heat | $2.90 |
+| 04:00 | Phone flow follow-up (live /ask) + live batch 3: vehicle into building at night, unknown odor, Saturday smoke in LA | $2.03 |
+| | **Total so far** | **~$9.40 of $25** |
 
 ## Done
 - 02:20 Ranked the kit's buildings (`primesight/rank.py` -> cache/ranked.json): 60 office buildings, Houston and LA, one scan each (the floor with the most tenants). CoStar records for all 60 cached.
@@ -37,6 +39,8 @@ Running notes for the morning summary. Claude API budget: $25.
 - 03:55 Los Angeles buildings had 0 hydrants (only Houston had a layer). The LA County Fire layers return 0 inside the City of LA; the City's DWP layer (maps.lacity.org Fire_Department/MapServer/0) works: 12-65 hydrants within 300 m. Heat illness and unknown odor calls now go to outside-scout too (temperature, wind).
 - 04:00 Research: AED detection with SAM 3 does not work. "AED cabinet" boxes any wall cabinet (top hit: a keypad safe at 0.96), "AED" hit a fire-extinguisher cabinet. AED stays NOT KNOWN; a false AED is worse than none. RESEARCH_EMERGENCIES.md (local, not in repo): all 31 types with layers and needs, plus the live briefings.
 - Building notes: every live test run appends a "crew note" to cache/buildings/<pid>.md, and later briefings cite them ("same report logged ... may be a repeat call"). Before the demo these test notes get archived to cache/buildings_test_archive/ (moved, not deleted).
+- 04:00 Judge mode: time of call and free details; AGENTS.md treats headcounts as daytime figures. Live batch 3 (cache/live_batch3.txt): "PEOPLE: ~31 by daytime headcount; call at 02:00, likely far fewer on site"; LA hydrants now show (550 Hill St: 37 m SW); unknown odor carries a WIND line; the Saturday smoke call noted the ground-floor gym may be busy.
+- 04:00 Phone simulator flow checked end to end: replayed dispatch -> ack, briefing, floor plan, aerial; then a live follow-up "which way is the wind pushing the smoke?" answered on the same building with a fresh wind reading and the hydrant list.
 ## Errors and fixes
 - Live active-threat run labelled an advocacy organization "possible target (from name only)". Profiling by religion/ethnicity/nationality/politics is now forbidden in AGENTS.md (always in the prompt), tenant-risk's prompt and the security skill (commit 82aae86). That run's recording gets deleted and re-recorded.
 - I accidentally started a second server on 8787 while the batch ran (Windows let both bind). Killed it by PID within a minute.
