@@ -2,8 +2,9 @@
 import csv, json, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-KIT = os.path.join(ROOT, "costar-hackathon-kit")
-CACHE = os.path.join(ROOT, "cache")  # CoStar-derived building records, SAM 3 results, demo recordings
+from . import paths
+KIT = paths.KIT
+CACHE = os.path.join(paths.DATA, "cache")  # CoStar-derived building records, SAM 3 results, demo recordings
 ENUMS = json.load(open(os.path.join(KIT, "schemas", "enums.json"), encoding="utf-8"))
 
 _NUM = {w: i for i, w in enumerate("Zero One Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve Thirteen "

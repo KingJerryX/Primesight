@@ -17,3 +17,11 @@ cache/buildings_test_archive/
 cache/*.txt
 cache/rank.json
 cache/ranked_*.json
+
+# deploy: CoStar address index for Vercel (never in git; see deploy/build_kit_min.py) and local Vercel/Supabase state
+kit_min/
+.vercel/
+supabase/.temp/
+
+.vercel
+.env*.local

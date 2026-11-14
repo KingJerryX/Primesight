@@ -18,7 +18,7 @@ The shared line cannot text first: a phone must text it (START) before Primesigh
 import hashlib, json, mimetypes, os, sys, threading, time, urllib.error, urllib.parse, urllib.request, uuid
 from datetime import datetime, timedelta, timezone
 
-from . import sms
+from . import sms, store
 
 API = os.environ.get("PHOTON_API", "https://api.photon.codes")
 
@@ -105,12 +105,9 @@ class Bridge:
             if m["id"] in self.seen:
                 continue
             self.seen.add(m["id"])
-            sent, space, recv = m.get("sentBy") or {}, m.get("space") or {}, m.get("receivedBy") or {}
-            text = (m.get("content") or {}).get("text") if (m.get("content") or {}).get("type") == "text" else None
-            ok = (m.get("status") == "received" and text and sent.get("handle") and space.get("id") and recv.get("id")
-                  and "group" not in str(space.get("kind", "")).lower())
-            if ok:
-                threading.Thread(target=self.answer, args=(sent["handle"], space["id"], recv["id"], text, m["id"]), daemon=True).start()
+            args = incoming(m)
+            if args and (not store.remote or store.claim("photon:" + m["id"])):  # a deployed webhook may answer it first
+                threading.Thread(target=self.answer, args=args, daemon=True).start()
         if items:  # move the window only after paging finished; inclusive bound, `seen` dedupes
             self.since = items[-1]["createdAt"]
         return len(items)
@@ -135,7 +132,7 @@ class Bridge:
                         pass
         self.p.typing(space, sender, True)
         try:
-            sms.handle(phone, text, send)
+            sms.handle(phone, text, send, os.environ.get("PRIMESIGHT_PASSCODE"))  # registered phones may run the agent (daily cap still applies)
         finally:
             self.p.typing(space, sender, False)
 
@@ -148,6 +145,44 @@ class Bridge:
                 self.errors += 1
                 print(f"[photon] poll failed ({self.errors}): {e}", file=sys.stderr)
             time.sleep(min(every * (1 + self.errors), 30))
+
+
+def incoming(m):
+    """A received 1:1 text -> (handle, space_id, sender_id, text, message_id); anything else (groups, media) -> None."""
+    sent, space, recv = m.get("sentBy") or {}, m.get("space") or {}, m.get("receivedBy") or {}
+    text = (m.get("content") or {}).get("text") if (m.get("content") or {}).get("type") == "text" else None
+    ok = (m.get("status") == "received" and text and sent.get("handle") and space.get("id") and recv.get("id")
+          and "group" not in str(space.get("kind", "")).lower())
+    return (sent["handle"], space["id"], recv["id"], text, m["id"]) if ok else None
+
+
+def verify(headers, raw, secret):
+    """Standard Webhooks signature (whsec_ secrets): v1,base64(HMAC-SHA256(key, "<id>.<timestamp>.<body>")), 5 min window."""
+    import base64, hmac
+    mid, ts, sig = headers.get("webhook-id"), headers.get("webhook-timestamp"), headers.get("webhook-signature") or ""
+    if not (mid and ts and secret) or not ts.isdigit() or abs(time.time() - int(ts)) > 300:
+        return False
+    key = base64.b64decode(secret.removeprefix("whsec_"))
+    want = base64.b64encode(hmac.new(key, f"{mid}.{ts}.".encode() + raw, hashlib.sha256).digest()).decode()
+    return any(hmac.compare_digest(want, part.split(",", 1)[-1]) for part in sig.split())
+
+
+def webhook(headers, raw):
+    """POST /photon on the deploy: a signed message.received event -> the same answer path as polling, inside the request
+    (serverless has no background). Retries and the laptop poller are deduped by message id. Returns (status, note)."""
+    if not verify(headers, raw, os.environ.get("PHOTON_WEBHOOK_SECRET", "")):
+        print(f"[photon] webhook rejected; signature headers present: {[h for h in headers.keys() if 'webhook' in h.lower() or 'signature' in h.lower()]}", file=sys.stderr)
+        return 401, "bad signature"
+    ev = json.loads(raw)
+    m = (ev.get("data") or {}).get("object") or {}
+    args = incoming(m) if ev.get("type") == "message.received" else None
+    if not args:
+        return 200, "ignored"
+    if not store.claim("photon:" + m["id"]):
+        return 200, "duplicate"
+    k, pid = os.environ.get("PHOTON_API_KEY"), os.environ.get("PHOTON_PROJECT_ID")
+    Bridge(Photon(k, pid, os.environ.get("PHOTON_API", API))).answer(*args)
+    return 200, "answered"
 
 
 def public_url(path):
@@ -167,6 +202,7 @@ def start_from_env():
 
 def selftest():
     """Round trip against a local mock of the four Photon endpoints: HELP text in -> HELP text out, image upload."""
+    store.remote = False  # never write test rows into the deployed Supabase, even with its keys in .env
     from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
     got = {"messages": [], "attachments": [], "typing": [], "auth": set()}
     inbox = [{"id": "pho_msg_1", "status": "received", "platform": "imessage", "createdAt": "2026-11-14T08:00:00.000Z",
@@ -222,12 +258,21 @@ def selftest():
     assert len(got["messages"]) == 1, "group text must be ignored"
     assert got["typing"] == [True, False] and got["auth"] == {"Bearer pho_test_key"}
     assert b.poll_once() == 3 and len(got["messages"]) == 1  # same items again: deduped, no second reply
+    import base64, hmac  # webhook: signed event answered once, retry deduped, bad signature refused
+    os.environ.update(PHOTON_WEBHOOK_SECRET="whsec_" + base64.b64encode(b"k" * 24).decode(), PHOTON_API_KEY="pho_test_key",
+                      PHOTON_PROJECT_ID="pho_prj_test", PHOTON_API=f"http://127.0.0.1:{srv.server_port}")
+    ev = json.dumps({"type": "message.received", "data": {"object": {**inbox[0], "id": "pho_msg_3"}}}).encode()
+    ts = str(int(time.time()))
+    h = {"webhook-id": "evt_1", "webhook-timestamp": ts,
+         "webhook-signature": "v1," + base64.b64encode(hmac.new(b"k" * 24, f"evt_1.{ts}.".encode() + ev, hashlib.sha256).digest()).decode()}
+    assert webhook({**h, "webhook-signature": "v1,bad"}, ev)[0] == 401
+    assert webhook(h, ev) == (200, "answered") and webhook(h, ev) == (200, "duplicate") and len(got["messages"]) == 2
     img = os.path.join(os.path.dirname(__file__), "..", "cache", "selftest.jpg")
     open(img, "wb").write(b"\xff\xd8\xff\xe0" + os.urandom(64) + b"\xff\xd9")
     p.send_image("pho_spc_1", "pho_usr_line", img)
     os.remove(img)
     assert got["attachments"][0]["contentType"] == "image/jpeg" and got["messages"][-1]["content"] == {"type": "attachment", "attachmentId": "pho_att_1"}
-    assert key_for("sim-crew-handle") in sms.LOG and "sim-crew-handle" not in json.dumps(sms.LOG)
+    assert "sms:" + key_for("sim-crew-handle") in store._ev and "sim-crew-handle" not in json.dumps(store._ev)
     srv.shutdown()
     print("photon bridge selftest ok: poll, paging, dedupe, group skip, reply route, typing, multipart upload")
 

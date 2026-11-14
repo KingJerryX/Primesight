@@ -8,20 +8,23 @@ handle(phone, text, send) decides what the text is and calls send(msg) for each 
 - START / HELP                          -> how to use it
 Safety: every failure still answers with something the crew can act on.
 """
-import json, re, threading, time, uuid
-from . import server
+import json, os, re, threading, time, uuid
+from . import server, store
 
 HELP = ("PRIMESIGHT: text a dispatch, e.g. 'Smoke on 30th floor, 1000 Louisiana St'. "
         "Reply with questions about that building, or 'NOTE <what you found>' to update it for the next crew.")
-THREADS = {}  # phone -> {"run_id", "pid", "call"}
-LOG = {}      # phone -> [{"n", "from", "text"|image fields, "t"}], for the simulator page
+# In store (memory on a laptop, Supabase when deployed): "thread:<phone>" -> {"run_id", "pid", "call"};
+# stream "sms:<phone>" -> [{"n", "from", "text"|image fields, "t"}] for the simulator page.
 _lock = threading.Lock()
 
 
 def log(phone, who, msg):
-    with _lock:
-        msgs = LOG.setdefault(phone, [])
-        msgs.append({"n": len(msgs), "from": who, "t": round(time.time(), 2), **msg})
+    with _lock:  # ponytail: n is counted per instance; two instances writing one phone at once could repeat an n
+        store.append("sms:" + phone, {"n": len(store.read("sms:" + phone)), "from": who, "t": round(time.time(), 2), **msg})
+
+
+def messages(phone, after=0):
+    return store.read("sms:" + phone, after)
 
 
 def looks_like_dispatch(text):
@@ -29,9 +32,9 @@ def looks_like_dispatch(text):
     return bool(re.search(r"\d+\s+\w+", text)) and json.loads(find_building(text))
 
 
-def handle(phone, text, send):
+def handle(phone, text, send, passcode=None):
     t = " ".join(text.split())
-    th = THREADS.get(phone)
+    th = store.get("thread:" + phone)
     try:
         if t.upper() in ("START", "HELP", "?", "HI", "HELLO"):
             return send({"type": "text", "text": HELP})
@@ -43,28 +46,33 @@ def handle(phone, text, send):
         if hits:
             send({"type": "text", "text": f"PRIMESIGHT: got it. Building the briefing for {hits[0]['address']} (about 30-60 s)."})
             run_id = uuid.uuid4().hex[:12]
-            out = server.brief_or_replay(t, run_id)
-            THREADS[phone] = {"run_id": run_id, "pid": out.get("property_id"), "call": t}
+            out = server.brief_or_replay(t, run_id, passcode=passcode)
+            store.put("thread:" + phone, {"run_id": run_id, "pid": out.get("property_id"), "call": t})
             send({"type": "text", "text": out["briefing"], "run_id": run_id})
             for path, url, cap in zip(out.get("images") or [], out.get("image_urls") or [], ("Floorplan", "Aerial")):
                 send({"type": "image", "path": path, "url": url, "caption": f"{cap}: {out.get('property_id')}"})
             return
         if th:
-            return send({"type": "text", "text": server.ask_or_replay(th["run_id"], th["call"], t)})
+            return send({"type": "text", "text": server.ask_or_replay(th["run_id"], th["call"], t, passcode)})
         send({"type": "text", "text": "PRIMESIGHT: no address found, and no briefing open on this phone. " + HELP[len("PRIMESIGHT: "):]})
     except Exception as e:  # the crew still gets an answer they can act on
         send({"type": "text", "text": f"PRIMESIGHT: briefing failed ({type(e).__name__}). Proceed on standard procedure."})
 
 
-def simulate(phone, text):
-    """Phone simulator: log the crew's text, answer in the background so the page can poll."""
+def simulate(phone, text, passcode=None):
+    """Phone simulator: log the crew's text, answer in the background so the page can poll.
+    On Vercel there is no background (the instance freezes after the response): answer inside the request instead."""
     log(phone, "crew", {"type": "text", "text": text})
-    threading.Thread(target=handle, args=(phone, text, lambda msg: log(phone, "primesight", msg)), daemon=True).start()
+    args = (phone, text, lambda msg: log(phone, "primesight", msg), passcode)
+    if os.environ.get("VERCEL"):
+        return handle(*args)
+    threading.Thread(target=handle, args=args, daemon=True).start()
 
 
 if __name__ == "__main__":
     import os
     os.environ["ANTHROPIC_API_KEY"] = ""  # self-check runs the free draft path (empty, so load_dotenv won't refill it)
+    store.remote = False  # never write test rows into the deployed Supabase, even with its keys in .env
     out = []
     handle("+15550000000", "help", out.append)
     assert out[-1]["text"] == HELP

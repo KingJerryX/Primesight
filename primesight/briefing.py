@@ -1,10 +1,10 @@
 """Gather all three layers for a building + floor, and write the one-screen briefing for an incident type."""
 import json, os
 from concurrent.futures import ThreadPoolExecutor
-from . import costar, matterport, outside
+from . import costar, matterport, outside, paths
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, "output")  # floor plans and aerials sent with briefings
+OUT = os.path.join(paths.DATA, "output")  # floor plans and aerials sent with briefings
 INCIDENTS = ("fire", "medical", "hazmat", "rescue", "security", "utility")  # categories in agentfs/incidents.json
 last = {}  # pid -> latest gather() result, so the server can find the images the agent pulled
 
@@ -46,7 +46,7 @@ def gather(pid, floor):
         gaps.append("no 3D scan for this building")
 
     vision, frame = None, (scan or {}).pop("floorplan_frame", None)  # SAM 3 results, precomputed by vision.py
-    vpath = os.path.join(ROOT, "cache", "vision", f"{(scan or {}).get('id')}.json")
+    vpath = os.path.join(paths.DATA, "cache", "vision", f"{(scan or {}).get('id')}.json")
     if scan and os.path.exists(vpath):
         v = json.load(open(vpath, encoding="utf-8"))
         from .vision import SIGNS, locate
