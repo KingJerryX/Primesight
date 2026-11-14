@@ -28,6 +28,17 @@
   .dots button { background: none; border-radius: 0; color: #fff; opacity: .45; padding: 8px 10px; font: inherit; letter-spacing: inherit; }
   .dots button[aria-selected="true"] { opacity: 1; box-shadow: 0 1px 0 #fff; }
   .target { display: none; }  /* no ring on the hero: the raised building is the mark */
+  /* Each scene casts its own colour over the map, so the three slides read apart at a glance: red for first responder, none for home, green for the game. */
+  /* The cast is a filter on the map's canvas only, so the call cards, hydrant dots and panels on top keep their own colours. */
+  #heromap canvas { transition: filter 1.2s var(--ease); }
+  .hero[data-scene="0"] #heromap canvas { filter: sepia(.75) saturate(2.8) hue-rotate(-24deg) brightness(.95); }
+  .hero[data-scene="2"] #heromap canvas { filter: sepia(.6) saturate(1.7) hue-rotate(95deg); }
+  /* First responder scene: a feed of the calls as they arrive, top left. */
+  #feed { position: absolute; z-index: 2; left: clamp(16px, 4vw, 56px); top: 104px; display: grid; gap: 10px; width: min(320px, 44vw); padding: 16px 18px; background: #050506d9; border: 1px solid var(--accent); }
+  #feed b { font-weight: 400; color: var(--accent); display: flex; align-items: center; gap: 9px; }
+  #feed b::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: beat 1.4s infinite; }
+  #feed span { display: grid; gap: 2px; padding-top: 10px; border-top: 1px solid var(--rule); color: #fff; font: 400 15px var(--grot); letter-spacing: 0; text-transform: none; animation: rise .5s var(--ease) both; }
+  #feed em { font: 400 10px var(--code); letter-spacing: .07em; text-transform: uppercase; font-style: normal; color: var(--dim); }
   /* First responder scene: each call is a card standing on its building, with a beating dot at the foot. */
   .call { padding-bottom: 32px; animation: rise .5s var(--ease) both; }
   .call div { display: grid; gap: 3px; padding: 9px 12px 10px; background: #050506e6; border: 1px solid var(--accent); color: #fff; white-space: nowrap; }
@@ -70,27 +81,58 @@
   @keyframes blink { 50% { opacity: 0; } }
   /* The three sections under the hero read as three panels: a rule between them and a different ground for each. */
   .mission, .layers, .why { border-top: 1px solid var(--rule); }
-  .layers { background: #0c1016; }
   .why { background: repeating-linear-gradient(90deg, #ffffff08 0 1px, #0000 1px 96px); }
-  .head { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 56px; }
+  .head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 56px; }
+  .head .addr { color: var(--accent); }
   h2 { font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; }
-  .layers { padding-left: 0; padding-right: 0; } .layers .head { padding: 0 clamp(16px, 4vw, 56px); }
-  .strip { overflow: hidden; }
-  .track { display: flex; gap: 28px; width: max-content; animation: drift 60s linear infinite; }
-  .strip:hover .track { animation-play-state: paused; }
-  @keyframes drift { to { transform: translateX(-50%); } }
-  figure { margin: 0; width: clamp(240px, 26vw, 380px); }
-  figure img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: var(--panel); filter: saturate(.75); }
+  /* Three views of one address: the same building three ways, each one moving. All three are live from the server. */
+  .views { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 36px); }
+  figure { margin: 0; }
+  .vis { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #090b0e; border: 1px solid var(--rule); }
   figcaption { margin-top: 18px; font-size: clamp(19px, 1.8vw, 26px); letter-spacing: -.01em; }
   figcaption span { display: block; margin-top: 4px; color: var(--dim); }
+  /* Inside: the scanned floor, tilted and turning, with each located sign lit (the same view the first responder page shows). */
+  #v-scan { display: grid; place-items: center; perspective: 900px; }
+  #plate { position: relative; width: 62%; transform-style: preserve-3d; transform: rotateX(55deg); animation: turn 60s linear infinite; }
+  @keyframes turn { from { transform: rotateX(55deg) rotateZ(0deg); } to { transform: rotateX(55deg) rotateZ(360deg); } }
+  #plate .img { position: absolute; inset: 0; background: center / 100% 100% no-repeat; filter: saturate(.5) brightness(.85) contrast(1.15); outline: 1px solid #ffffff2e; }
+  .pin { position: absolute; width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 4px color-mix(in srgb, var(--c) 28%, #0000), 0 0 16px var(--c); transform-style: preserve-3d; }
+  .pin::before, .pin::after { content: ""; position: absolute; left: 4px; bottom: 5px; width: 2px; height: 56px; background: linear-gradient(to top, var(--c), #0000); transform-origin: bottom; transform: rotateX(-90deg); }
+  .pin::after { transform: rotateX(-90deg) rotateY(90deg); }
+  .pin.exit { --c: var(--ok); } .pin.alarm { --c: var(--accent); }
+  /* Outside: the Vexcel photos, one direction after another. */
+  #air { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .6s var(--ease); }
+  #air.swap, #air:not([src]) { opacity: 0; }
+  #airname { position: absolute; left: 12px; bottom: 12px; padding: 5px 9px; font-weight: 400; background: #050506cc; }
+  #airname:empty { display: none; }
+  /* On record: the building as a stack of floors. Floors with tenants light up from the ground; the scanned floor is green. */
+  #v-rec { display: grid; grid-template-columns: 22% 1fr; gap: 8%; padding: 7%; }
+  #stack { display: flex; flex-direction: column-reverse; gap: 2px; }
+  #stack i { flex: 1; background: #ffffff12; transition: background .35s var(--ease); }
+  #stack i.on { background: var(--accent); } #stack i.on.scan { background: var(--ok); }
+  #facts { margin: 0; display: grid; align-content: end; gap: 14px; }
+  #facts dt { color: var(--dim); font: 400 10px var(--code); letter-spacing: .07em; text-transform: uppercase; }
+  #facts dd { margin: 2px 0 0; font-size: clamp(20px, 2.2vw, 32px); line-height: 1; letter-spacing: -.01em; }
+  /* Known before the door: a text conversation that plays through, the way it lands on the crew's phone. */
+  .phone { justify-self: center; display: flex; flex-direction: column; width: min(100%, 380px); height: min(640px, 76vh); background: #000; border: 1px solid #ffffff38; border-radius: 36px; overflow: hidden; }
+  .phone-top { display: grid; justify-items: center; gap: 3px; padding: 20px 16px 13px; border-bottom: 1px solid #ffffff1c; }
+  .phone-top b { font-weight: 500; } .phone-top span { font-size: 10px; color: var(--dim); }
+  #thread { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; padding: 16px 14px 22px; overflow: hidden; }
+  .msg { flex: none; max-width: 86%; padding: 9px 13px; border-radius: 18px; font-size: 14px; line-height: 1.38; white-space: pre-line; animation: pop .35s var(--ease) both; }
+  .msg.me { align-self: flex-end; background: #2b8cff; border-bottom-right-radius: 6px; }
+  .msg.it { align-self: flex-start; background: #26282c; border-bottom-left-radius: 6px; }
+  .msg.dots { display: flex; gap: 5px; padding: 14px 15px; }
+  .msg.dots i { width: 7px; height: 7px; border-radius: 50%; background: #9aa0a6; animation: think 1s infinite; }
+  .msg.dots i:nth-child(2) { animation-delay: .15s; } .msg.dots i:nth-child(3) { animation-delay: .3s; }
+  @keyframes pop { from { opacity: 0; translate: 0 10px; scale: .96; } }
+  @keyframes think { 30% { opacity: .3; translate: 0 -3px; } }
 
   .why { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
   .why p { color: #ffffffc7; max-width: 30em; margin: 24px 0 36px; }
-  .why img { width: 100%; display: block; border: 1px solid var(--rule); }
 
   .credit { padding: 0 clamp(16px, 4vw, 56px) 40px; font-size: 11px; color: #5d6873; }
-  @media (max-width: 760px) { .why { grid-template-columns: 1fr; } }
-  @media (prefers-reduced-motion: reduce) { .slide { transition: none; } .track, #mission .typed::after { animation: none; } .strip { overflow-x: auto; } }
+  @media (max-width: 760px) { .why, .views { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { .slide, #air, #stack i, #heromap canvas { transition: none; } #plate, #mission .typed::after, .msg, .msg.dots i { animation: none; } }
 </style>
 </head>
 <body>
@@ -100,9 +142,10 @@
   <div id="heromap"></div>
   <!-- Same order as the navbar: first responder on the left, home in the middle (where the hero starts), game on the right. -->
   <div class="slide"><h1>First responder</h1><p>Choose the building, the floor and the emergency. The crew gets one text.</p><a class="btn" href="dispatch-judge.html">Open first responder</a></div>
-  <div class="slide on"><h1>Primesight</h1><p>A briefing on the building, sent before the crew arrives.</p><a class="btn" href="dispatch-judge.html">First responder mode</a></div>
+  <div class="slide on"><h1>Primesight</h1><p>A briefing on the building, sent before the crew arrives.</p></div>
   <div class="slide"><h1>Game</h1><p>Take an emergency call. Report the hydrant, the exits and the elevators before the clock runs out.</p><a class="btn" href="game.html">Play the game</a></div>
   <div class="dots caps" role="tablist" aria-label="Slides"><button role="tab">1</button><button role="tab">2</button><button role="tab">3</button></div>
+  <div id="feed" class="caps" aria-hidden="true" hidden><b>Incoming calls</b></div>
   <div id="hud" class="caps" aria-hidden="true" hidden><b id="clock">00.0</b><span>Hydrant</span><span>Exits</span><span>Elevators</span></div>
   <div id="cursor" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="1.3"><path d="M6 2.5 11.5 8 6 13.5"/></svg></div>
 </section>
@@ -110,8 +153,12 @@
 <section class="mission"><p id="mission">Our mission is to tell every crew what is inside the building before they reach the door.</p></section>
 
 <section class="layers">
-  <div class="head"><h2>Three views of one address</h2></div>
-  <div class="strip"><div class="track" id="track"></div></div>
+  <div class="head"><h2>Three views of one address</h2><span class="caps addr">808 Travis St, Houston</span></div>
+  <div class="views">
+    <figure><div class="vis" id="v-scan"><div id="plate"></div></div><figcaption>Inside<span class="caps">Matterport scan, exits found by SAM 3</span></figcaption></figure>
+    <figure><div class="vis"><img id="air" alt=""><b class="caps" id="airname"></b></div><figcaption>Outside<span class="caps">Vexcel aerial photos</span></figcaption></figure>
+    <figure><div class="vis" id="v-rec"><div id="stack"></div><dl id="facts"></dl></div><figcaption>On record<span class="caps">CoStar building data</span></figcaption></figure>
+  </div>
 </section>
 
 <section class="why">
@@ -119,7 +166,10 @@
     <h2>Known before the door</h2>
     <p>A crew usually learns a building on arrival: which entrance, which stairs, who is on the floor. Primesight reads the 3D scans, aerial photos and tenant records for that address and sends the answer as one text while the truck is still moving. Where the data runs out, it says so.</p>
   </div>
-  <img src="/img/233953_wovF4kpoaw4_plan_marked.jpg" alt="Floor plan of a scanned office floor with four exit signs and an alarm pull station marked" loading="lazy">
+  <div class="phone" role="img" aria-label="A crew texts a cardiac arrest on the 36th floor of 1000 Louisiana St. Primesight replies with the building, the freight elevator, the exit signs on that floor and what it does not know.">
+    <div class="phone-top"><b>Primesight</b><span class="caps">From a recorded run, shortened</span></div>
+    <div id="thread" aria-hidden="true"></div>
+  </div>
 </section>
 
 <footer class="credit">Imagery: Esri, Maxar. Map data: OpenStreetMap, OpenFreeMap. Aerial photos: Vexcel. 3D scans: Matterport. Building records: CoStar.</footer>
@@ -130,13 +180,15 @@
 // Hero: one live map, three scenes. All of it is downtown Houston, a few blocks apart, so the camera pans over tiles it has.
 const TOWER = { lat: 29.7584604, lon: -95.3682126, stories: 71 };  // 1000 Louisiana St
 const TRAVIS = { lat: 29.7588018, lon: -95.3650891, stories: 27 };  // 808 Travis St
-// Example calls for the first responder scene: emergency types from the catalog, at real buildings in the data.
+// Example calls for the first responder scene: emergency types from the catalog, at real buildings in the data, each on a
+// floor that has a scan. All four are within a few blocks, so every card stays on screen as the view turns.
 const CALLS = [
   [TOWER, "Cardiac arrest", "1000 Louisiana St, floor 36"],
   [TRAVIS, "Smoke investigation", "808 Travis St, floor 5"],
-  [{ lat: 29.7607687, lon: -95.366467 }, "Natural gas odor", "700 Louisiana St, floor 12"],
-  [{ lat: 29.7547798, lon: -95.3698082 }, "Fall / injury", "1415 Louisiana St, floor 20"],
+  [{ lat: 29.7607687, lon: -95.366467 }, "Natural gas odor", "700 Louisiana St, floor 39"],
+  [{ lat: 29.7547798, lon: -95.3698082 }, "Fall / injury", "1415 Louisiana St, floor 23"],
 ];
+const NO_PAD = { top: 0, bottom: 0, left: 0, right: 0 };
 const { map, fly, highlight } = makeMap("heromap", { interactive: false, center: [TOWER.lon, TOWER.lat], zoom: 15.8, pitch: 62 });  // start at the home scene
 let undo = [];  // what the current scene put on the map, so the next one starts clean
 const later = (fn, ms) => { const t = setTimeout(fn, REDUCED ? 0 : ms); undo.push(() => clearTimeout(t)); };
@@ -147,17 +199,23 @@ function pin(b, cls, html = "") {
   return el;
 }
 const SCENES = [
-  // First responder: the same view of downtown as home, and calls come in on one building after another.
-  // Home and this scene share a camera, so going between them the map just keeps circling: no jump, only the calls change.
-  from => {
-    if (from !== 1) fly(TOWER);
-    CALLS.forEach(([b, what, where], k) => later(() => { highlight(b, true); pin(b, "call", `<div><b>${what}</b><span class="caps">${where}</span></div>`); }, (from === 1 ? 900 : 3200) + k * 1900));
+  // First responder: a dispatcher's view. The camera swings half way round and pulls far back over the city, the hero
+  // takes a red cast, and calls come in across town, each logged in the feed as its building lights up.
+  () => {
+    fly(TOWER, { zoom: 15, pitch: 38, bearing: map.getBearing() + 160, padding: { ...NO_PAD, bottom: innerHeight * .38 } });  // the calls sit above the headline
+    const feed = document.getElementById("feed");
+    feed.hidden = false; feed.querySelectorAll("span").forEach(x => x.remove());
+    undo.push(() => feed.hidden = true);
+    CALLS.forEach(([b, what, where], k) => later(() => {
+      highlight(b, true); pin(b, "call", `<div><b>${what}</b><span class="caps">${where}</span></div>`);
+      feed.insertAdjacentHTML("beforeend", `<span>${what}<em>${where}</em></span>`);
+    }, 3600 + k * 1800));
   },
-  // Home: one building, circled.
-  from => from === 0 ? highlight(TOWER) : fly(TOWER),
+  // Home: one building, close, circled.
+  () => fly(TOWER, { padding: NO_PAD }),
   // Game: straight down on one building, its real hydrants dropping in, a clock running and the objectives ticking off.
   () => {
-    fly(TRAVIS, { zoom: 17.4, pitch: 0 });
+    fly(TRAVIS, { zoom: 17.4, pitch: 0, padding: NO_PAD });
     pin(TRAVIS, "sonar");
     const hud = document.getElementById("hud"), clock = document.getElementById("clock"), t0 = performance.now();
     hud.hidden = false; hud.className = "caps"; hud.querySelectorAll("span").forEach(x => x.className = "");
@@ -185,6 +243,7 @@ function show(k) {
   slides.forEach((el, n) => el.classList.toggle("on", n === at));
   dots.forEach((el, n) => el.setAttribute("aria-selected", n === at));
   undo.forEach(fn => fn()); undo = [];
+  document.querySelector(".hero").dataset.scene = at;  // each scene also gets its own cast over the map (see the CSS)
   SCENES[at](from);
   clearTimeout(timer);
   if (!REDUCED) timer = setTimeout(() => { if (!can(step)) step = -step; show(at + step); }, 14000);  // on its own it goes there and back
@@ -230,16 +289,67 @@ if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
   }
 }
 
-// The strip: real outputs for buildings in the data. Listed twice so the loop has no seam.
-const CARDS = [
-  ["/img/233899_aerial.jpg", "Aerial view", "Vexcel, top down"],
-  ["/img/248704_tsaz3uu9Nk9_plan_marked.jpg", "Floor plan, exits marked", "Matterport scan read by SAM 3"],
-  ["/aerial/233899/south.jpg", "Angled view", "Vexcel, looking south"],
-  ["/img/249810_FrsMPZwTsng_plan_marked.jpg", "Floor plan, exits marked", "Matterport scan read by SAM 3"],
-  ["/img/248192_aerial.jpg", "Aerial view", "Vexcel, top down"],
+// Three views of one address: 808 Travis St, Houston (CoStar property 233953, scanned on floor 5). All live from the server;
+// if a request fails its box simply stays empty.
+const PID = 233953, SCAN_FLOOR = 5, byId = id => document.getElementById(id);
+// Inside: the floor plan with the located signs, turning.
+fetch(`/floor/${PID}/${SCAN_FLOOR}`).then(r => r.ok ? r.json() : Promise.reject()).then(fv => {
+  byId("plate").style.aspectRatio = fv.aspect;
+  byId("plate").innerHTML = `<div class="img" style="background-image:url(${fv.image})"></div>` +
+    fv.points.map(p => `<i class="pin ${p.kind === "exit sign" ? "exit" : "alarm"}" style="left:${p.x * 100}%;top:${p.y * 100}%"></i>`).join("");
+}).catch(() => {});
+// Outside: the Vexcel photo from above, then from each side. Each one is loaded before it is swapped in.
+const AIR = [["top", "From above"], ["north", "Looking north"], ["east", "Looking east"], ["south", "Looking south"], ["west", "Looking west"]];
+let airAt = 0;
+function nextAir() {
+  const [view, name] = AIR[airAt++ % AIR.length], img = new Image();
+  img.onload = () => { byId("air").classList.add("swap"); setTimeout(() => { byId("air").src = img.src; byId("airname").textContent = name; byId("air").classList.remove("swap"); }, REDUCED ? 0 : 600); };
+  img.src = `/aerial/${PID}/${view}.jpg`;
+}
+nextAir();
+if (!REDUCED) setInterval(nextAir, 3600);
+// On record: one bar per storey. Floors with a tenant on record light up from the ground, the scanned floor in green; then it starts over.
+fetch("/buildings").then(r => r.json()).then(list => {
+  const b = list.find(x => x.pid === PID);
+  if (!b) return;
+  byId("stack").innerHTML = Array.from({ length: b.stories }, (_, k) => `<i data-f="${k + 1}"></i>`).join("");
+  byId("facts").innerHTML = [["Storeys", b.stories], ["Tenants on record", b.tenants], ["Floors with tenants", b.tenant_floors.length], ["3D scan", `Floor ${b.scan_floor}`]]
+    .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("");
+  const bars = [...byId("stack").children], lit = new Set(b.tenant_floors);
+  const light = k => { const f = k + 1; bars[k].classList.toggle("on", lit.has(f) || f === b.scan_floor); bars[k].classList.toggle("scan", f === b.scan_floor); };
+  if (REDUCED) return bars.forEach((_, k) => light(k));
+  let k = 0;
+  setInterval(() => { if (k < bars.length) light(k); else if (k === bars.length + 24) { bars.forEach(x => x.className = ""); k = -1; } k++; }, 110);
+}).catch(() => {});
+
+// Known before the door: a text conversation, taken from a recorded run (a cardiac arrest on floor 36 of 1000 Louisiana St)
+// and shortened. It plays when it scrolls into view and starts over a few seconds after the last message.
+const TEXTS = [
+  ["me", "Cardiac arrest on the 36th floor, 1000 Louisiana St, Houston."],
+  ["it", "PRIMESIGHT | MEDICAL | FLOOR 36\nWells Fargo Plaza | 71 stories | built 1983 | steel | sprinklers: yes"],
+  ["it", "ELEVATOR: freight car on record (fits stretcher), plus passenger cars\nINSIDE: 3D scan of floor 36. EXIT SIGNS seen at 11 of 18 scan points"],
+  ["it", "NOT KNOWN: AED location, stair locations, suite number"],
+  ["me", "Which elevator fits our stretcher and who meets us?"],
+  ["it", "ELEVATOR: freight car on record (fits stretcher). Where it is in the building is not known.\nMEETS YOU: the property manager. We texted them to meet the crew and bring the freight car to the lobby. They have not confirmed."],
 ];
-document.getElementById("track").innerHTML = [...CARDS, ...CARDS].map(([src, name, from], n) =>
-  `<figure ${n >= CARDS.length ? 'aria-hidden="true"' : ""}><img src="${src}" alt="" loading="lazy"><figcaption>${name}<span class="caps">${from}</span></figcaption></figure>`).join("");
+{
+  const thread = byId("thread"), say = (who, text) => { const el = document.createElement("div"); el.className = `msg ${who}`; el.textContent = text; thread.append(el); return el; };
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  async function play() {
+    for (;;) {
+      thread.textContent = "";
+      for (const [who, text] of TEXTS) {
+        if (who === "it") { const dots = say("it dots", ""); dots.innerHTML = "<i></i><i></i><i></i>"; await wait(1100); dots.remove(); }
+        else await wait(900);
+        say(who, text);
+        await wait(700);
+      }
+      await wait(6000);
+    }
+  }
+  if (REDUCED) TEXTS.forEach(([who, text]) => say(who, text));
+  else new IntersectionObserver((seen, io) => { if (seen[0].isIntersecting) { io.disconnect(); play(); } }, { threshold: .3 }).observe(thread);
+}
 </script>
 </body>
 </html>
