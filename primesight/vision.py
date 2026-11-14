@@ -48,9 +48,16 @@ def scan(proc, model, mid, floor):
     t0, sweeps = time.time(), []
     for i, s in enumerate(d["sweeps"]):
         found = []
-        for j, url in enumerate(s["faces"]):
-            img = Image.open(io.BytesIO(requests.get(url, timeout=60).content)).convert("RGB").resize((SIDE, SIDE))
+        for j in range(len(s["faces"])):
+            r = requests.get(d["sweeps"][i]["faces"][j], timeout=60)
+            if not r.headers.get("Content-Type", "").startswith("image"):  # signed URLs expire mid-scan on big models
+                d = matterport.detail(mid)
+                r = requests.get(d["sweeps"][i]["faces"][j], timeout=60)
+            img = Image.open(io.BytesIO(r.content)).convert("RGB").resize((SIDE, SIDE))
             hits = detect(proc, model, img)
+            for h in hits:
+                if h["label"] in SIGNS:
+                    h["color"] = colored(img, h["box"])  # on the clean image, before boxes are drawn
             if hits:
                 draw = ImageDraw.Draw(img)
                 for h in hits:
@@ -59,18 +66,70 @@ def scan(proc, model, mid, floor):
                 img.save(os.path.join(img_dir, f"{i:03}_{j}.jpg"), quality=85)
             found += [{**h, "face": j} for h in hits]
         sweeps.append({"id": s["id"], "index": i, "xy": s["xy"], "hits": found})
-    counts = {lab: sum(any(h["label"] == lab for h in s["hits"]) for s in sweeps) for lab in LABELS}
     out = {"model_id": mid, "name": d["name"], "floor": floor, "sweeps": sweeps,
-           "sweeps_with": counts, "seconds": round(time.time() - t0)}
+           "sweeps_with": counts(sweeps), "seconds": round(time.time() - t0)}
     json.dump(out, open(path, "w", encoding="utf-8"), indent=1)
     return out
 
 
+# Exit signs and pull stations are red or green. SAM 3 also boxes room plaques and switches as "exit sign" at 0.7+,
+# and those have no red or green inside the box, so a color check removes them.
+SIGNS = ("exit sign", "fire alarm pull station")
+MIN_COLOR = 0.1
+
+
+def colored(img, box, pad=0):
+    """Share of strongly red or green pixels inside the box (pad skips a drawn outline)."""
+    x0, y0, x1, y1 = max(0, box[0] + pad), max(0, box[1] + pad), box[2] - pad, box[3] - pad
+    if x1 <= x0 or y1 <= y0:  # box smaller than the outline: too small to judge, so not kept
+        return 0.0
+    c = img.crop((x0, y0, x1, y1)).convert("RGB")
+    raw = c.tobytes()
+    n = len(raw) // 3
+    if n == 0:
+        return 0.0
+    hit = 0
+    for k in range(0, len(raw), 3):
+        r, g, b = raw[k], raw[k + 1], raw[k + 2]
+        hit += (r > 140 and r > 1.6 * g and r > 1.6 * b) or (g > 120 and g > 1.4 * r and g > 1.2 * b)
+    return round(hit / n, 3)
+
+
+def kept(h):
+    return h["label"] not in SIGNS or h.get("color", 0) >= MIN_COLOR
+
+
+def counts(sweeps):
+    return {lab: sum(any(h["label"] == lab and kept(h) for h in s["hits"]) for s in sweeps) for lab in LABELS}
+
+
+def verify_saved():
+    """Add the color check to results saved before it existed, using the saved (boxed) images."""
+    for name in os.listdir(OUT):
+        if not name.endswith(".json"):
+            continue
+        p = os.path.join(OUT, name)
+        r = json.load(open(p, encoding="utf-8"))
+        for s in r["sweeps"]:
+            for h in s["hits"]:
+                if h["label"] in SIGNS and "color" not in h:
+                    img = Image.open(os.path.join(OUT, r["model_id"], f'{s["index"]:03}_{h["face"]}.jpg'))
+                    h["color"] = colored(img, h["box"], pad=5)  # the drawn outline is 4 px, inside the box
+        r["sweeps_with"] = counts(r["sweeps"])
+        json.dump(r, open(p, "w", encoding="utf-8"), indent=1)
+        print(r["model_id"], f'floor {r["floor"]}', r["sweeps_with"])
+
+
 if __name__ == "__main__":
-    pids = [int(a) for a in sys.argv[1:]] or [233899]
+    assert colored(Image.new("RGB", (40, 20), (200, 30, 30)), [0, 0, 40, 20]) == 1.0
+    assert colored(Image.new("RGB", (40, 20), (40, 40, 40)), [0, 0, 40, 20]) == 0.0
+    if sys.argv[1:] == ["--verify"]:
+        sys.exit(verify_saved())
+    args = sys.argv[1:] or ["233899"]  # property ids, or Matterport model ids to jump the queue
     proc, model = load()
-    for pid in pids:
-        mids = costar.property_ids_with_scans().get(pid, [])
+    for a in args:
+        pid = int(a) if a.isdigit() else "-"
+        mids = costar.property_ids_with_scans().get(pid, []) if a.isdigit() else [a]
         for m in matterport.models(mids):
             try:
                 r = scan(proc, model, m["id"], m["floor"])

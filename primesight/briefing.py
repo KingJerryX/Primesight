@@ -44,9 +44,15 @@ def gather(pid, floor):
     else:
         gaps.append("no 3D scan for this building")
 
+    vision = None  # SAM 3 results, precomputed on the GPU by vision.py (cache/vision/<scan id>.json)
+    vpath = os.path.join(ROOT, "cache", "vision", f"{(scan or {}).get('id')}.json")
+    if scan and os.path.exists(vpath):
+        v = json.load(open(vpath, encoding="utf-8"))
+        vision = {"scan_points": len(v["sweeps"]), "scan_points_with": v["sweeps_with"]}
+
     last[pid] = {"building": b, "floor": floor, "hydrants": f_hyd.result() or [], "roof": f_roof.result() or {},
             "staging": f_stage.result() or [], "aerial": f_ortho.result(), "scans": scans, "scan": scan,
-            "scan_exact": exact, "floorplan": plan_img, "gaps": gaps}
+            "scan_exact": exact, "floorplan": plan_img, "vision": vision, "gaps": gaps}
     return last[pid]
 
 
@@ -111,6 +117,12 @@ def compose(f, incident):
     if s:
         L.append(("INSIDE: 3D scan of this floor" if f["scan_exact"] else f"INSIDE: no scan of {fl}; nearest is floor {s['floor']} (same core, layout may differ)")
                  + f"  |  {len(s['sweeps'])} scan points  |  {s['link']}")
+    v = f.get("vision")
+    if v:
+        w = v["scan_points_with"]
+        L.append(f"EXIT SIGNS seen at {w['exit sign']} of {v['scan_points']} scan points"
+                 + (f", pull stations at {w['fire alarm pull station']}" if w["fire alarm pull station"] else "")
+                 + ("" if f["scan_exact"] else f" (floor {s['floor']} scan)"))
     pm = next((c for c in b["contacts"] if c["role"] == "Property manager"), None)
     if pm:
         L.append(f"PROPERTY MGR: {pm['company']} {pm['phone']}")

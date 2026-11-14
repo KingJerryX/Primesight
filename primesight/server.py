@@ -4,6 +4,9 @@ python -m primesight.server            # http://localhost:8787
 POST /brief     {"text", "thread"?}   -> {"briefing", "images", "property_id", "run_id"}
 POST /feedback  {"property_id", "text"} -> {"ok": true}
 GET  /trace/<run_id>                  -> JSON lines, one per step
+GET  /run/<run_id>                    -> facts for the projector: floors, hydrants, staging, scan, SAM 3 counts
+GET  /img/<name>                      -> floorplan, aerial and SAM 3 images (URLs from image_urls and /run)
+PRIMESIGHT_REPLAY=1                   -> recorded calls answer instantly (see brief_or_replay)
 """
 import hashlib, json, os, re, uuid
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -44,10 +47,44 @@ def brief(text, run_id):
         text_out = briefing.compose(f, incident)
     images = [p for p in ((f or {}).get("floorplan_marked") or (f or {}).get("floorplan"), (f or {}).get("aerial")) if p]
     trace.log(run_id, "done", f"{len(text_out.splitlines())} lines, {len(images)} images")
-    return {"briefing": text_out, "images": images, "property_id": pid}
+    return {"briefing": text_out, "images": images, "image_urls": [img_url(p) for p in images], "property_id": pid,
+            "_facts": facts(f, incident) if f else None}
+
+
+VISION = os.path.join(briefing.ROOT, "cache", "vision")
+
+
+def img_url(path):
+    """Local image path -> URL under /img/ (output/<name>.jpg or cache/vision/<scan>/<name>.jpg)."""
+    rel = os.path.relpath(path, VISION) if path.startswith(VISION) else os.path.basename(path)
+    return "/img/" + ("vision/" + rel.replace(os.sep, "/") if path.startswith(VISION) else rel)
+
+
+def facts(f, incident):
+    """Structured facts for the projector page: the building floor by floor, outside points, scan and SAM 3 results."""
+    b, fl, scan = f["building"], f["floor"], f.get("scan") or {}
+    scanned = {s["floor"] for s in f.get("scans") or [] if s["floor"] is not None}
+    on = {}
+    for t in b["tenants"]:
+        on.setdefault(t["floor"], set()).add(t["name"])
+    vis, vpath = None, os.path.join(VISION, f"{scan.get('id')}.json")
+    if scan and os.path.exists(vpath):
+        v = json.load(open(vpath, encoding="utf-8"))
+        imgs = sorted(os.listdir(os.path.join(VISION, scan["id"])))[:12]
+        vis = {"scan_points": len(v["sweeps"]), "scan_points_with": v["sweeps_with"],
+               "image_urls": [f"/img/vision/{scan['id']}/{n}" for n in imgs]}
+    return {"incident": incident, "floor": fl,
+            "building": {k: b[k] for k in ("name", "address", "stories", "year_built", "construction", "sprinklers")},
+            "floors": [{"floor": n, "people": briefing._people(b["tenants"], {n}), "tenants": sorted(on.get(n, ())),
+                        "scanned": n in scanned} for n in range(1, (b["stories"] or 0) + 1)],
+            "hydrants": [{"m": m, "dir": d, "lat": la, "lon": lo} for m, d, la, lo in f["hydrants"][:5]],
+            "staging": [{"m": m, "dir": d, "lat": la, "lon": lo, "score": s} for s, m, d, la, lo in f["staging"][:3]],
+            "scan": {"floor": scan.get("floor"), "exact": f["scan_exact"], "link": scan.get("link")},
+            "vision": vis}
 
 
 DEMO = os.path.join(briefing.ROOT, "cache", "demo")  # recorded runs, keyed by call text
+RUNS = {}  # run_id -> facts, for GET /run/<run_id>
 
 
 def brief_or_replay(text, run_id):
@@ -56,12 +93,20 @@ def brief_or_replay(text, run_id):
     path = os.path.join(DEMO, hashlib.sha1(" ".join(text.lower().split()).encode()).hexdigest()[:16] + ".json")
     if os.environ.get("PRIMESIGHT_REPLAY") and os.path.exists(path):
         rec = json.load(open(path, encoding="utf-8"))
+        if rec["out"].get("_facts") is None:  # recorded before /run existed: rebuild facts once (~3 s, no LLM)
+            floor, incident = parse_call(text)
+            rec["out"]["_facts"] = facts(briefing.gather(rec["out"]["property_id"], floor), incident)
+            json.dump(rec, open(path, "w", encoding="utf-8"), indent=1)
         trace.write(run_id, rec["trace"])
-        return {**rec["out"], "replayed": True}
-    out = brief(text, run_id)
-    if out["property_id"]:
-        os.makedirs(DEMO, exist_ok=True)
-        json.dump({"text": text, "out": out, "trace": trace.read(run_id)}, open(path, "w", encoding="utf-8"), indent=1)
+        out = {**rec["out"], "replayed": True}
+    else:
+        out = brief(text, run_id)
+        if out["property_id"]:
+            os.makedirs(DEMO, exist_ok=True)
+            json.dump({"text": text, "out": out, "trace": trace.read(run_id)}, open(path, "w", encoding="utf-8"), indent=1)
+    RUNS[run_id] = out.pop("_facts", None)
+    if RUNS[run_id] and "image_urls" not in out:
+        out["image_urls"] = [img_url(p) for p in out["images"]]
     return out
 
 
@@ -116,6 +161,15 @@ class H(BaseHTTPRequestHandler):
         m = re.fullmatch(r"/trace/([0-9a-f]{12})", self.path)
         if m:
             return self._send(200, trace.read(m.group(1)).encode(), "application/x-ndjson")
+        m = re.fullmatch(r"/run/([0-9a-f]{12})", self.path)
+        if m:
+            f = RUNS.get(m.group(1))
+            return self._send(200, f) if f else self._send(404, {"error": "unknown run (server restarted?)"})
+        m = re.fullmatch(r"/img/(vision/\w+/\d{3}_\d\.jpg|[\w-]+\.jpg)", self.path)  # strict: no path traversal
+        if m:
+            p = os.path.join(VISION, *m.group(1).split("/")[1:]) if m.group(1).startswith("vision/") \
+                else os.path.join(briefing.OUT, m.group(1))
+            return self._send(200, open(p, "rb").read(), "image/jpeg") if os.path.exists(p) else self._send(404, {"error": "no image"})
         if self.path == "/health":
             return self._send(200, {"ok": True, "agent": bool(os.environ.get("ANTHROPIC_API_KEY"))})
         self._send(404, {"error": "not found"})

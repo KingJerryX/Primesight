@@ -45,6 +45,7 @@ def gather_building(property_id: int, floor: int, incident: str) -> str:
                                   if t["floor"] and abs(t["floor"] - floor) <= 3 and t["floor"] != floor],
         "hydrants": f["hydrants"][:3], "staging": f["staging"][:2], "roof": f["roof"],
         "scan": {"exact_floor": f["scan_exact"], "floor": (f["scan"] or {}).get("floor"), "link": (f["scan"] or {}).get("link")},
+        "vision": f["vision"],  # SAM 3 counts from the scan's panoramas (exit signs, pull stations), if precomputed
         "images": [p for p in (f["floorplan"], f["aerial"]) if p],
         "gaps": f["gaps"],
     }, default=str)
