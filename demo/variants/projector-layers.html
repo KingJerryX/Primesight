@@ -48,7 +48,8 @@ projector({
     if (d.step === "gather_building") { ["costar", "matterport", "vexcel"].forEach(c => add(c, `<b>Pulled</b> <span>at ${d.t.toFixed(1)} s</span>`)); }
     if (d.step.endsWith("outside_now")) add("vexcel", `<b>Live wind + hydrants within 300 m</b> <span>Open-Meteo, city GIS</span>`);
     if (d.step.endsWith("walk_to")) add("matterport", `<b>Walked the scan graph</b> <span>${esc(stepLabel(d)[1])}</span>`);
-    if (d.step.endsWith("queue_text")) { const x = JSON.parse(d.detail || "{}"); add("notes", `<b>Text queued for ${esc(x.to)}</b> <span>${esc((x.text || "").slice(0, 120))}</span>`); }
+    if (d.step.endsWith("queue_text")) { const f = k => ((d.detail || "").match(new RegExp(`"${k}": "((?:[^"\\\\]|\\\\.)*)`)) || [])[1] || "", x = { to: f("to"), text: f("text") };  // trace cuts JSON at 200 chars
+      add("notes", `<b>Text queued for ${esc(x.to)}</b> <span>${esc((x.text || "").slice(0, 120))}</span>`); }
     if (d.step.endsWith("add_building_note")) add("notes", `<b>Note saved</b> <span>${esc(stepLabel(d)[1]).slice(0, 120)}</span>`);
     if (d.step.endsWith("read_file") && /\/buildings\//.test(d.detail)) add("notes", `<b>Read building notes</b> <span>${esc(stepLabel(d)[1])}</span>`);
     if (d.step === "done") { clearInterval(timer); $("clock").textContent = d.t.toFixed(1) + " s"; }
