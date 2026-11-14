@@ -58,7 +58,6 @@ projector({
     $("plan").innerHTML = plan ? `<img src="${API + plan}">` : '<span class="dim">No floor plan for this building.</span>';
     bubble(esc(f.briefing || ""));
     (f.image_urls || []).forEach(u => bubble(`<img src="${API + u}">`));
-    $("status").innerHTML += f.walk ? `<div class="dim" style="margin-top:4px">${esc(f.walk)}</div>` : "";
   },
 });
 </script>

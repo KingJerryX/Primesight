@@ -64,7 +64,6 @@ projector({
     }
     if (f.scan) add("matterport", `<b>3D scan of floor ${f.scan.floor ?? "?"}</b> <span>${f.scan.exact ? "same floor as the call" : "nearest scanned floor"}</span>`);
     if (f.vision) { const w = f.vision.scan_points_with || {}; add("matterport", `<b>SAM 3 over ${f.vision.scan_points} scan points</b> <span>${Object.entries(w).map(([k, v]) => `${k} ${v}`).join(" · ")}</span>`); }
-    if (f.walk) add("matterport", `<b>Walk</b> <span>${esc(f.walk)}</span>`);
     (f.image_urls || []).forEach(u => { if (/plan|floor/i.test(u)) $("matterport").querySelector(".body").insertAdjacentHTML("beforeend", `<img src="${API + u}">`); });
     (f.hydrants || []).slice(0, 3).forEach(h => add("vexcel", `<b>Hydrant</b> <span>${Math.round(h.m)} m ${esc(h.dir)}</span>`));
     (f.staging || []).slice(0, 2).forEach(s => add("vexcel", `<b>Open lot</b> <span>${Math.round(s.m)} m ${esc(s.dir)}</span>`));

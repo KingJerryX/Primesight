@@ -53,9 +53,6 @@ def gather(pid, floor):
         found = locate(v["sweeps"])  # sightings merged across scan points: one entry per physical sign
         vision = {"scan_points": len(v["sweeps"]), "scan_points_with": v["sweeps_with"],
                   "located": {lab: sum(g["label"] == lab for g in found) for lab in SIGNS}}
-        if exact and scan["sweeps"]:  # never carry a route over from another floor
-            from .vision import near_exit
-            vision["route"] = soft("walk route", matterport.route, scan["sweeps"], scan["sweeps"][0]["id"], near_exit(v["sweeps"]))
         if plan_img and frame:
             plan_img = soft("floorplan markup", mark_plan, plan_img, frame, v["sweeps"],
                             f"FLOOR {scan['floor']} - {b['name'] or b['address'].split(',')[0]}") or plan_img
@@ -125,19 +122,6 @@ def mark_plan(path, frame, sweeps, title=""):
     out = path.replace("_plan.jpg", "_plan_marked.jpg")
     im.save(out, quality=88)
     return out
-
-
-def walk_line(route):
-    """'from scan start: exit sign within ~4 m; far end ~38 m' (walk over the scan points, not a measured path).
-    The scan start is wherever the scanner began, often an office, so never call it the entry."""
-    e = route["exit"]
-    if e is None:
-        to_exit = "no exit sign located near a scan point"
-    elif e["m"] < 4:
-        to_exit = "exit sign within ~4 m"
-    else:
-        to_exit = f"exit sign ~{round(e['m'])} m (" + ", ".join((f"{t} " if t else "") + f"{round(m)} m" for m, t in e["legs"][:4]) + ")"
-    return f"walk from scan start: {to_exit}, far end ~{round(route['far']['m'])} m"
 
 
 SQFT_PER_PERSON = 100  # IBC business occupant load is 150 gross sqft/person; 100 leaves room for dense offices
@@ -256,8 +240,6 @@ if __name__ == "__main__":
     assert _people([{"name": "C", "floor": 1, "employees": 1505, "sqft": 4535}], {1}) == 45  # company-wide count capped
     assert _people([{"name": "D", "floor": 1, "employees": 20, "sqft": None}], {1}) == 20  # no size: kept as is
     assert plan_px((1, 2), {"origin": (-1, 0), "res": 100}, 500) == (200, 300)  # y flips: 2 m up = 200 px from bottom
-    assert walk_line({"exit": {"m": 23, "legs": [[4, ""], [3, "right"], [16, "left"]]}, "far": {"m": 38.4}}) == \
-        "walk from scan start: exit sign ~23 m (4 m, right 3 m, left 16 m), far end ~38 m"
     import sys
     pid, fl, inc = int(sys.argv[1]), int(sys.argv[2]), sys.argv[3]
     facts = gather(pid, fl)

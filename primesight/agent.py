@@ -73,9 +73,8 @@ def gather_building(property_id: int, floor: int, incident: str, incident_type: 
         "roof": {k: x for k, x in f["roof"].items() if k != "footprint.wkt"},  # the outline is drawn on the map, not read
         "scan": {"id": (f["scan"] or {}).get("id"), "exact_floor": f["scan_exact"], "floor": (f["scan"] or {}).get("floor"),
                  "link": (f["scan"] or {}).get("link")},
-        # SAM 3 counts from the scan's panoramas (exit signs, pull stations), if precomputed; the walk route is the
-        # WALK line in draft_briefing (its point lists would only cost tokens)
-        "vision": {k: x for k, x in (f["vision"] or {}).items() if k != "route"} or None,
+        # SAM 3 counts from the scan's panoramas: "located" = signs on the floor map, each counted once
+        "vision": f["vision"],
         "images": [p for p in (f["floorplan"], f["aerial"]) if p],
         "gaps": f["gaps"],
     }, default=str)
