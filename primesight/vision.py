@@ -111,10 +111,13 @@ def kept(h):
     return h["label"] not in SIGNS or h.get("color", 0) >= MIN_COLOR
 
 
-def metres(h, width=0.3):
+WIDTH = {"exit sign": 0.3, "fire alarm pull station": 0.13, "fire extinguisher": 0.18, "stairs": 1.0}  # metres, typical
+
+
+def metres(h, width=None):
     """Rough distance to a hit: a skybox face is a 90-degree pinhole view, so focal length = SIDE / 2 px.
-    ponytail: assumes a 0.3 m wide exit sign seen face-on; an angled sign reads farther (the safe side)."""
-    return width * (SIDE / 2) / max(h["box"][2] - h["box"][0], 1)
+    ponytail: assumes a typical object width (WIDTH) seen face-on; an angled one reads farther (the safe side)."""
+    return (width or WIDTH.get(h["label"], 0.3)) * (SIDE / 2) / max(h["box"][2] - h["box"][0], 1)
 
 
 def near_exit(sweeps, m=4):

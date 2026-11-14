@@ -6,7 +6,9 @@ What deepagents does here:
 - one virtual file system (CompositeBackend): /buildings/ crew notes and /scans/ SAM 3 results on disk,
   /playbook/ our rules, everything else per-run scratch; writes to all three are denied (permissions)
 - memory: /playbook/AGENTS.md is always in the prompt; skills: one playbook per incident type, read on demand
-- subagents: tenant-risk (structured flags), notify-writer (texts for building staff), run in parallel
+- subagents: tenant-risk (structured flags), notify-writer (texts for building staff), inside-scout (walks over the
+  scan-point graph to SAM 3 finds), run in parallel
+- /playbook/incidents.json: 26 incident types in 6 categories; gather_building returns what the type needs first
 - checkpointer: each run_id is a thread, so crew replies ("CREW: which elevator?") continue it
 - RubricMiddleware: a grader checks each answer against a rubric; on a fail the agent revises (max 2 rounds)
 """
@@ -45,14 +47,21 @@ def find_building(address: str) -> str:
     return json.dumps([{"property_id": pid, "address": a, "city": c} for pid, (_, a, c) in best])
 
 
-def gather_building(property_id: int, floor: int, incident: str) -> str:
+CATALOG = {t["id"]: t for t in json.load(open(os.path.join(PLAYBOOK, "incidents.json"), encoding="utf-8"))["types"]}
+
+
+def gather_building(property_id: int, floor: int, incident: str, incident_type: str = "") -> str:
     """Pull all three layers (CoStar building data, Matterport scan, Vexcel aerial + hydrants) for a building and floor.
-    incident is one of fire, medical, hazmat. Returns JSON with the facts, a draft briefing, image paths and known gaps."""
+    incident is the category: fire, medical, hazmat, rescue, security or utility. incident_type is the id from
+    /playbook/incidents.json (e.g. elevator_entrapment), if one fits. Returns JSON with the facts, a draft briefing,
+    what this incident type needs first, image paths and known gaps."""
     f = briefing.gather(property_id, floor)
-    draft = briefing.compose(f, incident)
+    ty = CATALOG.get(incident_type) or {}
+    draft = briefing.compose(f, incident if incident in briefing.INCIDENTS else ty.get("category", "medical"), ty.get("label"))
     b = f["building"]
     return json.dumps({
         "draft_briefing": draft,
+        "incident_needs": ty.get("needs"),  # what the crew needs first for this type, from the catalog
         "building": {k: b[k] for k in ("name", "address", "stories", "year_built", "construction", "sprinklers", "elevators", "contacts")},
         "tenants_on_floor": [t for t in b["tenants"] if t["floor"] == floor],
         "tenants_nearby_floors": [{"name": t["name"], "floor": t["floor"], "about": t["about"]} for t in b["tenants"]
@@ -66,6 +75,33 @@ def gather_building(property_id: int, floor: int, incident: str) -> str:
         "images": [p for p in (f["floorplan"], f["aerial"]) if p],
         "gaps": f["gaps"],
     }, default=str)
+
+
+@functools.lru_cache(maxsize=32)
+def _scan_graph(scan_id):
+    from . import matterport
+    return matterport.detail(scan_id)["sweeps"]  # one Matterport query per scan, then cached for the server's life
+
+
+def walk_to(scan_id: str, target: str) -> str:
+    """Walk over a scanned floor's scan points (Matterport) to the nearest point within ~4 m of a SAM 3 find.
+    target: 'exit sign', 'fire alarm pull station', 'fire extinguisher' or 'stairs'. Starts at the scan start
+    (where the scanner began, not necessarily the entry). Returns JSON {metres, legs, points_with_target} or why not."""
+    from . import matterport, vision
+    p = os.path.join(ROOT, "cache", "vision", f"{scan_id}.json")
+    if target not in vision.LABELS:
+        return json.dumps({"error": f"target must be one of {vision.LABELS}"})
+    if not os.path.exists(p):
+        return json.dumps({"error": "no SAM 3 results for this scan"})
+    v = json.load(open(p, encoding="utf-8"))
+    near = [s["id"] for s in v["sweeps"] if any(h["label"] == target and vision.kept(h) and vision.metres(h) <= 4 for h in s["hits"])]
+    seen = sum(any(h["label"] == target and vision.kept(h) for h in s["hits"]) for s in v["sweeps"])
+    sweeps = _scan_graph(scan_id)
+    r = matterport.route(sweeps, sweeps[0]["id"], near)
+    if not r or not r["exit"]:
+        return json.dumps({"target": target, "seen_from_points": seen, "near_points": 0, "result": "none seen up close"})
+    return json.dumps({"target": target, "seen_from_points": seen, "near_points": len(near), "metres": round(r["exit"]["m"]),
+                       "legs": [[round(m), t] for m, t in r["exit"]["legs"]], "far_end_metres": round(r["far"]["m"])})
 
 
 def add_building_note(property_id: int, note: str) -> str:
@@ -126,12 +162,30 @@ NOTIFY = {
     "tools": [queue_text],
 }
 
+INSIDE_SCOUT = {
+    "name": "inside-scout",
+    "description": "Answers where-is questions about the inside of one scanned floor from SAM 3 results: walk distance from "
+                   "the scan start to the nearest exit sign, pull station, extinguisher or stairs. Give it the scan id and "
+                   "what to find. Use it only when gather_building says the scan is of this exact floor and vision is not null.",
+    "system_prompt": "You answer questions about one scanned floor for a fire crew. Use walk_to once per thing asked "
+                     "(at most 3 calls). Report each as one short line: '<thing>: ~N m from scan start (legs)' or 'not seen up "
+                     "close'. Distances are walks over 3D-scan points from where the scanner began; never call that point the "
+                     "entry or the lobby. Stairs detections are unreliable: say so if you report them. Nothing else.",
+    "model": ChatAnthropic(model=MODEL, max_tokens=1200),
+    "tools": [walk_to],
+}
+
 SYSTEM = """You are Primesight. A dispatcher forwards a 911 call; you text the responding crew a building briefing before they arrive.
 
 Steps:
-1. Pull the address, floor and incident type (fire, medical or hazmat) from the call. Use find_building to get the property id.
-2. Read the skill for this incident type, and call gather_building. It returns a draft briefing and the raw facts.
-3. In parallel, delegate with the task tool: tenants on or near the floor to tenant-risk, and the contacts to notify-writer.
+1. Pull the address, floor and incident from the call. The category is one of fire, medical, hazmat, rescue, security,
+   utility; the type is an id from /playbook/incidents.json (e.g. elevator_entrapment, gas_leak, active_threat) if one fits.
+   Use find_building to get the property id.
+2. Read the skill for the category, and call gather_building with the category and type. It returns a draft briefing,
+   what this incident type needs first (incident_needs), and the raw facts.
+3. In parallel, delegate with the task tool: tenants on or near the floor to tenant-risk, the contacts to notify-writer,
+   and, only if the scan is of this exact floor and vision is not null, the scan id to inside-scout (fire and security:
+   pull station and exit sign; medical and rescue: exit sign; hazmat and utility: fire extinguisher).
 4. Read /buildings/<property_id>.md if it exists: crew notes from earlier incidents.
 5. Write the final briefing (rules in your memory and the skill), then save one line about this incident with add_building_note.
 
@@ -146,7 +200,7 @@ RUBRIC_BRIEF = """The final message is the crew briefing. Criteria:
 3. It has a NOT KNOWN line, and if the 3D scan is from a different floor it says so.
 4. It states facts, not orders: no tactical instructions such as where to search or which stair to use.
 5. Tenant risks inferred from a name only are marked possible or "from name only".
-6. The first line after the header is the most urgent fact for this incident type (fire: people above; medical: elevator or patient location; hazmat: tenant risk)."""
+6. The first line after the header is the most urgent fact for this incident type (fire: people above; medical: elevator or patient location; hazmat: tenant risk; rescue: elevators or keys; security: people on and near the floor; utility: sprinklers or elevators)."""
 
 RUBRIC_REPLY = """The final message answers a crew reply (the latest message starting "CREW:"). Criteria:
 1. At most 3 lines, plain ASCII.
@@ -172,7 +226,7 @@ def build():
         model=ChatAnthropic(model=MODEL, max_tokens=8000),
         tools=[find_building, gather_building, add_building_note],
         system_prompt=SYSTEM,
-        subagents=[TENANT_RISK, NOTIFY],
+        subagents=[TENANT_RISK, NOTIFY, INSIDE_SCOUT],
         skills=["/playbook/skills/"],
         memory=["/playbook/AGENTS.md"],
         permissions=READ_ONLY,

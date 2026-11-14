@@ -5,7 +5,7 @@ from . import costar, matterport, outside
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "output")  # gitignored: sponsor imagery
-INCIDENTS = ("fire", "medical", "hazmat")
+INCIDENTS = ("fire", "medical", "hazmat", "rescue", "security", "utility")  # categories in agentfs/incidents.json
 last = {}  # pid -> latest gather() result, so the server can find the images the agent pulled
 
 
@@ -127,13 +127,14 @@ def _people(tenants, floors):
     return total
 
 
-def compose(f, incident):
-    """Plain-text briefing for a phone screen. Every line is a fact from a named layer; unknowns are said out loud."""
+def compose(f, incident, label=None):
+    """Plain-text briefing for a phone screen. Every line is a fact from a named layer; unknowns are said out loud.
+    incident is a category (INCIDENTS); label is the incident type's name for the header ("Elevator entrapment")."""
     assert incident in INCIDENTS, incident
     b, fl = f["building"], f["floor"]
     on_floor = [t for t in b["tenants"] if t["floor"] == fl]
     elev = {e["type"] for e in b["elevators"]}
-    L = [f"PRIMESIGHT  |  {incident.upper()}  |  FLOOR {fl}",
+    L = [f"PRIMESIGHT  |  {(label or incident).upper()}  |  FLOOR {fl}",
          f"{b['name'] or ''} - {b['address']}".strip(" -"),
          f"{b['stories']} stories  |  built {b['year_built'] or '?'}  |  {b['construction'].lower()} frame  |  sprinklers: {b['sprinklers']}"]
 
@@ -158,6 +159,16 @@ def compose(f, incident):
     if incident == "hazmat":
         inds = sorted({t["industry"] for t in b["tenants"] if t["industry"] not in ("Unknown", "0")})
         L.append("TENANT INDUSTRIES: " + (", ".join(inds[:5]) or "not recorded"))
+    if incident in ("rescue", "utility"):
+        cars = ", ".join(f"{e['count'] or '?'} {e['type'].lower()}" for e in b["elevators"])
+        L.append(f"ELEVATORS: {cars or 'none on record'}  |  {b['stories']} stories")
+    if incident == "security":
+        near = _people(b["tenants"], set(range(fl - 2, fl + 3)) - {fl})
+        if near:
+            L.append(f"NEARBY: ~{near} people on floors {max(fl - 2, 1)}-{fl + 2} (excluding {fl})")
+    if incident == "utility" and fl > 1:
+        below = _people(b["tenants"], set(range(1, fl)))
+        L.append(f"BELOW: ~{below} people on floors 1-{fl - 1} (water runs down)  |  sprinklers: {b['sprinklers']}, type {b['sprinkler_type'].lower()}")
 
     # Outside
     if incident in ("fire", "hazmat") and f["hydrants"]:

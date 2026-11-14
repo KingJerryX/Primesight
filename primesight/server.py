@@ -16,14 +16,21 @@ from . import briefing, trace
 PORT = int(os.environ.get("PRIMESIGHT_PORT", 8787))
 
 
+CATALOG = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "agentfs", "incidents.json"),
+                         encoding="utf-8"))["types"]
+
+
+def classify(text):
+    """Incident type from the catalog: first type with a keyword in the text (specific types come first)."""
+    t = " ".join(text.lower().split()) + " "
+    return next((ty for ty in CATALOG if any(k in t for k in ty["keywords"])), CATALOG[-1])
+
+
 def parse_call(text):
-    """Cheap parse used when the agent can't run (no API key): floor, incident type."""
+    """Cheap parse used when the agent can't run (no API key): floor, incident category."""
     t = text.lower()
     m = re.search(r"(\d+)(?:st|nd|rd|th)?\s*(?:floor|fl\b)", t) or re.search(r"floor\s*(\d+)", t)
-    floor = int(m.group(1)) if m else 1
-    incident = ("fire" if re.search(r"fire|smoke|alarm|burn", t) else
-                "hazmat" if re.search(r"hazmat|chemical|gas leak|spill|fumes", t) else "medical")
-    return floor, incident
+    return (int(m.group(1)) if m else 1), classify(text)["category"]
 
 
 def brief(text, run_id):
@@ -46,7 +53,7 @@ def brief(text, run_id):
         trace.log(run_id, "mode", "no ANTHROPIC_API_KEY: sending the draft briefing")
         trace.log(run_id, "gather_building", f"floor {floor}, {incident}")
         f = briefing.gather(pid, floor)
-        text_out = briefing.compose(f, incident)
+        text_out = briefing.compose(f, incident, classify(text)["label"])
         extra = {"texts": [], "tenant_flags": []}
     images = [p for p in ((f or {}).get("floorplan"), (f or {}).get("aerial")) if p]
     trace.log(run_id, "done", f"{len(text_out.splitlines())} lines, {len(images)} images")
@@ -215,5 +222,7 @@ class H(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     assert parse_call("Cardiac arrest, 36th floor, 1000 Louisiana") == (36, "medical")
     assert parse_call("Smoke on floor 30") == (30, "fire")
+    assert classify("Man collapsed in the break room")["id"] == "unconscious" and classify("smoke alarm going off")["id"] == "fire_alarm"
+    assert parse_call("Two people stuck in elevator, 1000 Louisiana") == (1, "rescue") and classify("Shots fired, 12th floor")["category"] == "security"
     print(f"Primesight server on http://localhost:{PORT}  (agent: {'on' if os.environ.get('ANTHROPIC_API_KEY') else 'off, sending drafts'})")
     ThreadingHTTPServer(("127.0.0.1", PORT), H).serve_forever()

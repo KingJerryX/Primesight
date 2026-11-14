@@ -1,0 +1,457 @@
+{
+ "_about": "Incident types Primesight briefs on. category picks the skill (/playbook/skills/<category>/SKILL.md) and the draft's lead lines. keywords classify a dispatch text (first match wins, so specific types come first). needs = what the crew needs first; layers = where Primesight finds it (costar, matterport, sam3, vexcel, hydrants, notes). Order follows common US fire/EMS dispatch determinants (NFPA 1221 call types, EMD protocols), simplified.",
+ "types": [
+  {
+   "id": "active_threat",
+   "label": "Active threat / shooter",
+   "category": "security",
+   "keywords": [
+    "shooter",
+    "shots fired",
+    "gunman",
+    "active threat",
+    "armed",
+    "stabbing"
+   ],
+   "needs": "how many people on the floor and nearby, exits and walk distances, out-of-sight staging, who has building access",
+   "layers": [
+    "costar",
+    "matterport",
+    "sam3",
+    "vexcel",
+    "notes"
+   ]
+  },
+  {
+   "id": "bomb_threat",
+   "label": "Bomb threat / suspicious package",
+   "category": "security",
+   "keywords": [
+    "bomb",
+    "suspicious package",
+    "device"
+   ],
+   "needs": "building population for evacuation, staging distance, open lots away from glass",
+   "layers": [
+    "costar",
+    "vexcel",
+    "notes"
+   ]
+  },
+  {
+   "id": "person_in_crisis",
+   "label": "Person in crisis on roof or ledge",
+   "category": "security",
+   "keywords": [
+    "jumper",
+    "ledge",
+    "suicidal",
+    "crisis"
+   ],
+   "needs": "roof access and roof type, stories, open ground below for an air cushion",
+   "layers": [
+    "costar",
+    "vexcel",
+    "notes"
+   ]
+  },
+  {
+   "id": "explosion",
+   "label": "Explosion",
+   "category": "fire",
+   "keywords": [
+    "explosion",
+    "exploded",
+    "blast"
+   ],
+   "needs": "construction type, people above and on the floor, tenant chemicals, hydrants",
+   "layers": [
+    "costar",
+    "vexcel",
+    "hydrants",
+    "notes"
+   ]
+  },
+  {
+   "id": "gas_leak",
+   "label": "Natural gas odor / leak",
+   "category": "hazmat",
+   "keywords": [
+    "gas leak",
+    "gas odor",
+    "smell of gas",
+    "natural gas"
+   ],
+   "needs": "who is on the floor, tenant industries, utility shutoff unknown, staging upwind",
+   "layers": [
+    "costar",
+    "vexcel",
+    "notes"
+   ]
+  },
+  {
+   "id": "co_alarm",
+   "label": "Carbon monoxide alarm",
+   "category": "hazmat",
+   "keywords": [
+    "carbon monoxide",
+    "co alarm",
+    "co detector"
+   ],
+   "needs": "people on the floor, parking levels and mechanical rooms (CO sources), elevators",
+   "layers": [
+    "costar",
+    "notes"
+   ]
+  },
+  {
+   "id": "chemical_spill",
+   "label": "Chemical spill / hazmat release",
+   "category": "hazmat",
+   "keywords": [
+    "chemical",
+    "spill",
+    "hazmat",
+    "fumes",
+    "acid",
+    "powder"
+   ],
+   "needs": "tenant industries (labs, medical, cleaning, manufacturing), floors above and below, hydrants for decon",
+   "layers": [
+    "costar",
+    "hydrants",
+    "vexcel",
+    "notes"
+   ]
+  },
+  {
+   "id": "refrigerant_leak",
+   "label": "Refrigerant / ammonia leak",
+   "category": "hazmat",
+   "keywords": [
+    "refrigerant",
+    "ammonia",
+    "freon"
+   ],
+   "needs": "roof AC units (Vexcel), mechanical floors, people on the top floors",
+   "layers": [
+    "vexcel",
+    "costar",
+    "notes"
+   ]
+  },
+  {
+   "id": "elevator_entrapment",
+   "label": "Elevator entrapment",
+   "category": "rescue",
+   "keywords": [
+    "stuck in elevator",
+    "elevator entrapment",
+    "trapped in elevator",
+    "elevator stuck"
+   ],
+   "needs": "elevator types and counts, stories, building engineer / property manager to bring keys",
+   "layers": [
+    "costar",
+    "notes"
+   ]
+  },
+  {
+   "id": "collapse",
+   "label": "Structural collapse / person trapped",
+   "category": "rescue",
+   "keywords": [
+    "building collapse",
+    "structural collapse",
+    "ceiling collapse",
+    "floor collapse",
+    "trapped under",
+    "pinned"
+   ],
+   "needs": "construction frame, year built, people on the floor, floor layout from the scan",
+   "layers": [
+    "costar",
+    "matterport",
+    "notes"
+   ]
+  },
+  {
+   "id": "suspended_worker",
+   "label": "Stranded window washer / suspended worker",
+   "category": "rescue",
+   "keywords": [
+    "window washer",
+    "scaffold",
+    "suspended",
+    "stranded worker"
+   ],
+   "needs": "stories, roof type and AC units, open ground for staging",
+   "layers": [
+    "costar",
+    "vexcel",
+    "notes"
+   ]
+  },
+  {
+   "id": "confined_space",
+   "label": "Confined space rescue",
+   "category": "rescue",
+   "keywords": [
+    "confined space",
+    "vault",
+    "tank"
+   ],
+   "needs": "basement / mechanical / parking levels, building engineer, construction",
+   "layers": [
+    "costar",
+    "notes"
+   ]
+  },
+  {
+   "id": "sprinkler_flow",
+   "label": "Sprinkler water-flow alarm / flooding",
+   "category": "utility",
+   "keywords": [
+    "water flow",
+    "sprinkler activation",
+    "flooding",
+    "water leak",
+    "pipe burst",
+    "water main"
+   ],
+   "needs": "sprinkler type (wet/dry), floors below the leak, tenants with equipment, property manager",
+   "layers": [
+    "costar",
+    "notes"
+   ]
+  },
+  {
+   "id": "power_outage",
+   "label": "Power outage with people affected",
+   "category": "utility",
+   "keywords": [
+    "power outage",
+    "blackout",
+    "no power",
+    "electrical outage"
+   ],
+   "needs": "elevators (entrapment risk), stories, building engineer, people above",
+   "layers": [
+    "costar",
+    "notes"
+   ]
+  },
+  {
+   "id": "structure_fire",
+   "label": "Working structure fire",
+   "category": "fire",
+   "keywords": [
+    "working fire",
+    "flames",
+    "fire on",
+    "structure fire",
+    "on fire",
+    "burning"
+   ],
+   "needs": "people above the fire floor, stairs and standpipes, sprinklers, hydrants, staging, roof",
+   "layers": [
+    "costar",
+    "matterport",
+    "sam3",
+    "vexcel",
+    "hydrants",
+    "notes"
+   ]
+  },
+  {
+   "id": "electrical_fire",
+   "label": "Electrical fire / smoking panel",
+   "category": "fire",
+   "keywords": [
+    "electrical fire",
+    "panel",
+    "sparks",
+    "burning smell"
+   ],
+   "needs": "people on the floor and above, sprinkler type, building engineer",
+   "layers": [
+    "costar",
+    "sam3",
+    "notes"
+   ]
+  },
+  {
+   "id": "fire_alarm",
+   "label": "Commercial fire alarm activation",
+   "category": "fire",
+   "keywords": [
+    "fire alarm",
+    "smoke alarm",
+    "smoke detector",
+    "alarm activation",
+    "alarm sounding",
+    "pull station"
+   ],
+   "needs": "which floor, people on it, pull stations and exits seen in the scan",
+   "layers": [
+    "costar",
+    "sam3",
+    "notes"
+   ]
+  },
+  {
+   "id": "smoke",
+   "label": "Smoke investigation",
+   "category": "fire",
+   "keywords": [
+    "smoke",
+    "smell of smoke"
+   ],
+   "needs": "people above, sprinklers, exits and pull stations seen on the floor",
+   "layers": [
+    "costar",
+    "sam3",
+    "vexcel",
+    "hydrants",
+    "notes"
+   ]
+  },
+  {
+   "id": "cardiac_arrest",
+   "label": "Cardiac arrest",
+   "category": "medical",
+   "keywords": [
+    "cardiac arrest",
+    "not breathing",
+    "cpr",
+    "heart attack",
+    "unresponsive"
+   ],
+   "needs": "elevator for a stretcher, the suite on the floor, AED location (usually unknown), who meets the crew",
+   "layers": [
+    "costar",
+    "matterport",
+    "notes"
+   ]
+  },
+  {
+   "id": "stroke",
+   "label": "Stroke",
+   "category": "medical",
+   "keywords": [
+    "stroke",
+    "slurred speech",
+    "face drooping"
+   ],
+   "needs": "elevator, suite, fastest route; time matters",
+   "layers": [
+    "costar",
+    "matterport",
+    "notes"
+   ]
+  },
+  {
+   "id": "overdose",
+   "label": "Overdose / poisoning",
+   "category": "medical",
+   "keywords": [
+    "overdose",
+    "poison",
+    "od "
+   ],
+   "needs": "suite, elevator, tenant type (clinic, residence)",
+   "layers": [
+    "costar",
+    "matterport",
+    "notes"
+   ]
+  },
+  {
+   "id": "breathing",
+   "label": "Difficulty breathing / allergic reaction",
+   "category": "medical",
+   "keywords": [
+    "breathing",
+    "asthma",
+    "allergic",
+    "anaphylaxis"
+   ],
+   "needs": "elevator, suite, any air-quality cause on the floor",
+   "layers": [
+    "costar",
+    "matterport",
+    "notes"
+   ]
+  },
+  {
+   "id": "fall",
+   "label": "Fall / injury",
+   "category": "medical",
+   "keywords": [
+    "fall",
+    "fell",
+    "injury",
+    "injured",
+    "bleeding"
+   ],
+   "needs": "elevator, suite, stairs if no elevator",
+   "layers": [
+    "costar",
+    "matterport",
+    "notes"
+   ]
+  },
+  {
+   "id": "mass_casualty",
+   "label": "Multiple patients (MCI)",
+   "category": "medical",
+   "keywords": [
+    "multiple patients",
+    "mass casualty",
+    "mci",
+    "several people"
+   ],
+   "needs": "floor population, staging and treatment area outside (open lots), elevators",
+   "layers": [
+    "costar",
+    "vexcel",
+    "notes"
+   ]
+  },
+  {
+   "id": "unconscious",
+   "label": "Unconscious / fainting",
+   "category": "medical",
+   "keywords": [
+    "unconscious",
+    "fainted",
+    "passed out",
+    "collapsed"
+   ],
+   "needs": "elevator, suite, who meets the crew",
+   "layers": [
+    "costar",
+    "matterport",
+    "notes"
+   ]
+  },
+  {
+   "id": "medical_other",
+   "label": "Medical emergency",
+   "category": "medical",
+   "keywords": [
+    "medical",
+    "ems",
+    "ambulance",
+    "patient",
+    "sick"
+   ],
+   "needs": "elevator, suite, who meets the crew",
+   "layers": [
+    "costar",
+    "matterport",
+    "notes"
+   ]
+  }
+ ]
+}
