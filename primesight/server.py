@@ -257,7 +257,7 @@ class H(BaseHTTPRequestHandler):
             ctype = {"html": "text/html", "css": "text/css", "js": "application/javascript", "json": "application/json"}[name.rsplit(".", 1)[1]]
             return self._send(200, open(p, "rb").read(), ctype + "; charset=utf-8") if os.path.exists(p) else self._send(404, {"error": "no page"})
         if self.path == "/health":
-            return self._send(200, {"ok": True, "agent": bool(os.environ.get("ANTHROPIC_API_KEY"))})
+            return self._send(200, {"ok": True, "agent": bool(os.environ.get("ANTHROPIC_API_KEY")), "photon": bool(os.environ.get("PHOTON_API_KEY") and os.environ.get("PHOTON_PROJECT_ID"))})
         self._send(404, {"error": "not found"})
 
     def log_message(self, *a):
@@ -270,5 +270,7 @@ if __name__ == "__main__":
     assert classify("Man collapsed in the break room")["id"] == "unconscious" and classify("smoke alarm going off")["id"] == "fire_alarm"
     assert parse_call("Two people stuck in elevator, 1000 Louisiana") == (1, "rescue") and classify("Shots fired, 12th floor")["category"] == "security"
     print(f"Primesight server on http://localhost:{PORT}  (agent: {'on' if os.environ.get('ANTHROPIC_API_KEY') else 'off, sending drafts'})")
+    from . import photon_bridge  # real iMessage/SMS through Photon when PHOTON_API_KEY + PHOTON_PROJECT_ID are in .env
+    print(f"Photon bridge: {'polling' if photon_bridge.start_from_env() else 'off (no PHOTON_API_KEY / PHOTON_PROJECT_ID); phone.html still works'}")
     # PRIMESIGHT_HOST=0.0.0.0 lets a phone on the same Wi-Fi open the pages (Windows may ask to allow Python through the firewall)
     ThreadingHTTPServer((os.environ.get("PRIMESIGHT_HOST", "127.0.0.1"), PORT), H).serve_forever()
