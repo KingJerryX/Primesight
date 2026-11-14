@@ -251,7 +251,8 @@ Steps:
 3. In parallel, delegate with the task tool: tenants on or near the floor to tenant-risk, the contacts to notify-writer,
    and, only if the scan is of this exact floor and vision is not null, the scan id to inside-scout (fire and security:
    pull station and exit sign; medical and rescue: exit sign; hazmat and utility: fire extinguisher). For fire, hazmat,
-   gas or smoke calls also send the property id to outside-scout: live wind and every hydrant within 300 m.
+   gas or smoke calls, and any type whose incident_needs mention wind or temperature (heat illness, unknown odor), also
+   send the property id to outside-scout: live wind, temperature and every hydrant within 300 m.
 4. Read /buildings/<property_id>.md if it exists: crew notes from earlier incidents.
 5. Write the final briefing (rules in your memory and the skill), then save one line about this incident with add_building_note.
 

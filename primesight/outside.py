@@ -6,7 +6,9 @@ load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 VX = "https://api.vexcelgroup.com/v2"
 LAYERS = "urban,urban-r,wide-area,urban-g"
 # City hydrant layers (ArcGIS FeatureServer). Add a city by adding a line.
-HYDRANTS = {"Houston": "https://services.arcgis.com/NummVBqZSIJKUeVR/ArcGIS/rest/services/wHydrant/FeatureServer/0/query"}
+HYDRANTS = {"Houston": "https://services.arcgis.com/NummVBqZSIJKUeVR/ArcGIS/rest/services/wHydrant/FeatureServer/0/query",
+            # City of LA, DWP hydrants (the LA County Fire layers don't cover the City)
+            "Los Angeles": "https://maps.lacity.org/lahub/rest/services/Fire_Department/MapServer/0/query"}
 
 
 def _vx(method, path, **kw):
@@ -76,7 +78,7 @@ def bearing(lat1, lon1, lat2, lon2):
 
 def hydrants(lat, lon, city, radius_m=150):
     """Hydrants within radius, nearest first: [(metres, direction, lat, lon)]. Empty if the city has no layer."""
-    url = HYDRANTS.get(city)
+    url = HYDRANTS.get(city.strip().title())  # CoStar has "houston" too
     if not url:
         return []
     r = requests.get(url, params={"geometry": f"{lon},{lat}", "geometryType": "esriGeometryPoint", "inSR": 4326,
