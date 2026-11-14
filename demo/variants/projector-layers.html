@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primesight Projector: Data Layers</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  body { height: 100vh; display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; }
+  header { padding: 12px 22px; display: flex; gap: 16px; align-items: baseline; border-bottom: 1px solid var(--line); }
+  header h1 { margin: 0; font-size: 19px; } #call { flex: 1; font-size: 17px; } #clock { font-family: var(--mono); color: var(--accent); font-size: 20px; }
+  .cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 14px 22px; min-height: 0; }
+  .col { border: 1px solid var(--line); border-top: 4px solid var(--c); border-radius: 12px; padding: 12px 14px; overflow-y: auto; opacity: .45; transition: opacity .4s; }
+  .col.on { opacity: 1; }
+  .col h2 { margin: 0; font-size: 15px; color: var(--c); } .col .what { font-size: 12px; color: var(--dim); margin-bottom: 10px; }
+  .fact { font-size: 14px; padding: 5px 0; border-bottom: 1px dashed var(--line); animation: in .4s ease-out both; }
+  .fact b { color: var(--text); } .fact span { color: var(--dim); }
+  .col img { width: 100%; border-radius: 8px; margin-top: 8px; }
+  .brief { margin: 0 22px 14px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 12px; max-height: 34vh; overflow-y: auto; }
+  .bl { font-family: var(--mono); font-size: 14px; padding: 2px 0 2px 10px; border-left: 4px solid var(--c); margin: 3px 0; animation: in .4s ease-out both; }
+  .legend { display: flex; gap: 14px; font-size: 12px; color: var(--dim); margin-bottom: 6px; } .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: -1px; }
+  @keyframes in { from { opacity: 0; transform: translateY(6px); } }
+</style>
+</head>
+<body>
+<header><h1>PRIMESIGHT · every layer in one text</h1><div id="call" class="dim">Waiting for a dispatch...</div><div id="clock">0.0 s</div></header>
+<div class="cols">
+  <div class="col" id="costar" style="--c:#3fa7ff"><h2>CoStar</h2><div class="what">building record · tenants by floor · contacts</div><div class="body"></div></div>
+  <div class="col" id="matterport" style="--c:#2ed3a7"><h2>Matterport + SAM 3</h2><div class="what">3D scan graph · exits, pull stations, extinguishers seen</div><div class="body"></div></div>
+  <div class="col" id="vexcel" style="--c:#f5c400"><h2>Vexcel + hydrants</h2><div class="what">aerial imagery · roof · open lots · hydrant distances</div><div class="body"></div></div>
+  <div class="col" id="notes" style="--c:#ff9f43"><h2>Crew memory</h2><div class="what">notes earlier crews left · texts queued for staff</div><div class="body"></div></div>
+</div>
+<div class="brief"><div class="legend"><span>Briefing on the phone, each line tagged by source:</span><span><i style="background:#3fa7ff"></i>CoStar</span><span><i style="background:#2ed3a7"></i>Matterport</span><span><i style="background:#f5c400"></i>Vexcel</span><span><i style="background:#ff9f43"></i>Notes</span></div><div id="brief" class="dim">...</div></div>
+<script src="common.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/</g, "&lt;");
+const add = (col, html) => { $(col).classList.add("on"); const d = document.createElement("div"); d.className = "fact"; d.innerHTML = html; $(col).querySelector(".body").appendChild(d); };
+let t0 = 0, timer = null;
+projector({
+  reset() {
+    document.querySelectorAll(".col").forEach(c => { c.classList.remove("on"); c.querySelector(".body").innerHTML = ""; });
+    $("brief").innerHTML = '<span class="dim">Working...</span>';
+    t0 = performance.now(); clearInterval(timer); timer = setInterval(() => $("clock").textContent = ((performance.now() - t0) / 1000).toFixed(1) + " s", 100);
+  },
+  step(d) {
+    if (d.step === "call_received") $("call").textContent = d.detail;
+    if (d.step === "address_lookup") add("costar", `<b>Address matched</b> <span>${esc(d.detail)}</span>`);
+    if (d.step === "gather_building") { ["costar", "matterport", "vexcel"].forEach(c => add(c, `<b>Pulled</b> <span>at ${d.t.toFixed(1)} s</span>`)); }
+    if (d.step.endsWith("walk_to")) add("matterport", `<b>Walked the scan graph</b> <span>${esc(stepLabel(d)[1])}</span>`);
+    if (d.step.endsWith("queue_text")) { const x = JSON.parse(d.detail || "{}"); add("notes", `<b>Text queued for ${esc(x.to)}</b> <span>${esc((x.text || "").slice(0, 120))}</span>`); }
+    if (d.step.endsWith("add_building_note")) add("notes", `<b>Note saved</b> <span>${esc(stepLabel(d)[1]).slice(0, 120)}</span>`);
+    if (d.step.endsWith("read_file") && /\/buildings\//.test(d.detail)) add("notes", `<b>Read building notes</b> <span>${esc(stepLabel(d)[1])}</span>`);
+    if (d.step === "done") { clearInterval(timer); $("clock").textContent = d.t.toFixed(1) + " s"; }
+  },
+  done(f) {
+    if (!f) return;
+    const b = f.building || {}, here = (f.floors || []).find(x => x.floor === f.floor) || {};
+    if (b.address) {
+      add("costar", `<b>${esc(b.name || b.address)}</b> <span>${b.stories || "?"} stories · built ${b.year_built || "?"} · ${esc(b.construction || "")} · sprinklers ${esc(b.sprinklers || "unknown")}</span>`);
+      add("costar", `<b>Floor ${f.floor}:</b> <span>~${here.people || 0} people · ${esc((here.tenants || []).slice(0, 4).join(", ") || "no listed tenants")}</span>`);
+      (f.tenant_flags || []).slice(0, 4).forEach(t => add("costar", typeof t === "string" ? `<b>Flag</b> <span>${esc(t)}</span>` : `<b>Flag: ${esc(t.tenant)}</b> <span>floor ${esc(t.floor)} · ${esc(t.risk)}</span>`));
+    }
+    if (f.scan) add("matterport", `<b>3D scan of floor ${f.scan.floor ?? "?"}</b> <span>${f.scan.exact ? "same floor as the call" : "nearest scanned floor"}</span>`);
+    if (f.vision) { const w = f.vision.scan_points_with || {}; add("matterport", `<b>SAM 3 over ${f.vision.scan_points} scan points</b> <span>${Object.entries(w).map(([k, v]) => `${k} ${v}`).join(" · ")}</span>`); }
+    if (f.walk) add("matterport", `<b>Walk</b> <span>${esc(f.walk)}</span>`);
+    (f.image_urls || []).forEach(u => { if (/plan|floor/i.test(u)) $("matterport").querySelector(".body").insertAdjacentHTML("beforeend", `<img src="${API + u}">`); });
+    (f.hydrants || []).slice(0, 3).forEach(h => add("vexcel", `<b>Hydrant</b> <span>${Math.round(h.m)} m ${esc(h.dir)}</span>`));
+    (f.staging || []).slice(0, 2).forEach(s => add("vexcel", `<b>Open lot</b> <span>${Math.round(s.m)} m ${esc(s.dir)}</span>`));
+    (f.image_urls || []).forEach(u => { if (!/plan|floor/i.test(u)) $("vexcel").querySelector(".body").insertAdjacentHTML("beforeend", `<img src="${API + u}">`); });
+    (f.texts || []).forEach(x => add("notes", `<b>Queued for ${esc(x.to)}</b> <span>${esc(x.text).slice(0, 140)}</span>`));
+    if (!$("notes").querySelector(".fact")) add("notes", `<span>No notes from earlier crews at this building yet.</span>`);
+    $("brief").innerHTML = (f.briefing || "").split("\n").map((l, k) => `<div class="bl" style="--c:${LAYER_COLORS[lineLayer(l)]};animation-delay:${k * 100}ms">${esc(l)}</div>`).join("");
+  },
+});
+</script>
+</body>
+</html>

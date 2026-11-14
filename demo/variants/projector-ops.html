@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primesight Projector: Ops Board</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  body { height: 100vh; display: grid; grid-template-rows: auto auto 1fr; gap: 14px; padding: 16px 20px; box-sizing: border-box; overflow: hidden; }
+  header { display: flex; gap: 16px; align-items: baseline; } header h1 { margin: 0; font-size: 19px; } #call { flex: 1; font-size: 17px; }
+  .kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+  .kpi { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+  .kpi .k { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim); }
+  .kpi .v { font-size: 30px; font-weight: 700; font-family: var(--mono); margin-top: 4px; }
+  .kpi .s { font-size: 12px; color: var(--dim); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; min-height: 0; }
+  .card { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; overflow-y: auto; min-height: 0; }
+  .card h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim); margin: 0 0 8px; }
+  .log div { font-size: 13px; padding: 3px 0; border-bottom: 1px dashed var(--line); } .log .t { font-family: var(--mono); color: var(--dim); margin-right: 6px; }
+  .log .helper { color: #b07cff; }
+  .item { font-size: 13.5px; padding: 6px 0; border-bottom: 1px dashed var(--line); }
+  .ok { color: var(--ok); } .warn { color: #f5c400; }
+  #brief { font-family: var(--mono); font-size: 13px; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+<header><h1>PRIMESIGHT · ops board</h1><div id="call" class="dim">Waiting for a dispatch...</div></header>
+<div class="kpis">
+  <div class="kpi"><div class="k">Time to text</div><div class="v" id="k-time">-</div><div class="s">call in to briefing out</div></div>
+  <div class="kpi"><div class="k">Agent steps</div><div class="v" id="k-steps">0</div><div class="s" id="k-steps-s">tools and file reads</div></div>
+  <div class="kpi"><div class="k">Helpers</div><div class="v" id="k-sub">0</div><div class="s">subagents handed work</div></div>
+  <div class="kpi"><div class="k">Grader</div><div class="v" id="k-grade">-</div><div class="s" id="k-grade-s">rubric check before send</div></div>
+  <div class="kpi"><div class="k">Cost</div><div class="v" id="k-cost">-</div><div class="s" id="k-tok">tokens</div></div>
+  <div class="kpi"><div class="k">Briefing</div><div class="v" id="k-lines">-</div><div class="s">lines (one phone screen)</div></div>
+</div>
+<div class="grid">
+  <div class="card log"><h2>Step log</h2><div id="log"></div></div>
+  <div class="card"><h2>Who else gets told</h2><div id="texts" class="dim">Texts queued for building staff show here. Nothing is sent without the officer.</div><h2 style="margin-top:14px">Tenant flags</h2><div id="flags" class="dim">-</div></div>
+  <div class="card"><h2>What the crew got</h2><div id="brief" class="dim">-</div></div>
+</div>
+<script src="common.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/</g, "&lt;");
+let t0 = 0, timer = null, n = { agent: 0, helper: 0, sub: 0 };
+projector({
+  reset() {
+    n = { agent: 0, helper: 0, sub: 0 }; $("log").innerHTML = ""; ["k-grade", "k-cost", "k-lines"].forEach(k => $(k).textContent = "-");
+    $("k-steps").textContent = $("k-sub").textContent = "0"; $("k-grade").className = "v"; $("brief").textContent = "Working..."; $("texts").textContent = "-"; $("flags").textContent = "-";
+    t0 = performance.now(); clearInterval(timer); timer = setInterval(() => $("k-time").textContent = ((performance.now() - t0) / 1000).toFixed(0) + "s", 250);
+  },
+  step(d) {
+    if (d.step === "call_received") $("call").textContent = d.detail;
+    if (d.who !== "system") n[d.who]++;
+    if (d.step === "task") n.sub++;
+    $("k-steps").textContent = n.agent + n.helper; $("k-steps-s").textContent = `${n.agent} agent · ${n.helper} helper`; $("k-sub").textContent = n.sub;
+    if (d.step === "graded") { const ok = d.detail.startsWith("satisfied"); $("k-grade").textContent = ok ? "PASS" : "REVISE"; $("k-grade").className = "v " + (ok ? "ok" : "warn"); $("k-grade-s").textContent = ok ? "rubric satisfied" : esc(d.detail).slice(0, 60); }
+    if (d.step === "usage") { const m = d.detail.match(/(\d+) in \/ (\d+) out.*\$([\d.]+)/); if (m) { $("k-cost").textContent = "$" + m[3]; $("k-tok").textContent = `${(+m[1] / 1000).toFixed(0)}k in · ${(+m[2] / 1000).toFixed(1)}k out`; } }
+    if (d.step === "mode") { $("k-cost").textContent = "$0"; $("k-tok").textContent = "draft (no model call)"; }
+    if (d.step === "done") { clearInterval(timer); $("k-time").textContent = d.t.toFixed(0) + "s"; }
+    const [h, det] = stepLabel(d);
+    $("log").insertAdjacentHTML("beforeend", `<div class="${d.who}"><span class="t">${d.t.toFixed(1)}</span>${d.who === "helper" ? "helper · " : ""}${esc(h)} <span class="dim">${esc(String(det).slice(0, 80))}</span></div>`);
+    $("log").lastElementChild.scrollIntoView({ block: "end" });
+  },
+  done(f) {
+    if (!f) return;
+    $("brief").className = ""; $("brief").textContent = f.briefing || "";
+    $("k-lines").textContent = (f.briefing || "").split("\n").filter(Boolean).length;
+    $("texts").className = ""; $("texts").innerHTML = (f.texts || []).map(x => `<div class="item"><b>${esc(x.to)}</b><br>${esc(x.text)}</div>`).join("") || '<span class="dim">None for this call.</span>';
+    $("flags").className = ""; $("flags").innerHTML = (f.tenant_flags || []).map(t => `<div class="item">${typeof t === "string" ? esc(t) : `<b>${esc(t.tenant)}</b> (floor ${esc(t.floor)}): ${esc(t.risk)}<br><span class="dim">${esc(t.why || "").slice(0, 160)}</span>`}</div>`).join("") || '<span class="dim">No risky tenants flagged.</span>';
+  },
+});
+</script>
+</body>
+</html>

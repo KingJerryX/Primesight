@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primesight Demo Hub</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  main { max-width: 1100px; margin: 0 auto; padding: 28px 16px 60px; }
+  h1 { margin: 0; font-size: 28px; } .lede { color: var(--dim); margin: 6px 0 22px; max-width: 760px; }
+  .stats { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 26px; }
+  .stat { border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; } .stat b { font-size: 22px; font-family: var(--mono); display: block; } .stat span { font-size: 12px; color: var(--dim); }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim); margin: 26px 0 10px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+  a.card { display: block; border: 1px solid var(--line); border-radius: 12px; padding: 14px; text-decoration: none; color: var(--text); background: var(--panel); transition: border-color .2s; }
+  a.card:hover { border-color: var(--accent); } a.card b { display: block; margin-bottom: 4px; } a.card span { color: var(--dim); font-size: 13.5px; }
+  ol { color: var(--dim); line-height: 1.7; padding-left: 20px; } ol b { color: var(--text); }
+  code { font-family: var(--mono); font-size: 13px; background: var(--panel2); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>PRIMESIGHT</h1>
+  <div class="lede">A dispatch goes in, and the crew's phone gets a one-screen briefing on the building: who is inside (CoStar), what the floor looks like (Matterport 3D scan read by SAM 3), and what is outside (Vexcel aerials and hydrants). Pick any building, floor and emergency; nothing is hardcoded.</div>
+  <div class="stats" id="stats"></div>
+
+  <h2>1 · Send a dispatch (pick one)</h2>
+  <div class="cards">
+    <a class="card" href="dispatch-judge.html"><b>Judge mode</b><span>Three columns: building, floor stack, emergency. "Surprise me" picks a random combination. Texts land on the phone.</span></a>
+    <a class="card" href="dispatch-cad.html"><b>CAD console</b><span>A dispatcher's form: address search, floor, incident type, people, caller, notes, time of call.</span></a>
+    <a class="card" href="dispatch-radio.html"><b>Free text</b><span>Type it like radio traffic. Addresses and incident types autocomplete; the live parse shows what Primesight reads.</span></a>
+    <a class="card" href="dispatch-map.html"><b>Map</b><span>Every preprocessed building on a map of Houston and LA. Green dots: SAM 3 has scanned the floor.</span></a>
+  </div>
+
+  <h2>2 · Watch the agent (put one on the projector)</h2>
+  <div class="cards">
+    <a class="card" href="projector-timeline.html"><b>Timeline</b><span>Each step as it happens, helpers indented, then the briefing with each line tagged by data source.</span></a>
+    <a class="card" href="projector-graph.html"><b>Agent graph</b><span>The deepagents layout: main agent, three subagents, tools and the file system. Nodes light up as they are used.</span></a>
+    <a class="card" href="projector-layers.html"><b>Data layers</b><span>Four columns, one per data source, filling in as the agent pulls them. Shows how many layers one text draws on.</span></a>
+    <a class="card" href="projector-stack.html"><b>Building stack</b><span>The building floor by floor with people counts, the marked floor plan, and the crew's phone beside it.</span></a>
+    <a class="card" href="projector-ops.html"><b>Ops board</b><span>Time to text, steps, helpers, grader verdict, cost, texts queued for building staff and tenant flags.</span></a>
+  </div>
+  <div class="dim" style="font-size:13px;margin-top:8px">Projectors follow the newest run from any console. Add <code>?speed=3</code> to play a recorded run faster.</div>
+
+  <h2>3 · The crew's phone</h2>
+  <div class="cards">
+    <a class="card" href="phone.html?id=judge"><b>Phone (judge line)</b><span>What Engine 1 sees. Judge mode texts here. Reply to ask follow-ups, or text NOTE ... to leave a note for the next crew.</span></a>
+    <a class="card" href="phone.html"><b>Phone (your own line)</b><span>Open on any phone on the same Wi-Fi. Text an address and an emergency, just like a dispatch.</span></a>
+  </div>
+
+  <h2>Running the demo</h2>
+  <ol>
+    <li>Open a <b>projector</b> on the big screen and <b>judge mode</b> on a laptop.</li>
+    <li>Have a judge pick a building, floor and emergency, then press <b>Text it to the crew</b>.</li>
+    <li>The projector shows the agent working (30-60 s live, instant with recorded runs); the briefing lands on the <b>phone</b>.</li>
+    <li>Reply from the phone ("which elevator fits a stretcher?") to show the agent remembers the call.</li>
+  </ol>
+</main>
+<script src="common.js"></script>
+<script>
+Promise.all([getBuildings(), getIncidents(), api("/health")]).then(([b, i, h]) => {
+  const s = [[b.length, "buildings preprocessed"], [b.filter(x => x.sam3).length, "floors scanned by SAM 3"], [b.reduce((n, x) => n + x.tenants, 0).toLocaleString(), "tenants on record"],
+    [i.length, "emergency types"], [new Set(i.map(x => x.category)).size, "response playbooks"], [h.agent ? "live" : "draft", "agent mode"]];
+  document.getElementById("stats").innerHTML = s.map(([v, k]) => `<div class="stat"><b>${v}</b><span>${k}</span></div>`).join("");
+});
+</script>
+</body>
+</html>

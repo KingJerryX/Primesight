@@ -141,6 +141,9 @@ def brief_or_replay(text, run_id, mode=None):
     RUNS[run_id] = out.pop("_facts", None)
     if RUNS[run_id]:
         RUNS[run_id]["call"] = text  # /ask needs it (older recordings didn't store it)
+        RUNS[run_id]["briefing"] = out["briefing"]  # the projectors show what the phone got
+        RUNS[run_id]["image_urls"] = out.get("image_urls") or [img_url(p) for p in out.get("images") or []]
+        RUNS[run_id].update(texts=out.get("texts") or [], tenant_flags=out.get("tenant_flags") or [])
     if RUNS[run_id] and "image_urls" not in out:
         out["image_urls"] = [img_url(p) for p in out["images"]]
     return out
@@ -246,7 +249,8 @@ class H(BaseHTTPRequestHandler):
             return self._send(200, buildings())
         if self.path == "/incidents":
             return self._send(200, [{k: t[k] for k in ("id", "label", "category", "needs", "layers", "keywords")} for t in CATALOG])
-        m = re.fullmatch(r"/(?:demo/)?([\w-]+\.(html|css|js|json))", self.path) or re.fullmatch(r"/()", self.path)
+        page = self.path.split("?", 1)[0]  # pages read their own query (phone.html?id=judge, projector-*.html?speed=3)
+        m = re.fullmatch(r"/(?:demo/)?([\w-]+\.(html|css|js|json))", page) or re.fullmatch(r"/()", page)
         if m:  # the demo pages, served from demo/ (strict names, no subfolders except variants)
             name = m.group(1) or "index.html"
             p = os.path.join(DEMO_PAGES, name) if os.path.exists(os.path.join(DEMO_PAGES, name)) else os.path.join(DEMO_PAGES, "variants", name)

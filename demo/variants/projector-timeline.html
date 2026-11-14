@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primesight Projector: Timeline</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  body { height: 100vh; display: grid; grid-template-rows: auto 1fr; overflow: hidden; }
+  header { padding: 14px 22px; border-bottom: 1px solid var(--line); display: flex; align-items: baseline; gap: 16px; }
+  header h1 { margin: 0; font-size: 20px; letter-spacing: .02em; }
+  #call { font-size: 18px; color: var(--text); flex: 1; }
+  #clock { font-family: var(--mono); font-size: 22px; color: var(--accent); }
+  .wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: 18px; padding: 18px 22px; min-height: 0; }
+  .tl { overflow-y: auto; position: relative; padding-left: 8px; }
+  .lanes { display: grid; grid-template-columns: 90px 1fr; font-size: 12px; color: var(--dim); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+  .ev { display: grid; grid-template-columns: 64px 1fr; gap: 10px; padding: 9px 0; border-bottom: 1px dashed var(--line); animation: in .35s ease-out; }
+  .ev .t { font-family: var(--mono); color: var(--dim); font-size: 13px; padding-top: 2px; }
+  .ev .w { border-left: 3px solid var(--line); padding-left: 12px; }
+  .ev.agent .w { border-color: var(--accent); } .ev.helper .w { border-color: #b07cff; margin-left: 26px; } .ev.system .w { border-color: var(--dim); }
+  .ev .h { font-weight: 650; font-size: 16px; } .ev .d { color: var(--dim); font-size: 13.5px; margin-top: 2px; word-break: break-word; }
+  .ev.helper .h::before { content: "helper · "; color: #b07cff; font-weight: 500; }
+  .right { display: flex; flex-direction: column; gap: 14px; min-height: 0; overflow-y: auto; }
+  .line { display: grid; grid-template-columns: 92px 1fr; gap: 10px; font-family: var(--mono); font-size: 14.5px; padding: 3px 0; animation: in .4s ease-out both; }
+  .src { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; text-align: right; padding-top: 3px; }
+  .imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; } .imgs img { width: 100%; border-radius: 10px; }
+  .texts div { font-size: 13.5px; margin-top: 6px; }
+  .idle { color: var(--dim); font-size: 18px; margin-top: 30vh; text-align: center; }
+  @keyframes in { from { opacity: 0; transform: translateY(6px); } }
+</style>
+</head>
+<body>
+<header><h1>PRIMESIGHT</h1><div id="call" class="dim">Waiting for a dispatch...</div><div id="clock">0.0 s</div></header>
+<div class="wrap">
+  <div class="tl"><div class="lanes"><span>time</span><span>what the agent is doing</span></div><div id="events"><div class="idle">Send a call from any dispatch console or the phone.</div></div></div>
+  <div class="right">
+    <div class="panel"><div class="dim" style="font-size:12px;text-transform:uppercase;letter-spacing:.08em">Briefing on the crew's phone</div><div id="brief" style="margin-top:8px" class="dim">...</div></div>
+    <div class="panel texts" id="texts" style="display:none"></div>
+    <div class="imgs" id="imgs"></div>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+let t0 = 0, timer = null;
+projector({
+  reset(runId) {
+    $("events").innerHTML = ""; $("brief").innerHTML = '<span class="dim">Working...</span>'; $("imgs").innerHTML = ""; $("texts").style.display = "none";
+    t0 = performance.now(); clearInterval(timer); timer = setInterval(() => $("clock").textContent = ((performance.now() - t0) / 1000).toFixed(1) + " s", 100);
+  },
+  step(d) {
+    if (d.step === "call_received") $("call").textContent = d.detail;
+    const [h, detail] = stepLabel(d);
+    const el = document.createElement("div"); el.className = `ev ${d.who}`;
+    el.innerHTML = `<div class="t">${d.t.toFixed(1)}s</div><div class="w"><div class="h">${h}</div><div class="d">${String(detail).replace(/</g, "&lt;").slice(0, 220)}</div></div>`;
+    $("events").appendChild(el); el.scrollIntoView({ block: "end", behavior: "smooth" });
+    if (d.step === "done") { clearInterval(timer); $("clock").textContent = d.t.toFixed(1) + " s"; }
+  },
+  done(f) {
+    if (!f) return;
+    $("brief").innerHTML = (f.briefing || "").split("\n").map((l, k) => { const s = lineLayer(l);
+      return `<div class="line" style="animation-delay:${k * 120}ms"><span class="src" style="color:${LAYER_COLORS[s]}">${s === "meta" ? "" : s}</span><span>${l.replace(/</g, "&lt;")}</span></div>`; }).join("");
+    $("imgs").innerHTML = (f.image_urls || []).map(u => `<img src="${API + u}">`).join("");
+    if ((f.texts || []).length) { $("texts").style.display = ""; $("texts").innerHTML = `<div class="dim" style="font-size:12px;text-transform:uppercase">Queued for building staff (not sent automatically)</div>` + f.texts.map(x => `<div><b>${x.to}:</b> ${x.text}</div>`).join(""); }
+  },
+});
+</script>
+</body>
+</html>

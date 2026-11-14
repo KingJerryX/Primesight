@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primesight Projector: Building Stack</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  body { height: 100vh; display: grid; grid-template-columns: 300px 1fr 360px; gap: 18px; padding: 16px 20px; box-sizing: border-box; overflow: hidden; }
+  .stackwrap { display: flex; flex-direction: column; min-height: 0; }
+  .stackwrap h2, .mid h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim); margin: 0 0 8px; }
+  #stack { flex: 1; display: flex; flex-direction: column-reverse; gap: 2px; overflow-y: auto; }
+  .fl { display: grid; grid-template-columns: 28px 1fr 46px; gap: 6px; align-items: center; font-size: 12px; min-height: 12px; }
+  .fl .n { color: var(--dim); text-align: right; font-family: var(--mono); }
+  .fl .bar { height: 10px; background: #3fa7ff55; border-radius: 2px; transition: width .5s; }
+  .fl.scan .bar { outline: 1px solid #2ed3a7; } .fl.hit { color: #fff; } .fl.hit .bar { background: var(--accent); box-shadow: 0 0 12px var(--accent); animation: pulse 1s infinite alternate; }
+  .fl.near .bar { background: #ff5a3677; }
+  .fl .p { color: var(--dim); font-family: var(--mono); font-size: 11px; }
+  @keyframes pulse { to { opacity: .55; } }
+  .mid { display: flex; flex-direction: column; min-height: 0; }
+  .mid h1 { margin: 0; font-size: 22px; } #call { font-size: 16px; color: var(--dim); margin: 4px 0 12px; }
+  #plan { flex: 1; min-height: 0; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  #plan img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  #status { margin-top: 10px; font-size: 15px; min-height: 22px; } #status b { color: var(--accent); }
+  .phone { border: 10px solid #222; border-radius: 38px; background: #000; padding: 14px 10px; display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+  .phone .top { text-align: center; font-size: 12px; color: var(--dim); margin-bottom: 8px; }
+  #msgs { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; }
+  .b { max-width: 88%; padding: 8px 11px; border-radius: 16px; font-size: 12.5px; white-space: pre-wrap; animation: in .35s ease-out both; }
+  .b.in { background: #26262a; align-self: flex-start; } .b.out { background: #0a84ff; align-self: flex-end; color: #fff; }
+  .b img { width: 100%; border-radius: 10px; }
+  @keyframes in { from { opacity: 0; transform: translateY(8px); } }
+</style>
+</head>
+<body>
+<div class="stackwrap"><h2>Building, floor by floor</h2><div id="stack"><div class="dim">Waiting for a dispatch...</div></div><div class="dim" style="font-size:11px;margin-top:6px">bar = people on the floor (CoStar tenants) · green outline = 3D scan</div></div>
+<div class="mid"><h2>Floor plan from the 3D scan</h2><h1 id="addr">PRIMESIGHT</h1><div id="call">Send a call from any console.</div><div id="plan"><span class="dim">Floor plan appears here.</span></div><div id="status"></div></div>
+<div class="phone"><div class="top">Engine 1 · iMessage</div><div id="msgs"></div></div>
+<script src="common.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/</g, "&lt;");
+const bubble = (html, who = "in") => { const d = document.createElement("div"); d.className = `b ${who}`; d.innerHTML = html; $("msgs").appendChild(d); d.scrollIntoView({ block: "end" }); };
+projector({
+  reset() { $("msgs").innerHTML = ""; $("plan").innerHTML = '<span class="dim">Working...</span>'; $("stack").innerHTML = ""; $("status").innerHTML = ""; },
+  step(d) {
+    if (d.step === "call_received") { $("call").textContent = d.detail; bubble(esc(d.detail), "out"); }
+    if (d.step === "address_lookup") $("addr").textContent = d.detail.split(" -> ")[0];
+    const [h, det] = stepLabel(d);
+    $("status").innerHTML = `<b>${d.t.toFixed(1)}s</b> ${d.who === "helper" ? "helper · " : ""}${h} <span class="dim">${esc(String(det).slice(0, 90))}</span>`;
+    if (d.step === "gather_building") bubble("Primesight: pulling the building now...");
+  },
+  done(f) {
+    if (!f) return;
+    const fl = f.floors || [], max = Math.max(1, ...fl.map(x => x.people || 0));
+    $("stack").innerHTML = fl.map(x => `<div class="fl ${x.scanned ? "scan" : ""} ${x.floor === f.floor ? "hit" : Math.abs(x.floor - f.floor) <= 2 ? "near" : ""}" title="${esc(x.tenants.join(", "))}">
+      <span class="n">${x.floor}</span><span class="bar" style="width:${4 + 96 * (x.people || 0) / max}%"></span><span class="p">${x.people ? "~" + x.people : ""}</span></div>`).join("");
+    document.querySelector(".fl.hit")?.scrollIntoView({ block: "center" });
+    const plan = (f.image_urls || []).find(u => /plan|floor/i.test(u)) || (f.image_urls || [])[0];
+    $("plan").innerHTML = plan ? `<img src="${API + plan}">` : '<span class="dim">No floor plan for this building.</span>';
+    bubble(esc(f.briefing || ""));
+    (f.image_urls || []).forEach(u => bubble(`<img src="${API + u}">`));
+    $("status").innerHTML += f.walk ? `<div class="dim" style="margin-top:4px">${esc(f.walk)}</div>` : "";
+  },
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primesight Projector: Agent Graph</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  body { height: 100vh; display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; }
+  header { padding: 12px 22px; display: flex; gap: 16px; align-items: baseline; border-bottom: 1px solid var(--line); }
+  header h1 { margin: 0; font-size: 19px; } #call { flex: 1; font-size: 17px; } #clock { font-family: var(--mono); color: var(--accent); font-size: 20px; }
+  svg { width: 100%; height: 100%; }
+  .node rect { fill: var(--panel); stroke: var(--line); stroke-width: 2; rx: 12; transition: all .3s; }
+  .node text { fill: var(--dim); font-size: 15px; text-anchor: middle; transition: fill .3s; }
+  .node .sub { font-size: 11.5px; }
+  .node.hot rect { stroke: var(--accent); fill: #ff5a3622; filter: drop-shadow(0 0 12px #ff5a3699); }
+  .node.hot text, .node.used text { fill: var(--text); }
+  .node.used rect { stroke: #ff5a3688; }
+  .edge { stroke: var(--line); stroke-width: 2; fill: none; transition: stroke .3s; }
+  .edge.hot { stroke: var(--accent); stroke-width: 3; stroke-dasharray: 8 6; animation: flow .6s linear infinite; }
+  .edge.used { stroke: #ff5a3666; }
+  @keyframes flow { to { stroke-dashoffset: -14; } }
+  footer { padding: 10px 22px; border-top: 1px solid var(--line); display: flex; gap: 20px; align-items: center; min-height: 54px; }
+  #now { flex: 1; font-size: 16px; } #now b { color: var(--accent); }
+  .counts { font-family: var(--mono); color: var(--dim); font-size: 13px; }
+</style>
+</head>
+<body>
+<header><h1>PRIMESIGHT · how the agent thinks</h1><div id="call" class="dim">Waiting for a dispatch...</div><div id="clock">0.0 s</div></header>
+<svg id="g" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet"></svg>
+<footer><div id="now" class="dim">Idle.</div><div class="counts" id="counts"></div></footer>
+<script src="common.js"></script>
+<script>
+// Nodes: the real deepagents layout from primesight/agent.py (main agent, three subagents, tools, the composite filesystem).
+const N = {
+  call:    [90, 280, "Dispatch call", "CAD text / iMessage"],
+  agent:   [330, 280, "Primesight agent", "deepagents · Opus"],
+  find:    [600, 60, "find_building", "address -> CoStar id"],
+  gather:  [600, 160, "gather_building", "CoStar + Matterport + Vexcel"],
+  tenant:  [600, 280, "tenant-risk", "subagent"],
+  scout:   [600, 400, "inside-scout", "subagent · walk_to"],
+  notify:  [600, 500, "notify-writer", "subagent · queue_text"],
+  bfs:     [880, 90, "/buildings/", "building notes"],
+  scans:   [880, 200, "/scans/", "SAM 3 detections"],
+  play:    [880, 310, "/playbook/", "skills · incidents.json"],
+  grader:  [880, 430, "Grader", "rubric middleware"],
+  phone:   [1110, 280, "Crew phone", "briefing + images"],
+};
+const E = [["call","agent"],["agent","find"],["agent","gather"],["agent","tenant"],["agent","scout"],["agent","notify"],["agent","bfs"],["agent","scans"],["agent","play"],["agent","grader"],["grader","phone"],["tenant","play"],["scout","scans"],["notify","bfs"]];
+const g = document.getElementById("g");
+const path = (a, b) => { const [x1, y1] = N[a], [x2, y2] = N[b]; const mx = (x1 + x2) / 2; return `M${x1 + 95},${y1} C${mx},${y1} ${mx},${y2} ${x2 - 95},${y2}`; };
+g.innerHTML = E.map(([a, b]) => `<path class="edge" id="e-${a}-${b}" d="${path(a, b)}"/>`).join("") +
+  Object.entries(N).map(([k, [x, y, t, s]]) => `<g class="node" id="n-${k}" transform="translate(${x - 95},${y - 34})"><rect width="190" height="68"/><text x="95" y="30">${t}</text><text class="sub" x="95" y="50">${s}</text></g>`).join("");
+
+const $ = id => document.getElementById(id);
+const cls = (id, c, on) => { const el = $(id); if (el) el.classList.toggle(c, on); };
+let hot = [], t0 = 0, timer = null, counts = {};
+function light(nodes, edges) {
+  hot.forEach(([id]) => { cls(id, "hot", false); cls(id, "used", true); });
+  hot = [...nodes.map(n => ["n-" + n]), ...edges.map(([a, b]) => ["e-" + a + "-" + b])];
+  hot.forEach(([id]) => cls(id, "hot", true));
+}
+// Which part of the graph a trace step touches.
+function where(d) {
+  const tool = d.step.replace(/^helper:/, ""), det = (() => { try { return JSON.parse(d.detail); } catch (e) { return {}; } })();
+  const sub = d.step.startsWith("helper:") ? (tool === "walk_to" ? "scout" : tool === "queue_text" ? "notify" : "tenant") : null;
+  const fileNode = p => /\/scans\//.test(p) ? "scans" : /\/playbook\//.test(p) ? "play" : "bfs";
+  switch (tool) {
+    case "call_received": return [["call", "agent"], [["call", "agent"]]];
+    case "address_lookup": case "find_building": return [["agent", "find"], [["agent", "find"]]];
+    case "gather_building": return [["agent", "gather"], [["agent", "gather"]]];
+    case "task": { const s = { "tenant-risk": "tenant", "inside-scout": "scout", "notify-writer": "notify" }[det.subagent_type] || "tenant"; return [["agent", s], [["agent", s]]]; }
+    case "walk_to": return [["scout", "scans"], [["agent", "scout"], ["scout", "scans"]]];
+    case "queue_text": return [["notify", "bfs"], [["agent", "notify"], ["notify", "bfs"]]];
+    case "read_file": case "ls": case "glob": case "grep": case "write_file": case "edit_file": case "add_building_note": {
+      const f = fileNode(det.file_path || det.path || det.pattern || ""); const from = sub || "agent";
+      return [[from, f], from === "agent" ? [["agent", f]] : [["agent", from], [from, f === "play" && from === "tenant" ? "play" : f]]]; }
+    case "graded": return [["grader"], [["agent", "grader"]]];
+    case "done": return [["grader", "phone"], [["grader", "phone"]]];
+    default: return [[sub || "agent"], []];
+  }
+}
+projector({
+  reset() {
+    document.querySelectorAll(".hot,.used").forEach(el => el.classList.remove("hot", "used")); hot = []; counts = {};
+    t0 = performance.now(); clearInterval(timer); timer = setInterval(() => $("clock").textContent = ((performance.now() - t0) / 1000).toFixed(1) + " s", 100);
+    $("now").innerHTML = "Call in."; $("counts").textContent = "";
+  },
+  step(d) {
+    if (d.step === "call_received") $("call").textContent = d.detail;
+    const [nodes, edges] = where(d); light(nodes, edges);
+    const [h, det] = stepLabel(d);
+    $("now").innerHTML = `<b>${d.t.toFixed(1)}s</b> ${d.who === "helper" ? "helper · " : ""}${h} <span class="dim">${String(det).slice(0, 120).replace(/</g, "&lt;")}</span>`;
+    counts[d.who] = (counts[d.who] || 0) + 1;
+    $("counts").textContent = `agent steps ${counts.agent || 0} · helper steps ${counts.helper || 0}`;
+    if (d.step === "done") { clearInterval(timer); $("clock").textContent = d.t.toFixed(1) + " s"; }
+  },
+  done() {},
+});
+</script>
+</body>
+</html>

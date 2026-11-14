@@ -7,7 +7,7 @@ async function api(path, body) {
     method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
   const ct = r.headers.get("content-type") || "";
   if (!r.ok) throw new Error(`${path} -> ${r.status}`);
-  return ct.includes("json") ? r.json() : r.text();
+  return ct.startsWith("application/json") ? r.json() : r.text();  // /trace is application/x-ndjson: keep it text
 }
 
 const getBuildings = () => api("/buildings");
@@ -45,8 +45,11 @@ function followLatest(onRun, every = 1000) {
 }
 
 // Streams a run's trace: onStep({t, step, detail, who}) for each new line, onDone(facts) once /run answers.
+const SPEED = +new URLSearchParams(location.search).get("speed") || 1;  // ?speed=3 plays replays 3x faster
+// Steps play at their recorded t, so a replay (whole trace written at once) animates like the live run did.
 function streamTrace(runId, onStep, onDone) {
   let seen = 0, stopped = false;
+  const start = performance.now();
   const tick = async () => {
     if (stopped) return;
     try {
@@ -54,15 +57,19 @@ function streamTrace(runId, onStep, onDone) {
       const lines = text.split("\n").filter(Boolean);
       for (const l of lines.slice(seen)) {
         const d = JSON.parse(l);
+        seen++;
+        if (d.step === "queue_text" && !d.detail.startsWith("{")) continue;  // older recordings logged queued texts twice
+        const wait = d.t * 1000 / SPEED - (performance.now() - start);
+        if (wait > 0) await new Promise(r => setTimeout(r, Math.min(wait, 8000)));
+        if (stopped) return;
         d.who = d.step.startsWith("helper:") ? "helper" : ["call_received", "address_lookup", "mode", "done", "usage", "graded", "error", "crew_reply"].includes(d.step) ? "system" : "agent";
-        onStep(d);
+        try { onStep(d); } catch (e) { console.error("projector step failed", d, e); }  // a page bug must not stall the stream
         if (d.step === "done" || d.step === "error") {
           stopped = true;
           try { onDone && onDone(await api(`/run/${runId}`)); } catch (e) { onDone && onDone(null); }
         }
       }
-      seen = lines.length;
-    } catch (e) { /* trace not written yet */ }
+    } catch (e) { /* trace not written yet (404) or server restarting */ }
     if (!stopped) setTimeout(tick, 600);
   };
   tick();
@@ -72,7 +79,10 @@ function streamTrace(runId, onStep, onDone) {
 // Plain-language name for a trace step, for the projector.
 function stepLabel(d) {
   const tool = d.step.replace(/^helper:/, "");
-  const detail = (() => { try { return JSON.parse(d.detail); } catch (e) { return null; } })();
+  // Trace args are cut at 200 chars, so JSON.parse often fails: fall back to pulling single fields by regex.
+  const detail = (() => { try { return JSON.parse(d.detail); } catch (e) {
+    if (!String(d.detail).startsWith("{")) return null;
+    const o = {}; for (const m of d.detail.matchAll(/"(\w+)": ("((?:[^"\\]|\\.)*)"?|-?[\d.]+)/g)) o[m[1]] = m[3] ?? +m[2]; return o; } })();
   switch (tool) {
     case "call_received": return ["Call received", d.detail];
     case "address_lookup": return ["Address matched", d.detail];
@@ -80,10 +90,9 @@ function stepLabel(d) {
     case "read_file": return ["Reads a file", detail?.file_path || d.detail];
     case "gather_building": return ["Pulls CoStar + Matterport + Vexcel", detail ? `floor ${detail.floor}, ${detail.incident_type || detail.incident}` : d.detail];
     case "task": return [`Hands off to ${detail?.subagent_type || "a helper"}`, detail?.description || ""];
-    case "queue_text": return ["Queues a text for building staff", d.detail];
+    case "queue_text": return ["Queues a text for building staff", detail ? `${detail.to}: ${detail.text}` : d.detail];
     case "walk_to": return ["Walks the scan graph", detail ? `to nearest ${detail.target}` : d.detail];
-    case "add_building_note": return ["Saves a building note", detail?.note || d.detail];
-    case "graded": return ["Grader verdict", d.detail];
+    case "add_building_note": return ["Saves a building note", detail?.note || d.detail];    case "graded": return ["Grader verdict", d.detail];
     case "usage": return ["Cost", d.detail];
     case "done": return ["Briefing sent", d.detail];
     case "mode": return ["Mode", d.detail];
@@ -107,3 +116,25 @@ function floorOptions(b) {
 }
 
 const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+
+// Projector wiring: follows the newest run on the server and feeds the page.
+// hooks: reset(runId) when a new run starts, step(d) per trace line, done(facts) at the end (facts may be null).
+function projector(hooks) {
+  let stop = null;
+  followLatest(runId => {
+    if (stop) stop();
+    hooks.reset(runId);
+    stop = streamTrace(runId, hooks.step, hooks.done);
+  });
+}
+
+// Which data layer a briefing line comes from, for source tags on the projector.
+function lineLayer(line) {
+  const l = line.toUpperCase();
+  if (/^(HYDRANTS|OPEN LOT|ROOF|STAGING)/.test(l)) return "vexcel";
+  if (/^(INSIDE|EXIT SIGNS|WALK|EXITS)/.test(l) || l.includes("SCAN")) return "matterport";
+  if (/^(NOTE|CREW|LAST CREW)/.test(l)) return "notes";
+  if (/^(PRIMESIGHT|NOT KNOWN|HTTPS?:)/.test(l)) return "meta";
+  return "costar";
+}
+const LAYER_COLORS = { costar: "#3fa7ff", matterport: "#2ed3a7", vexcel: "#f5c400", notes: "#ff9f43", meta: "#8b98a5" };
