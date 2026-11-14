@@ -3,12 +3,12 @@
 Runs in the GPU env, ahead of time (results land in cache/vision/<model_id>.json; resumable):
 HF_HUB_OFFLINE=1 ~/miniconda3/envs/sam3_env/python.exe -m primesight.vision 233899 [more property ids]
 """
-import io, json, os, sys, time
+import io, json, math, os, sys, time
 import requests
 from PIL import Image, ImageDraw
 from . import costar, matterport
 
-OUT = os.path.join(costar.CACHE, "vision")  # gitignored: derived from Matterport imagery
+OUT = os.path.join(costar.CACHE, "vision")  # <model>.json results are committed; annotated face images stay local
 # "elevator door" was dropped: it fires on every door (offices, glass, restroom stalls) at 0.9+; CoStar has elevators anyway
 LABELS = ["exit sign", "stairs", "fire extinguisher", "fire alarm pull station"]
 THRESHOLD = 0.45
@@ -129,9 +129,90 @@ def metres(h, width=None):
     return (width or WIDTH.get(h["label"], 0.3)) * (SIDE / 2) / max(h["box"][2] - h["box"][0], 1)
 
 
-def near_exit(sweeps, m=4):
-    """Ids of scan points standing within ~m metres of an exit sign."""
-    return [s["id"] for s in sweeps if any(h["label"] == "exit sign" and kept(h) and metres(h) <= m for h in s["hits"])]
+def yaw(q):
+    """Heading (radians, model frame, z up) of a pano from its rotation quaternion [x, y, z, w]."""
+    x, y, z, w = q
+    return math.atan2(2 * (w * z + x * y), 1 - 2 * (y * y + z * z))
+
+
+def ray(s, h):
+    """Where a hit points from its scan point: (origin xy, heading radians, horizontal metres).
+    Face j looks along pano yaw - 90 deg * j (faces go clockwise from above); right of the face centre is clockwise.
+    Fitted on 3015 exit-sign sightings in 117 scans: this convention made 2164 cross-sweep pairs agree within 1 m,
+    the next best of 48 made 888. Distance from box width (metres) is horizontal after the box centre's elevation."""
+    x0, y0, x1, y1 = h["box"]
+    u, v = (x0 + x1) / 2 - SIDE / 2, SIDE / 2 - (y0 + y1) / 2
+    th = yaw(s["q"]) - math.radians(90 * h["face"]) - math.atan(u / (SIDE / 2))
+    return s["xy"], th, metres(h) * math.cos(math.atan(v / (SIDE / 2)))
+
+
+def locate(sweeps, labels=SIGNS, merge_m=1.5, max_m=10):
+    """One entry per physical sign: [{label, xy, seen_from, sweeps, triangulated}], most-seen first.
+    Each sighting is projected to a point; points of one label within merge_m are one sign. Seen from 2+ scan points
+    at 15+ degrees apart, the position is the least-squares crossing of the sight lines (box-width distance is rough).
+    ponytail: greedy merge, nearest sightings first; a cluster that drifts over a doorway can swallow a second sign."""
+    shots = sorted(((ray(s, h), s["id"], h["label"]) for s in sweeps if "q" in s for h in s["hits"]
+                    if h["label"] in labels and kept(h)), key=lambda t: t[0][2])
+    groups = []
+    for (o, th, d), sid, lab in shots:
+        if d > max_m:
+            continue
+        p = (o[0] + d * math.cos(th), o[1] + d * math.sin(th))
+        g = next((g for g in groups if g["label"] == lab and math.dist(g["c"], p) <= merge_m), None)
+        if g is None:
+            groups.append(g := {"label": lab, "pts": [], "rays": [], "c": p})
+        g["pts"].append(p)
+        g["rays"].append((o, th, sid))
+        g["c"] = (sum(q[0] for q in g["pts"]) / len(g["pts"]), sum(q[1] for q in g["pts"]) / len(g["pts"]))
+    # Second pass: box-width distance is rough (an angled sign reads farther, a near one nearer), so a weaker group whose
+    # every sight line passes within 1 m of a better-seen sign, ahead of the camera, is that sign seen from farther away.
+    groups.sort(key=lambda g: -len({r[2] for r in g["rays"]}))
+    for i, w in enumerate(groups):
+        for s in groups[:i]:
+            if s.get("gone") or s["label"] != w["label"]:
+                continue
+            ok = True
+            for o, th, _ in w["rays"]:
+                dx, dy = s["c"][0] - o[0], s["c"][1] - o[1]
+                t = dx * math.cos(th) + dy * math.sin(th)  # distance along the sight line
+                ok &= t > 0 and abs(dx * math.sin(th) - dy * math.cos(th)) <= 1.0
+            if ok:
+                s["rays"] += w["rays"]
+                w["gone"] = True
+                break
+    groups = [g for g in groups if not g.get("gone")]
+    out = []
+    for g in groups:
+        xy, sids, tri = g["c"], sorted({r[2] for r in g["rays"]}), False
+        ths = [r[1] for r in g["rays"]]
+        spread = max(abs(math.remainder(a - b, 2 * math.pi)) for a in ths for b in ths)
+        if len(sids) > 1 and spread >= math.radians(15):
+            # minimise sum of squared distances to the sight lines: sum(I - n n^T) p = sum(I - n n^T) o
+            a = b = c = e = f = 0.0
+            for o, th, _ in g["rays"]:
+                nx, ny = math.cos(th), math.sin(th)
+                m11, m12, m22 = 1 - nx * nx, -nx * ny, 1 - ny * ny
+                a, b, c = a + m11, b + m12, c + m22
+                e, f = e + m11 * o[0] + m12 * o[1], f + m12 * o[0] + m22 * o[1]
+            det = a * c - b * b
+            if abs(det) > 1e-6:
+                p = ((c * e - b * f) / det, (a * f - b * e) / det)
+                if math.dist(p, xy) <= 3:  # a crossing far from every projection means the rays disagree: keep the mean
+                    xy, tri = p, True
+        out.append({"label": g["label"], "xy": [round(xy[0], 2), round(xy[1], 2)], "seen_from": len(sids),
+                    "sweeps": sids, "triangulated": tri})
+    return sorted(out, key=lambda s: -s["seen_from"])
+
+
+def near_exit(sweeps, m=4, label="exit sign"):
+    """Ids of the scan point closest to each located sign (an exit sign unless label says otherwise), if within m metres:
+    the places a walking route can end at a sign."""
+    ends = set()
+    for g in locate(sweeps, labels=(label,)):
+        s = min(sweeps, key=lambda s: math.dist(s["xy"], g["xy"]))
+        if math.dist(s["xy"], g["xy"]) <= m:
+            ends.add(s["id"])
+    return [s["id"] for s in sweeps if s["id"] in ends]
 
 
 def counts(sweeps):
@@ -155,11 +236,54 @@ def verify_saved():
         print(r["model_id"], f'floor {r["floor"]}', r["sweeps_with"])
 
 
+def add_rotation():
+    """Store each sweep's pano rotation quaternion [x, y, z, w] in the saved results (one Model API query per scan).
+    Needed to turn 'seen on face j of sweep s' into a compass direction: each sweep's pano is turned differently."""
+    for name in sorted(os.listdir(OUT)):
+        p = os.path.join(OUT, name)
+        if not name.endswith(".json"):
+            continue
+        r = json.load(open(p, encoding="utf-8"))
+        if all("q" in s for s in r["sweeps"]):
+            continue
+        locs = matterport.gql("query($id:ID!){model(id:$id){locations{id panos{rotation{x y z w}}}}}",
+                              {"id": r["model_id"]})["model"]["locations"]
+        q = {l["id"]: [l["panos"][0]["rotation"][k] for k in "xyzw"] for l in locs if l["panos"]}
+        for s in r["sweeps"]:
+            if s["id"] in q:
+                s["q"] = q[s["id"]]
+        json.dump(r, open(p, "w", encoding="utf-8"), indent=1)
+        print(r["model_id"], sum("q" in s for s in r["sweeps"]), "/", len(r["sweeps"]), flush=True)
+
+
 if __name__ == "__main__":
     assert colored(Image.new("RGB", (40, 20), (200, 30, 30)), [0, 0, 40, 20]) == 1.0
     assert colored(Image.new("RGB", (40, 20), (40, 40, 40)), [0, 0, 40, 20]) == 0.0
+
+    def _sweep(sid, xy, psi, signs, scale=1.0):  # scan point at xy, pano yaw psi, seeing each sign as a real hit would
+        hits = []
+        for sx, sy in signs:
+            rel = (psi - math.atan2(sy - xy[1], sx - xy[0])) % (2 * math.pi)
+            j = round(rel / (math.pi / 2)) % 4
+            u = SIDE / 2 + SIDE / 2 * math.tan(math.remainder(rel - j * math.pi / 2, 2 * math.pi))
+            w = scale * WIDTH["exit sign"] * (SIDE / 2) / math.dist(xy, (sx, sy))  # scale < 1: reads farther
+            hits.append({"label": "exit sign", "face": j, "color": 1, "box": [u - w / 2, SIDE / 2 - w / 2, u + w / 2, SIDE / 2 + w / 2]})
+        return {"id": sid, "xy": xy, "q": [0, 0, math.sin(psi / 2), math.cos(psi / 2)], "hits": hits}
+    door, hall = (2.0, 3.0), (9.0, -2.0)
+    sw = [_sweep("a", (0.0, 0.0), 0.3, [door]), _sweep("b", (4.0, 0.0), -1.2, [door, hall]), _sweep("c", (8.0, 0.0), 2.5, [hall])]
+    found = locate(sw)
+    assert len(found) == 2, found  # two signs, not four sightings
+    assert all(f["seen_from"] == 2 and f["triangulated"] for f in found), found
+    far = _sweep("d", (2.0, -3.0), 1.0, [door], scale=0.75)  # 6 m away but reads 8 m: projects 2 m past the door
+    found = locate(sw + [far])
+    assert len(found) == 2 and max(f["seen_from"] for f in found) == 3, found  # joined along its sight line
+    assert any(math.dist(f["xy"], door) < 0.05 for f in found), found
+    assert any(math.dist(f["xy"], door) < 0.05 for f in found) and any(math.dist(f["xy"], hall) < 0.05 for f in found), found
+    assert near_exit(sw, m=3.7) == ["a", "c"] and near_exit(sw, m=2.3) == ["c"], near_exit(sw, m=3.7)  # door 3.6 m from a and b
     if sys.argv[1:] == ["--verify"]:
         sys.exit(verify_saved())
+    if sys.argv[1:] == ["--rotation"]:
+        sys.exit(add_rotation())
     args = sys.argv[1:] or ["233899"]  # property ids, or Matterport model ids to jump the queue
     proc, model = load()
     for a in args:

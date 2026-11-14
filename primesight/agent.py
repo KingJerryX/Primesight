@@ -87,9 +87,10 @@ def _scan_graph(scan_id):
 
 
 def walk_to(scan_id: str, target: str) -> str:
-    """Walk over a scanned floor's scan points (Matterport) to the nearest point within ~4 m of a SAM 3 find.
+    """Walk over a scanned floor's scan points (Matterport) to the scan point closest to a located SAM 3 find.
     target: 'exit sign', 'fire alarm pull station', 'fire extinguisher' or 'stairs'. Starts at the scan start
-    (where the scanner began, not necessarily the entry). Returns JSON {metres, legs, points_with_target} or why not."""
+    (where the scanner began, not necessarily the entry). Returns JSON {located, metres, legs, ...} or why not.
+    located = distinct objects after merging sightings from different scan points."""
     from . import matterport, vision
     p = os.path.join(ROOT, "cache", "vision", f"{scan_id}.json")
     if target not in vision.LABELS:
@@ -97,13 +98,14 @@ def walk_to(scan_id: str, target: str) -> str:
     if not os.path.exists(p):
         return json.dumps({"error": "no SAM 3 results for this scan"})
     v = json.load(open(p, encoding="utf-8"))
-    near = [s["id"] for s in v["sweeps"] if any(h["label"] == target and vision.kept(h) and vision.metres(h) <= 4 for h in s["hits"])]
+    near = vision.near_exit(v["sweeps"], label=target)
+    located = len(vision.locate(v["sweeps"], labels=(target,)))
     seen = sum(any(h["label"] == target and vision.kept(h) for h in s["hits"]) for s in v["sweeps"])
     sweeps = _scan_graph(scan_id)
     r = matterport.route(sweeps, sweeps[0]["id"], near)
     if not r or not r["exit"]:
-        return json.dumps({"target": target, "seen_from_points": seen, "near_points": 0, "result": "none seen up close"})
-    return json.dumps({"target": target, "seen_from_points": seen, "near_points": len(near), "metres": round(r["exit"]["m"]),
+        return json.dumps({"target": target, "located": located, "seen_from_points": seen, "near_points": 0, "result": "none located near a scan point"})
+    return json.dumps({"target": target, "located": located, "seen_from_points": seen, "near_points": len(near), "metres": round(r["exit"]["m"]),
                        "legs": [[round(m), t] for m, t in r["exit"]["legs"]], "far_end_metres": round(r["far"]["m"])})
 
 

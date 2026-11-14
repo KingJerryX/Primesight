@@ -10,7 +10,7 @@ Order of lines, after the header:
 2. ON FLOOR: who is on the fire floor, suites, headcount.
 3. WATER and WIND from outside-scout on one line: hydrants within 300 m with the two nearest (metres, direction), and wind
    from / mph / where smoke drifts (live Open-Meteo reading). Fall back to the HYDRANTS line in the draft if outside-scout fails.
-4. INSIDE: the scan line, and the EXIT SIGNS line from the scan if there is one. Say "seen from N of M scan points"; it is not a stair location.
+4. INSIDE: the scan line, and the EXIT SIGNS line from the scan if there is one. Say "N located (seen from X of Y scan points)": each located sign is counted once; it is not a stair location.
 5. Building: stories, year built, frame, sprinklers yes/no and type if known.
 6. ROOF and OPEN LOT for staging (aerial search, verify). NEXT TO from outside-scout if it has one (exposures:
    neighbouring building, distance, stories, sprinklers; kit records only), noting one that lies where smoke drifts.

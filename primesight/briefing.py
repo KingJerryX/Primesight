@@ -48,7 +48,10 @@ def gather(pid, floor):
     vpath = os.path.join(ROOT, "cache", "vision", f"{(scan or {}).get('id')}.json")
     if scan and os.path.exists(vpath):
         v = json.load(open(vpath, encoding="utf-8"))
-        vision = {"scan_points": len(v["sweeps"]), "scan_points_with": v["sweeps_with"]}
+        from .vision import SIGNS, locate
+        found = locate(v["sweeps"])  # sightings merged across scan points: one entry per physical sign
+        vision = {"scan_points": len(v["sweeps"]), "scan_points_with": v["sweeps_with"],
+                  "located": {lab: sum(g["label"] == lab for g in found) for lab in SIGNS}}
         if exact and scan["sweeps"]:  # never carry a route over from another floor
             from .vision import near_exit
             vision["route"] = soft("walk route", matterport.route, scan["sweeps"], scan["sweeps"][0]["id"], near_exit(v["sweeps"]))
@@ -68,31 +71,34 @@ def plan_px(xy, frame, height):
 
 
 def mark_plan(path, frame, sweeps, route=None):
-    """Draw each scan point on the floorplan: green where SAM 3 saw an exit sign, red ring for a pull station.
-    With a route: blue square at the scan start, yellow walk to the nearest close exit sign, cyan walk to the far end."""
+    """Draw each located sign once where it is (SAM 3 sightings merged across scan points): green exit sign, red pull
+    station; scan points as small grey dots. With a route: blue square at the scan start, yellow walk to the nearest
+    exit sign (over scan points, then straight to the sign), cyan walk to the far end."""
+    import math
     from PIL import Image, ImageDraw, ImageFont
-    from .vision import kept
+    from .vision import locate
     im = Image.open(path).convert("RGB")
     d, r = ImageDraw.Draw(im), max(10, im.width // 90)
+    px = lambda p: plan_px(p, frame, im.height)
+    signs = locate(sweeps)
+    exits = [g["xy"] for g in signs if g["label"] == "exit sign"]
     for key, color in (("far", (0, 190, 230)), ("exit", (255, 210, 0))):
         if route and route.get(key) and len(route[key]["xy"]) > 1:
-            d.line([plan_px(p, frame, im.height) for p in route[key]["xy"]], fill=color, width=max(6, r // 2), joint="curve")
+            pts = route[key]["xy"] + ([min(exits, key=lambda e: math.dist(e, route[key]["xy"][-1]))] if key == "exit" and exits else [])
+            d.line([px(p) for p in pts], fill=color, width=max(6, r // 2), joint="curve")
     for s in sweeps:
-        x, y = plan_px(s["xy"], frame, im.height)
-        seen = {h["label"] for h in s["hits"] if kept(h)}
-        box = (x - r, y - r, x + r, y + r)
-        if "exit sign" in seen:
-            d.ellipse(box, fill=(0, 200, 80), outline="white", width=3)
-        else:
-            d.ellipse((x - r / 3, y - r / 3, x + r / 3, y + r / 3), fill=(150, 150, 150))
-        if "fire alarm pull station" in seen:
-            d.ellipse((x - 1.6 * r, y - 1.6 * r, x + 1.6 * r, y + 1.6 * r), outline=(230, 30, 30), width=5)
+        x, y = px(s["xy"])
+        d.ellipse((x - r / 3, y - r / 3, x + r / 3, y + r / 3), fill=(150, 150, 150))
+    for g in signs:
+        x, y = px(g["xy"])
+        color = (0, 200, 80) if g["label"] == "exit sign" else (230, 30, 30)
+        d.rounded_rectangle((x - 1.2 * r, y - 0.8 * r, x + 1.2 * r, y + 0.8 * r), radius=r // 3, fill=color, outline="white", width=3)
     if route:
-        x, y = plan_px(sweeps[0]["xy"], frame, im.height)
+        x, y = px(sweeps[0]["xy"])
         d.rectangle((x - 1.4 * r, y - 1.4 * r, x + 1.4 * r, y + 1.4 * r), outline=(40, 90, 255), width=6)
     font = ImageFont.load_default(size=max(18, im.width // 45))
-    d.text((20, 20), "green: exit sign seen   red ring: pull station seen   grey: scan point", fill="white", font=font,
-           stroke_width=3, stroke_fill="black")
+    d.text((20, 20), "green: exit sign   red: pull station   (each found once, placed from the 3D scan)   grey: scan point",
+           fill="white", font=font, stroke_width=3, stroke_fill="black")
     if route:
         d.text((20, 30 + font.size), "blue: scan start   yellow: walk to exit sign   cyan: walk to far end", fill="white",
                font=font, stroke_width=3, stroke_fill="black")
@@ -106,7 +112,7 @@ def walk_line(route):
     The scan start is wherever the scanner began, often an office, so never call it the entry."""
     e = route["exit"]
     if e is None:
-        to_exit = "no exit sign seen up close"
+        to_exit = "no exit sign located near a scan point"
     elif e["m"] < 4:
         to_exit = "exit sign within ~4 m"
     else:
@@ -200,9 +206,9 @@ def compose(f, incident, label=None):
         L.append("INSIDE: no interior scan" + (" with a known floor" if f["scans"] else " for this building"))
     v = f.get("vision")
     if v:
-        w = v["scan_points_with"]
-        L.append(f"EXIT SIGNS seen at {w['exit sign']} of {v['scan_points']} scan points"
-                 + (f", pull stations at {w['fire alarm pull station']}" if w["fire alarm pull station"] else "")
+        w, n = v["scan_points_with"], v.get("located") or {}
+        L.append(f"EXIT SIGNS: {n.get('exit sign', 0)} located (seen from {w['exit sign']} of {v['scan_points']} scan points)"
+                 + (f", pull stations: {n.get('fire alarm pull station', 0)} located" if w["fire alarm pull station"] else "")
                  + ("" if f["scan_exact"] else f" (floor {s['floor']} scan)")
                  + (f"; {walk_line(v['route'])}" if v.get("route") else ""))
     pm = next((c for c in b["contacts"] if c["role"] == "Property manager"), None)
