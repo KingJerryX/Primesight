@@ -6,6 +6,8 @@ Running notes for the morning summary. Claude API budget: $25.
 | Time | What | Cost |
 |---|---|---|
 | 02:40 | sms.py self-check accidentally ran the live agent (load_dotenv refilled the popped key) | $0.35 |
+| 03:30-03:45 | Live batch 1: 8 calls, all 6 categories (now instant replays) | $4.10 |
+| 03:50 | Live batch 2: re-recorded active threat + gas leak, new types solar / battery / heat | $2.90 |
 
 ## Done
 - 02:20 Ranked the kit's buildings (`primesight/rank.py` -> cache/ranked.json): 60 office buildings, Houston and LA, one scan each (the floor with the most tenants). CoStar records for all 60 cached.
@@ -25,7 +27,19 @@ Running notes for the morning summary. Claude API budget: $25.
   - Replays now animate at the recorded pace; `?speed=3` plays faster.
 - 03:40 demo hub at http://localhost:8787/ linking every console, projector and phone, with live counts (buildings, SAM 3 floors, tenants, emergency types, playbooks, agent mode).
 
+- 03:28 Photon 2.0 bridge (`primesight/photon_bridge.py`, commits 0d2daa9, dcee5fd): polls received messages, replies on space.id / receivedBy.id with parentMessageId threading, typing indicator, image upload as multipart/related, shared-line `register` command. Starts inside the server when PHOTON_API_KEY + PHOTON_PROJECT_ID are set. `selftest` runs a full round trip against a local mock (paging, dedupe, group-chat skip, typing, upload). Morning steps in PHOTON_WALKTHROUGH.md.
+- 03:30 Second SAM 3 worker started from the far end of the queue (cache/vision_run4_reverse.txt); finished scans are skipped, so the two meet in the middle.
+- 03:35 outside-scout subagent (commit aad172c): `outside_now` tool gives live wind from Open-Meteo (keyless), every hydrant within 300 m, roof data. Fire and hazmat skills now carry a WIND/WATER line; wind is no longer NOT KNOWN. Graph projector shows the 4th subagent.
+- 03:40 Live batch of 8 calls across all six categories (cache/live_batch1.txt). inside-scout runs live (walk_to), all graded "satisfied" on the first five.
+- 03:45 Catalog now 31 types: rooftop/solar fire (Vexcel roof solar flag), lithium battery fire, vehicle into building, heat illness (live temperature), unknown odor. Fixed keyword order bugs: "Electrical fire on the 5th floor" was matching structure_fire ("fire on"), "heat stroke" would have matched stroke, "solar panel" would have matched electrical ("panel"). 11 classification asserts in the server self-test.
+
+- 03:50 Live batch 2 (cache/live_batch2.txt): the profiling line is gone from the active-threat briefing; gas leak now carries "WIND: from NNE 5.4 mph, gas drifts SSW"; solar fire cross-checked layers itself ("No solar panels seen in 2022 aerial"); battery fire used 4 subagents in parallel (outside-scout, inside-scout, tenant-risk, notify-writer).
+- 03:55 Los Angeles buildings had 0 hydrants (only Houston had a layer). The LA County Fire layers return 0 inside the City of LA; the City's DWP layer (maps.lacity.org Fire_Department/MapServer/0) works: 12-65 hydrants within 300 m. Heat illness and unknown odor calls now go to outside-scout too (temperature, wind).
+- 04:00 Research: AED detection with SAM 3 does not work. "AED cabinet" boxes any wall cabinet (top hit: a keypad safe at 0.96), "AED" hit a fire-extinguisher cabinet. AED stays NOT KNOWN; a false AED is worse than none. RESEARCH_EMERGENCIES.md (local, not in repo): all 31 types with layers and needs, plus the live briefings.
+- Building notes: every live test run appends a "crew note" to cache/buildings/<pid>.md, and later briefings cite them ("same report logged ... may be a repeat call"). Before the demo these test notes get archived to cache/buildings_test_archive/ (moved, not deleted).
 ## Errors and fixes
+- Live active-threat run labelled an advocacy organization "possible target (from name only)". Profiling by religion/ethnicity/nationality/politics is now forbidden in AGENTS.md (always in the prompt), tenant-risk's prompt and the security skill (commit 82aae86). That run's recording gets deleted and re-recorded.
+- I accidentally started a second server on 8787 while the batch ran (Windows let both bind). Killed it by PID within a minute.
 - load_dotenv refills a popped env var: set ANTHROPIC_API_KEY="" (not pop) to force the free path in self-checks. Commented on the dotenv note.
 - CARTO dark_all tiles now say "API KEY REQUIRED" -> OSM tiles + CSS invert filter. ChatOverflow note posted.
 - Projectors showed nothing: `/trace` is `application/x-ndjson`, the fetch helper's `ct.includes("json")` sent it to `r.json()`, and the poller's catch swallowed the SyntaxError. Fixed with `startsWith("application/json")`. ChatOverflow note posted.
