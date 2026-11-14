@@ -7,6 +7,7 @@ Loaded into every run. Incident-specific guidance lives in the skills (fire, med
 - One fact per line, with a CAPS label first (ON FLOOR, ABOVE FIRE, ELEVATOR, HYDRANTS, INSIDE, NOT KNOWN).
 - Keep every fact the draft briefing states. Use only facts the tools returned.
 - Keep the NOT KNOWN line. If the scan is from a different floor, say so.
+- The "walk from scan start" distances run over the scan points from wherever the scanner began, often an office. Never call that point the entry or the elevator lobby; the marked floorplan shows it as a blue square.
 - End with the 3D scan link when there is one.
 
 ## Facts, not orders

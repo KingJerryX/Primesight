@@ -111,6 +111,17 @@ def kept(h):
     return h["label"] not in SIGNS or h.get("color", 0) >= MIN_COLOR
 
 
+def metres(h, width=0.3):
+    """Rough distance to a hit: a skybox face is a 90-degree pinhole view, so focal length = SIDE / 2 px.
+    ponytail: assumes a 0.3 m wide exit sign seen face-on; an angled sign reads farther (the safe side)."""
+    return width * (SIDE / 2) / max(h["box"][2] - h["box"][0], 1)
+
+
+def near_exit(sweeps, m=4):
+    """Ids of scan points standing within ~m metres of an exit sign."""
+    return [s["id"] for s in sweeps if any(h["label"] == "exit sign" and kept(h) and metres(h) <= m for h in s["hits"])]
+
+
 def counts(sweeps):
     return {lab: sum(any(h["label"] == lab and kept(h) for h in s["hits"]) for s in sweeps) for lab in LABELS}
 

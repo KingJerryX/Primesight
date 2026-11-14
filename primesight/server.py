@@ -89,7 +89,7 @@ def facts(f, incident):
             "hydrants": [{"m": m, "dir": d, "lat": la, "lon": lo} for m, d, la, lo in f["hydrants"][:5]],
             "staging": [{"m": m, "dir": d, "lat": la, "lon": lo, "score": s} for s, m, d, la, lo in f["staging"][:3]],
             "scan": {"floor": scan.get("floor"), "exact": f["scan_exact"], "link": scan.get("link")},
-            "vision": vis}
+            "vision": vis, "walk": briefing.walk_line(r) if (r := (f.get("vision") or {}).get("route")) else None}
 
 
 DEMO = os.path.join(briefing.ROOT, "cache", "demo")  # recorded runs, keyed by call text

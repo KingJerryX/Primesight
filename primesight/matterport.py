@@ -82,6 +82,38 @@ def walk_graph(sweeps):
     return g
 
 
+def legs(pts):
+    """Polyline -> [[metres, turn]]. turn is "" for the first leg, else "left"/"right"
+    (model y points up, so a counter-clockwise turn is a left)."""
+    import math
+    out, head = [], None
+    for a, b in zip(pts, pts[1:]):
+        h, m = math.atan2(b[1] - a[1], b[0] - a[0]), math.dist(a, b)
+        turn = 0 if head is None else (h - head + math.pi) % (2 * math.pi) - math.pi
+        if not out or abs(turn) < math.radians(50) or m < 2:  # small bends and short hops aren't turns
+            out = out or [[0, ""]]
+            out[-1][0] += m
+        else:
+            out.append([m, "left" if turn > 0 else "right"])
+        head = h
+    return out
+
+
+def route(sweeps, start, targets):
+    """Walks over the scan-point graph from `start`: to the nearest of `targets` (sweep ids) and to the farthest
+    reachable point. Returns {"exit": {"m", "legs", "xy"} or None, "far": {"m", "xy"}} or None."""
+    import networkx as nx
+    g = walk_graph(sweeps)
+    if start not in g:
+        return None
+    dist, paths = nx.single_source_dijkstra(g, start)
+    pos = {s["id"]: s["xy"] for s in sweeps}
+    reach = [t for t in targets if t in dist]
+    end, far = (min(reach, key=dist.get) if reach else None), max(dist, key=dist.get)
+    ex = {"m": dist[end], "legs": legs([pos[n] for n in paths[end]]), "xy": [pos[n] for n in paths[end]]} if end else None
+    return {"exit": ex, "far": {"m": dist[far], "xy": [pos[n] for n in paths[far]]}}
+
+
 def download(url, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     open(path, "wb").write(requests.get(url, timeout=60).content)
@@ -91,6 +123,11 @@ def download(url, path):
 if __name__ == "__main__":
     assert scan_floor("Suite 1500") == 15 and scan_floor("Level 53") == 53 and scan_floor("Lobby") is None
     assert scan_floor("1500 - Some Plaza") == 15 and scan_floor("1000 Louisiana - Suite 3700") == 37
+    assert legs([(0, 0), (5, 0), (5, 3), (2, 3)]) == [[5, ""], [3, "left"], [3, "left"]]  # y up: north after east is left
+    sw = [{"id": "a", "xy": (0, 0), "neighbors": ["b"]}, {"id": "b", "xy": (4, 0), "neighbors": ["a", "c"]},
+          {"id": "c", "xy": (4, -3), "neighbors": ["b"]}]
+    r = route(sw, "a", ["b"])
+    assert r["exit"]["m"] == 4 and r["far"]["m"] == 7 and legs(r["far"]["xy"])[1][1] == "right"
     import sys, json
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     from primesight.costar import building

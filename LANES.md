@@ -153,8 +153,9 @@ Do them roughly in this order. Size: S is under 2 hours, M is 2 to 5, L is more.
    - Never carry over room names or a walking route from another floor.
 9. **Test the tenant check (Should, S).**
    - **What:** pick a building from the kit with a clinic, school or lab tenant, run it, and confirm the helper flags it without inventing anything.
-10. **Walking route (Stretch, M).**
-    - **What:** the shortest path over the scan-point graph (`matterport.walk_graph`) from the scan's entrance to the suite, turned into one plain line ("from the elevator lobby, left, about 30 m").
+10. **Walking route (Stretch, M).** Done.
+    - **What:** the shortest path over the scan-point graph (`matterport.route`) from the scan start to the nearest point within ~4 m of an exit sign (distance estimated from the SAM 3 box width), plus the walk to the far end of the scan. It goes on the EXIT SIGNS line ("walk from scan start: exit sign ~23 m (4 m, right 3 m, left 16 m), far end ~64 m"), and is drawn on the floorplan (blue square = start, yellow = to exit sign, cyan = to far end). `/run` has it as `walk`.
+    - **Limits:** exact scanned floors only. The scan start is where the scanner began, often an office, so it is never called the entry. Suite scans usually start next to an exit sign, so the exit leg is often "within ~4 m".
 
 ### Your demo moments
 
