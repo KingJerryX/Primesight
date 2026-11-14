@@ -24,10 +24,11 @@ function makeMap(container, opts = {}) {
   const target = document.createElement("div"); target.className = "target";
   const marker = new maplibregl.Marker({ element: target });
   // Colour the chosen building: every footprint that contains the building's point (a tower can be several parts and tile pieces).
-  function highlight(b) {
+  // keep = true adds this building to the ones already coloured instead of replacing them.
+  function highlight(b, keep) {
     if (!map.getSource("omt")) return false;
     const where = { source: "omt", sourceLayer: "building" };
-    map.removeFeatureState(where);
+    if (!keep) map.removeFeatureState(where);
     const hit = b ? map.querySourceFeatures("omt", { sourceLayer: "building" }).filter(f => f.id != null && (f.geometry.type === "Polygon" ? [f.geometry.coordinates] : f.geometry.type === "MultiPolygon" ? f.geometry.coordinates : []).some(poly => inRing([b.lon, b.lat], poly[0]))) : [];
     for (const id of new Set(hit.map(f => f.id))) map.setFeatureState({ ...where, id }, { sel: true });
     if (hit.length) marker.remove();  // the coloured building marks it better than a ring that nearer towers can sit behind
@@ -39,9 +40,10 @@ function makeMap(container, opts = {}) {
     map.easeTo({ bearing: map.getBearing() + 90, duration: 24000, easing: t => t });
     map.once("moveend", () => spin(id));
   }
-  function fly(b) {
+  // view overrides the camera, e.g. {zoom: 15, pitch: 0} for a wider or a top-down look.
+  function fly(b, view) {
     if (!b.lat) return;
-    const id = ++orbit, to = { center: [b.lon, b.lat], zoom: 17.2 - Math.min(1.4, (b.stories || 0) / 50), pitch: 62 };  // pull back for towers
+    const id = ++orbit, to = { center: [b.lon, b.lat], zoom: 17.2 - Math.min(1.4, (b.stories || 0) / 50), pitch: 62, ...view };  // pull back for towers
     marker.setLngLat(to.center).addTo(map); highlight(null);
     const arrive = () => { if (id === orbit && !highlight(b)) setTimeout(() => id === orbit && highlight(b), 1500); };  // tiles may still be loading
     if (REDUCED) { map.jumpTo(to); return map.once("idle", arrive); }
@@ -51,5 +53,5 @@ function makeMap(container, opts = {}) {
   const hold = () => { orbit++; map.stop(); };              // stop circling (the map is off screen, or the user took the camera)
   const resume = () => { if (!REDUCED) spin(++orbit); };
   for (const ev of ["mousedown", "touchstart", "wheel"]) map.on(ev, hold);
-  return { map, fly, hold, resume };
+  return { map, fly, hold, resume, highlight };
 }

@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="site.css">
 <style>
   /* Home: a hero that loops through live map flights, a mission line, a strip of the data, and why it matters. */
+  [hidden] { display: none !important; }
   body { font-size: 17px; line-height: 1.5; }
   h1, h2 { font-weight: 400; letter-spacing: -.02em; margin: 0; }
   section { padding: clamp(72px, 14vh, 150px) clamp(16px, 4vw, 56px); }
@@ -27,6 +28,30 @@
   .dots button { background: none; border-radius: 0; color: #fff; opacity: .45; padding: 8px 10px; font: inherit; letter-spacing: inherit; }
   .dots button[aria-selected="true"] { opacity: 1; box-shadow: 0 1px 0 #fff; }
   .target { display: none; }  /* no ring on the hero: the raised building is the mark */
+  /* First responder scene: each call is a card standing on its building, with a beating dot at the foot. */
+  .call { padding-bottom: 32px; animation: rise .5s var(--ease) both; }
+  .call div { display: grid; gap: 3px; padding: 9px 12px 10px; background: #050506e6; border: 1px solid var(--accent); color: #fff; white-space: nowrap; }
+  .call b { font-weight: 500; font-size: 15px; } .call span { color: var(--accent); font-size: 10px; }
+  .call::after { content: ""; position: absolute; left: 50%; bottom: 5px; width: 1px; height: 27px; background: var(--accent); }
+  .call::before { content: ""; position: absolute; left: calc(50% - 5px); bottom: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); animation: beat 1.4s infinite; }
+  @keyframes rise { from { opacity: 0; translate: 0 12px; } }
+  @keyframes beat { from { box-shadow: 0 0 0 0 #ff5a36b3; } to { box-shadow: 0 0 0 16px #ff5a3600; } }
+  /* Game scene: a sweep from the building, its hydrants dropping in, a clock and the objectives ticking off. */
+  .sonar { width: 14px; height: 14px; border-radius: 50%; background: #fff; }
+  .sonar::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 1px solid #fff; animation: sweep 2.8s linear infinite; }
+  @keyframes sweep { from { transform: scale(1); opacity: .9; } to { transform: scale(26); opacity: 0; } }
+  /* The dot is drawn on ::before: scaling the marker element itself would also scale the offset MapLibre places it with. */
+  .hydrant { width: 12px; height: 12px; }
+  .hydrant::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--blue); border: 2px solid #fff; animation: drop .45s var(--ease) both; transition: scale .3s var(--ease), box-shadow .3s; }
+  .hydrant.found::before { background: var(--ok); scale: 1.6; box-shadow: 0 0 0 7px #2ed3a759, 0 0 26px var(--ok); }
+  @keyframes drop { from { opacity: 0; scale: 2.6; } }
+  #hud { position: absolute; z-index: 1; left: clamp(16px, 4vw, 56px); top: 104px; display: grid; gap: 9px; min-width: 200px; padding: 16px 18px; background: #050506cc; border: 1px solid var(--rule); }
+  #hud b { margin-bottom: 6px; font: 400 46px/1 var(--code); letter-spacing: -.02em; text-transform: none; font-variant-numeric: tabular-nums; }
+  #hud b::after { content: " s"; font-size: 14px; color: var(--dim); }
+  #hud span { display: flex; align-items: center; gap: 10px; color: var(--dim); }
+  #hud span::before { content: ""; width: 10px; height: 10px; border: 1px solid var(--dim); }
+  #hud span.done { color: #fff; } #hud span.done::before { background: var(--ok); border-color: var(--ok); }
+  #hud.sent b { color: var(--ok); }
   /* Over the hero the pointer becomes a frosted circle with a chevron; a click goes to the slide on that side. */
   #cursor { position: fixed; z-index: 5; left: -55px; top: -55px; width: 110px; height: 110px; border-radius: 50%; display: grid; place-items: center; pointer-events: none;
             background: #ffffff33; -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); opacity: 0; scale: .4; transition: opacity .25s var(--ease), scale .25s var(--ease); }
@@ -39,6 +64,14 @@
                            linear-gradient(#fff 0 0) 0 100%/9px 1px, linear-gradient(#fff 0 0) 0 100%/1px 9px, linear-gradient(#fff 0 0) 100% 100%/9px 1px, linear-gradient(#fff 0 0) 100% 100%/1px 9px;
                background-repeat: no-repeat; }
 
+  /* The mission line types itself out when it scrolls into view. The untyped rest is laid out but invisible, so nothing shifts. */
+  #mission .rest { visibility: hidden; }
+  #mission .typed::after { content: ""; display: inline-block; width: 2px; height: .95em; margin-left: 3px; vertical-align: -.1em; background: var(--accent); animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  /* The three sections under the hero read as three panels: a rule between them and a different ground for each. */
+  .mission, .layers, .why { border-top: 1px solid var(--rule); }
+  .layers { background: #0c1016; }
+  .why { background: repeating-linear-gradient(90deg, #ffffff08 0 1px, #0000 1px 96px); }
   .head { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 56px; }
   h2 { font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; }
   .layers { padding-left: 0; padding-right: 0; } .layers .head { padding: 0 clamp(16px, 4vw, 56px); }
@@ -57,7 +90,7 @@
 
   .credit { padding: 0 clamp(16px, 4vw, 56px) 40px; font-size: 11px; color: #5d6873; }
   @media (max-width: 760px) { .why { grid-template-columns: 1fr; } }
-  @media (prefers-reduced-motion: reduce) { .slide { transition: none; } .track { animation: none; } .strip { overflow-x: auto; } }
+  @media (prefers-reduced-motion: reduce) { .slide { transition: none; } .track, #mission .typed::after { animation: none; } .strip { overflow-x: auto; } }
 </style>
 </head>
 <body>
@@ -66,17 +99,18 @@
 <section class="hero" aria-roledescription="carousel" aria-label="What Primesight does">
   <div id="heromap"></div>
   <!-- Same order as the navbar: first responder on the left, home in the middle (where the hero starts), game on the right. -->
-  <div class="slide"><h1>First responder</h1><p>Choose the building, the floor and the emergency. The crew gets one text.</p><a class="btn" href="dispatch-judge.html">Send a dispatch</a></div>
+  <div class="slide"><h1>First responder</h1><p>Choose the building, the floor and the emergency. The crew gets one text.</p><a class="btn" href="dispatch-judge.html">Open first responder</a></div>
   <div class="slide on"><h1>Primesight</h1><p>A briefing on the building, sent before the crew arrives.</p><a class="btn" href="dispatch-judge.html">First responder mode</a></div>
   <div class="slide"><h1>Game</h1><p>Take an emergency call. Report the hydrant, the exits and the elevators before the clock runs out.</p><a class="btn" href="game.html">Play the game</a></div>
   <div class="dots caps" role="tablist" aria-label="Slides"><button role="tab">1</button><button role="tab">2</button><button role="tab">3</button></div>
+  <div id="hud" class="caps" aria-hidden="true" hidden><b id="clock">00.0</b><span>Hydrant</span><span>Exits</span><span>Elevators</span></div>
   <div id="cursor" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="1.3"><path d="M6 2.5 11.5 8 6 13.5"/></svg></div>
 </section>
 
-<section class="mission"><p>Our mission is to tell every crew what is inside the building before they reach the door.</p></section>
+<section class="mission"><p id="mission">Our mission is to tell every crew what is inside the building before they reach the door.</p></section>
 
 <section class="layers">
-  <div class="head"><h2>Three views of one address</h2><a class="btn" href="dispatch-judge.html">Send a dispatch</a></div>
+  <div class="head"><h2>Three views of one address</h2></div>
   <div class="strip"><div class="track" id="track"></div></div>
 </section>
 
@@ -84,9 +118,8 @@
   <div>
     <h2>Known before the door</h2>
     <p>A crew usually learns a building on arrival: which entrance, which stairs, who is on the floor. Primesight reads the 3D scans, aerial photos and tenant records for that address and sends the answer as one text while the truck is still moving. Where the data runs out, it says so.</p>
-    <a class="btn" href="dispatch-judge.html">Try a dispatch</a>
   </div>
-  <img src="/img/247506_f56MRgHWx9G_plan_marked.jpg" alt="Floor plan of a scanned office floor with the exits marked" loading="lazy">
+  <img src="/img/233953_wovF4kpoaw4_plan_marked.jpg" alt="Floor plan of a scanned office floor with four exit signs and an alarm pull station marked" loading="lazy">
 </section>
 
 <footer class="credit">Imagery: Esri, Maxar. Map data: OpenStreetMap, OpenFreeMap. Aerial photos: Vexcel. 3D scans: Matterport. Building records: CoStar.</footer>
@@ -94,14 +127,53 @@
 <script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
 <script src="site.js"></script>
 <script>
-// Hero: each slide flies the live map to a real building in the data and circles it.
-// All three are towers in downtown Houston, a few blocks apart, so the camera makes short pans over tiles it already has.
-const STOPS = [
-  { lat: 29.7588018, lon: -95.3650891, stories: 27 },   // 808 Travis St
-  { lat: 29.7584604, lon: -95.3682126, stories: 71 },   // 1000 Louisiana St
-  { lat: 29.7607687, lon: -95.366467, stories: 56 },    // 700 Louisiana St
+// Hero: one live map, three scenes. All of it is downtown Houston, a few blocks apart, so the camera pans over tiles it has.
+const TOWER = { lat: 29.7584604, lon: -95.3682126, stories: 71 };  // 1000 Louisiana St
+const TRAVIS = { lat: 29.7588018, lon: -95.3650891, stories: 27 };  // 808 Travis St
+// Example calls for the first responder scene: emergency types from the catalog, at real buildings in the data.
+const CALLS = [
+  [TOWER, "Cardiac arrest", "1000 Louisiana St, floor 36"],
+  [TRAVIS, "Smoke investigation", "808 Travis St, floor 5"],
+  [{ lat: 29.7607687, lon: -95.366467 }, "Natural gas odor", "700 Louisiana St, floor 12"],
+  [{ lat: 29.7547798, lon: -95.3698082 }, "Fall / injury", "1415 Louisiana St, floor 20"],
 ];
-const { map, fly } = makeMap("heromap", { interactive: false, center: [STOPS[1].lon, STOPS[1].lat], zoom: 15.8, pitch: 62 });  // start at the home stop
+const { map, fly, highlight } = makeMap("heromap", { interactive: false, center: [TOWER.lon, TOWER.lat], zoom: 15.8, pitch: 62 });  // start at the home scene
+let undo = [];  // what the current scene put on the map, so the next one starts clean
+const later = (fn, ms) => { const t = setTimeout(fn, REDUCED ? 0 : ms); undo.push(() => clearTimeout(t)); };
+function pin(b, cls, html = "") {
+  const el = document.createElement("div"); el.className = cls; el.innerHTML = html;
+  const m = new maplibregl.Marker({ element: el, anchor: cls === "call" ? "bottom" : "center" }).setLngLat([b.lon, b.lat]).addTo(map);
+  undo.push(() => m.remove());
+  return el;
+}
+const SCENES = [
+  // First responder: the view pulls back over downtown and calls come in, one building after another.
+  () => {
+    fly(TOWER, { zoom: 15.5, pitch: 46 });
+    CALLS.forEach(([b, what, where], k) => later(() => { highlight(b, true); pin(b, "call", `<div><b>${what}</b><span class="caps">${where}</span></div>`); }, 3200 + k * 1900));
+  },
+  // Home: one building, circled.
+  () => fly(TOWER),
+  // Game: straight down on one building, its real hydrants dropping in, a clock running and the objectives ticking off.
+  () => {
+    fly(TRAVIS, { zoom: 17.4, pitch: 0 });
+    pin(TRAVIS, "sonar");
+    const hud = document.getElementById("hud"), clock = document.getElementById("clock"), t0 = performance.now();
+    hud.hidden = false; hud.className = "caps"; hud.querySelectorAll("span").forEach(x => x.className = "");
+    undo.push(() => hud.hidden = true);
+    const tick = setInterval(() => clock.textContent = ((performance.now() - t0) / 1000).toFixed(1).padStart(4, "0"), 100);
+    undo.push(() => clearInterval(tick));
+    hud.querySelectorAll("span").forEach((x, k) => later(() => x.className = "done", 5200 + k * 2400));
+    later(() => { clearInterval(tick); hud.classList.add("sent"); }, 5200 + 2 * 2400);  // the clock stops with the last objective
+    const scene = undo;  // the hydrant list arrives later: only use it if this scene is still the one on screen
+    fetch(`https://services.arcgis.com/NummVBqZSIJKUeVR/ArcGIS/rest/services/wHydrant/FeatureServer/0/query?geometry=${TRAVIS.lon},${TRAVIS.lat}&geometryType=esriGeometryPoint&inSR=4326&distance=170&units=esriSRUnit_Meter&outFields=OBJECTID&returnGeometry=true&outSR=4326&f=json`)
+      .then(r => r.json()).then(d => {
+        if (scene !== undo) return;
+        const far = f => Math.hypot((f.geometry.x - TRAVIS.lon) * Math.cos(TRAVIS.lat * Math.PI / 180), f.geometry.y - TRAVIS.lat);
+        d.features.sort((a, b) => far(a) - far(b)).forEach((f, k) => later(() => { const el = pin({ lon: f.geometry.x, lat: f.geometry.y }, "hydrant"); if (!k) later(() => el.classList.add("found"), 3400); }, 1600 + k * 180));
+      }).catch(() => {});  // no hydrants, no problem: the clock and the objectives still run
+  },
+];
 const slides = [...document.querySelectorAll(".slide")], dots = [...document.querySelectorAll(".dots button")];
 let at = -1, timer, step = 1;
 const can = d => at + d >= 0 && at + d < slides.length;  // the slides don't loop: the ends are ends
@@ -110,7 +182,8 @@ function show(k) {
   at = k;
   slides.forEach((el, n) => el.classList.toggle("on", n === at));
   dots.forEach((el, n) => el.setAttribute("aria-selected", n === at));
-  fly(STOPS[at]);
+  undo.forEach(fn => fn()); undo = [];
+  SCENES[at]();
   clearTimeout(timer);
   if (!REDUCED) timer = setTimeout(() => { if (!can(step)) step = -step; show(at + step); }, 14000);  // on its own it goes there and back
   mark();
@@ -136,6 +209,23 @@ if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
     if (!raf) raf = requestAnimationFrame(tick);
   });
   hero.addEventListener("pointerleave", () => { inside = false; cur.classList.remove("on"); hero.classList.remove("cursing"); });
+}
+
+// The mission line: typed out once, the first time it is on screen. Screen readers get the whole sentence from aria-label.
+{
+  const p = document.getElementById("mission"), text = p.textContent;
+  if (!REDUCED) {
+    p.setAttribute("aria-label", text);
+    p.innerHTML = `<span class="typed" aria-hidden="true"></span><span class="rest" aria-hidden="true"></span>`;
+    const [typed, rest] = p.children;
+    rest.textContent = text;
+    new IntersectionObserver((seen, io) => {
+      if (!seen[0].isIntersecting) return;
+      io.disconnect();
+      let n = 0;
+      const key = setInterval(() => { n++; typed.textContent = text.slice(0, n); rest.textContent = text.slice(n); if (n >= text.length) clearInterval(key); }, 34);
+    }, { threshold: .6 }).observe(p);
+  }
 }
 
 // The strip: real outputs for buildings in the data. Listed twice so the loop has no seam.
