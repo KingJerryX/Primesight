@@ -14,6 +14,13 @@ def log(run_id, step, detail=""):
         fh.write(json.dumps({"t": round(time.time() - t0, 2), "step": step, "detail": detail}) + "\n")
 
 
+def write(run_id, lines):
+    """Append already-formatted JSON lines (a recorded run being replayed)."""
+    os.makedirs(DIR, exist_ok=True)
+    with open(os.path.join(DIR, f"{run_id}.jsonl"), "a", encoding="utf-8") as fh:
+        fh.write(lines)
+
+
 def read(run_id):
     p = os.path.join(DIR, f"{run_id}.jsonl")
     return open(p, encoding="utf-8").read() if os.path.exists(p) else ""

@@ -5,7 +5,7 @@ POST /brief     {"text", "thread"?}   -> {"briefing", "images", "property_id", "
 POST /feedback  {"property_id", "text"} -> {"ok": true}
 GET  /trace/<run_id>                  -> JSON lines, one per step
 """
-import json, os, re, uuid
+import hashlib, json, os, re, uuid
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from . import briefing, trace
 
@@ -47,6 +47,24 @@ def brief(text, run_id):
     return {"briefing": text_out, "images": images, "property_id": pid}
 
 
+DEMO = os.path.join(briefing.ROOT, "cache", "demo")  # recorded runs, keyed by call text
+
+
+def brief_or_replay(text, run_id):
+    """Live runs are recorded. With PRIMESIGHT_REPLAY=1 a recorded call returns instantly, trace included
+    (each trace line keeps its original t, so the projector can animate it)."""
+    path = os.path.join(DEMO, hashlib.sha1(" ".join(text.lower().split()).encode()).hexdigest()[:16] + ".json")
+    if os.environ.get("PRIMESIGHT_REPLAY") and os.path.exists(path):
+        rec = json.load(open(path, encoding="utf-8"))
+        trace.write(run_id, rec["trace"])
+        return {**rec["out"], "replayed": True}
+    out = brief(text, run_id)
+    if out["property_id"]:
+        os.makedirs(DEMO, exist_ok=True)
+        json.dump({"text": text, "out": out, "trace": trace.read(run_id)}, open(path, "w", encoding="utf-8"), indent=1)
+    return out
+
+
 def add_note(pid, text):
     from .agent import add_building_note
     add_building_note(pid, f"crew: {text}")
@@ -81,7 +99,7 @@ class H(BaseHTTPRequestHandler):
                 return self._send(400, {"error": "text is required"})
             run_id = uuid.uuid4().hex[:12]
             try:
-                out = brief(body["text"], run_id)
+                out = brief_or_replay(body["text"], run_id)
             except Exception as e:  # the crew still needs *something*
                 trace.log(run_id, "error", repr(e)[:200])
                 out = {"briefing": f"PRIMESIGHT: briefing failed ({type(e).__name__}). Proceed on standard procedure.",
