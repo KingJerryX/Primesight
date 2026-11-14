@@ -153,6 +153,9 @@ def outside_now(property_id: int) -> str:
         out["roof"] = outside.roof(b["lat"], b["lon"])
     except Exception as e:
         out["roof"] = {"error": f"roof data unavailable ({type(e).__name__})"}
+    # Exposures: only buildings in the CoStar kit, a sample, so an unlisted building may stand closer
+    out["next_to"] = {"buildings_within_100m": costar.neighbors(int(property_id)),
+                      "note": "CoStar kit records only; other buildings may be closer"}
     return json.dumps(out, default=str)
 
 
@@ -230,12 +233,15 @@ INSIDE_SCOUT = {
 OUTSIDE_SCOUT = {
     "name": "outside-scout",
     "description": "Reports the live outside picture for a building: wind now (where smoke or gas will drift), every hydrant "
-                   "within 300 m, roof data. Give it the property id and the incident. Use it for fire, hazmat and gas or "
-                   "smoke calls, where wind and water supply change the approach.",
-    "system_prompt": "You report outside conditions for a fire crew. Call outside_now once. Reply in at most 2 lines: "
-                     "'WIND: from <dir> <mph> mph (gusts <n>), smoke/gas drifts <dir> | <temp>F' and 'WATER: <n> hydrants "
-                     "within 300 m, nearest <m> m <dir>, <m> m <dir>'. If a layer has an error, write '<layer> unavailable'. "
-                     "Report facts only: never say where to stage or which side to approach from.",
+                   "within 300 m, roof data, and neighbouring buildings within 100 m (exposures). Give it the property id "
+                   "and the incident. Use it for fire, hazmat and gas or smoke calls, where wind, water supply and "
+                   "exposures change the approach.",
+    "system_prompt": "You report outside conditions for a fire crew. Call outside_now once. Reply in at most 3 lines: "
+                     "'WIND: from <dir> <mph> mph (gusts <n>), smoke/gas drifts <dir> | <temp>F', 'WATER: <n> hydrants "
+                     "within 300 m, nearest <m> m <dir>, <m> m <dir>', and, only if next_to lists buildings, "
+                     "'NEXT TO: <name> <m> m <dir>, <stories> stories, sprinklers <yes/no/unknown> (kit records only)'. "
+                     "Mention when a neighbour lies in the drift direction. If a layer has an error, write '<layer> "
+                     "unavailable'. Report facts only: never say where to stage or which side to approach from.",
     "model": ChatAnthropic(model=MODEL, max_tokens=800),
     "tools": [outside_now],
 }
@@ -307,6 +313,12 @@ def _text(m):
     return m.content if isinstance(m.content, str) else "".join(b.get("text", "") for b in m.content if isinstance(b, dict))
 
 
+def _from_header(text):
+    """After a grader revision the model sometimes explains its changes before the briefing; that must not reach the SMS."""
+    i = text.find("PRIMESIGHT |")
+    return text[i:] if i > 0 else text
+
+
 def run(call_text, run_id=None, rubric=RUBRIC_BRIEF):
     """One turn on thread run_id (a new call, or a CREW: reply). The trace includes the subagents' own steps."""
     from langchain_core.callbacks import get_usage_metadata_callback
@@ -335,7 +347,7 @@ def run(call_text, run_id=None, rubric=RUBRIC_BRIEF):
     cost = f"{tin} in / {tout} out tokens, ~${(tin * 4 + tout * 20) / 1e6:.2f}"  # all Opus 5.5 list price, no cache discount
     print(f"  usage: {cost}", file=sys.stderr)
     trace.log(run_id, "usage", cost)
-    return _text(out)
+    return _from_header(_text(out)) if rubric == RUBRIC_BRIEF else _text(out)
 
 
 def ask(run_id, text, call_text=None):
@@ -349,6 +361,8 @@ if __name__ == "__main__":
     assert json.loads(find_building("Smoke on floor 30, 1000 Louisiana St, Houston"))[0]["property_id"] == 233899
     assert queue_text("property manager", "Fire on  12", {"configurable": {"thread_id": "t"}}) == "queued" \
         and OUTBOX["t"] == [{"to": "property manager", "text": "Fire on 12"}]
+    assert _from_header("I fixed the hydrants.\n\nPRIMESIGHT | FIRE | FLOOR 6\nx") == "PRIMESIGHT | FIRE | FLOOR 6\nx"
+    assert _from_header("PRIMESIGHT | FIRE\nx") == "PRIMESIGHT | FIRE\nx" and _from_header("Stair B is locked.") == "Stair B is locked."
     if not os.environ.get("ANTHROPIC_API_KEY"):
         sys.exit("Add ANTHROPIC_API_KEY to .env to run the agent. (self-checks passed.)")
     print(run(" ".join(sys.argv[1:]) or "Cardiac arrest, 30th floor, 1000 Louisiana St, Houston. Caller is a coworker."))

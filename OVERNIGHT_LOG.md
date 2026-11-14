@@ -9,7 +9,8 @@ Running notes for the morning summary. Claude API budget: $25.
 | 03:30-03:45 | Live batch 1: 8 calls, all 6 categories (now instant replays) | $4.10 |
 | 03:50 | Live batch 2: re-recorded active threat + gas leak, new types solar / battery / heat | $2.90 |
 | 04:00 | Phone flow follow-up (live /ask) + live batch 3: vehicle into building at night, unknown odor, Saturday smoke in LA | $2.03 |
-| | **Total so far** | **~$9.40 of $25** |
+| 04:20 | Live batch 4: two fire calls with the new exposures layer | $1.44 |
+| | **Total so far** | **~$10.85 of $25** |
 
 ## Done
 - 02:20 Ranked the kit's buildings (`primesight/rank.py` -> cache/ranked.json): 60 office buildings, Houston and LA, one scan each (the floor with the most tenants). CoStar records for all 60 cached.
@@ -42,6 +43,7 @@ Running notes for the morning summary. Claude API budget: $25.
 - 04:00 Judge mode: time of call and free details; AGENTS.md treats headcounts as daytime figures. Live batch 3 (cache/live_batch3.txt): "PEOPLE: ~31 by daytime headcount; call at 02:00, likely far fewer on site"; LA hydrants now show (550 Hill St: 37 m SW); unknown odor carries a WIND line; the Saturday smoke call noted the ground-floor gym may be busy.
 - 04:00 Phone simulator flow checked end to end: replayed dispatch -> ack, briefing, floor plan, aerial; then a live follow-up "which way is the wind pushing the smoke?" answered on the same building with a fresh wind reading and the hydrant list.
 - 04:00 SAM 3 is 2.2x faster with the same output: each face is encoded once (`get_vision_features`) and the 4 text prompts run on the cached features (`vision_embeds=`). 12 test faces: 42.2 s -> 19.1 s, identical boxes on all 12. A scan point now takes ~3.5 s instead of 7.8 s. Both workers restarted at 03:59 (forward and reverse down the ranked list); 16 of 60 buildings done. Comment added on the earlier throughput note.
+- 04:20 New layer, exposures: outside-scout now lists kit buildings within 100 m (distance, direction, stories, sprinklers) and flags one in the smoke drift. 22 of the 60 ranked buildings have one. Live batch 4 (cache/live_batch4.txt, $1.44): "NEXT TO: Brentwood Court 35 m SW, 3 stories, sprinklered, close to WSW smoke drift"; Westside Towers East names its twin 50 m W. The kit is a sample, so the line says "kit records only".
 
 ## Errors and fixes
 - Live active-threat run labelled an advocacy organization "possible target (from name only)". Profiling by religion/ethnicity/nationality/politics is now forbidden in AGENTS.md (always in the prompt), tenant-risk's prompt and the security skill (commit 82aae86). That run's recording gets deleted and re-recorded.
@@ -51,3 +53,4 @@ Running notes for the morning summary. Claude API budget: $25.
 - Projectors showed nothing: `/trace` is `application/x-ndjson`, the fetch helper's `ct.includes("json")` sent it to `r.json()`, and the poller's catch swallowed the SyntaxError. Fixed with `startsWith("application/json")`. ChatOverflow note posted.
 - `phone.html?id=judge` returned 404: BaseHTTPRequestHandler.path includes the query string. Split it before routing.
 - Trace args are cut at 200 chars, so `JSON.parse` on them fails: stepLabel now pulls single fields by regex (subagent name, note, queued text).
+- After a grader revision hits max_iterations, the agent's final message can open with a paragraph explaining its changes ("I couldn't confirm the hydrant distances..."), and that paragraph would have been texted to the crew. run() now cuts everything before the "PRIMESIGHT |" header for briefings (crew replies are left alone); self-check asserts added; the one affected recording was trimmed.

@@ -125,6 +125,42 @@ def building(pid):
     return out
 
 
+def _points():
+    """Every kit building as a small dict with its location (one pass over the kit, then cached)."""
+    path = os.path.join(CACHE, "costar_points.json")
+    if os.path.exists(path):
+        return json.load(open(path, encoding="utf-8"))
+    pts = []
+    for p in _scan("commercial-property.jsonl", lambda l: True):
+        a = p.get("primaryAddress") or {}
+        if a.get("latitude") is None:
+            continue
+        pts.append({"id": p["id"], "lat": a["latitude"], "lon": a["longitude"],
+                    "name": p.get("buildingName") or f'{a.get("streetNumber", "")} {a.get("streetName", "")}'.strip(),
+                    "stories": p.get("numStoriesAboveGrade"),
+                    "construction": enum("BuildingConstructionMaterialType", p.get("buildingConstructionMaterial")),
+                    "sprinklers": {True: "yes", False: "no", None: "unknown"}[p.get("hasSprinklers")],
+                    "type": enum("PropertyType", p.get("propertyType"))})
+    os.makedirs(CACHE, exist_ok=True)
+    json.dump(pts, open(path, "w", encoding="utf-8"))
+    return pts
+
+
+def neighbors(pid, radius_m=100, n=5):
+    """Other kit buildings within radius_m, nearest first: exposures if a fire spreads.
+    ponytail: centre-to-centre distance from CoStar points, not wall-to-wall; fine for 'what is next door'."""
+    from .outside import bearing
+    b = building(pid)
+    out = []
+    for p in _points():
+        if p["id"] == pid:
+            continue
+        m, d = bearing(b["lat"], b["lon"], p["lat"], p["lon"])
+        if m <= radius_m:
+            out.append({**{k: p[k] for k in ("name", "stories", "construction", "sprinklers", "type")}, "m": m, "dir": d})
+    return sorted(out, key=lambda x: x["m"])[:n]
+
+
 if __name__ == "__main__":
     import sys
     names = [v for v in ENUMS["FloorName"].values() if v.endswith("Floor") and v not in ("UnknownFloor", "PrincipalFloor")]
