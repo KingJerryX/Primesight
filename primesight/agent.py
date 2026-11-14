@@ -20,7 +20,7 @@ from langchain_anthropic import ChatAnthropic
 from langchain_core.runnables import RunnableConfig
 from langgraph.checkpoint.memory import InMemorySaver
 from pydantic import BaseModel
-from . import briefing, costar, trace
+from . import briefing, costar, paths, store, trace
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv(os.path.join(ROOT, ".env"))
@@ -92,7 +92,7 @@ def walk_to(scan_id: str, target: str) -> str:
     (where the scanner began, not necessarily the entry). Returns JSON {located, metres, legs, ...} or why not.
     located = distinct objects after merging sightings from different scan points."""
     from . import matterport, vision
-    p = os.path.join(ROOT, "cache", "vision", f"{scan_id}.json")
+    p = os.path.join(paths.DATA, "cache", "vision", f"{scan_id}.json")
     if target not in vision.LABELS:
         return json.dumps({"error": f"target must be one of {vision.LABELS}"})
     if not os.path.exists(p):
@@ -165,10 +165,13 @@ def outside_now(property_id: int) -> str:
 def add_building_note(property_id: int, note: str) -> str:
     """Append one dated line to the building's notes file (/buildings/<property_id>.md). Never overwrites earlier notes."""
     from datetime import date
-    d = os.path.join(ROOT, "cache", "buildings")
+    d = os.path.join(paths.DATA, "cache", "buildings")
     os.makedirs(d, exist_ok=True)
+    line = f"- {date.today().isoformat()} {' '.join(note.split())}\n"
     with open(os.path.join(d, f"{int(property_id)}.md"), "a", encoding="utf-8") as fh:
-        fh.write(f"- {date.today().isoformat()} {' '.join(note.split())}\n")
+        fh.write(line)
+    if store.remote:  # deployed: /tmp is per instance, so the note also goes to Supabase (server.sync_notes reads it back)
+        store.append(f"notes:{int(property_id)}", {"line": line})
     return "saved"
 
 
@@ -289,8 +292,8 @@ GRADER = RubricMiddleware(model=ChatAnthropic(model=MODEL, max_tokens=2000), max
 
 # One file view for the agent: persistent folders routed to disk, everything else is per-run scratch in graph state.
 BACKEND = CompositeBackend(default=StateBackend(), routes={
-    "/buildings/": FilesystemBackend(root_dir=os.path.join(ROOT, "cache", "buildings"), virtual_mode=True),
-    "/scans/": FilesystemBackend(root_dir=os.path.join(ROOT, "cache", "vision"), virtual_mode=True),
+    "/buildings/": FilesystemBackend(root_dir=os.path.join(paths.DATA, "cache", "buildings"), virtual_mode=True),
+    "/scans/": FilesystemBackend(root_dir=os.path.join(paths.DATA, "cache", "vision"), virtual_mode=True),
     "/playbook/": FilesystemBackend(root_dir=PLAYBOOK, virtual_mode=True),
 })
 # Notes only grow through add_building_note (dated, append-only); scans and rules are never edited by the agent.

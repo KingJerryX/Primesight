@@ -1,0 +1,13 @@
+# Never uploaded to Vercel. Unlike .gitignore, kit_min/ IS uploaded (the server's address index; see deploy/build_kit_min.py).
+.env
+.env.*
+.git/
+costar-hackathon-kit/
+Vexcel_API_Hackathon_Tutorial_PDF_PY/
+probes/
+cache/vision/*/
+cache/buildings_test_archive/
+cache/trace/
+cache/*.txt
+**/__pycache__/
+supabase/.temp/

@@ -1,0 +1,10 @@
+# Runtime only (the Vercel deploy and the laptop server). SAM 3 preprocessing (primesight/vision.py) also needs torch + transformers.
+deepagents==0.7.38
+langchain-anthropic==1.7.10
+langgraph==1.2.22
+pydantic==2.12.5
+python-dotenv==1.2.2
+pillow==12.1.1
+shapely==2.2.0
+networkx==3.6.1
+requests==2.34.2

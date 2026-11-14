@@ -59,7 +59,8 @@
 <script>
 Promise.all([getBuildings(), getIncidents(), api("/health")]).then(([b, i, h]) => {
   const s = [[b.length, "buildings preprocessed"], [b.filter(x => x.sam3).length, "floors scanned by SAM 3"], [b.reduce((n, x) => n + x.tenants, 0).toLocaleString(), "tenants on record"],
-    [i.length, "emergency types"], [new Set(i.map(x => x.category)).size, "response playbooks"], [h.agent ? "live" : "draft", "agent mode"]];
+    [i.length, "emergency types"], [new Set(i.map(x => x.category)).size, "response playbooks"],
+    [!h.agent ? "draft" : h.passcode_required && !PASSCODE ? "replay + draft" : "live", h.passcode_required && !PASSCODE ? "agent mode (add ?code= for live)" : "agent mode"]];
   document.getElementById("stats").innerHTML = s.map(([v, k]) => `<div class="stat"><b>${v}</b><span>${k}</span></div>`).join("");
 });
 </script>

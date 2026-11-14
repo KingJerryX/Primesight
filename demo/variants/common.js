@@ -2,9 +2,17 @@
 // so API calls are same-origin; opened from file:// they fall back to localhost:8787.
 const API = location.protocol.startsWith("http") ? "" : "http://localhost:8787";
 
+// Judge passcode for live agent runs on the public deploy: open any page once with ?code=XXXX and it is remembered.
+// Without it the deploy still replays recorded calls and sends the free draft briefing for any building.
+const PASSCODE = (() => {
+  const q = new URLSearchParams(location.search).get("code");
+  try { if (q) localStorage.setItem("primesight-code", q); return q || localStorage.getItem("primesight-code") || ""; }
+  catch (e) { return q || ""; }
+})();
+
 async function api(path, body) {
   const r = await fetch(API + path, body === undefined ? {} : {
-    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(PASSCODE ? { ...body, passcode: PASSCODE } : body) });
   const ct = r.headers.get("content-type") || "";
   if (!r.ok) throw new Error(`${path} -> ${r.status}`);
   return ct.startsWith("application/json") ? r.json() : r.text();  // /trace is application/x-ndjson: keep it text

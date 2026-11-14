@@ -57,8 +57,12 @@
   .step[data-s="2"] h2 { font-size: clamp(34px, 3.4vw, 48px); margin-bottom: 28px; }
   .step[data-s="2"] .cats { grid-template-columns: repeat(6, 1fr); gap: 8px; margin-bottom: 20px; }
   .step[data-s="2"] .cats button { font-size: 15px; padding: 12px; }
-  .step[data-s="2"] .rows { margin: 0; display: grid; grid-template-columns: 1fr 1fr; align-content: start; column-gap: 8px; }
-  .step[data-s="2"] .row { font-size: 20px; padding: 15px 16px; }
+  .step[data-s="2"] .rows { margin: 0; display: grid; grid-template-columns: 1fr 1fr; align-content: start; gap: 8px; }
+  /* Each emergency type is a boxed button, outlined like the categories above, so it reads as something to click. */
+  .step[data-s="2"] .row { font-size: 20px; padding: 15px 16px; align-items: center; border: 1px solid var(--line);
+                           transition: border-color .2s var(--ease), color .2s var(--ease); }
+  .step[data-s="2"] .row:hover, .step[data-s="2"] .row:focus-visible { border-color: var(--accent); outline: none; }
+  .step[data-s="2"] .row.sel { border-color: var(--accent); }
   .step[data-s="2"] #text { font-size: 20px; padding: 20px 0; }
   .step[data-s="2"] .foot button { padding: 18px; font-size: 13px; }
 
@@ -67,6 +71,8 @@
   .sheet { position: absolute; z-index: 3; top: calc(100% + 6px); right: 0; min-width: 100%; max-height: min(52vh, 420px); overflow-y: auto; background: var(--ink);
            border: 1px solid var(--accent); scrollbar-color: var(--accent) #0000; clip-path: inset(0 0 100% 0); visibility: hidden; transition: clip-path .42s var(--ease), visibility 0s .42s; }
   .drop.open .sheet { clip-path: inset(0); visibility: visible; transition-delay: 0s; }
+  /* The floor list shows 10 floors at a time (each row 22px line + 20px padding, plus the border); taller buildings scroll. */
+  #floorlist { max-height: calc(10 * 42px + 2px); } #floorlist button { line-height: 22px; }
   .sheet button { display: block; width: 100%; text-align: left; white-space: nowrap; background: none; border-radius: 0; color: #fff; font: 400 16px var(--grot); padding: 10px 16px;
                   opacity: 0; transform: translateY(-8px); transition: opacity .3s var(--ease), transform .3s var(--ease); }
   .drop.open .sheet button { opacity: 1; transform: none; transition-delay: calc(min(var(--i), 16) * 22ms + 60ms); }
@@ -243,9 +249,9 @@ function sizePlate() {
 new ResizeObserver(sizePlate).observe($("stage"));
 
 // ---- Dropdowns: the floor (on the map) and the city filter (beside the heading).
-function openDrop(box, on) {
+function openDrop(box, on, focus = true) {  // focus false: open without taking focus (arrow keys keep moving through buildings)
   box.classList.toggle("open", on); box.querySelector("button").setAttribute("aria-expanded", on);
-  if (on) (box.querySelector('.sheet [aria-selected="true"]') || box.querySelector(".sheet button"))?.focus();
+  if (on && focus) (box.querySelector('.sheet [aria-selected="true"]') || box.querySelector(".sheet button"))?.focus();
 }
 for (const box of document.querySelectorAll(".drop")) box.querySelector("button").onclick = () => openDrop(box, !box.classList.contains("open"));
 document.addEventListener("click", e => { for (const box of document.querySelectorAll(".drop")) if (!box.contains(e.target)) openDrop(box, false); });
@@ -282,12 +288,14 @@ function selectBuilding(b) {
     const floors = [...new Set(scans.map(x => x.floor).filter(f => f != null))].sort((x, y) => x - y);
     if (s.b !== b || !floors.length) return;
     listFloors(floors);
-    if (floors.length === 1 && !s.f) setFloor(floors[0]);  // nothing to choose between
+    if (floors.length === 1 && !s.f) { setFloor(floors[0]); openDrop($("floorbox"), false); }  // nothing to choose between
   }).catch(() => {});
-  openDrop($("floorbox"), false);
   if (s.step !== 1) go(1);
   renderBuildings(); renderStrip(); setFloor(null); fly(b);
   document.querySelector("#blist .sel")?.scrollIntoView({ block: "nearest" });
+  // Open the floor list straight away: the floor is the next choice. After this click finishes, or the
+  // click-outside handler on document would close it again as the same click bubbles up.
+  setTimeout(() => openDrop($("floorbox"), true, false));
 }
 function renderEmergency() {
   const cats = [...new Set(I.map(t => t.category))];
