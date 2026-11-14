@@ -2,6 +2,7 @@
 
 python -m primesight.server            # http://localhost:8787
 POST /brief     {"text", "thread"?}   -> {"briefing", "images", "property_id", "run_id"}
+POST /ask       {"run_id", "text"}      -> {"answer"}  crew reply, continues that run's agent thread
 POST /feedback  {"property_id", "text"} -> {"ok": true}
 GET  /trace/<run_id>                  -> JSON lines, one per step
 GET  /run/<run_id>                    -> facts for the projector: floors, hydrants, staging, scan, SAM 3 counts
@@ -40,15 +41,17 @@ def brief(text, run_id):
         from . import agent
         text_out = agent.run(text, run_id=run_id)
         f = briefing.last.get(pid)  # images from the agent's own gather call
+        extra = {"texts": agent.OUTBOX.pop(run_id, []), "tenant_flags": agent.FLAGS.pop(run_id, [])}
     else:
         trace.log(run_id, "mode", "no ANTHROPIC_API_KEY: sending the draft briefing")
         trace.log(run_id, "gather_building", f"floor {floor}, {incident}")
         f = briefing.gather(pid, floor)
         text_out = briefing.compose(f, incident)
+        extra = {"texts": [], "tenant_flags": []}
     images = [p for p in ((f or {}).get("floorplan"), (f or {}).get("aerial")) if p]
     trace.log(run_id, "done", f"{len(text_out.splitlines())} lines, {len(images)} images")
     return {"briefing": text_out, "images": images, "image_urls": [img_url(p) for p in images], "property_id": pid,
-            "_facts": facts(f, incident) if f else None}
+            **extra, "_facts": {**facts(f, incident), **extra, "call": text} if f else None}
 
 
 VISION = os.path.join(briefing.ROOT, "cache", "vision")
@@ -105,9 +108,29 @@ def brief_or_replay(text, run_id):
             os.makedirs(DEMO, exist_ok=True)
             json.dump({"text": text, "out": out, "trace": trace.read(run_id)}, open(path, "w", encoding="utf-8"), indent=1)
     RUNS[run_id] = out.pop("_facts", None)
+    if RUNS[run_id]:
+        RUNS[run_id]["call"] = text  # /ask needs it (older recordings didn't store it)
     if RUNS[run_id] and "image_urls" not in out:
         out["image_urls"] = [img_url(p) for p in out["images"]]
     return out
+
+
+def ask_or_replay(run_id, call, text):
+    """Crew reply. Recorded like /brief, keyed by call + reply text, so the demo can replay it."""
+    path = os.path.join(DEMO, "ask_" + hashlib.sha1(" ".join(f"{call} || {text}".lower().split()).encode()).hexdigest()[:16] + ".json")
+    trace.log(run_id, "crew_reply", text[:120])
+    if os.environ.get("PRIMESIGHT_REPLAY") and os.path.exists(path):
+        rec = json.load(open(path, encoding="utf-8"))
+        trace.write(run_id, rec["trace"])
+        return rec["answer"]
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        return "PRIMESIGHT: follow-up questions need the agent (no API key on this server)."
+    from . import agent
+    n = len(trace.read(run_id).splitlines())
+    answer = agent.ask(run_id, text, call)
+    new = "".join(line + "\n" for line in trace.read(run_id).splitlines()[n:])  # this reply's steps only
+    json.dump({"call": call, "text": text, "answer": answer, "trace": new}, open(path, "w", encoding="utf-8"), indent=1)
+    return answer
 
 
 def add_note(pid, text):
@@ -150,6 +173,11 @@ class H(BaseHTTPRequestHandler):
                 out = {"briefing": f"PRIMESIGHT: briefing failed ({type(e).__name__}). Proceed on standard procedure.",
                        "images": [], "property_id": None}
             return self._send(200, {**out, "run_id": run_id})
+        if self.path == "/ask":
+            run_id, f = str(body.get("run_id", "")), RUNS.get(str(body.get("run_id", "")))
+            if not f or not str(body.get("text", "")).strip():
+                return self._send(400, {"error": "run_id of a run on this server and text are required"})
+            return self._send(200, {"answer": ask_or_replay(run_id, f["call"], body["text"])})
         if self.path == "/feedback":
             if not body.get("property_id") or not str(body.get("text", "")).strip():
                 return self._send(400, {"error": "property_id and text are required"})

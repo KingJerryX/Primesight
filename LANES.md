@@ -51,7 +51,13 @@ There are two points of contact. Agree on them now, and don't change them withou
 
 ```
 POST /brief      {"text": "<the 911 call>", "thread": "<crew thread id>"}
-             ->  {"briefing": "<sms text>", "images": ["<file path>", ...], "property_id": 233899, "run_id": "<id>"}
+             ->  {"briefing": "<sms text>", "images": ["<file path>", ...], "image_urls": ["/img/..."],
+                  "property_id": 233899, "run_id": "<id>",
+                  "texts": [{"to": "property manager", "text": "..."}],      # for building staff: show, never auto-send
+                  "tenant_flags": [{"tenant", "floor", "risk", "why", "from_name_only"}]}
+
+POST /ask        {"run_id": "<id from /brief>", "text": "<crew reply>"}
+             ->  {"answer": "<1-3 line sms>"}   # continues that run's agent thread; reports get saved as building notes
 
 POST /feedback   {"property_id": 233899, "text": "<crew reply>"}
              ->  {"ok": true}
@@ -99,10 +105,14 @@ Make the briefing smart about the inside of the building, make the agent write i
 - **The Matterport code:**
   - It reads the floor from each scan's name and picks the exact floor, or the nearest scanned floor if that one isn't scanned.
   - It downloads the floorplan and builds a graph of the scan points that you can walk.
-- **The agent (`agent.py`):** it's written but hasn't run yet, because it needs `ANTHROPIC_API_KEY` in `.env`.
-  - It has two tools: `find_building(address)` and `gather_building(property_id, floor, incident)`.
-  - A `tenant-risk` helper agent reads tenant descriptions for daycares, labs and clinics.
-  - It keeps a notes file per building at `cache/buildings/<property_id>.md`.
+- **The agent (`agent.py`, deepagents):** runs end to end in about 30 s for $0.30-0.37 (Opus 5.5).
+  - **Tools:** `find_building`, `gather_building`, `add_building_note` (append-only, dated).
+  - **Files:** one virtual file system. `/buildings/` (crew notes on disk), `/scans/` (SAM 3 results on disk) and `/playbook/` (our rules, `primesight/agentfs/`) are read-only to the agent; everything else is per-run scratch.
+  - **Memory:** `primesight/agentfs/AGENTS.md`, always loaded: SMS format, facts not orders, notes outrank data, how to handle crew replies.
+  - **Skills:** `primesight/agentfs/skills/{fire,medical,hazmat}/SKILL.md`. The agent reads only the one for this call.
+  - **Subagents, run in parallel:** `tenant-risk` returns structured flags (`tenant_flags`); `notify-writer` queues texts for the building engineer and property manager (`texts`).
+  - **Threads:** each run_id is a checkpointed thread, so `/ask` answers crew follow-ups in about 3 s for $0.05.
+  - **Trace:** subagent steps appear as `helper:<tool>` lines.
 
 ### Your tasks
 
@@ -199,11 +209,12 @@ Make the outside of the building visible, and get every briefing onto the one de
 6. **Projector page (Must, M).**
    - **What:** `demo/projector.html` shows `/trace` while it runs: each step, the helper agent, the notes file being written. Next to it, it shows the texts Primesight sent to people other than the crew (building engineer, property manager).
    - **Done when:** it's the second screen in the demo, and readable from the back of the room.
-7. **Crew replies to `/feedback` (Should, S).**
-   - **What:** when the judge replies on the phone ("Louisiana St doors locked") or reacts to the message, Photon passes it to `/feedback`.
+7. **Crew replies to `/ask` (Should, S).**
+   - **What:** when the judge replies on the phone ("which elevator fits a stretcher?" or "Louisiana St doors locked"), Photon passes it to `/ask` with the run_id and texts the answer back. The agent saves reports as building notes itself. `/feedback` still adds a note directly, without the agent.
    - **Done when:** that reply shows up in the next briefing for the building.
 8. **Texts to other people (Should, S).**
    - **What:** Primesight writes "Engine 1 arriving at the freight elevator in 4 min, please meet them" for the building engineer, and a similar text for the property manager.
+   - **Lane A side is done:** the `notify-writer` subagent returns them in `/brief`'s `texts` (only for contacts on file; none means none on record).
    - **How:** with one phone, these show on the projector. If the second phone can still receive texts, send them there for real. The kit's phone numbers are fake (555), so never send to them.
 9. **Hands-free follow-up call (Stretch, M).**
    - **What:** if task 2 says yes, the crew calls Primesight from the phone and asks "which elevator?" out loud, and hears the answer from the same facts.
@@ -227,7 +238,7 @@ We shipped a Photon 2.0 iMessage bot at HackHarvard (`apps/orchestrator/src/mess
   - Don't set `parentMessageId`; shared lines reject it.
 - **Receiving.**
   - Poll `projects.listMessages({ path, query: { createdSince, direction: "received", order: "asc", pageSize: 100, platform } })` every 2 s, follow `pageToken`, and dedupe by message id.
-  - Crew replies go to `POST /feedback`.
+  - Crew replies go to `POST /ask` (keep each thread's last run_id).
 - **Sending text.**
   - `projects.sendMessage({ path: { id }, headers: { "idempotency-key": uuid }, body: { spaceId, senderId, content: { type: "text", format: "plain", text } } })`.
 - **Sending images (floorplan, aerial).** Two calls per image:
