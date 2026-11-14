@@ -67,6 +67,12 @@ def facts(f, incident):
     """Structured facts for the projector page: the building floor by floor, outside points, scan and SAM 3 results."""
     b, fl, scan = f["building"], f["floor"], f.get("scan") or {}
     scanned = {s["floor"] for s in f.get("scans") or [] if s["floor"] is not None}
+    seen = {}  # floor -> SAM 3 counts, for every scanned floor the GPU batch has finished
+    for s in f.get("scans") or []:
+        p = os.path.join(VISION, f"{s['id']}.json")
+        if s["floor"] is not None and os.path.exists(p):
+            v = json.load(open(p, encoding="utf-8"))
+            seen[s["floor"]] = {"scan_points": len(v["sweeps"]), **v["sweeps_with"]}
     on = {}
     for t in b["tenants"]:
         on.setdefault(t["floor"], set()).add(t["name"])
@@ -79,7 +85,7 @@ def facts(f, incident):
     return {"incident": incident, "floor": fl,
             "building": {k: b[k] for k in ("name", "address", "stories", "year_built", "construction", "sprinklers")},
             "floors": [{"floor": n, "people": briefing._people(b["tenants"], {n}), "tenants": sorted(on.get(n, ())),
-                        "scanned": n in scanned} for n in range(1, (b["stories"] or 0) + 1)],
+                        "scanned": n in scanned, "seen": seen.get(n)} for n in range(1, (b["stories"] or 0) + 1)],
             "hydrants": [{"m": m, "dir": d, "lat": la, "lon": lo} for m, d, la, lo in f["hydrants"][:5]],
             "staging": [{"m": m, "dir": d, "lat": la, "lon": lo, "score": s} for s, m, d, la, lo in f["staging"][:3]],
             "scan": {"floor": scan.get("floor"), "exact": f["scan_exact"], "link": scan.get("link")},
