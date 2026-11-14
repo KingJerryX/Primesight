@@ -57,7 +57,8 @@ def gather(pid, floor):
             from .vision import near_exit
             vision["route"] = soft("walk route", matterport.route, scan["sweeps"], scan["sweeps"][0]["id"], near_exit(v["sweeps"]))
         if plan_img and frame:
-            plan_img = soft("floorplan markup", mark_plan, plan_img, frame, v["sweeps"], vision.get("route")) or plan_img
+            plan_img = soft("floorplan markup", mark_plan, plan_img, frame, v["sweeps"],
+                            f"FLOOR {scan['floor']} - {b['name'] or b['address'].split(',')[0]}") or plan_img
 
     hyd, roof, stage, w, aerial = f_hyd.result() or [], f_roof.result() or {}, f_stage.result() or [], f_wind.result(), f_ortho.result()
     if aerial:  # label the plain aerial for the crew; the plain one stays on disk
@@ -78,38 +79,49 @@ def plan_px(xy, frame, height):
     return (xy[0] - ox) * res, height - (xy[1] - oy) * res
 
 
-def mark_plan(path, frame, sweeps, route=None):
-    """Draw each located sign once where it is (SAM 3 sightings merged across scan points): green exit sign, red pull
-    station; scan points as small grey dots. With a route: blue square at the scan start, yellow walk to the nearest
-    exit sign (over scan points, then straight to the sign), cyan walk to the far end."""
-    import math
+MAP_KEY = ("green EXIT = exit sign (over an exit door)", "red ALARM PULL = fire alarm pull station",
+           "stairs and elevators not mapped")
+
+
+def mark_plan(path, frame, sweeps, title=""):
+    """Floor map for a crew's phone: each exit sign and fire alarm pull station found in the 3D scan, drawn once where it
+    is and labelled on the map, a title band (e.g. 'FLOOR 36 - Wells Fargo Plaza') and a key. Sized to read at ~400 px."""
     from PIL import Image, ImageDraw, ImageFont
     from .vision import locate
-    im = Image.open(path).convert("RGB")
-    d, r = ImageDraw.Draw(im), max(10, im.width // 90)
-    px = lambda p: plan_px(p, frame, im.height)
+    plan = Image.open(path).convert("RGB")
+    W, H = plan.size
+    big, small = ImageFont.load_default(size=max(22, W // 22)), ImageFont.load_default(size=max(18, W // 34))
+    r, pad = max(14, W // 50), max(6, W // 200)
     signs = locate(sweeps)
-    exits = [g["xy"] for g in signs if g["label"] == "exit sign"]
-    for key, color in (("far", (0, 190, 230)), ("exit", (255, 210, 0))):
-        if route and route.get(key) and len(route[key]["xy"]) > 1:
-            pts = route[key]["xy"] + ([min(exits, key=lambda e: math.dist(e, route[key]["xy"][-1]))] if key == "exit" and exits else [])
-            d.line([px(p) for p in pts], fill=color, width=max(6, r // 2), joint="curve")
-    for s in sweeps:
-        x, y = px(s["xy"])
-        d.ellipse((x - r / 3, y - r / 3, x + r / 3, y + r / 3), fill=(150, 150, 150))
+    lines = MAP_KEY if signs else ("no exit signs or alarm pulls found in the 3D scan",) + MAP_KEY[2:]
+    band, kh = big.size + 3 * pad, len(lines) * (small.size + pad) + 2 * pad
+    im = Image.new("RGB", (W, band + H + kh), (0, 0, 0))  # title above and key below the map, never over it
+    im.paste(plan, (0, band))
+    d = ImageDraw.Draw(im)
+    txt = lambda xy, s, f, fill="white": d.text(xy, s, font=f, fill=fill, stroke_width=max(3, W // 400), stroke_fill="black")
+    at = lambda g: (plan_px(g["xy"], frame, H)[0], band + plan_px(g["xy"], frame, H)[1])
+    taken = [at(g) for g in signs]
+    taken = [(x - r, y - r, x + r, y + r) for x, y in taken]  # markers, then labels: nothing is written over them
+
+    def free(box):
+        return box[0] >= 0 and box[2] <= W and box[1] >= band and box[3] <= band + H and \
+            not any(box[0] < b[2] and b[0] < box[2] and box[1] < b[3] and b[1] < box[3] for b in taken)
+
     for g in signs:
-        x, y = px(g["xy"])
-        color = (0, 200, 80) if g["label"] == "exit sign" else (230, 30, 30)
-        d.rounded_rectangle((x - 1.2 * r, y - 0.8 * r, x + 1.2 * r, y + 0.8 * r), radius=r // 3, fill=color, outline="white", width=3)
-    if route:
-        x, y = px(sweeps[0]["xy"])
-        d.rectangle((x - 1.4 * r, y - 1.4 * r, x + 1.4 * r, y + 1.4 * r), outline=(40, 90, 255), width=6)
-    font = ImageFont.load_default(size=max(18, im.width // 45))
-    d.text((20, 20), "green: exit sign   red: pull station   (each found once, placed from the 3D scan)   grey: scan point",
-           fill="white", font=font, stroke_width=3, stroke_fill="black")
-    if route:
-        d.text((20, 30 + font.size), "blue: scan start   yellow: walk to exit sign   cyan: walk to far end", fill="white",
-               font=font, stroke_width=3, stroke_fill="black")
+        x, y = at(g)
+        exit_ = g["label"] == "exit sign"
+        d.ellipse((x - r, y - r, x + r, y + r), fill=(0, 200, 80) if exit_ else (230, 30, 30), outline="white", width=max(3, r // 5))
+        word = "EXIT" if exit_ else "ALARM PULL"
+        tw, th = d.textlength(word, font=big), big.size
+        cx = min(max(0, x - tw / 2), W - tw)  # centred over/under the marker, kept inside the image
+        spot = next((p for p in ((x + r + pad, y - th / 2), (x - r - pad - tw, y - th / 2), (cx, y - r - pad - th), (cx, y + r + pad))
+                     if free((p[0], p[1], p[0] + tw, p[1] + th))), None)
+        if spot:  # crowded: no word, the colour and the key still say what it is
+            taken.append((spot[0], spot[1], spot[0] + tw, spot[1] + th))
+            txt(spot, word, big, fill=(90, 255, 140) if exit_ else (255, 120, 120))
+    txt((2 * pad, 1.5 * pad), (title or "FLOOR MAP")[:48], big)
+    for i, s in enumerate(lines):
+        txt((2 * pad, band + H + pad + i * (small.size + pad)), s, small)
     out = path.replace("_plan.jpg", "_plan_marked.jpg")
     im.save(out, quality=88)
     return out
