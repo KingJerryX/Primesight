@@ -1,0 +1,120 @@
+{
+ "id": "jtfVRiouTPW",
+ "model": "jtfVRiouTPW",
+ "name": "Suite 612",
+ "floor": 6,
+ "points": 10,
+ "explore_s": 30,
+ "checked": false,
+ "built": "2026-11-14",
+ "start": {
+  "point": "nsh083grh1cqmpd1kpcknuyqa",
+  "label": "7",
+  "heading": 47.7,
+  "ss": 8,
+  "sr": "0,-0.738",
+  "frac": [
+   0.4226,
+   0.5977
+  ]
+ },
+ "plan": {
+  "img": "level_jtfVRiouTPW_plan.jpg",
+  "px": [
+   2487,
+   1490
+  ],
+  "w_m": 24.9,
+  "h_m": 14.9
+ },
+ "exits": [
+  {
+   "frac": [
+    0.1301,
+    0.5746
+   ],
+   "seen_from": 6
+  },
+  {
+   "frac": [
+    0.2648,
+    0.7947
+   ],
+   "seen_from": 1
+  }
+ ],
+ "questions": [
+  {
+   "id": "exit_pin",
+   "type": "pin",
+   "scenario": "smoke",
+   "tau_m": 5.0,
+   "answer": [
+    0.2648,
+    0.7947
+   ],
+   "prompt": "Smoke in the corridor. Drop a pin on the exit closest to where you started.",
+   "route": [
+    [
+     0.4226,
+     0.5977
+    ],
+    [
+     0.2431,
+     0.6109
+    ]
+   ]
+  },
+  {
+   "id": "where",
+   "type": "pin",
+   "scenario": null,
+   "tau_m": 5.0,
+   "photo": "level_jtfVRiouTPW_9_0.jpg",
+   "prompt": "Where was this photo taken?",
+   "answer": [
+    0.5761,
+    0.4241
+   ]
+  },
+  {
+   "id": "pull_pin",
+   "type": "pin",
+   "scenario": "alarm",
+   "tau_m": 5.0,
+   "answer": [
+    0.5592,
+    0.5189
+   ],
+   "prompt": "There's smoke but no alarm. Drop a pin on the nearest fire alarm pull station.",
+   "why": "2 m from where you started"
+  },
+  {
+   "id": "exit_count",
+   "type": "choice",
+   "scenario": null,
+   "options": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "answer": 2,
+   "prompt": "How many exit signs are on this floor?"
+  },
+  {
+   "id": "exit_far",
+   "type": "choice",
+   "scenario": "fire",
+   "options": [
+    "under 10 m",
+    "10 to 25 m",
+    "25 to 50 m",
+    "over 50 m"
+   ],
+   "answer": "under 10 m",
+   "prompt": "How far did you have to walk from your start to the nearest exit?",
+   "why": "4 m"
+  }
+ ]
+}
