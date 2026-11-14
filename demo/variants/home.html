@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primesight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* Home: a hero that loops through live map flights, a mission line, a strip of the data, and why it matters. */
+  body { font-size: 17px; line-height: 1.5; }
+  h1, h2 { font-weight: 400; letter-spacing: -.02em; margin: 0; }
+  section { padding: clamp(72px, 14vh, 150px) clamp(16px, 4vw, 56px); }
+
+  .hero { position: relative; height: 100vh; min-height: 560px; padding: 0; overflow: hidden; }
+  #heromap { position: absolute; inset: 0; }
+  .hero::after { content: ""; position: absolute; inset: 0; pointer-events: none;   /* fine grid and a floor of shadow under the words */
+    background: linear-gradient(#05050600 45%, #050506 100%), repeating-linear-gradient(0deg, #ffffff0a 0 1px, #0000 1px 48px), repeating-linear-gradient(90deg, #ffffff0a 0 1px, #0000 1px 48px), #05050659; }
+  .slide { position: absolute; z-index: 1; inset: 52% 0 auto; padding: 0 20px; text-align: center; opacity: 0; visibility: hidden; transform: translateY(14px);
+           transition: opacity .7s var(--ease), transform .7s var(--ease), visibility 0s .7s; }
+  .slide.on { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .slide h1 { font-size: clamp(48px, 7vw, 100px); line-height: 1; }
+  .slide p { font-size: clamp(17px, 1.7vw, 24px); margin: 18px auto 44px; max-width: 30em; }
+  .dots { position: absolute; z-index: 1; left: 50%; bottom: 36px; transform: translateX(-50%); display: flex; gap: 6px; }
+  .dots button { background: none; border-radius: 0; color: #fff; opacity: .45; padding: 8px 10px; font: inherit; letter-spacing: inherit; }
+  .dots button[aria-selected="true"] { opacity: 1; box-shadow: 0 1px 0 #fff; }
+  .target { display: none; }  /* no ring on the hero: the raised building is the mark */
+  .maplibregl-ctrl.maplibregl-ctrl-attrib { font: 11px var(--grot); background: #05050699; color: var(--dim); z-index: 2; }
+  .maplibregl-ctrl-attrib a { color: var(--dim); } .maplibregl-ctrl-attrib-button { filter: invert(1); }
+
+  .mission p { max-width: 21em; margin: 0 auto; padding: 56px 40px; text-align: center; font-size: clamp(26px, 3vw, 40px); line-height: 1.2; letter-spacing: -.01em;
+               background: linear-gradient(#fff 0 0) 0 0/9px 1px, linear-gradient(#fff 0 0) 0 0/1px 9px, linear-gradient(#fff 0 0) 100% 0/9px 1px, linear-gradient(#fff 0 0) 100% 0/1px 9px,
+                           linear-gradient(#fff 0 0) 0 100%/9px 1px, linear-gradient(#fff 0 0) 0 100%/1px 9px, linear-gradient(#fff 0 0) 100% 100%/9px 1px, linear-gradient(#fff 0 0) 100% 100%/1px 9px;
+               background-repeat: no-repeat; }
+
+  .head { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 56px; }
+  h2 { font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; }
+  .layers { padding-left: 0; padding-right: 0; } .layers .head { padding: 0 clamp(16px, 4vw, 56px); }
+  .strip { overflow: hidden; }
+  .track { display: flex; gap: 28px; width: max-content; animation: drift 60s linear infinite; }
+  .strip:hover .track { animation-play-state: paused; }
+  @keyframes drift { to { transform: translateX(-50%); } }
+  figure { margin: 0; width: clamp(240px, 26vw, 380px); }
+  figure img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: var(--panel); filter: saturate(.75); }
+  figcaption { margin-top: 18px; font-size: clamp(19px, 1.8vw, 26px); letter-spacing: -.01em; }
+  figcaption span { display: block; margin-top: 4px; color: var(--dim); }
+
+  .why { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+  .why p { color: #ffffffc7; max-width: 30em; margin: 24px 0 36px; }
+  .why img { width: 100%; display: block; border: 1px solid var(--rule); }
+
+  @media (max-width: 760px) { .why { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { .slide { transition: none; } .track { animation: none; } .strip { overflow-x: auto; } }
+</style>
+</head>
+<body>
+<nav class="nav caps" aria-label="Primesight"><a href="dispatch-judge.html">First responder</a><a class="mark" href="home.html" aria-current="page">Primesight</a><a href="game.html">Game</a></nav>
+
+<section class="hero" aria-roledescription="carousel" aria-label="What Primesight does">
+  <div id="heromap"></div>
+  <div class="slide on"><h1>Primesight</h1><p>A briefing on the building, sent before the crew arrives.</p><a class="btn" href="dispatch-judge.html">First responder mode</a></div>
+  <div class="slide"><h1>First responder</h1><p>Choose the building, the floor and the emergency. The crew gets one text.</p><a class="btn" href="dispatch-judge.html">Send a dispatch</a></div>
+  <div class="slide"><h1>Game</h1><p>Find the exit signs and extinguishers in real building scans.</p><a class="btn" href="game.html">See the game</a></div>
+  <div class="dots caps" role="tablist" aria-label="Slides"><button role="tab">1</button><button role="tab">2</button><button role="tab">3</button></div>
+</section>
+
+<section class="mission"><p>Our mission is to tell every crew what is inside the building before they reach the door.</p></section>
+
+<section class="layers">
+  <div class="head"><h2>Three views of one address</h2><a class="btn" href="dispatch-judge.html">Send a dispatch</a></div>
+  <div class="strip"><div class="track" id="track"></div></div>
+</section>
+
+<section class="why">
+  <div>
+    <h2>Known before the door</h2>
+    <p>A crew usually learns a building on arrival: which entrance, which stairs, who is on the floor. Primesight reads the 3D scans, aerial photos and tenant records for that address and sends the answer as one text while the truck is still moving. Where the data runs out, it says so.</p>
+    <a class="btn" href="dispatch-judge.html">Try a dispatch</a>
+  </div>
+  <img src="/img/247506_f56MRgHWx9G_plan_marked.jpg" alt="Floor plan of a scanned office floor with the exits marked" loading="lazy">
+</section>
+
+<script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
+<script src="site.js"></script>
+<script>
+// Hero: each slide flies the live map to a real building in the data and circles it.
+const STOPS = [
+  { lat: 29.7584604, lon: -95.3682126, stories: 71 },   // 1000 Louisiana St, Houston
+  { lat: 34.0615626, lon: -118.2932592, stories: 22 },  // 3250 Wilshire Blvd, Los Angeles
+  { lat: 29.7588018, lon: -95.3650891, stories: 27 },   // 808 Travis St, Houston
+];
+const { map, fly } = makeMap("heromap", { interactive: false });
+const slides = [...document.querySelectorAll(".slide")], dots = [...document.querySelectorAll(".dots button")];
+let at = -1, timer;
+function show(k) {
+  at = (k + slides.length) % slides.length;
+  slides.forEach((el, n) => el.classList.toggle("on", n === at));
+  dots.forEach((el, n) => el.setAttribute("aria-selected", n === at));
+  fly(STOPS[at]);
+  clearTimeout(timer);
+  if (!REDUCED) timer = setTimeout(() => show(at + 1), 14000);
+}
+dots.forEach((el, n) => el.onclick = () => show(n));
+map.on("load", () => show(0));
+
+// The strip: real outputs for buildings in the data. Listed twice so the loop has no seam.
+const CARDS = [
+  ["/img/233899_aerial.jpg", "Aerial view", "Vexcel, top down"],
+  ["/img/248704_tsaz3uu9Nk9_plan_marked.jpg", "Floor plan, exits marked", "Matterport scan read by SAM 3"],
+  ["/aerial/233899/south.jpg", "Angled view", "Vexcel, looking south"],
+  ["/img/249810_FrsMPZwTsng_plan_marked.jpg", "Floor plan, exits marked", "Matterport scan read by SAM 3"],
+  ["/img/248192_aerial.jpg", "Aerial view", "Vexcel, top down"],
+];
+document.getElementById("track").innerHTML = [...CARDS, ...CARDS].map(([src, name, from], n) =>
+  `<figure ${n >= CARDS.length ? 'aria-hidden="true"' : ""}><img src="${src}" alt="" loading="lazy"><figcaption>${name}<span class="caps">${from}</span></figcaption></figure>`).join("");
+</script>
+</body>
+</html>

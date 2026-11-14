@@ -2,83 +2,249 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Primesight Judge Mode</title>
+<title>Primesight First Responder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
 <link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="site.css">
 <style>
-  body { height: 100vh; display: flex; flex-direction: column; }
-  header { display: flex; align-items: center; gap: 14px; padding: 12px 18px; border-bottom: 1px solid var(--line); }
-  header h1 { font-size: 17px; margin: 0; }
-  header .hint { color: var(--dim); font-size: 13px; }
-  .cols { flex: 1; display: grid; grid-template-columns: 1.3fr .55fr 1.2fr; gap: 12px; padding: 12px; min-height: 0; }
-  .col { display: flex; flex-direction: column; min-height: 0; }
-  .col h2 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); margin: 0 0 8px; }
-  .scroll { flex: 1; overflow-y: auto; border: 1px solid var(--line); border-radius: 10px; }
-  .b { padding: 9px 12px; border-bottom: 1px solid var(--line); cursor: pointer; }
-  .b.sel { background: #ff5a3622; box-shadow: inset 3px 0 var(--accent); }
-  .b small { color: var(--dim); }
-  .stack { display: flex; flex-direction: column-reverse; gap: 2px; padding: 6px; }
-  .fl { display: flex; align-items: center; gap: 6px; font-size: 12px; padding: 3px 6px; border-radius: 4px; cursor: pointer; background: var(--panel); }
-  .fl .bar { height: 8px; background: #3fa7ff66; border-radius: 2px; }
-  .fl.scan { outline: 1px solid var(--ok); }
-  .fl.sel { background: var(--accent); color: #fff; }
-  .inc { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 8px; }
-  .inc button { text-align: left; background: var(--panel); border: 1px solid var(--line); font-weight: 500; font-size: 13px; padding: 8px 10px; }
-  .inc button.sel { background: currentColor; }
-  .inc button.sel span { color: #000; }
-  .inc .cat { grid-column: 1 / -1; font-size: 11px; text-transform: uppercase; margin-top: 4px; }
-  footer { display: flex; gap: 10px; align-items: center; padding: 12px 18px; border-top: 1px solid var(--line); flex-wrap: wrap; }
-  footer select, footer input { width: auto; }
-  #text { flex: 1 1 100%; order: -1; font-family: var(--mono); font-size: 13px; }
-  @media (max-width: 900px) { .cols { grid-template-columns: 1fr; } .scroll { max-height: 260px; } }
+  /* Three steps, one at a time: building (map), floor (3D scan), emergency. The panel slides; the stage crossfades. */
+  [hidden] { display: none !important; }
+  /* clip, not hidden: scrollIntoView on a row must not side-scroll the page or panel while a step is still sliding in */
+  body { height: 100vh; padding-top: 64px; overflow: clip; }
+  button:disabled { cursor: default; opacity: .35; }
+  .nav { background: var(--ink); border-bottom: 1px solid var(--line); }
+
+  main { display: grid; grid-template-columns: 400px 1fr; height: 100%; min-height: 0; }
+  #panel { position: relative; border-right: 1px solid var(--line); overflow: clip; }
+  #trail { display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 20px; border-bottom: 1px solid var(--line); min-width: 0; }
+  #trail button { background: none; padding: 4px 0; border-radius: 0; color: var(--dim); font: inherit; letter-spacing: inherit; text-transform: inherit; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #trail button:not(:disabled):hover, #trail button[aria-current] { color: var(--text); }
+  #trail .sep { color: var(--line); }
+  .step { position: absolute; inset: 44px 0 0; display: flex; flex-direction: column; padding: 22px 20px 18px; opacity: 0; visibility: hidden;
+          transform: translateX(32px); transition: opacity .3s var(--ease), transform .3s var(--ease), visibility 0s .3s; }
+  .step.past { transform: translateX(-32px); }
+  .step.on { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .step h2 { font: 400 30px/1.1 var(--grot); letter-spacing: -.01em; margin: 0 0 16px; }
+  .step input { margin-bottom: 12px; border-radius: 0; }
+  .rows { flex: 1; min-height: 0; overflow-y: auto; margin: 0 -20px; }
+  .row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; width: 100%; text-align: left; background: none;
+         border-radius: 0; border-left: 2px solid transparent; padding: 11px 20px 11px 18px; color: var(--text); font: 400 17px/1.3 var(--grot); }
+  .row span { color: var(--dim); font-size: 13px; white-space: nowrap; }
+  .row .has-scan { color: var(--ok); }
+  .row:hover { background: var(--panel); }
+  .row.sel { background: #ff5a3618; border-left-color: var(--accent); }
+  .none { padding: 11px 20px; color: var(--dim); }
+  .cats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 12px; }
+  .cats button { display: flex; align-items: center; gap: 8px; background: none; border: 1px solid var(--line); border-radius: 0; color: var(--text);
+                 font: 400 14px var(--grot); padding: 9px 10px; text-transform: capitalize; }
+  .cats button i { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+  .cats button.sel { background: var(--panel2); border-color: var(--text); }
+  #text { padding: 14px 0; min-height: 4.6em; color: var(--dim); border-top: 1px solid var(--line); }
+  #text.ready { color: var(--text); }
+  .foot { display: flex; gap: 10px; align-items: center; }
+  .step:not([data-s="3"]) .foot { padding-top: 16px; border-top: 1px solid var(--line); }
+  .foot button { flex: 1; border-radius: 0; padding: 14px 16px; font: 400 12px var(--code); letter-spacing: .07em; text-transform: uppercase; }
+  .foot .ghost { flex: 0 0 auto; }
+  #sent { gap: 14px; } #sent b { flex: 1; font-weight: 400; color: var(--ok); }
+
+  #stage { position: relative; background: #05080c; overflow: hidden; }
+  .view { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .5s var(--ease), visibility 0s .5s; }
+  .view.on { opacity: 1; visibility: visible; transition-delay: 0s; }
+  #aimg { width: 100%; height: 100%; object-fit: contain; transition: opacity .3s; }
+  #aimg.loading { opacity: .2; }
+  #tour { width: 100%; height: 100%; border: 0; }
+  .glass { background: #05080ccc; border: 1px solid var(--line); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  #caption { position: absolute; left: 16px; bottom: 16px; padding: 7px 12px; font-size: 13px; }
+  #caption:empty { display: none; }
+  #caption.top { left: auto; bottom: auto; top: 16px; right: 16px; }  /* clear of the 3D viewer's own controls along the bottom */
+  #views { position: absolute; top: 16px; right: 16px; display: flex; padding: 3px; }
+  #views button, #compass button { background: none; color: var(--dim); border-radius: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; }
+  #views button { padding: 7px 14px; }
+  #views button.sel, #compass button.sel { background: var(--panel2); color: var(--text); }
+  #compass { position: absolute; right: 16px; bottom: 16px; display: grid; grid-template: repeat(3, 36px) / repeat(3, 36px); gap: 3px; padding: 3px; }
+  #compass button { padding: 0; }
+  .target { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--accent); box-shadow: 0 0 0 2px #05080c99; }
+  .target::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--accent); animation: ping 2s var(--ease) infinite; }
+  @keyframes ping { from { transform: scale(1); opacity: .9; } to { transform: scale(4.5); opacity: 0; } }
+  .maplibregl-ctrl.maplibregl-ctrl-attrib { font: 11px var(--grot); background: #05080ccc; color: var(--dim); }
+  .maplibregl-ctrl-attrib a { color: var(--dim); }
+  .maplibregl-ctrl-attrib-button { filter: invert(1); }
+
+  @media (max-width: 820px) {
+    main { grid-template-columns: 1fr; grid-template-rows: 42vh 1fr; }
+    #stage { order: -1; } #panel { border-right: 0; border-top: 1px solid var(--line); }
+  }
+  @media (prefers-reduced-motion: reduce) { .step, .view, #aimg { transition: none; } .target::after { animation: none; } }
 </style>
 </head>
 <body>
-<header><h1>PRIMESIGHT · Judge mode</h1><span class="hint">Pick any building, any floor, any emergency. The texts land on the phone (<a id="phonelink" target="_blank">open the phone</a>).</span></header>
-<div class="cols">
-  <div class="col"><h2>1 · Building <span id="n"></span></h2><input id="q" placeholder="Search address, name, city" style="margin-bottom:8px"><div class="scroll" id="blist"></div></div>
-  <div class="col"><h2>2 · Floor</h2><div class="scroll"><div class="stack" id="stack"></div></div></div>
-  <div class="col"><h2>3 · Emergency</h2><div class="scroll"><div class="inc" id="inc"></div></div></div>
-</div>
-<footer>
-  <select id="time" title="Time of call: headcounts are daytime figures"><option value="">Now</option><option>02:00 (night)</option><option>10:00 (business hours)</option><option>13:00 (lunch)</option><option>19:00 (evening)</option><option>Saturday 15:00</option></select>
-  <input id="details" placeholder="Details (optional): caller hiding, 2 patients..." style="max-width:260px">
-  <div id="text" class="dim">Pick a building, a floor and an emergency.</div>
-  <button class="ghost" id="surprise">Surprise me</button>
-  <button id="go" disabled>Text it to the crew</button>
-</footer>
+<nav class="nav caps" aria-label="Primesight"><a href="dispatch-judge.html" aria-current="page">First responder</a><a class="mark" href="home.html">Primesight</a><a href="game.html">Game</a></nav>
+<main>
+  <aside id="panel">
+    <nav id="trail" class="caps" aria-label="Steps"></nav>
+    <section class="step on" data-s="1">
+      <h2>Choose a building</h2>
+      <input id="q" placeholder="Search address or city" aria-label="Search address or city" autocomplete="off">
+      <div class="rows" id="blist"></div>
+      <div class="foot"><button class="primary" id="next1" disabled>Select building</button></div>
+    </section>
+    <section class="step" data-s="2">
+      <h2>Choose a floor</h2>
+      <div class="rows" id="flist"></div>
+      <div class="foot"><button class="ghost" data-go="1">Back</button><button class="primary" data-go="3">Confirm location</button></div>
+    </section>
+    <section class="step" data-s="3">
+      <h2>What is the emergency?</h2>
+      <div class="cats" id="cats"></div>
+      <div class="rows" id="types"></div>
+      <div id="text"></div>
+      <div class="foot" id="foot3"><button class="ghost" data-go="2">Back</button><button class="primary" id="send" disabled>Text it to the crew</button></div>
+      <div class="foot" id="sent" hidden><b>Sent to the crew</b><a href="phone.html?id=judge" target="_blank">Open the phone</a><button class="ghost" id="again">New dispatch</button></div>
+    </section>
+  </aside>
+  <div id="stage">
+    <div class="view on" id="map"></div>
+    <div class="view" id="aerial">
+      <img id="aimg" alt="Aerial photo of the selected building">
+      <div class="glass caps" id="compass" role="group" aria-label="Aerial view direction">
+        <button data-side="north" style="grid-area:1/2" aria-label="Looking north">N</button>
+        <button data-side="west" style="grid-area:2/1" aria-label="Looking west">W</button>
+        <button data-side="top" style="grid-area:2/2" aria-label="Top down">Top</button>
+        <button data-side="east" style="grid-area:2/3" aria-label="Looking east">E</button>
+        <button data-side="south" style="grid-area:3/2" aria-label="Looking south">S</button>
+      </div>
+    </div>
+    <div class="view" id="scan"><iframe id="tour" title="3D scan of the selected floor" allow="fullscreen; xr-spatial-tracking"></iframe></div>
+    <div class="glass caps" id="views" hidden><button data-view="map">Map</button><button data-view="aerial">Aerial</button></div>
+    <div class="glass" id="caption" aria-live="polite"></div>
+  </div>
+</main>
+<script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
 <script src="common.js"></script>
+<script src="site.js"></script>
 <script>
-const PHONE = "judge"; document.getElementById("phonelink").href = `phone.html?id=${PHONE}`;
-let B = [], I = [], s = {};
 const $ = id => document.getElementById(id);
-function list() {
-  const hits = matchBuildings(B, $("q").value); $("n").textContent = `(${hits.length})`;
-  $("blist").innerHTML = hits.map(b => `<div class="b ${s.b === b ? "sel" : ""}" data-pid="${b.pid}"><b>${b.address}</b>, ${b.city}<br><small>${b.name || b.type} · ${b.stories || "?"} fl · ${b.tenants} tenants${b.sam3 ? " · SAM 3" : ""}</small></div>`).join("");
+const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const SIDES = { top: "top down", north: "looking north", east: "looking east", south: "looking south", west: "looking west" };
+let B = [], I = [];
+const s = { step: 1, b: null, f: null, cat: null, i: null, view: "map", side: "top", scanFloors: new Set() };
+const scanCache = {};
+const scansOf = pid => scanCache[pid] ||= api(`/scans/${pid}`).catch(() => []);  // every 3D scan of a building, with its floor
+
+// ---- Map (site.js): choosing a building flies in and circles it. One dot per building; a dot is clickable too.
+const { map, fly, hold, resume } = makeMap("map");
+map.on("load", () => {
+  map.addSource("pts", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+  map.addLayer({ id: "pts", type: "circle", source: "pts", paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 3, 2.5, 12, 5], "circle-color": "#fff", "circle-stroke-color": "#ff5a36", "circle-stroke-width": 1.5 } });
+  map.on("click", "pts", e => selectBuilding(B.find(b => b.pid === e.features[0].properties.pid)));
+  map.on("mouseenter", "pts", () => map.getCanvas().style.cursor = "pointer");
+  map.on("mouseleave", "pts", () => map.getCanvas().style.cursor = "");
+  dots();
+});
+function dots() {
+  const src = map.getSource("pts");
+  if (src) src.setData({ type: "FeatureCollection", features: B.filter(b => b.lat).map(b => ({ type: "Feature", properties: { pid: b.pid }, geometry: { type: "Point", coordinates: [b.lon, b.lat] } })) });
 }
-function stack() {
-  if (!s.b) return;
-  const per = Object.fromEntries(s.b.tenant_floors.map(f => [f, 1]));
-  $("stack").innerHTML = floorOptions(s.b).map(o => `<div class="fl ${o.scanned ? "scan" : ""} ${s.f === o.floor ? "sel" : ""}" data-f="${o.floor}">
-    <span style="width:22px;text-align:right">${o.floor}</span><span class="bar" style="width:${o.tenants ? 40 : 4}px"></span>${o.scanned ? "<small>3D scan</small>" : ""}</div>`).join("");
+
+// ---- Stage: which view is showing, and the one-line caption when there is something to say.
+function show(view) { for (const v of ["map", "aerial", "scan"]) $(v).classList.toggle("on", v === view); }
+let stageTick = 0;
+async function stage() {
+  const t = ++stageTick;
+  $("views").hidden = !(s.step === 1 && s.b); $("caption").classList.toggle("top", s.step > 1);
+  document.querySelectorAll("#views button").forEach(b => b.classList.toggle("sel", b.dataset.view === s.view));
+  if (s.step === 1) { show(s.view); $("caption").textContent = s.view === "aerial" ? `Vexcel aerial, ${SIDES[s.side]}` : ""; return; }
+  const scans = (await scansOf(s.b.pid)).filter(x => x.floor != null);
+  if (t !== stageTick) return;
+  if (!scans.length) { show("map"); $("caption").textContent = "No 3D scan of this building."; return; }
+  const best = scans.reduce((a, x) => Math.abs(x.floor - s.f) < Math.abs(a.floor - s.f) ? x : a);
+  const note = best.floor === s.f ? "" : `No 3D scan of floor ${s.f}. Showing floor ${best.floor}.`;
+  show("scan");
+  if ($("tour").dataset.id === best.id) { if ($("tour").dataset.ready) $("caption").textContent = note; else $("tour").onload = ready(note); return; }
+  $("tour").dataset.id = best.id; delete $("tour").dataset.ready;
+  $("caption").textContent = `Loading the 3D scan of floor ${best.floor}`;
+  $("tour").onload = ready(note);
+  $("tour").src = `https://my.matterport.com/show/?m=${best.id}&play=1&qs=1&brand=0&title=0&help=0&search=0`;
 }
-function inc() {
+const ready = note => () => { $("tour").dataset.ready = 1; if (s.step > 1) $("caption").textContent = note; };
+function aerial(side) {
+  s.side = side; $("aimg").classList.add("loading"); $("aimg").src = `/aerial/${s.b.pid}/${side}.jpg`;
+  document.querySelectorAll("#compass button").forEach(b => b.classList.toggle("sel", b.dataset.side === side));
+  stage();
+}
+$("aimg").onload = () => $("aimg").classList.remove("loading");
+$("aimg").onerror = () => { if (s.view === "aerial") $("caption").textContent = `No Vexcel image ${SIDES[s.side]} for this building.`; };
+$("views").onclick = e => { const v = e.target.dataset.view; if (!v) return; s.view = v; v === "aerial" ? aerial(s.side) : stage(); };
+$("compass").onclick = e => { const side = e.target.dataset.side; if (side) aerial(side); };
+
+// ---- Panel: one list per step.
+function renderBuildings() {
+  const hits = matchBuildings(B, $("q").value);
+  $("blist").innerHTML = hits.map(b => `<button class="row ${s.b === b ? "sel" : ""}" data-pid="${b.pid}">${esc(b.address)}<span>${esc(b.city)}</span></button>`).join("") || `<div class="none">No building matches.</div>`;
+}
+function selectBuilding(b) {
+  if (!b) return;
+  Object.assign(s, { b, f: null, view: "map", side: "top", scanFloors: new Set([b.scan_floor]) });
+  scansOf(b.pid).then(list => { if (s.b !== b || !list.length) return; s.scanFloors = new Set(list.map(x => x.floor)); if (s.step === 2) renderFloors(); });
+  $("next1").disabled = false;
+  if (s.step !== 1) go(1);
+  renderBuildings(); stage(); fly(b);
+  document.querySelector("#blist .sel")?.scrollIntoView({ block: "nearest" });
+}
+function renderFloors() {
+  $("flist").innerHTML = floorOptions(s.b).map(o => `<button class="row ${s.f === o.floor ? "sel" : ""}" data-f="${o.floor}">Floor ${o.floor}${s.scanFloors.has(o.floor) ? '<span class="has-scan">3D scan</span>' : ""}</button>`).join("");
+  document.querySelector("#flist .sel")?.scrollIntoView({ block: "nearest" });
+}
+function selectFloor(f) { s.f = Math.max(1, Math.min(floorOptions(s.b).length, f)); renderFloors(); stage(); }
+function renderEmergency() {
   const cats = [...new Set(I.map(t => t.category))];
-  $("inc").innerHTML = cats.map(c => `<div class="cat" style="color:${CATEGORY_COLORS[c]}">${c}</div>` + I.filter(t => t.category === c)
-    .map(t => `<button data-id="${t.id}" style="color:${CATEGORY_COLORS[c]}" class="${s.i === t ? "sel" : ""}"><span>${t.label}</span></button>`).join("")).join("");
+  s.cat ||= cats[0];
+  if (s.i && s.i.category !== s.cat) s.i = null;
+  $("cats").innerHTML = cats.map(c => `<button data-c="${c}" class="${c === s.cat ? "sel" : ""}"><i style="background:${CATEGORY_COLORS[c]}"></i>${c}</button>`).join("");
+  $("types").innerHTML = I.filter(t => t.category === s.cat).map(t => `<button class="row ${s.i === t ? "sel" : ""}" data-id="${t.id}">${esc(t.label)}</button>`).join("");
+  $("text").textContent = s.i ? dispatchText({ building: s.b, floor: s.f, incident: s.i }) : "Choose the emergency type.";
+  $("text").classList.toggle("ready", !!s.i); $("send").disabled = !s.i; $("foot3").hidden = false; $("sent").hidden = true;
 }
-function update() {
-  const ok = s.b && s.f && s.i;
-  $("text").textContent = ok ? dispatchText({ building: s.b, floor: s.f, incident: s.i, details: $("details").value, time: $("time").value }) : "Pick a building, a floor and an emergency.";
-  $("text").className = ok ? "" : "dim"; $("go").disabled = !ok;
+function renderTrail() {
+  const labels = [s.b && s.step > 1 ? s.b.address : "Building", s.f && s.step > 2 ? `Floor ${s.f}` : "Floor", "Emergency"];
+  $("trail").innerHTML = labels.map((l, k) => `${k ? '<span class="sep">/</span>' : ""}<button data-go="${k + 1}" ${k + 1 === s.step ? 'aria-current="step"' : ""} ${k + 1 > s.step ? "disabled" : ""}>${esc(l)}</button>`).join("");
 }
-$("q").oninput = list; $("time").oninput = update; $("details").oninput = update;
-$("blist").onclick = e => { const r = e.target.closest(".b"); if (!r) return; s.b = B.find(b => b.pid == r.dataset.pid); s.f = s.b.scan_floor; list(); stack(); update(); };
-$("stack").onclick = e => { const r = e.target.closest(".fl"); if (!r) return; s.f = +r.dataset.f; stack(); update(); };
-$("inc").onclick = e => { const r = e.target.closest("button"); if (!r) return; s.i = I.find(t => t.id === r.dataset.id); inc(); update(); };
-$("surprise").onclick = () => { s.b = pick(B); const fl = floorOptions(s.b); s.f = (pick([fl.find(o => o.scanned), pick(fl.filter(o => o.tenants)), pick(fl)].filter(Boolean))).floor; s.i = pick(I); $("time").selectedIndex = Math.floor(Math.random() * $("time").options.length); list(); stack(); inc(); update();
-  document.querySelectorAll(".b.sel, .fl.sel, .inc button.sel").forEach(el => el.scrollIntoView({ block: "center", behavior: "smooth" })); };
-$("go").onclick = async () => { $("go").disabled = true; await api("/sms", { phone: PHONE, text: $("text").textContent }); $("go").textContent = "Sent: watch the phone"; setTimeout(() => { $("go").textContent = "Text it to the crew"; $("go").disabled = false; }, 2500); };
-Promise.all([getBuildings(), getIncidents()]).then(([b, i]) => { B = b; I = i; list(); inc(); });
+function go(n) {
+  s.step = n;
+  document.querySelectorAll(".step").forEach(el => { el.classList.toggle("on", +el.dataset.s === n); el.classList.toggle("past", +el.dataset.s < n); });
+  if (n === 2) { s.f ||= s.b.scan_floor || 1; renderFloors(); }
+  if (n === 3) renderEmergency();
+  hold();  // the map only circles while it is the view on screen
+  if (n === 1 && s.b) resume();
+  renderTrail(); stage();
+}
+
+$("q").oninput = renderBuildings;
+$("blist").onclick = e => { const r = e.target.closest(".row"); if (r) selectBuilding(B.find(b => b.pid == r.dataset.pid)); };
+$("next1").onclick = () => go(2);
+$("flist").onclick = e => { const r = e.target.closest(".row"); if (r) selectFloor(+r.dataset.f); };
+$("cats").onclick = e => { const b = e.target.closest("button"); if (b) { s.cat = b.dataset.c; renderEmergency(); } };
+$("types").onclick = e => { const r = e.target.closest(".row"); if (r) { s.i = I.find(t => t.id === r.dataset.id); renderEmergency(); } };
+document.addEventListener("click", e => { const n = e.target.closest("[data-go]"); if (n && !n.disabled) go(+n.dataset.go); });
+$("send").onclick = async () => {
+  $("send").disabled = true;
+  try { await api("/sms", { phone: "judge", text: $("text").textContent }); $("foot3").hidden = true; $("sent").hidden = false; }
+  catch (e) { $("text").textContent = "Could not send. Check that the Primesight server is running, then try again."; $("send").disabled = false; }
+};
+$("again").onclick = () => location.reload();
+// Arrow keys move through the list like a selection screen; Enter takes the step's main button.
+document.addEventListener("keydown", e => {
+  const dir = e.key === "ArrowDown" ? 1 : e.key === "ArrowUp" ? -1 : 0;
+  if (dir && s.step === 1) { e.preventDefault(); const hits = matchBuildings(B, $("q").value); selectBuilding(hits[Math.max(0, Math.min(hits.length - 1, hits.indexOf(s.b) + dir))]); }
+  if (dir && s.step === 2) { e.preventDefault(); selectFloor(s.f + dir); }
+  if (e.key === "Enter" && !e.target.closest("button, a")) { const b = document.querySelector(".step.on .primary"); if (b && !b.disabled) b.click(); }
+});
+
+renderTrail();
+Promise.all([getBuildings(), getIncidents()]).then(([b, i]) => { B = b; I = i; renderBuildings(); dots(); })
+  .catch(() => { $("blist").innerHTML = `<div class="none">Could not load the buildings. Check that the Primesight server is running.</div>`; });
 </script>
 </body>
 </html>

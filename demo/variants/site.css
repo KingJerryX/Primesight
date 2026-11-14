@@ -1,0 +1,24 @@
+/* Shared by the public pages: home, first responder (dispatch-judge) and game. Load after common.css. The dev pages don't use it. */
+:root { --ink: #050506; --rule: #ffffff24; --grot: "Geist", var(--sans); --code: "Geist Mono", var(--mono); --ease: cubic-bezier(.2, .7, .2, 1); }
+html { color-scheme: dark; scrollbar-color: var(--line) transparent; }
+body { background: var(--ink); font-family: var(--grot); }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.caps { font: 400 12px var(--code); letter-spacing: .07em; text-transform: uppercase; }
+
+/* Navbar: First responder on the left, the wordmark (home) in the middle, Game on the right. */
+.nav { position: fixed; z-index: 10; inset: 0 0 auto; height: 64px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+       padding: 0 clamp(16px, 4vw, 56px); background: linear-gradient(#050506e6, #05050600); }
+.nav a { justify-self: start; padding: 8px 0; color: #fff; text-decoration: none; opacity: .65; transition: opacity .2s; }
+.nav a:last-child { justify-self: end; }
+.nav a:hover, .nav a[aria-current] { opacity: 1; }
+.nav a[aria-current]:not(.mark) { box-shadow: 0 1px 0 #fff; }
+.nav .mark { justify-self: center; font: 500 17px var(--grot); letter-spacing: .34em; padding-left: .34em; opacity: 1; text-transform: uppercase; }
+
+/* Bracket button: a hairline box with a tick at each corner. */
+.btn { --c: #fff; display: inline-block; padding: 13px 20px; border: 1px solid var(--rule); border-radius: 0; color: #fff; text-decoration: none;
+       font: 400 12px var(--code); letter-spacing: .07em; text-transform: uppercase; background-color: #05050666; transition: background-color .2s;
+       background-image: linear-gradient(var(--c) 0 0), linear-gradient(var(--c) 0 0), linear-gradient(var(--c) 0 0), linear-gradient(var(--c) 0 0),
+                         linear-gradient(var(--c) 0 0), linear-gradient(var(--c) 0 0), linear-gradient(var(--c) 0 0), linear-gradient(var(--c) 0 0);
+       background-repeat: no-repeat; background-size: 7px 1px, 1px 7px, 7px 1px, 1px 7px, 7px 1px, 1px 7px, 7px 1px, 1px 7px;
+       background-position: 0 0, 0 0, 100% 0, 100% 0, 0 100%, 0 100%, 100% 100%, 100% 100%; }
+.btn:hover { background-color: #ffffff1f; }

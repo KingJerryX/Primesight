@@ -10,7 +10,11 @@ async function api(path, body) {
   return ct.startsWith("application/json") ? r.json() : r.text();  // /trace is application/x-ndjson: keep it text
 }
 
-const getBuildings = () => api("/buildings");
+// The kit has stray lowercase and spacing ("3250 wilshire Blvd", city "houston"): capitalise each word, collapse spaces.
+const SMALL_WORDS = new Set(["of", "the", "and"]);
+const tidy = s => (s || "").trim().split(/\s+/).map((w, i) => i && SMALL_WORDS.has(w) ? w : w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+console.assert(tidy(" 3250  wilshire Blvd") === "3250 Wilshire Blvd" && tidy("1901 Avenue of the Stars") === "1901 Avenue of the Stars" && tidy("3934 FM-1960") === "3934 FM-1960");
+const getBuildings = () => api("/buildings").then(list => list.map(b => ({ ...b, address: tidy(b.address), city: tidy(b.city), name: tidy(b.name) })));
 const getIncidents = () => api("/incidents");
 const CATEGORY_COLORS = { fire: "#ff5a36", medical: "#3fa7ff", hazmat: "#f5c400", rescue: "#b07cff", security: "#ff4d8d", utility: "#2ed3a7" };
 
