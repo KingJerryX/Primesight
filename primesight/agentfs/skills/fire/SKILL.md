@@ -17,4 +17,11 @@ Order of lines, after the header:
 7. PROPERTY MGR contact if known.
 8. NOT KNOWN: always include stair locations and standpipe locations unless a crew note gives them.
 
+Header: give the location as the caller said it (FLOOR 6, PARKING LEVEL 2). Never put notes about how the data was
+looked up in the briefing.
+
+Parking garage / EV fire: a parking level is not a tenant floor. Call gather_building with floor 1 unless the call says
+the garage is below grade, so everyone in the building counts as above. Give the PARKING line (covered spaces, parking
+elevators) from building.parking and elevators. Garage levels, clearance height and EV chargers are not in the data.
+
 Don't add search or attack advice.

@@ -274,7 +274,8 @@ if __name__ == "__main__":
                        ("Worker with heat stroke on the roof", "heat_illness"), ("Stroke symptoms, 11th floor", "stroke"),
                        ("Strange odor on the 9th floor, people feel sick", "odor_unknown"), ("Strong gas odor, 20th floor", "gas_leak"),
                        ("Smoke coming into the building from outside", "smoke"), ("Patient is sick on floor 3", "medical_other"),
-                       ("Something happened", "medical_other")]:
+                       ("Something happened", "medical_other"), ("EV battery fire in the parking garage", "parking_garage_fire"),
+                       ("Car fire on parking level 2", "parking_garage_fire"), ("Car crashed into the garage entrance", "vehicle_into_building")]:
         assert classify(call)["id"] == want, (call, classify(call)["id"], want)
     print(f"Primesight server on http://localhost:{PORT}  (agent: {'on' if os.environ.get('ANTHROPIC_API_KEY') else 'off, sending drafts'})")
     from . import photon_bridge  # real iMessage/SMS through Photon when PHOTON_API_KEY + PHOTON_PROJECT_ID are in .env

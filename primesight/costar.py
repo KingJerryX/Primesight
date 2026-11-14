@@ -62,7 +62,9 @@ def building(pid):
     """Return a compact, decoded building record. First call scans the kit (~10 s); later calls hit the cache."""
     path = os.path.join(CACHE, f"costar_{pid}.json")
     if os.path.exists(path):
-        return json.load(open(path, encoding="utf-8"))
+        cached = json.load(open(path, encoding="utf-8"))
+        if "parking" in cached:  # cached before parking was added: rebuild once
+            return cached
 
     tag = re.compile(rf'"id":\s*{pid}[,}}]')
     prop = next((r for r in _scan("commercial-property.jsonl", lambda l: tag.search(l[:40])) if r["id"] == pid), None)
@@ -118,6 +120,9 @@ def building(pid):
                       for e in elevators if e.get("elevatorState") == 1],
         "tenants": sorted(tenants, key=lambda t: (t["floor"] is None, t["floor"] or 0)),
         "contacts": contacts,  # phones in the kit are fake (555)
+        # Covered / AttachedGarage = a structure (vehicle and EV fires); spaces is often missing
+        "parking": [{"type": enum("ParkingType", p.get("parkingType")), "spaces": p.get("totalSpaces")}
+                    for p in prop.get("parking") or [] if p.get("parkingType") not in (0, 8)],
         "matterport_models": property_ids_with_scans().get(pid, []),
     }
     os.makedirs(CACHE, exist_ok=True)

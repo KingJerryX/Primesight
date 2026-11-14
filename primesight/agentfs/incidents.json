@@ -280,6 +280,32 @@
    ]
   },
   {
+   "id": "parking_garage_fire",
+   "label": "Parking garage / vehicle fire",
+   "category": "fire",
+   "keywords": [
+    "parking garage",
+    "parking structure",
+    "parking deck",
+    "parking level",
+    "garage fire",
+    "car fire",
+    "vehicle fire",
+    "car on fire",
+    "electric vehicle",
+    "ev charging",
+    "ev fire"
+   ],
+   "needs": "whether the building has covered or attached parking and the parking elevators, people on floors above the garage, EV batteries (re-ignite, toxic smoke), wind for smoke drift, hydrants; clearance height and standpipe locations are NOT KNOWN unless a crew note gives them",
+   "layers": [
+    "costar",
+    "vexcel",
+    "hydrants",
+    "weather",
+    "notes"
+   ]
+  },
+  {
    "id": "battery_fire",
    "label": "Lithium battery / e-bike fire",
    "category": "fire",

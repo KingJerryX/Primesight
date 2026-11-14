@@ -62,7 +62,7 @@ def gather_building(property_id: int, floor: int, incident: str, incident_type: 
     return json.dumps({
         "draft_briefing": draft,
         "incident_needs": ty.get("needs"),  # what the crew needs first for this type, from the catalog
-        "building": {k: b[k] for k in ("name", "address", "stories", "year_built", "construction", "sprinklers", "elevators", "contacts")},
+        "building": {k: b.get(k) for k in ("name", "address", "stories", "year_built", "construction", "sprinklers", "elevators", "contacts", "parking")},
         "tenants_on_floor": [t for t in b["tenants"] if t["floor"] == floor],
         "tenants_nearby_floors": [{"name": t["name"], "floor": t["floor"], "about": t["about"]} for t in b["tenants"]
                                   if t["floor"] and abs(t["floor"] - floor) <= 3 and t["floor"] != floor],
@@ -153,9 +153,11 @@ def outside_now(property_id: int) -> str:
         out["roof"] = outside.roof(b["lat"], b["lon"])
     except Exception as e:
         out["roof"] = {"error": f"roof data unavailable ({type(e).__name__})"}
-    # Exposures: only buildings in the CoStar kit, a sample, so an unlisted building may stand closer
-    out["next_to"] = {"buildings_within_100m": costar.neighbors(int(property_id)),
-                      "note": "CoStar kit records only; other buildings may be closer"}
+    # Exposures: only buildings in the CoStar kit, a sample, so an unlisted building may stand closer.
+    # Left out when empty: "no neighbours in records" would read as "nothing next door", which the kit can't say.
+    near = costar.neighbors(int(property_id))
+    if near:
+        out["next_to"] = {"buildings_within_100m": near, "note": "CoStar kit records only; other buildings may be closer"}
     return json.dumps(out, default=str)
 
 
