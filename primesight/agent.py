@@ -193,7 +193,7 @@ TENANT_RISK = {
                    "or chemical storage), or high occupancy. Give it the incident, floor and the tenant list as JSON.",
     "system_prompt": "You assess building tenants for first responders. From each tenant's name, industry and description, "
                      "flag only what changes how a crew responds: vulnerable occupants, likely hazardous materials, unusual "
-                     "occupancy. At most 4 flags; an empty list if none. Never invent facts the description doesn't "
+                     "occupancy. Never flag a tenant as a likely target or threat because of its religion, ethnicity, nationality or politics. At most 4 flags; an empty list if none. Never invent facts the description doesn't "
                      "support; set from_name_only when inferring from a name.",
     "model": ChatAnthropic(model=MODEL, max_tokens=2000),
     "tools": [],  # isolated: no building tools, just the tenants it is given
