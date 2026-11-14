@@ -1,0 +1,1103 @@
+{
+ "property_id": 240468,
+ "name": "Westpark Plaza",
+ "address": "6220 Westpark Dr, Houston, TX",
+ "lat": 29.7241758,
+ "lon": -95.4933897,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 98000.0,
+ "typical_floor_sqft": 49000.0,
+ "year_built": 1979,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 5
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Child Care Council Of Greater Houston, Inc.",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 1960.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "St Michael's Learning Academy, Incorporated",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 1370.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Davis & Associates",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 2450.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Transform Chiropractic Clinic",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gulf Shipping Co",
+   "floor": 1,
+   "suite": "108",
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "B Jon Auto",
+   "floor": 1,
+   "suite": "167",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Katie K Interiors",
+   "floor": 1,
+   "suite": "191",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SMK Business Solutions, LLC",
+   "floor": 1,
+   "suite": "149",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tamika Griffin Consulting",
+   "floor": 1,
+   "suite": "195",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pathway Care Group",
+   "floor": 1,
+   "suite": "193",
+   "sqft": 1470.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "L G Exceptional LLC",
+   "floor": 1,
+   "suite": "143",
+   "sqft": 1960.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beulah Health Care Services, Inc",
+   "floor": 1,
+   "suite": "103B",
+   "sqft": 1960.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "First Royalty Home Care LLC",
+   "floor": 1,
+   "suite": "171",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Easy Way Title",
+   "floor": 1,
+   "suite": "166",
+   "sqft": 1470.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Black Santa Houston",
+   "floor": 1,
+   "suite": "155",
+   "sqft": 1470.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Snowtop Ice Cream, LLC",
+   "floor": 1,
+   "suite": "119",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Renee Realty Group, LLC",
+   "floor": 1,
+   "suite": "161",
+   "sqft": 1063.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lewis-Guillory Associates",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stellar Hospice & Palliative Care, LLC",
+   "floor": 1,
+   "suite": "106D",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silk Road Multilingual",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Omonzusi Imobioh",
+   "floor": 1,
+   "suite": "106G",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Genesis Billing & Consulting Services, Inc",
+   "floor": 1,
+   "suite": "103A",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Comprehensive Therapeutic Solution, Inc",
+   "floor": 1,
+   "suite": "104",
+   "sqft": 1470.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kalkan Enterprises, Inc",
+   "floor": 1,
+   "suite": "159",
+   "sqft": 1470.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stellar Staffing Plus, LLC",
+   "floor": 1,
+   "suite": "106F",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tetik, LLC",
+   "floor": 1,
+   "suite": "182",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Occupation and Rehabilitation Services",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 1470.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arda Designs, LLC",
+   "floor": 1,
+   "suite": "118",
+   "sqft": 2450.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arda Designs, LLC",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 1960.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arda Designs, LLC",
+   "floor": 1,
+   "suite": "116",
+   "sqft": 1470.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Narasimhan Consulting Services Inc.",
+   "floor": 1,
+   "suite": "151",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trinity Health Rehab",
+   "floor": 1,
+   "suite": "117",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Caisson Real Estate Brokerage, LLC",
+   "floor": 1,
+   "suite": "107",
+   "sqft": 3920.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lilidoula Birth Services",
+   "floor": 1,
+   "suite": "106E",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gencare Hospice LLC",
+   "floor": 1,
+   "suite": "106C",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VitalDrip Infusion dba Vials RX",
+   "floor": 1,
+   "suite": "111",
+   "sqft": 1470.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clever Benefit Solutions, LLC",
+   "floor": 1,
+   "suite": "115",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Up Excellence Academy",
+   "floor": 1,
+   "suite": "195",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ank Healthcare Llc",
+   "floor": 1,
+   "suite": "104c",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sierra Multiservices",
+   "floor": 1,
+   "suite": "118",
+   "sqft": null,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nightingale Services, Inc.",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 2000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rose's Hair Studio",
+   "floor": 2,
+   "suite": "264",
+   "sqft": 174.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fastidious Lash",
+   "floor": 2,
+   "suite": "263",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Xposure Minks, LLC",
+   "floor": 2,
+   "suite": "260B",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Timeless Arts by Coco",
+   "floor": 2,
+   "suite": "262",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "B\u2019Clawed & Universal Nail Studios",
+   "floor": 2,
+   "suite": "278F",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vil Lash",
+   "floor": 2,
+   "suite": "263B",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Nail Oasis",
+   "floor": 2,
+   "suite": "260A",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Barber Brothers",
+   "floor": 2,
+   "suite": "275F",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kia Lashay Unlimited",
+   "floor": 2,
+   "suite": "274C",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Asia Beauty and Co",
+   "floor": 2,
+   "suite": "272",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chi Gabrielle",
+   "floor": 2,
+   "suite": "270",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Les Styled Me",
+   "floor": 2,
+   "suite": "268",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HTX Desired Cutz",
+   "floor": 2,
+   "suite": "265",
+   "sqft": 1470.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Locs by Dev",
+   "floor": 2,
+   "suite": "274A",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "D. luxurious Co",
+   "floor": 2,
+   "suite": "286",
+   "sqft": 286.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Takedown TX",
+   "floor": 2,
+   "suite": "278D",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Naomi Marie Salon",
+   "floor": 2,
+   "suite": "278B",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ashley Garza",
+   "floor": 2,
+   "suite": "266",
+   "sqft": 300.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Gleaux Factory",
+   "floor": 2,
+   "suite": "275I",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SONSHINESODDETERMINED, LLC",
+   "floor": 2,
+   "suite": "275A",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Diamond District",
+   "floor": 2,
+   "suite": "275H",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Britt Hair Braiding",
+   "floor": 2,
+   "suite": "250I",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Paige Mary Styling",
+   "floor": 2,
+   "suite": "275G",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Samantha Stylez Inc.",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RI-NU Beauty Bar",
+   "floor": 2,
+   "suite": "242",
+   "sqft": 750.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wicked Hair Studios",
+   "floor": 2,
+   "suite": "275E",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jocquail Alexcia",
+   "floor": 2,
+   "suite": "278E",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hair by Diam Wilson",
+   "floor": 2,
+   "suite": "275C",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NyahSimoneCo.",
+   "floor": 2,
+   "suite": "248B",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Flawless Exchange Llc",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Natalie Elizabeth Beauty & Care",
+   "floor": 2,
+   "suite": "249",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alabaster Beauty Bar",
+   "floor": 2,
+   "suite": "250A",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Naomi's Collection, LLC",
+   "floor": 2,
+   "suite": "284",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chlodein Beauty, LLC",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 140.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kj Beauty Room",
+   "floor": 2,
+   "suite": "278A",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Absolute Service Solutions LLC",
+   "floor": 2,
+   "suite": "214",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CC Plus Financial Solutions, Inc",
+   "floor": 2,
+   "suite": "236",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Killer Hair",
+   "floor": 2,
+   "suite": "288",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Herhairpy",
+   "floor": 2,
+   "suite": "278C",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hair Utopia LLC",
+   "floor": 2,
+   "suite": "250B",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Carolthestylist",
+   "floor": 2,
+   "suite": "278G",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Raul's Bookkeeping and Tax Services, LLC",
+   "floor": 2,
+   "suite": "216C",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bombshell Glam Studio",
+   "floor": 2,
+   "suite": "250J",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Touched By Jah",
+   "floor": 2,
+   "suite": "250C",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CDL Commercial Trucks Training, LLC",
+   "floor": 2,
+   "suite": "232",
+   "sqft": 1470.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kodea LTS",
+   "floor": 2,
+   "suite": "219",
+   "sqft": 980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Famcare Home Health Services, Inc",
+   "floor": 2,
+   "suite": "217",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "St. Cyril Palliative Care Services, Inc",
+   "floor": 2,
+   "suite": "207",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "FAIM Auto Group Houston, LLC",
+   "floor": 2,
+   "suite": "213",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Brittany Experience Hair Collection, LLC",
+   "floor": 2,
+   "suite": "250M",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alexey Kiseley Golubykh, LLC",
+   "floor": 2,
+   "suite": "215",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Breakthrough With A Therapist PLLC",
+   "floor": 2,
+   "suite": "202",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shop Blaze, Inc",
+   "floor": 2,
+   "suite": "216D",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Makeup By Pretty",
+   "floor": 2,
+   "suite": "241",
+   "sqft": 140.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "La Vida Aesthetics Institute",
+   "floor": 2,
+   "suite": "235",
+   "sqft": 2450.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hair To Kill",
+   "floor": 2,
+   "suite": "250D",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Exquisite Braids by Marina",
+   "floor": 2,
+   "suite": "250E",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jabber Law Firm",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tobis Chair",
+   "floor": 2,
+   "suite": "243",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lacedbykyra",
+   "floor": 2,
+   "suite": "250L",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jaystal, Inc",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sheik LLC",
+   "floor": 2,
+   "suite": "228",
+   "sqft": 1470.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "High Klass Artistry",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Refined Construction & Remodeling. LLC",
+   "floor": 2,
+   "suite": "209",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Popular Multiservice Inc.",
+   "floor": 2,
+   "suite": "204",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AMBeauty",
+   "floor": 2,
+   "suite": "250F",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unique Tax Group",
+   "floor": 2,
+   "suite": "239",
+   "sqft": 2450.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advent Staffing and Healthcare",
+   "floor": 2,
+   "suite": "206",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Luxe Styles Hair",
+   "floor": 2,
+   "suite": "263C",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Solidified Lab Solutions, LLC",
+   "floor": 2,
+   "suite": "216B",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Elle Woods Experience",
+   "floor": 2,
+   "suite": "250H",
+   "sqft": 490.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "M. Kruger Ventures, Inc.",
+   "floor": 2,
+   "suite": "226",
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dosed By Zaza LLC",
+   "floor": 2,
+   "suite": "237",
+   "sqft": 1470.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bare Lounge LLC",
+   "floor": 2,
+   "suite": "245",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PrimeSure Global, LLC",
+   "floor": 2,
+   "suite": "211",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nightingale Services, Inc.",
+   "floor": 2,
+   "suite": "238",
+   "sqft": 2450.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eve's Beauty Garden",
+   "floor": 2,
+   "suite": "260C",
+   "sqft": 980.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "C & L Medical Services, Inc.",
+   "phone": "5552451346"
+  }
+ ],
+ "matterport_models": [
+  "WfG39bZsbai"
+ ]
+}

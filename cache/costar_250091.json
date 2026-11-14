@@ -1,0 +1,80 @@
+{
+ "property_id": 250091,
+ "name": null,
+ "address": "6060 Center Dr, Los Angeles, CA",
+ "lat": 33.9760069,
+ "lon": -118.3909366,
+ "type": "Office",
+ "stories": 10,
+ "gross_sqft": 274782.0,
+ "typical_floor_sqft": 25979.0,
+ "year_built": 1999,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Esfr",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 8864.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "J E Holdings Inc",
+   "floor": 1,
+   "suite": "10",
+   "sqft": null,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mitsubishi International Corporation",
+   "floor": 8,
+   "suite": "825",
+   "sqft": 3460.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alvarez & Marsal Holdings, LLC",
+   "floor": 9,
+   "suite": "Ste 950",
+   "sqft": 12168.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Industrious",
+   "floor": 10,
+   "suite": null,
+   "sqft": 25000.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "i1jgvkc59jk"
+ ]
+}

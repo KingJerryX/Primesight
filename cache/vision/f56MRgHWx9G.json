@@ -1,0 +1,41 @@
+{
+ "model_id": "f56MRgHWx9G",
+ "name": "Suite 400 - Coworking Office",
+ "floor": 4,
+ "sweeps": [
+  {
+   "id": "5d8t7tq46d1q5qzsg96esq2md",
+   "index": 0,
+   "xy": [
+    -4.087038993835449,
+    -2.01166033744812
+   ],
+   "hits": []
+  },
+  {
+   "id": "n9fmpf7nc42kc87n7m21syrwa",
+   "index": 1,
+   "xy": [
+    -0.0021510336082428694,
+    -0.0034612324088811874
+   ],
+   "hits": []
+  },
+  {
+   "id": "8161puyhm0zc26q1x7c47pecc",
+   "index": 2,
+   "xy": [
+    -1.0209001302719116,
+    -1.4265224933624268
+   ],
+   "hits": []
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 0,
+  "stairs": 0,
+  "fire extinguisher": 0,
+  "fire alarm pull station": 0
+ },
+ "seconds": 41
+}

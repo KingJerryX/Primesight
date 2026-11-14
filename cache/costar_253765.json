@@ -1,0 +1,200 @@
+{
+ "property_id": 253765,
+ "name": "Hollywood Production Center 1",
+ "address": "1149 Gower St, Los Angeles, CA",
+ "lat": 34.0921271,
+ "lon": -118.32262,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 75676.0,
+ "typical_floor_sqft": 37330.0,
+ "year_built": 1956,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Hollywood Production Center",
+   "floor": 1,
+   "suite": null,
+   "sqft": 37330.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 438.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "106-A",
+   "sqft": 228.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "106-B",
+   "sqft": 228.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "103-3",
+   "sqft": 294.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Instrument Pictures Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "H & D Bail Bonds Hollywood",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hollywood Production Center",
+   "floor": 2,
+   "suite": null,
+   "sqft": 37330.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "204",
+   "sqft": 337.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "207",
+   "sqft": 207.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 656.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 146.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "223",
+   "sqft": 231.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "203-1",
+   "sqft": 775.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "217",
+   "sqft": 293.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "203-2",
+   "sqft": 775.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "274E",
+   "sqft": 1308.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "208",
+   "sqft": 207.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "222",
+   "sqft": 293.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Hollywood Production Center",
+   "phone": "5552154876"
+  }
+ ],
+ "matterport_models": [
+  "K6X5Tk8UBn9",
+  "zgsqUTPAKxh"
+ ]
+}

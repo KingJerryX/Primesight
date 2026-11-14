@@ -1,0 +1,160 @@
+{
+ "property_id": 239642,
+ "name": "Northwest Medical Plaza I",
+ "address": "800 Peakwood Dr, Houston, TX",
+ "lat": 30.022086,
+ "lon": -95.443618,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 98676.0,
+ "typical_floor_sqft": 12263.0,
+ "year_built": 1984,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Solis Mammography",
+   "floor": 1,
+   "suite": "1F",
+   "sqft": 3556.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Altera Fund Advisors",
+   "floor": 1,
+   "suite": "1B",
+   "sqft": 1380.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UT Physicians",
+   "floor": 2,
+   "suite": "2C",
+   "sqft": 1333.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vital Heart & Vein",
+   "floor": 2,
+   "suite": "2E",
+   "sqft": 4985.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jason R Bailey, MD",
+   "floor": 2,
+   "suite": "2D1",
+   "sqft": 3678.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MyoCore",
+   "floor": 3,
+   "suite": "3E",
+   "sqft": 745.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Extant Health Care",
+   "floor": 4,
+   "suite": "4E",
+   "sqft": 1717.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Privia Health",
+   "floor": 4,
+   "suite": "4C",
+   "sqft": 3281.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HCA Healthcare, Inc.",
+   "floor": 5,
+   "suite": "5D",
+   "sqft": 7399.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Pediatric Clinic",
+   "floor": 6,
+   "suite": "6F",
+   "sqft": 3408.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Cardiology Associates",
+   "floor": 6,
+   "suite": "6C",
+   "sqft": 3311.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HCA Healthcare, Inc.",
+   "floor": 6,
+   "suite": null,
+   "sqft": 3311.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Interventional Spine and Joint Center",
+   "floor": 7,
+   "suite": "7F",
+   "sqft": 3399.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Leggett & Dr. Lee",
+   "floor": 8,
+   "suite": "8B",
+   "sqft": 2810.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Transwestern Real Estate Services",
+   "phone": "5556061176"
+  }
+ ],
+ "matterport_models": [
+  "V6BTYjxYwnW",
+  "XXWjg88syVb"
+ ]
+}

@@ -1,0 +1,245 @@
+{
+ "property_id": 247985,
+ "name": "255 Grand",
+ "address": "255 Grand Ave, Los Angeles, CA",
+ "lat": 34.0536382,
+ "lon": -118.251497,
+ "type": "Multifamily",
+ "stories": 27,
+ "gross_sqft": 682553.0,
+ "typical_floor_sqft": 25279.0,
+ "year_built": 1988,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1540.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1520.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ocho Mexican Grill",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2420.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2420.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2138.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2348.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2348.0,
+   "employees": null,
+   "industry": "RetailersOrWholesalers",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "Floor 1",
+   "sqft": 1643.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Etchea Cafe Bakery & Catering",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1060.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Itod Tv Mounting Los Angeles",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Subway",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 1200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Perfect Image Printing",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": null,
+   "sqft": 689.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2376.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": null,
+   "sqft": 255.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cyiplaw",
+   "floor": 2,
+   "suite": "215",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Decorian Group LLC",
+   "floor": 8,
+   "suite": "812",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1201",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 19,
+   "suite": null,
+   "sqft": 400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Partner Of Travel Agency",
+   "floor": 23,
+   "suite": null,
+   "sqft": 1100.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": null,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chipotle Mexican Grill",
+   "floor": null,
+   "suite": null,
+   "sqft": 2530.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "5ruRuibdLeQ",
+  "Bggx7P4b3t9",
+  "N7MuQn5eFvH",
+  "UZBMyQDtkWM",
+  "nbu4fUhjdMV",
+  "s96vQq12faB",
+  "wqVP6pD99JV",
+  "xPdWuD9igAe"
+ ]
+}

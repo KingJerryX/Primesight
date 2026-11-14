@@ -1,0 +1,58 @@
+{
+ "property_id": 240749,
+ "name": "Building 3",
+ "address": "15740 Park Row , Houston, TX",
+ "lat": 29.789819,
+ "lon": -95.659199,
+ "type": "Flex",
+ "stories": 1,
+ "gross_sqft": 45000.0,
+ "typical_floor_sqft": 45000.0,
+ "year_built": 1998,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Perry Homes",
+   "floor": 1,
+   "suite": "450",
+   "sqft": 25600.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Atlas",
+   "floor": 1,
+   "suite": "200",
+   "sqft": 10100.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "New Park Drilling Fluids Laboratory",
+   "floor": 1,
+   "suite": "500",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 8800.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "cyPezoA9BgJ"
+ ]
+}

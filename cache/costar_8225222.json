@@ -1,0 +1,148 @@
+{
+ "property_id": 8225222,
+ "name": "Avant",
+ "address": "1360 Figueroa St, Los Angeles, CA",
+ "lat": 34.03916,
+ "lon": -118.26864,
+ "type": "Multifamily",
+ "stories": 7,
+ "gross_sqft": 305989.0,
+ "typical_floor_sqft": 30485.0,
+ "year_built": 2014,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "Space 1",
+   "sqft": 2003.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Young Billionaires",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1110.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Young Billionaires",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1567.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ruby's Natural Hair Care",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Haven Beauty Club",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "7-Eleven",
+   "floor": 1,
+   "suite": "b",
+   "sqft": 2500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ups Store",
+   "floor": 1,
+   "suite": "d",
+   "sqft": 1300.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Thomas Samuel Media",
+   "floor": 3,
+   "suite": "311",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Princess Obome Foundation",
+   "floor": 3,
+   "suite": "393d",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jonni Cheatwood Studios Llc",
+   "floor": 4,
+   "suite": "408",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Scvfx Llc",
+   "floor": 5,
+   "suite": "530",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Essex - The Avant",
+   "phone": "5556444384"
+  }
+ ],
+ "matterport_models": [
+  "1sW1YgLzUcT",
+  "2n3PbgV7et8",
+  "6bRh9xLXdxK",
+  "7pFrEm6jgbr",
+  "9bizBpTT79A",
+  "B2Rr4x4tLpY",
+  "CqtN5HaEn1b",
+  "MP9cyQV5vK5",
+  "MsacdYH6tsT",
+  "PwGZzAiLNbn",
+  "SKnpwqzMU8R",
+  "VCiwrasQE2F",
+  "XyhmJrubyfm",
+  "YaujyWZiGYQ",
+  "dKgZj8aX3xv",
+  "eZPMzbj8pX9",
+  "kzuA2R9GWkQ",
+  "mVVPpJgi1YE",
+  "qGLhgvbDWgT",
+  "qpz6VfvYAFe",
+  "r31nYmThCK9",
+  "xuQXAGEqEJ1"
+ ]
+}

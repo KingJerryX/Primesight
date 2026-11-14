@@ -1,0 +1,108 @@
+{
+ "property_id": 240048,
+ "name": "Plaza at Commerce Park North",
+ "address": "222 Pennbright Dr, Houston, TX",
+ "lat": 29.9929178,
+ "lon": -95.4272633,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 104788.0,
+ "typical_floor_sqft": 32972.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Christine K Jonte & Associates",
+   "floor": 1,
+   "suite": null,
+   "sqft": 900.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ortega Home Group",
+   "floor": 1,
+   "suite": null,
+   "sqft": 600.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Exalt Real Estate Group",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 2000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Evhan Hospitality",
+   "floor": 1,
+   "suite": "137",
+   "sqft": 2110.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oceanwide Expeditions",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3950.0,
+   "employees": 26,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Federation Of Teachers",
+   "floor": 1,
+   "suite": "106",
+   "sqft": 657.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of Julio A. Joglar",
+   "floor": 1,
+   "suite": null,
+   "sqft": 920.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tier 1 Personnel",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1343.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Exalt Real Estate Group",
+   "phone": "5558333195"
+  }
+ ],
+ "matterport_models": [
+  "3myzz1GKxaj",
+  "Cf2qUEaKCGo",
+  "bC6qQ2geFYb",
+  "kUkfN4Mseqg"
+ ]
+}

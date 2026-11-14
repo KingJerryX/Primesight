@@ -1,0 +1,229 @@
+{
+ "property_id": 249874,
+ "name": "Saltair San Vicente",
+ "address": "12011 San Vicente Blvd, Los Angeles, CA",
+ "lat": 34.0524111,
+ "lon": -118.4734575,
+ "type": "Office",
+ "stories": 7,
+ "gross_sqft": 55730.0,
+ "typical_floor_sqft": 6192.0,
+ "year_built": 1964,
+ "construction": "Steel",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Function Physical Therapy",
+   "floor": 0,
+   "suite": "B5",
+   "sqft": 2007.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rebekah Brod, MA, MFT",
+   "floor": 0,
+   "suite": "B12",
+   "sqft": 2007.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Core Center Pilates Studio",
+   "floor": 0,
+   "suite": null,
+   "sqft": 2067.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fifth Third Bank",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Joseph Verrone LCSW",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 1920.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Bill Cloke",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 2167.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Robin Burman, MD",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 1981.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Susan Quinn Therapist & Life Coach",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 519.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regata Captial Group",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 523.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Katja D. Pohl, Psy.D.",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 519.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mindi Schumaker, LMFT",
+   "floor": 3,
+   "suite": null,
+   "sqft": 519.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Robert Scheps",
+   "floor": 4,
+   "suite": "408",
+   "sqft": 1238.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jump Investors",
+   "floor": 4,
+   "suite": "405",
+   "sqft": 1858.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Mother Hood  LA",
+   "floor": 4,
+   "suite": "402",
+   "sqft": 1115.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "S Mark Taper Foundation",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 1858.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Los Angeles Institute & Society",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 929.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "B R, LLC",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 1238.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trial Partners LLC",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 1424.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sarah R. Bein, MD",
+   "floor": 5,
+   "suite": "516",
+   "sqft": 1238.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cox Wootton Lerner Griffin & Hansen LLP",
+   "floor": 6,
+   "suite": null,
+   "sqft": 3879.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Miller Construction & Development",
+   "floor": 7,
+   "suite": "702",
+   "sqft": 1765.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jeff Anderson & Associates",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 4412.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "VNjTGFdae3w"
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "property_id": 238885,
+ "name": null,
+ "address": "6445 Burlington , Houston, TX",
+ "lat": 29.859744,
+ "lon": -95.483251,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 21682.0,
+ "typical_floor_sqft": 21682.0,
+ "year_built": 1975,
+ "construction": "Metal",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "American Stone Company",
+   "phone": "5552127085"
+  }
+ ],
+ "matterport_models": [
+  "rhPtaPXhbJo",
+  "suXvWyjFWvZ"
+ ]
+}

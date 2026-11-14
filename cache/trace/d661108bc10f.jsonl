@@ -1,0 +1,5 @@
+{"t": 0.0, "step": "call_received", "detail": "Fire on the 3rd floor, 221 12th St, Los Angeles."}
+{"t": 0.03, "step": "address_lookup", "detail": "221 E 12th St, Los Angeles -> 249810"}
+{"t": 0.03, "step": "mode", "detail": "no ANTHROPIC_API_KEY: sending the draft briefing"}
+{"t": 0.03, "step": "gather_building", "detail": "floor 3, fire"}
+{"t": 3.19, "step": "done", "detail": "12 lines, 2 images"}

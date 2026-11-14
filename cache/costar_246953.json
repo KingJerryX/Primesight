@@ -1,0 +1,83 @@
+{
+ "property_id": 246953,
+ "name": "Brentwood Court",
+ "address": "11990 San Vicente Blvd, Los Angeles, CA",
+ "lat": 34.0518096,
+ "lon": -118.4723717,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 27329.0,
+ "typical_floor_sqft": 10674.0,
+ "year_built": 1984,
+ "construction": "Unknown",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Douglas Elliman",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 4483.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WELLPEOPLE",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 2705.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Upland Workshop",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 3000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sadikoff & Kanter, LLP",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 1325.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Portfolio Escrow Inc",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 4270.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Douglas Elliman",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 1067.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "FkhfLbTgKRZ",
+  "SY5Aa5oX5rK",
+  "guPsNVXKsFL"
+ ]
+}

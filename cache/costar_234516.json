@@ -1,0 +1,41 @@
+{
+ "property_id": 234516,
+ "name": null,
+ "address": "5707 Gardendale Dr, Houston, TX",
+ "lat": 29.816729,
+ "lon": -95.474721,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 36000.0,
+ "typical_floor_sqft": 36000.0,
+ "year_built": 1976,
+ "construction": "Metal",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Paris Texas",
+   "floor": 1,
+   "suite": "5707A",
+   "sqft": 9000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "5707 D",
+   "sqft": 6000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "bBi7126XFRq",
+  "iwkhCwGZM1b"
+ ]
+}

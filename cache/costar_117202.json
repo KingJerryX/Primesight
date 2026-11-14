@@ -1,0 +1,21 @@
+{
+ "property_id": 117202,
+ "name": "Carson Senior Village",
+ "address": "22125 Main St, Los Angeles, CA",
+ "lat": 33.8259525,
+ "lon": -118.277056,
+ "type": "Multifamily",
+ "stories": 2,
+ "gross_sqft": 39000.0,
+ "typical_floor_sqft": 12308.0,
+ "year_built": 1964,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "SCCvucQ3JVy"
+ ]
+}

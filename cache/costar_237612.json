@@ -1,0 +1,40 @@
+{
+ "property_id": 237612,
+ "name": null,
+ "address": "15413 Vantage Pky, Houston, TX",
+ "lat": 29.9429757,
+ "lon": -95.3656175,
+ "type": "Flex",
+ "stories": 1,
+ "gross_sqft": 21532.0,
+ "typical_floor_sqft": 21532.0,
+ "year_built": 1980,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Innercore Fitness",
+   "floor": 1,
+   "suite": "200",
+   "sqft": 3800.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Re-Birth Nations",
+   "floor": 1,
+   "suite": "114",
+   "sqft": 12919.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "NMAdZFTNmfX"
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "property_id": 275969,
+ "name": null,
+ "address": "5701 San Pedro St, Los Angeles, CA",
+ "lat": 33.990489,
+ "lon": -118.27041,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 10000.0,
+ "typical_floor_sqft": 9746.0,
+ "year_built": 1947,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 10046.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 9746.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "649QST5vLDw"
+ ]
+}

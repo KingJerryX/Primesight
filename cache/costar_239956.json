@@ -1,0 +1,162 @@
+{
+ "property_id": 239956,
+ "name": "Green Bank Bldg",
+ "address": "9545 Katy Fwy, Houston, TX",
+ "lat": 29.7832393,
+ "lon": -95.5291399,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 34528.0,
+ "typical_floor_sqft": 8246.0,
+ "year_built": 1972,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Rudy Ramos Jr., D.D.S., F.A.D.I.,P.C. & Associates",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 600.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Top Dog & Greenspoint Investors",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 3989.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 3989.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Forgo Trucking Corp",
+   "floor": 1,
+   "suite": "120",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gulf Capital Bank",
+   "floor": 1,
+   "suite": "105/110",
+   "sqft": 1915.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Spd Construction",
+   "floor": 2,
+   "suite": "210",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hyoungwon Eng USA, Inc.",
+   "floor": 3,
+   "suite": "390",
+   "sqft": 900.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Back and Pain Wellnes",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 504.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "William Johnson",
+   "floor": 3,
+   "suite": "375",
+   "sqft": 577.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gulf Capital Bank",
+   "floor": 3,
+   "suite": "375",
+   "sqft": 3073.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gulf Capital Bank",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 1113.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gulf Capital Bank",
+   "floor": 3,
+   "suite": "390",
+   "sqft": 1291.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Apex Heritage Group",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 1235.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CE Engineers & Development Consultants, INC",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 2059.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LPL Financial",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 1992.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "AoUK8zJ79E5"
+ ]
+}

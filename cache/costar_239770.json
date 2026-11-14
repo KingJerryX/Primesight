@@ -1,0 +1,101 @@
+{
+ "property_id": 239770,
+ "name": null,
+ "address": "2929 Briarpark Dr, Houston, TX",
+ "lat": 29.7337484,
+ "lon": -95.5485175,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 141960.0,
+ "typical_floor_sqft": 25000.0,
+ "year_built": 1981,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Weston Solutions, Inc.",
+   "floor": 1,
+   "suite": "175",
+   "sqft": 11620.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Microvast",
+   "floor": 1,
+   "suite": null,
+   "sqft": 11620.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 4789.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alan C. McClure Associates",
+   "floor": 2,
+   "suite": null,
+   "sqft": 5945.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Microvast",
+   "floor": 2,
+   "suite": null,
+   "sqft": 6561.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 3502.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Microvast",
+   "floor": 3,
+   "suite": null,
+   "sqft": 19738.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Microvast",
+   "floor": 4,
+   "suite": null,
+   "sqft": 23240.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "KCEJsttcZP3",
+  "QcnVyeMeyu7",
+  "hp36rB7V5jQ"
+ ]
+}

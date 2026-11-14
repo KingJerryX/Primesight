@@ -1,0 +1,85 @@
+{
+ "property_id": 28633,
+ "name": null,
+ "address": "3014 Coolidge Ave, Los Angeles, CA",
+ "lat": 34.104217,
+ "lon": -118.244322,
+ "type": "Industrial",
+ "stories": 2,
+ "gross_sqft": 7895.293,
+ "typical_floor_sqft": 7245.0,
+ "year_built": 1964,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "A",
+   "sqft": 1200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": null,
+   "sqft": 900.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wiik Ulla B Trustee Et Al",
+   "floor": null,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "J M Tobacco Inc",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "FSRvd6pJLDp"
+ ]
+}

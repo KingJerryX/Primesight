@@ -1,0 +1,31 @@
+{
+ "property_id": 278605,
+ "name": "Shason, Inc",
+ "address": "4801 Staunton Ave, Los Angeles, CA",
+ "lat": 34.0006433,
+ "lon": -118.2425812,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 40502.0,
+ "typical_floor_sqft": 40502.0,
+ "year_built": 1950,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Shason Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": 40502.0,
+   "employees": 132,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "3mN1d34pZnh"
+ ]
+}

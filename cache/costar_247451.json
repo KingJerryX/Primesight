@@ -1,0 +1,296 @@
+{
+ "property_id": 247451,
+ "name": "Cornerstone Plaza",
+ "address": "1990 Bundy Dr, Los Angeles, CA",
+ "lat": 34.0345304,
+ "lon": -118.455478,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 177954.0,
+ "typical_floor_sqft": 21699.0,
+ "year_built": 1986,
+ "construction": "Unknown",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Cancer Support Community Los Angeles",
+   "floor": 1,
+   "suite": null,
+   "sqft": 6180.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beverly Hills Fencers' Club",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 6616.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Garden Cafe",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 2170.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 6733.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Industry Intelligence Inc.",
+   "floor": 3,
+   "suite": "380",
+   "sqft": 3255.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Glotman Simpson",
+   "floor": 3,
+   "suite": "375",
+   "sqft": 3255.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Community West",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 6572.0,
+   "employees": 44,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Citrin Cooperman",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 6610.0,
+   "employees": 112,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Barrington Legal, Inc.",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 2170.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ExED",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 2170.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nadel Architects",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 2170.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Bedford Group Of Companies",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 2170.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Price, Raffel & Associates, Inc.",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 1200.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Douglas Emmett Management, LLC",
+   "floor": 4,
+   "suite": "405",
+   "sqft": 1085.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "460",
+   "sqft": 1515.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Behavioral Diagnostics Medical Group",
+   "floor": 4,
+   "suite": null,
+   "sqft": 2170.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shapell Properties, Inc.",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 8680.0,
+   "employees": 46,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 2486.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Saint Matthew's Churches",
+   "floor": 5,
+   "suite": null,
+   "sqft": 1933.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PacWest Management, Inc.",
+   "floor": 5,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "540",
+   "sqft": 2169.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lear Capital",
+   "floor": 6,
+   "suite": "600, 650",
+   "sqft": 10082.0,
+   "employees": 62,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Gershuni Law Firm",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 3255.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elevate Hospice Care, Inc.",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 2170.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nagata Acoustics",
+   "floor": 7,
+   "suite": "795",
+   "sqft": 2387.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Spertus Landes & Josephs LLP",
+   "floor": 7,
+   "suite": "705",
+   "sqft": 2444.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lucy Postolov DACM, L.Ac. Office",
+   "floor": 7,
+   "suite": "790",
+   "sqft": 2387.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wheeler & Bi CPA",
+   "floor": 7,
+   "suite": "777",
+   "sqft": 7204.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sanli Pastore & Hill",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 8680.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Citrin Cooperman",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 12902.0,
+   "employees": 112,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "GRqGVchuLTF",
+  "fgy8jWyWwDB",
+  "hLR2zAFV1tK",
+  "rBDFhKMRHny",
+  "t9ou5L2emMy"
+ ]
+}

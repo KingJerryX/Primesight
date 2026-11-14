@@ -1,0 +1,173 @@
+{
+ "property_id": 253484,
+ "name": "Hellman Building",
+ "address": "411 Main St, Los Angeles, CA",
+ "lat": 34.0479895,
+ "lon": -118.2477095,
+ "type": "Multifamily",
+ "stories": 6,
+ "gross_sqft": 92208.0,
+ "typical_floor_sqft": 22504.0,
+ "year_built": 1904,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Salon on Main Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": 6635.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gilmore Associates",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Old Financial District Limited Partnership",
+   "floor": 1,
+   "suite": "M100",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kerri Baker Pilates",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vibiana",
+   "floor": 1,
+   "suite": "m100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sister Cities Of Los Angeles",
+   "floor": 1,
+   "suite": "m100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Autonomous Media",
+   "floor": 2,
+   "suite": "221",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Manufactur LLC",
+   "floor": 4,
+   "suite": "422",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cheap Bitch, Llc",
+   "floor": 6,
+   "suite": "608",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Old Bank - Hellman Apartments",
+   "floor": null,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ball-Nogues Studio",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Swell Capital Management",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Davis Hotel Capital",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Apostrophe",
+   "floor": null,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Josef Centeno Group",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Davida J. Goldman",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Gilmore - Hellman Apartments",
+   "phone": "5559168404"
+  }
+ ],
+ "matterport_models": [
+  "Es1dMv6E4kf",
+  "o27669sMG5L"
+ ]
+}

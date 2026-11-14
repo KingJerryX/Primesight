@@ -1,0 +1,621 @@
+{
+ "property_id": 247344,
+ "name": "Century Park East",
+ "address": "1801 Century Park , Los Angeles, CA",
+ "lat": 34.0622598,
+ "lon": -118.4158267,
+ "type": "Office",
+ "stories": 25,
+ "gross_sqft": 386863.0,
+ "typical_floor_sqft": 14658.0,
+ "year_built": 1972,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 8
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "DKC Public Relations",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 4800.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Up Fitness",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 5255.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Network Capital Funding",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 4040.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Preferred Bank",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1300.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Keystone Document Discovery",
+   "floor": 2,
+   "suite": null,
+   "sqft": 3424.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Slesigner Communications",
+   "floor": 3,
+   "suite": "300A",
+   "sqft": 2932.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Structure Law Group, LLP",
+   "floor": 4,
+   "suite": "475",
+   "sqft": 1646.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Law Offices of Wiesman Pirian",
+   "floor": 4,
+   "suite": "470",
+   "sqft": 1998.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bruin Biometrics LLC",
+   "floor": 4,
+   "suite": "460",
+   "sqft": 3203.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Simple House Films",
+   "floor": 4,
+   "suite": "490",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bluefox Entertainment",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 3300.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "490",
+   "sqft": 958.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sarraf Law Firm",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 2360.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Israel Public Affairs Committee",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 15395.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unisource National Lender Services",
+   "floor": 7,
+   "suite": "780",
+   "sqft": 1854.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Avantus",
+   "floor": 7,
+   "suite": "700a",
+   "sqft": 3100.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "1st Avenue Capital",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 3100.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mediapro Studios US",
+   "floor": 7,
+   "suite": "760",
+   "sqft": 7341.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blue Lake Capital",
+   "floor": 8,
+   "suite": "870, 880",
+   "sqft": 2052.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Melmed Law Group",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 4033.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Much Shelist",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 6650.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nosrati Law",
+   "floor": 8,
+   "suite": "840",
+   "sqft": 2660.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gary Iskowitz & Company",
+   "floor": 10,
+   "suite": "1010",
+   "sqft": 1800.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Comstock Realty Partners",
+   "floor": 10,
+   "suite": "1095",
+   "sqft": 2620.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Natixis Corporate and Investment Banking",
+   "floor": 10,
+   "suite": "1090",
+   "sqft": 2578.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Remy Investors & Consultants Inc.",
+   "floor": 11,
+   "suite": "1111",
+   "sqft": 1500.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kids Capital Management Inc.",
+   "floor": 11,
+   "suite": "1101",
+   "sqft": 3174.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1150",
+   "sqft": 4154.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "United Express Messengers Inc",
+   "floor": 12,
+   "suite": "1215",
+   "sqft": 1650.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Robert M. Baria",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 2932.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Novian & Novian LLP",
+   "floor": 12,
+   "suite": null,
+   "sqft": 5200.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AWAIM",
+   "floor": 14,
+   "suite": "1440",
+   "sqft": 1633.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aaxis Group",
+   "floor": 14,
+   "suite": "1470",
+   "sqft": 2459.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Square Nine Capital",
+   "floor": 14,
+   "suite": "1460",
+   "sqft": 2077.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sherwood Holdings Inc.",
+   "floor": 14,
+   "suite": "1440, 1420",
+   "sqft": 5656.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Wool Services Inc.",
+   "floor": 15,
+   "suite": "1520",
+   "sqft": 3087.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1500",
+   "sqft": 4919.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1520",
+   "sqft": 3037.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1550",
+   "sqft": 4875.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TroyGould Attorneys",
+   "floor": 16,
+   "suite": null,
+   "sqft": 13987.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TroyGould Attorneys",
+   "floor": 17,
+   "suite": null,
+   "sqft": 14658.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Briones PC",
+   "floor": 18,
+   "suite": "1840",
+   "sqft": 2357.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lagstein Law Firm",
+   "floor": 18,
+   "suite": "1810",
+   "sqft": 1395.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kasowitz",
+   "floor": 18,
+   "suite": "1830",
+   "sqft": 3889.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trade Commission Of Spain In LA",
+   "floor": 18,
+   "suite": "1801",
+   "sqft": 400.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stonebridge Capital Management",
+   "floor": 18,
+   "suite": null,
+   "sqft": 4933.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 18,
+   "suite": "1805",
+   "sqft": 2421.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ripple Industries LLC",
+   "floor": 19,
+   "suite": "1900",
+   "sqft": 2945.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mercer Global Advisors, Inc.",
+   "floor": 19,
+   "suite": "1901",
+   "sqft": 2750.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ruttenberg IP Law, A Professional Corporation",
+   "floor": 19,
+   "suite": null,
+   "sqft": 4050.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 19,
+   "suite": "1930",
+   "sqft": 3022.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 19,
+   "suite": "1910",
+   "sqft": 2149.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Odeon Capital Group",
+   "floor": 20,
+   "suite": "2050",
+   "sqft": 1600.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 20,
+   "suite": "2000",
+   "sqft": 9518.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 20,
+   "suite": "2050",
+   "sqft": 1600.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sinay Co LLC",
+   "floor": 21,
+   "suite": "2101",
+   "sqft": 2932.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Optimus Properties, LLC",
+   "floor": 21,
+   "suite": null,
+   "sqft": 7500.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Harold Davidson & Associates, Inc.",
+   "floor": 21,
+   "suite": "2150",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mather | Anderson",
+   "floor": 21,
+   "suite": "2110",
+   "sqft": 968.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CI America",
+   "floor": 22,
+   "suite": "2220",
+   "sqft": 15633.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kilpatrick Townsend And Stockton",
+   "floor": 23,
+   "suite": "2300",
+   "sqft": 16056.0,
+   "employees": 65,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Barrister Executive Suites",
+   "floor": 24,
+   "suite": "2400",
+   "sqft": 11089.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Barrister Executive Suites",
+   "floor": 25,
+   "suite": "2500",
+   "sqft": 11089.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KTBS Law LLP",
+   "floor": 26,
+   "suite": "2600",
+   "sqft": 15823.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Douglas Emmett - Century Park Plaza",
+   "phone": "5550856585"
+  }
+ ],
+ "parking": [],
+ "matterport_models": [
+  "EJdgXvCPTr3",
+  "gacELDAHQEZ",
+  "hsxtxKCWdFn",
+  "ubzXs4nQ1FR"
+ ]
+}

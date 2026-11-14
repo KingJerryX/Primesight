@@ -1,0 +1,121 @@
+{
+ "property_id": 237935,
+ "name": null,
+ "address": "16203 Park Row, Houston, TX",
+ "lat": 29.788578,
+ "lon": -95.6644942,
+ "type": "Flex",
+ "stories": 1,
+ "gross_sqft": 55421.0,
+ "typical_floor_sqft": 55421.0,
+ "year_built": 1983,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Global Nucleonics",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 5084.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Transformation Enzymes",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 5318.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Field Environmental Instruments, Inc.",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 2252.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Strategic Automation Services",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 2838.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Antares",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 3000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pangea Geoscience",
+   "floor": 1,
+   "suite": "185",
+   "sqft": 20557.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sancon Commissioning",
+   "floor": 1,
+   "suite": "140",
+   "sqft": 5542.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 2504.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Telomer Corp",
+   "floor": 1,
+   "suite": "190",
+   "sqft": null,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Echo Medical Systems",
+   "floor": 1,
+   "suite": "180",
+   "sqft": null,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "175",
+   "sqft": 1948.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "qiEbszLas4U"
+ ]
+}

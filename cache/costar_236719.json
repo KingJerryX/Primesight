@@ -1,0 +1,77 @@
+{
+ "property_id": 236719,
+ "name": null,
+ "address": "9001 Jameel Rd, Houston, TX",
+ "lat": 29.856689,
+ "lon": -95.528229,
+ "type": "Flex",
+ "stories": 1,
+ "gross_sqft": 47450.0,
+ "typical_floor_sqft": 47450.0,
+ "year_built": 1983,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "LeafHome",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 7926.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "National Technical Institute",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 12958.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JellyFish Lighting",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 5142.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Solstice Solar",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 7491.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MPI Americas Inc",
+   "floor": 1,
+   "suite": "190",
+   "sqft": 3666.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 10267.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "sdcnkA3rD6b",
+  "t5uUPpwG97k"
+ ]
+}

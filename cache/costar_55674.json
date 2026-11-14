@@ -1,0 +1,52 @@
+{
+ "property_id": 55674,
+ "name": null,
+ "address": "3760 Motor Ave, Los Angeles, CA",
+ "lat": 34.021384,
+ "lon": -118.4044075,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 11671.0,
+ "typical_floor_sqft": 5836.0,
+ "year_built": 1989,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "InCharge Energy",
+   "floor": 2,
+   "suite": null,
+   "sqft": 5835.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "InCharge Energy",
+   "floor": 3,
+   "suite": null,
+   "sqft": 5836.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Executive Suites",
+   "phone": "5551044641"
+  }
+ ],
+ "matterport_models": [
+  "XVenQgb1qYH",
+  "iRHpJB2CYrm"
+ ]
+}

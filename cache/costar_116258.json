@@ -1,0 +1,99 @@
+{
+ "property_id": 116258,
+ "name": "Medical/Office Building",
+ "address": "8240 Antoine Dr, Houston, TX",
+ "lat": 29.8888958,
+ "lon": -95.4751189,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 39748.0,
+ "typical_floor_sqft": 19874.0,
+ "year_built": 1982,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 1
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Inwood Helen Rehab",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 936.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Damien B Sanderlin MD",
+   "floor": 1,
+   "suite": "107",
+   "sqft": 936.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Thuys Hair Salon",
+   "floor": 1,
+   "suite": "106B",
+   "sqft": 1497.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Thee Famous Touch",
+   "floor": 2,
+   "suite": "202",
+   "sqft": 936.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Harki Rehab Services",
+   "floor": 2,
+   "suite": "204",
+   "sqft": 936.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "C&M Tax Prep Service",
+   "floor": 2,
+   "suite": "214",
+   "sqft": 561.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Taylor Medical Institute",
+   "floor": 2,
+   "suite": "208",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "QoTZWddvRrc",
+  "hyzcwiBaaJi"
+ ]
+}

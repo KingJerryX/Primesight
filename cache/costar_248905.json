@@ -1,0 +1,199 @@
+{
+ "property_id": 248905,
+ "name": "Carthay Campus 30",
+ "address": "6330 San Vicente Blvd, Los Angeles, CA",
+ "lat": 34.0608618,
+ "lon": -118.3682216,
+ "type": "Office",
+ "stories": 5,
+ "gross_sqft": 106193.0,
+ "typical_floor_sqft": 15820.0,
+ "year_built": 1965,
+ "construction": "Unknown",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "The Wig Fairy",
+   "floor": 1,
+   "suite": null,
+   "sqft": 6354.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Align Public Relations",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 5840.0,
+   "employees": 38,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gruen Associates",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 15304.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consumer Watch Dog",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 4828.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bonafide Wellness Chiropractic Acupuncture",
+   "floor": 2,
+   "suite": "245",
+   "sqft": 2274.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "238",
+   "sqft": 1566.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tower Orthopaedics",
+   "floor": 3,
+   "suite": "310, 320",
+   "sqft": 9111.0,
+   "employees": 56,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Layne Kumetz MD FACOG",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 5003.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regina Edmond, MD",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 900.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Accident Guys",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 6619.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Movo",
+   "floor": 4,
+   "suite": "401",
+   "sqft": 1526.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Eye Institute",
+   "floor": 4,
+   "suite": "408",
+   "sqft": 3500.0,
+   "employees": 36,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Yunella Women's Health",
+   "floor": 4,
+   "suite": "418",
+   "sqft": 3323.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Simco Foods",
+   "floor": 5,
+   "suite": "540",
+   "sqft": 1905.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Center for Courageous Living",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 2358.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beverly Hills Pediatrics",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 5958.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 2355.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Simco Foods",
+   "floor": null,
+   "suite": null,
+   "sqft": null,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "3n7niwMjM7L",
+  "LAsmpGYaESn",
+  "snW23qPjxFX"
+ ]
+}

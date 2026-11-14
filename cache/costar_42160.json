@@ -1,0 +1,330 @@
+{
+ "property_id": 42160,
+ "name": "One Westwood",
+ "address": "10990 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0575473,
+ "lon": -118.4471292,
+ "type": "Office",
+ "stories": 18,
+ "gross_sqft": 205961.0,
+ "typical_floor_sqft": 11442.0,
+ "year_built": 1987,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 5
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Douglas Emmett",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 1234.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tower Capital, LLC",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1298.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stella Coffee Westwood",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 1210.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The United States Department of Justice",
+   "floor": 1,
+   "suite": null,
+   "sqft": 8258.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silvus Technolgoies",
+   "floor": 2,
+   "suite": "200a",
+   "sqft": 11880.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Motion Recruitment",
+   "floor": 3,
+   "suite": "200",
+   "sqft": 5988.0,
+   "employees": 39,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kelly Services",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 1563.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silvus Technolgoies",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 1200.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 7249.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Federal Trade Commission",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 7621.0,
+   "employees": 55,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Don Lee Law Office",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 1262.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silvus Technolgoies",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 3117.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KB Home",
+   "floor": 5,
+   "suite": "600",
+   "sqft": 11880.0,
+   "employees": 240,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KB Home",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 11880.0,
+   "employees": 240,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KB Home",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 11880.0,
+   "employees": 240,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silvus Technolgoies",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 12607.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wasserman Grossman & Sloan",
+   "floor": 8,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ARC",
+   "floor": 9,
+   "suite": null,
+   "sqft": 6000.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Benji Law Office",
+   "floor": 9,
+   "suite": "940",
+   "sqft": 1563.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cohen Business Law Group",
+   "floor": 10,
+   "suite": null,
+   "sqft": 4523.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nadrich Accident Injury Lawyers",
+   "floor": 10,
+   "suite": null,
+   "sqft": 4253.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Michael A. Kahn",
+   "floor": 10,
+   "suite": null,
+   "sqft": 3224.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shinnecock Partners LP",
+   "floor": 11,
+   "suite": null,
+   "sqft": 8051.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Barnett Law Group",
+   "floor": 12,
+   "suite": "1220",
+   "sqft": 4011.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "M & A Real Estate Partners",
+   "floor": 12,
+   "suite": null,
+   "sqft": 1780.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DAFNA Capital Management",
+   "floor": 14,
+   "suite": "1400",
+   "sqft": 4034.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Armor Guys",
+   "floor": 14,
+   "suite": "1410",
+   "sqft": 4662.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Graphene One",
+   "floor": 14,
+   "suite": "1410",
+   "sqft": null,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silvus Technolgoies",
+   "floor": 15,
+   "suite": "1500",
+   "sqft": 11880.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silvus Technolgoies",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": 11880.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silvus Technolgoies",
+   "floor": 17,
+   "suite": "1700",
+   "sqft": 11880.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 18,
+   "suite": null,
+   "sqft": 11603.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "bKHaAnyr5QU",
+  "qzGvpL4NPNN"
+ ]
+}

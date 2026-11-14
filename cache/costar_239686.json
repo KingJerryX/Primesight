@@ -1,0 +1,258 @@
+{
+ "property_id": 239686,
+ "name": "Willow Chase Crossing",
+ "address": "8203 Willow Place Dr, Houston, TX",
+ "lat": 29.9594644,
+ "lon": -95.5522784,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 75015.0,
+ "typical_floor_sqft": 12833.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Heights Dermatology",
+   "floor": 1,
+   "suite": "165",
+   "sqft": 2713.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "S&B Multiservices",
+   "floor": 1,
+   "suite": "151",
+   "sqft": 1628.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PF Cigars",
+   "floor": 1,
+   "suite": "146",
+   "sqft": 1133.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lyncverse Technology",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 772.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zero Tax Due",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 1099.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Law Offices of Rosario Stiles",
+   "floor": 2,
+   "suite": "270",
+   "sqft": 506.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Graduate America",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 2195.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Equality Security Solutions",
+   "floor": 2,
+   "suite": "275",
+   "sqft": 552.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JPT Movement",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 642.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 554.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 1958.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mib Engineers",
+   "floor": 2,
+   "suite": "250",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "At Your Side Home Care",
+   "floor": 3,
+   "suite": "345",
+   "sqft": 692.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Irene Womac Photography",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 720.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CAB Resources",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 766.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prometric",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 2545.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hill-Wald",
+   "floor": 4,
+   "suite": "425",
+   "sqft": 1602.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Digital Group",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 250.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Skin Haus Day Spa",
+   "floor": 5,
+   "suite": "555",
+   "sqft": 242.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cool Technology Group",
+   "floor": 5,
+   "suite": "545",
+   "sqft": 250.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "USATech Consulting",
+   "floor": 5,
+   "suite": "515",
+   "sqft": 250.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PTSD Foundation of America",
+   "floor": 6,
+   "suite": "680,670",
+   "sqft": 9249.0,
+   "employees": 61,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 3584.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 2326.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "David Z Mafrige Interests",
+   "phone": "5559734599"
+  }
+ ],
+ "matterport_models": [
+  "hX7BkPYk6t7"
+ ]
+}

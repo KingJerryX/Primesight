@@ -1,0 +1,203 @@
+{
+ "property_id": 233968,
+ "name": null,
+ "address": "1301 Fannin St, Houston, TX",
+ "lat": 29.7535228,
+ "lon": -95.365773,
+ "type": "Office",
+ "stories": 24,
+ "gross_sqft": 784143.0,
+ "typical_floor_sqft": 26000.0,
+ "year_built": 1984,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Dry",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 16
+  },
+  {
+   "type": "Freight",
+   "count": 2
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 0,
+   "suite": null,
+   "sqft": 35098.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Netrality Data Centers",
+   "floor": 1,
+   "suite": null,
+   "sqft": 16423.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Document Group, Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": 5306.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "175",
+   "sqft": 7267.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UTSI International Corporation",
+   "floor": 7,
+   "suite": null,
+   "sqft": 7500.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "785",
+   "sqft": 1879.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gridforce",
+   "floor": 10,
+   "suite": null,
+   "sqft": 12537.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Medidata",
+   "floor": 12,
+   "suite": null,
+   "sqft": 10271.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dexian",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": 17904.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Accenture",
+   "floor": 18,
+   "suite": null,
+   "sqft": 26300.0,
+   "employees": 410,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Accenture",
+   "floor": 19,
+   "suite": null,
+   "sqft": 26300.0,
+   "employees": 410,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 20,
+   "suite": "2000",
+   "sqft": 8131.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Accenture",
+   "floor": 20,
+   "suite": null,
+   "sqft": 8800.0,
+   "employees": 410,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HNTB",
+   "floor": 21,
+   "suite": null,
+   "sqft": 26300.0,
+   "employees": 120,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 23,
+   "suite": "2330",
+   "sqft": 1615.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 24,
+   "suite": "2420",
+   "sqft": 2802.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "British Consulate-General",
+   "floor": 24,
+   "suite": null,
+   "sqft": 1285.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 24,
+   "suite": "2420",
+   "sqft": 1259.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Netrality Data Centers",
+   "phone": "5559616565"
+  }
+ ],
+ "matterport_models": [
+  "RW7cKwVEpiJ"
+ ]
+}

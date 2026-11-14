@@ -1,0 +1,509 @@
+{
+ "property_id": 254167,
+ "name": "The Trade Lofts",
+ "address": "122 7th St, Los Angeles, CA",
+ "lat": 34.043198,
+ "lon": -118.250839,
+ "type": "Office",
+ "stories": 13,
+ "gross_sqft": 124845.0,
+ "typical_floor_sqft": 9000.0,
+ "year_built": 1926,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "The Function Fitness",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4499.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Suit 4 Less",
+   "floor": 1,
+   "suite": "714",
+   "sqft": 2250.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silk And Leather Collection",
+   "floor": 1,
+   "suite": "709",
+   "sqft": 2250.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zizi Showroom",
+   "floor": 2,
+   "suite": "201",
+   "sqft": 3000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Delfi Colective Inc.",
+   "floor": 4,
+   "suite": "407, 408",
+   "sqft": 1335.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DreamLight Studio",
+   "floor": 4,
+   "suite": "409",
+   "sqft": 750.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gabriela's Fashion",
+   "floor": 4,
+   "suite": "415",
+   "sqft": 850.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Juan Munoz",
+   "floor": 4,
+   "suite": "416",
+   "sqft": 775.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jennifer Collins",
+   "floor": 4,
+   "suite": "403",
+   "sqft": 695.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sam Tokita Photography Studio",
+   "floor": 4,
+   "suite": "412",
+   "sqft": 550.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pacific Aisle Motorsport, Inc",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 340.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ashley Hall",
+   "floor": 4,
+   "suite": "409",
+   "sqft": 750.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daniel J Lyons",
+   "floor": 4,
+   "suite": "416",
+   "sqft": 750.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "James Anderson",
+   "floor": 4,
+   "suite": "409",
+   "sqft": 750.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lovely B's",
+   "floor": 4,
+   "suite": "404",
+   "sqft": 750.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Material Chess LLC",
+   "floor": 5,
+   "suite": "509",
+   "sqft": 1340.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Charlie & Son, LLC",
+   "floor": 5,
+   "suite": "509",
+   "sqft": 1340.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Best Regards",
+   "floor": 5,
+   "suite": "506",
+   "sqft": 1905.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "J & M Tailoring Supply",
+   "floor": 5,
+   "suite": null,
+   "sqft": 870.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ollin Strategies",
+   "floor": 5,
+   "suite": "501",
+   "sqft": 1000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trevien CHeek",
+   "floor": 5,
+   "suite": "504",
+   "sqft": 1558.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trevien Cheek",
+   "floor": 5,
+   "suite": "508",
+   "sqft": 987.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CFW Patterns",
+   "floor": 6,
+   "suite": "603",
+   "sqft": 1245.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Up and Away",
+   "floor": 6,
+   "suite": "601",
+   "sqft": 1800.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Glow Studeo",
+   "floor": 6,
+   "suite": "611",
+   "sqft": 1030.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Michelle Min",
+   "floor": 6,
+   "suite": "615",
+   "sqft": 1000.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "By Lume Photography",
+   "floor": 6,
+   "suite": "603",
+   "sqft": 725.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Calispn, Inc",
+   "floor": 6,
+   "suite": "609",
+   "sqft": 1408.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ettika",
+   "floor": 7,
+   "suite": "701, 700",
+   "sqft": 9000.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Filofi, Daho International, Inc.",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Attorney Law Group, PLC",
+   "floor": 8,
+   "suite": "802",
+   "sqft": 740.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Flavor House LA",
+   "floor": 8,
+   "suite": "801",
+   "sqft": 750.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CorpFoto",
+   "floor": 8,
+   "suite": "803",
+   "sqft": 510.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Amiga Studio",
+   "floor": 8,
+   "suite": "803",
+   "sqft": 750.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lydia Yi",
+   "floor": 8,
+   "suite": "808",
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mirdon Production",
+   "floor": 8,
+   "suite": "802",
+   "sqft": 750.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Karen Carpenter",
+   "floor": 8,
+   "suite": "803",
+   "sqft": 810.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Quick Fashion, Inc",
+   "floor": 9,
+   "suite": "901",
+   "sqft": 4500.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DJCC Productions",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 1800.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lavender Brown",
+   "floor": 10,
+   "suite": null,
+   "sqft": 3427.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Phoenix Designs Inc",
+   "floor": 10,
+   "suite": "1025",
+   "sqft": 2773.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Armando Hurtado",
+   "floor": 10,
+   "suite": "1035",
+   "sqft": 1000.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gomez Fashion",
+   "floor": 11,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kitteny, LLC",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sungold Studio",
+   "floor": 12,
+   "suite": "1209",
+   "sqft": 1860.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CINQ, LLC & Baben LLC",
+   "floor": 12,
+   "suite": "1204",
+   "sqft": 920.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aeurou Studio",
+   "floor": 12,
+   "suite": "1216",
+   "sqft": 936.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Seyed Matt Hosseni",
+   "floor": 12,
+   "suite": "1212",
+   "sqft": 1412.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dolly Dinero Hair Salon",
+   "floor": 12,
+   "suite": "1207",
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alba Ramirez",
+   "floor": 12,
+   "suite": "1203",
+   "sqft": 702.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jeanette Polynice",
+   "floor": 12,
+   "suite": "1204",
+   "sqft": 920.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ripley Rader",
+   "floor": 13,
+   "suite": "1400",
+   "sqft": 9000.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "EiNhPjrdFA4"
+ ]
+}

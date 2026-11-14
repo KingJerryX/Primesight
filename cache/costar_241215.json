@@ -1,0 +1,154 @@
+{
+ "property_id": 241215,
+ "name": "Westchase Place",
+ "address": "11200 Richmond Ave, Houston, TX",
+ "lat": 29.728236,
+ "lon": -95.574077,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 151711.0,
+ "typical_floor_sqft": 25285.0,
+ "year_built": 1999,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Rogers-O'Brien",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 1900.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "McVaugh Custom Homes",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 5028.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SDB Steel and Pipe",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 5731.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 1566.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "World Financial Group",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 2062.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "J.S. Edwards & Sherlock Insurance Agency, LLP",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 1230.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WorkQuest",
+   "floor": 3,
+   "suite": "301",
+   "sqft": 1131.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kingspoint Insurance Agency, Inc.",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 3116.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Endeavors",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 8624.0,
+   "employees": 57,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bit Builders",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 5346.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Infinity Reporting Group, Llc",
+   "floor": 4,
+   "suite": "410",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SHIPCOM",
+   "floor": 5,
+   "suite": "552",
+   "sqft": 12474.0,
+   "employees": 83,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CDI Engineering Solutions",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 12811.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "hjq3MpwugZX",
+  "mFyRZVxWNcZ",
+  "zVehUd71QNy"
+ ]
+}

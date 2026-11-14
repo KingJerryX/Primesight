@@ -1,0 +1,374 @@
+{
+ "property_id": 234752,
+ "name": null,
+ "address": "4265 San Felipe St, Houston, TX",
+ "lat": 29.7463237,
+ "lon": -95.4502269,
+ "type": "Office",
+ "stories": 14,
+ "gross_sqft": 223545.0,
+ "typical_floor_sqft": 14984.0,
+ "year_built": 1984,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "First Citizens Bank",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 16115.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "First Citizens Bank",
+   "floor": 2,
+   "suite": null,
+   "sqft": 16115.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "North American Corporation (Texas), Inc.",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 10829.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Patten Title Company",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 16115.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alamo Title",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 2174.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Huckin Financial Group",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 1505.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Law Offices of Leonard S. Roth, P.C.",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 2000.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 4848.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Woodrock & Co.",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 11328.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 4658.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 2073.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Intellego Insights",
+   "floor": 6,
+   "suite": "600",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "603",
+   "sqft": 1946.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gregory Wynne Arney, PLLC",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 4530.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pelican Builders, Inc.",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 4953.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Perdue & Kidd",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 5919.0,
+   "employees": 39,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eclipse Wellness",
+   "floor": 7,
+   "suite": "780",
+   "sqft": 666.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "760",
+   "sqft": 2673.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Keller Williams Realty, Inc",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 20558.0,
+   "employees": 138,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Edinson Properties Group",
+   "floor": 8,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KW Metropolitan",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pye Legal Group",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 3491.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rand Construction Corporation",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 3308.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diamond Cutters International",
+   "floor": 9,
+   "suite": "960",
+   "sqft": 3956.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Petromar International",
+   "floor": 9,
+   "suite": "910",
+   "sqft": 2855.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bradmark Technologies",
+   "floor": 10,
+   "suite": "1040",
+   "sqft": 1358.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rockstar Capital",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 2435.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reich & Binstock LLP",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 4048.0,
+   "employees": 32,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1025",
+   "sqft": 4595.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Chaffin Law Firm",
+   "floor": 10,
+   "suite": "1020",
+   "sqft": 1500.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Anchor Executive Center",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 16115.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Civet Real Estate",
+   "floor": 11,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1123",
+   "sqft": 283.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "3738 Meadow Lake Lane,",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Yoga On 6th Llc",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Something To Celebrate",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ferguson Control Systems Llc",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lloyd's Financial Advisors",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Thomas J Henry Law",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 19300.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "bjazontdoDt",
+  "iRq8DVUNUEQ"
+ ]
+}

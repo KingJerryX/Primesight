@@ -1,0 +1,113 @@
+{
+ "property_id": 237647,
+ "name": "Building 1",
+ "address": "1400 Sam Houston Pky, Houston, TX",
+ "lat": 29.9367757,
+ "lon": -95.3669163,
+ "type": "Flex",
+ "stories": 1,
+ "gross_sqft": 23448.0,
+ "typical_floor_sqft": 23448.0,
+ "year_built": 1982,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Evans",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3996.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fastest Labs",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 2500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ASAP Diagnostics",
+   "floor": 1,
+   "suite": "158",
+   "sqft": 2850.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fish Inc.",
+   "floor": 1,
+   "suite": "140",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "190",
+   "sqft": 2964.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 4080.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 1800.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Red Cobra",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "155",
+   "sqft": 1758.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bombatek",
+   "floor": 1,
+   "suite": "155",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "PgqhK7kjcH6",
+  "w7zyuanCUxW"
+ ]
+}

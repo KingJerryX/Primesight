@@ -1,0 +1,268 @@
+{
+ "property_id": 23347,
+ "name": "333 Northbelt",
+ "address": "333 Sam Houston Pky, Houston, TX",
+ "lat": 29.9407608,
+ "lon": -95.3982479,
+ "type": "Office",
+ "stories": 12,
+ "gross_sqft": 213281.0,
+ "typical_floor_sqft": 17773.0,
+ "year_built": 1980,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  },
+  {
+   "type": "Parking",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Kelly Services",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 3225.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JBC MANPOWER",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 3424.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Pipe Supports Llc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 1674.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 3215.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ultraflote Domes, Roofs & Seals",
+   "floor": 2,
+   "suite": "230",
+   "sqft": 5528.0,
+   "employees": 32,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "V&S Construction",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 2578.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cook, Johnston, & Co",
+   "floor": 3,
+   "suite": "375",
+   "sqft": 2250.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blazey Construction Services, LLC",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 2250.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aesorua Integral International",
+   "floor": 3,
+   "suite": "333",
+   "sqft": 1244.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Convoy Logistics Providers",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 1066.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Holloman",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 17773.0,
+   "employees": 178,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pilot Energy Solutions Llc",
+   "floor": 4,
+   "suite": "400",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SpecOil LLC",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 3996.0,
+   "employees": 27,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Resin Solutions LLC",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 4052.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": null,
+   "sqft": 6120.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 6861.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Holloman",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 8878.0,
+   "employees": 178,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Custom Technology Solutions LLC",
+   "floor": 7,
+   "suite": "725",
+   "sqft": 4053.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": null,
+   "sqft": 3768.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 1504.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 4500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wright Business Technologies",
+   "floor": 8,
+   "suite": "880",
+   "sqft": 5674.0,
+   "employees": 42,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Carlos Dominguez Immigration Law",
+   "floor": 8,
+   "suite": "870a",
+   "sqft": 5924.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "7- Eleven, Inc.",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 889.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "NLpW1UAp1HJ",
+  "NgGvLZnbEMM",
+  "VKkfYGTqZAx",
+  "WSYTQt3istC",
+  "w63JtBJm3gt"
+ ]
+}

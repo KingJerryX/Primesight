@@ -1,0 +1,262 @@
+{
+ "property_id": 233940,
+ "name": "Eleven Greenway Plaza",
+ "address": "11 Greenway Plz, Houston, TX",
+ "lat": 29.7321873,
+ "lon": -95.435506,
+ "type": "Office",
+ "stories": 31,
+ "gross_sqft": 745956.0,
+ "typical_floor_sqft": 24060.0,
+ "year_built": 1979,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 15
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Invesco Ltd.",
+   "floor": 0,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 2000,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Murphy's Deli",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Activate Studio",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 1166.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Invesco Ltd.",
+   "floor": 4,
+   "suite": null,
+   "sqft": 23311.0,
+   "employees": 2000,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Western LNG",
+   "floor": 5,
+   "suite": "545",
+   "sqft": 3008.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "535",
+   "sqft": 3281.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Logistics Property Company, LLC",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 2189.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Invesco Ltd.",
+   "floor": 10,
+   "suite": null,
+   "sqft": 23311.0,
+   "employees": 2000,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Invesco Ltd.",
+   "floor": 12,
+   "suite": null,
+   "sqft": 23311.0,
+   "employees": 2000,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Invesco Ltd.",
+   "floor": 13,
+   "suite": null,
+   "sqft": 23311.0,
+   "employees": 2000,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Abacus Financial Strategies LLC",
+   "floor": 14,
+   "suite": null,
+   "sqft": 5224.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Goff Financial Group",
+   "floor": 14,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PBK",
+   "floor": 15,
+   "suite": null,
+   "sqft": 17806.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DIG Engineers",
+   "floor": 15,
+   "suite": "1520",
+   "sqft": 0.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1512",
+   "sqft": 2518.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Invesco Ltd.",
+   "floor": 18,
+   "suite": null,
+   "sqft": 23311.0,
+   "employees": 2000,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Invesco Ltd.",
+   "floor": 19,
+   "suite": null,
+   "sqft": 23311.0,
+   "employees": 2000,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Invesco Ltd.",
+   "floor": 20,
+   "suite": null,
+   "sqft": 14036.0,
+   "employees": 2000,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 20,
+   "suite": "2000",
+   "sqft": 2902.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Invesco Ltd.",
+   "floor": 21,
+   "suite": null,
+   "sqft": 5505.0,
+   "employees": 2000,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PBK",
+   "floor": 22,
+   "suite": null,
+   "sqft": 23311.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CIBC",
+   "floor": 26,
+   "suite": null,
+   "sqft": 6030.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "First Horizon Bank",
+   "floor": 27,
+   "suite": null,
+   "sqft": 24617.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "FlightAware",
+   "floor": 29,
+   "suite": "2900",
+   "sqft": 24604.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ameriprise Financial",
+   "floor": 30,
+   "suite": null,
+   "sqft": 13460.0,
+   "employees": 89,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Interra Properties LLC",
+   "phone": "5557435171"
+  }
+ ],
+ "matterport_models": [
+  ""
+ ]
+}

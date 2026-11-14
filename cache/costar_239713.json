@@ -1,0 +1,64 @@
+{
+ "property_id": 239713,
+ "name": "16SIX66 Northchase",
+ "address": "16666 Northchase Dr, Houston, TX",
+ "lat": 29.9423816,
+ "lon": -95.4024415,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 160812.0,
+ "typical_floor_sqft": 24500.0,
+ "year_built": 1985,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Chapman Freeborn",
+   "floor": 1,
+   "suite": "140",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Skyhop Global, LLC",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 944.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Infinity Data",
+   "floor": 1,
+   "suite": "199A",
+   "sqft": 944.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Apache Arms",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 755.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "TowCE5TkwNh",
+  "iKw5Bf3jUFg"
+ ]
+}

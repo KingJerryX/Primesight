@@ -1,0 +1,91 @@
+{
+ "property_id": 237460,
+ "name": "Building B",
+ "address": "1223 34th St, Houston, TX",
+ "lat": 29.8168691,
+ "lon": -95.4218299,
+ "type": "GeneralRetail",
+ "stories": 1,
+ "gross_sqft": 11675.0,
+ "typical_floor_sqft": 8000.0,
+ "year_built": 1955,
+ "construction": "Steel",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Fat Cat Creamery",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Polish Bar",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 1500.0,
+   "employees": 14,
+   "industry": "PersonalServices",
+   "about": null
+  },
+  {
+   "name": "The Pho Fix",
+   "floor": 1,
+   "suite": "200",
+   "sqft": 1500.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1312.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Himari",
+   "floor": 1,
+   "suite": "C-500",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cooking Girl",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1188.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rooster & Rice",
+   "floor": 1,
+   "suite": "B-400",
+   "sqft": 1500.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "McBride Electric",
+   "phone": "5554121628"
+  }
+ ],
+ "matterport_models": [
+  "ehkUbPpNrhE"
+ ]
+}

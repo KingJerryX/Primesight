@@ -1,0 +1,711 @@
+{
+ "property_id": 237089,
+ "name": "Memorial Pointe",
+ "address": "11767 Katy Fwy, Houston, TX",
+ "lat": 29.7836305,
+ "lon": -95.5936764,
+ "type": "Office",
+ "stories": 11,
+ "gross_sqft": 226658.0,
+ "typical_floor_sqft": 20599.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Specialized Management, Inc.",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 1225.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gexcon Inc",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 3168.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Menard Group Usa",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Melaroo Llc",
+   "floor": 1,
+   "suite": "120",
+   "sqft": null,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kronovil Resources, LLC",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 2042.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Revolution 32",
+   "floor": 1,
+   "suite": "111",
+   "sqft": 10003.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Regenerative Therapy",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2769.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Khys-kiss Fm 98.5",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Luton & Associates",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 1041.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Behrmann Law Firm",
+   "floor": 3,
+   "suite": "395",
+   "sqft": 1838.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "C MACC",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 2022.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Woodmen Life",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 1540.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Patterson Rushlow & Dodson LLC - CPA",
+   "floor": 3,
+   "suite": "380",
+   "sqft": 2222.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CORE GROUP",
+   "floor": 3,
+   "suite": "360",
+   "sqft": 1764.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CCS International, Inc",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 1634.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Envoy Immigration PLLC",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 1838.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Toumas Financial Services",
+   "floor": 3,
+   "suite": "375",
+   "sqft": 1021.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fuller Contractors LLC",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 2145.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 3118.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "364",
+   "sqft": 1278.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MWA Architects, Inc.",
+   "floor": 4,
+   "suite": "430",
+   "sqft": 3880.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Famers Insurance",
+   "floor": 4,
+   "suite": "425",
+   "sqft": 3063.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Relational Psychotherapy, PLLC",
+   "floor": 4,
+   "suite": "412",
+   "sqft": 2596.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AEI Consultants",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 1707.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Edward Jones Investments",
+   "floor": 4,
+   "suite": "490",
+   "sqft": 2771.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Emerge Finacial Group",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 3880.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "InsureOne",
+   "floor": 4,
+   "suite": null,
+   "sqft": 2523.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Association Of Interna",
+   "floor": 4,
+   "suite": "412",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TUVRheinland | Risktee",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 2380.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Primerica Ward & Associates",
+   "floor": 5,
+   "suite": "515",
+   "sqft": 3097.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Noble Mortgage & Investments, LLC",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 5059.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Legacy Insurance Advisors",
+   "floor": 5,
+   "suite": "501",
+   "sqft": 1521.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 3165.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MD Petroleum, Inc.",
+   "floor": 5,
+   "suite": "535",
+   "sqft": 2042.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "530",
+   "sqft": 748.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tung Le",
+   "floor": 5,
+   "suite": "530",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HTX Endodontics",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 2408.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ruff Roofing",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 3471.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WTS Energy",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 3880.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "State Farm | Eric Albora",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 3929.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eric Albora-state Farm Insurance Agent",
+   "floor": 6,
+   "suite": "620",
+   "sqft": null,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 3989.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "680",
+   "sqft": 960.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "690",
+   "sqft": 1699.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Looney, Smith & Conrad, PC",
+   "floor": 7,
+   "suite": "740",
+   "sqft": 2042.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sharp Vision Software",
+   "floor": 7,
+   "suite": "711",
+   "sqft": 2023.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "C.T.G Industries, Inc",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 1546.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Intelismart, LLC",
+   "floor": 7,
+   "suite": "730",
+   "sqft": 2042.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SPK Vehicle Parts Corp",
+   "floor": 7,
+   "suite": "705",
+   "sqft": 2042.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Weafri Well Services",
+   "floor": 7,
+   "suite": "745",
+   "sqft": 2042.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "James Fisher Decommissioning",
+   "floor": 7,
+   "suite": "715",
+   "sqft": 6660.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jeffrey Jackson & Associates, PLLC",
+   "floor": 8,
+   "suite": "813",
+   "sqft": 2450.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Raif\u2019s Tax and Bookkeeping",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 1024.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HM Insurance Group",
+   "floor": 8,
+   "suite": "840",
+   "sqft": 2042.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TRC Companies, Inc.",
+   "floor": 8,
+   "suite": "850,815",
+   "sqft": 13880.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JD Herberger & Associates, PC",
+   "floor": 9,
+   "suite": "920",
+   "sqft": 2042.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Schaumburg & Polk Inc",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 3676.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Moyer, Lewis & Patton LLP",
+   "floor": 9,
+   "suite": "990",
+   "sqft": 2576.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Recana",
+   "floor": 9,
+   "suite": "930",
+   "sqft": 3030.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KEA Structural Engineers",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 2042.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AAB Medical Laboratory Evaluation",
+   "floor": 9,
+   "suite": "987",
+   "sqft": 2450.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Primerica",
+   "floor": 9,
+   "suite": "985",
+   "sqft": 1491.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jones Engineering",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 5524.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hope BP, LLC",
+   "floor": 10,
+   "suite": "1010",
+   "sqft": 3111.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sitewide Project Solutions",
+   "floor": 10,
+   "suite": "1005",
+   "sqft": 2800.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ardurra",
+   "floor": 10,
+   "suite": "1040",
+   "sqft": 8985.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Imenco UK Ltd",
+   "floor": 11,
+   "suite": "1170",
+   "sqft": 3013.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Safe Place Counseling",
+   "floor": 11,
+   "suite": "1130",
+   "sqft": 2896.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oci International",
+   "floor": 11,
+   "suite": "1140",
+   "sqft": 2500.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Atlas Law Firm",
+   "floor": 11,
+   "suite": "1100/100A",
+   "sqft": 4546.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "World Financial Group",
+   "floor": 11,
+   "suite": "1160",
+   "sqft": 2922.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Sports & Civil Engineering LLC",
+   "floor": 11,
+   "suite": "1112",
+   "sqft": 2500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Enuit",
+   "floor": 11,
+   "suite": null,
+   "sqft": 2043.0,
+   "employees": 44,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Interra Properties LLC",
+   "phone": "5557435171"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": 739
+  }
+ ],
+ "matterport_models": [
+  "ckSGDiqNnWR",
+  "h4SNk1RfLku",
+  "pBwas45C6Mt",
+  "xGJuw2FR8Pt"
+ ]
+}

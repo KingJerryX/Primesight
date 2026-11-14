@@ -1,0 +1,32 @@
+{
+ "property_id": 249138,
+ "name": null,
+ "address": "3201 Broadway , Los Angeles, CA",
+ "lat": 34.020478,
+ "lon": -118.273192,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 8360.0,
+ "typical_floor_sqft": 8360.0,
+ "year_built": 1947,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "HPPLA",
+   "floor": 1,
+   "suite": null,
+   "sqft": 8360.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "EVX1eobqQEt",
+  "tvEYEALbA9G"
+ ]
+}

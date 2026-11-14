@@ -1,0 +1,35 @@
+{
+ "property_id": 92530,
+ "name": "3737 Hillcroft Apartments",
+ "address": "3737 Hillcroft Ave, Houston, TX",
+ "lat": 29.7252,
+ "lon": -95.500487,
+ "type": "Multifamily",
+ "stories": 2,
+ "gross_sqft": 347583.0,
+ "typical_floor_sqft": 140163.0,
+ "year_built": 1970,
+ "construction": "WoodFrame",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Redcaws",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "AiCqqfvuSjj",
+  "BKFM2QrG2nJ",
+  "P7Zoo9kqRc1",
+  "WBSL83wTN9p",
+  "yoBiQyLiNnk"
+ ]
+}

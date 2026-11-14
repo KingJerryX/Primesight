@@ -1,0 +1,197 @@
+{
+ "property_id": 249810,
+ "name": "Downtown Executive Multiplex",
+ "address": "221 12th St, Los Angeles, CA",
+ "lat": 34.0366236,
+ "lon": -118.2575057,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 29654.0,
+ "typical_floor_sqft": 8625.0,
+ "year_built": 1989,
+ "construction": "Steel",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Perfume Heaven",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tax Bridge Advisors",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "235",
+   "sqft": 264.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "1",
+   "sqft": 520.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Evolution Beauty Bar",
+   "floor": 2,
+   "suite": "207",
+   "sqft": 796.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SOLEIL Medical Spa",
+   "floor": 2,
+   "suite": "202",
+   "sqft": 1100.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "202",
+   "sqft": 613.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "206",
+   "sqft": 666.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "207",
+   "sqft": 385.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "204",
+   "sqft": 624.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 623.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "203",
+   "sqft": 609.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Family Financial Strategies",
+   "floor": 3,
+   "suite": "300A",
+   "sqft": 946.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "308",
+   "sqft": 238.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "301",
+   "sqft": 406.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 1900.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "304",
+   "sqft": 239.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Plenty of Places",
+   "phone": "5551714210"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "FrsMPZwTsng",
+  "vEkPG1xZiqf"
+ ]
+}

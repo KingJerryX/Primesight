@@ -1,0 +1,16 @@
+{"t": 0.0, "step": "call_received", "detail": "Two people trapped in a stalled elevator on the 3rd floor, 3250 Wilshire Blvd, Los Angeles."}
+{"t": 0.08, "step": "address_lookup", "detail": "3250 wilshire Blvd, Los Angeles -> 248192"}
+{"t": 2.42, "step": "find_building", "detail": "{\"address\": \"3250 Wilshire Blvd, Los Angeles\"}"}
+{"t": 2.43, "step": "read_file", "detail": "{\"file_path\": \"/playbook/skills/rescue/SKILL.md\", \"limit\": 1000}"}
+{"t": 5.52, "step": "gather_building", "detail": "{\"property_id\": 248192, \"floor\": 3, \"incident\": \"rescue\", \"incident_type\": \"elevator_entrapment\"}"}
+{"t": 5.53, "step": "read_file", "detail": "{\"file_path\": \"/buildings/248192.md\"}"}
+{"t": 21.42, "step": "task", "detail": "{\"subagent_type\": \"tenant-risk\", \"description\": \"Incident: elevator entrapment, two people trapped in a stalled elevator, floor 3, One Park Plaza, 3250 Wilshire Blvd, Los Angeles (22 stories). Analyze"}
+{"t": 21.43, "step": "task", "detail": "{\"subagent_type\": \"notify-writer\", \"description\": \"Write and queue a short text for the building's people. Incident: elevator entrapment, two people trapped in a stalled elevator, floor 3. Address: On"}
+{"t": 21.44, "step": "task", "detail": "{\"subagent_type\": \"inside-scout\", \"description\": \"Scan id MFhskYSBMMe (floor 3, One Park Plaza, 3250 Wilshire Blvd; exact floor). Find walk distance from the scan start to the nearest exit sign (also "}
+{"t": 23.99, "step": "helper:walk_to", "detail": "{\"scan_id\": \"MFhskYSBMMe\", \"target\": \"exit sign\"}"}
+{"t": 24.02, "step": "helper:walk_to", "detail": "{\"scan_id\": \"MFhskYSBMMe\", \"target\": \"stairs\"}"}
+{"t": 27.88, "step": "helper:queue_text", "detail": "{\"to\": \"property manager\", \"text\": \"Fire Dept: elevator entrapment at One Park Plaza, 3250 Wilshire. 2 people trapped in stalled elevator, floor 3, car unknown. Please meet fire crew with elevator key"}
+{"t": 33.28, "step": "add_building_note", "detail": "{\"property_id\": 248192, \"note\": \"Elevator entrapment, 2 people, floor 3. Briefing sent; property manager (Realtech 5553081773) text queued for keys/machine room. Car number, machine room location not "}
+{"t": 51.09, "step": "graded", "detail": "satisfied"}
+{"t": 51.09, "step": "usage", "detail": "82627 in / 5187 out tokens, ~$0.43"}
+{"t": 51.09, "step": "done", "detail": "12 lines, 2 images"}

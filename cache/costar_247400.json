@@ -1,0 +1,412 @@
+{
+ "property_id": 247400,
+ "name": null,
+ "address": "1901 Avenue of the Stars , Los Angeles, CA",
+ "lat": 34.0594716,
+ "lon": -118.4176249,
+ "type": "Office",
+ "stories": 20,
+ "gross_sqft": 520327.0,
+ "typical_floor_sqft": 24080.0,
+ "year_built": 1967,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 10
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Pollack Group",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 2776.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "175",
+   "sqft": 21943.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Foodies Cafe",
+   "floor": 1,
+   "suite": "A",
+   "sqft": 1154.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 24080.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Standard Communities",
+   "floor": 3,
+   "suite": "395",
+   "sqft": 1700.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stinson",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 10312.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Preylock",
+   "floor": 4,
+   "suite": "470",
+   "sqft": 4000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 3845.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bokhour Law Group, P.C",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 1265.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Holland & Knight",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 13668.0,
+   "employees": 43,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Orbach Huff & Henderson",
+   "floor": 5,
+   "suite": "575",
+   "sqft": 1200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pegasus Investments",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Varsity Healthcare Partners",
+   "floor": 6,
+   "suite": null,
+   "sqft": 5364.0,
+   "employees": 24,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "670",
+   "sqft": 1390.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "675",
+   "sqft": 1582.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "680",
+   "sqft": 6273.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Schorr Law",
+   "floor": 6,
+   "suite": "615",
+   "sqft": 6471.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reed Smith LLP",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 24080.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CNA Enterprises, Inc.",
+   "floor": 8,
+   "suite": "855",
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 4890.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 8281.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marc Bral CPA",
+   "floor": 9,
+   "suite": "930",
+   "sqft": 1000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pryor Cashman",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 13454.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 2500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "915",
+   "sqft": 1545.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ephron & Barenholtz",
+   "floor": 10,
+   "suite": "1030",
+   "sqft": 1000.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Madison Realty Capital Advisors, LLC",
+   "floor": 10,
+   "suite": "1010",
+   "sqft": 1966.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Condon & Forsyth",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 5806.0,
+   "employees": 39,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aqua Capital Advisors LLC",
+   "floor": 10,
+   "suite": "1005",
+   "sqft": 1084.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Miller Health Law Group",
+   "floor": 10,
+   "suite": "1040",
+   "sqft": 4000.0,
+   "employees": 26,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ruttenberg Law Firm",
+   "floor": 10,
+   "suite": "1020",
+   "sqft": 7465.0,
+   "employees": 45,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "World Gym International",
+   "floor": 11,
+   "suite": "1150",
+   "sqft": 1000.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gibson Dunn",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 26694.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Holland & Knight",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 26240.0,
+   "employees": 43,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RBC Wealth Management",
+   "floor": 14,
+   "suite": "1400",
+   "sqft": 12000.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 14,
+   "suite": "1460",
+   "sqft": 1588.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sheppard, Mullin, Richter & Hampton LLP",
+   "floor": 15,
+   "suite": "1500",
+   "sqft": 24080.0,
+   "employees": 101,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sheppard, Mullin, Richter & Hampton LLP",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": 26606.0,
+   "employees": 101,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sheppard, Mullin, Richter & Hampton LLP",
+   "floor": 17,
+   "suite": "1700",
+   "sqft": 24080.0,
+   "employees": 101,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allen Matkins",
+   "floor": 18,
+   "suite": "1800",
+   "sqft": 19580.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cityview",
+   "floor": 19,
+   "suite": "1950",
+   "sqft": 9000.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "BRy4itHqyAS",
+  "uDVttzJByDd",
+  "uoJcLW9sez3"
+ ]
+}

@@ -1,0 +1,229 @@
+{
+ "property_id": 6503361,
+ "name": "5600 Wilshire",
+ "address": "5600 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.061667,
+ "lon": -118.3512229,
+ "type": "Multifamily",
+ "stories": 5,
+ "gross_sqft": 243910.0,
+ "typical_floor_sqft": 83325.0,
+ "year_built": 2008,
+ "construction": "WoodFrame",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1700.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Embo Cleaners",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wynn Nail Spa",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chase Bank",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4000.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2100.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "7-Eleven",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3859.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2159.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mind+Ctrl",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "422 Media Group LLC",
+   "floor": 1,
+   "suite": "33",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lux VIP Group",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1055.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2159.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2159.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rachel Wool, Pc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4090.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1505.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rapiddoc Urgent Care",
+   "floor": 1,
+   "suite": "A",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Timetile Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Potato Chips Deli Miracle Mile",
+   "floor": 1,
+   "suite": "G",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Obi Aris Corp",
+   "floor": 1,
+   "suite": "361",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "2YKpZqjy5bJ",
+  "JgJGW3FSxPc",
+  "LQxe7WWJ5Qs",
+  "LRFZRTLLi6w",
+  "Lhu6LsdkTmG",
+  "MiNfJc6btkg",
+  "NmTh3HjjBx6",
+  "Rzmiwp55Hyj",
+  "Tk1PCPq1mHF",
+  "avePxT917eW",
+  "eMn6oF33YXV",
+  "jfrEwsueYm1",
+  "nFUJad5A2Dx",
+  "ouo42NUTA3D",
+  "qNZmH225WEL",
+  "rkdY5ixPz7W",
+  "t4MjUvrcExQ",
+  "um7SLskFWuo",
+  "w3b8owASgaX"
+ ]
+}

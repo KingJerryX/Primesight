@@ -1,0 +1,225 @@
+{
+ "property_id": 247256,
+ "name": "Westwood Terrace Bldg",
+ "address": "1640 Sepulveda Blvd, Los Angeles, CA",
+ "lat": 34.0487511,
+ "lon": -118.4448098,
+ "type": "Office",
+ "stories": 5,
+ "gross_sqft": 148444.0,
+ "typical_floor_sqft": 30000.0,
+ "year_built": 1987,
+ "construction": "Metal",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Screening Services Group",
+   "floor": 1,
+   "suite": "104",
+   "sqft": 1500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Screening Services Group",
+   "floor": 1,
+   "suite": "103",
+   "sqft": 1500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Link Entertainment",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 3000.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "California Bank of Commerce, N.A.",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 4500.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fusion Academy",
+   "floor": 1,
+   "suite": "320",
+   "sqft": 3344.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 7000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pacific Equities",
+   "floor": 2,
+   "suite": "214",
+   "sqft": 3000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RDP Creative",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 3250.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Entrada Partners",
+   "floor": 2,
+   "suite": "218",
+   "sqft": 3000.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "More Better Mwy Gwell",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BluePath Solutions",
+   "floor": 2,
+   "suite": "207",
+   "sqft": 3250.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Therabody",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 8556.0,
+   "employees": 125,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": null,
+   "sqft": 5797.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Big Dreams Entertainment",
+   "floor": 3,
+   "suite": "322",
+   "sqft": 3344.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Green Room",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 5017.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 6246.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "1640 Sepulveda Property LLC",
+   "floor": 4,
+   "suite": null,
+   "sqft": 10000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Richard Holz Inc. Builders",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 8900.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shout! Studios",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 8700.0,
+   "employees": 58,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "G/FORE",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 3750.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": null,
+   "sqft": 10618.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "kpdF1dt7jo2",
+  "vJ9B7S5NuSM"
+ ]
+}

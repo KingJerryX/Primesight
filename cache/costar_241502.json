@@ -1,0 +1,50 @@
+{
+ "property_id": 241502,
+ "name": "Crate Warehouse",
+ "address": "7250 43rd St, Houston, TX",
+ "lat": 29.835195,
+ "lon": -95.502997,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 119943.0,
+ "typical_floor_sqft": 119943.0,
+ "year_built": 1996,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Crate Warehouse",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 119943.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Crate Warehouse",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Plastic Lab",
+   "floor": 1,
+   "suite": "d5",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "5JaE21soaS3",
+  "KUzeaxQrzdy"
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "property_id": 238322,
+ "name": null,
+ "address": "1400 20th St, Houston, TX",
+ "lat": 29.803917,
+ "lon": -95.423734,
+ "type": "GeneralRetail",
+ "stories": 1,
+ "gross_sqft": 5500.0,
+ "typical_floor_sqft": 5500.0,
+ "year_built": 1980,
+ "construction": "Metal",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "qUemqJ6WYv8"
+ ]
+}

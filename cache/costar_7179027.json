@@ -1,0 +1,188 @@
+{
+ "property_id": 7179027,
+ "name": "Wilshire La Brea",
+ "address": "5200 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0615687,
+ "lon": -118.3440868,
+ "type": "Multifamily",
+ "stories": 6,
+ "gross_sqft": 354972.0,
+ "typical_floor_sqft": 90000.0,
+ "year_built": 2014,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "European Wax Center",
+   "floor": 1,
+   "suite": "C - R15",
+   "sqft": 5117.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Club Pilates",
+   "floor": 1,
+   "suite": "B - R13",
+   "sqft": 1872.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Verizon",
+   "floor": 1,
+   "suite": "5210",
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BevMo!",
+   "floor": 1,
+   "suite": "5212",
+   "sqft": 2000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "La Brea Ramen",
+   "floor": 1,
+   "suite": "R5",
+   "sqft": 2493.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "R19",
+   "sqft": 4021.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Goodfriend Holdings LLC",
+   "floor": 1,
+   "suite": "713",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Robert Yu Photography",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "R18",
+   "sqft": 4715.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "B - R14",
+   "sqft": 1596.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "R1",
+   "sqft": 1252.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "R5",
+   "sqft": 2493.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "R4",
+   "sqft": 1163.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lassens Natural Foods & Vitamins",
+   "floor": 1,
+   "suite": null,
+   "sqft": 25000.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Woof Gang Bakery & Grooming",
+   "floor": 1,
+   "suite": "r4",
+   "sqft": 2000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "540protection Corp",
+   "floor": 4,
+   "suite": "426",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "1tmnUDNPDLK",
+  "6UkquXegkfp",
+  "8i9dfm2LrMN",
+  "EoNpMGFrMfm",
+  "HCfxr8aHgyU",
+  "J3PQUWAePsv",
+  "SzSXnrNzPUG",
+  "UL6mdxuBvNh",
+  "WVJey6KdPXw",
+  "WZ86ok4trHg",
+  "WpRTdqTFp8z",
+  "ZiqyehSNwYX",
+  "brn6fD2TBaS",
+  "cA3R5bJ2RSE",
+  "hNMoFEcA2oo",
+  "iCzdPbetkeQ",
+  "mFuQUYoJcnq",
+  "mjjUcqb6UPi",
+  "r9UdmEfBn7h",
+  "sZ8967QvNYD",
+  "tq4gdD8Etnp",
+  "zhNcwE4meBA",
+  "zsWZBj8dNA4"
+ ]
+}

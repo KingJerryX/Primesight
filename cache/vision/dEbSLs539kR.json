@@ -1,0 +1,723 @@
+{
+ "model_id": "dEbSLs539kR",
+ "name": "Suite 315",
+ "floor": 3,
+ "sweeps": [
+  {
+   "id": "1a4xsf03unxauwzstgx3zxgda",
+   "index": 0,
+   "xy": [
+    15.708111763000488,
+    -4.198297500610352
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.88,
+     "box": [
+      406,
+      72,
+      506,
+      142
+     ],
+     "color": 0.635,
+     "face": 2
+    },
+    {
+     "label": "fire extinguisher",
+     "score": 0.88,
+     "box": [
+      988,
+      510,
+      1004,
+      547
+     ],
+     "face": 2
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.79,
+     "box": [
+      988,
+      510,
+      1004,
+      547
+     ],
+     "color": 0.368,
+     "face": 2
+    },
+    {
+     "label": "exit sign",
+     "score": 0.86,
+     "box": [
+      303,
+      373,
+      323,
+      397
+     ],
+     "color": 0.654,
+     "face": 3
+    }
+   ]
+  },
+  {
+   "id": "iuu2d0yk1tktac2penq96uqwa",
+   "index": 1,
+   "xy": [
+    8.744863510131836,
+    -6.196333408355713
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.9,
+     "box": [
+      608,
+      350,
+      638,
+      380
+     ],
+     "color": 0.85,
+     "face": 1
+    },
+    {
+     "label": "exit sign",
+     "score": 0.93,
+     "box": [
+      550,
+      -2,
+      624,
+      128
+     ],
+     "color": 0.664,
+     "face": 3
+    }
+   ]
+  },
+  {
+   "id": "qkwzifx42qpkg6sbihtpew9sd",
+   "index": 2,
+   "xy": [
+    -0.030488690361380577,
+    -0.00030698388582095504
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.81,
+     "box": [
+      681,
+      370,
+      703,
+      396
+     ],
+     "color": 0.82,
+     "face": 0
+    },
+    {
+     "label": "exit sign",
+     "score": 0.82,
+     "box": [
+      254,
+      147,
+      368,
+      211
+     ],
+     "color": 0.696,
+     "face": 2
+    },
+    {
+     "label": "fire extinguisher",
+     "score": 0.94,
+     "box": [
+      406,
+      542,
+      439,
+      622
+     ],
+     "face": 2
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.69,
+     "box": [
+      120,
+      496,
+      144,
+      508
+     ],
+     "color": 0.0,
+     "face": 2
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.88,
+     "box": [
+      406,
+      541,
+      439,
+      622
+     ],
+     "color": 0.101,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "6bftngks5exuirtu60z1r2u9d",
+   "index": 3,
+   "xy": [
+    9.528390884399414,
+    -4.01584005355835
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.81,
+     "box": [
+      208,
+      238,
+      295,
+      289
+     ],
+     "color": 0.462,
+     "face": 3
+    }
+   ]
+  },
+  {
+   "id": "5c3big4atk3k5auzu17g1m79c",
+   "index": 4,
+   "xy": [
+    7.156188011169434,
+    -4.1404900550842285
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.83,
+     "box": [
+      395,
+      375,
+      437,
+      408
+     ],
+     "color": 0.521,
+     "face": 0
+    },
+    {
+     "label": "exit sign",
+     "score": 0.85,
+     "box": [
+      107,
+      368,
+      136,
+      384
+     ],
+     "color": 0.81,
+     "face": 2
+    },
+    {
+     "label": "exit sign",
+     "score": 0.86,
+     "box": [
+      188,
+      64,
+      273,
+      158
+     ],
+     "color": 0.787,
+     "face": 2
+    },
+    {
+     "label": "fire extinguisher",
+     "score": 0.87,
+     "box": [
+      137,
+      471,
+      149,
+      499
+     ],
+     "face": 2
+    },
+    {
+     "label": "exit sign",
+     "score": 0.7,
+     "box": [
+      998,
+      439,
+      1010,
+      458
+     ],
+     "color": 0.377,
+     "face": 3
+    }
+   ]
+  },
+  {
+   "id": "8wc6k7t7x40wxy8qfy1xgd57a",
+   "index": 5,
+   "xy": [
+    21.705041885375977,
+    -16.387176513671875
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.79,
+     "box": [
+      901,
+      428,
+      914,
+      440
+     ],
+     "color": 0.622,
+     "face": 1
+    },
+    {
+     "label": "exit sign",
+     "score": 0.57,
+     "box": [
+      914,
+      448,
+      926,
+      456
+     ],
+     "color": 0.708,
+     "face": 1
+    },
+    {
+     "label": "fire extinguisher",
+     "score": 0.86,
+     "box": [
+      755,
+      503,
+      766,
+      524
+     ],
+     "face": 1
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.8,
+     "box": [
+      755,
+      504,
+      766,
+      524
+     ],
+     "color": 0.064,
+     "face": 1
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.48,
+     "box": [
+      388,
+      758,
+      450,
+      913
+     ],
+     "color": 0.0,
+     "face": 1
+    },
+    {
+     "label": "exit sign",
+     "score": 0.82,
+     "box": [
+      221,
+      421,
+      239,
+      432
+     ],
+     "color": 0.626,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "hd317i04ety09mbsktrc3si1c",
+   "index": 6,
+   "xy": [
+    21.689273834228516,
+    -4.318971633911133
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.84,
+     "box": [
+      395,
+      372,
+      409,
+      398
+     ],
+     "color": 0.648,
+     "face": 3
+    },
+    {
+     "label": "exit sign",
+     "score": 0.51,
+     "box": [
+      423,
+      442,
+      429,
+      454
+     ],
+     "color": 0.514,
+     "face": 3
+    },
+    {
+     "label": "fire extinguisher",
+     "score": 0.76,
+     "box": [
+      252,
+      513,
+      260,
+      533
+     ],
+     "face": 3
+    }
+   ]
+  },
+  {
+   "id": "tpsb6cm1d4d7w8xseew81h28c",
+   "index": 7,
+   "xy": [
+    4.554324150085449,
+    -0.49551671743392944
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.85,
+     "box": [
+      750,
+      406,
+      774,
+      424
+     ],
+     "color": 0.405,
+     "face": 1
+    },
+    {
+     "label": "exit sign",
+     "score": 0.87,
+     "box": [
+      37,
+      93,
+      186,
+      183
+     ],
+     "color": 0.69,
+     "face": 2
+    },
+    {
+     "label": "exit sign",
+     "score": 0.81,
+     "box": [
+      266,
+      388,
+      294,
+      406
+     ],
+     "color": 0.931,
+     "face": 3
+    },
+    {
+     "label": "fire extinguisher",
+     "score": 0.89,
+     "box": [
+      310,
+      520,
+      322,
+      554
+     ],
+     "face": 3
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.51,
+     "box": [
+      310,
+      520,
+      322,
+      554
+     ],
+     "color": 0.066,
+     "face": 3
+    }
+   ]
+  },
+  {
+   "id": "0znghgf6x7wpws8p3139nuubb",
+   "index": 8,
+   "xy": [
+    17.008007049560547,
+    -4.695181846618652
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.81,
+     "box": [
+      976,
+      364,
+      996,
+      388
+     ],
+     "color": 0.756,
+     "face": 2
+    },
+    {
+     "label": "exit sign",
+     "score": 0.91,
+     "box": [
+      546,
+      -2,
+      644,
+      100
+     ],
+     "color": 0.71,
+     "face": 2
+    },
+    {
+     "label": "fire extinguisher",
+     "score": 0.84,
+     "box": [
+      672,
+      511,
+      682,
+      538
+     ],
+     "face": 2
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.8,
+     "box": [
+      672,
+      511,
+      682,
+      538
+     ],
+     "color": 0.259,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "z0rrn9215qq5q8py72p8tmtxd",
+   "index": 9,
+   "xy": [
+    16.398630142211914,
+    -14.967341423034668
+   ],
+   "hits": [
+    {
+     "label": "fire extinguisher",
+     "score": 0.9,
+     "box": [
+      832,
+      516,
+      852,
+      554
+     ],
+     "face": 1
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.84,
+     "box": [
+      832,
+      516,
+      851,
+      555
+     ],
+     "color": 0.065,
+     "face": 1
+    },
+    {
+     "label": "exit sign",
+     "score": 0.84,
+     "box": [
+      47,
+      400,
+      66,
+      416
+     ],
+     "color": 0.809,
+     "face": 2
+    },
+    {
+     "label": "exit sign",
+     "score": 0.82,
+     "box": [
+      461,
+      418,
+      482,
+      431
+     ],
+     "color": 0.385,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "m91m01ari5dd73b38u7xi09ua",
+   "index": 10,
+   "xy": [
+    11.12298583984375,
+    -16.408737182617188
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.85,
+     "box": [
+      842,
+      431,
+      864,
+      443
+     ],
+     "color": 0.273,
+     "face": 2
+    },
+    {
+     "label": "fire extinguisher",
+     "score": 0.87,
+     "box": [
+      530,
+      520,
+      544,
+      559
+     ],
+     "face": 2
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.52,
+     "box": [
+      530,
+      521,
+      544,
+      559
+     ],
+     "color": 0.071,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "1s2dgd160ntkcb9f7y5gatk6c",
+   "index": 11,
+   "xy": [
+    13.824644088745117,
+    -8.084488868713379
+   ],
+   "hits": [
+    {
+     "label": "fire extinguisher",
+     "score": 0.88,
+     "box": [
+      636,
+      528,
+      658,
+      582
+     ],
+     "face": 1
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.8,
+     "box": [
+      636,
+      527,
+      658,
+      583
+     ],
+     "color": 0.258,
+     "face": 1
+    },
+    {
+     "label": "exit sign",
+     "score": 0.73,
+     "box": [
+      427,
+      462,
+      438,
+      470
+     ],
+     "color": 0.784,
+     "face": 2
+    },
+    {
+     "label": "exit sign",
+     "score": 0.79,
+     "box": [
+      474,
+      431,
+      486,
+      444
+     ],
+     "color": 0.814,
+     "face": 2
+    },
+    {
+     "label": "exit sign",
+     "score": 0.77,
+     "box": [
+      308,
+      292,
+      326,
+      336
+     ],
+     "color": 0.71,
+     "face": 2
+    },
+    {
+     "label": "fire extinguisher",
+     "score": 0.68,
+     "box": [
+      432,
+      509,
+      440,
+      525
+     ],
+     "face": 2
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.5,
+     "box": [
+      432,
+      509,
+      440,
+      524
+     ],
+     "color": 0.0,
+     "face": 2
+    },
+    {
+     "label": "exit sign",
+     "score": 0.87,
+     "box": [
+      594,
+      250,
+      646,
+      302
+     ],
+     "color": 0.651,
+     "face": 3
+    }
+   ]
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 12,
+  "stairs": 0,
+  "fire extinguisher": 10,
+  "fire alarm pull station": 4
+ },
+ "seconds": 67
+}

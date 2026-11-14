@@ -1,0 +1,21 @@
+{
+ "property_id": 253066,
+ "name": "La Brea + Willoughby (West Hollywood)",
+ "address": "852 La Brea Ave, Los Angeles, CA",
+ "lat": 34.0868547,
+ "lon": -118.3436947,
+ "type": "GeneralRetail",
+ "stories": 1,
+ "gross_sqft": 18450.0,
+ "typical_floor_sqft": 18272.0,
+ "year_built": 1925,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "W34F8paqUAG"
+ ]
+}

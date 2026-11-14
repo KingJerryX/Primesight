@@ -1,0 +1,207 @@
+{
+ "property_id": 234048,
+ "name": "River Oaks Medical Tower",
+ "address": "4126 Southwest Fwy, Houston, TX",
+ "lat": 29.72995,
+ "lon": -95.444836,
+ "type": "Office",
+ "stories": 17,
+ "gross_sqft": 150960.0,
+ "typical_floor_sqft": 8236.0,
+ "year_built": 1979,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Summit Ambulatory Surgery Center",
+   "floor": 1,
+   "suite": "108",
+   "sqft": 4000.0,
+   "employees": 26,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "QDT Dental",
+   "floor": 1,
+   "suite": "106",
+   "sqft": 3020.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Be You Med Spa",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SPARS Surgical Center",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 8232.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 2500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oaks Surgical Center Business Office",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 3083.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Maximus, Inc",
+   "floor": 5,
+   "suite": "500 & 520",
+   "sqft": 8232.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "William L Nguyen M.D Internal Medicine",
+   "floor": 6,
+   "suite": "600C",
+   "sqft": 1875.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Deep Centered Mental Health",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 4581.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 4300.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MIA Plastic Surgery",
+   "floor": 9,
+   "suite": "999",
+   "sqft": 8232.0,
+   "employees": 54,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "999",
+   "sqft": 9197.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 3086.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "weMED Health",
+   "floor": 11,
+   "suite": null,
+   "sqft": 3030.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rodriguez Rejuvenation",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 2603.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "InnovaHealth Endocrinology",
+   "floor": 12,
+   "suite": "1210",
+   "sqft": 2118.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1220",
+   "sqft": 1621.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1230",
+   "sqft": 1858.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 13,
+   "suite": "1300",
+   "sqft": 8329.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 17,
+   "suite": "1700",
+   "sqft": 3382.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "fmuaF2rP3bE"
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "property_id": 87398,
+ "name": "Northwest Plaza III",
+ "address": "10333 Northwest Fwy, Houston, TX",
+ "lat": 29.8084772,
+ "lon": -95.458231,
+ "type": "Office",
+ "stories": 5,
+ "gross_sqft": 52810.0,
+ "typical_floor_sqft": 9700.0,
+ "year_built": 1970,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Ruben Baeza",
+   "floor": 3,
+   "suite": "302",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Abrahams & Associates Insur Agency",
+   "floor": 5,
+   "suite": "516",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "UAfg5u9V1pm"
+ ]
+}

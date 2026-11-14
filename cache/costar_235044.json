@@ -1,0 +1,153 @@
+{
+ "property_id": 235044,
+ "name": null,
+ "address": "3330 Audley St, Houston, TX",
+ "lat": 29.734985,
+ "lon": -95.426833,
+ "type": "GeneralRetail",
+ "stories": 2,
+ "gross_sqft": 23789.0,
+ "typical_floor_sqft": 11894.0,
+ "year_built": 1974,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Freight",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Saint Lorraine Aesthetics",
+   "floor": 1,
+   "suite": null,
+   "sqft": 880.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blumoon",
+   "floor": 1,
+   "suite": null,
+   "sqft": 720.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "True North Yoga",
+   "floor": 1,
+   "suite": "A",
+   "sqft": 2250.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "B",
+   "sqft": 2106.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "C",
+   "sqft": 3372.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fringe Salon & Color Bar",
+   "floor": 1,
+   "suite": "250",
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pre-Bodyworks",
+   "floor": 1,
+   "suite": null,
+   "sqft": 572.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "En Gold Gallery",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "FabulashbyLinha",
+   "floor": 1,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Atelier Ladies Salon",
+   "floor": 1,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ultra Design",
+   "floor": 1,
+   "suite": "100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "C",
+   "sqft": 3080.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Alligator Club",
+   "floor": null,
+   "suite": null,
+   "sqft": 4935.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "GpFkvxKtRrp"
+ ]
+}

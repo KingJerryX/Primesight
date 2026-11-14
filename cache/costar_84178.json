@@ -1,0 +1,54 @@
+{
+ "property_id": 84178,
+ "name": "Park Wilshire Apartments",
+ "address": "2424 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0596272,
+ "lon": -118.2803526,
+ "type": "Multifamily",
+ "stories": 8,
+ "gross_sqft": 119104.0,
+ "typical_floor_sqft": 14093.0,
+ "year_built": 1924,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Appraisals Faster - David O\u2019Neal",
+   "floor": 2,
+   "suite": "220",
+   "sqft": null,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Student Debts Help",
+   "floor": null,
+   "suite": "9D",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Annie Pearls Home Remedies",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "B3FzYjv1q6z",
+  "CzVtbGPqEZY",
+  "GviZ9yQJJmN",
+  "HqnGAj8JX2q",
+  "iqScS6egxSp",
+  "kwS3JBXAsGE"
+ ]
+}

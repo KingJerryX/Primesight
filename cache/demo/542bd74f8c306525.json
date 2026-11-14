@@ -1,0 +1,377 @@
+{
+ "text": "Strange odor on the 9th floor, 808 Travis St, Houston. People feel sick.",
+ "out": {
+  "briefing": "PRIMESIGHT | UNKNOWN ODOR / FUMES | FLOOR 9 | Esperson - 808 Travis St, Houston, TX\n27 stories | built 1941 | masonry frame | sprinklers: yes | 12 passenger elevators, 1 freight\nTENANT RISK: no hazmat or vulnerable occupants flagged from tenant records\nTENANT INDUSTRIES: not recorded\nON FLOOR: Osprey Resources Inc; Proxima Innovation LLC (ste 915); 7 unknown tenants (ste 905, 907, 909, 913, 930) | ~20 people by daytime headcount\nNEAR: fl 10 Energy Intelligence Group, Gaston & Thanheiser, 4 unknown | fl 11-12 Martin Disiere Jefferson & Wisdom, Mountaintop Consulting, Branscomb Law\nWIND: from ENE 7.3 mph, gusts 22.1, drifts WSW | 55.1F | Open-Meteo model at 10 m above ground, not floor 9 level, read 08:45 UTC\nOPEN LOT for staging ~483 m SE (aerial search, verify) | HYDRANTS: 72 within 300 m, nearest 46 m E, 46 m S\nINSIDE: no scan of 9; nearest is floor 5 (same core, layout may differ) | 37 scan points | exit signs at 9, pull stations at 4 (floor 5 scan)\nPROPERTY MGR: Cameron Management 5553362403 (text queued: meet crew in lobby with engineer, keys, HVAC info)\nNOT KNOWN: what tenants store, odor source, HVAC layout and shutoff, sprinkler type, stair locations\nSCAN: https://my.matterport.com/show/?m=wovF4kpoaw4",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\233953_wovF4kpoaw4_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\233953_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/233953_wovF4kpoaw4_plan_marked.jpg",
+   "/img/233953_aerial.jpg"
+  ],
+  "property_id": 233953,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire Dept: unknown odor/fumes, people sick on floor 9, 808 Travis St. Please meet crew in lobby with building engineer, keys, fire panel access and HVAC control info."
+   }
+  ],
+  "tenant_flags": [],
+  "_facts": {
+   "incident": "hazmat",
+   "floor": 9,
+   "building": {
+    "name": "Esperson",
+    "address": "808 Travis St, Houston, TX",
+    "stories": 27,
+    "year_built": 1941,
+    "construction": "Masonry",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 35,
+     "tenants": [
+      "Amegy Bank",
+      "Arovia",
+      "Cinnabon",
+      "Sunset Body Works Day Spa",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 15,
+     "tenants": [
+      "Allthenticate",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 16,
+     "tenants": [
+      "Ashby",
+      "Bailey Law Firm PLLC",
+      "Cameron Management",
+      "Unknown tenant",
+      "Verdad Exploration Mexico Llc"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 5,
+     "people": 0,
+     "tenants": [
+      "Houston Symphony"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 37,
+      "exit sign": 9,
+      "stairs": 1,
+      "fire extinguisher": 6,
+      "fire alarm pull station": 4
+     }
+    },
+    {
+     "floor": 6,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 7,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 20,
+     "tenants": [
+      "Osprey Resources Inc",
+      "Proxima Innovation LLC",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 18,
+     "tenants": [
+      "Energy Intelligence Group",
+      "Gaston & Thanheiser",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 118,
+     "tenants": [
+      "Branscomb Law",
+      "Martin, Disiere, Jefferson & Wisdom, L.L.P.",
+      "Mountaintop Consulting",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 12,
+     "people": 50,
+     "tenants": [
+      "Martin, Disiere, Jefferson & Wisdom, L.L.P."
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 13,
+     "people": 2,
+     "tenants": [
+      "Amegy Bank"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 14,
+     "people": 23,
+     "tenants": [
+      "Delaney Law Firm",
+      "Henneman Rau Kirklin & Smith LLP",
+      "MV2 Insurance Solutions",
+      "The Saman Law Firm",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 15,
+     "people": 56,
+     "tenants": [
+      "Consumer Protection Division",
+      "Stewart J. Guss Injury Accident Lawyers",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 16,
+     "people": 54,
+     "tenants": [
+      "David Dopkin, Attorney At Law",
+      "Kirby, Mathews and Walrath",
+      "Magna Operating",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 17,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 18,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 19,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 20,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 21,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 22,
+     "people": 3,
+     "tenants": [
+      "Kerrco Resources Llc"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 23,
+     "people": 5,
+     "tenants": [
+      "Spencer Fane LLP"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 24,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 25,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 26,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 27,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 46,
+     "dir": "E",
+     "lat": 29.75883894062657,
+     "lon": -95.36461569392658
+    },
+    {
+     "m": 46,
+     "dir": "S",
+     "lat": 29.758401250699926,
+     "lon": -95.36520577779223
+    },
+    {
+     "m": 61,
+     "dir": "NE",
+     "lat": 29.759159529902803,
+     "lon": -95.36461467017527
+    },
+    {
+     "m": 83,
+     "dir": "S",
+     "lat": 29.758060695903286,
+     "lon": -95.36521517053836
+    },
+    {
+     "m": 84,
+     "dir": "N",
+     "lat": 29.75952672075991,
+     "lon": -95.36532107110962
+    }
+   ],
+   "staging": [
+    {
+     "m": 483,
+     "dir": "SE",
+     "lat": 29.75633025,
+     "lon": -95.360984805,
+     "score": 0.219
+    },
+    {
+     "m": 526,
+     "dir": "SW",
+     "lat": 29.755734145,
+     "lon": -95.36922455,
+     "score": 0.205
+    },
+    {
+     "m": 391,
+     "dir": "SE",
+     "lat": 29.756926355,
+     "lon": -95.36167144999999,
+     "score": 0.204
+    }
+   ],
+   "scan": {
+    "floor": 5,
+    "exact": false,
+    "link": "https://my.matterport.com/show/?m=wovF4kpoaw4"
+   },
+   "vision": {
+    "scan_points": 37,
+    "scan_points_with": {
+     "exit sign": 9,
+     "stairs": 1,
+     "fire extinguisher": 6,
+     "fire alarm pull station": 4
+    },
+    "image_urls": [
+     "/img/vision/wovF4kpoaw4/000_0.jpg",
+     "/img/vision/wovF4kpoaw4/000_2.jpg",
+     "/img/vision/wovF4kpoaw4/001_1.jpg",
+     "/img/vision/wovF4kpoaw4/001_2.jpg",
+     "/img/vision/wovF4kpoaw4/001_3.jpg",
+     "/img/vision/wovF4kpoaw4/002_0.jpg",
+     "/img/vision/wovF4kpoaw4/003_1.jpg",
+     "/img/vision/wovF4kpoaw4/004_0.jpg",
+     "/img/vision/wovF4kpoaw4/004_2.jpg",
+     "/img/vision/wovF4kpoaw4/005_0.jpg",
+     "/img/vision/wovF4kpoaw4/006_0.jpg",
+     "/img/vision/wovF4kpoaw4/006_2.jpg"
+    ]
+   },
+   "walk": null,
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire Dept: unknown odor/fumes, people sick on floor 9, 808 Travis St. Please meet crew in lobby with building engineer, keys, fire panel access and HVAC control info."
+    }
+   ],
+   "tenant_flags": [],
+   "call": "Strange odor on the 9th floor, 808 Travis St, Houston. People feel sick."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Strange odor on the 9th floor, 808 Travis St, Houston. People feel sick.\"}\n{\"t\": 0.07, \"step\": \"address_lookup\", \"detail\": \"808 Travis St, Houston -> 233953\"}\n{\"t\": 3.02, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"808 Travis St, Houston\\\"}\"}\n{\"t\": 3.02, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 3.02, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/hazmat/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 5.64, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 233953, \\\"floor\\\": 9, \\\"incident\\\": \\\"hazmat\\\", \\\"incident_type\\\": \\\"odor_unknown\\\"}\"}\n{\"t\": 5.64, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/233953.md\\\"}\"}\n{\"t\": 21.76, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: unknown odor/fumes, people feeling sick, floor 9, Esperson, 808 Travis St, Houston TX (property 233953). Flag occupants that change the respo\"}\n{\"t\": 21.76, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Write and queue a short text to the building's people so they meet the fire/hazmat crew. Incident: unknown odor / fumes, people feeling sick, floor 9\"}\n{\"t\": 21.76, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"outside-scout\\\", \\\"description\\\": \\\"Property id 233953 (Esperson, 808 Travis St, Houston TX). Incident: unknown odor/fumes on floor 9, people feeling sick (hazmat). Report live wind now\"}\n{\"t\": 24.15, \"step\": \"helper:outside_now\", \"detail\": \"{\\\"property_id\\\": 233953}\"}\n{\"t\": 25.37, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire Dept: unknown odor/fumes, people sick on floor 9, 808 Travis St. Please meet crew in lobby with building engineer, keys, fire panel access and HVAC control inf\"}\n{\"t\": 41.57, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 233953, \\\"note\\\": \\\"Unknown odor/fumes on floor 9, people feeling sick. Briefing sent; no tenant hazmat flags (floor 9 industries not recorded); wind ENE 7.3 mph drifting WSW at call. Pro\"}\n{\"t\": 78.75, \"step\": \"graded\", \"detail\": \"needs_revision - Every fact in the briefing appears in a tool result (gather_building, crew notes, tenant-risk, scout) with nothing invented or altered: The WIND line says 'measured at ground level, not floor 9'. The tool said it was an Open-Meteo model value at 10 m above ground, not a measurement at ground level. Restate it as in the tool, e.g. 'Open-Meteo model at 10 m above ground, not floor 9 level, 08:45 UTC'.\"}\n{\"t\": 78.75, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 78.75, \"step\": \"usage\", \"detail\": \"141403 in / 7931 out tokens, ~$0.72\"}\n{\"t\": 78.76, \"step\": \"done\", \"detail\": \"12 lines, 2 images\"}\n"
+}

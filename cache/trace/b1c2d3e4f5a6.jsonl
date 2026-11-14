@@ -1,0 +1,15 @@
+{"t": 0.0, "step": "call_received", "detail": "Cardiac arrest on the 36th floor, 1000 Louisiana St, Houston. Caller is a coworker, patient is unresponsive."}
+{"t": 0.02, "step": "address_lookup", "detail": "1000 Louisiana St, Houston -> 233899"}
+{"t": 2.03, "step": "find_building", "detail": "{\"address\": \"1000 Louisiana St, Houston\"}"}
+{"t": 2.03, "step": "read_file", "detail": "{\"file_path\": \"/playbook/skills/medical/SKILL.md\", \"limit\": 1000}"}
+{"t": 4.02, "step": "gather_building", "detail": "{\"property_id\": 233899, \"floor\": 36, \"incident\": \"medical\"}"}
+{"t": 4.02, "step": "read_file", "detail": "{\"file_path\": \"/buildings/233899.md\"}"}
+{"t": 13.94, "step": "task", "detail": "{\"subagent_type\": \"tenant-risk\", \"description\": \"Incident: medical, cardiac arrest, patient unresponsive, floor 36, Wells Fargo Plaza, 1000 Louisiana St, Houston (71 stories). Tenants JSON: {\\\"on_floo"}
+{"t": 13.94, "step": "task", "detail": "{\"subagent_type\": \"notify-writer\", \"description\": \"Incident: medical - cardiac arrest, patient unresponsive. Floor 36 (tenant CME Group, suite unknown). Address: Wells Fargo Plaza, 1000 Louisiana St, "}
+{"t": 19.54, "step": "queue_text", "detail": "property manager: Fire Dept: cardiac arrest, floor 36 (CME Group), Wells Fargo Plaza. Please recall freight elevator to lobby and hold it for EMS stretcher, and meet EM"}
+{"t": 19.54, "step": "helper:queue_text", "detail": "{\"to\": \"property manager\", \"text\": \"Fire Dept: cardiac arrest, floor 36 (CME Group), Wells Fargo Plaza. Please recall freight elevator to lobby and hold it for EMS stretcher, and meet EMS crew on arri"}
+{"t": 25.09, "step": "add_building_note", "detail": "{\"property_id\": 233899, \"note\": \"MEDICAL: cardiac arrest, floor 36 (CME Group), patient unresponsive, caller coworker. Briefing sent; freight elevator on record for stretcher; exact-floor scan availab"}
+{"t": 28.26, "step": "usage", "detail": "63877 in / 2310 out tokens, ~$0.30"}
+{"t": 28.26, "step": "done", "detail": "10 lines, 2 images"}
+{"t": 28.27, "step": "crew_reply", "detail": "Which elevator fits our stretcher and who meets us?"}
+{"t": 31.68, "step": "usage", "detail": "12523 in / 213 out tokens, ~$0.05"}

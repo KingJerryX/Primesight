@@ -1,0 +1,86 @@
+{
+ "property_id": 278506,
+ "name": null,
+ "address": "2445 12th St, Los Angeles, CA",
+ "lat": 34.0229612,
+ "lon": -118.2280094,
+ "type": "Industrial",
+ "stories": 2,
+ "gross_sqft": 88507.0,
+ "typical_floor_sqft": 88471.0,
+ "year_built": 1988,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Esfr",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "B",
+   "sqft": 18429.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Petaldew",
+   "floor": 1,
+   "suite": "C",
+   "sqft": 16882.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Professional Diversified Flooring",
+   "floor": 1,
+   "suite": "D",
+   "sqft": 16882.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Starship LLC",
+   "floor": 1,
+   "suite": "A",
+   "sqft": 16882.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Starship LLC",
+   "floor": null,
+   "suite": "A",
+   "sqft": 5245.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Professional Diversified Flooring",
+   "floor": null,
+   "suite": "D",
+   "sqft": 5245.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Petaldew",
+   "floor": null,
+   "suite": "C",
+   "sqft": 5245.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "MF6X9eeb7Jv",
+  "gALXE2XeEdj"
+ ]
+}

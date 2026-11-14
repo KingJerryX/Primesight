@@ -1,0 +1,54 @@
+{
+ "property_id": 240149,
+ "name": "Intercontinental Park III",
+ "address": "16701 Greenspoint Park Dr, Houston, TX",
+ "lat": 29.944639,
+ "lon": -95.403447,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 89820.0,
+ "typical_floor_sqft": 29940.0,
+ "year_built": 1983,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Fracht",
+   "floor": 2,
+   "suite": null,
+   "sqft": 29000.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fracht",
+   "floor": 3,
+   "suite": null,
+   "sqft": 29000.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Solaris Global",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "B8YJk7QWpTh"
+ ]
+}

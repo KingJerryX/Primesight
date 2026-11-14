@@ -1,0 +1,45 @@
+{
+ "property_id": 91247,
+ "name": null,
+ "address": "2401 Portsmouth St, Houston, TX",
+ "lat": 29.7331292,
+ "lon": -95.4169104,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 91399.0,
+ "typical_floor_sqft": 42500.0,
+ "year_built": 1984,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Verizon",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 42500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ZVRS",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 1266.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "1TyLtHjc4xE"
+ ]
+}

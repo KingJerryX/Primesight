@@ -1,0 +1,135 @@
+{
+ "model_id": "89ZfuXUfteK",
+ "name": "Suite 204",
+ "floor": 2,
+ "sweeps": [
+  {
+   "id": "9uaktwrr43smqut78b41n3w3d",
+   "index": 0,
+   "xy": [
+    10.446823120117188,
+    5.492437362670898
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.86,
+     "box": [
+      310,
+      335,
+      348,
+      367
+     ],
+     "color": 0.285,
+     "face": 3
+    }
+   ]
+  },
+  {
+   "id": "sqpfd6f5wkqudy961m4wn7b5a",
+   "index": 1,
+   "xy": [
+    9.911287307739258,
+    7.840639114379883
+   ],
+   "hits": []
+  },
+  {
+   "id": "0z0477aa6usfxbbccwrr0h79b",
+   "index": 2,
+   "xy": [
+    0.013608074747025967,
+    0.015509243123233318
+   ],
+   "hits": [
+    {
+     "label": "fire alarm pull station",
+     "score": 0.5,
+     "box": [
+      579,
+      522,
+      590,
+      532
+     ],
+     "color": 0.0,
+     "face": 0
+    },
+    {
+     "label": "exit sign",
+     "score": 0.93,
+     "box": [
+      924,
+      20,
+      1027,
+      150
+     ],
+     "color": 0.163,
+     "face": 2
+    },
+    {
+     "label": "exit sign",
+     "score": 0.92,
+     "box": [
+      -1,
+      29,
+      33,
+      120
+     ],
+     "color": 0.019,
+     "face": 3
+    }
+   ]
+  },
+  {
+   "id": "mgpa7x7znera28z9p5mwb0efc",
+   "index": 3,
+   "xy": [
+    11.098429679870605,
+    -1.1530762910842896
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.75,
+     "box": [
+      984,
+      386,
+      994,
+      402
+     ],
+     "color": 0.331,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "8h9z064wewqebrk4drctpnr9d",
+   "index": 4,
+   "xy": [
+    11.297066688537598,
+    1.8236396312713623
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.94,
+     "box": [
+      200,
+      -1,
+      312,
+      115
+     ],
+     "color": 0.154,
+     "face": 2
+    }
+   ]
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 4,
+  "stairs": 0,
+  "fire extinguisher": 0,
+  "fire alarm pull station": 0
+ },
+ "seconds": 28
+}

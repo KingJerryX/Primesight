@@ -1,0 +1,380 @@
+{
+ "property_id": 246993,
+ "name": null,
+ "address": "12400 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0418228,
+ "lon": -118.4697782,
+ "type": "Office",
+ "stories": 16,
+ "gross_sqft": 246575.0,
+ "typical_floor_sqft": 15411.0,
+ "year_built": 1985,
+ "construction": "Unknown",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 5
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  },
+  {
+   "type": "Parking",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Cedars-Sinai Endoscopy Center of Santa Monica",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 9300.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blu Jam Cafe",
+   "floor": 1,
+   "suite": "300",
+   "sqft": 6200.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cline Agency Insurance Brokers",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 2510.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hayutin",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 2845.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TRIO-US",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 2008.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alan K. Rubin CPA, APC",
+   "floor": 2,
+   "suite": "245",
+   "sqft": 2510.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KB&T Tax Consulting, Inc.",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 2845.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Alan R. Freedman",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 2176.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "M & M Investments",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 3012.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "480",
+   "sqft": 1979.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "470",
+   "sqft": 2216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Solution Based Therapeutics",
+   "floor": 4,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The McGregor Company",
+   "floor": 5,
+   "suite": "535",
+   "sqft": 3347.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate of Poland",
+   "floor": 5,
+   "suite": null,
+   "sqft": 6694.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Corridor Capital",
+   "floor": 6,
+   "suite": "645",
+   "sqft": 4603.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Little Wing World",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 3347.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate General-Saudi Arabia",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 16569.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Intellectual Property Group",
+   "floor": 8,
+   "suite": "810",
+   "sqft": 4453.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reuben Raucher And Blum",
+   "floor": 8,
+   "suite": null,
+   "sqft": 6794.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Revamp Energy, Inc",
+   "floor": 8,
+   "suite": "850",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Solis Cooperson",
+   "floor": 9,
+   "suite": "990",
+   "sqft": 4184.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Immco Investments, LLC",
+   "floor": 9,
+   "suite": "920",
+   "sqft": 3515.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Farar & Lewis LLP",
+   "floor": 9,
+   "suite": "910",
+   "sqft": 4184.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UCLA Investment Company",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 5858.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Braunstein & Braunstein, PC",
+   "floor": 10,
+   "suite": "1080",
+   "sqft": 5858.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1005",
+   "sqft": 1483.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Smith Entertainment Law Group, LLP",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 4956.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Selva Ventures",
+   "floor": 11,
+   "suite": "1170",
+   "sqft": 2510.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lerner & Rowe Injury Attorneys",
+   "floor": 11,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reback Lee & Company, Inc.",
+   "floor": 12,
+   "suite": "1275",
+   "sqft": 4500.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cohen Bender & Golden LLP",
+   "floor": 12,
+   "suite": "1250",
+   "sqft": 3950.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Voyager Management",
+   "floor": 12,
+   "suite": "1210",
+   "sqft": 2250.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Seaver Institute",
+   "floor": 12,
+   "suite": "1240",
+   "sqft": 2250.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Endeavor Media Group",
+   "floor": 13,
+   "suite": "1300",
+   "sqft": 13860.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Primex World, Inc.",
+   "floor": 14,
+   "suite": "1455",
+   "sqft": 2645.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Doheny Asset Management",
+   "floor": 14,
+   "suite": "1460",
+   "sqft": 2645.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "1r2LuLrkXZf",
+  "CMbdWuFd1en",
+  "FnZK8PhceSE",
+  "WzHz5S4gwLf",
+  "c7Bzd6E9J97",
+  "oQqfXnnE6iq",
+  "u4JT7BoKCt4",
+  "wEC2ewJJszb"
+ ]
+}

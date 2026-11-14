@@ -1,0 +1,294 @@
+{
+ "property_id": 246948,
+ "name": "Bundy Olympic",
+ "address": "11900 Olympic Blvd, Los Angeles, CA",
+ "lat": 34.0323716,
+ "lon": -118.4522483,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 115632.0,
+ "typical_floor_sqft": 19272.0,
+ "year_built": 1991,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Le Marriage Couture",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 5782.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Positive Physical Therapy and Fitness",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 3257.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aerlex Law Group",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 3854.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lewis & Lewis Insurance Agency, Inc",
+   "floor": 4,
+   "suite": "475",
+   "sqft": 2120.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boston Child Study Center",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 2120.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "First Choice Business Brokers Los Angeles",
+   "floor": 4,
+   "suite": "480",
+   "sqft": 2120.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 3499.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 4570.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 5207.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cannon",
+   "floor": 5,
+   "suite": "530",
+   "sqft": 3854.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Laurent C. Vonderweidt",
+   "floor": 5,
+   "suite": "570",
+   "sqft": 2891.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Saman Azimtash Law Firm",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 3276.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 2228.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Michael Klein",
+   "floor": 5,
+   "suite": "575",
+   "sqft": 1605.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Berman Berman Berman Schneider & Lowary",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 2698.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dietz, Gilmor & Chazen",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 2120.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gosuits Trial Lawyers",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 1927.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Devereaux, LLC",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 1542.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blue Spruce Capital Corp",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 1542.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kadence International",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 2209.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Launch Centers",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 4818.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kadence International",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 2671.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Artisan Capital",
+   "floor": 7,
+   "suite": null,
+   "sqft": 2756.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sunday Capital LLC",
+   "floor": 8,
+   "suite": "810",
+   "sqft": 2891.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Black Label Media",
+   "floor": 8,
+   "suite": "830",
+   "sqft": 1927.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Defined Property Management",
+   "floor": 8,
+   "suite": "870",
+   "sqft": 1927.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 2561.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zytrade",
+   "floor": 8,
+   "suite": "860",
+   "sqft": 1908.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "Gq5yHCcffyL",
+  "MocRC6tyWqy",
+  "RPCw2QpnW8p",
+  "cuJmzqr2kD3",
+  "gvXRMqdgt8U",
+  "htrzwTzmueN",
+  "nrVMX7grm3H",
+  "tv7pX1SC884"
+ ]
+}

@@ -1,0 +1,333 @@
+{
+ "model_id": "KSutZSPX8J5",
+ "name": "520 Post Oak Blvd - Suite 650",
+ "floor": 6,
+ "sweeps": [
+  {
+   "id": "221q877echpw1tk4ai3un77td",
+   "index": 0,
+   "xy": [
+    -14.331920623779297,
+    7.4261088371276855
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.87,
+     "box": [
+      188,
+      207,
+      279,
+      267
+     ],
+     "color": 0.653,
+     "face": 2
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.63,
+     "box": [
+      175,
+      205,
+      288,
+      268
+     ],
+     "color": 0.522,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "ckae0qp1y0y6055i65fk6ie4d",
+   "index": 1,
+   "xy": [
+    -3.4723052978515625,
+    2.211320400238037
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.82,
+     "box": [
+      408,
+      402,
+      440,
+      422
+     ],
+     "color": 0.489,
+     "face": 2
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.68,
+     "box": [
+      408,
+      402,
+      440,
+      422
+     ],
+     "color": 0.489,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "rkb7pu6y86fudymcdhas5zwwd",
+   "index": 2,
+   "xy": [
+    -14.355158805847168,
+    4.848052978515625
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.92,
+     "box": [
+      195,
+      -1,
+      244,
+      75
+     ],
+     "color": 0.312,
+     "face": 1
+    }
+   ]
+  },
+  {
+   "id": "8ky76x8ykt0r6yptbifik18ea",
+   "index": 3,
+   "xy": [
+    -5.77025842666626,
+    2.4631576538085938
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.78,
+     "box": [
+      492,
+      433,
+      510,
+      447
+     ],
+     "color": 0.623,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "mxcq960bizymnkutbgx32t4kd",
+   "index": 4,
+   "xy": [
+    -11.07835865020752,
+    2.4758105278015137
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.88,
+     "box": [
+      970,
+      281,
+      1026,
+      340
+     ],
+     "color": 0.502,
+     "face": 0
+    },
+    {
+     "label": "exit sign",
+     "score": 0.83,
+     "box": [
+      -1,
+      281,
+      15,
+      325
+     ],
+     "color": 0.402,
+     "face": 1
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.52,
+     "box": [
+      -1,
+      282,
+      16,
+      326
+     ],
+     "color": 0.372,
+     "face": 1
+    }
+   ]
+  },
+  {
+   "id": "c6pnzuci2qdp9n33k5tr8td2a",
+   "index": 5,
+   "xy": [
+    -8.419615745544434,
+    2.3138482570648193
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.85,
+     "box": [
+      909,
+      384,
+      938,
+      412
+     ],
+     "color": 0.626,
+     "face": 0
+    },
+    {
+     "label": "exit sign",
+     "score": 0.61,
+     "box": [
+      524,
+      451,
+      538,
+      461
+     ],
+     "color": 0.636,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "4q7gbcfkicir08u96ugbptund",
+   "index": 6,
+   "xy": [
+    -21.261585235595703,
+    8.874826431274414
+   ],
+   "hits": []
+  },
+  {
+   "id": "cgnbi5nru4p9dchf6p5048eic",
+   "index": 7,
+   "xy": [
+    -0.23269791901111603,
+    0.004912331700325012
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.81,
+     "box": [
+      223,
+      324,
+      265,
+      362
+     ],
+     "color": 0.477,
+     "face": 3
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.66,
+     "box": [
+      221,
+      324,
+      267,
+      362
+     ],
+     "color": 0.438,
+     "face": 3
+    }
+   ]
+  },
+  {
+   "id": "frn3ak8znkszw7991ttcs5nmc",
+   "index": 8,
+   "xy": [
+    -17.86509895324707,
+    9.058182716369629
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.88,
+     "box": [
+      850,
+      394,
+      878,
+      422
+     ],
+     "color": 0.647,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "i8b955rz7f5qk7q89h7k593pd",
+   "index": 9,
+   "xy": [
+    -23.091161727905273,
+    3.4318346977233887
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.64,
+     "box": [
+      802,
+      474,
+      814,
+      482
+     ],
+     "color": 0.0,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "k9x11meebf9uect94a4nhgi1c",
+   "index": 10,
+   "xy": [
+    -24.009916305541992,
+    -0.19203896820545197
+   ],
+   "hits": []
+  },
+  {
+   "id": "1scwp89c07f1sraizg19079nb",
+   "index": 11,
+   "xy": [
+    -13.769011497497559,
+    2.5929512977600098
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.9,
+     "box": [
+      572,
+      298,
+      632,
+      339
+     ],
+     "color": 0.489,
+     "face": 1
+    }
+   ]
+  },
+  {
+   "id": "39grau1fq72q4s6pe8fk9153a",
+   "index": 12,
+   "xy": [
+    -21.986446380615234,
+    6.173665523529053
+   ],
+   "hits": []
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 9,
+  "stairs": 0,
+  "fire extinguisher": 0,
+  "fire alarm pull station": 4
+ },
+ "seconds": 78
+}

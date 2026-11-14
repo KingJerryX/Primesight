@@ -1,0 +1,113 @@
+{
+ "property_id": 236314,
+ "name": null,
+ "address": "6301 Ashcroft Dr, Houston, TX",
+ "lat": 29.7122913,
+ "lon": -95.490459,
+ "type": "Flex",
+ "stories": 1,
+ "gross_sqft": 71250.0,
+ "typical_floor_sqft": 71250.0,
+ "year_built": 1977,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "9A",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lavadero Vecinal",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4900.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "6347 - 9B",
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "6341 - 6A",
+   "sqft": 2500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "6347 - 8B",
+   "sqft": 2050.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tools - TV Appliances Variedades",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4900.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elm Food Store",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4900.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "1A & 2A",
+   "sqft": 3000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "9A",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "8A",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "Muo5jpq44Xk",
+  "wBF5r77AXbb"
+ ]
+}

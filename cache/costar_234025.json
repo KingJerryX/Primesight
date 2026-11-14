@@ -1,0 +1,743 @@
+{
+ "property_id": 234025,
+ "name": "Arena Place - Two Arena Place",
+ "address": "7324 Southwest Fwy, Houston, TX",
+ "lat": 29.7017725,
+ "lon": -95.518261,
+ "type": "Office",
+ "stories": 21,
+ "gross_sqft": 434725.0,
+ "typical_floor_sqft": 19101.0,
+ "year_built": 1981,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 7
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Boxer Property",
+   "floor": 1,
+   "suite": null,
+   "sqft": 15590.0,
+   "employees": 131,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "China Classification Society",
+   "floor": 2,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clean Books Tax",
+   "floor": 2,
+   "suite": "236",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0203",
+   "sqft": 204.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0212",
+   "sqft": 407.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0215",
+   "sqft": 204.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0216",
+   "sqft": 316.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0218",
+   "sqft": 316.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0221",
+   "sqft": 179.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0227",
+   "sqft": 176.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0228",
+   "sqft": 316.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0231",
+   "sqft": 176.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0244",
+   "sqft": 311.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0278",
+   "sqft": 330.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0292",
+   "sqft": 659.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0296",
+   "sqft": 686.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lone Star Attorney Services",
+   "floor": 2,
+   "suite": null,
+   "sqft": 450.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "2-0231",
+   "sqft": 176.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mrs Couture",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 750.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daniel Ogbeide Law, Pllc",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 988.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Capeno Home Health, Inc",
+   "floor": 3,
+   "suite": "2-0365",
+   "sqft": 963.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Michigan Petroluem",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 593.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "J&L Global Inc",
+   "floor": 3,
+   "suite": "360",
+   "sqft": 2174.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kanayo Ubesie, MD, PA",
+   "floor": 3,
+   "suite": "375",
+   "sqft": 395.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Denicks Legal PLLC",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 2080.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Workstyle Flexible Spaces",
+   "floor": 4,
+   "suite": null,
+   "sqft": 20570.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ral Obioha Law PLLC",
+   "floor": 5,
+   "suite": "2-0590",
+   "sqft": 600.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Magnolia Home Health",
+   "floor": 5,
+   "suite": "515",
+   "sqft": 1976.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. George Lazar, PhD",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 1976.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Isrel Fonesca",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 225.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cook Law Firm",
+   "floor": 5,
+   "suite": "585",
+   "sqft": 1581.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Esposito & Associates",
+   "floor": 5,
+   "suite": "555",
+   "sqft": 1976.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Johnson Garcia LLP",
+   "floor": 5,
+   "suite": "545",
+   "sqft": 4940.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ral Obioha Law PLLC",
+   "floor": 5,
+   "suite": "595",
+   "sqft": 1976.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prota Energy Llc",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wadhawan Law Firm",
+   "floor": 5,
+   "suite": null,
+   "sqft": 988.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GT Capital, LLC",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 1910.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oro Bravo LLC",
+   "floor": 6,
+   "suite": "2-0615",
+   "sqft": 468.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beaconbold Inc",
+   "floor": 6,
+   "suite": "2-0650",
+   "sqft": 750.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Smarter HR Solutions",
+   "floor": 6,
+   "suite": "690",
+   "sqft": 988.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cosmic 8",
+   "floor": 6,
+   "suite": "601",
+   "sqft": 790.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of Pat Egwutu",
+   "floor": 6,
+   "suite": "606",
+   "sqft": 3222.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "680/685",
+   "sqft": 2974.0,
+   "employees": null,
+   "industry": "ProfessionalScientificAndTechnicalServices",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "2-0665",
+   "sqft": 858.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Azinge & Associates, P.C.",
+   "floor": 6,
+   "suite": null,
+   "sqft": 1200.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Swift Mortgage",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 750.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "2-0635",
+   "sqft": 1733.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Income Life Insurance",
+   "floor": 7,
+   "suite": "775",
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SPO Enterprises",
+   "floor": 7,
+   "suite": "702",
+   "sqft": 3952.0,
+   "employees": 26,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bannwart & Associates, P.C.",
+   "floor": 8,
+   "suite": "830",
+   "sqft": 3798.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Circle Of Hope Services, Inc.",
+   "floor": 8,
+   "suite": "835",
+   "sqft": 4112.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boxer Property",
+   "floor": 8,
+   "suite": "855",
+   "sqft": 3952.0,
+   "employees": 131,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Engage Empire",
+   "floor": 8,
+   "suite": "2-0860",
+   "sqft": 1577.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prime Rate Staffing",
+   "floor": 8,
+   "suite": "870",
+   "sqft": 395.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advantage Lifecare Solutions, LLC",
+   "floor": 8,
+   "suite": "805",
+   "sqft": 395.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Westcott Law Group",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 1607.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Conquest",
+   "floor": 8,
+   "suite": "840",
+   "sqft": 988.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "2-0820",
+   "sqft": 572.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "2-0815",
+   "sqft": 844.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boxer Property",
+   "floor": 9,
+   "suite": null,
+   "sqft": 2964.0,
+   "employees": 131,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Faith Network",
+   "floor": 9,
+   "suite": "2-0910",
+   "sqft": 555.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "1st Trinity Home Health Care, Inc.",
+   "floor": 9,
+   "suite": "977",
+   "sqft": 988.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Q'riosa Net",
+   "floor": 9,
+   "suite": "972",
+   "sqft": 988.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "2-0995",
+   "sqft": 1154.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Phillip Brantley & Associates, PC",
+   "floor": 10,
+   "suite": null,
+   "sqft": 1034.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zion Home Health Services",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 958.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CBBA Productions",
+   "floor": 10,
+   "suite": "1088",
+   "sqft": 3952.0,
+   "employees": 26,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daniel Ogbeide Law, Pllc",
+   "floor": 10,
+   "suite": "1040",
+   "sqft": 1615.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boxer Property",
+   "floor": 12,
+   "suite": null,
+   "sqft": 10970.0,
+   "employees": 131,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 14,
+   "suite": "2-1430",
+   "sqft": 386.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Workstyle Flexible Spaces",
+   "floor": 14,
+   "suite": "460 A-V",
+   "sqft": 20570.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 14,
+   "suite": "2-1442",
+   "sqft": 850.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "2-1595",
+   "sqft": 491.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boxer Property",
+   "floor": 16,
+   "suite": null,
+   "sqft": 19760.0,
+   "employees": 131,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Workstyle Flexible Spaces",
+   "floor": 17,
+   "suite": null,
+   "sqft": 20570.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boxer Property",
+   "floor": 18,
+   "suite": null,
+   "sqft": 19760.0,
+   "employees": 131,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boxer Property",
+   "floor": 19,
+   "suite": null,
+   "sqft": 19760.0,
+   "employees": 131,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boxer Property",
+   "floor": 20,
+   "suite": null,
+   "sqft": 19760.0,
+   "employees": 131,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Boxer Property",
+   "phone": "5557110142"
+  }
+ ],
+ "matterport_models": [
+  "8BcrFzwRUiK"
+ ]
+}

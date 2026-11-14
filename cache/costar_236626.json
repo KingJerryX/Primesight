@@ -1,0 +1,31 @@
+{
+ "property_id": 236626,
+ "name": null,
+ "address": "6210 Cunningham Rd, Houston, TX",
+ "lat": 29.858666,
+ "lon": -95.580639,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 46709.0,
+ "typical_floor_sqft": 46709.0,
+ "year_built": 1979,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 46709.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

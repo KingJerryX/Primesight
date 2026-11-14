@@ -1,0 +1,875 @@
+{
+ "property_id": 23573,
+ "name": "Harwin Plaza I Bldg",
+ "address": "7447 Harwin Dr, Houston, TX",
+ "lat": 29.7171285,
+ "lon": -95.5147201,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 186303.0,
+ "typical_floor_sqft": 93151.0,
+ "year_built": 1983,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 1
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "ARCpoint Labs",
+   "floor": 1,
+   "suite": "103",
+   "sqft": 2081.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pure Lash Spa & Esthetics",
+   "floor": 1,
+   "suite": "104",
+   "sqft": 298.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 424.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unique S Medical Svcs",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3682.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clinica Ideal Harwin",
+   "floor": 1,
+   "suite": "145",
+   "sqft": 2234.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 488.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Harris County Public Health Outreach Center",
+   "floor": 1,
+   "suite": null,
+   "sqft": 6632.0,
+   "employees": 32,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "115",
+   "sqft": 438.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Masons Consultants And Co",
+   "floor": 1,
+   "suite": "143A",
+   "sqft": 495.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Invictus Health Partners, LLC",
+   "floor": 1,
+   "suite": "190",
+   "sqft": 1336.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Invictus Health Partners, LLC",
+   "floor": 1,
+   "suite": "195",
+   "sqft": 2044.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Shrielle Experience",
+   "floor": 1,
+   "suite": "143D",
+   "sqft": 6386.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lina Plastics",
+   "floor": 1,
+   "suite": "185",
+   "sqft": 1001.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Feminine Attractions",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1351.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Krisbi Travel",
+   "floor": 1,
+   "suite": "110",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aboveall Healthcare",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hooray Indoor Playground Inc",
+   "floor": 1,
+   "suite": "150",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kemiland Fabrics Inc",
+   "floor": 1,
+   "suite": "110",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Lash Designer LLC",
+   "floor": 1,
+   "suite": "102B",
+   "sqft": 2795.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Travel Link",
+   "floor": 1,
+   "suite": "127",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hair By Jada",
+   "floor": 1,
+   "suite": "141",
+   "sqft": 1863.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Family Transportation Network",
+   "floor": 1,
+   "suite": "106",
+   "sqft": 2795.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mateen Logistics",
+   "floor": 1,
+   "suite": "100D",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Platinum Auto Link",
+   "floor": 1,
+   "suite": "139",
+   "sqft": 1863.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Harmony Infusion Pharmacy, LLC",
+   "floor": 1,
+   "suite": "111",
+   "sqft": 2795.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Done By Chidi",
+   "floor": 1,
+   "suite": "143B",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Roy Abner",
+   "floor": 1,
+   "suite": "116",
+   "sqft": 1863.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "S'Hek Luxury Suites",
+   "floor": 1,
+   "suite": "104.",
+   "sqft": 7452.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "IdentoGo",
+   "floor": 1,
+   "suite": "103",
+   "sqft": 2081.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "R & R Business Mgt",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 1863.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Global Motors & Shipping LLC",
+   "floor": 1,
+   "suite": "139C",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "STK Destination Management, LLC",
+   "floor": 1,
+   "suite": "100E",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Affordable Insurance of Texas",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1580.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Invision Pro's, LLC",
+   "floor": 2,
+   "suite": null,
+   "sqft": 895.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texans Dream Realty",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1389.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Smuuch Cosmetics",
+   "floor": 2,
+   "suite": null,
+   "sqft": 242.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": null,
+   "sqft": 346.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royal Technocrats Inc",
+   "floor": 2,
+   "suite": "270",
+   "sqft": 2289.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Invictus Health Partners, LLC",
+   "floor": 2,
+   "suite": "246",
+   "sqft": 2465.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "A-1 Tax and Business Services",
+   "floor": 2,
+   "suite": "206",
+   "sqft": 3749.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "212",
+   "sqft": 2467.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "215",
+   "sqft": 612.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "245",
+   "sqft": 323.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "249",
+   "sqft": 1055.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 931.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "212",
+   "sqft": 2467.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "250L",
+   "sqft": 284.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Grey LLC",
+   "floor": 2,
+   "suite": "200A",
+   "sqft": 258.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "50Shadesoffly",
+   "floor": 2,
+   "suite": "210B",
+   "sqft": 252.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Allice Collective",
+   "floor": 2,
+   "suite": "266",
+   "sqft": 730.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pillar & Strong, Inc.",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1251.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Richard Johnson Builders",
+   "floor": 2,
+   "suite": "243e",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Irs Tax Fighters",
+   "floor": 2,
+   "suite": "262",
+   "sqft": null,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Media Times News Inc",
+   "floor": 2,
+   "suite": "280",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Voice Counseling & Life Skills",
+   "floor": 2,
+   "suite": "238j",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ajay Loves LLC",
+   "floor": 2,
+   "suite": "244",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lovher Beauty",
+   "floor": 2,
+   "suite": "250Q",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Flawless Collection LLC",
+   "floor": 2,
+   "suite": "216",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Columbia Personnel Services, LTD CO",
+   "floor": 2,
+   "suite": "292",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Truth Locs",
+   "floor": 2,
+   "suite": "250O",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Styles by Luxe",
+   "floor": 2,
+   "suite": "250E",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lavish Beauty And Makeup Bar",
+   "floor": 2,
+   "suite": "250A",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alysnaildiary",
+   "floor": 2,
+   "suite": "200B",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Saditty Faces By Sabreah",
+   "floor": 2,
+   "suite": "210A",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alpha Crime Control LLC",
+   "floor": 2,
+   "suite": "295",
+   "sqft": 2795.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SensationalFacez, LLC",
+   "floor": 2,
+   "suite": "270",
+   "sqft": 2289.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tavia Artistry",
+   "floor": 2,
+   "suite": "242",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clinical Vein Solutions, LLC",
+   "floor": 2,
+   "suite": "209",
+   "sqft": 2795.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Styles by Momo LLC",
+   "floor": 2,
+   "suite": "210D",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aercrylics",
+   "floor": 2,
+   "suite": "250M",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HausofGorg LLC",
+   "floor": 2,
+   "suite": "246",
+   "sqft": 2465.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Crowned Experience LLC",
+   "floor": 2,
+   "suite": "250U",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shaded Wayz",
+   "floor": 2,
+   "suite": "204D",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nubi Hair Designs",
+   "floor": 2,
+   "suite": "200C",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diosa Beauty LLC",
+   "floor": 2,
+   "suite": "202",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rion Brooklyn Studios",
+   "floor": 2,
+   "suite": "243",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Quality Braids By Tacha",
+   "floor": 2,
+   "suite": "250G",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Quality Braids By Tacha",
+   "floor": 2,
+   "suite": "250N",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Da Lovely Style",
+   "floor": 2,
+   "suite": "204A",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Summer J Beauty dba Summluvstyle",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Achieve Behavior Centers Corp.",
+   "floor": 2,
+   "suite": "294",
+   "sqft": 2795.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Achieve Behavior Centers Corp.",
+   "floor": 2,
+   "suite": "294",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kenneth W Smith",
+   "floor": 2,
+   "suite": "201",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "C. Lawrence Enterprises LLC",
+   "floor": 2,
+   "suite": "239",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Richard Ituah",
+   "floor": 2,
+   "suite": "289",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Guard You",
+   "floor": 2,
+   "suite": "207",
+   "sqft": 2795.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hamani Holding",
+   "floor": 2,
+   "suite": "213",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TIZO LLC",
+   "floor": 2,
+   "suite": "Tizo LLC",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Minked By Poked",
+   "floor": 2,
+   "suite": "210C",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Touched By Emily",
+   "floor": 2,
+   "suite": "247",
+   "sqft": 932.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Toner Distribution",
+   "floor": 2,
+   "suite": "270",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Caisson Real Estate Brokerage, LLC",
+   "phone": "5552707185"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 200
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "2y9vzVj7S5w",
+  "MyBLfmX2KxC",
+  "Sf4ax2BXsoN",
+  "X7PNurupPWJ",
+  "a2P3KaD3tva",
+  "a5mSkdXF7es"
+ ]
+}

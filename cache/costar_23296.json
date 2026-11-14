@@ -1,0 +1,40 @@
+{
+ "property_id": 23296,
+ "name": "Northwest Trade Center",
+ "address": "9700 Tanner Rd, Houston, TX",
+ "lat": 29.850575,
+ "lon": -95.533213,
+ "type": "Flex",
+ "stories": 1,
+ "gross_sqft": 69500.0,
+ "typical_floor_sqft": 69500.0,
+ "year_built": 1979,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Centerline Manufacturing",
+   "floor": 1,
+   "suite": null,
+   "sqft": 25000.0,
+   "employees": 54,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Spring Engineers Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": 34500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "oNAvrNiXZS7"
+ ]
+}

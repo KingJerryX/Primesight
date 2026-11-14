@@ -1,0 +1,21 @@
+{
+ "property_id": 251668,
+ "name": null,
+ "address": "3318 Jefferson Blvd, Los Angeles, CA",
+ "lat": 34.0253963,
+ "lon": -118.3324449,
+ "type": "GeneralRetail",
+ "stories": 2,
+ "gross_sqft": 10007.0,
+ "typical_floor_sqft": 5004.0,
+ "year_built": 1958,
+ "construction": "Unknown",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "xViwzEUgiyf"
+ ]
+}

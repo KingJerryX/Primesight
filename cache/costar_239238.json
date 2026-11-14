@@ -1,0 +1,54 @@
+{
+ "property_id": 239238,
+ "name": "Remington Park",
+ "address": "5510 Rice Ave, Houston, TX",
+ "lat": 29.72295,
+ "lon": -95.469003,
+ "type": "Multifamily",
+ "stories": 3,
+ "gross_sqft": 417988.0,
+ "typical_floor_sqft": 139329.0,
+ "year_built": 2000,
+ "construction": "WoodFrame",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "For Sure Transport Inc",
+   "floor": 1,
+   "suite": "2137",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tajadas Express",
+   "floor": 1,
+   "suite": "133",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "5izr2fVYB7d",
+  "CBcXUhtrDJ9",
+  "Gbq2AoLroUj",
+  "NpQp111bTB7",
+  "QrJJvvd4Dk6",
+  "Sz1amf6Abru",
+  "UDEkiqmEzoY",
+  "YqZ8a8FKCnu",
+  "bE7257ogQRb",
+  "hYkUVJWSF6W",
+  "qbzbMV7Ltqr",
+  "utdcMQvXrp8",
+  "vNLEovU69U6",
+  "vcbmnXmU2Ki",
+  "xL7vCPTc5re"
+ ]
+}

@@ -1,0 +1,397 @@
+{
+ "property_id": 27422,
+ "name": "640 South",
+ "address": "640 San Vicente Blvd, Los Angeles, CA",
+ "lat": 34.0654668,
+ "lon": -118.3724308,
+ "type": "Office",
+ "stories": 5,
+ "gross_sqft": 75898.0,
+ "typical_floor_sqft": 15000.0,
+ "year_built": 1985,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Dry",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Los Angeles Surrogacy LA",
+   "floor": 2,
+   "suite": "251",
+   "sqft": 708.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LaVie Construction Inc",
+   "floor": 2,
+   "suite": "254",
+   "sqft": 708.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Growurpotential",
+   "floor": 2,
+   "suite": "252",
+   "sqft": 708.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dale S. Sherman, PhD",
+   "floor": 2,
+   "suite": "256",
+   "sqft": 600.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Navah Elysian, LMFT",
+   "floor": 2,
+   "suite": "293",
+   "sqft": 425.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RC Care & Beauty",
+   "floor": 2,
+   "suite": "261",
+   "sqft": 700.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Immortelle Med Home Healthcare",
+   "floor": 2,
+   "suite": "265z",
+   "sqft": 708.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sorasora",
+   "floor": 2,
+   "suite": "264",
+   "sqft": 600.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office Of Brian Y. Shirazi, PC",
+   "floor": 2,
+   "suite": "296",
+   "sqft": 699.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "City Of LA Inspector",
+   "floor": 2,
+   "suite": "272",
+   "sqft": 600.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Westdale West, LLC",
+   "floor": 2,
+   "suite": "282",
+   "sqft": 590.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vanessa Mosselle",
+   "floor": 2,
+   "suite": "294",
+   "sqft": 708.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sam Assassa, M.D.",
+   "floor": 2,
+   "suite": "210b",
+   "sqft": 708.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Battaglia Beverly Hills",
+   "floor": 2,
+   "suite": "271",
+   "sqft": 708.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fujii Chiropractic Lab",
+   "floor": 2,
+   "suite": "266",
+   "sqft": 550.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Larry Levi, LMFT",
+   "floor": 2,
+   "suite": "269",
+   "sqft": 425.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Office of Fabio Pastorini",
+   "floor": 2,
+   "suite": "274",
+   "sqft": 708.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Neuromuscular Massage by Miguel",
+   "floor": 2,
+   "suite": "263",
+   "sqft": 708.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "By Hadeel Beauty",
+   "floor": 2,
+   "suite": "297",
+   "sqft": 600.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Land of the Free",
+   "floor": 2,
+   "suite": null,
+   "sqft": 600.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Jennie Levin, P.C.",
+   "floor": 3,
+   "suite": "390",
+   "sqft": 2000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Maimon Group",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 1200.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beverly Hills Disc and Laser Therapy Center",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 1309.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TOPS Pain Management",
+   "floor": 3,
+   "suite": null,
+   "sqft": 2549.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clear Behavioral Health",
+   "floor": 3,
+   "suite": "360",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beverly Hills Heart and Vascular Center",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 1350.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blue Mind Psychiatry",
+   "floor": 3,
+   "suite": "380",
+   "sqft": 850.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BonAlive Orthopedics",
+   "floor": 3,
+   "suite": "320-322",
+   "sqft": 1200.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "3 Angels Health Center",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 1000.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SEO Los Angeles",
+   "floor": 4,
+   "suite": "430A",
+   "sqft": 1300.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rayhan & Marvizi, DDS",
+   "floor": 4,
+   "suite": "460",
+   "sqft": 771.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "10X Health Beverly Hills",
+   "floor": 4,
+   "suite": "473",
+   "sqft": 1035.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Placenta Plus",
+   "floor": 4,
+   "suite": "430",
+   "sqft": 726.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LA Clinic BH",
+   "floor": 4,
+   "suite": "440-444",
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beverly Hills Institute For Pain Management",
+   "floor": 4,
+   "suite": "483",
+   "sqft": 1234.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beautiful Brows Academy",
+   "floor": 4,
+   "suite": "474",
+   "sqft": 771.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Simonini Cardiology",
+   "floor": 4,
+   "suite": null,
+   "sqft": 771.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Grateful Hair Ministry Foundation",
+   "floor": 4,
+   "suite": "441",
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "595",
+   "sqft": 300.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 33
+  },
+  {
+   "type": "Covered",
+   "spaces": 197
+  }
+ ],
+ "matterport_models": [
+  "1Gu1PWojCPH",
+  "vpZPAH9DSBM"
+ ]
+}

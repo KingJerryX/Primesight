@@ -1,0 +1,97 @@
+{
+ "property_id": 275360,
+ "name": "Peterson and Tansey Artist Lofts",
+ "address": "1250 Long Beach Ave, Los Angeles, CA",
+ "lat": 34.026353,
+ "lon": -118.240468,
+ "type": "Multifamily",
+ "stories": 3,
+ "gross_sqft": 116988.0,
+ "typical_floor_sqft": 54333.0,
+ "year_built": 1915,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Chuck Krall Still Photographs",
+   "floor": 1,
+   "suite": "108",
+   "sqft": 0.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blanka Llc",
+   "floor": 1,
+   "suite": "102",
+   "sqft": null,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Htc Group Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Equity Bridge Llc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Leon & George, Inc",
+   "floor": 3,
+   "suite": "327",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hoopnotica",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "1250 Long Beach Avenue LLC",
+   "floor": null,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PVB Ranch LLC",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "JAKPCbL2SYR",
+  "b5NdgMmF5q1",
+  "jinp9cjMBGu",
+  "odHKSER48wB"
+ ]
+}

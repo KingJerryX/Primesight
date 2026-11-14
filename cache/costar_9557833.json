@@ -1,0 +1,123 @@
+{
+ "property_id": 9557833,
+ "name": "Aspire Post Oak",
+ "address": "1616 Post Oak Blvd, Houston, TX",
+ "lat": 29.7508382,
+ "lon": -95.4615876,
+ "type": "Multifamily",
+ "stories": 40,
+ "gross_sqft": 400000.0,
+ "typical_floor_sqft": 10000.0,
+ "year_built": 2021,
+ "construction": "Unknown",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "A",
+   "sqft": 5983.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "B",
+   "sqft": 5162.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "[solidcore]",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "C",
+   "sqft": 3033.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blading By Gabrielle Llc",
+   "floor": 1,
+   "suite": "2609",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dinerstein - Aspire Post Oak",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nabeel N Maredia",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": null,
+   "suite": null,
+   "sqft": 4198.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Dinerstein - Aspire Post Oak",
+   "phone": "5551855002"
+  }
+ ],
+ "matterport_models": [
+  "4LYR8XWCwXk",
+  "EXoK9jkmgFy",
+  "HKu2T4tdNaW",
+  "JNvv5ZHphAp",
+  "Kx7RHfKE7iT",
+  "M6HQrKuSEPP",
+  "N4jWHeWxzdB",
+  "PCkd9FG3XP2",
+  "PPdgxYZsd83",
+  "PnaXb7GsisN",
+  "UyRUYU2W5Zb",
+  "VJTZ7MZC2Yh",
+  "YVohs4ARank",
+  "ZBP2WKo3JFk",
+  "bbuvK7Mn3Jt",
+  "cTdWxV4DZF3",
+  "fK7ti7KhhGh",
+  "h3JmuByXoyC",
+  "iGtFccEHXZD",
+  "vFm4WGpt7DL",
+  "ytLVnjwqmfU",
+  "zqtQirZDmtQ",
+  "zuwPLt2Lk15",
+  "zzc7j8uYn9Y"
+ ]
+}

@@ -1,0 +1,380 @@
+{
+ "text": "Sprinkler pipe burst, water flowing on the 6th floor, 363 Sam Houston Pky, Houston.",
+ "out": {
+  "briefing": "PRIMESIGHT | SPRINKLER WATER-FLOW / FLOODING | FLOOR 6\nNorthbelt - 363 Sam Houston Pky, Houston, TX\nSPRINKLERS: yes, wet | BELOW: ~51 people on floors 1-5 (water runs down); possible hospice on fl 5 (Resolurions Hospice) and fl 3 (Gaspy Hospice) (from name only)\nON FLOOR: Unknown tenant (ste 600); Dream Counseling Center (ste 605, possible clients in session, from name only); Tax Services Of Houston LLC (ste 610); H5 Strategic Alliances (ste 615); The Count It All Joy Tax Group (ste 640); Crystal CoWorks (ste 660, 4536 sf, largest suite, possible high occupancy and IT equipment, from name only)\nPROPERTY MGR: Realty.com 5559806802 (text drafted asking them to meet crew with riser/shutoff access, not sent yet)\nBUILDING: 20 stories | built 1981 | steel frame | ELEVATORS: 7 passenger, 1 freight\nOPEN LOT for staging ~562 m SW (aerial search, verify)\nINSIDE: 3D scan of this floor | 12 scan points | exit signs at 10, pull stations at 5, no extinguishers seen\nWALK FROM SCAN START (not the entry or lobby): exit sign within ~4 m, far end ~17 m\nNOT KNOWN: stair locations, sprinkler riser and shutoff locations, generator, building engineer contact\nSCAN: https://my.matterport.com/show/?m=Fv5Q2P8Kmsf",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\234022_Fv5Q2P8Kmsf_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\234022_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/234022_Fv5Q2P8Kmsf_plan_marked.jpg",
+   "/img/234022_aerial.jpg"
+  ],
+  "property_id": 234022,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire Dept: sprinkler pipe burst, water flowing on floor 6 at 363 Sam Houston Pky. Please meet the fire crew on arrival with sprinkler riser/shutoff access and keys."
+   }
+  ],
+  "tenant_flags": [
+   {
+    "tenant": "Resolurions Hospice",
+    "floor": 5,
+    "risk": "Possible vulnerable occupants directly below the leak",
+    "why": "(from name only) A hospice name suggests patients or medically fragile visitors may be present, though it could be an admin office. Check this floor first, since water will reach it before the lower floors.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Crystal CoWorks",
+    "floor": 6,
+    "risk": "High occupancy on the leak floor",
+    "why": "(from name only) At 4,536 sq ft this is the largest suite on the floor, and the coworking name suggests many people plus lots of shared IT and electrical equipment at risk from water.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Gaspy Hospice Inc",
+    "floor": 3,
+    "risk": "Possible vulnerable occupants in the water's path",
+    "why": "(from name only) A hospice name suggests patients or fragile visitors may be present. Water may reach this floor as it spreads down through floors 5 and 4.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Dream Counseling Center",
+    "floor": 6,
+    "risk": "Possible vulnerable clients on the leak floor",
+    "why": "(from name only) A counseling center may have clients in session who are distressed and need a calm, guided evacuation from the wet floor.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "utility",
+   "floor": 6,
+   "building": {
+    "name": "Northbelt",
+    "address": "363 Sam Houston Pky, Houston, TX",
+    "stories": 20,
+    "year_built": 1981,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 0,
+     "tenants": [
+      "Cinco And Tres Coffee",
+      "Designs Can Empower Llc",
+      "Realty.com Commercial"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 17,
+     "tenants": [
+      "BB&W Architects",
+      "Gaspy Hospice, Inc",
+      "Slayistry"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 9,
+     "tenants": [
+      "ByGod's Grace Financial",
+      "Healistic Touch And Luxe Legacy",
+      "NewU Beauty",
+      "Styled By Slimm",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 5,
+     "people": 25,
+     "tenants": [
+      "Borusan Pipe",
+      "Resolurions Hospice"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 0,
+     "tenants": [
+      "Crystal CoWorks",
+      "Dream Counseling Center",
+      "H5 Strategic Alliances",
+      "Tax Services Of Houston LLC",
+      "The Count It All Joy Tax Group",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 12,
+      "exit sign": 10,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 5
+     }
+    },
+    {
+     "floor": 7,
+     "people": 52,
+     "tenants": [
+      "Celo Trade Inc",
+      "Meiko America Inc",
+      "Morgan Systems Intl Inc",
+      "PPC Insulators",
+      "Safe Have  Mental Health Solutions",
+      "The Executive Tax Lounge"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 36,
+     "tenants": [
+      "Criaco & Samperi",
+      "Hooper, Langley & Associates, P.C.",
+      "Transocean Shipping"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 4,
+     "tenants": [
+      "AP TK Hair",
+      "DeLa Dweer Hair",
+      "Diverse Destination",
+      "Front Cover Hair Studios",
+      "SV Beauty And Spa",
+      "Studio Nine Salon Suites",
+      "Unknown tenant",
+      "Upperhairchelon And Spa"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 14,
+     "tenants": [
+      "AP Consulting TX LLC",
+      "Advanced Chiropractic Relief",
+      "Bellaire Wellness Center",
+      "InkMore Studios",
+      "Obex Worldwide Limited",
+      "The Art Artistry Beauty Suites",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 2,
+     "tenants": [
+      "Regus"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 12,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 13,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 14,
+     "people": 30,
+     "tenants": [
+      "A And S Multi Service",
+      "Ameriprise Financial, Inc.",
+      "Beyond BeautyAcademy",
+      "Jewels Beauty LLC",
+      "The Wallace Law Firm"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 15,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 16,
+     "people": 5,
+     "tenants": [
+      "Argo Texas Group",
+      "Emerald Studio Suites",
+      "Square Biz Solutions"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 17,
+     "people": 6,
+     "tenants": [
+      "All The Rave",
+      "The Pink Spa And Lounge",
+      "Vip Spa"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 18,
+     "people": 10,
+     "tenants": [
+      "Count It All Joy LLC",
+      "Strategic Growth Alliance 366"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 19,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 20,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 137,
+     "dir": "NE",
+     "lat": 29.942778928383923,
+     "lon": -95.39611704675329
+    }
+   ],
+   "staging": [
+    {
+     "m": 562,
+     "dir": "SW",
+     "lat": 29.938572839999996,
+     "lon": -95.401496885,
+     "score": 0.249
+    },
+    {
+     "m": 308,
+     "dir": "E",
+     "lat": 29.9415479,
+     "lon": -95.39394378499999,
+     "score": 0.228
+    },
+    {
+     "m": 387,
+     "dir": "E",
+     "lat": 29.940952895,
+     "lon": -95.39325714,
+     "score": 0.224
+    }
+   ],
+   "scan": {
+    "floor": 6,
+    "exact": true,
+    "link": "https://my.matterport.com/show/?m=Fv5Q2P8Kmsf"
+   },
+   "vision": {
+    "scan_points": 12,
+    "scan_points_with": {
+     "exit sign": 10,
+     "stairs": 0,
+     "fire extinguisher": 0,
+     "fire alarm pull station": 5
+    },
+    "image_urls": [
+     "/img/vision/Fv5Q2P8Kmsf/000_1.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/001_2.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/001_3.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/002_0.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/003_1.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/003_3.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/004_0.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/004_1.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/004_2.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/005_0.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/005_2.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/006_1.jpg"
+    ]
+   },
+   "walk": "walk from scan start: exit sign within ~4 m, far end ~17 m",
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire Dept: sprinkler pipe burst, water flowing on floor 6 at 363 Sam Houston Pky. Please meet the fire crew on arrival with sprinkler riser/shutoff access and keys."
+    }
+   ],
+   "tenant_flags": [
+    {
+     "tenant": "Resolurions Hospice",
+     "floor": 5,
+     "risk": "Possible vulnerable occupants directly below the leak",
+     "why": "(from name only) A hospice name suggests patients or medically fragile visitors may be present, though it could be an admin office. Check this floor first, since water will reach it before the lower floors.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Crystal CoWorks",
+     "floor": 6,
+     "risk": "High occupancy on the leak floor",
+     "why": "(from name only) At 4,536 sq ft this is the largest suite on the floor, and the coworking name suggests many people plus lots of shared IT and electrical equipment at risk from water.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Gaspy Hospice Inc",
+     "floor": 3,
+     "risk": "Possible vulnerable occupants in the water's path",
+     "why": "(from name only) A hospice name suggests patients or fragile visitors may be present. Water may reach this floor as it spreads down through floors 5 and 4.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Dream Counseling Center",
+     "floor": 6,
+     "risk": "Possible vulnerable clients on the leak floor",
+     "why": "(from name only) A counseling center may have clients in session who are distressed and need a calm, guided evacuation from the wet floor.",
+     "from_name_only": true
+    }
+   ],
+   "call": "Sprinkler pipe burst, water flowing on the 6th floor, 363 Sam Houston Pky, Houston."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Sprinkler pipe burst, water flowing on the 6th floor, 363 Sam Houston Pky, Houston.\"}\n{\"t\": 0.61, \"step\": \"address_lookup\", \"detail\": \"363 N Sam Houston Pky E, Houston -> 234022\"}\n{\"t\": 3.4, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"363 Sam Houston Pky, Houston\\\"}\"}\n{\"t\": 3.4, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/utility/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 3.4, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 5.68, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 234022, \\\"floor\\\": 6, \\\"incident\\\": \\\"utility\\\", \\\"incident_type\\\": \\\"sprinkler_flow\\\"}\"}\n{\"t\": 5.68, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/234022.md\\\"}\"}\n{\"t\": 20.93, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: sprinkler pipe burst, water flowing on floor 6 (utility / sprinkler_flow), Northbelt, 363 Sam Houston Pky, Houston TX, 20 stories. Water runs\"}\n{\"t\": 20.94, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Write and queue a short text for the building's people so they can meet the fire crew. Incident: sprinkler pipe burst, water flowing on floor 6 (spri\"}\n{\"t\": 20.95, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"inside-scout\\\", \\\"description\\\": \\\"Scan id Fv5Q2P8Kmsf (floor 6, Northbelt, 363 Sam Houston Pky, Houston). Incident: sprinkler pipe burst, water flowing on floor 6. Find: nearest fire e\"}\n{\"t\": 23.49, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"Fv5Q2P8Kmsf\\\", \\\"target\\\": \\\"fire extinguisher\\\"}\"}\n{\"t\": 24.91, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire Dept: sprinkler pipe burst, water flowing on floor 6 at 363 Sam Houston Pky. Please meet the fire crew on arrival with sprinkler riser/shutoff access and keys.\"}\n{\"t\": 41.16, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 234022, \\\"note\\\": \\\"Utility/sprinkler_flow: sprinkler pipe burst, water flowing on floor 6. Briefing sent; text to property manager Realty.com 5559806802 queued but not sent yet. Riser an\"}\n{\"t\": 55.98, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 55.99, \"step\": \"usage\", \"detail\": \"105702 in / 5983 out tokens, ~$0.54\"}\n{\"t\": 56.0, \"step\": \"done\", \"detail\": \"11 lines, 2 images\"}\n"
+}

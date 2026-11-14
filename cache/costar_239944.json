@@ -1,0 +1,532 @@
+{
+ "property_id": 239944,
+ "name": "Woodway Center",
+ "address": "4801 Woodway Dr, Houston, TX",
+ "lat": 29.7635027,
+ "lon": -95.4602233,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 248952.0,
+ "typical_floor_sqft": 55146.0,
+ "year_built": 1976,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 5
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Woodway Rehab & Wellness",
+   "floor": 1,
+   "suite": "175E",
+   "sqft": 1901.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KRW Lawyers",
+   "floor": 1,
+   "suite": "155-W",
+   "sqft": 3291.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Westerman & Associates",
+   "floor": 1,
+   "suite": "135W",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ovation Med Spa",
+   "floor": 1,
+   "suite": "150W",
+   "sqft": 1000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aspire Allergy & Sinus",
+   "floor": 1,
+   "suite": "120E",
+   "sqft": 2732.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cruise Center",
+   "floor": 1,
+   "suite": "145W",
+   "sqft": 2200.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "1981 Cafe",
+   "floor": 1,
+   "suite": "101W",
+   "sqft": 559.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Baird",
+   "floor": 1,
+   "suite": "118E",
+   "sqft": 3660.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Enhabit Home Health & Hospice",
+   "floor": 1,
+   "suite": "100E",
+   "sqft": 3758.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Evolve Health",
+   "floor": 1,
+   "suite": "105E",
+   "sqft": 1709.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bay Ltd.",
+   "floor": 1,
+   "suite": "160W",
+   "sqft": 4475.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nexus",
+   "floor": 1,
+   "suite": "142W",
+   "sqft": 2797.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Renew Acupuncture",
+   "floor": 1,
+   "suite": "136W",
+   "sqft": 1119.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unload It Theapy, PPLC",
+   "floor": 1,
+   "suite": "115E",
+   "sqft": 1119.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beacon Builders",
+   "floor": 1,
+   "suite": "158W",
+   "sqft": 4475.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Westerman & Associates",
+   "floor": 1,
+   "suite": "170E",
+   "sqft": 5594.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Carbon Sequestration",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Farmers Insurance",
+   "floor": 1,
+   "suite": "1778",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tx Mobile Md",
+   "floor": 1,
+   "suite": "164e",
+   "sqft": null,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "125-W",
+   "sqft": 710.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Anew Massage Therapy",
+   "floor": 2,
+   "suite": "260E",
+   "sqft": 1050.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CuFITn30",
+   "floor": 2,
+   "suite": "220W",
+   "sqft": 1740.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BRAGG Law PC",
+   "floor": 2,
+   "suite": "225W",
+   "sqft": 3500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Interra Properties LLC",
+   "floor": 2,
+   "suite": "212W",
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Canady & Canady",
+   "floor": 2,
+   "suite": "295E.",
+   "sqft": 2606.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Signature Estate & Investment Advisors, LLC",
+   "floor": 2,
+   "suite": "245W",
+   "sqft": 1394.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Safe Spot",
+   "floor": 2,
+   "suite": "290E",
+   "sqft": 1672.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "De Mott, McChesney, Curtright, & Armend\u00e1riz LLP",
+   "floor": 2,
+   "suite": "285E",
+   "sqft": 1500.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MTS Logistics",
+   "floor": 2,
+   "suite": "240W",
+   "sqft": 2248.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Symcoin Global Technologies",
+   "floor": 2,
+   "suite": "275E",
+   "sqft": 1049.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Santos Law Firm",
+   "floor": 2,
+   "suite": "203W",
+   "sqft": 2622.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Law Office Of Shelly W Durham",
+   "floor": 2,
+   "suite": "200W",
+   "sqft": 3596.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Avalon Plus",
+   "floor": 2,
+   "suite": "265W",
+   "sqft": 5593.0,
+   "employees": 37,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ez Attic Insulation",
+   "floor": 2,
+   "suite": "205w",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Safespot Counseling & Play Therapy, Pllc",
+   "floor": 2,
+   "suite": "290e",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Labrada Chiropractic",
+   "floor": 3,
+   "suite": "375E",
+   "sqft": 550.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Knop Law Firm",
+   "floor": 3,
+   "suite": "335W",
+   "sqft": 1649.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Psych Matters, LLC",
+   "floor": 3,
+   "suite": "306W",
+   "sqft": 1400.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ironbridge Realty Partners, LLC.",
+   "floor": 3,
+   "suite": "355W",
+   "sqft": 1774.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office Of Gary Tabakman, Pllc",
+   "floor": 3,
+   "suite": "300wB",
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tmq Enterprises",
+   "floor": 3,
+   "suite": "320W",
+   "sqft": 1099.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dentists at Woodway",
+   "floor": 3,
+   "suite": "360W",
+   "sqft": 2748.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diversified Senior Living",
+   "floor": 3,
+   "suite": "365W.",
+   "sqft": 1099.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Avalon Suites",
+   "floor": 3,
+   "suite": "300E",
+   "sqft": 24565.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EDENS",
+   "floor": 4,
+   "suite": "450E",
+   "sqft": 2714.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marvin Consulting Group",
+   "floor": 4,
+   "suite": "485E",
+   "sqft": 1564.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Madison Title Agency, LLC",
+   "floor": 4,
+   "suite": "430W",
+   "sqft": 3649.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nuco Logistics, Inc",
+   "floor": 4,
+   "suite": "400W",
+   "sqft": 5213.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dunhill Development & Construction",
+   "floor": 4,
+   "suite": "425W",
+   "sqft": 2606.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Luz Lounge Houston",
+   "floor": 4,
+   "suite": "465E",
+   "sqft": 1563.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Patrick Daniel Law",
+   "floor": 4,
+   "suite": "440W",
+   "sqft": 1563.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Capital Recovery Advisors",
+   "floor": 4,
+   "suite": "410W",
+   "sqft": 1563.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Demar Industries",
+   "floor": 4,
+   "suite": "470E",
+   "sqft": 7820.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Resilience Counseling And Wellness",
+   "floor": 4,
+   "suite": "435W",
+   "sqft": 2607.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Crown Bags Llc",
+   "floor": 4,
+   "suite": "427W",
+   "sqft": 2086.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "1J9YKR5rPqk",
+  "p6k7AhDKLiV",
+  "r1NyoGS9Ebb"
+ ]
+}

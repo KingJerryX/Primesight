@@ -1,0 +1,41 @@
+{
+ "property_id": 275988,
+ "name": null,
+ "address": "620 Slauson Ave, Los Angeles, CA",
+ "lat": 33.9886396,
+ "lon": -118.2642571,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 76378.0,
+ "typical_floor_sqft": 76378.0,
+ "year_built": 1933,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Itzon Apparel Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": 12440.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ABC Trading",
+   "floor": 1,
+   "suite": null,
+   "sqft": 63918.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "836CKueyamY",
+  "jijCr6yA1Wx"
+ ]
+}

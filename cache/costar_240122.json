@@ -1,0 +1,245 @@
+{
+ "property_id": 240122,
+ "name": "Westchase I",
+ "address": "3000 Wilcrest Dr, Houston, TX",
+ "lat": 29.7309649,
+ "lon": -95.5724936,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 87384.0,
+ "typical_floor_sqft": 29095.0,
+ "year_built": 1981,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Raker Resources Llc",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 550.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Applied Manufacturing Technologies",
+   "floor": 1,
+   "suite": "145",
+   "sqft": 2651.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mineral Investment Corp",
+   "floor": 1,
+   "suite": "115",
+   "sqft": 704.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 611.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ogemos Braiding",
+   "floor": 1,
+   "suite": "135",
+   "sqft": 125.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ogemos Braiding",
+   "floor": 1,
+   "suite": "136",
+   "sqft": 125.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Finesse Concierge Nurse",
+   "floor": 1,
+   "suite": null,
+   "sqft": 600.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allmand Law",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VTA Dental Lab",
+   "floor": 1,
+   "suite": "195",
+   "sqft": 2213.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "El Hanun Care",
+   "floor": 1,
+   "suite": "112",
+   "sqft": 1383.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Healing Oil ltd co",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 1383.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Second Chance Ministries of Hope",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 1383.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "167",
+   "sqft": 262.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MRW Security Consultants",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 657.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "216",
+   "sqft": 1659.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nettlecombe Oil Co.",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 2766.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Braids By Dlexis",
+   "floor": 2,
+   "suite": "241",
+   "sqft": 573.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TXJ Consulting LLC",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 3252.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nguyen Loc Law Firm",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 3278.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alexander Tobon Insurance",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Anderson Leal & Associates, P.C.",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 1802.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fidelity National Title - United Law Group",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 9954.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Realtors Network LLC",
+   "floor": 3,
+   "suite": "333",
+   "sqft": 2489.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "RPD Catalyst, LLC",
+   "phone": "5551940761"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 73
+  },
+  {
+   "type": "Covered",
+   "spaces": 129
+  }
+ ],
+ "matterport_models": [
+  "ZQaj8goPb8q"
+ ]
+}

@@ -1,0 +1,104 @@
+{
+ "property_id": 120125,
+ "name": "The Granada Buildings",
+ "address": "672 La Fayette Park Pl, Los Angeles, CA",
+ "lat": 34.0603131,
+ "lon": -118.2836021,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 54612.0,
+ "typical_floor_sqft": 13653.0,
+ "year_built": 1927,
+ "construction": "WoodFrame",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Get Lit",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3845.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "O-Town House",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3845.0,
+   "employees": 26,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Los Angeles Bass Works",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1300.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Friends of the Children - LA",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Los Angeles Review Of Books",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1350.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Public Outreach Consultancy",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2184.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cevera Yoon Gallery",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1460.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Young Communications Group",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1350.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "5LSByZUGBkU",
+  "5t632etbD5v",
+  "DzDwPd5j7gR",
+  "KtK1GN87oX5",
+  "QC6ELeM7EtZ",
+  "jBdzc5ZwCzJ"
+ ]
+}

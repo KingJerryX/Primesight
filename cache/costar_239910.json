@@ -1,0 +1,46 @@
+{
+ "property_id": 239910,
+ "name": "Bridgewood I",
+ "address": "654 Sam Houston Pky, Houston, TX",
+ "lat": 29.937547,
+ "lon": -95.387156,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 137192.0,
+ "typical_floor_sqft": 34298.0,
+ "year_built": 1980,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Texas Wall & Landscape",
+   "floor": 3,
+   "suite": "330",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "NMFw5cNycKe",
+  "gpqxxbJLu8Q",
+  "yP7RLZaWSTb"
+ ]
+}

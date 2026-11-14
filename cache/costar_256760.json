@@ -1,0 +1,957 @@
+{
+ "property_id": 256760,
+ "name": null,
+ "address": "5757 Century Blvd, Los Angeles, CA",
+ "lat": 33.945941,
+ "lon": -118.3826554,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 341110.0,
+ "typical_floor_sqft": 42639.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 6
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Airport Spectrum Parking",
+   "floor": 1,
+   "suite": null,
+   "sqft": 8750.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reach Rental",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4890.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tel-us Call Center",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 4000.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Taza Cafe",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1600.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sunny Hills Management Company, Inc.",
+   "floor": 1,
+   "suite": "104",
+   "sqft": 3082.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pickupride",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Caesar's Rent A Car",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 4480.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "xpd global",
+   "floor": 3,
+   "suite": "308",
+   "sqft": 2325.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Humanistic Foundation Incorporated",
+   "floor": 3,
+   "suite": "303",
+   "sqft": 3044.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SD&A Teleservices, Inc.",
+   "floor": 3,
+   "suite": "300, 370",
+   "sqft": 4566.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sunny Hills Management Company, Inc.",
+   "floor": 3,
+   "suite": "307",
+   "sqft": 750.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prosegur",
+   "floor": 4,
+   "suite": "430",
+   "sqft": 4264.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Widom Savey",
+   "floor": 4,
+   "suite": "465",
+   "sqft": 4368.0,
+   "employees": 97,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Patch X",
+   "floor": 4,
+   "suite": "435",
+   "sqft": 4264.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Beauty Bar",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 853.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MeekCollection",
+   "floor": 4,
+   "suite": "455-G",
+   "sqft": 426.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HK Rides",
+   "floor": 4,
+   "suite": "455-H",
+   "sqft": 426.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Violet Pretty",
+   "floor": 4,
+   "suite": "455-D",
+   "sqft": 426.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "470",
+   "sqft": 2437.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Spread Your Wings, LLC",
+   "floor": 5,
+   "suite": "558",
+   "sqft": 3259.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "OIS Services",
+   "floor": 5,
+   "suite": "557",
+   "sqft": 1600.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PDA Consulting Group, Inc",
+   "floor": 5,
+   "suite": "575",
+   "sqft": 1600.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kabani & Company Inc",
+   "floor": 5,
+   "suite": "516",
+   "sqft": 1600.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sky Bird",
+   "floor": 5,
+   "suite": "560",
+   "sqft": 2000.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PayrollCentric",
+   "floor": 5,
+   "suite": "570",
+   "sqft": 1600.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Area",
+   "floor": 5,
+   "suite": "518",
+   "sqft": 1600.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Haskel Jackson Entertainment",
+   "floor": 5,
+   "suite": "525A",
+   "sqft": 1800.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Unncutt Lounge",
+   "floor": 5,
+   "suite": "540",
+   "sqft": 1600.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "525B",
+   "sqft": 1825.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sasco",
+   "floor": 6,
+   "suite": "685",
+   "sqft": 3000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "African Communities Public Health Coalition",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 4708.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Colors",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 2000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CZ Carpenter & Zuckerman",
+   "floor": 6,
+   "suite": "680",
+   "sqft": 2000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Law of Offices of Edwin Aimufua",
+   "floor": 6,
+   "suite": "630-F",
+   "sqft": 2000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Driveline Motors",
+   "floor": 6,
+   "suite": "650D",
+   "sqft": 3000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Airport Synergy Group, LLC",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 3000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Mini Suites at Airport Spectrum",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 3000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Build to Prosper",
+   "floor": 6,
+   "suite": "602",
+   "sqft": 1932.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Landlord Legal Services",
+   "floor": 7,
+   "suite": "730",
+   "sqft": 2000.0,
+   "employees": 31,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SEC Group",
+   "floor": 7,
+   "suite": "718",
+   "sqft": 1200.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "T. D. D. Supportive Living Inc.",
+   "floor": 7,
+   "suite": "700-56",
+   "sqft": 300.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Graybayne",
+   "floor": 7,
+   "suite": "700-54",
+   "sqft": 400.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MccLennon Group LLC",
+   "floor": 7,
+   "suite": "700-8",
+   "sqft": 300.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Versailles Restaurant",
+   "floor": 7,
+   "suite": "700-4",
+   "sqft": 800.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LA Reporters, A & E Court Reporters",
+   "floor": 7,
+   "suite": "737",
+   "sqft": 1200.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of White & Reed",
+   "floor": 7,
+   "suite": "700-14, 15",
+   "sqft": 300.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Global Brands Acquisition Inc.",
+   "floor": 7,
+   "suite": "700-65",
+   "sqft": 400.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Creators Lot LLC",
+   "floor": 7,
+   "suite": "700-60",
+   "sqft": 400.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beautiful Mind",
+   "floor": 7,
+   "suite": "700-68",
+   "sqft": 400.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rowin Insurance",
+   "floor": 7,
+   "suite": "700-17",
+   "sqft": 788.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Osmonds Imported Human Hair & Custom Made Wigs",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 800.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Winreal",
+   "floor": 7,
+   "suite": "700-3",
+   "sqft": 1300.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Millenia Aero Corp",
+   "floor": 7,
+   "suite": "700-5M",
+   "sqft": 300.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Penango",
+   "floor": 7,
+   "suite": "700-58",
+   "sqft": 300.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "New Beginnings",
+   "floor": 7,
+   "suite": "700-18",
+   "sqft": 300.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Partnerwise West, Inc.",
+   "floor": 7,
+   "suite": "700-66",
+   "sqft": 300.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Transportation Connection",
+   "floor": 7,
+   "suite": "700-16",
+   "sqft": 300.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ERN Services",
+   "floor": 7,
+   "suite": "752",
+   "sqft": 1200.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Milesrayfilms LLC",
+   "floor": 7,
+   "suite": "700-59",
+   "sqft": 300.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UGS Private Security",
+   "floor": 7,
+   "suite": "738",
+   "sqft": 1200.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hey Sunflower  LLC",
+   "floor": 7,
+   "suite": "742",
+   "sqft": 1600.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "D' Ultimate Care",
+   "floor": 7,
+   "suite": "700-48A",
+   "sqft": 400.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Core Project Management Essentials, LLC",
+   "floor": 7,
+   "suite": "700-52A",
+   "sqft": 400.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Person Centered",
+   "floor": 7,
+   "suite": "700-64",
+   "sqft": 300.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jamison Transportation Products",
+   "floor": 7,
+   "suite": "700-57",
+   "sqft": 400.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Able Solutions",
+   "floor": 7,
+   "suite": "700-49",
+   "sqft": 400.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sellers First Realty Choice",
+   "floor": 7,
+   "suite": "700-67",
+   "sqft": 300.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "C2R Productions",
+   "floor": 7,
+   "suite": "700-2M",
+   "sqft": 400.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "C2R Productions",
+   "floor": 7,
+   "suite": "700-22M",
+   "sqft": 400.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hamilton Law Offices",
+   "floor": 7,
+   "suite": "700-10",
+   "sqft": 400.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EGLA Losada",
+   "floor": 7,
+   "suite": "700-42",
+   "sqft": 400.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Philippine Airlines",
+   "floor": 7,
+   "suite": "751",
+   "sqft": 2000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LA OC Car Rental",
+   "floor": 7,
+   "suite": "743",
+   "sqft": 1200.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fetti Financial Services",
+   "floor": 7,
+   "suite": "700-44",
+   "sqft": 400.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Maverick Security Services",
+   "floor": 7,
+   "suite": "735",
+   "sqft": 2000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ACS Facilities Management",
+   "floor": 7,
+   "suite": "724",
+   "sqft": 400.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LegalLuxe Collective",
+   "floor": 7,
+   "suite": "700-9",
+   "sqft": 400.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Smart Edge Consulting",
+   "floor": 7,
+   "suite": "700-2",
+   "sqft": 300.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Peabody Law, Criminal Defense",
+   "floor": 7,
+   "suite": "722",
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Voyzant",
+   "floor": 7,
+   "suite": "700-46",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "700-21m",
+   "sqft": 1131.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "726",
+   "sqft": 965.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "740",
+   "sqft": 197.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hallmark Aviation Services",
+   "floor": 8,
+   "suite": "860, 865",
+   "sqft": 1600.0,
+   "employees": 38,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KA Capital LLC",
+   "floor": 8,
+   "suite": "818",
+   "sqft": 1600.0,
+   "employees": 39,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sunset Financial Group LLC",
+   "floor": 8,
+   "suite": "812",
+   "sqft": 1600.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bradford & Barthel, LLP",
+   "floor": 8,
+   "suite": "870",
+   "sqft": 1600.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Expedient",
+   "floor": 8,
+   "suite": "807",
+   "sqft": 1600.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Asiana USA",
+   "floor": 8,
+   "suite": "805",
+   "sqft": 2000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "XEO Tech, LLC",
+   "floor": 8,
+   "suite": "875",
+   "sqft": 1600.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GRM",
+   "floor": 8,
+   "suite": "817",
+   "sqft": 2600.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eves Foundation",
+   "floor": 8,
+   "suite": "819",
+   "sqft": 3889.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "US Company Advisors",
+   "floor": 8,
+   "suite": "805B",
+   "sqft": 1400.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Logistica Perishables & More",
+   "floor": 8,
+   "suite": "805A",
+   "sqft": 2400.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bryant Consulting & Consulting",
+   "floor": 8,
+   "suite": "803",
+   "sqft": 1600.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Life Steps Foundation",
+   "floor": 8,
+   "suite": null,
+   "sqft": 1600.0,
+   "employees": 34,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 3502.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "816",
+   "sqft": 1465.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "818",
+   "sqft": 239.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "875",
+   "sqft": 1532.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "875",
+   "sqft": 1532.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 186
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "FfaKwwGL7ni",
+  "HTBzS5NNWod",
+  "R3Nj53ps6f9",
+  "aCNHNZRbpfZ"
+ ]
+}

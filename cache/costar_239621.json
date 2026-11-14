@@ -1,0 +1,204 @@
+{
+ "property_id": 239621,
+ "name": "Westwood Green",
+ "address": "9494 Southwest Fwy, Houston, TX",
+ "lat": 29.6782095,
+ "lon": -95.5403311,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 141616.0,
+ "typical_floor_sqft": 15807.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Royal Prestige Hispanic",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ai Insurance Services",
+   "floor": 1,
+   "suite": "103",
+   "sqft": 3339.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Opande Law Firm",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 5027.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sanjoh & Assoc Law Firm",
+   "floor": 4,
+   "suite": "475",
+   "sqft": 450.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CMC Development & Construction Corporation",
+   "floor": 4,
+   "suite": "490",
+   "sqft": 2833.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "450I",
+   "sqft": 170.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kamscare, Inc.",
+   "floor": 4,
+   "suite": "450B",
+   "sqft": 158.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nova Worldwide",
+   "floor": 4,
+   "suite": "450-Q",
+   "sqft": 250.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alfason Group",
+   "floor": 4,
+   "suite": "460",
+   "sqft": 2371.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allied Pasadena National Bank",
+   "floor": 4,
+   "suite": "412",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Muakum Sherman & Associates",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 1580.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hydrogeo Energy",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 1580.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "7Elements",
+   "floor": 6,
+   "suite": "670",
+   "sqft": 1580.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Glenloch & Associates",
+   "floor": 6,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nazar Invest, Inc.",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 1265.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SPEC",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 10275.0,
+   "employees": 68,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "REY7 Management Group",
+   "floor": 8,
+   "suite": "810",
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cobait",
+   "floor": 8,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "REY7 Management Group",
+   "phone": "5554014800"
+  }
+ ],
+ "matterport_models": [
+  "9jbwyKjkvSz",
+  "mZkUmV1wXg3"
+ ]
+}

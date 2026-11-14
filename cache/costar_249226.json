@@ -1,0 +1,155 @@
+{
+ "property_id": 249226,
+ "name": null,
+ "address": "7083 Hollywood Blvd, Los Angeles, CA",
+ "lat": 34.1018316,
+ "lon": -118.3443787,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 144195.0,
+ "typical_floor_sqft": 14500.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Granny",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Church of Scientology",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4467.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blastx",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mantis Builders",
+   "floor": 1,
+   "suite": "1",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lucid West Realty Llc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Faith Understanding Wellness Fuw Llc",
+   "floor": 1,
+   "suite": "180",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Intelletec",
+   "floor": 1,
+   "suite": "5",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Financial Network",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bombsquad Inc",
+   "floor": 1,
+   "suite": "rw800",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kobe Digital",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "4DX",
+   "floor": 6,
+   "suite": null,
+   "sqft": 2133.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "4DX",
+   "floor": 6,
+   "suite": null,
+   "sqft": 6939.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 3290.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "EdazNayWsZ3",
+  "MZWWLvPLEAr",
+  "v8AXxybCpbS",
+  "zyag7oVcxaA"
+ ]
+}

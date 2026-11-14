@@ -1,0 +1,370 @@
+{
+ "property_id": 233985,
+ "name": null,
+ "address": "1001 McKinney St, Houston, TX",
+ "lat": 29.7568529,
+ "lon": -95.3642499,
+ "type": "Office",
+ "stories": 23,
+ "gross_sqft": 556406.0,
+ "typical_floor_sqft": 16323.0,
+ "year_built": 1947,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 8
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": 1
+  },
+  {
+   "type": "Parking",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Deli Deluxe",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1257.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Crest Printing",
+   "floor": 1,
+   "suite": "A-2",
+   "sqft": 1660.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morton's, The Steak House",
+   "floor": 1,
+   "suite": null,
+   "sqft": 7693.0,
+   "employees": 70,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bright Horizons",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1872.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shipley Do-Nuts",
+   "floor": 1,
+   "suite": "B-2",
+   "sqft": 1886.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "IBC Bank",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2603.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "B-1",
+   "sqft": 1376.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Charles R. Webber",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1934.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Androvett Legal Media & Marketing",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1574.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Odgers Berndtson",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 2855.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TRC Capital Partners, LLC",
+   "floor": 5,
+   "suite": "525",
+   "sqft": 3239.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "515",
+   "sqft": 744.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ConnectGen",
+   "floor": 7,
+   "suite": "725",
+   "sqft": 11263.0,
+   "employees": 65,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Integral Resources, Inc.",
+   "floor": 8,
+   "suite": "802",
+   "sqft": 406.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "806",
+   "sqft": 1630.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "801",
+   "sqft": 703.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kinetica Partners, LLC",
+   "floor": 9,
+   "suite": null,
+   "sqft": 7267.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mitby Pacholder Johnson",
+   "floor": 9,
+   "suite": "925",
+   "sqft": 8923.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 7132.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "930",
+   "sqft": 1520.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SBSB",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 20001.0,
+   "employees": 140,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1150",
+   "sqft": 9592.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1210",
+   "sqft": 1842.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1225",
+   "sqft": 1355.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1230",
+   "sqft": 1707.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1240",
+   "sqft": 1246.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1250",
+   "sqft": 6431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Perkins&Will",
+   "floor": 13,
+   "suite": null,
+   "sqft": 19968.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SBSB",
+   "floor": 14,
+   "suite": "1100",
+   "sqft": 17389.0,
+   "employees": 140,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office Of Scott A Bernstein, Pllc",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": null,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CAPTRUST",
+   "floor": 17,
+   "suite": null,
+   "sqft": 7420.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zarvona Energy",
+   "floor": 18,
+   "suite": "1800",
+   "sqft": 20001.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Perkins&Will",
+   "floor": 19,
+   "suite": "1900",
+   "sqft": 15032.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Walker Wilcox Matousek",
+   "floor": 20,
+   "suite": null,
+   "sqft": 7364.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 22,
+   "suite": "2200",
+   "sqft": 6128.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 23,
+   "suite": "2200",
+   "sqft": 2683.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "TRC Capital Partners, LLC",
+   "phone": "5558007478"
+  }
+ ],
+ "matterport_models": [
+  "2UoFVxb6xh7",
+  "eMiTTPPvnnV"
+ ]
+}

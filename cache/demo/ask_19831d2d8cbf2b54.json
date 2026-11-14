@@ -1,0 +1,6 @@
+{
+ "call": "Cardiac arrest on the 36th floor, 1000 Louisiana St, Houston. Caller is a coworker, patient is unresponsive.",
+ "text": "Which elevator fits our stretcher and who meets us?",
+ "answer": "ELEVATOR: freight car on record (fits stretcher). Where it is in the building is not known.\nMEETS YOU: CBRE property mgr 5556193343. We texted them to meet the crew and bring the freight car to the lobby. They have not confirmed.\nNOT KNOWN: entrance and the person's name. There is no building engineer on file.",
+ "trace": "{\"t\": 31.68, \"step\": \"usage\", \"detail\": \"12523 in / 213 out tokens, ~$0.05\"}\n"
+}

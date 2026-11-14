@@ -1,0 +1,167 @@
+{
+ "property_id": 242089,
+ "name": null,
+ "address": "9777 Gulf Bank Rd, Houston, TX",
+ "lat": 29.8771131,
+ "lon": -95.5437217,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 251569.0,
+ "typical_floor_sqft": 251569.0,
+ "year_built": 1977,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Building Specialties Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": 6238.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Security Data Supply",
+   "floor": 1,
+   "suite": "15",
+   "sqft": 16878.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Captiv Creative",
+   "floor": 1,
+   "suite": "10B",
+   "sqft": 14774.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Armadillo Photo Supply",
+   "floor": 1,
+   "suite": "7215",
+   "sqft": 6534.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Drago",
+   "floor": 1,
+   "suite": "200",
+   "sqft": 19426.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cooper Flooring Ltd",
+   "floor": 1,
+   "suite": "7219",
+   "sqft": 5528.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GSR Construction Group",
+   "floor": 1,
+   "suite": "10A",
+   "sqft": 14360.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Home Depot Installation Services",
+   "floor": 1,
+   "suite": "15 A",
+   "sqft": 8439.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "STANLEY Security",
+   "floor": 1,
+   "suite": "300",
+   "sqft": 20126.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vulcan Seals",
+   "floor": 1,
+   "suite": "7221",
+   "sqft": 5031.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TnV Energy Services",
+   "floor": 1,
+   "suite": "21",
+   "sqft": 20126.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Van Sharks",
+   "floor": 1,
+   "suite": "1500",
+   "sqft": 14931.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Furniture Installation Services",
+   "floor": 1,
+   "suite": null,
+   "sqft": 9430.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "8",
+   "sqft": 10997.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "600",
+   "sqft": 9746.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "1500",
+   "sqft": 14931.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "8zpBFidjjov",
+  "RMajcRPgsVR"
+ ]
+}

@@ -1,0 +1,702 @@
+{
+ "property_id": 239939,
+ "name": "Ashford Place",
+ "address": "1500 Dairy Ashford Rd, Houston, TX",
+ "lat": 29.752915,
+ "lon": -95.606777,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 185983.0,
+ "typical_floor_sqft": 33512.0,
+ "year_built": 1982,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "O'connor Insurance Agency",
+   "floor": 1,
+   "suite": "106",
+   "sqft": 1200.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Edward Jones",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 1658.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dairy Ashford Family Practice",
+   "floor": 1,
+   "suite": "198",
+   "sqft": 1200.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daniel D Souza M.D., P.A.",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2976.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Next Step Inc",
+   "floor": 1,
+   "suite": "117",
+   "sqft": 1002.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "State Farm",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 1378.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dairy Ashford Family Practice",
+   "floor": 1,
+   "suite": "198a",
+   "sqft": 3339.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Splendida Salon & Spa",
+   "floor": 1,
+   "suite": "115",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Quick Lab",
+   "floor": 1,
+   "suite": "114",
+   "sqft": 935.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Veterans Evaluation Services",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sari's Beyond Wellness",
+   "floor": 1,
+   "suite": "185a",
+   "sqft": 5795.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silueta Spa",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 1670.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Enabled Care Psychiatry",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Little Dragonfly Photography",
+   "floor": 1,
+   "suite": "188",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Glow & Lovely Skin",
+   "floor": 1,
+   "suite": "165",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hands-On-Living Health",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 1400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chi Permanent Makeup",
+   "floor": 1,
+   "suite": "135",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Simple Mobile Solutions",
+   "floor": 1,
+   "suite": "189",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alianza America USA",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daniel D Souza M.D., P.A.",
+   "floor": 1,
+   "suite": "197A",
+   "sqft": 1002.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Epris Wedding Planners",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Taia's Beauty & Nail Salon",
+   "floor": 1,
+   "suite": "1217",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Martinez, Guy and Maybik inc",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 1781.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Huly C. Keeny Management Company",
+   "floor": 2,
+   "suite": "292",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "OMV America LLC",
+   "floor": 2,
+   "suite": "242",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LVC Painting & Cleaning",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "G&A Wellness Medical Clinic PLLC",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 8349.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CR Tech",
+   "floor": 2,
+   "suite": "238",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Maranatha Christian Church of America",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 2338.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aurora Angels",
+   "floor": 2,
+   "suite": "222",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Atlas Cloud Foundry",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 1670.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Petrostream LP",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Livewell Therapeutics",
+   "floor": 2,
+   "suite": "278",
+   "sqft": 1670.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elite Luxe",
+   "floor": 2,
+   "suite": "287",
+   "sqft": 1670.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diana Brunetti Photography",
+   "floor": 2,
+   "suite": "294",
+   "sqft": 1002.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Annex Business Center",
+   "floor": 2,
+   "suite": null,
+   "sqft": 900.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Veda Professionals, Inc.",
+   "floor": 3,
+   "suite": "362",
+   "sqft": 1058.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Tech Vision Solution",
+   "floor": 3,
+   "suite": "361",
+   "sqft": 859.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Matrix Tech Solutions",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 250.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Lash Therapy",
+   "floor": 3,
+   "suite": "371",
+   "sqft": 100.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Soo Pro Beauty",
+   "floor": 3,
+   "suite": "375",
+   "sqft": 100.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Xtreme Beauty Academy",
+   "floor": 3,
+   "suite": "358,357",
+   "sqft": 700.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mix with Mo",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 668.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gigi Ho-Pelaez Immigration PLLC",
+   "floor": 3,
+   "suite": "352",
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wassana\u2019s Retreat",
+   "floor": 3,
+   "suite": "333",
+   "sqft": 600.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "New Era Lending",
+   "floor": 3,
+   "suite": "363",
+   "sqft": 250.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "La Espacial Radio",
+   "floor": 3,
+   "suite": "374",
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Celer Soft, LLC",
+   "floor": 3,
+   "suite": "355",
+   "sqft": 100.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alkem Solutions, LLC",
+   "floor": 3,
+   "suite": "369",
+   "sqft": 100.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Energy Dance Center",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 3500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elite Training Center",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 1670.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Socialite Beaute Co.",
+   "floor": 3,
+   "suite": "315",
+   "sqft": 668.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Metro Care Services",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 1670.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Posh Looks, LLC",
+   "floor": 3,
+   "suite": "373",
+   "sqft": 400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pink Artistry",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 350.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gala Production 2020, LLC",
+   "floor": 3,
+   "suite": "364",
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hernandez Tax Multiservices",
+   "floor": 3,
+   "suite": "367",
+   "sqft": 300.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bellatrix Systems LLC",
+   "floor": 3,
+   "suite": "360",
+   "sqft": 579.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shade Doctor",
+   "floor": 3,
+   "suite": "368",
+   "sqft": 402.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ADT Engineering",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 1670.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Resilience Residential Services Inc",
+   "floor": 3,
+   "suite": "325i",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Noir Aesthetics",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 1019.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Pest Solutions",
+   "floor": 4,
+   "suite": "432",
+   "sqft": null,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AM MedSpa",
+   "floor": 4,
+   "suite": "403",
+   "sqft": 1200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Braiders Suites",
+   "floor": 4,
+   "suite": "435",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cybersoft North America Inc.",
+   "floor": 4,
+   "suite": "444",
+   "sqft": 5921.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mimid Place",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 1200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unravel Me, LLC",
+   "floor": 4,
+   "suite": "439",
+   "sqft": 700.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Beauty Escape",
+   "floor": 4,
+   "suite": "451",
+   "sqft": 700.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ceptuait Inc",
+   "floor": 4,
+   "suite": "405",
+   "sqft": 1200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Psy Healing",
+   "floor": 4,
+   "suite": "438",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Le Reussi",
+   "floor": 4,
+   "suite": "443",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Skincare Body",
+   "floor": 4,
+   "suite": "436",
+   "sqft": 900.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Energy Bar",
+   "floor": 4,
+   "suite": "404",
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Joy & Harvest Center",
+   "floor": 4,
+   "suite": "430",
+   "sqft": 2054.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "yV8VtKtAAPY"
+ ]
+}

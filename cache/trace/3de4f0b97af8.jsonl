@@ -1,0 +1,13 @@
+{"t": 0.0, "step": "call_received", "detail": "Smoke reported on 37th floor, 1000 Louisiana St Houston"}
+{"t": 0.1, "step": "address_lookup", "detail": "1000 Louisiana St, Houston -> 233899"}
+{"t": 5.47, "step": "find_building", "detail": "{\"address\": \"1000 Louisiana St Houston\"}"}
+{"t": 5.47, "step": "read_file", "detail": "{\"file_path\": \"/playbook/skills/fire/SKILL.md\", \"limit\": 1000}"}
+{"t": 7.14, "step": "gather_building", "detail": "{\"property_id\": 233899, \"floor\": 37, \"incident\": \"fire\"}"}
+{"t": 7.14, "step": "read_file", "detail": "{\"file_path\": \"/buildings/233899.md\"}"}
+{"t": 20.59, "step": "task", "detail": "{\"subagent_type\": \"tenant-risk\", \"description\": \"Incident: FIRE (smoke reported), floor 37, Wells Fargo Plaza, 1000 Louisiana St, Houston TX (71 stories). Tenants on floor 37: none on record. Nearby t"}
+{"t": 20.59, "step": "task", "detail": "{\"subagent_type\": \"notify-writer\", \"description\": \"Incident: FIRE, smoke reported on floor 37, Wells Fargo Plaza, 1000 Louisiana St, Houston TX. Elevators on record: passenger and freight (counts and "}
+{"t": 24.06, "step": "helper:queue_text", "detail": "{\"to\": \"property manager\", \"text\": \"Fire Dept: smoke reported on floor 37, Wells Fargo Plaza, 1000 Louisiana St. Please meet fire crew at lobby fire command with keys and fire panel access.\"}"}
+{"t": 28.98, "step": "add_building_note", "detail": "{\"property_id\": 233899, \"note\": \"FIRE: smoke reported floor 37 (no tenant on record). Briefing sent; ~1994 above on 38-71 (Morgan Lewis 38, 40; CME Group 36 below); exact-floor scan available (exit si"}
+{"t": 41.96, "step": "graded", "detail": "satisfied"}
+{"t": 41.97, "step": "usage", "detail": "72887 in / 3073 out tokens, ~$0.35"}
+{"t": 41.97, "step": "done", "detail": "12 lines, 2 images"}

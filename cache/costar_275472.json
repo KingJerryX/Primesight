@@ -1,0 +1,40 @@
+{
+ "property_id": 275472,
+ "name": null,
+ "address": "170 Jefferson Blvd, Los Angeles, CA",
+ "lat": 34.017363,
+ "lon": -118.270616,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 15650.0,
+ "typical_floor_sqft": 15650.0,
+ "year_built": 1924,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Sung T Kim",
+   "floor": 1,
+   "suite": null,
+   "sqft": 16739.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ark & Co",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": 51,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "GusSe2jJUYH"
+ ]
+}

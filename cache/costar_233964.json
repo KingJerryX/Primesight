@@ -1,0 +1,627 @@
+{
+ "property_id": 233964,
+ "name": "Lyric Tower",
+ "address": "440 Louisiana St, Houston, TX",
+ "lat": 29.7627459,
+ "lon": -95.3646999,
+ "type": "Office",
+ "stories": 26,
+ "gross_sqft": 385000.0,
+ "typical_floor_sqft": 15750.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 10
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Sickle Cell Association Of The Texas Gulf Coast",
+   "floor": 1,
+   "suite": "1",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Parnham & Associates",
+   "floor": 2,
+   "suite": null,
+   "sqft": 4862.0,
+   "employees": 32,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 5319.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daspit Law Firm",
+   "floor": 3,
+   "suite": null,
+   "sqft": 15500.0,
+   "employees": 160,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Salvex",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 1972.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wallace And Allen",
+   "floor": 5,
+   "suite": "590",
+   "sqft": 4143.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Altop Energy",
+   "floor": 5,
+   "suite": "575",
+   "sqft": 1550.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kyle R Sampson Attorney",
+   "floor": 5,
+   "suite": "580",
+   "sqft": 1741.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lamberth Law Group",
+   "floor": 6,
+   "suite": "675",
+   "sqft": 2399.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kenny Perez Law",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 2751.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wealth Standard Financial",
+   "floor": 6,
+   "suite": "670",
+   "sqft": 775.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 2704.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cucci Law Group",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 775.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TransTex Treating",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 4180.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Martinez & Martinez Attorneys at law",
+   "floor": 7,
+   "suite": "730",
+   "sqft": 3622.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TorVal Law Group",
+   "floor": 7,
+   "suite": "723",
+   "sqft": 775.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "718",
+   "sqft": 4183.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Edward Jones",
+   "floor": 7,
+   "suite": "712",
+   "sqft": 3250.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 1574.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "FLS Projects (USA) Inc.",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 4519.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "825",
+   "sqft": 4075.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 2392.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Capital Realty Group",
+   "floor": 9,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jagne Small Business Service Llc",
+   "floor": 9,
+   "suite": "970",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Murad Auctions",
+   "floor": 9,
+   "suite": "900",
+   "sqft": null,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Schwartz",
+   "floor": 10,
+   "suite": "1055",
+   "sqft": 1868.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CSL Capital Management",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 3841.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "US Property Management",
+   "floor": 11,
+   "suite": "1150",
+   "sqft": 4495.0,
+   "employees": 29,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Moore & Associates",
+   "floor": 11,
+   "suite": "1110",
+   "sqft": 3781.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fidelity National Title",
+   "floor": 11,
+   "suite": null,
+   "sqft": 1688.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cogdell Law Firm",
+   "floor": 11,
+   "suite": "1125",
+   "sqft": 3526.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Simon & O'Rourke Law Firm",
+   "floor": 11,
+   "suite": "1115",
+   "sqft": 1240.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Danziger & De Llano",
+   "floor": 12,
+   "suite": "1212",
+   "sqft": 7750.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Federal Public Defender",
+   "floor": 13,
+   "suite": "1350",
+   "sqft": 13812.0,
+   "employees": 92,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Garner & Arnic",
+   "floor": 13,
+   "suite": "1300",
+   "sqft": 1688.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daspit Law Firm",
+   "floor": 14,
+   "suite": null,
+   "sqft": 14000.0,
+   "employees": 160,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Simon Perdue Law",
+   "floor": 14,
+   "suite": "1450",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of Frank H. Stambaugh Jr.",
+   "floor": 15,
+   "suite": "1550",
+   "sqft": 2623.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Validity",
+   "floor": 15,
+   "suite": "1555",
+   "sqft": 2527.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1500",
+   "sqft": 7445.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1570",
+   "sqft": 963.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vasquez Waite",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": 3665.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 16,
+   "suite": "1625",
+   "sqft": 3616.0,
+   "employees": null,
+   "industry": "ProfessionalScientificAndTechnicalServices",
+   "about": null
+  },
+  {
+   "name": "McCulloch & Miller",
+   "floor": 16,
+   "suite": "1635",
+   "sqft": 814.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 16,
+   "suite": "1650",
+   "sqft": 1582.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clark, Love & Hutson",
+   "floor": 17,
+   "suite": null,
+   "sqft": 7368.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Davis & Davis, Attorneys at Law",
+   "floor": 18,
+   "suite": "1850",
+   "sqft": 1129.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Barry Barnes and Associates, PLLC",
+   "floor": 18,
+   "suite": "1880",
+   "sqft": 4113.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 18,
+   "suite": "1825",
+   "sqft": 1620.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 18,
+   "suite": "1800",
+   "sqft": 3752.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 18,
+   "suite": "1818",
+   "sqft": 2443.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tracey Fox & Walters",
+   "floor": 19,
+   "suite": null,
+   "sqft": 9679.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 19,
+   "suite": "1900",
+   "sqft": 4637.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 19,
+   "suite": "1925",
+   "sqft": 1806.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Callahan Law Firm",
+   "floor": 20,
+   "suite": null,
+   "sqft": 3253.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gregory A. Snow, DDS",
+   "floor": 20,
+   "suite": "2030",
+   "sqft": 3100.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "H.E.A.T.",
+   "floor": 20,
+   "suite": "2000",
+   "sqft": 6279.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Polotko Law Firm",
+   "floor": 20,
+   "suite": "2080",
+   "sqft": 1307.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ashton Bridge Capital",
+   "floor": 20,
+   "suite": "2015",
+   "sqft": 2135.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dan-Bunkering",
+   "floor": 21,
+   "suite": null,
+   "sqft": 3810.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Walters Gilbreath",
+   "floor": 24,
+   "suite": "723",
+   "sqft": 6554.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daspit Law Firm",
+   "floor": 24,
+   "suite": null,
+   "sqft": 6125.0,
+   "employees": 160,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 25,
+   "suite": "2575",
+   "sqft": 4608.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 25,
+   "suite": "2525",
+   "sqft": 4818.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Strand Energy",
+   "floor": 26,
+   "suite": null,
+   "sqft": 3668.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Hines",
+   "phone": "5558973634"
+  }
+ ],
+ "matterport_models": [
+  "HJjccDZmmYp",
+  "iHK3Dp5c8FK"
+ ]
+}

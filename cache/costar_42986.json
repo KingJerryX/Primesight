@@ -1,0 +1,54 @@
+{
+ "property_id": 42986,
+ "name": null,
+ "address": "5210 Pacific Concourse Dr, Los Angeles, CA",
+ "lat": 33.9258861,
+ "lon": -118.3707654,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 169758.0,
+ "typical_floor_sqft": 84879.0,
+ "year_built": 2002,
+ "construction": "Steel",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Siemens Healthineers",
+   "floor": 1,
+   "suite": null,
+   "sqft": 70186.0,
+   "employees": 554,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UCLA Health",
+   "floor": 1,
+   "suite": null,
+   "sqft": 79576.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UCLA Health",
+   "floor": 2,
+   "suite": null,
+   "sqft": 88840.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "atZsRRTviaY"
+ ]
+}

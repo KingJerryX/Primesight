@@ -1,0 +1,77 @@
+{
+ "property_id": 234745,
+ "name": "Kayvon Plaza III",
+ "address": "6134 Airline Dr, Houston, TX",
+ "lat": 29.855141,
+ "lon": -95.383786,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 28183.15,
+ "typical_floor_sqft": 28183.0,
+ "year_built": 1980,
+ "construction": "Metal",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Lalo's Window Tint",
+   "floor": 1,
+   "suite": "8D",
+   "sqft": 1750.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Venta al Mayoreo",
+   "floor": 1,
+   "suite": "22K",
+   "sqft": 1750.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advance Auto Group",
+   "floor": 1,
+   "suite": "10E",
+   "sqft": 1750.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memories Party Hall",
+   "floor": 1,
+   "suite": "20",
+   "sqft": 1750.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Maribelmex Tools Repair Shop",
+   "floor": 1,
+   "suite": "4B",
+   "sqft": 1750.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "High Tech Transmission Center",
+   "floor": 1,
+   "suite": "C",
+   "sqft": 1750.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "oaK18inoCWB",
+  "yEh9h4vnmaZ"
+ ]
+}

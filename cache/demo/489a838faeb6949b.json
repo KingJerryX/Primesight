@@ -1,0 +1,312 @@
+{
+ "text": "Chemical spill in a lab on the 8th floor, 6200 Savoy Dr, Houston.",
+ "out": {
+  "briefing": "PRIMESIGHT | CHEMICAL SPILL / HAZMAT RELEASE | FLOOR 8\nRegency Square Tower - 6200 Savoy Dr, Houston, TX | 12 stories | built 1978 | reinforced concrete | sprinklers: yes | 4 passenger elevators\nTENANT RISK: no floor 8 tenant listed as a lab; ste 802 unknown tenant (listed twice) is the only unknown space on 8; possible healthcare: Pema Healthcare Services fl 7 (directly below), St. Hope Healthcare fl 5 (from name only)\nTENANT INDUSTRIES: ProfessionalScientificAndTechnicalServices\nON FLOOR: BTIC America Corporation; Governmental Data Services Inc; Couch | Lambert A Regional Law Firm (ste 440); Howard Day & Associates (ste 810); Unknown tenant (ste 802)\nPEOPLE: ~16 on floor 8 by tenant headcount (daytime); tenants on 7 and 9, no headcount for them\nOPEN LOT for staging ~221 m E (aerial search, verify)\nHYDRANTS: 123 m N, 128 m E\nINSIDE: no scan of 8; nearest is floor 1 (same core, layout may differ) | 23 scan points | exit signs at 6, pull stations at 3 (floor 1 scan)\nPROPERTY MGR: Oak Leaf Management 5552597522 (meet-crew text queued)\nNOT KNOWN: what is stored or spilled, which suite is the lab, wind, sprinkler type, stair locations, HVAC shutoff\n3D SCAN: https://my.matterport.com/show/?m=xPSkiJhu6Wy",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\235798_xPSkiJhu6Wy_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\235798_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/235798_xPSkiJhu6Wy_plan_marked.jpg",
+   "/img/235798_aerial.jpg"
+  ],
+  "property_id": 235798,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire Dept: hazmat chemical spill in lab, floor 8, Regency Square Tower, 6200 Savoy Dr. Meet crew at front entrance with building keys, floor 8 lab chemical info and HVAC shutoff."
+   }
+  ],
+  "tenant_flags": [
+   {
+    "tenant": "Unknown tenant (Suite 802; two records, 1,506 and 2,681 sq ft)",
+    "floor": 8,
+    "risk": "Unidentified occupant on the spill floor. This is the only floor-8 space that could plausibly be the lab.",
+    "why": "Suite 802 is listed twice under 'Unknown tenant', so it's not clear whether that's one tenant or two. None of the named floor-8 tenants looks like a lab: Couch | Lambert A Regional Law Firm (the listed Suite 440 doesn't match floor 8), Governmental Data Services Inc, BTIC America Corporation and Howard Day & Associates Inc (Suite 810). They have 2 to 6 employees each, so headcount is low. There are no descriptions for any tenant, and the only industry listed for the building is professional, scientific and technical services. Treat 802 as the possible lab source until it's confirmed.",
+    "from_name_only": false
+   },
+   {
+    "tenant": "Pema Healthcare Services",
+    "floor": 7,
+    "risk": "Possible patients or vulnerable occupants, and possible medical supplies or gases, on the floor directly below the spill.",
+    "why": "The name says healthcare services, but there's no description and the suite is unknown. Being right below floor 8 puts it at risk if liquid seeps down or vapor spreads. Check whether patients are on site and prioritize warning and evacuating them.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "St. Hope Healthcare",
+    "floor": 5,
+    "risk": "Possible clinic patients or vulnerable occupants who may need help evacuating.",
+    "why": "The name suggests a healthcare provider or clinic. There's no description and the suite is unknown. It's three floors below the spill, so it matters if the building has to be evacuated or sheltered in place.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "hazmat",
+   "floor": 8,
+   "building": {
+    "name": "Regency Square Tower",
+    "address": "6200 Savoy Dr, Houston, TX",
+    "stories": 12,
+    "year_built": 1978,
+    "construction": "ReinforcedConcrete",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 17,
+     "tenants": [
+      "Autoarch Architects",
+      "Pan American Mortgage Corporation"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 23,
+      "exit sign": 6,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 3
+     }
+    },
+    {
+     "floor": 2,
+     "people": 21,
+     "tenants": [
+      "Accurate Methods Consulting",
+      "Law Offices of Dakshini R. Sen, PC",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 25,
+     "tenants": [
+      "CP Logistics Inc",
+      "Jaykay Wealth Advisors, Inc.",
+      "Law Office Of Robert McAllister Jr PC",
+      "Professional Enrollment Concepts"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 10,
+     "tenants": [
+      "The Texas A&M University System",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 5,
+     "people": 49,
+     "tenants": [
+      "ABC Travels",
+      "Alan Charles Weiner P.C.",
+      "Citiscape Properties",
+      "Law Offices Of Elton R Lockings",
+      "St. Hope Healthcare",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 27,
+     "tenants": [
+      "Have Haven, Inc.",
+      "SBM Services",
+      "Star Protection",
+      "Unknown tenant",
+      "Z"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 7,
+     "people": 25,
+     "tenants": [
+      "Pema Healthcare Services",
+      "Rodney Hunt",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 16,
+     "tenants": [
+      "BTIC America Corporation",
+      "Couch |  Lambert A Regional Law Firm",
+      "Governmental Data Services Inc",
+      "Howard Day & Associates Inc",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 56,
+     "tenants": [
+      "Aaronson & Rash Attorneys and Counselors At Law",
+      "Alonge Law Firm",
+      "Anlarr",
+      "GGC Group",
+      "Jewelry Dog Usa, Inc",
+      "Ktas Consulting And Inspections Services Llc",
+      "Nyala Realty",
+      "Unknown tenant",
+      "Vanguard Lending"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 20,
+     "tenants": [
+      "Law Office Of Clint W Chase",
+      "The Lane Law Firm Texas Attorneys At Law",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 12,
+     "people": 30,
+     "tenants": [
+      "Oak Leaf Management",
+      "Tlc Health & Wellness"
+     ],
+     "scanned": false,
+     "seen": null
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 123,
+     "dir": "N",
+     "lat": 29.716206084481964,
+     "lon": -95.50557184623528
+    },
+    {
+     "m": 128,
+     "dir": "E",
+     "lat": 29.715515881921363,
+     "lon": -95.50416515900268
+    },
+    {
+     "m": 143,
+     "dir": "NW",
+     "lat": 29.715674199628342,
+     "lon": -95.50673936684225
+    },
+    {
+     "m": 144,
+     "dir": "E",
+     "lat": 29.714819795454265,
+     "lon": -95.50395245226741
+    }
+   ],
+   "staging": [
+    {
+     "m": 221,
+     "dir": "E",
+     "lat": 29.715190415,
+     "lon": -95.50312042499999,
+     "score": 0.231
+    },
+    {
+     "m": 320,
+     "dir": "NW",
+     "lat": 29.71697946,
+     "lon": -95.50792693999999,
+     "score": 0.231
+    },
+    {
+     "m": 226,
+     "dir": "NE",
+     "lat": 29.716979460000005,
+     "lon": -95.504493715,
+     "score": 0.223
+    }
+   ],
+   "scan": {
+    "floor": 1,
+    "exact": false,
+    "link": "https://my.matterport.com/show/?m=xPSkiJhu6Wy"
+   },
+   "vision": {
+    "scan_points": 23,
+    "scan_points_with": {
+     "exit sign": 6,
+     "stairs": 0,
+     "fire extinguisher": 0,
+     "fire alarm pull station": 3
+    },
+    "image_urls": [
+     "/img/vision/xPSkiJhu6Wy/001_2.jpg",
+     "/img/vision/xPSkiJhu6Wy/002_2.jpg",
+     "/img/vision/xPSkiJhu6Wy/004_1.jpg",
+     "/img/vision/xPSkiJhu6Wy/005_2.jpg",
+     "/img/vision/xPSkiJhu6Wy/005_3.jpg",
+     "/img/vision/xPSkiJhu6Wy/007_2.jpg",
+     "/img/vision/xPSkiJhu6Wy/008_0.jpg",
+     "/img/vision/xPSkiJhu6Wy/008_2.jpg",
+     "/img/vision/xPSkiJhu6Wy/010_3.jpg",
+     "/img/vision/xPSkiJhu6Wy/011_2.jpg",
+     "/img/vision/xPSkiJhu6Wy/012_1.jpg",
+     "/img/vision/xPSkiJhu6Wy/012_2.jpg"
+    ]
+   },
+   "walk": null,
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire Dept: hazmat chemical spill in lab, floor 8, Regency Square Tower, 6200 Savoy Dr. Meet crew at front entrance with building keys, floor 8 lab chemical info and HVAC shutoff."
+    }
+   ],
+   "tenant_flags": [
+    {
+     "tenant": "Unknown tenant (Suite 802; two records, 1,506 and 2,681 sq ft)",
+     "floor": 8,
+     "risk": "Unidentified occupant on the spill floor. This is the only floor-8 space that could plausibly be the lab.",
+     "why": "Suite 802 is listed twice under 'Unknown tenant', so it's not clear whether that's one tenant or two. None of the named floor-8 tenants looks like a lab: Couch | Lambert A Regional Law Firm (the listed Suite 440 doesn't match floor 8), Governmental Data Services Inc, BTIC America Corporation and Howard Day & Associates Inc (Suite 810). They have 2 to 6 employees each, so headcount is low. There are no descriptions for any tenant, and the only industry listed for the building is professional, scientific and technical services. Treat 802 as the possible lab source until it's confirmed.",
+     "from_name_only": false
+    },
+    {
+     "tenant": "Pema Healthcare Services",
+     "floor": 7,
+     "risk": "Possible patients or vulnerable occupants, and possible medical supplies or gases, on the floor directly below the spill.",
+     "why": "The name says healthcare services, but there's no description and the suite is unknown. Being right below floor 8 puts it at risk if liquid seeps down or vapor spreads. Check whether patients are on site and prioritize warning and evacuating them.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "St. Hope Healthcare",
+     "floor": 5,
+     "risk": "Possible clinic patients or vulnerable occupants who may need help evacuating.",
+     "why": "The name suggests a healthcare provider or clinic. There's no description and the suite is unknown. It's three floors below the spill, so it matters if the building has to be evacuated or sheltered in place.",
+     "from_name_only": true
+    }
+   ],
+   "call": "Chemical spill in a lab on the 8th floor, 6200 Savoy Dr, Houston."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Chemical spill in a lab on the 8th floor, 6200 Savoy Dr, Houston.\"}\n{\"t\": 0.11, \"step\": \"address_lookup\", \"detail\": \"6200 Savoy Dr, Houston -> 235798\"}\n{\"t\": 2.76, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"6200 Savoy Dr, Houston\\\"}\"}\n{\"t\": 2.76, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/hazmat/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 2.76, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 5.08, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 235798, \\\"floor\\\": 8, \\\"incident\\\": \\\"hazmat\\\", \\\"incident_type\\\": \\\"chemical_spill\\\"}\"}\n{\"t\": 5.08, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/235798.md\\\"}\"}\n{\"t\": 18.93, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: chemical spill in a lab (hazmat, chemical_spill), floor 8, Regency Square Tower, 6200 Savoy Dr, Houston TX (12 stories). Flag tenants that ch\"}\n{\"t\": 18.94, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Write and queue a short text to the building's people so they meet the crew. Incident: chemical spill in a lab (hazmat), floor 8, Regency Square Towe\"}\n{\"t\": 26.85, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire Dept: hazmat chemical spill in lab, floor 8, Regency Square Tower, 6200 Savoy Dr. Meet crew at front entrance with building keys, floor 8 lab chemical info and\"}\n{\"t\": 45.86, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 235798, \\\"note\\\": \\\"Hazmat chemical spill reported in a lab on floor 8. No floor 8 tenant is listed as a lab; ste 802 tenant unknown. Possible healthcare on 7 (Pema) and 5 (St. Hope). Sca\"}\n{\"t\": 65.66, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 65.66, \"step\": \"usage\", \"detail\": \"103639 in / 7226 out tokens, ~$0.56\"}\n{\"t\": 65.66, \"step\": \"done\", \"detail\": \"12 lines, 2 images\"}\n"
+}

@@ -1,0 +1,86 @@
+{
+ "property_id": 238105,
+ "name": "Greenbriar 8",
+ "address": "15534 Hardy Rd, Houston, TX",
+ "lat": 29.9428269,
+ "lon": -95.3834088,
+ "type": "Flex",
+ "stories": 1,
+ "gross_sqft": 85708.782,
+ "typical_floor_sqft": 85980.0,
+ "year_built": 1980,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Gray Mechanical",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 5286.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Federal Heath Sign Company, LLC",
+   "floor": 1,
+   "suite": "155",
+   "sqft": 2700.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Baby Hair",
+   "floor": 1,
+   "suite": "175",
+   "sqft": 2910.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Modern Home Supply",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 5850.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Valet Living",
+   "floor": 1,
+   "suite": "195",
+   "sqft": 3408.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HPI",
+   "floor": 1,
+   "suite": "220",
+   "sqft": 3500.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "J&M Brothers",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 6000.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "MYDZSAhgdC2",
+  "UPJjuTrTmf3"
+ ]
+}

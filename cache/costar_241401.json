@@ -1,0 +1,49 @@
+{
+ "property_id": 241401,
+ "name": "Bldg K",
+ "address": "2700 Greens Rd, Houston, TX",
+ "lat": 29.9483957,
+ "lon": -95.3470405,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 34400.0,
+ "typical_floor_sqft": 34400.0,
+ "year_built": 1980,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Abby's Catering",
+   "floor": 1,
+   "suite": "K-100, K-200, K-300",
+   "sqft": 14720.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DAIFUKU Airport Technologies",
+   "floor": 1,
+   "suite": "K-400",
+   "sqft": 18400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ClearFreight",
+   "floor": 1,
+   "suite": "K-350",
+   "sqft": 3680.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "RXfEpiv3DTc"
+ ]
+}

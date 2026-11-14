@@ -1,0 +1,262 @@
+{
+ "property_id": 27212,
+ "name": "Hollywood Entertainment Plaza",
+ "address": "7080 Hollywood Blvd, Los Angeles, CA",
+ "lat": 34.1011236,
+ "lon": -118.3445868,
+ "type": "Office",
+ "stories": 11,
+ "gross_sqft": 161500.0,
+ "typical_floor_sqft": 13000.0,
+ "year_built": 1972,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "424 Post",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 6899.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beetle House",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 11500.0,
+   "employees": 70,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SparkSpaces",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 10937.0,
+   "employees": 157,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tiago Espresso Bar & Kitchen",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2210.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LA Teams",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Franklin Studios Architecture Corp.",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CorePower Yoga",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 6980.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Robert Battan Dentistry",
+   "floor": 3,
+   "suite": "303",
+   "sqft": 3173.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mentor Language Institute",
+   "floor": 3,
+   "suite": "314",
+   "sqft": 3173.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tap Story-Goodshort",
+   "floor": 3,
+   "suite": "304",
+   "sqft": 1078.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Being Alive!",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 4048.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 13109.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pivotal Post",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 12691.0,
+   "employees": 83,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SparkSpaces",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 13110.0,
+   "employees": 157,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sami Y. Nouhad, D.D.S.",
+   "floor": 8,
+   "suite": "817",
+   "sqft": 966.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hearing Aid Service Of Hollywood",
+   "floor": 8,
+   "suite": "814",
+   "sqft": 1000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Genetic Foresight",
+   "floor": 8,
+   "suite": "815",
+   "sqft": 1269.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hollywood Diagnostic Services",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 381.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TruGlo Modern Dental",
+   "floor": 8,
+   "suite": "808",
+   "sqft": 2538.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vick Kargodorian, D.D.S.",
+   "floor": 8,
+   "suite": null,
+   "sqft": 1050.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "APS Media Hub",
+   "floor": 8,
+   "suite": "804",
+   "sqft": 1763.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Venture Entertainment",
+   "floor": 9,
+   "suite": "902",
+   "sqft": 2122.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "California Film Commission",
+   "floor": 9,
+   "suite": null,
+   "sqft": 3547.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Auxito US Inc.",
+   "floor": 9,
+   "suite": "903",
+   "sqft": 3173.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zealot Productions",
+   "floor": 11,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "Yoi4aXBRqA1",
+  "ZZW4Y9d65PX",
+  "mmze6R76bZw"
+ ]
+}

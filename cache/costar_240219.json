@@ -1,0 +1,22 @@
+{
+ "property_id": 240219,
+ "name": "Fallbrook Medical Building",
+ "address": "11302 Fallbrook Dr, Houston, TX",
+ "lat": 29.9264243,
+ "lon": -95.5900391,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 39852.0,
+ "typical_floor_sqft": 12332.0,
+ "year_built": 1995,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "2zE3XQVpPMj",
+  "UatZzyVkFBB"
+ ]
+}

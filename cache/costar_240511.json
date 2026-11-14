@@ -1,0 +1,22 @@
+{
+ "property_id": 240511,
+ "name": null,
+ "address": "16900 Park Row , Houston, TX",
+ "lat": 29.790001,
+ "lon": -95.67685,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 79812.0,
+ "typical_floor_sqft": 38027.0,
+ "year_built": 1980,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "SxbwndxYJ3a",
+  "U7tTxudcKtN"
+ ]
+}

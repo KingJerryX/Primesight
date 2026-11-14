@@ -1,0 +1,308 @@
+{
+ "property_id": 239781,
+ "name": "Dairy Ashford Plaza",
+ "address": "2000 Dairy Ashford Rd, Houston, TX",
+ "lat": 29.744861,
+ "lon": -95.6066742,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 109974.0,
+ "typical_floor_sqft": 18011.0,
+ "year_built": 1979,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Nationwide Coin and Bullion Reserve",
+   "floor": 1,
+   "suite": null,
+   "sqft": 18299.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Enroute Systems",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2675.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Molly Maid",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 1200.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "hudl",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 1235.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "hudl",
+   "floor": 2,
+   "suite": "282",
+   "sqft": 1241.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Spadafora Engineering",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 960.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marco's Pizza",
+   "floor": 2,
+   "suite": "240,230",
+   "sqft": 2500.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pantax Corporation",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 3948.0,
+   "employees": 26,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Camelot Integrated Solutions Inc.",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1369.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Doehring & Doehring",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1372.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hipson Benefits",
+   "floor": 3,
+   "suite": "360",
+   "sqft": 1821.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eagle 4, Inc.",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 1505.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "W. Sean O'neal, Attorney at Law",
+   "floor": 3,
+   "suite": "348",
+   "sqft": 865.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Avison Young",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 1149.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CM Texas LLC",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1800.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pruedence Brooks, PsyD",
+   "floor": 3,
+   "suite": "380",
+   "sqft": 1362.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sapot Systems Inc",
+   "floor": 4,
+   "suite": "403",
+   "sqft": 1801.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cannon Compression Services",
+   "floor": 4,
+   "suite": "430",
+   "sqft": 1906.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WIS International",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 1367.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marine Geophysical Survey",
+   "floor": 4,
+   "suite": "408",
+   "sqft": 1827.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "415",
+   "sqft": 1468.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "425",
+   "sqft": 577.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Data Quad Inc",
+   "floor": 4,
+   "suite": null,
+   "sqft": 2529.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Assist-Med",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1802.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LoMac Energy LLC",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1044.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Raeis Construction",
+   "floor": 5,
+   "suite": "555",
+   "sqft": 1801.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ZG Energy Services",
+   "floor": 5,
+   "suite": "545",
+   "sqft": 1279.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Integrative Care 360",
+   "floor": 5,
+   "suite": "575",
+   "sqft": 1000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Febres Dentistry for Children",
+   "floor": 5,
+   "suite": null,
+   "sqft": 1052.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EFI Global",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 1953.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cognitive Psychiatry, PA",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 4905.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Avison Young",
+   "phone": "5555466388"
+  }
+ ],
+ "matterport_models": [
+  "dnTP8ULgTbb",
+  "tFvtfFhhA9a"
+ ]
+}

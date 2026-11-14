@@ -1,0 +1,163 @@
+{
+ "property_id": 23568,
+ "name": null,
+ "address": "450 Sam Houston Pky, Houston, TX",
+ "lat": 29.937409,
+ "lon": -95.395025,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 105890.0,
+ "typical_floor_sqft": 52945.0,
+ "year_built": 1979,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Isphere",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 1000.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Attorney General of Texas",
+   "floor": 1,
+   "suite": "190",
+   "sqft": 3150.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Baxter Insurance Agency",
+   "floor": 1,
+   "suite": "103",
+   "sqft": 1707.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Occupational Therapy Clinic",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 978.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prosperity Community Outreach",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 1530.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Greater Houston Healthcare Solutions",
+   "floor": 1,
+   "suite": "149",
+   "sqft": 1513.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BI ICE",
+   "floor": 1,
+   "suite": "168",
+   "sqft": 2118.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LabGen, LLC",
+   "floor": 1,
+   "suite": "104",
+   "sqft": 1524.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lore's Multi Services",
+   "floor": 1,
+   "suite": "166",
+   "sqft": 2118.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "108",
+   "sqft": 702.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Medistar Provider Services",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4000.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Insurance School of Texas",
+   "floor": 1,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fortis College",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 14175.0,
+   "employees": 94,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "264",
+   "sqft": 2885.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allucent",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 5477.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "MBnYBa7whdC",
+  "P3jar2bWE3w"
+ ]
+}

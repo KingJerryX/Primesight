@@ -1,0 +1,79 @@
+{
+ "property_id": 240231,
+ "name": null,
+ "address": "14420 Sylvanfield Dr, Houston, TX",
+ "lat": 29.9850888,
+ "lon": -95.4936361,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 28160.0,
+ "typical_floor_sqft": 13600.0,
+ "year_built": 1983,
+ "construction": "WoodFrame",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Your Air Conditioning Company",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 2040.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Moorkel Quality Services",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 2040.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VNF, LLC",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 1360.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Haj Nabih Mosque",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 4760.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Maxwell's House of Abilities",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 3400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Honesty Environmental Services, Inc.",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 13600.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "59JezsMiYmC",
+  "XTvxrWxKhVg",
+  "mBGsyogJPCH",
+  "weWCyx9YQc7"
+ ]
+}

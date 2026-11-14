@@ -1,0 +1,468 @@
+{
+ "property_id": 246952,
+ "name": "Brentwood Medical Plaza",
+ "address": "11980 San Vicente Blvd, Los Angeles, CA",
+ "lat": 34.0520679,
+ "lon": -118.472146,
+ "type": "Office",
+ "stories": 9,
+ "gross_sqft": 170968.0,
+ "typical_floor_sqft": 15543.0,
+ "year_built": 1975,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Brentwood Plaza Pharmacy",
+   "floor": 1,
+   "suite": "104",
+   "sqft": 400.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Orgin",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 1000.0,
+   "employees": 29,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Danica Thornberry, LAc",
+   "floor": 1,
+   "suite": "112",
+   "sqft": 600.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wilker Orthopedic & Spine Institute",
+   "floor": 1,
+   "suite": "114",
+   "sqft": 1800.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brentwood Dermatology Medical Group",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 1000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UCLA Health Brentwood",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 1173.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "106",
+   "sqft": 9170.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Passo",
+   "floor": 2,
+   "suite": "201",
+   "sqft": 1751.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Paul E. Parminter DDS",
+   "floor": 5,
+   "suite": "501",
+   "sqft": 2021.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Robert Kimura Dentistry",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 2331.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Homeless Not Toothless",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 2176.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "West Coast Oral & Maxillofacial Surgery Center",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 3109.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Concierge Dentistry",
+   "floor": 5,
+   "suite": "507",
+   "sqft": 3109.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dental Ct Lab",
+   "floor": 5,
+   "suite": "507",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stanley Miyawaki, D.D.S.",
+   "floor": 6,
+   "suite": "602",
+   "sqft": 1243.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mike Vourakis",
+   "floor": 6,
+   "suite": "606",
+   "sqft": 1243.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marie Cohen",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 1243.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brentwood Dental Group",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 1601.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Frankie Neman, DDS",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 1243.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Palisades Dentists, Cerisa Clouse DDS",
+   "floor": 6,
+   "suite": "619",
+   "sqft": 989.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stephanie B. Poulter, PhD",
+   "floor": 6,
+   "suite": "621",
+   "sqft": 1088.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lisa Halotek, Psy.D",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 1088.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Emily Cavell, PhD",
+   "floor": 6,
+   "suite": "612",
+   "sqft": 1088.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Judith Bucholtz LMFT",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 1554.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Michael Levittan PhD.",
+   "floor": 7,
+   "suite": "709",
+   "sqft": 1399.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vukotic, Biljana",
+   "floor": 7,
+   "suite": "715",
+   "sqft": 1399.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Michael Gordon MD",
+   "floor": 7,
+   "suite": "704",
+   "sqft": 1399.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alan Spivak PHD",
+   "floor": 7,
+   "suite": "712",
+   "sqft": 1399.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kelly Foster, M.D.",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 1399.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rosenstock Psychological Corp",
+   "floor": 7,
+   "suite": "711",
+   "sqft": 2021.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Thompson Psychiatry Inc",
+   "floor": 7,
+   "suite": "711-2",
+   "sqft": 466.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Timothy B McCaffey, MD",
+   "floor": 7,
+   "suite": "707",
+   "sqft": 1554.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AUXBRAIN, Inc.",
+   "floor": 7,
+   "suite": "708",
+   "sqft": 1554.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "David E. Sones, MD",
+   "floor": 7,
+   "suite": "701",
+   "sqft": 1399.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zuckerman and Pappas",
+   "floor": 8,
+   "suite": "805",
+   "sqft": 2331.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "L A Snore Doctor Llc",
+   "floor": 8,
+   "suite": "802",
+   "sqft": 1630.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Justin Raanan",
+   "floor": 8,
+   "suite": "814",
+   "sqft": 1554.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Luxe Dental Cosmetics, Nima Astaraee, DDS",
+   "floor": 8,
+   "suite": "819",
+   "sqft": 1554.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Goli Javaher, DDS",
+   "floor": 8,
+   "suite": "808",
+   "sqft": 1554.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "James Mead, D.M.D.",
+   "floor": 8,
+   "suite": null,
+   "sqft": 1554.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "R James Perkins",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 570.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Andrea Henderson and William D. Harrison, D.D.S.",
+   "floor": 9,
+   "suite": "918",
+   "sqft": 3109.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Primary Integrative Dentistry",
+   "floor": 9,
+   "suite": "902",
+   "sqft": 1554.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ACE Endodontics",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 3182.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diane C. Tarica, DDS",
+   "floor": 9,
+   "suite": "906",
+   "sqft": 1554.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zari Hedayat, PhD",
+   "floor": 9,
+   "suite": "909",
+   "sqft": 1554.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "901",
+   "sqft": 2660.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "1uXpcwty9Sr"
+ ]
+}

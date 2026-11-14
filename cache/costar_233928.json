@@ -1,0 +1,281 @@
+{
+ "property_id": 233928,
+ "name": "1415 Louisiana",
+ "address": "1415 Louisiana St, Houston, TX",
+ "lat": 29.7547798,
+ "lon": -95.3698082,
+ "type": "Office",
+ "stories": 43,
+ "gross_sqft": 536626.0,
+ "typical_floor_sqft": 12000.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 15
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Terra",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 1065.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ClifyX",
+   "floor": 14,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Grace Youn Furr, DDS & M. Eileen Pope, DDS",
+   "floor": 15,
+   "suite": null,
+   "sqft": 2839.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 18,
+   "suite": "1800",
+   "sqft": 18380.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Legacy Trust",
+   "floor": 19,
+   "suite": "1900",
+   "sqft": 13700.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 19,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Helis Foundation",
+   "floor": 21,
+   "suite": null,
+   "sqft": 4693.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kasowitz",
+   "floor": 21,
+   "suite": null,
+   "sqft": 7585.0,
+   "employees": 52,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Celesium Capital",
+   "floor": 22,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PDH Law",
+   "floor": 22,
+   "suite": null,
+   "sqft": 7783.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Utegration",
+   "floor": 23,
+   "suite": "2375",
+   "sqft": 2955.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 23,
+   "suite": "2325",
+   "sqft": 3377.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fragomen",
+   "floor": 23,
+   "suite": "2350",
+   "sqft": 5634.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Edelman",
+   "floor": 23,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Quintana Resources",
+   "floor": 24,
+   "suite": null,
+   "sqft": 17700.0,
+   "employees": 52,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NAESB",
+   "floor": 34,
+   "suite": "3460",
+   "sqft": 3041.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "L&R Lindamood & Robinson, P.C.",
+   "floor": 34,
+   "suite": null,
+   "sqft": 3101.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WEDGE Group",
+   "floor": 35,
+   "suite": null,
+   "sqft": 3340.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hirsch & Westheimer",
+   "floor": 36,
+   "suite": null,
+   "sqft": 15900.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WEDGE Group",
+   "floor": 39,
+   "suite": "3000",
+   "sqft": 500.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gateway Energy LLC",
+   "floor": 41,
+   "suite": null,
+   "sqft": 4530.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kobelco Compressors America",
+   "floor": 41,
+   "suite": null,
+   "sqft": 4490.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 41,
+   "suite": "4150",
+   "sqft": 1580.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royston Rayzor",
+   "floor": 42,
+   "suite": null,
+   "sqft": 12220.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Strato 550 Restaurant/ Conference Center",
+   "floor": 43,
+   "suite": null,
+   "sqft": 6900.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Hines Interest LP",
+   "phone": "5559874089"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": 1604
+  }
+ ],
+ "matterport_models": [
+  "LJn59uoV759",
+  "qgHrw7d3MJ1",
+  "sEmBqaiPBba",
+  "tMswvfbZK8C",
+  "vh1XhRJyZPW",
+  "yPnykGhkJf6"
+ ]
+}

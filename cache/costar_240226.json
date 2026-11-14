@@ -1,0 +1,45 @@
+{
+ "property_id": 240226,
+ "name": "Willowchase Office Building",
+ "address": "8223 Willow Place Dr, Houston, TX",
+ "lat": 29.9594079,
+ "lon": -95.5533939,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 66248.0,
+ "typical_floor_sqft": 31269.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Adara Communities",
+   "floor": 1,
+   "suite": null,
+   "sqft": 31269.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Adara Communities",
+   "floor": 2,
+   "suite": null,
+   "sqft": 31269.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "x1WTPSLds5H"
+ ]
+}

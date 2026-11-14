@@ -1,0 +1,97 @@
+{
+ "property_id": 240517,
+ "name": "KSF Orthopaedic Center",
+ "address": "17270 Red Oak Dr, Houston, TX",
+ "lat": 30.022529,
+ "lon": -95.447002,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 48698.0,
+ "typical_floor_sqft": 24349.0,
+ "year_built": 1985,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "KSF Orthopaedic Center, P.A.",
+   "floor": 1,
+   "suite": "190",
+   "sqft": 3277.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Select Physical Therapy",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 3136.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Spring Clinical Research",
+   "floor": 1,
+   "suite": "165",
+   "sqft": 2706.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Melissa Suen Arief",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NovaCare Rehabilitation",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 2000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KSF Orthopaedic Center, P.A.",
+   "floor": 2,
+   "suite": "260, 205",
+   "sqft": 9683.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 10667.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "Hq6Dca1G95S",
+  "R1gryzA25GH",
+  "hmWcZjPsMJ7",
+  "wuo98sT4MZc"
+ ]
+}

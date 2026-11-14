@@ -1,0 +1,45 @@
+{
+ "property_id": 253250,
+ "name": "The Broadway",
+ "address": "950 Broadway , Los Angeles, CA",
+ "lat": 34.0411111,
+ "lon": -118.2568875,
+ "type": "Office",
+ "stories": 7,
+ "gross_sqft": 34550.0,
+ "typical_floor_sqft": 4176.0,
+ "year_built": 1913,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Constellation Entertainment, Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": null,
+   "sqft": 3925.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "3nqjkuzcJaQ",
+  "8WdViUfszbr",
+  "BB2ZYDfqStC",
+  "DLYSuUrSbek",
+  "Zm8ZkLzwpZz",
+  "uXp6Ztg1jnK"
+ ]
+}

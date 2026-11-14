@@ -1,0 +1,285 @@
+{
+ "property_id": 52227,
+ "name": "Pershing Square Building",
+ "address": "448 Hill St, Los Angeles, CA",
+ "lat": 34.0488384,
+ "lon": -118.2513744,
+ "type": "Office",
+ "stories": 15,
+ "gross_sqft": 150000.0,
+ "typical_floor_sqft": 9375.0,
+ "year_built": 1924,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Mrs. Fish",
+   "floor": 0,
+   "suite": "200",
+   "sqft": 4782.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Power Discount",
+   "floor": 1,
+   "suite": "325",
+   "sqft": 650.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JMF Development LLC",
+   "floor": 1,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "M99 Studios",
+   "floor": 4,
+   "suite": "418",
+   "sqft": 2749.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Raimi and Associates",
+   "floor": 5,
+   "suite": "512",
+   "sqft": 1867.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "League 22",
+   "floor": 5,
+   "suite": "508",
+   "sqft": 2460.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hello Nite",
+   "floor": 7,
+   "suite": "701",
+   "sqft": 1134.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Davonne Phillip",
+   "floor": 7,
+   "suite": "717-718",
+   "sqft": 2161.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gintare",
+   "floor": 7,
+   "suite": "705",
+   "sqft": 938.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "B.R.",
+   "floor": 7,
+   "suite": "703",
+   "sqft": 938.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kenny & Kevin Co.",
+   "floor": 7,
+   "suite": "715-716",
+   "sqft": 1875.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SALT Landscape Architects",
+   "floor": 7,
+   "suite": "708-712",
+   "sqft": 2329.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Coldwell Banker Commercial",
+   "floor": 8,
+   "suite": "815",
+   "sqft": 1573.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Overcast Media",
+   "floor": 8,
+   "suite": "804-812",
+   "sqft": 5927.0,
+   "employees": 39,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Evan Summers",
+   "floor": 8,
+   "suite": "818",
+   "sqft": 1875.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Urban Unity",
+   "floor": 9,
+   "suite": "912",
+   "sqft": 1867.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DIZ Worldwide",
+   "floor": 9,
+   "suite": "915",
+   "sqft": 1060.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Renovazio",
+   "floor": 9,
+   "suite": "901",
+   "sqft": 3426.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JAA Tax Firm LLC",
+   "floor": 9,
+   "suite": "918",
+   "sqft": 1406.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rightsline Software Inc",
+   "floor": 9,
+   "suite": null,
+   "sqft": 1616.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ready Set Co.",
+   "floor": 10,
+   "suite": "1008-1012",
+   "sqft": 4829.0,
+   "employees": 32,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sparchs Architects",
+   "floor": 10,
+   "suite": "1017-1018",
+   "sqft": 938.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NELSON Worldwide",
+   "floor": 10,
+   "suite": "1001-1004",
+   "sqft": 3608.0,
+   "employees": 24,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chrysalis",
+   "floor": 11,
+   "suite": "1101-1112",
+   "sqft": 6920.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CRA/LA",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 8775.0,
+   "employees": 77,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Perch",
+   "floor": null,
+   "suite": null,
+   "sqft": 9375.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Perch",
+   "floor": null,
+   "suite": null,
+   "sqft": 4000.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "JMF Development LLC",
+   "phone": "5554717060"
+  }
+ ],
+ "matterport_models": [
+  "cvCcr9CAbHc",
+  "rigwi16ZxgM"
+ ]
+}

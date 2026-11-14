@@ -1,0 +1,650 @@
+{
+ "property_id": 240089,
+ "name": null,
+ "address": "10700 Richmond Ave, Houston, TX",
+ "lat": 29.7285491,
+ "lon": -95.5646285,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 140269.0,
+ "typical_floor_sqft": 46357.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Rock Insurance Agency",
+   "floor": 1,
+   "suite": "103",
+   "sqft": 467.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brazilian Bikini Wax Bar",
+   "floor": 1,
+   "suite": null,
+   "sqft": 954.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sunrise Petrosolutions Tech, Inc.",
+   "floor": 1,
+   "suite": "151",
+   "sqft": 1402.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mashin Shokai Limited",
+   "floor": 1,
+   "suite": "116",
+   "sqft": 600.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "INDC Working",
+   "floor": 1,
+   "suite": "109",
+   "sqft": 384.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Twinnovative",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 2322.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aquavita Systems",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 4676.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Law Office of Timothy Adams, PLLC",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Luloc LLC",
+   "floor": 1,
+   "suite": "147",
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DCapital, LLC",
+   "floor": 1,
+   "suite": "109D",
+   "sqft": 384.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Preventive Genomics",
+   "floor": 1,
+   "suite": "112",
+   "sqft": 1450.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "144",
+   "sqft": 892.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "247 Oil & Gas Equipment Inc",
+   "floor": 1,
+   "suite": "143",
+   "sqft": null,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "114",
+   "sqft": 1429.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Benefits Specialists",
+   "floor": 1,
+   "suite": "121",
+   "sqft": 2338.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alon and Associates",
+   "floor": 1,
+   "suite": "154",
+   "sqft": 468.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KTJ\u2019s Tax Company Service",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 468.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "USA Export and Import",
+   "floor": 1,
+   "suite": "109B",
+   "sqft": 468.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CDE Consulting",
+   "floor": 1,
+   "suite": "131",
+   "sqft": 1870.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Angle Homecare",
+   "floor": 1,
+   "suite": "108",
+   "sqft": 468.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tsai Fong Books",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2337.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fidelity Realtors and Services",
+   "floor": 1,
+   "suite": "119",
+   "sqft": 1403.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Transamerica Financial Advisors",
+   "floor": 1,
+   "suite": "107",
+   "sqft": 2758.0,
+   "employees": 128,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "114",
+   "sqft": 1429.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stellium",
+   "floor": 2,
+   "suite": "208",
+   "sqft": 1200.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hearts At Home Senior Care",
+   "floor": 2,
+   "suite": "274",
+   "sqft": 1084.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CTD Residential Design Group",
+   "floor": 2,
+   "suite": "247",
+   "sqft": 814.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stanley T. Tan",
+   "floor": 2,
+   "suite": "243",
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SP Wellness Therapy & Skin Care",
+   "floor": 2,
+   "suite": "201",
+   "sqft": 1111.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chrome Hospitality Management",
+   "floor": 2,
+   "suite": "203",
+   "sqft": 1457.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TD Texas Realty, LLC",
+   "floor": 2,
+   "suite": "273",
+   "sqft": 468.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Heights Finance",
+   "floor": 2,
+   "suite": "222",
+   "sqft": 966.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gobierno Del Estado De Mexico",
+   "floor": 2,
+   "suite": "262",
+   "sqft": 775.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rainbow Team",
+   "floor": 2,
+   "suite": "217",
+   "sqft": 1567.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Liza Couture",
+   "floor": 2,
+   "suite": "235",
+   "sqft": 876.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NUR Firearms Training",
+   "floor": 2,
+   "suite": "214",
+   "sqft": 468.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Retech Inc",
+   "floor": 2,
+   "suite": "246",
+   "sqft": 1121.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ABC by Dr. Louise Almeida",
+   "floor": 2,
+   "suite": "276",
+   "sqft": 468.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jehova Jireh Notary & Migration Service",
+   "floor": 2,
+   "suite": "221",
+   "sqft": 1042.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advanced Tactical Solutions",
+   "floor": 2,
+   "suite": "231",
+   "sqft": 879.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of Yates and Associates",
+   "floor": 2,
+   "suite": "241",
+   "sqft": 908.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Harry E Johnson Attorney at Law",
+   "floor": 2,
+   "suite": "265",
+   "sqft": 468.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boss Oilwell Products and Manufacturing Inc",
+   "floor": 2,
+   "suite": "207",
+   "sqft": 468.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Douson Control Products",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 935.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TWFG Insurance",
+   "floor": 2,
+   "suite": "218",
+   "sqft": 468.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MB Connections",
+   "floor": 2,
+   "suite": "212",
+   "sqft": 468.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Transamerica Financial Advisors",
+   "floor": 2,
+   "suite": "266",
+   "sqft": 11772.0,
+   "employees": 128,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rainbow Team",
+   "floor": 2,
+   "suite": "227",
+   "sqft": 935.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Christopher M Pham Law Group",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1400.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HTX Strategies",
+   "floor": 2,
+   "suite": "213",
+   "sqft": 1411.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Thomas Nguyen Law Firm",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1651.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Abandoned Little Angels",
+   "floor": 2,
+   "suite": "224",
+   "sqft": 590.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Desmond's Heart",
+   "floor": 2,
+   "suite": null,
+   "sqft": 790.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "248",
+   "sqft": 439.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "275",
+   "sqft": 527.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "245",
+   "sqft": 438.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Subsurface Consultants & Associates",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 7114.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PPO Check",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 2000.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "First Command",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 1500.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DPC Hospitality",
+   "floor": 3,
+   "suite": "321",
+   "sqft": 1822.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Always Best Care Senior Services",
+   "floor": 3,
+   "suite": "302",
+   "sqft": 2483.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bema Information Technologies",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 1650.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "301",
+   "sqft": 1766.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 3638.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Element Box Inc.",
+   "floor": 3,
+   "suite": "303",
+   "sqft": 468.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kingland Global Petroleum",
+   "floor": 3,
+   "suite": "306",
+   "sqft": 1870.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Transamerica Financial Advisors",
+   "floor": 3,
+   "suite": "318",
+   "sqft": 4676.0,
+   "employees": 128,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Subsurface Consultants & Associates",
+   "floor": 3,
+   "suite": "316",
+   "sqft": 2338.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Esi-eemployer's Solutions Inc",
+   "floor": 3,
+   "suite": "301",
+   "sqft": null,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "44PkZCbzNdR",
+  "6FWhwBkLgyU",
+  "7gvxscLPz1Q"
+ ]
+}

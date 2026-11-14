@@ -1,0 +1,242 @@
+{
+ "property_id": 248965,
+ "name": null,
+ "address": "6701 Center Dr, Los Angeles, CA",
+ "lat": 33.979048,
+ "lon": -118.3937836,
+ "type": "Office",
+ "stories": 16,
+ "gross_sqft": 336047.0,
+ "typical_floor_sqft": 20799.0,
+ "year_built": 1987,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 6
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Levity Entertainment Group",
+   "floor": 2,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HUB International",
+   "floor": 2,
+   "suite": "1500",
+   "sqft": 500.0,
+   "employees": 162,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "425",
+   "sqft": 5004.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Industrious",
+   "floor": 5,
+   "suite": "500/510",
+   "sqft": 9973.0,
+   "employees": 69,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "C",
+   "sqft": 4403.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Opentrade La Llc",
+   "floor": 5,
+   "suite": "550",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brock & Gonzales LLP",
+   "floor": 6,
+   "suite": null,
+   "sqft": 2740.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "655",
+   "sqft": 4601.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Insightexpress",
+   "floor": 6,
+   "suite": "650",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "670",
+   "sqft": 4297.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eisner Amper",
+   "floor": 8,
+   "suite": "825",
+   "sqft": 5601.0,
+   "employees": 37,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fujisankei Communications International, Inc.",
+   "floor": 8,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aspire Bakeries",
+   "floor": 8,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 59,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 12750.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wilson Meany",
+   "floor": 9,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VACO",
+   "floor": 9,
+   "suite": null,
+   "sqft": 3642.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Greystone Funding Corporation",
+   "floor": 9,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 3271.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1025",
+   "sqft": 3571.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daily Transcription",
+   "floor": 11,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Union Institute & University",
+   "floor": 12,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arias Sanguinetti",
+   "floor": 14,
+   "suite": "950",
+   "sqft": 8143.0,
+   "employees": 54,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Triton Pacific Capital Partners, LLC",
+   "floor": 14,
+   "suite": "1425",
+   "sqft": 4423.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "i1jgvkc59jk"
+ ]
+}

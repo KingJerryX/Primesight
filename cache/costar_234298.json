@@ -1,0 +1,100 @@
+{
+ "property_id": 234298,
+ "name": "Twelve Greenway Plaza",
+ "address": "12 Greenway Plz, Houston, TX",
+ "lat": 29.7331229,
+ "lon": -95.4353214,
+ "type": "Office",
+ "stories": 15,
+ "gross_sqft": 304426.0,
+ "typical_floor_sqft": 18793.0,
+ "year_built": 1981,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 5
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Paramount Property Analysts",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ascent Engineering",
+   "floor": 1,
+   "suite": "100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Avelo Airlines",
+   "floor": 4,
+   "suite": null,
+   "sqft": 12415.0,
+   "employees": 82,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Comcast Advertising",
+   "floor": 10,
+   "suite": null,
+   "sqft": 12350.0,
+   "employees": 75,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 11,
+   "suite": null,
+   "sqft": 13125.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 11,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Interra Properties LLC",
+   "phone": "5557435171"
+  }
+ ],
+ "matterport_models": [
+  "39kv7R6xV7o",
+  "f54kk9QNpht",
+  "ir1kck6HLhR",
+  "kdzoss2ifsQ",
+  "oYfYceTUFod",
+  "vbRb3JAaH82"
+ ]
+}

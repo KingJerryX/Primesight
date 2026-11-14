@@ -1,0 +1,52 @@
+{
+ "property_id": 240050,
+ "name": "Commerce Park North Office Center",
+ "address": "15425 I-45 , Houston, TX",
+ "lat": 29.9917612,
+ "lon": -95.4256006,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 68618.0,
+ "typical_floor_sqft": 22269.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "HCA Houston Hospice & Family Care",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 6701.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JLG Structures",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 3957.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 9237.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "2gczVievwET",
+  "NuqUA9HM8tq",
+  "tXtAJJzXqBF",
+  "xJT4HvqXfBr"
+ ]
+}

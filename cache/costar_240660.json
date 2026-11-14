@@ -1,0 +1,139 @@
+{
+ "property_id": 240660,
+ "name": "Southwest Freeway Center",
+ "address": "6400 Southwest Fwy, Houston, TX",
+ "lat": 29.7201899,
+ "lon": -95.4968011,
+ "type": "GeneralRetail",
+ "stories": 1,
+ "gross_sqft": 64744.0,
+ "typical_floor_sqft": 64744.0,
+ "year_built": 1999,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Mean Green Training Center",
+   "floor": 1,
+   "suite": "G",
+   "sqft": 6000.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Iglesia Palabra En Accion",
+   "floor": 1,
+   "suite": "E",
+   "sqft": 3000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Imperial Reception Hall",
+   "floor": 1,
+   "suite": "K",
+   "sqft": 6474.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tornado & El Expreso Bus Company",
+   "floor": 1,
+   "suite": "C",
+   "sqft": 2200.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Progresso Learning",
+   "floor": 1,
+   "suite": "A",
+   "sqft": 11840.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "I",
+   "sqft": 900.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "J",
+   "sqft": 2958.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gyptian Nails",
+   "floor": 1,
+   "suite": "I",
+   "sqft": 900.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Escape Zone Houston",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1942.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "S",
+   "sqft": 8094.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Noorul Quran By Touch",
+   "floor": 1,
+   "suite": "G",
+   "sqft": 6000.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "F",
+   "sqft": 1200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Healthtech Institute-houston Campus",
+   "floor": 1,
+   "suite": "h",
+   "sqft": null,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "wz3SzWEPXar"
+ ]
+}

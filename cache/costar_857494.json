@@ -1,0 +1,211 @@
+{
+ "property_id": 857494,
+ "name": "The Rice",
+ "address": "909 Texas Ave, Houston, TX",
+ "lat": 29.7605552,
+ "lon": -95.3627626,
+ "type": "Multifamily",
+ "stories": 18,
+ "gross_sqft": 278422.0,
+ "typical_floor_sqft": 15468.0,
+ "year_built": 1998,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Shay McElroy's Irish Pub",
+   "floor": 1,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kraft Kennedy",
+   "floor": 1,
+   "suite": "1702",
+   "sqft": 20000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hy Cheng Corporation",
+   "floor": 1,
+   "suite": "E",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Colombe",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mamajuana Cafe",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4411.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 982.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bungalow",
+   "floor": 1,
+   "suite": null,
+   "sqft": 9173.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bubble Boba Downtown",
+   "floor": 1,
+   "suite": "c",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Standart Air Duct Cleaning",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chipotle Mexican Grill",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2530.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sunsetbodyworks Day Spa",
+   "floor": 2,
+   "suite": "206",
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eye4Content",
+   "floor": null,
+   "suite": "420",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Azuma Sushi & Robata Bar",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Crystal Ballroom",
+   "floor": null,
+   "suite": "106F",
+   "sqft": 0.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bratton Communications",
+   "floor": null,
+   "suite": "1204",
+   "sqft": 0.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lawless Spirits & Kitchen",
+   "floor": null,
+   "suite": "2A",
+   "sqft": 0.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Esti's Best",
+   "floor": null,
+   "suite": "410",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Azuma Sushi & Robata Bar",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Continuum Capital Management",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Greystar - The Rice",
+   "phone": "5550820380"
+  }
+ ],
+ "matterport_models": [
+  "8aV1fUtaK7X",
+  "9fHoQZQdy4o",
+  "L55HhLyLzBT",
+  "RwmAFq46Lf1",
+  "SQephg6NEBW",
+  "SuKwo7ziqD9",
+  "YMH7byCvC4Y",
+  "YahgQgR1Kbi",
+  "aMobhhivVXF",
+  "dpH1ks7mXAP",
+  "hRNGJrrpJJr",
+  "idJZHjZPB2G",
+  "vup4Asckswm"
+ ]
+}

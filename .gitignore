@@ -1,15 +1,19 @@
 # secrets
 .env
 
-# sponsor data and materials: licensed for the hackathon, never publish
+# raw sponsor kits: each participant downloads their own (see LANES.md)
 costar-hackathon-kit/
 Vexcel_API_Hackathon_Tutorial_PDF_PY/
 
-# generated imagery (Vexcel / Matterport content)
+# probe scratch images
 probes/out/
-output/
 
 __pycache__/
 
-# per-building caches (contain sponsor-derived data)
-cache/
+# cache/ and output/ are committed so a fresh clone can demo every preprocessed building.
+# Kept local: SAM 3 annotated panorama faces (~830 MB, no page shows them), batch queues and run logs, old backups.
+cache/vision/*/
+cache/buildings_test_archive/
+cache/*.txt
+cache/rank.json
+cache/ranked_*.json

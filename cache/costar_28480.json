@@ -1,0 +1,42 @@
+{
+ "property_id": 28480,
+ "name": "City Lights on Fig",
+ "address": "1300 Figueroa St, Los Angeles, CA",
+ "lat": 34.0401177,
+ "lon": -118.268067,
+ "type": "Multifamily",
+ "stories": 4,
+ "gross_sqft": 92849.0,
+ "typical_floor_sqft": 22930.0,
+ "year_built": 2003,
+ "construction": "Unknown",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "SRG Residential - City Lights on Fig",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "SRG Residential - City Lights on Fig",
+   "phone": "5554825564"
+  }
+ ],
+ "matterport_models": [
+  "9G1Yo7UR71H",
+  "GBguS18hgfQ",
+  "L2bESp19Snw",
+  "NAxqEYfMSxP",
+  "WiMHdNCyA4m",
+  "YjzLxjJ8bRN"
+ ]
+}

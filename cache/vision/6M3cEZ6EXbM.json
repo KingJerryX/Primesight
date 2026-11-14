@@ -1,0 +1,77 @@
+{
+ "model_id": "6M3cEZ6EXbM",
+ "name": "Suite 400 - 3,356SF (Only Training Room Shown)",
+ "floor": 4,
+ "sweeps": [
+  {
+   "id": "wkp4a08102zb6cdz7zqcpg6eb",
+   "index": 0,
+   "xy": [
+    -5.084043025970459,
+    -0.5625544190406799
+   ],
+   "hits": []
+  },
+  {
+   "id": "947dfdn6mraqdkk5rz2xfrg8a",
+   "index": 1,
+   "xy": [
+    -0.02328249253332615,
+    -0.0010587918804958463
+   ],
+   "hits": []
+  },
+  {
+   "id": "5xgba7grq5g8n6cd4xbnphnnc",
+   "index": 2,
+   "xy": [
+    -3.3099613189697266,
+    -1.1808089017868042
+   ],
+   "hits": []
+  },
+  {
+   "id": "k0c7w1dg8e5cadgehg2f993rb",
+   "index": 3,
+   "xy": [
+    -1.084860920906067,
+    0.21812814474105835
+   ],
+   "hits": []
+  },
+  {
+   "id": "uggdgbeszm922k3pk3bg329ra",
+   "index": 4,
+   "xy": [
+    -4.638821601867676,
+    -1.881956934928894
+   ],
+   "hits": []
+  },
+  {
+   "id": "4rk15kxh518f32xdzcz4cy5ea",
+   "index": 5,
+   "xy": [
+    -2.0478179454803467,
+    -1.1896425485610962
+   ],
+   "hits": []
+  },
+  {
+   "id": "6gepgkqcb2b4dif3uhg3f7ktc",
+   "index": 6,
+   "xy": [
+    -1.8973268270492554,
+    -1.1832820177078247
+   ],
+   "hits": []
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 0,
+  "stairs": 0,
+  "fire extinguisher": 0,
+  "fire alarm pull station": 0
+ },
+ "seconds": 41
+}

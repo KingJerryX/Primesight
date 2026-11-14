@@ -1,0 +1,121 @@
+{
+ "property_id": 240672,
+ "name": "One Corporate Plaza",
+ "address": "2525 Bay Area Blvd, Houston, TX",
+ "lat": 29.5765051,
+ "lon": -95.1080516,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 177450.0,
+ "typical_floor_sqft": 19247.0,
+ "year_built": 1984,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Independence Title",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 3646.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Spectrum Association Mgmt",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 2255.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stream Wealth Partners",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 2850.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rock Private Wealth Mgmt",
+   "floor": 1,
+   "suite": "135",
+   "sqft": 190.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "190",
+   "sqft": 1655.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Joseph P. Montalbano, PC",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 424.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UBS",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 6115.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aerotek",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 3467.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 9273.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Walker Consultants",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 4844.0,
+   "employees": 32,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "4vuncfM2wyf"
+ ]
+}

@@ -1,0 +1,408 @@
+{
+ "property_id": 246942,
+ "name": "Westside Towers West Bldg",
+ "address": "11845 Olympic Blvd, Los Angeles, CA",
+ "lat": 34.0333622,
+ "lon": -118.4521504,
+ "type": "Office",
+ "stories": 12,
+ "gross_sqft": 211636.0,
+ "typical_floor_sqft": 17636.0,
+ "year_built": 1985,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 6
+  }
+ ],
+ "tenants": [
+  {
+   "name": "ballnbounce",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 6240.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Home Helpers",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Harvey J. Miller, Inc.",
+   "floor": 5,
+   "suite": "530",
+   "sqft": 1764.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Khamoushian Law Group",
+   "floor": 5,
+   "suite": "520-1",
+   "sqft": 529.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Arash Hashemi",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 2116.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allen M. Yasser, PhD",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 2116.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wright Institute",
+   "floor": 5,
+   "suite": "505W",
+   "sqft": 6351.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "500W",
+   "sqft": 8793.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "515W",
+   "sqft": 1914.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mcgee Lerer & Associates",
+   "floor": 6,
+   "suite": "645",
+   "sqft": 2645.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ridge Capital Group",
+   "floor": 6,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "645W",
+   "sqft": 2949.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fowler Law Group",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 1764.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vault Mortgage Group",
+   "floor": 7,
+   "suite": "735",
+   "sqft": 1764.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wolfberg & Wolfberg, P.C",
+   "floor": 7,
+   "suite": "755",
+   "sqft": 1764.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Talin Babikian, PhD, ABPP",
+   "floor": 7,
+   "suite": "705",
+   "sqft": 882.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mitchell Law Corporation, APC",
+   "floor": 7,
+   "suite": "725-1",
+   "sqft": 1764.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Eric Hershler, APC",
+   "floor": 7,
+   "suite": "725",
+   "sqft": 1764.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DMS-Service LLC",
+   "floor": 8,
+   "suite": "880",
+   "sqft": 1764.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Citron & Citron",
+   "floor": 8,
+   "suite": "845",
+   "sqft": 2645.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Radio Hamrah",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 2569.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ariel Law Group",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 2645.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Independent Film & Television Alliance",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 2645.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "880W",
+   "sqft": 1508.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Gregory W. Smith, LLP",
+   "floor": 9,
+   "suite": "905",
+   "sqft": 1683.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Choi & Associates",
+   "floor": 9,
+   "suite": "980",
+   "sqft": 1699.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ninetynine Dreams",
+   "floor": 9,
+   "suite": "930W",
+   "sqft": 1436.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Ramin Soofer",
+   "floor": 9,
+   "suite": "901",
+   "sqft": 1664.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Steiner & Libo",
+   "floor": 9,
+   "suite": "910W",
+   "sqft": 4254.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Linn T Hodge & Sons Insurance",
+   "floor": 10,
+   "suite": "1045",
+   "sqft": 1940.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Foresight Mental Health",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 1764.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rondec International Inc",
+   "floor": 10,
+   "suite": "1025",
+   "sqft": 1764.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sitkoff, LLP",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 2011.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Karen Booth, LMFT",
+   "floor": 10,
+   "suite": "1080",
+   "sqft": 1764.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1050W",
+   "sqft": 3351.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lumar Corporation",
+   "floor": 10,
+   "suite": "1042W",
+   "sqft": 1184.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1000W",
+   "sqft": 5805.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chami Law, PC",
+   "floor": 11,
+   "suite": "1125",
+   "sqft": 3527.0,
+   "employees": 32,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Village Workspaces",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 9171.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Real Estate Purview Inc",
+   "floor": 11,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Olida",
+   "floor": 12,
+   "suite": "1250W",
+   "sqft": 4305.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "2VqZdbG2nX8",
+  "Mt5tHXCLo2U",
+  "dtitsVDqk6e",
+  "feUYUxek5aT",
+  "q3xHphwy4mu",
+  "rR6qDyGkPTD",
+  "rUFvVgeenFF"
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "property_id": 240024,
+ "name": "Cypress Station Medical Building",
+ "address": "1140 Cypress Station Dr, Houston, TX",
+ "lat": 30.02291,
+ "lon": -95.439658,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 52040.0,
+ "typical_floor_sqft": 17346.0,
+ "year_built": 1981,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "hstrRGEbwtp"
+ ]
+}

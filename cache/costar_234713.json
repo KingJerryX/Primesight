@@ -1,0 +1,34 @@
+{
+ "property_id": 234713,
+ "name": null,
+ "address": "1401 Greengrass Dr, Houston, TX",
+ "lat": 29.7954083,
+ "lon": -95.4431897,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 127476.0,
+ "typical_floor_sqft": 127476.0,
+ "year_built": 1969,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "ReadySpaces",
+   "floor": 1,
+   "suite": null,
+   "sqft": 105876.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "NABekxs4X9J",
+  "RF1CYsgy37Z",
+  "hvE6L6gGnVC",
+  "xXZCAJtmRY6"
+ ]
+}

@@ -1,0 +1,256 @@
+{
+ "text": "Stroke symptoms, 62 year old man, 11th floor, 11767 Katy Fwy, Houston.",
+ "out": {
+  "briefing": "PRIMESIGHT | STROKE | FLOOR 11\nMemorial Pointe - 11767 Katy Fwy, Houston, TX\nELEVATOR: freight car on record (fits stretcher), plus 4 passenger cars\nON FLOOR: Enuit (44 staff, no suite listed); Atlas Law Firm (ste 1100/100A); Texas Sports & Civil Engineering LLC (ste 1112); Safe Place Counseling (ste 1130); Oci International (ste 1140); World Financial Group (ste 1160); Imenco UK Ltd (ste 1170)\nHEADCOUNT: ~65 people on this floor by tenant headcount (daytime)\nTENANT RISK: Safe Place Counseling ste 1130, possible counseling clients on floor (from name only)\nWHO TO ASK: PROPERTY MGR Interra Properties LLC 5557435171, texted to meet crew at main entrance and hold freight car\nINSIDE: 3D scan of this floor, 9 scan points\nBUILDING: 11 stories, built 1982, steel frame, sprinklers: yes\nOPEN LOT for staging ~533 m NW (aerial search, verify)\nNOT KNOWN: patient suite, freight elevator location, AED location, sprinkler type, stair locations\nSCAN: https://my.matterport.com/show/?m=xGJuw2FR8Pt",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\237089_xGJuw2FR8Pt_plan.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\237089_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/237089_xGJuw2FR8Pt_plan.jpg",
+   "/img/237089_aerial.jpg"
+  ],
+  "property_id": 237089,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire Dept EMS: medical emergency (stroke) on floor 11, Memorial Pointe. Please meet the EMS crew at the main entrance and hold the freight elevator at the lobby if possible."
+   }
+  ],
+  "tenant_flags": [
+   {
+    "tenant": "Safe Place Counseling",
+    "floor": 11,
+    "risk": "Possible: clients in emotional distress may be on floor 11 near the patient (from name only)",
+    "why": "The name suggests a counseling practice (suite 1130, 10 employees). No description confirms what it does. Approach calmly and expect bystanders who may need support.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "medical",
+   "floor": 11,
+   "building": {
+    "name": "Memorial Pointe",
+    "address": "11767 Katy Fwy, Houston, TX",
+    "stories": 11,
+    "year_built": 1982,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 16,
+     "tenants": [
+      "Gexcon Inc",
+      "Houston Regenerative Therapy",
+      "Khys-kiss Fm 98.5",
+      "Kronovil Resources, LLC",
+      "Melaroo Llc",
+      "Menard Group Usa",
+      "Revolution 32",
+      "Specialized Management, Inc."
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 0,
+     "tenants": [
+      "Luton & Associates"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 1,
+     "tenants": [
+      "Behrmann Law Firm",
+      "C MACC",
+      "CCS International, Inc",
+      "CORE GROUP",
+      "Envoy Immigration PLLC",
+      "Fuller Contractors LLC",
+      "Patterson Rushlow & Dodson LLC - CPA",
+      "Toumas Financial Services",
+      "Unknown tenant",
+      "Woodmen Life"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 31,
+     "tenants": [
+      "AEI Consultants",
+      "Association Of Interna",
+      "Edward Jones Investments",
+      "Emerge Finacial Group",
+      "Famers Insurance",
+      "InsureOne",
+      "MWA Architects, Inc.",
+      "Relational Psychotherapy, PLLC"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 5,
+     "people": 10,
+     "tenants": [
+      "HTX Endodontics",
+      "Legacy Insurance Advisors",
+      "MD Petroleum, Inc.",
+      "Noble Mortgage & Investments, LLC",
+      "Primerica Ward & Associates",
+      "TUVRheinland | Risktee",
+      "Tung Le",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 5,
+     "tenants": [
+      "Eric Albora-state Farm Insurance Agent",
+      "Ruff Roofing",
+      "State Farm | Eric Albora",
+      "Unknown tenant",
+      "WTS Energy"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 7,
+     "people": 9,
+     "tenants": [
+      "C.T.G Industries, Inc",
+      "Intelismart, LLC",
+      "James Fisher Decommissioning",
+      "Looney, Smith & Conrad, PC",
+      "SPK Vehicle Parts Corp",
+      "Sharp Vision Software",
+      "Weafri Well Services"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 100,
+     "tenants": [
+      "HM Insurance Group",
+      "Jeffrey Jackson & Associates, PLLC",
+      "Raif\u2019s Tax and Bookkeeping",
+      "TRC Companies, Inc."
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 23,
+     "tenants": [
+      "AAB Medical Laboratory Evaluation",
+      "JD Herberger & Associates, PC",
+      "KEA Structural Engineers",
+      "Moyer, Lewis & Patton LLP",
+      "Primerica",
+      "Recana",
+      "Schaumburg & Polk Inc"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 30,
+     "tenants": [
+      "Ardurra",
+      "Hope BP, LLC",
+      "Jones Engineering",
+      "Sitewide Project Solutions"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 65,
+     "tenants": [
+      "Atlas Law Firm",
+      "Enuit",
+      "Imenco UK Ltd",
+      "Oci International",
+      "Safe Place Counseling",
+      "Texas Sports & Civil Engineering LLC",
+      "World Financial Group"
+     ],
+     "scanned": true,
+     "seen": null
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 123,
+     "dir": "NW",
+     "lat": 29.78405804393213,
+     "lon": -95.5948546682709
+    }
+   ],
+   "staging": [
+    {
+     "m": 533,
+     "dir": "NW",
+     "lat": 29.786727104999997,
+     "lon": -95.597877505,
+     "score": 0.237
+    },
+    {
+     "m": 430,
+     "dir": "NE",
+     "lat": 29.786727104999997,
+     "lon": -95.591011045,
+     "score": 0.222
+    },
+    {
+     "m": 350,
+     "dir": "N",
+     "lat": 29.786727104999997,
+     "lon": -95.593070985,
+     "score": 0.219
+    }
+   ],
+   "scan": {
+    "floor": 11,
+    "exact": true,
+    "link": "https://my.matterport.com/show/?m=xGJuw2FR8Pt"
+   },
+   "vision": null,
+   "walk": null,
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire Dept EMS: medical emergency (stroke) on floor 11, Memorial Pointe. Please meet the EMS crew at the main entrance and hold the freight elevator at the lobby if possible."
+    }
+   ],
+   "tenant_flags": [
+    {
+     "tenant": "Safe Place Counseling",
+     "floor": 11,
+     "risk": "Possible: clients in emotional distress may be on floor 11 near the patient (from name only)",
+     "why": "The name suggests a counseling practice (suite 1130, 10 employees). No description confirms what it does. Approach calmly and expect bystanders who may need support.",
+     "from_name_only": true
+    }
+   ],
+   "call": "Stroke symptoms, 62 year old man, 11th floor, 11767 Katy Fwy, Houston."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Stroke symptoms, 62 year old man, 11th floor, 11767 Katy Fwy, Houston.\"}\n{\"t\": 0.49, \"step\": \"address_lookup\", \"detail\": \"11767 Katy Fwy, Houston -> 237089\"}\n{\"t\": 3.04, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"11767 Katy Fwy, Houston\\\"}\"}\n{\"t\": 3.04, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/medical/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 3.04, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 5.3, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 237089, \\\"floor\\\": 11, \\\"incident\\\": \\\"medical\\\", \\\"incident_type\\\": \\\"stroke\\\"}\"}\n{\"t\": 5.31, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/237089.md\\\"}\"}\n{\"t\": 20.5, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: medical, stroke, 62-year-old man, floor 11, Memorial Pointe, 11767 Katy Fwy, Houston TX (11 stories). Flag occupants that change the response\"}\n{\"t\": 20.5, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Write and queue a short text to the building's people so they can meet the EMS crew. Incident: medical - stroke, 62-year-old man, floor 11 (patient s\"}\n{\"t\": 24.95, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire Dept EMS: medical emergency (stroke) on floor 11, Memorial Pointe. Please meet the EMS crew at the main entrance and hold the freight elevator at the lobby if \"}\n{\"t\": 36.1, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 237089, \\\"note\\\": \\\"Medical/stroke, 62M, floor 11 (suite not given). Briefed: freight car on record, location unknown; property mgr Interra Properties texted to meet crew at main entrance\"}\n{\"t\": 52.76, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 52.76, \"step\": \"usage\", \"detail\": \"97513 in / 4627 out tokens, ~$0.48\"}\n{\"t\": 52.77, \"step\": \"done\", \"detail\": \"12 lines, 2 images\"}\n"
+}

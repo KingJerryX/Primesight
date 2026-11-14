@@ -1,0 +1,135 @@
+{
+ "property_id": 352552,
+ "name": "West Bldg",
+ "address": "5757 Woodway Dr, Houston, TX",
+ "lat": 29.7602885,
+ "lon": -95.4819592,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 106176.0,
+ "typical_floor_sqft": 2.0,
+ "year_built": 1977,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Complete Women's Care Center",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 8895.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "First Investors Financial Service Inc",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 11152.0,
+   "employees": 103,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 6241.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "pediatrix",
+   "floor": 2,
+   "suite": "275",
+   "sqft": 1631.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "StoneX",
+   "floor": 2,
+   "suite": "277",
+   "sqft": 2124.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ethos Wellness",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 11027.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tranquility Spa",
+   "floor": 2,
+   "suite": "255",
+   "sqft": 1327.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "276",
+   "sqft": 2203.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "270",
+   "sqft": 4856.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Antidote",
+   "floor": 3,
+   "suite": "315",
+   "sqft": 923.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Urban Office",
+   "floor": 3,
+   "suite": null,
+   "sqft": 3982.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "First Investors Financial Service Inc",
+   "floor": 4,
+   "suite": null,
+   "sqft": 26800.0,
+   "employees": 103,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "zoVUW1NuuDA"
+ ]
+}

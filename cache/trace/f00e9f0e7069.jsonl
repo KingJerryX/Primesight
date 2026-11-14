@@ -1,0 +1,5 @@
+{"t": 0.0, "step": "call_received", "detail": "Carbon monoxide alarm on the 18th floor, 1315 St Joseph Pky, Houston. 5+ people. Caller is building security. Time of ca"}
+{"t": 0.06, "step": "address_lookup", "detail": "1315 St Joseph Pky, Houston -> 234036"}
+{"t": 0.07, "step": "mode", "detail": "no ANTHROPIC_API_KEY: sending the draft briefing"}
+{"t": 0.07, "step": "gather_building", "detail": "floor 18, hazmat"}
+{"t": 7.24, "step": "done", "detail": "11 lines, 2 images"}

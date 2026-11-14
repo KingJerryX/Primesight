@@ -1,0 +1,14 @@
+{"t": 0.0, "step": "call_received", "detail": "Stroke symptoms, 62 year old man, 11th floor, 11767 Katy Fwy, Houston."}
+{"t": 0.49, "step": "address_lookup", "detail": "11767 Katy Fwy, Houston -> 237089"}
+{"t": 3.04, "step": "find_building", "detail": "{\"address\": \"11767 Katy Fwy, Houston\"}"}
+{"t": 3.04, "step": "read_file", "detail": "{\"file_path\": \"/playbook/skills/medical/SKILL.md\", \"limit\": 1000}"}
+{"t": 3.04, "step": "read_file", "detail": "{\"file_path\": \"/playbook/incidents.json\", \"limit\": 1000}"}
+{"t": 5.3, "step": "gather_building", "detail": "{\"property_id\": 237089, \"floor\": 11, \"incident\": \"medical\", \"incident_type\": \"stroke\"}"}
+{"t": 5.31, "step": "read_file", "detail": "{\"file_path\": \"/buildings/237089.md\"}"}
+{"t": 20.5, "step": "task", "detail": "{\"subagent_type\": \"tenant-risk\", \"description\": \"Incident: medical, stroke, 62-year-old man, floor 11, Memorial Pointe, 11767 Katy Fwy, Houston TX (11 stories). Flag occupants that change the response"}
+{"t": 20.5, "step": "task", "detail": "{\"subagent_type\": \"notify-writer\", \"description\": \"Write and queue a short text to the building's people so they can meet the EMS crew. Incident: medical - stroke, 62-year-old man, floor 11 (patient s"}
+{"t": 24.95, "step": "helper:queue_text", "detail": "{\"to\": \"property manager\", \"text\": \"Fire Dept EMS: medical emergency (stroke) on floor 11, Memorial Pointe. Please meet the EMS crew at the main entrance and hold the freight elevator at the lobby if "}
+{"t": 36.1, "step": "add_building_note", "detail": "{\"property_id\": 237089, \"note\": \"Medical/stroke, 62M, floor 11 (suite not given). Briefed: freight car on record, location unknown; property mgr Interra Properties texted to meet crew at main entrance"}
+{"t": 52.76, "step": "graded", "detail": "satisfied"}
+{"t": 52.76, "step": "usage", "detail": "97513 in / 4627 out tokens, ~$0.48"}
+{"t": 52.77, "step": "done", "detail": "12 lines, 2 images"}

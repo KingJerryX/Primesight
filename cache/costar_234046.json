@@ -1,0 +1,280 @@
+{
+ "property_id": 234046,
+ "name": "Thirty Fifty Post Oak",
+ "address": "3050 Post Oak Blvd, Houston, TX",
+ "lat": 29.7338495,
+ "lon": -95.4628448,
+ "type": "Office",
+ "stories": 17,
+ "gross_sqft": 352857.0,
+ "typical_floor_sqft": 19920.0,
+ "year_built": 1979,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 9
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Murphy's Deli",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 4216.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arjunani CPA PLLC",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 4216.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 2379.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alamo Title Company",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1050.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "230",
+   "sqft": 1051.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stavian Chemical America",
+   "floor": 2,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Opus Virtual Offices, LLC",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 1992.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BENTELER",
+   "floor": 5,
+   "suite": null,
+   "sqft": 8000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Visuray LLC",
+   "floor": 5,
+   "suite": null,
+   "sqft": 2454.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "695",
+   "sqft": 2472.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wolong Electric Group",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 1992.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pickett Law Group, PLLC",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 1992.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "688",
+   "sqft": 888.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sinopec",
+   "floor": 7,
+   "suite": "1200",
+   "sqft": 12285.0,
+   "employees": 212,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 7635.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "825",
+   "sqft": 1172.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unipec America, Inc.",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 19920.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kendall Heaton Associates Inc",
+   "floor": 10,
+   "suite": null,
+   "sqft": 19920.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sinopec",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 19920.0,
+   "employees": 212,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Freepoint Commodities",
+   "floor": 13,
+   "suite": null,
+   "sqft": 17928.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Iserviceglobe LLC",
+   "floor": 13,
+   "suite": "1350",
+   "sqft": 1492.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fuel Exchange LLC",
+   "floor": 13,
+   "suite": "1355",
+   "sqft": null,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Airswift",
+   "floor": 14,
+   "suite": "1450",
+   "sqft": 19920.0,
+   "employees": 160,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Xceed Office",
+   "floor": 15,
+   "suite": null,
+   "sqft": 19920.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tecnicas Reunidas, S.A.",
+   "floor": 16,
+   "suite": "1625",
+   "sqft": 5864.0,
+   "employees": 39,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sharon L. Michaels",
+   "floor": 17,
+   "suite": "1750",
+   "sqft": 1992.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 17,
+   "suite": "1720",
+   "sqft": 2058.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Hines",
+   "phone": "5551985444"
+  }
+ ],
+ "matterport_models": [
+  "vYmk2f9zy7j"
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "property_id": 353482,
+ "name": null,
+ "address": "6003 Bellaire Blvd, Houston, TX",
+ "lat": 29.704963,
+ "lon": -95.487373,
+ "type": "GeneralRetail",
+ "stories": 1,
+ "gross_sqft": 31200.0,
+ "typical_floor_sqft": 31200.0,
+ "year_built": 1977,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Brault Auto Paint & Supply",
+   "floor": 1,
+   "suite": "E",
+   "sqft": 2100.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EZPAWN",
+   "floor": 1,
+   "suite": "B",
+   "sqft": 3467.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ortiz Dental",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1555.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Freeway Insurance",
+   "floor": 1,
+   "suite": "D",
+   "sqft": 2000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aracely Express Insurance",
+   "floor": 1,
+   "suite": "F",
+   "sqft": 1855.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Facilito USA",
+   "floor": 1,
+   "suite": "6003 'G'",
+   "sqft": 1300.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KAK Sourcing",
+   "floor": 1,
+   "suite": "K",
+   "sqft": 2150.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "BoqDzrD8JLh"
+ ]
+}

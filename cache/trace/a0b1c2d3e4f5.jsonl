@@ -1,0 +1,9 @@
+{"t": 0.0, "step": "call_received", "detail": "Smoke reported on the 11th floor at 2100 West Loop South, Houston. Caller says the hallway is filling up."}
+{"t": 0.02, "step": "address_lookup", "detail": "2100 West Loop South, Houston -> 234088"}
+{"t": 2.02, "step": "find_building", "detail": "{\"address\": \"2100 West Loop South, Houston\"}"}
+{"t": 3.96, "step": "gather_building", "detail": "{\"property_id\": 234088, \"floor\": 11, \"incident\": \"fire\"}"}
+{"t": 3.96, "step": "read_file", "detail": "{\"file_path\": \"/buildings/234088.md\"}"}
+{"t": 13.47, "step": "task", "detail": "{\"subagent_type\": \"tenant-risk\", \"description\": \"Building 2100 West Loop South, Houston, fire on floor 11. Flag tenants that change response (vulnerable people, e.g. clinics/surgery centers with sedat"}
+{"t": 28.62, "step": "add_building_note", "detail": "{\"property_id\": 234088, \"note\": \"FIRE call, floor 11: smoke reported, caller said hallway filling. Briefing sent. Surgery center ste 1115 on 11 and plastic surgery practice on 12 flagged for possible "}
+{"t": 32.73, "step": "usage", "detail": "38361 in / 2970 out tokens, ~$0.21"}
+{"t": 32.73, "step": "done", "detail": "10 lines, 2 images"}

@@ -1,0 +1,416 @@
+{
+ "property_id": 239873,
+ "name": "Vibe Hobby",
+ "address": "8866 Gulf Fwy, Houston, TX",
+ "lat": 29.6623127,
+ "lon": -95.2589941,
+ "type": "Office",
+ "stories": 5,
+ "gross_sqft": 89501.0,
+ "typical_floor_sqft": 17900.0,
+ "year_built": 1983,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Lindale Healthcare Clinic",
+   "floor": 1,
+   "suite": "122",
+   "sqft": 1000.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Pablo Rodriguez Jr.",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 996.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Talamantes Design",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 1255.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rendon & Associates",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2738.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 1538.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 1903.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "117",
+   "sqft": 792.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Innova Realty Group",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 1754.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vibe Office Properties",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 8909.0,
+   "employees": 59,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 784.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LMCN Corporation",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 2372.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 880.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 530.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "295",
+   "sqft": 1899.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of M. Elena Navarro",
+   "floor": 2,
+   "suite": null,
+   "sqft": 662.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 784.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "384",
+   "sqft": 1083.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "390",
+   "sqft": 614.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "301",
+   "sqft": 1193.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "385",
+   "sqft": 698.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SAGE Truck Driving School",
+   "floor": 3,
+   "suite": "335",
+   "sqft": 1480.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "380",
+   "sqft": 907.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Legacy Home Health Care",
+   "floor": 3,
+   "suite": "384",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cristobal Batarse",
+   "floor": 3,
+   "suite": "380",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 970.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 3342.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "401",
+   "sqft": 1368.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "INC Nautical L.P.",
+   "floor": 4,
+   "suite": "430",
+   "sqft": 4161.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 970.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royal T Energy Llc",
+   "floor": 4,
+   "suite": "425",
+   "sqft": null,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 970.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AtWork Houston East",
+   "floor": 5,
+   "suite": "530",
+   "sqft": 1003.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "535",
+   "sqft": 1099.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 1234.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 2299.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gulf Harbor Shipping LLC",
+   "floor": 5,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 3300.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "525",
+   "sqft": 792.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "545",
+   "sqft": 753.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 298
+  },
+  {
+   "type": "SurfaceTandem",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  },
+  {
+   "type": "CoveredTandem",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "PgQxLGrVujC",
+  "QB5AhU1bLSH",
+  "bptKZKChzrE",
+  "szdeKc4TjsE"
+ ]
+}

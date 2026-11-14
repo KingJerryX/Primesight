@@ -1,0 +1,59 @@
+{
+ "property_id": 234136,
+ "name": null,
+ "address": "15421 Vantage Pky, Houston, TX",
+ "lat": 29.94384,
+ "lon": -95.367325,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 43786.0,
+ "typical_floor_sqft": 43786.0,
+ "year_built": 1980,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "All Business Network Specialists",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 10278.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Global Importing Group",
+   "floor": 1,
+   "suite": "108",
+   "sqft": 11634.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hi-Tech Truck Rigging & Equipment",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 12387.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sealweld USA Inc",
+   "floor": 1,
+   "suite": "118",
+   "sqft": 12421.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "S8QfSSA4Bam",
+  "VZjNSwKWVuA"
+ ]
+}

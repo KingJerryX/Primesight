@@ -1,0 +1,305 @@
+{
+ "property_id": 234036,
+ "name": "MEDPLACE",
+ "address": "1315 St Joseph Pky, Houston, TX",
+ "lat": 29.7485811,
+ "lon": -95.3669641,
+ "type": "Office",
+ "stories": 18,
+ "gross_sqft": 491736.275,
+ "typical_floor_sqft": 15000.0,
+ "year_built": 1984,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 6
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Health Mart Pharmacy",
+   "floor": 1,
+   "suite": "1",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Scalp Micropigmentation",
+   "floor": 3,
+   "suite": "301.",
+   "sqft": 758.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "St Joseph Primary Care",
+   "floor": 8,
+   "suite": "806",
+   "sqft": 965.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Greater Houston Gynecology P.A.",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 1554.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lepow Foot and Ankle Specialists",
+   "floor": 10,
+   "suite": "1002",
+   "sqft": 2156.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Luda Kamenetsky, M.D.",
+   "floor": 11,
+   "suite": "1101a",
+   "sqft": 114.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Louis H Roddy MD",
+   "floor": 11,
+   "suite": "1101",
+   "sqft": 553.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Livingwell Health Centers",
+   "floor": 11,
+   "suite": "1102",
+   "sqft": 584.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": null,
+   "sqft": 1319.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1107",
+   "sqft": 1319.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diabetes Center of Houston",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 2849.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sagis Diagnostics",
+   "floor": 12,
+   "suite": "1208",
+   "sqft": 570.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Curative Digestive Disease Center",
+   "floor": 12,
+   "suite": "1210",
+   "sqft": 758.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tony Pham, MD, PhD, Psychiatrist",
+   "floor": 13,
+   "suite": "1307",
+   "sqft": 2011.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Moore Dermatology",
+   "floor": 13,
+   "suite": "1305",
+   "sqft": 2345.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Esteem Psychiatry, Pllc",
+   "floor": 13,
+   "suite": "1307",
+   "sqft": null,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pierre Physician Group",
+   "floor": 15,
+   "suite": "1503",
+   "sqft": 979.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "St Joseph Multispecialty Clinic",
+   "floor": 15,
+   "suite": "1507",
+   "sqft": 5178.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Robert J. Cornell, MD",
+   "floor": 17,
+   "suite": "1700",
+   "sqft": 1137.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vital Wound Care",
+   "floor": 17,
+   "suite": "1703",
+   "sqft": 959.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "St. Joseph Medical Center",
+   "floor": 17,
+   "suite": "1707",
+   "sqft": 3872.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 17,
+   "suite": null,
+   "sqft": 959.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Women's Healthcare Associates",
+   "floor": 18,
+   "suite": "1818",
+   "sqft": 2752.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reddy Oncology",
+   "floor": 18,
+   "suite": "1801",
+   "sqft": 568.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Whole Mind",
+   "floor": 18,
+   "suite": "1810",
+   "sqft": 2713.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 18,
+   "suite": null,
+   "sqft": 2713.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 18,
+   "suite": null,
+   "sqft": 2922.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Lincoln Property Company",
+   "phone": "5553332945"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "SurfaceTandem",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": 411
+  },
+  {
+   "type": "CoveredTandem",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "7uM5JKssTED",
+  "Dd9Z7AD9yoy",
+  "EK8LMNkDsv3",
+  "wrBi6MkjTow"
+ ]
+}

@@ -1,0 +1,109 @@
+{
+ "property_id": 27120,
+ "name": "Culver Connect",
+ "address": "3000 Robertson Blvd, Los Angeles, CA",
+ "lat": 34.0324178,
+ "lon": -118.3894581,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 114107.0,
+ "typical_floor_sqft": 28195.0,
+ "year_built": 1986,
+ "construction": "WoodFrame",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Flyby Robotics, Inc.",
+   "floor": 1,
+   "suite": "135",
+   "sqft": 2414.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Michelson Philanthropies",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 12037.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LAUSD",
+   "floor": 1,
+   "suite": "100, 130",
+   "sqft": 5647.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sequoia Productions",
+   "floor": 2,
+   "suite": "270",
+   "sqft": 3258.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Complete Care Community Health Center",
+   "floor": 2,
+   "suite": "280, 290, 265",
+   "sqft": 4187.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hensel Phelps",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 5006.0,
+   "employees": 193,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LAUSD",
+   "floor": 2,
+   "suite": "245, 220",
+   "sqft": 5707.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kaiser Permanente",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 26871.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "ZSPaQbkGcJJ",
+  "bMvhEqFSFbm",
+  "hjSoaugLyHY"
+ ]
+}

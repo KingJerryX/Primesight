@@ -1,0 +1,347 @@
+{
+ "property_id": 246936,
+ "name": null,
+ "address": "11777 San Vicente Blvd, Los Angeles, CA",
+ "lat": 34.053408,
+ "lon": -118.468392,
+ "type": "Office",
+ "stories": 9,
+ "gross_sqft": 99111.0,
+ "typical_floor_sqft": 16518.0,
+ "year_built": 1974,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Franklin Educational Services",
+   "floor": 1,
+   "suite": "129",
+   "sqft": 6442.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Katsuya",
+   "floor": 1,
+   "suite": "11777",
+   "sqft": 5781.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Matu Kai",
+   "floor": 1,
+   "suite": "134",
+   "sqft": 4130.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Board Of Optometry License",
+   "floor": 1,
+   "suite": null,
+   "sqft": 165.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Goldstein Planting Investments",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 2479.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ESM Prep",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 2973.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Montalvo",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 2973.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marashi, Jon, DDS",
+   "floor": 5,
+   "suite": "521",
+   "sqft": 2478.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stearns & Ryan, Lawyers",
+   "floor": 5,
+   "suite": "555",
+   "sqft": 2478.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "pass the OT",
+   "floor": 5,
+   "suite": "502",
+   "sqft": 2973.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Madison Partners",
+   "floor": 5,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 34,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mashian Law Group, APC",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 2048.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Saber Real Estate Partners",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 2148.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SME Entertainment Group",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 2375.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Natural Grace",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 2048.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bartman Bros",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 2048.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Govic Capital",
+   "floor": 6,
+   "suite": "601",
+   "sqft": 2048.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Scott Harris, PhD",
+   "floor": 6,
+   "suite": "606",
+   "sqft": 1652.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sheinbein Robert",
+   "floor": 6,
+   "suite": "665",
+   "sqft": 2048.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Robin Hunter, LMFT",
+   "floor": 6,
+   "suite": "670",
+   "sqft": 664.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Alan Yellin, Ph.D.",
+   "floor": 7,
+   "suite": "703",
+   "sqft": 1652.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Carol Yellin MFT",
+   "floor": 7,
+   "suite": "703-1",
+   "sqft": 198.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Corbel Capital Partners",
+   "floor": 7,
+   "suite": "777",
+   "sqft": 2478.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Douglas Emmett Management, LLC",
+   "floor": 7,
+   "suite": "780",
+   "sqft": 1652.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brentwood Therapy Collective",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 1652.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Expak Logistics",
+   "floor": 7,
+   "suite": "747",
+   "sqft": 2147.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eric C. Li MD",
+   "floor": 7,
+   "suite": "790",
+   "sqft": 2147.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The McGregor Company",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 1444.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dynamic Petaluma Investments, LLC",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 3304.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Valle Makoff",
+   "floor": 8,
+   "suite": "890",
+   "sqft": 3084.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Agency",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 2478.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "A Better Tomorrow Films",
+   "floor": 8,
+   "suite": "880",
+   "sqft": 2478.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lowe",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 16353.0,
+   "employees": 51,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hospitality at Work, A Lowe Company",
+   "floor": 9,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Covered",
+   "spaces": 100
+  }
+ ],
+ "matterport_models": [
+  "kaNeqxbzqTe"
+ ]
+}

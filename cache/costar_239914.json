@@ -1,0 +1,199 @@
+{
+ "property_id": 239914,
+ "name": "York Centre",
+ "address": "10235 Little York Rd, Houston, TX",
+ "lat": 29.8673927,
+ "lon": -95.5511049,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 122428.0,
+ "typical_floor_sqft": 29960.0,
+ "year_built": 1982,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  }
+ ],
+ "tenants": [
+  {
+   "name": "ARC Real Estate Management",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 7490.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Associated Services Inspections",
+   "floor": 1,
+   "suite": "111",
+   "sqft": 508.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Manpower",
+   "floor": 1,
+   "suite": "159a",
+   "sqft": 2996.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Brenda Hassebrock DC Chiropractor",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 5992.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "White Shaver PC",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 1498.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "West Harris County Regional Water Authority",
+   "floor": 1,
+   "suite": "168",
+   "sqft": 2696.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texan Title Insurance Company",
+   "floor": 1,
+   "suite": "158",
+   "sqft": 1498.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Premium Health Now Inc",
+   "floor": 1,
+   "suite": "100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "111",
+   "sqft": 3952.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "OEG, LLC",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 2996.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "80:20 Procurement",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 3296.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Seal Building Enclosure",
+   "floor": 2,
+   "suite": "255",
+   "sqft": 2390.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Adroit",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 14980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Lutheran University",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 15300.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unified Building Sciences",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 2073.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lloyd & Lorkowski",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 3000.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Investors Financial Services",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 1498.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SB Designs TX LLC",
+   "floor": 4,
+   "suite": "446",
+   "sqft": 1498.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Porteo Group Llc",
+   "floor": 4,
+   "suite": "445",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "S8Mbgjc2vqQ",
+  "jbR6PcGEELD"
+ ]
+}

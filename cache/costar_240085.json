@@ -1,0 +1,329 @@
+{
+ "property_id": 240085,
+ "name": "Timberway II",
+ "address": "15995 Barkers Landing Rd, Houston, TX",
+ "lat": 29.7801853,
+ "lon": -95.6414534,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 184965.0,
+ "typical_floor_sqft": 61655.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Kenexis",
+   "floor": 1,
+   "suite": "143",
+   "sqft": 2641.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GeoTomo",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 4969.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Enable Dental",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 3111.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "First Level Financial",
+   "floor": 1,
+   "suite": "111",
+   "sqft": 2324.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Waddell Serafino Geary Rechner Jenevein, PC.",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 3083.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Farmers Insurance",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 1901.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Baker Bloomberg & Associates",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 6166.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trinity Consultants",
+   "floor": 1,
+   "suite": null,
+   "sqft": 7091.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Early McClintic McMillan",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2324.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BW Design Group",
+   "floor": 2,
+   "suite": "208, 230",
+   "sqft": 2848.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TAQA",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 6176.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Catamount Funding, Inc.",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 3188.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lyssy Law Firm",
+   "floor": 2,
+   "suite": "274",
+   "sqft": 1700.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CEC Energy Services",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 1650.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cordax",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 2786.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wildcat Heavy Haul",
+   "floor": 2,
+   "suite": "270",
+   "sqft": 2400.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Front Energies",
+   "floor": 2,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BW Offshore USA Management LLC",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 6670.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hartman Management Corporation",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 553.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wildcat Heavy Haul",
+   "floor": 2,
+   "suite": "270aa",
+   "sqft": 6166.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zap Engineering & Construction Services,Inc",
+   "floor": 2,
+   "suite": "265",
+   "sqft": 3919.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "207",
+   "sqft": 1358.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MKA International, Inc.",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 2500.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jones Wellness Center",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 1270.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ANDARES Homes",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 2468.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fenix Solutions",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 4692.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aesthetica MD Spa",
+   "floor": 3,
+   "suite": null,
+   "sqft": 3500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Five S Group",
+   "floor": 3,
+   "suite": "360",
+   "sqft": 2039.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Floris & Floris Pllc",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 850.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Remitite",
+   "floor": 3,
+   "suite": "364",
+   "sqft": 3083.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Enroute",
+   "floor": 3,
+   "suite": "315",
+   "sqft": 3083.0,
+   "employees": 42,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ILJIN USA INC",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 2500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morpheus",
+   "floor": 3,
+   "suite": "307",
+   "sqft": 12331.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 3663.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "ESAEmU1Ur2s",
+  "ockue63jzNt"
+ ]
+}

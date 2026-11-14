@@ -1,0 +1,131 @@
+{
+ "model_id": "8DW9Tug1jxw",
+ "name": "7457 Harwin Drive Suite 328",
+ "floor": 3,
+ "sweeps": [
+  {
+   "id": "baqmeth6rwet27snq4a45qsgd",
+   "index": 0,
+   "xy": [
+    -0.6020221710205078,
+    -1.4569060802459717
+   ],
+   "hits": []
+  },
+  {
+   "id": "iag5egbzzhheptybgggekapfd",
+   "index": 1,
+   "xy": [
+    -0.007328868843615055,
+    0.006553919520229101
+   ],
+   "hits": []
+  },
+  {
+   "id": "ma9su7iigbxg63dq990kp13zc",
+   "index": 2,
+   "xy": [
+    -1.6576544046401978,
+    -1.5395805835723877
+   ],
+   "hits": []
+  },
+  {
+   "id": "m3agy28pyzixykur0in4tt74c",
+   "index": 3,
+   "xy": [
+    -2.788050651550293,
+    -5.267266273498535
+   ],
+   "hits": []
+  },
+  {
+   "id": "s3c97x7zxef7uyq3theg7z8da",
+   "index": 4,
+   "xy": [
+    -2.4554929733276367,
+    0.16284985840320587
+   ],
+   "hits": []
+  },
+  {
+   "id": "i4wgb8mq6hw5hfiu97z7ffyud",
+   "index": 5,
+   "xy": [
+    -0.051433853805065155,
+    -5.241725444793701
+   ],
+   "hits": []
+  },
+  {
+   "id": "2m7f949hz5d89dkyd0wynmg1a",
+   "index": 6,
+   "xy": [
+    -4.4066386222839355,
+    0.33515074849128723
+   ],
+   "hits": []
+  },
+  {
+   "id": "txz5gn2uzk7bcq9uacm0ca9nb",
+   "index": 7,
+   "xy": [
+    -3.650991678237915,
+    1.128501296043396
+   ],
+   "hits": []
+  },
+  {
+   "id": "4dwzhapbe0hhaankss8506ffb",
+   "index": 8,
+   "xy": [
+    -4.223445415496826,
+    -2.5618302822113037
+   ],
+   "hits": []
+  },
+  {
+   "id": "h7xc9nfhy4ghah2izs1x1sx0b",
+   "index": 9,
+   "xy": [
+    -7.147334575653076,
+    -2.7195730209350586
+   ],
+   "hits": []
+  },
+  {
+   "id": "wfh853gr4cdzywusz9b7kqghd",
+   "index": 10,
+   "xy": [
+    -5.3532257080078125,
+    -4.728081226348877
+   ],
+   "hits": []
+  },
+  {
+   "id": "trgwdd34013iwe2ytbpwrup3b",
+   "index": 11,
+   "xy": [
+    0.1217963695526123,
+    -1.5700922012329102
+   ],
+   "hits": []
+  },
+  {
+   "id": "4rdh8ukhspm7rep1b8k5zg0tc",
+   "index": 12,
+   "xy": [
+    0.10175377875566483,
+    -3.5092227458953857
+   ],
+   "hits": []
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 0,
+  "stairs": 0,
+  "fire extinguisher": 0,
+  "fire alarm pull station": 0
+ },
+ "seconds": 79
+}

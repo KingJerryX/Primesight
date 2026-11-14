@@ -1,0 +1,595 @@
+{
+ "property_id": 236914,
+ "name": null,
+ "address": "1225 Loop Fwy, Houston, TX",
+ "lat": 29.8118174,
+ "lon": -95.421003,
+ "type": "Office",
+ "stories": 11,
+ "gross_sqft": 200418.0,
+ "typical_floor_sqft": 17863.0,
+ "year_built": 1984,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Parking",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "High Tower Cafe & Deli",
+   "floor": 1,
+   "suite": "118",
+   "sqft": 1745.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Heights Chiropractic Center",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 2847.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Coldwell Banker Realty - Heights",
+   "floor": 1,
+   "suite": "127",
+   "sqft": 4535.0,
+   "employees": 1505,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Johnson O'Connor Research Foundation",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 3744.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Salvato Interests",
+   "floor": 1,
+   "suite": "115",
+   "sqft": 3664.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EnerGeo Alliance",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 3368.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas A & M University",
+   "floor": 2,
+   "suite": "202",
+   "sqft": 10056.0,
+   "employees": 67,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stellar International Commercial Real Estate",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 1131.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Miller & Associates",
+   "floor": 2,
+   "suite": "212",
+   "sqft": 964.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Brokerage Inc.",
+   "floor": 2,
+   "suite": "214",
+   "sqft": 893.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Greg Buchanan, RFC",
+   "floor": 2,
+   "suite": "216",
+   "sqft": 1451.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "324",
+   "sqft": 1568.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HarmonyCares",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 4494.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Grand Oak Capital Managment",
+   "floor": 3,
+   "suite": "326",
+   "sqft": 893.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Vanguard Agency",
+   "floor": 3,
+   "suite": "322",
+   "sqft": 1786.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Court Reporters Clearinghouse",
+   "floor": 3,
+   "suite": "327",
+   "sqft": 1786.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Denuna Law Firm",
+   "floor": 3,
+   "suite": "324",
+   "sqft": 1568.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rack Route Technology, LLC",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 1786.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Title Data Incorporated",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 3573.0,
+   "employees": 45,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KSM",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 2381.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Italy-American Chamber of Commerce of Texas",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 3905.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The McKiernan Group",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 8004.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 2905.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Smith & Hassler",
+   "floor": 5,
+   "suite": "525",
+   "sqft": 7603.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Special Kids Care",
+   "floor": 5,
+   "suite": "520, 500",
+   "sqft": 5182.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "540",
+   "sqft": 2251.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prime Tine Executives",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 2827.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Monshaugen & Van Huff, P.C.",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 9031.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ranger Steel",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 5000.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 2079.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ranger Licensing",
+   "floor": 6,
+   "suite": "625",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bunker Steel Corporation",
+   "floor": 7,
+   "suite": "770",
+   "sqft": 1826.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Condon & Company, P.C.",
+   "floor": 7,
+   "suite": "725",
+   "sqft": 1268.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Luxury Homes Realty",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 1137.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Triton International Limited",
+   "floor": 7,
+   "suite": "705",
+   "sqft": 8375.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Old Republic Title Insurance Company",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 3000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "H2B, Inc.",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 8932.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wealth Benefit Advisors",
+   "floor": 8,
+   "suite": "815",
+   "sqft": 1974.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oaks Counseling Associates",
+   "floor": 8,
+   "suite": "825",
+   "sqft": 2491.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memphis Electronic",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 4466.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Van Leeuwen Pipe and Tube Group",
+   "floor": 8,
+   "suite": null,
+   "sqft": 3108.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Title Data Incorporated",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 5158.0,
+   "employees": 45,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Bayley Law Firm, PLLC",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 3573.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PractiSage Therapist Collective",
+   "floor": 9,
+   "suite": "935",
+   "sqft": 3573.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "909",
+   "sqft": 3042.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "910",
+   "sqft": 2517.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Patrick M. Flynn",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 3505.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chirosports Performance & Rehab",
+   "floor": 10,
+   "suite": "1010",
+   "sqft": 1429.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "IMS Engineers",
+   "floor": 10,
+   "suite": "1020",
+   "sqft": 4830.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daiichi Jitsugyo America Inc",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 1441.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Conceal Touch",
+   "floor": 10,
+   "suite": "1040",
+   "sqft": 2144.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Top Notch Garage Doors, LLC",
+   "floor": 10,
+   "suite": "1015",
+   "sqft": 893.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Spearpoint Resources",
+   "floor": 10,
+   "suite": "1055",
+   "sqft": 3621.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1010",
+   "sqft": 1086.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tange, Mann & Garza",
+   "floor": 11,
+   "suite": "1105",
+   "sqft": 1429.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gregory Law, PLLC",
+   "floor": 11,
+   "suite": "1108",
+   "sqft": 1250.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ponderosa Oil & Gas, LLC",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 3600.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Commercial Barge Line",
+   "floor": 11,
+   "suite": "1120",
+   "sqft": 1120.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EUTEX International, Inc.",
+   "floor": 11,
+   "suite": "1110",
+   "sqft": 5000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "C.R. Wannamaker Law PLLC",
+   "floor": 11,
+   "suite": "1111",
+   "sqft": 5410.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Smith & Hassler",
+   "floor": null,
+   "suite": null,
+   "sqft": null,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 120
+  },
+  {
+   "type": "Covered",
+   "spaces": 360
+  }
+ ],
+ "matterport_models": [
+  "PfDGxZeDnkz",
+  "z1n6fE1PMHC"
+ ]
+}

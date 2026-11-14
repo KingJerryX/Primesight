@@ -1,0 +1,384 @@
+{
+ "property_id": 246880,
+ "name": "Olympic Center",
+ "address": "11150 Olympic Blvd, Los Angeles, CA",
+ "lat": 34.0393318,
+ "lon": -118.438605,
+ "type": "Office",
+ "stories": 11,
+ "gross_sqft": 165898.0,
+ "typical_floor_sqft": 24000.0,
+ "year_built": 1985,
+ "construction": "Unknown",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Banc of California",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 21600.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Meta Housing Corporation",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 3120.0,
+   "employees": 56,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rms Asset Management Llc",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 3600.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Phillips Spallas & Angstadt LLP",
+   "floor": 6,
+   "suite": "670",
+   "sqft": 3120.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Garland & Associates",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 3600.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The National Child Traumatic Stress Network",
+   "floor": 6,
+   "suite": null,
+   "sqft": 2460.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 3748.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Source Health Treatment Center",
+   "floor": 7,
+   "suite": "770",
+   "sqft": 9120.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Crest Real Estate",
+   "floor": 7,
+   "suite": "700",
+   "sqft": null,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Transcend Recovery Community",
+   "floor": 7,
+   "suite": "760",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Westside Treatment",
+   "floor": 7,
+   "suite": "780",
+   "sqft": 1916.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Isaac Baranowicz, CPA",
+   "floor": 8,
+   "suite": "860-1",
+   "sqft": 199.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Escrow Agents Fidelity Corporation",
+   "floor": 8,
+   "suite": "840",
+   "sqft": 1200.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Posivak & Joffe LLP",
+   "floor": 8,
+   "suite": "860",
+   "sqft": 1100.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Madelyn Hammond & Associates",
+   "floor": 8,
+   "suite": "870",
+   "sqft": 1200.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AMCAL",
+   "floor": 8,
+   "suite": null,
+   "sqft": 1680.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Torkian Construction, Inc.",
+   "floor": 9,
+   "suite": "920",
+   "sqft": 2521.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Freeman Group Inc",
+   "floor": 9,
+   "suite": "975",
+   "sqft": 2880.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Producer's Guild Of America, Inc",
+   "floor": 9,
+   "suite": "980",
+   "sqft": 2880.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marsili Mediation Inc",
+   "floor": 9,
+   "suite": "990",
+   "sqft": 3360.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Perry S Oretzky CPA",
+   "floor": 9,
+   "suite": "915",
+   "sqft": 2400.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Salem Law Firm, P.C.",
+   "floor": 9,
+   "suite": "950d",
+   "sqft": 3600.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Angell Foundation",
+   "floor": 9,
+   "suite": "910",
+   "sqft": 2880.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jewish Big Brothers Big Sisters of Los Angeles",
+   "floor": 9,
+   "suite": "900d",
+   "sqft": 3360.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Camp Bob Waldorf On The Max",
+   "floor": 9,
+   "suite": "900",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "T Hodge Linn & Sons Inc",
+   "floor": 9,
+   "suite": "950",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "M. Neil Cummings And Associates",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 5987.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1040",
+   "sqft": 3520.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Metro Star Properties, LLC",
+   "floor": 10,
+   "suite": "1090",
+   "sqft": 3600.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HJK International, Inc.",
+   "floor": 10,
+   "suite": "1080",
+   "sqft": 4800.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Caskey Mandell Karp & Block",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 5501.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arson House Entertainment Corp",
+   "floor": 11,
+   "suite": "1140",
+   "sqft": 3384.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jobst IT Consulting",
+   "floor": 11,
+   "suite": "1170",
+   "sqft": 3384.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of Steven L Bryson",
+   "floor": 11,
+   "suite": "1120",
+   "sqft": 4379.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ameriprise Financial",
+   "floor": 11,
+   "suite": "1130",
+   "sqft": 4379.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1150",
+   "sqft": 2168.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Empirical Wealth Management",
+   "floor": 11,
+   "suite": "1180",
+   "sqft": 4200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "7Jw6ZXWDeDA",
+  "7MHAv22NWJ9",
+  "CoLPZJtTy3G",
+  "HwgGNwDp2Kf",
+  "SG3F3mDcp7A",
+  "gGgTNkdhPNj",
+  "gnZtTwFsmno"
+ ]
+}

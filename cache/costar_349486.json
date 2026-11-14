@@ -1,0 +1,395 @@
+{
+ "property_id": 349486,
+ "name": "The Center",
+ "address": "8313 Southwest Fwy, Houston, TX",
+ "lat": 29.6882701,
+ "lon": -95.5279597,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 95653.0,
+ "typical_floor_sqft": 31884.0,
+ "year_built": 1979,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Maida Law Firm",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 2595.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rehab Medcare",
+   "floor": 1,
+   "suite": "106",
+   "sqft": 1567.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wilson Radiographic",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 2474.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hugo Vainstein",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 2054.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oxley Leasing, LLC",
+   "floor": 1,
+   "suite": "103",
+   "sqft": 1548.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Family Physicians",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 2000.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lightcare RX Pharmacy",
+   "floor": 1,
+   "suite": null,
+   "sqft": 853.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Griffith Dental Associates",
+   "floor": 1,
+   "suite": "177",
+   "sqft": 1204.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Char Deli",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2303.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Global Counseling & Testing",
+   "floor": 1,
+   "suite": "168",
+   "sqft": 2232.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Curved by Candy",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1594.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prestige Care Health Service Inc",
+   "floor": 2,
+   "suite": "235",
+   "sqft": 3045.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LabCorp",
+   "floor": 2,
+   "suite": "201",
+   "sqft": 2494.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allure Dior Plush",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1594.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MJ Salon Suites",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 2551.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bodied by Mikeesha B.",
+   "floor": 2,
+   "suite": null,
+   "sqft": 957.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Island Glo Healthcare",
+   "floor": 2,
+   "suite": "230",
+   "sqft": 2551.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bladed By Flash Inc.",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2551.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DeeShotz Visualz",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1594.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "D & M Salon Suites",
+   "floor": 2,
+   "suite": "239",
+   "sqft": 1594.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "D & M Salon Suites",
+   "floor": 2,
+   "suite": "215",
+   "sqft": 2232.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Uplift Community Services Inc",
+   "floor": 2,
+   "suite": "233",
+   "sqft": 957.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gold Coast Wellness & Psychiatry",
+   "floor": 2,
+   "suite": null,
+   "sqft": 250.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Complete Clinic LLC",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1169.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "State Farm",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1100.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "350D",
+   "sqft": 638.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MLife Laboratories LLC",
+   "floor": 3,
+   "suite": null,
+   "sqft": 650.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Flawless Body Bar",
+   "floor": 3,
+   "suite": null,
+   "sqft": 319.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elevated Luxe Studios",
+   "floor": 3,
+   "suite": "327",
+   "sqft": 1138.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VIP Offices",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 7098.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Haus of Mulan",
+   "floor": 3,
+   "suite": null,
+   "sqft": 638.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "One Source Medical & Regenerative Services LLC",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 957.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Amiro's Auto Sales",
+   "floor": 3,
+   "suite": "314",
+   "sqft": 638.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VIP Spa Suites",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 638.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VIP Spa Suites",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 2551.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VIP Spa Suites",
+   "floor": 3,
+   "suite": "326",
+   "sqft": 4783.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VIP Spa Suites",
+   "floor": 3,
+   "suite": "328",
+   "sqft": 2551.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VIP Spa Suites",
+   "floor": 3,
+   "suite": "335",
+   "sqft": 1594.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VIP Spa Suites",
+   "floor": 3,
+   "suite": "342",
+   "sqft": 1594.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "350M",
+   "sqft": 223.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Realty.com",
+   "phone": "5559806802"
+  }
+ ],
+ "matterport_models": [
+  "55h2zWD3Px1",
+  "GXfemwjSgbN",
+  "yAsnTE5YZYL"
+ ]
+}

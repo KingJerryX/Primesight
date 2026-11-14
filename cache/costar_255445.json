@@ -1,0 +1,21 @@
+{
+ "property_id": 255445,
+ "name": "The Annex",
+ "address": "5340 Alla Rd, Los Angeles, CA",
+ "lat": 33.9774259,
+ "lon": -118.4249285,
+ "type": "Specialty",
+ "stories": 2,
+ "gross_sqft": 131942.0,
+ "typical_floor_sqft": 65971.0,
+ "year_built": 1972,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "WF85Yg36WGE"
+ ]
+}

@@ -1,0 +1,231 @@
+{
+ "property_id": 239754,
+ "name": null,
+ "address": "6001 Savoy Dr, Houston, TX",
+ "lat": 29.7165723,
+ "lon": -95.504719,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 124478.0,
+ "typical_floor_sqft": 20335.0,
+ "year_built": 1978,
+ "construction": "Metal",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Sierra Assets Group LLC",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sutton Law Firm",
+   "floor": 1,
+   "suite": "115",
+   "sqft": null,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stoa Capital Partners Llc",
+   "floor": 1,
+   "suite": "120",
+   "sqft": null,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wiarcom Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lafferty Villa, Llc",
+   "floor": 1,
+   "suite": "120",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arlene Lollie & Associates",
+   "floor": 1,
+   "suite": "108",
+   "sqft": null,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "201 A",
+   "sqft": 478.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Amit Mehta Inc",
+   "floor": 2,
+   "suite": null,
+   "sqft": 400.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 818.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Legacee Environmental",
+   "floor": 2,
+   "suite": "204",
+   "sqft": null,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "306",
+   "sqft": 1418.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advanced Tracking Tech Inc",
+   "floor": 3,
+   "suite": "300",
+   "sqft": null,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clyde J Moore",
+   "floor": 3,
+   "suite": "303",
+   "sqft": null,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Glaco",
+   "floor": 3,
+   "suite": "301",
+   "sqft": null,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Galveston-Houston Immigrant Representation Project",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 1000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "512 A",
+   "sqft": 573.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "511 B",
+   "sqft": 295.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "503",
+   "sqft": 598.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "511 E",
+   "sqft": 8760.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "511-C",
+   "sqft": 215.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Al-razaq Computing Service",
+   "floor": 5,
+   "suite": "505",
+   "sqft": null,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Technical Support Business Inc",
+   "floor": 5,
+   "suite": "515",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Sierra Assets Group LLC",
+   "phone": "5557548270"
+  }
+ ],
+ "matterport_models": [
+  "Juy8xFmWwjf"
+ ]
+}

@@ -1,0 +1,164 @@
+{
+ "property_id": 23553,
+ "name": "Piney Point Offices II",
+ "address": "2500 Fondren Rd, Houston, TX",
+ "lat": 29.7403587,
+ "lon": -95.5221355,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 83688.0,
+ "typical_floor_sqft": 26666.0,
+ "year_built": 1980,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Rice Residential Designs",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 1050.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Econsortium Group",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 2500.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vita Care Pharmacy",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 2667.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NovaCare Rehabilitation",
+   "floor": 1,
+   "suite": "115",
+   "sqft": 2000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Iidon Security Associates",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 3942.0,
+   "employees": 26,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "J.A. Pinera, Jr., DDS",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 1000.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jose Rodriguez-Cordova, MD",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 2133.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rheum to Grow",
+   "floor": 2,
+   "suite": "235",
+   "sqft": 1705.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hillcroft Medical",
+   "floor": 2,
+   "suite": "209",
+   "sqft": 8209.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr Simon Gebara",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 2667.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Learning Sphere Speech Therapy",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 2133.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Russell C Vanhiber MD",
+   "floor": 2,
+   "suite": "255",
+   "sqft": 2133.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Select Physical Therapy",
+   "floor": 3,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ethos Endocrinology",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 1233.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aspire Fertility",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 3000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "9xZApYqePUx",
+  "fEqu4q25qYs",
+  "vwvigaJjyV8"
+ ]
+}

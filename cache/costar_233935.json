@@ -1,0 +1,487 @@
+{
+ "property_id": 233935,
+ "name": "One Allen Center",
+ "address": "500 Dallas St, Houston, TX",
+ "lat": 29.7578497,
+ "lon": -95.3705243,
+ "type": "Office",
+ "stories": 34,
+ "gross_sqft": 1049671.0,
+ "typical_floor_sqft": 28685.0,
+ "year_built": 1972,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 15
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Chick-Fil-A",
+   "floor": 0,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Salata",
+   "floor": 0,
+   "suite": "T-21",
+   "sqft": 1200.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Otto's Bar B Que & Hamburgers Downtown",
+   "floor": 0,
+   "suite": "T-24",
+   "sqft": 1200.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jimmy John's",
+   "floor": 0,
+   "suite": null,
+   "sqft": 1350.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gateway Newstand",
+   "floor": 0,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Supercuts",
+   "floor": 0,
+   "suite": "65",
+   "sqft": 1200.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Leaf & Grain",
+   "floor": 0,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fresh Healthy Cafe",
+   "floor": 0,
+   "suite": "T-25",
+   "sqft": 800.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 0,
+   "suite": "T-10",
+   "sqft": 829.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blackwater Coffee Roasters",
+   "floor": 0,
+   "suite": "T-12",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Guard & Grace",
+   "floor": 1,
+   "suite": null,
+   "sqft": 13609.0,
+   "employees": 101,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BGRE",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2700.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "N",
+   "sqft": 808.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 808.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chase Bank",
+   "floor": 1,
+   "suite": "l10",
+   "sqft": 3500.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aramco",
+   "floor": 2,
+   "suite": null,
+   "sqft": 27277.0,
+   "employees": 1360,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aramco",
+   "floor": 3,
+   "suite": null,
+   "sqft": 27255.0,
+   "employees": 1360,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aramco",
+   "floor": 4,
+   "suite": null,
+   "sqft": 27255.0,
+   "employees": 1360,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aramco",
+   "floor": 5,
+   "suite": null,
+   "sqft": 27277.0,
+   "employees": 1360,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aramco",
+   "floor": 6,
+   "suite": null,
+   "sqft": 27261.0,
+   "employees": 1360,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aramco",
+   "floor": 7,
+   "suite": null,
+   "sqft": 27258.0,
+   "employees": 1360,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aramco",
+   "floor": 8,
+   "suite": null,
+   "sqft": 27277.0,
+   "employees": 1360,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aramco",
+   "floor": 9,
+   "suite": null,
+   "sqft": 27277.0,
+   "employees": 1360,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aramco",
+   "floor": 10,
+   "suite": null,
+   "sqft": 2863.0,
+   "employees": 1360,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Epsilon Energy",
+   "floor": 12,
+   "suite": "1250",
+   "sqft": 6946.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Epsilon Energy",
+   "floor": 12,
+   "suite": "1250",
+   "sqft": null,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AmTrust Financial Services",
+   "floor": 13,
+   "suite": "1360",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mercer",
+   "floor": 14,
+   "suite": "1500",
+   "sqft": 12000.0,
+   "employees": 240,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NERA Economic Consulting",
+   "floor": 14,
+   "suite": null,
+   "sqft": 8129.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oliver Wyman",
+   "floor": 14,
+   "suite": null,
+   "sqft": 9229.0,
+   "employees": 55,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mercer",
+   "floor": 15,
+   "suite": "1500",
+   "sqft": 27869.0,
+   "employees": 240,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Amplify Energy",
+   "floor": 17,
+   "suite": null,
+   "sqft": 27689.0,
+   "employees": 75,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Baker Tilly",
+   "floor": 19,
+   "suite": "1900",
+   "sqft": 21097.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TPC Group",
+   "floor": 20,
+   "suite": "1000",
+   "sqft": 27689.0,
+   "employees": 200,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ogletree Deakins",
+   "floor": 21,
+   "suite": "2100",
+   "sqft": 17640.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diversified Gas & Oil",
+   "floor": 23,
+   "suite": null,
+   "sqft": 27703.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 25,
+   "suite": "2560",
+   "sqft": 3337.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texican Natural Gas Company",
+   "floor": 26,
+   "suite": "2600",
+   "sqft": 11237.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 28,
+   "suite": "2835",
+   "sqft": 3904.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marathon",
+   "floor": 29,
+   "suite": "2900",
+   "sqft": 28374.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Energy Aspects",
+   "floor": 30,
+   "suite": "3010",
+   "sqft": 6005.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marathon",
+   "floor": 30,
+   "suite": "3000",
+   "sqft": 28374.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Macquarie Americas Corp",
+   "floor": 31,
+   "suite": null,
+   "sqft": 28101.0,
+   "employees": 400,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Macquarie Americas Corp",
+   "floor": 32,
+   "suite": null,
+   "sqft": 28063.0,
+   "employees": 400,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Macquarie Americas Corp",
+   "floor": 33,
+   "suite": null,
+   "sqft": 14826.0,
+   "employees": 400,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mithoff Law",
+   "floor": 34,
+   "suite": "3450",
+   "sqft": 6880.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Raymond James",
+   "floor": 34,
+   "suite": "3400",
+   "sqft": 2802.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Grimes & Fertitta, P.C.",
+   "floor": 34,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "P2N8mt8BdAE",
+  "hG6Fn3bPrxT",
+  "oL4WGNKLFZu"
+ ]
+}

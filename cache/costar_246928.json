@@ -1,0 +1,356 @@
+{
+ "property_id": 246928,
+ "name": "Brentwood Executive Plaza",
+ "address": "11726 San Vicente Blvd, Los Angeles, CA",
+ "lat": 34.0530281,
+ "lon": -118.4664077,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 113213.0,
+ "typical_floor_sqft": 14943.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Citi",
+   "floor": 1,
+   "suite": "11726",
+   "sqft": 7472.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bodyfit",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 7471.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Soroudi Group",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 1195.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vida Kids Physical Therapy Pc",
+   "floor": 2,
+   "suite": "222",
+   "sqft": 1195.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ready to Succeed LA",
+   "floor": 2,
+   "suite": "212",
+   "sqft": 1195.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brentwood Financial Advisors",
+   "floor": 2,
+   "suite": "235",
+   "sqft": 1245.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stori",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 1644.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Plusnxt LLC",
+   "floor": 2,
+   "suite": "203",
+   "sqft": 1195.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Douglas Emmett Management, LLC",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Luxe Homecare, Inc",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 1943.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 877.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2657.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "M Strategic Real Estate Services",
+   "floor": 2,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chartwell Escrow",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 3138.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Borstein Enterprises",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 4600.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tides Equities",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 2989.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mountain Pacific Opportunity Partners",
+   "floor": 4,
+   "suite": "414",
+   "sqft": 2322.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BACIO di LATTE",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 2989.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Guglielmi & Ohira",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 2500.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Logica Capital Advisors, LLC",
+   "floor": 4,
+   "suite": "480",
+   "sqft": 2241.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vicente Capital Partners",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 2500.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Westwood Robotics",
+   "floor": 4,
+   "suite": "408",
+   "sqft": 657.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blackstone Consulting, Inc",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 2241.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kibo Group, Inc",
+   "floor": 5,
+   "suite": "560",
+   "sqft": 2241.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dettaglio Construction, Inc.",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 2392.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Public Domain",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 2989.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "High Tied Investments",
+   "floor": 5,
+   "suite": "530",
+   "sqft": 2241.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gelt Inc.",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 2839.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Edgeline Capital Partners LLC",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 1943.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mildred E. & Harvey S. Mudd Foundation",
+   "floor": 6,
+   "suite": "625",
+   "sqft": 2241.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Humberto R. Gray, A Professional Law Corporation",
+   "floor": 6,
+   "suite": "670",
+   "sqft": 2241.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Myriad Pictures, Inc.",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 2241.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Warana Capital,LLC",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 2093.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Digital Cinema Distribution Coalition, LLC",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 2241.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lee Herzog",
+   "floor": 6,
+   "suite": "680",
+   "sqft": 1943.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "YbKz5PKbzwp"
+ ]
+}

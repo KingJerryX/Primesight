@@ -1,0 +1,247 @@
+{
+ "property_id": 239782,
+ "name": null,
+ "address": "1250 Wood Branch Park Dr, Houston, TX",
+ "lat": 29.7881129,
+ "lon": -95.5990711,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 102956.0,
+ "typical_floor_sqft": 17159.0,
+ "year_built": 1981,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Osage Capital",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 1605.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "State Farm Insurance",
+   "floor": 1,
+   "suite": null,
+   "sqft": 562.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RJS Architects",
+   "floor": 1,
+   "suite": "115",
+   "sqft": 733.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Midfirst Bank",
+   "floor": 1,
+   "suite": "140",
+   "sqft": 2861.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "David Z Mafrige Interests",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 10135.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Outfield",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 1304.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Griff Ark Companies",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 2839.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ATPI & TVS",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 5841.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zaretsky Aesthetics Llc",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1780.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Emergent Professional Resources",
+   "floor": 2,
+   "suite": null,
+   "sqft": 6032.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 4745.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NFP",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 1350.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "4J Energy LLC",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 7579.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tondu Corporation",
+   "floor": 3,
+   "suite": "390",
+   "sqft": 4465.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HR Wallingford",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 2500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Element Architects",
+   "floor": 4,
+   "suite": "480",
+   "sqft": 3000.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Straife",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 2109.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RevCord",
+   "floor": 4,
+   "suite": "490",
+   "sqft": 5059.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Abbert Capital Hyperfocal Communications",
+   "floor": 4,
+   "suite": "495",
+   "sqft": 1529.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sable Power & Gas",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fleming Law",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 2700.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Audubon Companies",
+   "floor": 5,
+   "suite": null,
+   "sqft": 17753.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Northwestern Mutual",
+   "floor": 6,
+   "suite": null,
+   "sqft": 9468.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dean's Professional Services",
+   "floor": 6,
+   "suite": null,
+   "sqft": 8287.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "3aKDUHBV54c",
+  "KtFzGJbUFTS",
+  "hQLHJpeLXMS",
+  "m9pvy7aUFCM",
+  "n9dyKCxLKjx"
+ ]
+}

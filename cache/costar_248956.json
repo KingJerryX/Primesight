@@ -1,0 +1,53 @@
+{
+ "property_id": 248956,
+ "name": null,
+ "address": "6601 Center Dr, Los Angeles, CA",
+ "lat": 33.9801208,
+ "lon": -118.3940212,
+ "type": "Office",
+ "stories": 7,
+ "gross_sqft": 107148.0,
+ "typical_floor_sqft": 15035.0,
+ "year_built": 1991,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Uplifting Results Labs Inc",
+   "floor": 1,
+   "suite": "5j",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fuller Consulting",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "i1jgvkc59jk"
+ ]
+}

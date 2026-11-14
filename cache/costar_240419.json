@@ -1,0 +1,122 @@
+{
+ "property_id": 240419,
+ "name": "Grant Road Office Complex",
+ "address": "10601 Grant Rd, Houston, TX",
+ "lat": 29.9662042,
+ "lon": -95.5770935,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 25232.0,
+ "typical_floor_sqft": 5418.0,
+ "year_built": 1982,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Counseling by Tasha",
+   "floor": 1,
+   "suite": "119",
+   "sqft": 1939.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Melissa Robertson",
+   "floor": 1,
+   "suite": "117",
+   "sqft": 1435.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Petro-Tek Supply Inc",
+   "floor": 1,
+   "suite": "200",
+   "sqft": 1794.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tyler Medical Services",
+   "floor": 1,
+   "suite": "116",
+   "sqft": 1076.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Serenite Health Ltd",
+   "floor": 1,
+   "suite": "115A",
+   "sqft": 1794.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tema Cosmetics",
+   "floor": 1,
+   "suite": "114",
+   "sqft": 2691.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Expedite Home Healthcare LLC",
+   "floor": 1,
+   "suite": "112",
+   "sqft": 1794.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "OIC Enterprises, LLC",
+   "floor": 2,
+   "suite": "217",
+   "sqft": 4485.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Metropol Security Service LLC",
+   "floor": 2,
+   "suite": "215",
+   "sqft": 4485.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Building Consulting Service",
+   "floor": 2,
+   "suite": "218",
+   "sqft": 4485.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Avante Ambulance",
+   "floor": 2,
+   "suite": "209",
+   "sqft": 4486.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "2bnBGuo9TdS",
+  "7o4thD2BQuA"
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "property_id": 246877,
+ "name": "Gateway @ Olympic & Sepulveda- South Building",
+ "address": "11111 Olympic Blvd, Los Angeles, CA",
+ "lat": 34.0402718,
+ "lon": -118.4385406,
+ "type": "Office",
+ "stories": 5,
+ "gross_sqft": 29530.0,
+ "typical_floor_sqft": 5906.0,
+ "year_built": 1981,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Trident Fitness",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Concern Foundation",
+   "floor": 2,
+   "suite": "214",
+   "sqft": 2307.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "West LA Medical & Skincare",
+   "floor": 4,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "aeTm7cJ5akM",
+  "y3eaqEectCg"
+ ]
+}

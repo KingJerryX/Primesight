@@ -1,0 +1,41 @@
+{
+ "property_id": 276277,
+ "name": null,
+ "address": "725 Spring St, Los Angeles, CA",
+ "lat": 34.043964,
+ "lon": -118.2530694,
+ "type": "Multifamily",
+ "stories": 3,
+ "gross_sqft": 26780.0,
+ "typical_floor_sqft": 8926.0,
+ "year_built": 1917,
+ "construction": "Unknown",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Hive Gallery & Studios",
+   "floor": 1,
+   "suite": null,
+   "sqft": 8926.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Peach Music",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "K9zGZoQRfPw",
+  "mExWhnykKK8"
+ ]
+}

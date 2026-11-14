@@ -1,0 +1,458 @@
+{
+ "property_id": 233899,
+ "name": "Wells Fargo Plaza",
+ "address": "1000 Louisiana St, Houston, TX",
+ "lat": 29.7584604,
+ "lon": -95.3682126,
+ "type": "Office",
+ "stories": 71,
+ "gross_sqft": 1721242.0,
+ "typical_floor_sqft": 25529.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": null
+  },
+  {
+   "type": "Freight",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Wells Fargo Bank",
+   "floor": 1,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 310,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ares Management Corp",
+   "floor": 6,
+   "suite": "625",
+   "sqft": 2357.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wells Fargo Bank",
+   "floor": 7,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 310,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wells Fargo Home Mortgage",
+   "floor": 8,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 161,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1175",
+   "sqft": 6360.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The BVA Group",
+   "floor": 11,
+   "suite": null,
+   "sqft": 13000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 6360.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wells Fargo Advisors",
+   "floor": 12,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 161,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Riverstone Holdings",
+   "floor": 14,
+   "suite": "1450",
+   "sqft": 13805.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Green Valley Construction",
+   "floor": 14,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sky Project Management",
+   "floor": 15,
+   "suite": null,
+   "sqft": 14774.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cawley, Gillespie & Associates",
+   "floor": 19,
+   "suite": null,
+   "sqft": 2900.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Infrastructure Engineering",
+   "floor": 19,
+   "suite": "1990",
+   "sqft": 1775.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DLR Group",
+   "floor": 19,
+   "suite": "1950",
+   "sqft": 15190.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Foley & Lardner",
+   "floor": 20,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 200,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Foley & Lardner",
+   "floor": 21,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 200,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Foley & Lardner",
+   "floor": 22,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 200,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clark Hill",
+   "floor": 28,
+   "suite": null,
+   "sqft": 17436.0,
+   "employees": 116,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NextDecade Corporation",
+   "floor": 30,
+   "suite": null,
+   "sqft": 13576.0,
+   "employees": 575,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NextDecade Corporation",
+   "floor": 31,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 575,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NextDecade Corporation",
+   "floor": 32,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 575,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NextDecade Corporation",
+   "floor": 33,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 575,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CME Group",
+   "floor": 36,
+   "suite": null,
+   "sqft": 2424.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morgan Lewis",
+   "floor": 38,
+   "suite": null,
+   "sqft": 11534.0,
+   "employees": 500,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morgan Lewis",
+   "floor": 40,
+   "suite": "4000",
+   "sqft": 24242.0,
+   "employees": 500,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morgan Lewis",
+   "floor": 41,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 500,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morgan Lewis",
+   "floor": 42,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 500,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PwC",
+   "floor": 47,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 646,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PwC",
+   "floor": 48,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 646,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Susman Godfrey",
+   "floor": 49,
+   "suite": null,
+   "sqft": 20185.0,
+   "employees": 287,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Susman Godfrey",
+   "floor": 50,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 287,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Susman Godfrey",
+   "floor": 51,
+   "suite": "5100",
+   "sqft": 24242.0,
+   "employees": 287,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Next Wave Energy Partners",
+   "floor": 52,
+   "suite": null,
+   "sqft": 12219.0,
+   "employees": 45,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PwC",
+   "floor": 55,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 646,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PwC",
+   "floor": 58,
+   "suite": "5800",
+   "sqft": 24242.0,
+   "employees": 646,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sidley Austin",
+   "floor": 59,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 175,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sidley Austin",
+   "floor": 60,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 175,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sidley Austin",
+   "floor": 61,
+   "suite": null,
+   "sqft": 24242.0,
+   "employees": 175,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sidley Austin",
+   "floor": 62,
+   "suite": null,
+   "sqft": 12882.0,
+   "employees": 175,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Polsinelli",
+   "floor": 64,
+   "suite": "6400",
+   "sqft": 24242.0,
+   "employees": 37,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "England & Company",
+   "floor": 65,
+   "suite": null,
+   "sqft": 5003.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 65,
+   "suite": "6510",
+   "sqft": 3129.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Greenberg Traurig LLP",
+   "floor": 66,
+   "suite": "6700",
+   "sqft": 11924.0,
+   "employees": 241,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Greenberg Traurig LLP",
+   "floor": 67,
+   "suite": "6700",
+   "sqft": 24242.0,
+   "employees": 241,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cathexis",
+   "floor": 70,
+   "suite": "7000",
+   "sqft": 25649.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "CBRE",
+   "phone": "5556193343"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "3K5rnFt1P6B",
+  "Gj2E4uqqdfU",
+  "Ry9V96reQ77",
+  "jUnF84zghQk",
+  "kDmRpp4ypA1",
+  "qVqBanbJQze",
+  "tzDLoMcCjuC"
+ ]
+}

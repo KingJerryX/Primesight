@@ -1,0 +1,49 @@
+{
+ "property_id": 240890,
+ "name": "Bldg 100",
+ "address": "283 Lockhaven Dr, Houston, TX",
+ "lat": 29.990668,
+ "lon": -95.419789,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 58728.0,
+ "typical_floor_sqft": 33136.0,
+ "year_built": 1984,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "TR Shipping",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 12438.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HB plus Bandamatic Inc",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 11087.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ZYLtech Engineering",
+   "floor": 1,
+   "suite": "122",
+   "sqft": 16580.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

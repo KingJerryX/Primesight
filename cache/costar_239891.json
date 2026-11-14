@@ -1,0 +1,162 @@
+{
+ "property_id": 239891,
+ "name": null,
+ "address": "14340 Torrey Chase Blvd, Houston, TX",
+ "lat": 29.9881173,
+ "lon": -95.4909402,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 124205.0,
+ "typical_floor_sqft": 30440.0,
+ "year_built": 1982,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Emerald Metals",
+   "floor": 1,
+   "suite": "190",
+   "sqft": 2961.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pradeep Sulhan PC",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 4442.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hope Haven",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 7403.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Primerica",
+   "floor": 1,
+   "suite": "153",
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JR Marketing Group",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 5922.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Veloci",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 5523.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bulldog Security Services",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 11844.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Transparency Funding",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 1481.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Specialized Billing & Collections Systems of Texas",
+   "floor": 2,
+   "suite": "300,280",
+   "sqft": 5000.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "James Wright, MD",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 2000.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AegisAI",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 5153.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "A2Z Real Estate Consultants",
+   "floor": 3,
+   "suite": "365",
+   "sqft": 7403.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Impairment & Injury Center",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 1481.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Globe Life",
+   "floor": 3,
+   "suite": "390",
+   "sqft": 9343.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "illumiPure",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 29610.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "S5rgSTufory"
+ ]
+}

@@ -1,0 +1,219 @@
+{
+ "property_id": 247337,
+ "name": "The Plaza",
+ "address": "1800 Century Park , Los Angeles, CA",
+ "lat": 34.0628127,
+ "lon": -118.4150731,
+ "type": "Office",
+ "stories": 15,
+ "gross_sqft": 259571.0,
+ "typical_floor_sqft": 17063.0,
+ "year_built": 1970,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 6
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Network Deposition Services",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hightower Advisors",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WestPark Capital",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 2604.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Steward Partners",
+   "floor": 2,
+   "suite": "# 230",
+   "sqft": 1050.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Winget, Spadafora & Schwartzberg LLP",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 6168.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 4949.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 1534.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "FTI Consulting",
+   "floor": 4,
+   "suite": null,
+   "sqft": 8024.0,
+   "employees": 53,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Wendy Heller",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1148.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "New Life Global Development",
+   "floor": 6,
+   "suite": "600",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Swerdlove Consulting Group Inc",
+   "floor": 6,
+   "suite": "600",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blue Riley Inc",
+   "floor": 6,
+   "suite": "600",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "McGuireWoods, LLP",
+   "floor": 7,
+   "suite": null,
+   "sqft": 17035.0,
+   "employees": 47,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "McGuireWoods, LLP",
+   "floor": 8,
+   "suite": null,
+   "sqft": 17110.0,
+   "employees": 47,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "McGuireWoods, LLP",
+   "floor": 9,
+   "suite": null,
+   "sqft": 17035.0,
+   "employees": 47,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hertz Lichtenstein Young & Polk LLP",
+   "floor": 10,
+   "suite": null,
+   "sqft": 2800.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 9536.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wells Fargo",
+   "floor": 12,
+   "suite": null,
+   "sqft": 17035.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Faegre Drinker Biddle & Reath LLP",
+   "floor": 14,
+   "suite": null,
+   "sqft": 10422.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Faegre Drinker Biddle & Reath LLP",
+   "floor": 15,
+   "suite": null,
+   "sqft": 17035.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "9oZmoKx1Dsv",
+  "CJoLj1mnLcs",
+  "KLvWxP3146u",
+  "rmeyz3mM6KB",
+  "s8CAZag8dRV"
+ ]
+}

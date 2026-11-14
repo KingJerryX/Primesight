@@ -1,0 +1,185 @@
+{
+ "property_id": 234683,
+ "name": "Glenborough Tower",
+ "address": "100 Glenborough Dr, Houston, TX",
+ "lat": 29.9516655,
+ "lon": -95.4196287,
+ "type": "Office",
+ "stories": 14,
+ "gross_sqft": 207340.0,
+ "typical_floor_sqft": 16009.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "All About Texas Real Estate",
+   "floor": 2,
+   "suite": "203",
+   "sqft": 2203.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BFP Educational Services",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1350.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Police Department",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 16009.0,
+   "employees": 103,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "North Houston Executive Suites",
+   "floor": 4,
+   "suite": null,
+   "sqft": 16009.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Staff Solve",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 3133.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "North Houston Executive Suites",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 12315.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Heart 2 Heart",
+   "floor": 6,
+   "suite": "646",
+   "sqft": 257.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ZP Connect",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 1441.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Disability Rights Texas",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 10030.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jose Miller Martinez",
+   "floor": 6,
+   "suite": "649",
+   "sqft": 1281.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "North Houston Executive Suites",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 16009.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "4b Technology",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 5859.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chrysalis Therapy & Wellness",
+   "floor": 8,
+   "suite": null,
+   "sqft": 700.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AFC",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 1339.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "New Era Child Placement Agency",
+   "floor": 9,
+   "suite": null,
+   "sqft": 14670.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VSC Properties",
+   "floor": 10,
+   "suite": null,
+   "sqft": 16009.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "VSC Properties",
+   "phone": "5559341336"
+  }
+ ],
+ "matterport_models": [
+  "4HiyM1Eqfce"
+ ]
+}

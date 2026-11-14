@@ -1,0 +1,353 @@
+{
+ "property_id": 237019,
+ "name": "Centre One",
+ "address": "9800 Centre Pky, Houston, TX",
+ "lat": 29.6735917,
+ "lon": -95.5519333,
+ "type": "Office",
+ "stories": 11,
+ "gross_sqft": 225113.0,
+ "typical_floor_sqft": 21000.0,
+ "year_built": 1983,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Goosehead Insurance",
+   "floor": 1,
+   "suite": "153",
+   "sqft": 3500.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Positive Impact",
+   "floor": 1,
+   "suite": "162",
+   "sqft": 992.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alpha Trucking Academy",
+   "floor": 1,
+   "suite": "151",
+   "sqft": 992.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CMTS",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 3969.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Asados el Catracho",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 595.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "My Family Hospice Llc",
+   "floor": 1,
+   "suite": "100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nextdoor Electric",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of Victor D. Walker, P.C",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 1646.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Matoll Health Services Inc.",
+   "floor": 2,
+   "suite": "245",
+   "sqft": 3186.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Refund Maxx",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 1150.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gilgal Medica Servicio",
+   "floor": 2,
+   "suite": "275",
+   "sqft": 794.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Paragon Global Network",
+   "floor": 2,
+   "suite": "235",
+   "sqft": 992.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Titan Genealogy",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 1588.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "G Medics Diagnostics",
+   "floor": 2,
+   "suite": "265",
+   "sqft": 2032.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reakct Security Svc",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 2267.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulado General de Honduras en Houston",
+   "floor": 5,
+   "suite": "530",
+   "sqft": 14000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Century Property Consultants",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 4754.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cittabase",
+   "floor": 6,
+   "suite": "605",
+   "sqft": 2015.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gracefull Home Health, Inc.",
+   "floor": 6,
+   "suite": "615",
+   "sqft": 900.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Y K Man Insurance Agency",
+   "floor": 6,
+   "suite": "639",
+   "sqft": 198.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Peoples Company",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 1016.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lincoln House",
+   "floor": 6,
+   "suite": "612",
+   "sqft": 775.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Green Health Medical Supply",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 520.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nuramind Health and Wellness",
+   "floor": 6,
+   "suite": "670",
+   "sqft": 992.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MHDN LLC",
+   "floor": 6,
+   "suite": null,
+   "sqft": 595.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Efatabglobal & Foundation",
+   "floor": 6,
+   "suite": "625",
+   "sqft": 1985.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Samuel M Ako",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 992.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Turnkey Environmental Management Services",
+   "floor": 6,
+   "suite": "665",
+   "sqft": 992.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Echere's Law Firm",
+   "floor": 6,
+   "suite": null,
+   "sqft": 300.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Maco Corp",
+   "floor": 6,
+   "suite": null,
+   "sqft": 1701.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "644",
+   "sqft": 683.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nelson, Cooper & Ortiz, LLC",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 1417.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Petaw Solutions",
+   "floor": 8,
+   "suite": "825",
+   "sqft": 1985.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chang & Lin PC",
+   "floor": 8,
+   "suite": "802",
+   "sqft": 1985.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gio Food Group",
+   "floor": 8,
+   "suite": "830",
+   "sqft": 3085.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "1uRXCCHGu93",
+  "955TCNbQHhb",
+  "XBrUHgukKPt",
+  "jTvtovAfQQk"
+ ]
+}

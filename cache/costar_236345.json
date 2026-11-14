@@ -1,0 +1,49 @@
+{
+ "property_id": 236345,
+ "name": "Holly Hall Industrial Park",
+ "address": "8303-8317 Knight Rd, Houston, TX",
+ "lat": 29.683915,
+ "lon": -95.399442,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 60000.0,
+ "typical_floor_sqft": 59780.0,
+ "year_built": 1980,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Cotton Holdings Inc.",
+   "floor": 1,
+   "suite": null,
+   "sqft": 13892.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zoox",
+   "floor": 1,
+   "suite": "8303",
+   "sqft": 9864.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "8305, 8307,8309",
+   "sqft": 29514.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "HyGmQdhthjQ"
+ ]
+}

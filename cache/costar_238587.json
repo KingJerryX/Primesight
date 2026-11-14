@@ -1,0 +1,124 @@
+{
+ "property_id": 238587,
+ "name": "Houston Medical Plaza",
+ "address": "6655 Travis St, Houston, TX",
+ "lat": 29.709464,
+ "lon": -95.4037013,
+ "type": "Office",
+ "stories": 10,
+ "gross_sqft": 139943.0,
+ "typical_floor_sqft": 14371.0,
+ "year_built": 1983,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Re:Cognition Health",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 4973.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Galaxy Pharmacy",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 2134.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Legent",
+   "floor": 2,
+   "suite": null,
+   "sqft": 12793.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "322",
+   "sqft": 1175.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TransMedics",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 1919.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Baylor College Of Medicine",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 5757.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Macula Vitreous Retina Physicians & Surgeons",
+   "floor": 5,
+   "suite": "560",
+   "sqft": 3842.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cardiology Consultants of Houston, PLLC",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 4112.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 1053.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Hines",
+   "phone": "5559874089"
+  }
+ ],
+ "matterport_models": [
+  "LbLLavc5rFG",
+  "gFYGjbwQzcd",
+  "mXRDfAHA7iB"
+ ]
+}

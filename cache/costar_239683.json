@@ -1,0 +1,166 @@
+{
+ "property_id": 239683,
+ "name": "One Chasewood",
+ "address": "20333 State Highway 249 , Houston, TX",
+ "lat": 29.9881528,
+ "lon": -95.5732982,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 109842.0,
+ "typical_floor_sqft": 18198.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Law Office of Troy M. Moore",
+   "floor": 1,
+   "suite": "140",
+   "sqft": 4498.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 17994.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wastelinq, Inc.",
+   "floor": 3,
+   "suite": "380",
+   "sqft": 2217.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VCC",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 2500.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SK hynix America",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 900.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pinnacle Risk Solutions",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 2831.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Intermat",
+   "floor": 4,
+   "suite": "470",
+   "sqft": 1440.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The David J. Joseph Company",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 1766.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trinity Logistics",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 1440.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Windstar",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 2339.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Highlands Residential Mortgage",
+   "floor": 4,
+   "suite": "480",
+   "sqft": 1619.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reliance Matrix",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 1000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cintas",
+   "floor": 5,
+   "suite": "580",
+   "sqft": 900.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "One80 Intermediaries",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 9366.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Truly Title, Inc.",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 2699.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Venterra Realty Management",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 5402.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "dEbSLs539kR"
+ ]
+}

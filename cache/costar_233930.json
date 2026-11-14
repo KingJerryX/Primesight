@@ -1,0 +1,207 @@
+{
+ "property_id": 233930,
+ "name": null,
+ "address": "5555 San Felipe St, Houston, TX",
+ "lat": 29.7498236,
+ "lon": -95.4720879,
+ "type": "Office",
+ "stories": 41,
+ "gross_sqft": 1760079.0,
+ "typical_floor_sqft": 27000.0,
+ "year_built": 1983,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 28
+  },
+  {
+   "type": "Freight",
+   "count": 2
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Mercer Advisors, Inc.",
+   "floor": 2,
+   "suite": null,
+   "sqft": 6000.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blakely & Weeks Thome Pllc",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 5640.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KM Realty",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 4696.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KM Realty",
+   "floor": 5,
+   "suite": null,
+   "sqft": 4696.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RSK [UK] Limited",
+   "floor": 6,
+   "suite": "625",
+   "sqft": 2164.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Huntington T. Block",
+   "floor": 8,
+   "suite": null,
+   "sqft": 2520.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EHE Health",
+   "floor": 8,
+   "suite": null,
+   "sqft": 14105.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Explore",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 6777.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mercer Advisors, Inc.",
+   "floor": 10,
+   "suite": null,
+   "sqft": 15100.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beeler Properties, Inc.",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 3762.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "North Cypress Medical Center",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 3127.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1110",
+   "sqft": 3728.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WaterBridge",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 28557.0,
+   "employees": 70,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Landbridge Company Llc",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wellbore Capital",
+   "floor": 16,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "USA Compression",
+   "floor": 17,
+   "suite": null,
+   "sqft": 28557.0,
+   "employees": 45,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Univation Technologies, LLC",
+   "floor": 19,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 27,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Polunsky Beitel Green LLP",
+   "floor": 19,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Energy Transfer",
+   "floor": 41,
+   "suite": null,
+   "sqft": 27498.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "P1prpkkZGKb",
+  "Yjk6sQD6g6k"
+ ]
+}

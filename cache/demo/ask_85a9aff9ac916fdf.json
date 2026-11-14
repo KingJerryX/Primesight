@@ -1,0 +1,6 @@
+{
+ "call": "E-bike battery caught fire in an office on the 6th floor, 363 Sam Houston Pky, Houston.",
+ "text": "Which way is the wind pushing the smoke, and where is the nearest hydrant?",
+ "answer": "WIND: from ENE 9.3 mph, gusts 23.7, 55.9F. Smoke drifts WSW, toward the building's WSW side.\nHYDRANTS: nearest is 136 m NE. Next are 156 m NW, 166 m W, 175 m NW, 185 m N and 200 m S. 17 are within 300 m but the source listed only these 6.\nNOT KNOWN: which street or side of the street each hydrant is on.",
+ "trace": "{\"t\": 4.5, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"363 Sam Houston Pky, Houston\\\"}\"}\n{\"t\": 7.87, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"outside-scout\\\", \\\"description\\\": \\\"Property id 234022 (363 N Sam Houston Pky E, Houston). Incident: fire - e-bike lithium battery fire in an office on the 6th floor. Research only. Ret\"}\n{\"t\": 9.6, \"step\": \"helper:outside_now\", \"detail\": \"{\\\"property_id\\\": 234022}\"}\n{\"t\": 25.66, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 25.66, \"step\": \"usage\", \"detail\": \"38804 in / 1435 out tokens, ~$0.18\"}\n"
+}

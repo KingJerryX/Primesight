@@ -1,0 +1,162 @@
+{
+ "property_id": 256445,
+ "name": "Grether & Grether Loft Building",
+ "address": "730 Los Angeles St, Los Angeles, CA",
+ "lat": 34.0423135,
+ "lon": -118.2510873,
+ "type": "Multifamily",
+ "stories": 6,
+ "gross_sqft": 83136.0,
+ "typical_floor_sqft": 11033.0,
+ "year_built": 1924,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "210",
+   "sqft": 1521.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "205",
+   "sqft": 247.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "207",
+   "sqft": 667.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "732 LA St Unit C",
+   "sqft": 1463.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "732 S LA Unit A",
+   "sqft": 658.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "732 S LA Unit D",
+   "sqft": 935.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HAKAMEN",
+   "floor": 1,
+   "suite": "734 S LA St",
+   "sqft": 984.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "736 S LA St Unit C",
+   "sqft": 1525.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "732D",
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Minister Angels Mech ",
+   "floor": 1,
+   "suite": "732-D",
+   "sqft": 658.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Centre for Applied Ecological Remediation ",
+   "floor": 1,
+   "suite": "732-C",
+   "sqft": 1463.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Miguel Suit Tailor, Inc",
+   "floor": 1,
+   "suite": "736",
+   "sqft": 2000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beau Ideal House Of Beauty",
+   "floor": null,
+   "suite": "206",
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": null,
+   "suite": "206",
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "1dix5py4NYr",
+  "5fcFfdA2ENH",
+  "9tucDA3SZ8n",
+  "9vXMRUSU1kq",
+  "Ckj8oCP5q46",
+  "JGmQeB8VYvW",
+  "KPjUkmSN3X7",
+  "QSUujF8dMMp",
+  "VQE5xXsYBF2",
+  "ZPTxrWmDe7Z",
+  "shGhvDCyKam",
+  "u35eGhEcZVY",
+  "vux5EmZydwj",
+  "yQvCeYJNjgm",
+  "yvw9KSZGts3"
+ ]
+}

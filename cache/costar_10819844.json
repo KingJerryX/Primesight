@@ -1,0 +1,558 @@
+{
+ "property_id": 10819844,
+ "name": "Texas Tower",
+ "address": "845 Texas Ave, Houston, TX",
+ "lat": 29.7614291,
+ "lon": -95.3634563,
+ "type": "Office",
+ "stories": 47,
+ "gross_sqft": 1191990.0,
+ "typical_floor_sqft": 25361.0,
+ "year_built": 2021,
+ "construction": "Steel",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 24
+  },
+  {
+   "type": "Freight",
+   "count": 2
+  },
+  {
+   "type": "Parking",
+   "count": 4
+  }
+ ],
+ "tenants": [
+  {
+   "name": "The Sylvie",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3267.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "Private Suite B",
+   "sqft": 918.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "Private Office",
+   "sqft": 304.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "Private Office",
+   "sqft": 344.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Avenue Advisors",
+   "floor": 2,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cheniere Energy",
+   "floor": 12,
+   "suite": null,
+   "sqft": 30473.0,
+   "employees": 1009,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cheniere Energy",
+   "floor": 13,
+   "suite": null,
+   "sqft": 33474.0,
+   "employees": 1009,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cheniere Energy",
+   "floor": 14,
+   "suite": null,
+   "sqft": 29920.0,
+   "employees": 1009,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cheniere Energy",
+   "floor": 15,
+   "suite": null,
+   "sqft": 29283.0,
+   "employees": 1009,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cheniere Energy",
+   "floor": 16,
+   "suite": null,
+   "sqft": 30181.0,
+   "employees": 1009,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 17,
+   "suite": null,
+   "sqft": 7713.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sullivan & Cromwell",
+   "floor": 17,
+   "suite": null,
+   "sqft": 6635.0,
+   "employees": 44,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Squarepoint Capital",
+   "floor": 18,
+   "suite": null,
+   "sqft": 8200.0,
+   "employees": 55,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Skadden",
+   "floor": 18,
+   "suite": null,
+   "sqft": 22376.0,
+   "employees": 62,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morgan Stanley",
+   "floor": 19,
+   "suite": null,
+   "sqft": 30181.0,
+   "employees": 75,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fayez Sarofim & Co.",
+   "floor": 20,
+   "suite": null,
+   "sqft": 30382.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fayez Sarofim & Co.",
+   "floor": 21,
+   "suite": null,
+   "sqft": 30382.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Moelis",
+   "floor": 22,
+   "suite": null,
+   "sqft": 30382.0,
+   "employees": 90,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Skadden",
+   "floor": 23,
+   "suite": null,
+   "sqft": 30110.0,
+   "employees": 62,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "McGuireWoods",
+   "floor": 24,
+   "suite": null,
+   "sqft": 29492.0,
+   "employees": 32,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sheppard Mullin Richter & Hampton",
+   "floor": 25,
+   "suite": null,
+   "sqft": 29771.0,
+   "employees": 75,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clifford Chance",
+   "floor": 26,
+   "suite": null,
+   "sqft": 30200.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clifford Chance",
+   "floor": 27,
+   "suite": null,
+   "sqft": 30289.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sable Offshore",
+   "floor": 28,
+   "suite": null,
+   "sqft": 31196.0,
+   "employees": 106,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sixth Street",
+   "floor": 29,
+   "suite": null,
+   "sqft": 5800.0,
+   "employees": 38,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chicago Title Commercial",
+   "floor": 29,
+   "suite": null,
+   "sqft": 10412.0,
+   "employees": 78,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Will Erwin Headache Research Foundation",
+   "floor": 29,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sable Offshore",
+   "floor": 29,
+   "suite": null,
+   "sqft": 4664.0,
+   "employees": 106,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sable Offshore",
+   "floor": 29,
+   "suite": null,
+   "sqft": 10289.0,
+   "employees": 106,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hines Interest LP",
+   "floor": 30,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hines",
+   "floor": 30,
+   "suite": null,
+   "sqft": 31078.0,
+   "employees": 400,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hines",
+   "floor": 31,
+   "suite": null,
+   "sqft": 31255.0,
+   "employees": 400,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hines",
+   "floor": 32,
+   "suite": null,
+   "sqft": 31249.0,
+   "employees": 400,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hines",
+   "floor": 33,
+   "suite": null,
+   "sqft": 30366.0,
+   "employees": 400,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hines Global Income Trust, Inc.",
+   "floor": 33,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hines",
+   "floor": 34,
+   "suite": null,
+   "sqft": 31255.0,
+   "employees": 400,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hines",
+   "floor": 35,
+   "suite": null,
+   "sqft": 31231.0,
+   "employees": 400,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trafigura",
+   "floor": 36,
+   "suite": null,
+   "sqft": 31079.0,
+   "employees": 200,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bain & Company",
+   "floor": 37,
+   "suite": null,
+   "sqft": 30475.0,
+   "employees": 47,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DLA Piper",
+   "floor": 38,
+   "suite": null,
+   "sqft": 31843.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Egon Zehnder",
+   "floor": 38,
+   "suite": null,
+   "sqft": 10641.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Charter Title Company",
+   "floor": 39,
+   "suite": null,
+   "sqft": 4748.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 39,
+   "suite": null,
+   "sqft": 8315.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AlixPartners",
+   "floor": 39,
+   "suite": null,
+   "sqft": 3818.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clifford Chance",
+   "floor": 39,
+   "suite": null,
+   "sqft": 18767.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "McDermott Will & Schulte",
+   "floor": 40,
+   "suite": "A",
+   "sqft": 7728.0,
+   "employees": 105,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "McDermott Will & Schulte",
+   "floor": 40,
+   "suite": "B",
+   "sqft": 4206.0,
+   "employees": 105,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "McDermott Will & Schulte",
+   "floor": 40,
+   "suite": "C",
+   "sqft": 3943.0,
+   "employees": 105,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cushman & Wakefield",
+   "floor": 40,
+   "suite": "E",
+   "sqft": 6574.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 40,
+   "suite": null,
+   "sqft": 9350.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 40,
+   "suite": "4050",
+   "sqft": 6498.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vinson & Elkins",
+   "floor": 41,
+   "suite": null,
+   "sqft": 30779.0,
+   "employees": 600,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vinson & Elkins",
+   "floor": 42,
+   "suite": null,
+   "sqft": 30779.0,
+   "employees": 600,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vinson & Elkins",
+   "floor": 43,
+   "suite": null,
+   "sqft": 30779.0,
+   "employees": 600,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vinson & Elkins",
+   "floor": 44,
+   "suite": null,
+   "sqft": 26574.0,
+   "employees": 600,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vinson & Elkins",
+   "floor": 45,
+   "suite": null,
+   "sqft": 30777.0,
+   "employees": 600,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vinson & Elkins",
+   "floor": 46,
+   "suite": null,
+   "sqft": 29745.0,
+   "employees": 600,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vinson & Elkins",
+   "floor": 47,
+   "suite": null,
+   "sqft": 28567.0,
+   "employees": 600,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "5ih8y3c7LGE",
+  "65if4fU5412"
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "property_id": 256963,
+ "name": "Barrington Plaza Commercial",
+ "address": "11704 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0488889,
+ "lon": -118.4610623,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 33991.0,
+ "typical_floor_sqft": 16787.0,
+ "year_built": 1961,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Pacific Sports Medicine Group",
+   "floor": 1,
+   "suite": "11710",
+   "sqft": 6043.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wood Ranch",
+   "floor": 1,
+   "suite": "11700",
+   "sqft": 6547.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "OsteoStrong",
+   "floor": 1,
+   "suite": "11706",
+   "sqft": 4197.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Window Collections",
+   "floor": 2,
+   "suite": "212",
+   "sqft": 860.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Benny Lin's Acupuncture Clinic",
+   "floor": 2,
+   "suite": "293",
+   "sqft": 1104.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Art of Wellness",
+   "floor": 2,
+   "suite": "295",
+   "sqft": 1104.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cheri Gross Acupuncture Massage Therapy",
+   "floor": 2,
+   "suite": "222",
+   "sqft": 860.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ark Holdings",
+   "floor": 2,
+   "suite": "255",
+   "sqft": 860.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "National Tax Advocacy",
+   "floor": 2,
+   "suite": "D230",
+   "sqft": 860.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Inneractive Enterprises Inc.",
+   "floor": 2,
+   "suite": "226",
+   "sqft": 860.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eternal Wellness Acupuncture & Functional Medicine",
+   "floor": 2,
+   "suite": "206",
+   "sqft": 1104.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gary Brazina MD",
+   "floor": 2,
+   "suite": "224",
+   "sqft": 1104.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tulip Advanced Aesthetic & Medical",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 1204.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Michael DiPaolo, PhD",
+   "floor": 2,
+   "suite": "245",
+   "sqft": 860.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "pMe3VYvpCCU"
+ ]
+}

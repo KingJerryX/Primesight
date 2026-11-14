@@ -1,0 +1,126 @@
+{
+ "model_id": "tsaz3uu9Nk9",
+ "name": "Suite 1195",
+ "floor": 11,
+ "sweeps": [
+  {
+   "id": "tic1s85364t72ikq5q1uspu7b",
+   "index": 0,
+   "xy": [
+    4.596728324890137,
+    -0.35010698437690735
+   ],
+   "hits": []
+  },
+  {
+   "id": "rbyi8qm08dh85ug4ms9u52pea",
+   "index": 1,
+   "xy": [
+    1.1059077978134155,
+    -3.2994818687438965
+   ],
+   "hits": []
+  },
+  {
+   "id": "m4tszm0u8gu6c8pr9u1tm591d",
+   "index": 2,
+   "xy": [
+    0.002943675732240081,
+    -0.0012932999525219202
+   ],
+   "hits": []
+  },
+  {
+   "id": "swczsahtrmqf54qbz02b3kdac",
+   "index": 3,
+   "xy": [
+    3.292116641998291,
+    0.42329904437065125
+   ],
+   "hits": []
+  },
+  {
+   "id": "p597adzd9us2n2utcdcf1652d",
+   "index": 4,
+   "xy": [
+    6.865385055541992,
+    -3.6730563640594482
+   ],
+   "hits": []
+  },
+  {
+   "id": "wxnmzuk0127zggh9azrzdkm0d",
+   "index": 5,
+   "xy": [
+    6.53690242767334,
+    1.016413927078247
+   ],
+   "hits": [
+    {
+     "label": "fire alarm pull station",
+     "score": 0.49,
+     "box": [
+      848,
+      509,
+      867,
+      530
+     ],
+     "color": 0.0,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "tymm0unz2fdh8d3n9z4eupg4c",
+   "index": 6,
+   "xy": [
+    0.842132031917572,
+    2.338308811187744
+   ],
+   "hits": []
+  },
+  {
+   "id": "iqp55mwkrm0zpy4ds59dmcgnb",
+   "index": 7,
+   "xy": [
+    4.602005481719971,
+    -2.4175164699554443
+   ],
+   "hits": []
+  },
+  {
+   "id": "dspryutnskbt3cy8hfn1gh84b",
+   "index": 8,
+   "xy": [
+    2.3984055519104004,
+    2.042405843734741
+   ],
+   "hits": []
+  },
+  {
+   "id": "sha1516015qxc4nwgadq5dyac",
+   "index": 9,
+   "xy": [
+    2.9510202407836914,
+    -1.2620584964752197
+   ],
+   "hits": []
+  },
+  {
+   "id": "t9q406hidrsfwrz19g847am1a",
+   "index": 10,
+   "xy": [
+    -0.14107270538806915,
+    1.785075306892395
+   ],
+   "hits": []
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 0,
+  "stairs": 0,
+  "fire extinguisher": 0,
+  "fire alarm pull station": 0
+ },
+ "seconds": 140
+}

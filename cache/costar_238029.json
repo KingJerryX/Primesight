@@ -1,0 +1,21 @@
+{
+ "property_id": 238029,
+ "name": null,
+ "address": "5025 Jensen Dr, Houston, TX",
+ "lat": 29.806533,
+ "lon": -95.342674,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 48600.0,
+ "typical_floor_sqft": 48600.0,
+ "year_built": 1951,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "mu7V5E4n5Zs"
+ ]
+}

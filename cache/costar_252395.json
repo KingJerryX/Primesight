@@ -1,0 +1,116 @@
+{
+ "property_id": 252395,
+ "name": null,
+ "address": "6171 Century Blvd, Los Angeles, CA",
+ "lat": 33.9458789,
+ "lon": -118.3936351,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 81530.0,
+ "typical_floor_sqft": 20000.0,
+ "year_built": 1978,
+ "construction": "Unknown",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Procella Media",
+   "floor": 0,
+   "suite": null,
+   "sqft": 300.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rinaldi's Deli",
+   "floor": 1,
+   "suite": "168",
+   "sqft": 1200.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PGAL",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 4000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 9181.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 2882.0,
+   "employees": null,
+   "industry": "PersonalServices",
+   "about": null
+  },
+  {
+   "name": "Sam First",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "M-Theory Group",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 6529.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morrow-Meadows",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 10004.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hensel Phelps",
+   "floor": 3,
+   "suite": null,
+   "sqft": 3467.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

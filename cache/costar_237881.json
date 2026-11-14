@@ -1,0 +1,67 @@
+{
+ "property_id": 237881,
+ "name": "Building 3",
+ "address": "13475 Fondren Rd, Houston, TX",
+ "lat": 29.6262037,
+ "lon": -95.5068085,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 12244.0,
+ "typical_floor_sqft": 12244.0,
+ "year_built": 1983,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "13483",
+   "sqft": 2400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texsun NRG",
+   "floor": 1,
+   "suite": null,
+   "sqft": 612.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JC Autobody Shop",
+   "floor": 1,
+   "suite": null,
+   "sqft": 612.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Elite",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1420.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "13475",
+   "sqft": 2400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "MLLaxT2ppiR"
+ ]
+}

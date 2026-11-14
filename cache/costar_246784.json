@@ -1,0 +1,192 @@
+{
+ "property_id": 246784,
+ "name": "TENTEN Wilshire",
+ "address": "1010 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.051637,
+ "lon": -118.2622717,
+ "type": "Multifamily",
+ "stories": 16,
+ "gross_sqft": 273360.0,
+ "typical_floor_sqft": 16316.0,
+ "year_built": 1960,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Central City Development Group",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Kenneth Byrd",
+   "floor": 1,
+   "suite": null,
+   "sqft": 150.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brasil Kiss Coffeebar",
+   "floor": 1,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "1010 Rooftop",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aesculatech",
+   "floor": 1,
+   "suite": "b",
+   "sqft": null,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Musical Health Technologies",
+   "floor": 3,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jeong & Likens, LC",
+   "floor": 7,
+   "suite": null,
+   "sqft": 4500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Los Angeles Ldc Inc",
+   "floor": 8,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Baracci",
+   "floor": 9,
+   "suite": "906",
+   "sqft": null,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Olympia Law PC",
+   "floor": 12,
+   "suite": null,
+   "sqft": 16316.0,
+   "employees": 109,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blackwood Properties, Inc.",
+   "floor": 14,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Riveting Entertainment",
+   "floor": 15,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TenTen",
+   "floor": null,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MacroCons",
+   "floor": null,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": null,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Amidi Group",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Amidi Group",
+   "phone": "5550340005"
+  }
+ ],
+ "matterport_models": [
+  "1EZR6fkoDqq",
+  "2Qjgx1kHRZv",
+  "66dGSwPPFt3",
+  "7uyHmjQmgP5",
+  "9NWRN2bKcce",
+  "AfqWGoHaUTj",
+  "Drw84yP6fkM",
+  "GxL1dQaz1Fy",
+  "J623JwGd16r",
+  "LveQntJpGHu",
+  "S9e8DwRDo9z",
+  "ZNYVbmYxrua",
+  "auHZsjLnLaX",
+  "iMq4oDsgv2E",
+  "obVGPX9oSun",
+  "q49HsNCjb7N",
+  "tNT3aQnN1K8",
+  "wATSSRvzEGu",
+  "wAtJ6mgw9Y5",
+  "wpomoGDgoqF",
+  "yfmRVXSUfWH"
+ ]
+}

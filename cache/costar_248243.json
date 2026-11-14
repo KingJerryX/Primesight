@@ -1,0 +1,323 @@
+{
+ "property_id": 248243,
+ "name": null,
+ "address": "3415 sepulveda Blvd, Los Angeles, CA",
+ "lat": 34.0205071,
+ "lon": -118.4241533,
+ "type": "Office",
+ "stories": 12,
+ "gross_sqft": 185555.0,
+ "typical_floor_sqft": 16015.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "OUR HOUSE Grief Support Center",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 3728.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Orci",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 14795.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WORKS Entertainment",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 1500.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stockwell, Harris, Woolverton & Fox",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 1500.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lucidea",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 1450.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Simon S. Wong & Associates",
+   "floor": 3,
+   "suite": "360",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kay Lang & Associates",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 1500.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Principle Employment Law, APC",
+   "floor": 3,
+   "suite": "300A",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Impact Matters Law LLP",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 2989.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Drasin, Yee and Santiago",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 2989.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RobertDouglas",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 2989.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Immigration Law Offices of Los Angeles",
+   "floor": 5,
+   "suite": "570",
+   "sqft": 3736.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zozo Apparel USA, Inc.",
+   "floor": 5,
+   "suite": "560",
+   "sqft": 3731.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alzheimer's Association",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 3736.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RCN Capital",
+   "floor": 5,
+   "suite": "580",
+   "sqft": 3736.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Five by Five Global, Inc.",
+   "floor": 6,
+   "suite": "670",
+   "sqft": 2202.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Walker Consultants",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 2242.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 5398.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brookhill Corp.",
+   "floor": 7,
+   "suite": "705",
+   "sqft": 2242.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "FirstService Residential",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 2242.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "State Farm Insurance",
+   "floor": 7,
+   "suite": "730",
+   "sqft": 1596.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mullen & Filippi, LLP",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 1594.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 2792.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "USIM",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 4932.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ALSAC St. Jude",
+   "floor": 8,
+   "suite": "840",
+   "sqft": 4932.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PHP Agency",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 7968.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 11,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ISBX Corporation",
+   "floor": 12,
+   "suite": "1250",
+   "sqft": 10809.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stockwell, Harris, Woolverton & Fox",
+   "floor": 12,
+   "suite": "1260",
+   "sqft": 10809.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "The Swig Company",
+   "phone": "5558040127"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 157
+  },
+  {
+   "type": "SurfaceTandem",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  },
+  {
+   "type": "CoveredTandem",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "aYTUWzQVbUs",
+  "ewU6Vvhu6XX",
+  "fzKQNYX6EYL",
+  "zKwMfqEExnd"
+ ]
+}

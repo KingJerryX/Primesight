@@ -1,0 +1,35 @@
+{
+ "property_id": 239911,
+ "name": "Bridgewood II",
+ "address": "652 Sam Houston Pky, Houston, TX",
+ "lat": 29.937648,
+ "lon": -95.388258,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 168924.0,
+ "typical_floor_sqft": 35608.0,
+ "year_built": 1980,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "NrfpWct9nZo",
+  "X7PW44gStQV"
+ ]
+}

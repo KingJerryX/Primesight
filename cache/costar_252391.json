@@ -1,0 +1,32 @@
+{
+ "property_id": 252391,
+ "name": null,
+ "address": "613 Grand Ave, Los Angeles, CA",
+ "lat": 34.0485204,
+ "lon": -118.2559374,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 16328.0,
+ "typical_floor_sqft": 8164.0,
+ "year_built": 1926,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Casey's Irish Pub",
+   "floor": 1,
+   "suite": null,
+   "sqft": 7828.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "BigFZZGUQgJ",
+  "QjsE9rqSW1f"
+ ]
+}

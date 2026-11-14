@@ -1,0 +1,34 @@
+{
+ "property_id": 240723,
+ "name": "Nova Building",
+ "address": "16903 Buccaneer Ln, Houston, TX",
+ "lat": 29.5559797,
+ "lon": -95.1156179,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 25000.0,
+ "typical_floor_sqft": 12500.0,
+ "year_built": 1967,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 1
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "bKu4rCqsZ8h"
+ ]
+}

@@ -1,0 +1,9 @@
+{"t": 0.0, "step": "call_received", "detail": "Cardiac arrest on the 36th floor, 1000 Louisiana St, Houston. Caller is a coworker, patient is unresponsive."}
+{"t": 0.02, "step": "address_lookup", "detail": "1000 Louisiana St, Houston -> 233899"}
+{"t": 2.16, "step": "find_building", "detail": "{\"address\": \"1000 Louisiana St, Houston\"}"}
+{"t": 4.07, "step": "gather_building", "detail": "{\"property_id\": 233899, \"floor\": 36, \"incident\": \"medical\"}"}
+{"t": 4.07, "step": "read_file", "detail": "{\"file_path\": \"/buildings/233899.md\"}"}
+{"t": 11.13, "step": "task", "detail": "{\"subagent_type\": \"tenant-risk\", \"description\": \"Building: Wells Fargo Plaza, 1000 Louisiana St, Houston (71 stories). Incident: medical, cardiac arrest on floor 36. Flag any tenants that change the r"}
+{"t": 16.1, "step": "add_building_note", "detail": "{\"property_id\": 233899, \"note\": \"MEDICAL: cardiac arrest, floor 36 (CME Group), patient unresponsive, caller coworker. Briefing sent; freight elevator on record for stretcher; exact-floor scan availab"}
+{"t": 19.4, "step": "usage", "detail": "36736 in / 1261 out tokens, ~$0.17"}
+{"t": 19.4, "step": "done", "detail": "12 lines, 2 images"}

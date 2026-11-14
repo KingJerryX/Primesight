@@ -1,0 +1,49 @@
+{
+ "property_id": 241373,
+ "name": "Bldg I",
+ "address": "3404 Yale St, Houston, TX",
+ "lat": 29.8176835,
+ "lon": -95.3990203,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 21408.0,
+ "typical_floor_sqft": 21408.0,
+ "year_built": 1974,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "HTS",
+   "floor": 1,
+   "suite": "3410",
+   "sqft": 10183.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wolf Express Liquor",
+   "floor": 1,
+   "suite": null,
+   "sqft": 7149.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Continental Batteries",
+   "floor": 1,
+   "suite": "3408",
+   "sqft": 4333.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

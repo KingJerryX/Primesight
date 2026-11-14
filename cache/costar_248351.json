@@ -1,0 +1,144 @@
+{
+ "property_id": 248351,
+ "name": "Barham Plaza",
+ "address": "3800 Barham Blvd, Los Angeles, CA",
+ "lat": 34.143825,
+ "lon": -118.34073,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 85831.0,
+ "typical_floor_sqft": 16878.0,
+ "year_built": 1986,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "The Muse Rooms",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 13478.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cinema Association",
+   "floor": 2,
+   "suite": "208",
+   "sqft": 6751.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bradley University",
+   "floor": 2,
+   "suite": "206",
+   "sqft": 5063.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ithaca College Los Angeles Program",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 3136.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Synergy Sales",
+   "floor": 3,
+   "suite": "316",
+   "sqft": 1688.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SheMogul",
+   "floor": 3,
+   "suite": "315",
+   "sqft": 1688.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kapri Residencies",
+   "floor": 3,
+   "suite": "309",
+   "sqft": 1688.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MM & DH",
+   "floor": 3,
+   "suite": "318",
+   "sqft": 1688.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alleviate Care",
+   "floor": 3,
+   "suite": "322",
+   "sqft": 3638.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Glassman Media",
+   "floor": 4,
+   "suite": "403,407",
+   "sqft": 1100.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Juma Entertainment",
+   "floor": 4,
+   "suite": "409",
+   "sqft": 3165.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gardaworld Security",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 7595.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Park Agency",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 3385.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "cqDGKrH5ZTu"
+ ]
+}

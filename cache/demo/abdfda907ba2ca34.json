@@ -1,0 +1,751 @@
+{
+ "text": "Solar panel fire on the roof, 1000 Louisiana St, Houston. Smoke visible from the street.",
+ "out": {
+  "briefing": "PRIMESIGHT | ROOFTOP / SOLAR PANEL FIRE | ROOF ABOVE FLOOR 71\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nABOVE FIRE: none, fire is on the roof above the top floor (71)\nON FLOOR 71: no tenant on record (vacant, or not in data). Floor 70: Cathexis, no risk flags\nWATER/WIND: 53 hydrants within 300 m, nearest 56 m N, 59 m NE | wind from ENE 7.1 mph, gusts 17.2, smoke drifts WSW\nROOF: membrane, 1 AC unit, 3 vents, 5 satellite dishes, 2 skylights. No solar panels seen in 2022 aerial\nINSIDE: 3D scan of floor 71, 49 scan points. Exit signs seen from 21, pull stations from 9. Walk from scan start: exit sign within ~4 m, far end ~37 m\nBUILDING: 71 stories | built 1983 | steel frame | sprinklers: yes\nOPEN LOT for staging ~491 m SW, ~365 m W (aerial search, verify). Both are downwind\nPROPERTY MGR: CBRE 5556193343 (text queued: meet crew in lobby with roof keys and solar/electrical disconnect info)\nNOT KNOWN: stair locations, standpipe locations, sprinkler type, roof access, solar disconnect location, elevator counts\nhttps://my.matterport.com/show/?m=tzDLoMcCjuC",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\233899_tzDLoMcCjuC_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\233899_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/233899_tzDLoMcCjuC_plan_marked.jpg",
+   "/img/233899_aerial.jpg"
+  ],
+  "property_id": 233899,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire Dept: rooftop solar panel fire at Wells Fargo Plaza, roof above floor 71, smoke visible. Please meet crew in lobby with roof access keys and solar/electrical disconnect info."
+   }
+  ],
+  "tenant_flags": [],
+  "_facts": {
+   "incident": "fire",
+   "floor": 71,
+   "building": {
+    "name": "Wells Fargo Plaza",
+    "address": "1000 Louisiana St, Houston, TX",
+    "stories": 71,
+    "year_built": 1983,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 155,
+     "tenants": [
+      "Wells Fargo Bank"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 5,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 15,
+     "tenants": [
+      "Ares Management Corp"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 7,
+     "people": 155,
+     "tenants": [
+      "Wells Fargo Bank"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 161,
+     "tenants": [
+      "Wells Fargo Home Mortgage"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 20,
+     "tenants": [
+      "The BVA Group",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 74,
+      "exit sign": 26,
+      "stairs": 1,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 0
+     }
+    },
+    {
+     "floor": 12,
+     "people": 161,
+     "tenants": [
+      "Wells Fargo Advisors"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 13,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 14,
+     "people": 56,
+     "tenants": [
+      "Green Valley Construction",
+      "Riverstone Holdings"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 15,
+     "people": 0,
+     "tenants": [
+      "Sky Project Management"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 261,
+      "exit sign": 139,
+      "stairs": 8,
+      "fire extinguisher": 87,
+      "fire alarm pull station": 18
+     }
+    },
+    {
+     "floor": 16,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 17,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 18,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 19,
+     "people": 36,
+     "tenants": [
+      "Cawley, Gillespie & Associates",
+      "DLR Group",
+      "Infrastructure Engineering"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 20,
+     "people": 67,
+     "tenants": [
+      "Foley & Lardner"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 21,
+     "people": 67,
+     "tenants": [
+      "Foley & Lardner"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 22,
+     "people": 67,
+     "tenants": [
+      "Foley & Lardner"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 23,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 24,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 25,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 26,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 27,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 28,
+     "people": 116,
+     "tenants": [
+      "Clark Hill"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 29,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 30,
+     "people": 144,
+     "tenants": [
+      "NextDecade Corporation"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 31,
+     "people": 144,
+     "tenants": [
+      "NextDecade Corporation"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 32,
+     "people": 144,
+     "tenants": [
+      "NextDecade Corporation"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 33,
+     "people": 144,
+     "tenants": [
+      "NextDecade Corporation"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 34,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 35,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 36,
+     "people": 16,
+     "tenants": [
+      "CME Group"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 18,
+      "exit sign": 11,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 2
+     }
+    },
+    {
+     "floor": 37,
+     "people": 0,
+     "tenants": [],
+     "scanned": true,
+     "seen": {
+      "scan_points": 44,
+      "exit sign": 15,
+      "stairs": 0,
+      "fire extinguisher": 1,
+      "fire alarm pull station": 1
+     }
+    },
+    {
+     "floor": 38,
+     "people": 125,
+     "tenants": [
+      "Morgan Lewis"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 39,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 40,
+     "people": 125,
+     "tenants": [
+      "Morgan Lewis"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 41,
+     "people": 125,
+     "tenants": [
+      "Morgan Lewis"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 42,
+     "people": 125,
+     "tenants": [
+      "Morgan Lewis"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 43,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 44,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 45,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 46,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 47,
+     "people": 162,
+     "tenants": [
+      "PwC"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 48,
+     "people": 162,
+     "tenants": [
+      "PwC"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 49,
+     "people": 96,
+     "tenants": [
+      "Susman Godfrey"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 50,
+     "people": 96,
+     "tenants": [
+      "Susman Godfrey"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 51,
+     "people": 96,
+     "tenants": [
+      "Susman Godfrey"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 52,
+     "people": 45,
+     "tenants": [
+      "Next Wave Energy Partners"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 53,
+     "people": 0,
+     "tenants": [],
+     "scanned": true,
+     "seen": {
+      "scan_points": 115,
+      "exit sign": 43,
+      "stairs": 1,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 4
+     }
+    },
+    {
+     "floor": 54,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 55,
+     "people": 162,
+     "tenants": [
+      "PwC"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 56,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 57,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 58,
+     "people": 162,
+     "tenants": [
+      "PwC"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 59,
+     "people": 44,
+     "tenants": [
+      "Sidley Austin"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 60,
+     "people": 44,
+     "tenants": [
+      "Sidley Austin"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 61,
+     "people": 44,
+     "tenants": [
+      "Sidley Austin"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 62,
+     "people": 44,
+     "tenants": [
+      "Sidley Austin"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 86,
+      "exit sign": 34,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 1
+     }
+    },
+    {
+     "floor": 63,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 64,
+     "people": 37,
+     "tenants": [
+      "Polsinelli"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 65,
+     "people": 33,
+     "tenants": [
+      "England & Company",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 66,
+     "people": 120,
+     "tenants": [
+      "Greenberg Traurig LLP"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 67,
+     "people": 120,
+     "tenants": [
+      "Greenberg Traurig LLP"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 68,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 69,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 70,
+     "people": 30,
+     "tenants": [
+      "Cathexis"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 71,
+     "people": 0,
+     "tenants": [],
+     "scanned": true,
+     "seen": {
+      "scan_points": 49,
+      "exit sign": 21,
+      "stairs": 1,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 9
+     }
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 61,
+     "dir": "N",
+     "lat": 29.758996379044213,
+     "lon": -95.36810486959516
+    },
+    {
+     "m": 62,
+     "dir": "NE",
+     "lat": 29.758718239132076,
+     "lon": -95.367644427794
+    },
+    {
+     "m": 67,
+     "dir": "E",
+     "lat": 29.75834786024168,
+     "lon": -95.3675267822937
+    },
+    {
+     "m": 70,
+     "dir": "S",
+     "lat": 29.757831599054743,
+     "lon": -95.36826260511435
+    },
+    {
+     "m": 77,
+     "dir": "S",
+     "lat": 29.75781601360711,
+     "lon": -95.36792919513842
+    }
+   ],
+   "staging": [
+    {
+     "m": 491,
+     "dir": "SW",
+     "lat": 29.756330249999998,
+     "lon": -95.37265777500001,
+     "score": 0.232
+    },
+    {
+     "m": 365,
+     "dir": "W",
+     "lat": 29.758118555,
+     "lon": -95.37197112999999,
+     "score": 0.214
+    },
+    {
+     "m": 364,
+     "dir": "W",
+     "lat": 29.75871465,
+     "lon": -95.37197112999999,
+     "score": 0.212
+    }
+   ],
+   "scan": {
+    "floor": 71,
+    "exact": true,
+    "link": "https://my.matterport.com/show/?m=tzDLoMcCjuC"
+   },
+   "vision": {
+    "scan_points": 49,
+    "scan_points_with": {
+     "exit sign": 21,
+     "stairs": 1,
+     "fire extinguisher": 0,
+     "fire alarm pull station": 9
+    },
+    "image_urls": [
+     "/img/vision/tzDLoMcCjuC/000_2.jpg",
+     "/img/vision/tzDLoMcCjuC/001_1.jpg",
+     "/img/vision/tzDLoMcCjuC/003_1.jpg",
+     "/img/vision/tzDLoMcCjuC/006_2.jpg",
+     "/img/vision/tzDLoMcCjuC/008_1.jpg",
+     "/img/vision/tzDLoMcCjuC/008_3.jpg",
+     "/img/vision/tzDLoMcCjuC/009_1.jpg",
+     "/img/vision/tzDLoMcCjuC/010_1.jpg",
+     "/img/vision/tzDLoMcCjuC/011_1.jpg",
+     "/img/vision/tzDLoMcCjuC/012_0.jpg",
+     "/img/vision/tzDLoMcCjuC/012_1.jpg",
+     "/img/vision/tzDLoMcCjuC/012_3.jpg"
+    ]
+   },
+   "walk": "walk from scan start: exit sign within ~4 m, far end ~37 m",
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire Dept: rooftop solar panel fire at Wells Fargo Plaza, roof above floor 71, smoke visible. Please meet crew in lobby with roof access keys and solar/electrical disconnect info."
+    }
+   ],
+   "tenant_flags": [],
+   "call": "Solar panel fire on the roof, 1000 Louisiana St, Houston. Smoke visible from the street."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Solar panel fire on the roof, 1000 Louisiana St, Houston. Smoke visible from the street.\"}\n{\"t\": 0.09, \"step\": \"address_lookup\", \"detail\": \"1000 Louisiana St, Houston -> 233899\"}\n{\"t\": 3.9, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"1000 Louisiana St, Houston\\\"}\"}\n{\"t\": 3.91, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/fire/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 3.92, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 8.28, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 233899, \\\"floor\\\": 1, \\\"incident\\\": \\\"fire\\\", \\\"incident_type\\\": \\\"solar_fire\\\"}\"}\n{\"t\": 8.29, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/233899.md\\\"}\"}\n{\"t\": 21.17, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 233899, \\\"floor\\\": 71, \\\"incident\\\": \\\"fire\\\", \\\"incident_type\\\": \\\"solar_fire\\\"}\"}\n{\"t\": 41.16, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: rooftop solar panel fire (fire / solar_fire), smoke visible from street. Building: Wells Fargo Plaza, 1000 Louisiana St, Houston, TX, propert\"}\n{\"t\": 41.16, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Write and queue a short text for the building contacts. Incident: rooftop / solar panel fire (fire, solar_fire), smoke visible from street. Floor: ro\"}\n{\"t\": 41.16, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"inside-scout\\\", \\\"description\\\": \\\"Scan id tzDLoMcCjuC (floor 71, exact floor, Wells Fargo Plaza 1000 Louisiana St, property 233899). Incident: rooftop fire above floor 71. Find: neares\"}\n{\"t\": 41.16, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"outside-scout\\\", \\\"description\\\": \\\"Property id 233899 (Wells Fargo Plaza, 1000 Louisiana St, Houston). Incident: rooftop solar panel fire, smoke visible from street, 71 stories. Report\"}\n{\"t\": 44.05, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"tzDLoMcCjuC\\\", \\\"target\\\": \\\"fire alarm pull station\\\"}\"}\n{\"t\": 44.06, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"tzDLoMcCjuC\\\", \\\"target\\\": \\\"exit sign\\\"}\"}\n{\"t\": 44.06, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"tzDLoMcCjuC\\\", \\\"target\\\": \\\"stairs\\\"}\"}\n{\"t\": 44.99, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire Dept: rooftop solar panel fire at Wells Fargo Plaza, roof above floor 71, smoke visible. Please meet crew in lobby with roof access keys and solar/electrical d\"}\n{\"t\": 45.22, \"step\": \"helper:outside_now\", \"detail\": \"{\\\"property_id\\\": 233899}\"}\n{\"t\": 65.89, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 233899, \\\"note\\\": \\\"FIRE: rooftop solar panel fire reported, smoke visible from street. Briefing sent; floor 71 no tenant on record, Cathexis on 70; 2022 aerial shows no solar panels on m\"}\n{\"t\": 80.54, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 80.54, \"step\": \"usage\", \"detail\": \"145822 in / 6492 out tokens, ~$0.71\"}\n{\"t\": 80.54, \"step\": \"done\", \"detail\": \"12 lines, 2 images\"}\n"
+}

@@ -1,0 +1,41 @@
+{
+ "property_id": 234484,
+ "name": null,
+ "address": "6203 34th St, Houston, TX",
+ "lat": 29.8186107,
+ "lon": -95.4804265,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 28800.0,
+ "typical_floor_sqft": 28800.0,
+ "year_built": 1979,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "ASAP Distributing",
+   "floor": 1,
+   "suite": "A",
+   "sqft": 5760.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advanced Glass Solutions",
+   "floor": 1,
+   "suite": "F",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "9oebYSRx5QD",
+  "LgmbpcMG6fQ"
+ ]
+}

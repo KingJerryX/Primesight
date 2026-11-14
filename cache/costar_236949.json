@@ -1,0 +1,266 @@
+{
+ "property_id": 236949,
+ "name": "Park Central Plaza",
+ "address": "1111 N Loop, Houston, TX",
+ "lat": 29.8117849,
+ "lon": -95.4192255,
+ "type": "Office",
+ "stories": 11,
+ "gross_sqft": 181671.0,
+ "typical_floor_sqft": 16515.0,
+ "year_built": 1982,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Holmes Chiropractic",
+   "floor": 1,
+   "suite": "155",
+   "sqft": 900.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 900.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Expro",
+   "floor": 1,
+   "suite": "140",
+   "sqft": 4752.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 7547.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Communities In Schools",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 10572.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 16515.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 3693.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Haque Law PLLC",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 4185.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 2790.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Adams Insurance Service, Inc.",
+   "floor": 6,
+   "suite": null,
+   "sqft": 16515.0,
+   "employees": 41,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Charles J. Argento & Associates",
+   "floor": 7,
+   "suite": "715",
+   "sqft": 2607.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Inceed",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 2896.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "725",
+   "sqft": 2122.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Agency Team",
+   "floor": 8,
+   "suite": null,
+   "sqft": 2738.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Heights Venture",
+   "floor": 8,
+   "suite": null,
+   "sqft": 7258.0,
+   "employees": 26,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Francisco G. Medina",
+   "floor": 8,
+   "suite": null,
+   "sqft": 2366.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kimberly Boyd Counseling Center",
+   "floor": 9,
+   "suite": "935",
+   "sqft": 826.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Greater Heights Holistic Psychiatry",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 1652.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rivera Law Group",
+   "floor": 9,
+   "suite": "905",
+   "sqft": 1524.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Boudreaux Law Firm",
+   "floor": 9,
+   "suite": "940",
+   "sqft": 330.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Benefit Recovery",
+   "floor": 9,
+   "suite": "910",
+   "sqft": 241.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Benefit Recovery",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 16515.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Haven Wealth Group",
+   "floor": 11,
+   "suite": null,
+   "sqft": 1189.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mary E. Conn & Associates",
+   "floor": 11,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Walter Law Firm, PC",
+   "floor": 11,
+   "suite": "1115",
+   "sqft": 613.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "StarTex Title Agency, LLC",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 2815.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "Li8dfr1DJc6",
+  "ePC5HNuCbU1"
+ ]
+}

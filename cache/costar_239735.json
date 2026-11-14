@@ -1,0 +1,153 @@
+{
+ "property_id": 239735,
+ "name": "16430 Park Ten",
+ "address": "16430 Park Ten Pl, Houston, TX",
+ "lat": 29.785856,
+ "lon": -95.668593,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 122039.0,
+ "typical_floor_sqft": 18409.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "First Service Credit Union",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 2000.0,
+   "employees": 126,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "One Guard Inspections",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "School of Science and Technology",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 6422.0,
+   "employees": 24,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Carrick Research",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 1279.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Griffin Partners, Inc.",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 1693.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Civil & Environmental Consultants, Inc.",
+   "floor": 2,
+   "suite": "275",
+   "sqft": 2570.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "FutureSoft, Inc.",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 2313.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "First Service Credit Union",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 9954.0,
+   "employees": 126,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ProLytX",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 6792.0,
+   "employees": 62,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Globe Life Insurance Agency",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 4290.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "First Service Credit Union",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 1990.0,
+   "employees": 126,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "United Safety",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 6458.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 4607.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Binex Line Group",
+   "floor": 6,
+   "suite": null,
+   "sqft": 700.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "gHFuuYTQFRj"
+ ]
+}

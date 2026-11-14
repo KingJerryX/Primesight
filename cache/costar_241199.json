@@ -1,0 +1,67 @@
+{
+ "property_id": 241199,
+ "name": "East End Lofts",
+ "address": "2115 Runnels , Houston, TX",
+ "lat": 29.76078,
+ "lon": -95.346867,
+ "type": "Multifamily",
+ "stories": 4,
+ "gross_sqft": 264912.0,
+ "typical_floor_sqft": 58281.0,
+ "year_built": 1910,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Percipio Consulting Inc",
+   "floor": 1,
+   "suite": "4302",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marquis Downtown Houston Lofts",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hl Solutions Int Corp",
+   "floor": 1,
+   "suite": "6403",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kingdom Advancement Strtgsts",
+   "floor": 1,
+   "suite": "5101",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Marquette - East End Lofts",
+   "phone": "5551512777"
+  }
+ ],
+ "matterport_models": [
+  "D5mEDFfwXpM",
+  "FiYXoepPp2f",
+  "Ykqfo4jy7bV",
+  "uzgHrctMB5S"
+ ]
+}

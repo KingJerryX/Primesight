@@ -1,0 +1,57 @@
+{
+ "property_id": 235267,
+ "name": null,
+ "address": "2409 Commerce St, Houston, TX",
+ "lat": 29.75642,
+ "lon": -95.346894,
+ "type": "GeneralRetail",
+ "stories": 3,
+ "gross_sqft": 12505.0,
+ "typical_floor_sqft": 4000.0,
+ "year_built": 1912,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Freight",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Ghasp",
+   "floor": null,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daniel Law Firm",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daniel & Associates, LLC",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "MJmunGpk7nD",
+  "pqVFRnETeWC",
+  "y2tHm6QhiWU",
+  "zdbYf4nK6Tg"
+ ]
+}

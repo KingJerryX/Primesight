@@ -1,0 +1,416 @@
+{
+ "property_id": 238032,
+ "name": "Ironworks",
+ "address": "711 Milby St, Houston, TX",
+ "lat": 29.744695,
+ "lon": -95.339118,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 115840.0,
+ "typical_floor_sqft": 30000.0,
+ "year_built": 1940,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Segunda Coffee Lab",
+   "floor": 1,
+   "suite": "35",
+   "sqft": 1200.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Second Slice Sandwich",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Furrever Doggies",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "61",
+   "sqft": 238.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "26",
+   "sqft": 350.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Outlive Chiropractic & Wellness",
+   "floor": 1,
+   "suite": "66",
+   "sqft": 615.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Knue Laser",
+   "floor": 1,
+   "suite": "71",
+   "sqft": 1200.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bowe House General Store",
+   "floor": 1,
+   "suite": "67",
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blank Space Studio",
+   "floor": 1,
+   "suite": "54",
+   "sqft": 1200.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Her Way Studio",
+   "floor": 1,
+   "suite": "69",
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pestana Beauty Spa",
+   "floor": 1,
+   "suite": "65",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Slay Beauty Teeth Bar",
+   "floor": 1,
+   "suite": "64",
+   "sqft": 1200.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Slayology Aesthetics",
+   "floor": 1,
+   "suite": "68",
+   "sqft": 1200.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "70",
+   "sqft": 251.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 9177.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zen Drip Bar & Medspa",
+   "floor": 1,
+   "suite": "32",
+   "sqft": 350.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "22",
+   "sqft": 350.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Spiritual Lines Studio",
+   "floor": 1,
+   "suite": "10",
+   "sqft": 1000.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Technicolor Tattoo",
+   "floor": 1,
+   "suite": "31",
+   "sqft": 1200.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Mood Room Garden ad Bar",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GoJui Acai & Smoothie Bar",
+   "floor": 1,
+   "suite": "38",
+   "sqft": 2000.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mossrose Bookshop",
+   "floor": 1,
+   "suite": "27",
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nima Mex",
+   "floor": 1,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ozzirys Boutique",
+   "floor": 1,
+   "suite": "4",
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wishful Heart Boutique",
+   "floor": 1,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sew Great by Nery",
+   "floor": 1,
+   "suite": "9",
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "uncynical_waves",
+   "floor": 1,
+   "suite": "3A",
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shop Local Market",
+   "floor": 1,
+   "suite": "2",
+   "sqft": 750.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JWB Insurance",
+   "floor": 1,
+   "suite": "52",
+   "sqft": 480.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Thrive Align Wellness",
+   "floor": 1,
+   "suite": "63",
+   "sqft": 249.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "3TWENTYSIX Stationery & Thangs",
+   "floor": 1,
+   "suite": "21",
+   "sqft": 350.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "56",
+   "sqft": 1045.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dreamers Books & Culture",
+   "floor": 2,
+   "suite": "11",
+   "sqft": 416.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bowe House General Store",
+   "floor": 2,
+   "suite": null,
+   "sqft": 250.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Superb Studios",
+   "floor": 2,
+   "suite": "59",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Superb Studios",
+   "floor": 2,
+   "suite": "58",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Superb Studios",
+   "floor": 2,
+   "suite": "57",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Superb Studios",
+   "floor": 2,
+   "suite": "56",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Superb Studios",
+   "floor": 2,
+   "suite": "55",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "59",
+   "sqft": 852.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Turkish Grand Bazaar",
+   "floor": 2,
+   "suite": "13",
+   "sqft": 2000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ozzirys Boutique",
+   "floor": 2,
+   "suite": "4",
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cargo Vintage",
+   "floor": 2,
+   "suite": "14",
+   "sqft": 750.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "W.W. Mechanical",
+   "phone": "5556691980"
+  }
+ ],
+ "matterport_models": [
+  "C9TBU32gzAs",
+  "fbvG2CdaanN"
+ ]
+}

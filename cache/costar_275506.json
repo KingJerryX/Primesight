@@ -1,0 +1,32 @@
+{
+ "property_id": 275506,
+ "name": null,
+ "address": "5380 Alhambra Ave, Los Angeles, CA",
+ "lat": 34.0766043,
+ "lon": -118.1682401,
+ "type": "Flex",
+ "stories": 2,
+ "gross_sqft": 10197.0,
+ "typical_floor_sqft": 6307.0,
+ "year_built": 1937,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "HATCHspaces",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "52te93ZpgA3",
+  "u6gdDAA5p5i"
+ ]
+}

@@ -1,0 +1,370 @@
+{
+ "property_id": 83684,
+ "name": "Wilshire West Medical Tower",
+ "address": "11645 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0501835,
+ "lon": -118.4604085,
+ "type": "Office",
+ "stories": 9,
+ "gross_sqft": 83099.0,
+ "typical_floor_sqft": 6978.0,
+ "year_built": 1978,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Joint Rehab and Sports Medical Center",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 2529.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cafe Brio",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 1084.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pacific Eye & Ear Specialists",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1387.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "India's Oven",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 3613.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pacific Head & Neck",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 7154.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brentwood Medical Group",
+   "floor": 7,
+   "suite": "745",
+   "sqft": 825.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brentwood Dental Center",
+   "floor": 7,
+   "suite": "704",
+   "sqft": 825.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Sheila Hughes",
+   "floor": 7,
+   "suite": "702",
+   "sqft": 825.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "David Schlang, DDS",
+   "floor": 7,
+   "suite": "703",
+   "sqft": 825.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nader Nikman, DDS",
+   "floor": 7,
+   "suite": "790",
+   "sqft": 825.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boulevard Medical Properties",
+   "floor": 7,
+   "suite": "787",
+   "sqft": 600.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "752",
+   "sqft": 816.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "701",
+   "sqft": 827.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rivkin Aesthetics",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 1807.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Med-X Drug & Alcohol Testing Service",
+   "floor": 8,
+   "suite": "830",
+   "sqft": 900.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nerida Joy",
+   "floor": 8,
+   "suite": "803",
+   "sqft": 900.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nader Dayani, D.D.S.",
+   "floor": 8,
+   "suite": "802",
+   "sqft": 900.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "A+ Cosmetic Dentistry",
+   "floor": 8,
+   "suite": "804",
+   "sqft": 900.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Los Angeles Cardiovascular Consultants Medical",
+   "floor": 8,
+   "suite": "825",
+   "sqft": 900.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Metropolis Dermatology",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 2890.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dowlat Dental Group",
+   "floor": 9,
+   "suite": "980",
+   "sqft": 2168.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marina Plastic Surgery",
+   "floor": 9,
+   "suite": null,
+   "sqft": 2168.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Firouz Orthodontics",
+   "floor": 10,
+   "suite": "1060",
+   "sqft": 900.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Natura-Like Dental Implant Studio",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 900.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alexander Hakim D.M.D., Endodontist",
+   "floor": 10,
+   "suite": "1035",
+   "sqft": 900.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nima Ebrahimi, DDS",
+   "floor": 10,
+   "suite": "1001",
+   "sqft": 900.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "California Dermatology Specialists",
+   "floor": 10,
+   "suite": "1080",
+   "sqft": 900.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fett Derm",
+   "floor": 10,
+   "suite": "1070",
+   "sqft": 900.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cognitive Behavioral Therapy Los Angeles",
+   "floor": 10,
+   "suite": "1030",
+   "sqft": 900.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cathy Green, MD",
+   "floor": 10,
+   "suite": "1090",
+   "sqft": 900.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "South Coast Medical Spa",
+   "floor": 11,
+   "suite": "1120",
+   "sqft": 900.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dental Design of Brentwood",
+   "floor": 11,
+   "suite": "1158",
+   "sqft": 900.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "West Empire Aesthetics",
+   "floor": 11,
+   "suite": "1155",
+   "sqft": 900.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Manuel A. Bustamante, D.D.S.",
+   "floor": 11,
+   "suite": "1160",
+   "sqft": 900.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Associated Dental Laboratory",
+   "floor": null,
+   "suite": "Pent-1",
+   "sqft": 7226.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Boulevard Medical Properties",
+   "phone": "5551430473"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 20
+  },
+  {
+   "type": "Covered",
+   "spaces": 350
+  },
+  {
+   "type": "CoveredTandem",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "xsU2TychZLe"
+ ]
+}

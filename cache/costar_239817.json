@@ -1,0 +1,43 @@
+{
+ "property_id": 239817,
+ "name": "Atrium I",
+ "address": "11947 North Fwy, Houston, TX",
+ "lat": 29.9386243,
+ "lon": -95.4141708,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 63000.0,
+ "typical_floor_sqft": 10000.0,
+ "year_built": 1979,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Progresso Learning",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Fidencio Macias",
+   "phone": "5556128251"
+  }
+ ],
+ "matterport_models": [
+  "cGKZaLNvy5F",
+  "rQVT9FM3orK"
+ ]
+}

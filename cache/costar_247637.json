@@ -1,0 +1,81 @@
+{
+ "property_id": 247637,
+ "name": "Jewelry Trades Building",
+ "address": "220 5th St, Los Angeles, CA",
+ "lat": 34.0477679,
+ "lon": -118.2506128,
+ "type": "Multifamily",
+ "stories": 9,
+ "gross_sqft": 100431.0,
+ "typical_floor_sqft": 9820.0,
+ "year_built": 1912,
+ "construction": "Unknown",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Desuar Spa",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NHN Global",
+   "floor": 2,
+   "suite": null,
+   "sqft": 10809.0,
+   "employees": 55,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NHN Global",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2140.0,
+   "employees": 55,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lupe's Place",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jewelry Trade Lobby",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "CFFW2k7Tpsh",
+  "CQK3UckZg95",
+  "E94Fxv6uVHV",
+  "PXzAv7eUtnR",
+  "jcgcZUUV2NX",
+  "kptgtz2dc7C"
+ ]
+}

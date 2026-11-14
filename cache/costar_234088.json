@@ -1,0 +1,360 @@
+{
+ "property_id": 234088,
+ "name": null,
+ "address": "2100 West Loop, Houston, TX",
+ "lat": 29.7460487,
+ "lon": -95.4576844,
+ "type": "Office",
+ "stories": 16,
+ "gross_sqft": 162540.0,
+ "typical_floor_sqft": 10159.0,
+ "year_built": 1974,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 5
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 3342.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 1362.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 1444.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 1135.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Pain & Spine",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 3500.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "415",
+   "sqft": 2683.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Good Hearts Youth & Family Services",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 10372.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EDM Builds",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 1578.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JAB",
+   "floor": 6,
+   "suite": "680",
+   "sqft": 3533.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nousbo",
+   "floor": 6,
+   "suite": "625",
+   "sqft": 941.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Weitzman, Pathak & Associates",
+   "floor": 6,
+   "suite": "675",
+   "sqft": 1441.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 2446.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "615",
+   "sqft": 1909.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dakota Enterprises",
+   "floor": 7,
+   "suite": null,
+   "sqft": 4400.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 2541.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 8,
+   "suite": null,
+   "sqft": 10528.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 9,
+   "suite": null,
+   "sqft": 10528.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HVS",
+   "floor": 10,
+   "suite": "1001",
+   "sqft": 3121.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 7040.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Harberg & Huvard LLP",
+   "floor": 11,
+   "suite": null,
+   "sqft": 4266.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Title Company",
+   "floor": 11,
+   "suite": null,
+   "sqft": 874.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stuart N. Wilson & Associates, PC",
+   "floor": 11,
+   "suite": null,
+   "sqft": 2110.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Weight Loss Surgery Center",
+   "floor": 11,
+   "suite": "1115",
+   "sqft": 1941.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1110",
+   "sqft": 970.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Facial Plastic Surgery Associates",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 2628.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1215",
+   "sqft": 2760.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Amador Law Firm",
+   "floor": 12,
+   "suite": "1275",
+   "sqft": 2390.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 13,
+   "suite": "1300",
+   "sqft": 10548.0,
+   "employees": null,
+   "industry": "HealthCareAndSocialAssistance",
+   "about": null
+  },
+  {
+   "name": "LeadOrigin",
+   "floor": 14,
+   "suite": "1400",
+   "sqft": 2929.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Summit Capital Partners",
+   "floor": 14,
+   "suite": null,
+   "sqft": 1238.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 14,
+   "suite": "1405",
+   "sqft": 2009.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SVR Law",
+   "floor": 14,
+   "suite": null,
+   "sqft": 1037.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 14,
+   "suite": "1405",
+   "sqft": 2009.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The American Club",
+   "floor": 15,
+   "suite": "1575",
+   "sqft": 1667.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tribute Energy",
+   "floor": 15,
+   "suite": null,
+   "sqft": 2553.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Covered",
+   "spaces": 532
+  }
+ ],
+ "matterport_models": [
+  "AEaxTxjZrPo",
+  "L3266YcPPvd",
+  "Lcv4jEgL8kk",
+  "SvozpTBRLYx",
+  "n4cvv69aXz1",
+  "rEpuTTQ1zEv",
+  "wqArVfdgo17",
+  "xStDhmrtbP5",
+  "y3QUWwgxvsw"
+ ]
+}

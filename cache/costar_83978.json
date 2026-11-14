@@ -1,0 +1,30 @@
+{
+ "property_id": 83978,
+ "name": "951 S Oxford Ave",
+ "address": "951 Oxford Ave, Los Angeles, CA",
+ "lat": 34.0540057,
+ "lon": -118.3077423,
+ "type": "Multifamily",
+ "stories": 3,
+ "gross_sqft": 72087.0,
+ "typical_floor_sqft": 21146.0,
+ "year_built": 1986,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Westside Habitats - Oxford Garden Apartments",
+   "phone": "5554949212"
+  }
+ ],
+ "matterport_models": [
+  "M78SEoKfS4Y",
+  "YdjQo99N5nG",
+  "ocVCdUyTXZp",
+  "tydm6SgaVBH"
+ ]
+}

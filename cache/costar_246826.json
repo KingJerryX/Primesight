@@ -1,0 +1,632 @@
+{
+ "property_id": 246826,
+ "name": "The Oppenheimer Tower",
+ "address": "10880 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.058653,
+ "lon": -118.443137,
+ "type": "Office",
+ "stories": 24,
+ "gross_sqft": 618301.0,
+ "typical_floor_sqft": 24499.0,
+ "year_built": 1969,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Mentor Language Institute",
+   "floor": 1,
+   "suite": "122",
+   "sqft": 1000.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Douglas Emmett",
+   "floor": 1,
+   "suite": "370",
+   "sqft": 1000.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tower Cleaners",
+   "floor": 1,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "City National Bank",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1984.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oak Park Investments",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Salon Republic",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hatch Egg Donation and Surrogacy",
+   "floor": 3,
+   "suite": null,
+   "sqft": 2688.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LabCorp",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1584.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pacific Fertility Center Los Angeles",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "560",
+   "sqft": 2678.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 4541.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "530",
+   "sqft": 3813.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "570",
+   "sqft": 1346.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MidCap Financial",
+   "floor": 8,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UpKeep",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 13203.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arden Trust Company",
+   "floor": 8,
+   "suite": null,
+   "sqft": 3274.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ridgestone",
+   "floor": 9,
+   "suite": null,
+   "sqft": 5624.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "960",
+   "sqft": 3188.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Annaguey McCann",
+   "floor": 9,
+   "suite": "960",
+   "sqft": 3188.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": null,
+   "sqft": 2054.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "915",
+   "sqft": 1655.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 3498.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allure Capital Management Corp",
+   "floor": 9,
+   "suite": "985",
+   "sqft": 1975.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "990",
+   "sqft": 1523.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "915",
+   "sqft": 1655.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "990",
+   "sqft": 1523.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BDG Law Group",
+   "floor": 10,
+   "suite": "1015",
+   "sqft": 8240.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1020",
+   "sqft": 2521.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 8431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brown Gibbons Lang & Company",
+   "floor": 11,
+   "suite": null,
+   "sqft": 6255.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 11,
+   "suite": null,
+   "sqft": 18507.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lento Law Firm",
+   "floor": 11,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Skrzyniarz & Mallean",
+   "floor": 12,
+   "suite": null,
+   "sqft": 3450.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Selman Leichenger Edson Hsu Newman & Moore",
+   "floor": 12,
+   "suite": null,
+   "sqft": 16887.0,
+   "employees": 138,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1280",
+   "sqft": 2108.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1220",
+   "sqft": 5523.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Steerpoint Capital",
+   "floor": 12,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1210",
+   "sqft": 1817.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Resmark Companies",
+   "floor": 14,
+   "suite": null,
+   "sqft": 9552.0,
+   "employees": 41,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JZ Law Group",
+   "floor": 14,
+   "suite": "1460",
+   "sqft": 1735.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Michael Development Corp",
+   "floor": 14,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Entertainment Industry Foundation",
+   "floor": 14,
+   "suite": null,
+   "sqft": 7131.0,
+   "employees": 70,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 14,
+   "suite": "1430",
+   "sqft": 4003.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1520",
+   "sqft": 12947.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1510",
+   "sqft": 2287.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1520",
+   "sqft": 1833.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1510",
+   "sqft": 2319.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Quill & Arrow",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": 25762.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Puma Biotechnology",
+   "floor": 17,
+   "suite": null,
+   "sqft": 26679.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 18,
+   "suite": "1850",
+   "sqft": 16658.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 18,
+   "suite": "1850",
+   "sqft": 9274.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Michelman Robinson",
+   "floor": 19,
+   "suite": null,
+   "sqft": 25762.0,
+   "employees": 145,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hillstone Law",
+   "floor": 20,
+   "suite": null,
+   "sqft": 9631.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lemon Law",
+   "floor": 20,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "True West Capital Partners",
+   "floor": 20,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Puma Biotechnology",
+   "floor": 21,
+   "suite": "2150",
+   "sqft": 6830.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Carlyle Financial",
+   "floor": 21,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sunset West Legal Group",
+   "floor": 21,
+   "suite": null,
+   "sqft": 14036.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wisercare",
+   "floor": 22,
+   "suite": null,
+   "sqft": 8513.0,
+   "employees": 34,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Macoy Capital",
+   "floor": 22,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 22,
+   "suite": "2250",
+   "sqft": 2318.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mutual of Omaha",
+   "floor": 22,
+   "suite": null,
+   "sqft": 3524.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oppenheimer",
+   "floor": 23,
+   "suite": null,
+   "sqft": 25762.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyfeLaw",
+   "floor": 24,
+   "suite": "2400",
+   "sqft": 27135.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mentor Language Institute",
+   "floor": null,
+   "suite": null,
+   "sqft": null,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Douglas Emmett",
+   "phone": "5550856585"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Covered",
+   "spaces": 150
+  }
+ ],
+ "matterport_models": [
+  "bVXwu8yqp2D",
+  "cBrcpZjX3Uz",
+  "cEvQ8q5GKZd",
+  "vaR5MNrZPtX",
+  "zULWLZCBVYq"
+ ]
+}

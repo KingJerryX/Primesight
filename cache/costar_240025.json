@@ -1,0 +1,128 @@
+{
+ "property_id": 240025,
+ "name": "Torrey Chase I",
+ "address": "14425 Torrey Chase Blvd, Houston, TX",
+ "lat": 29.9851052,
+ "lon": -95.4925017,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 58125.0,
+ "typical_floor_sqft": 19375.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 1
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Synergy HomeCare",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 1687.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blue Cherry Project",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 1701.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SL Auto Group",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 1874.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NACA",
+   "floor": 1,
+   "suite": null,
+   "sqft": 5241.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Neusoft CT",
+   "floor": 1,
+   "suite": null,
+   "sqft": 5076.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Interconex, Inc",
+   "floor": 2,
+   "suite": "270",
+   "sqft": 2004.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pearson VUE",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1970.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NACA",
+   "floor": 2,
+   "suite": null,
+   "sqft": 8357.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AM PM Diesel Services",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 4686.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jim C Harris & Company",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 2249.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "4VqcKP8VSXX",
+  "Twy1Lfadjkf",
+  "U6VdcuYJtAb",
+  "wXHP1att9GT"
+ ]
+}

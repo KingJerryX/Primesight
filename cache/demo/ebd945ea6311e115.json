@@ -1,0 +1,405 @@
+{
+ "text": "Active shooter reported on the 4th floor, 1801 Century Park, Los Angeles. Caller is hiding in a conference room.",
+ "out": {
+  "briefing": "PRIMESIGHT | ACTIVE THREAT / SHOOTER | FLOOR 4 | caller hiding in a conference room\nCentury Park East - 1801 Century Park E, Los Angeles CA | 25 stories | built 1972 | steel frame | sprinklers: yes\nPEOPLE: ~57 on floor 4 by tenant headcount (daytime) | NEARBY: ~38 on floors 2-6 (not counting 4)\nON FLOOR: Bluefox Entertainment ste 450 (22 staff, the most); Bruin Biometrics ste 460; Law Offices of Wiesman Pirian ste 470; Structure Law Group ste 475; Simple House Films ste 490; unnamed tenant also listed ste 490 (headcount unknown)\nGROUND FLOOR: Up Fitness, possibly a gym with public visitors (from name only)\nEXITS (3D scan, not a plan): exit signs seen at 25 of 41 scan points | walk from scan start (not the entry or lobby): exit sign ~6 m, far end ~18 m | no pull stations seen\nELEVATORS: 8 passenger, 1 freight\nSTAGING: open lot ~110 m SE, another ~420 m S (aerial search; verify, may be in line of sight)\nWHO HAS ACCESS: PM Douglas Emmett - Century Park Plaza 555-085-6585 (text queued asking for elevator recall, badges, cameras) | no security supervisor contact in data\nCREW NOTE: same report (active shooter, fl 4, caller in conference room) logged 2026-11-14, may be a repeat call\nNOT KNOWN: sprinkler type, stair locations, camera locations, door locks\nSCAN: https://my.matterport.com/show/?m=gacELDAHQEZ",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\247344_gacELDAHQEZ_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\247344_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/247344_gacELDAHQEZ_plan_marked.jpg",
+   "/img/247344_aerial.jpg"
+  ],
+  "property_id": 247344,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire Dept UPDATE/REPEAT: Active shooter, floor 4, 1801 Century Park E (may be same as earlier text). Meet police command; provide elevator recall, badge and camera access."
+   }
+  ],
+  "tenant_flags": [
+   {
+    "tenant": "Bluefox Entertainment",
+    "floor": 4,
+    "risk": "Most people on the incident floor",
+    "why": "Suite 450 lists 22 employees, the most of any tenant on floor 4. Floor 4 lists about 57 employees in total, which is moderate, not high. Prioritize this suite in search and evacuation counts.",
+    "from_name_only": false
+   },
+   {
+    "tenant": "Unknown tenant",
+    "floor": 4,
+    "risk": "Unverified occupancy",
+    "why": "This entry has no name and no headcount, and it lists the same suite 490 as Simple House Films. Treat the number of people in suite 490 as unknown during search.",
+    "from_name_only": false
+   },
+   {
+    "tenant": "Up Fitness",
+    "floor": 1,
+    "risk": "Possible public crowd (from name only)",
+    "why": "The name suggests a gym, which could hold members and visitors beyond its staff. No headcount was given. This matters for ground-floor evacuation and staging.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "security",
+   "floor": 4,
+   "building": {
+    "name": "Century Park East",
+    "address": "1801 Century Park , Los Angeles, CA",
+    "stories": 25,
+    "year_built": 1972,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 88,
+     "tenants": [
+      "DKC Public Relations",
+      "Network Capital Funding",
+      "Preferred Bank",
+      "Up Fitness"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 7,
+     "tenants": [
+      "Keystone Document Discovery"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 12,
+     "tenants": [
+      "Slesigner Communications"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 57,
+     "tenants": [
+      "Bluefox Entertainment",
+      "Bruin Biometrics LLC",
+      "Simple House Films",
+      "Structure Law Group, LLP",
+      "The Law Offices of Wiesman Pirian",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 41,
+      "exit sign": 25,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 0
+     }
+    },
+    {
+     "floor": 5,
+     "people": 7,
+     "tenants": [
+      "Sarraf Law Firm"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 12,
+     "tenants": [
+      "American Israel Public Affairs Committee"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 7,
+     "people": 77,
+     "tenants": [
+      "1st Avenue Capital",
+      "Avantus",
+      "Mediapro Studios US",
+      "Unisource National Lender Services"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 71,
+     "tenants": [
+      "Blue Lake Capital",
+      "Melmed Law Group",
+      "Much Shelist",
+      "Nosrati Law"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 42,
+     "tenants": [
+      "Comstock Realty Partners",
+      "Gary Iskowitz & Company",
+      "Natixis Corporate and Investment Banking"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 9,
+     "tenants": [
+      "Kids Capital Management Inc.",
+      "Remy Investors & Consultants Inc.",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 12,
+     "people": 47,
+     "tenants": [
+      "Novian & Novian LLP",
+      "Robert M. Baria",
+      "United Express Messengers Inc"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 13,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 14,
+     "people": 59,
+     "tenants": [
+      "AWAIM",
+      "Aaxis Group",
+      "Sherwood Holdings Inc.",
+      "Square Nine Capital"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 15,
+     "people": 12,
+     "tenants": [
+      "American Wool Services Inc.",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 16,
+     "people": 40,
+     "tenants": [
+      "TroyGould Attorneys"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 17,
+     "people": 40,
+     "tenants": [
+      "TroyGould Attorneys"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 18,
+     "people": 35,
+     "tenants": [
+      "Briones PC",
+      "Kasowitz",
+      "Lagstein Law Firm",
+      "Stonebridge Capital Management",
+      "Trade Commission Of Spain In LA",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 19,
+     "people": 38,
+     "tenants": [
+      "Mercer Global Advisors, Inc.",
+      "Ripple Industries LLC",
+      "Ruttenberg IP Law, A Professional Corporation",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 20,
+     "people": 8,
+     "tenants": [
+      "Odeon Capital Group",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 21,
+     "people": 41,
+     "tenants": [
+      "Harold Davidson & Associates, Inc.",
+      "Mather | Anderson",
+      "Optimus Properties, LLC",
+      "Sinay Co LLC"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 22,
+     "people": 60,
+     "tenants": [
+      "CI America"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 23,
+     "people": 65,
+     "tenants": [
+      "Kilpatrick Townsend And Stockton"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 24,
+     "people": 2,
+     "tenants": [
+      "Barrister Executive Suites"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 25,
+     "people": 2,
+     "tenants": [
+      "Barrister Executive Suites"
+     ],
+     "scanned": false,
+     "seen": null
+    }
+   ],
+   "hydrants": [],
+   "staging": [
+    {
+     "m": 110,
+     "dir": "SE",
+     "lat": 34.06147694,
+     "lon": -118.415107725,
+     "score": 0.219
+    },
+    {
+     "m": 422,
+     "dir": "S",
+     "lat": 34.058632679999995,
+     "lon": -118.417167665,
+     "score": 0.21
+    },
+    {
+     "m": 151,
+     "dir": "S",
+     "lat": 34.060908095,
+     "lon": -118.41579437499999,
+     "score": 0.201
+    }
+   ],
+   "scan": {
+    "floor": 4,
+    "exact": true,
+    "link": "https://my.matterport.com/show/?m=gacELDAHQEZ"
+   },
+   "vision": {
+    "scan_points": 41,
+    "scan_points_with": {
+     "exit sign": 25,
+     "stairs": 0,
+     "fire extinguisher": 0,
+     "fire alarm pull station": 0
+    },
+    "image_urls": [
+     "/img/vision/gacELDAHQEZ/000_2.jpg",
+     "/img/vision/gacELDAHQEZ/001_2.jpg",
+     "/img/vision/gacELDAHQEZ/002_1.jpg",
+     "/img/vision/gacELDAHQEZ/002_2.jpg",
+     "/img/vision/gacELDAHQEZ/003_1.jpg",
+     "/img/vision/gacELDAHQEZ/005_0.jpg",
+     "/img/vision/gacELDAHQEZ/005_2.jpg",
+     "/img/vision/gacELDAHQEZ/007_2.jpg",
+     "/img/vision/gacELDAHQEZ/008_2.jpg",
+     "/img/vision/gacELDAHQEZ/008_3.jpg",
+     "/img/vision/gacELDAHQEZ/009_2.jpg",
+     "/img/vision/gacELDAHQEZ/010_2.jpg"
+    ]
+   },
+   "walk": "walk from scan start: exit sign ~6 m (6 m), far end ~18 m",
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire Dept UPDATE/REPEAT: Active shooter, floor 4, 1801 Century Park E (may be same as earlier text). Meet police command; provide elevator recall, badge and camera access."
+    }
+   ],
+   "tenant_flags": [
+    {
+     "tenant": "Bluefox Entertainment",
+     "floor": 4,
+     "risk": "Most people on the incident floor",
+     "why": "Suite 450 lists 22 employees, the most of any tenant on floor 4. Floor 4 lists about 57 employees in total, which is moderate, not high. Prioritize this suite in search and evacuation counts.",
+     "from_name_only": false
+    },
+    {
+     "tenant": "Unknown tenant",
+     "floor": 4,
+     "risk": "Unverified occupancy",
+     "why": "This entry has no name and no headcount, and it lists the same suite 490 as Simple House Films. Treat the number of people in suite 490 as unknown during search.",
+     "from_name_only": false
+    },
+    {
+     "tenant": "Up Fitness",
+     "floor": 1,
+     "risk": "Possible public crowd (from name only)",
+     "why": "The name suggests a gym, which could hold members and visitors beyond its staff. No headcount was given. This matters for ground-floor evacuation and staging.",
+     "from_name_only": true
+    }
+   ],
+   "call": "Active shooter reported on the 4th floor, 1801 Century Park, Los Angeles. Caller is hiding in a conference room."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Active shooter reported on the 4th floor, 1801 Century Park, Los Angeles. Caller is hiding in a conference room.\"}\n{\"t\": 0.11, \"step\": \"address_lookup\", \"detail\": \"1801 Century Park E, Los Angeles -> 247344\"}\n{\"t\": 3.78, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"1801 Century Park, Los Angeles\\\"}\"}\n{\"t\": 3.78, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/security/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 6.08, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 247344, \\\"floor\\\": 4, \\\"incident\\\": \\\"security\\\", \\\"incident_type\\\": \\\"active_threat\\\"}\"}\n{\"t\": 6.08, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/247344.md\\\"}\"}\n{\"t\": 24.38, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: active shooter (security / active_threat), floor 4, 1801 Century Park E, Los Angeles (property 247344). Caller hiding in a conference room on\"}\n{\"t\": 24.39, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Incident: active shooter (security / active_threat), floor 4, 1801 Century Park E (Century Park East), Los Angeles, CA. Building: 25 stories, 8 passe\"}\n{\"t\": 24.4, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"inside-scout\\\", \\\"description\\\": \\\"Scan id gacELDAHQEZ (floor 4, exact floor, 1801 Century Park E). Find walk distance from the scan start to the nearest fire alarm pull station and nea\"}\n{\"t\": 26.86, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"gacELDAHQEZ\\\", \\\"target\\\": \\\"fire alarm pull station\\\"}\"}\n{\"t\": 26.87, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"gacELDAHQEZ\\\", \\\"target\\\": \\\"exit sign\\\"}\"}\n{\"t\": 31.88, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire Dept UPDATE/REPEAT: Active shooter, floor 4, 1801 Century Park E (may be same as earlier text). Meet police command; provide elevator recall, badge and camera \"}\n{\"t\": 43.31, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 247344, \\\"note\\\": \\\"Active shooter reported floor 4 (caller hiding in conference room), may repeat earlier report. Briefing sent; update text queued to PM Douglas Emmett for elevator reca\"}\n{\"t\": 64.02, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 64.02, \"step\": \"usage\", \"detail\": \"87389 in / 6202 out tokens, ~$0.47\"}\n{\"t\": 64.02, \"step\": \"done\", \"detail\": \"12 lines, 2 images\"}\n"
+}

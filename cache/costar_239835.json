@@ -1,0 +1,27 @@
+{
+ "property_id": 239835,
+ "name": "Halbouty Center",
+ "address": "5100 Westheimer Rd, Houston, TX",
+ "lat": 29.7410658,
+ "lon": -95.4648038,
+ "type": "Office",
+ "stories": 5,
+ "gross_sqft": 109225.0,
+ "typical_floor_sqft": 21819.0,
+ "year_built": 1973,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "4BoRRBiUFKb",
+  "f7eUoHWjnGd"
+ ]
+}

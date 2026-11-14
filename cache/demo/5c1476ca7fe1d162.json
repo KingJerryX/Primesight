@@ -1,0 +1,370 @@
+{
+ "text": "Car crashed into the lobby on the 1st floor, 550 Hill St, Los Angeles. Time of call: 02:00 (night).",
+ "out": {
+  "briefing": "PRIMESIGHT | VEHICLE INTO BUILDING | FLOOR 1 (LOBBY) | CALL 02:00\nInternational Jewelry Center - 550 Hill St, Los Angeles, CA\nBUILDING: 13 stories | built 1981 | steel frame | sprinklers: yes\nELEVATORS: 6 passenger, 1 freight, 2 parking | 13 stories\nPROPERTY MGR: Cushman & Wakefield - International Jewelry Center 5554628716 (meet-crew text queued with dispatcher, not yet sent)\nON FLOOR: Bank of America; Gantmonds; Worldwide Diamond Company; J L Jems Inc (ste 3)\nPEOPLE: ~31 on this floor by daytime tenant headcount; call at 02:00, likely far fewer on site\nPOSSIBLE HAZMAT (from name only): jewelry/gem tenants on fl 1 may keep torch gas cylinders (oxygen, acetylene, propane) or plating chemicals\nHYDRANTS: 37 m SW, 42 m NE, 55 m W | OPEN LOT for staging ~533 m SE and ~315 m SE (aerial search, verify)\nINSIDE: no scan of 1; nearest is floor 11 (same core, layout may differ) | 11 scan points | EXIT SIGNS seen at 0 of 11 scan points (floor 11 scan)\nNOT KNOWN: sprinkler type, stair locations, lobby/frontage layout, building engineer, elevator machine room location\nhttps://my.matterport.com/show/?m=tsaz3uu9Nk9",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\248704_tsaz3uu9Nk9_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\248704_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/248704_tsaz3uu9Nk9_plan_marked.jpg",
+   "/img/248704_aerial.jpg"
+  ],
+  "property_id": 248704,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "LAFD: Vehicle crashed into ground-floor lobby, floor 1, International Jewelry Center, 550 S Hill St. Please meet fire crew at the building with keys and fire panel access."
+   }
+  ],
+  "tenant_flags": [
+   {
+    "tenant": "Worldwide Diamond Company; J L Jems Inc; Gantmonds",
+    "floor": 1,
+    "risk": "Possible small amounts of hazardous materials (from name only): compressed gas cylinders such as oxygen, acetylene or propane, and possibly cleaning or plating chemicals",
+    "why": "The names suggest jewelry or gem businesses, and some of these do bench repair with torches and chemicals. All industries are listed as Unknown and there are no descriptions, so this is only an inference. At 02:00 occupancy is probably near zero, and nothing points to vulnerable occupants or high occupancy on floor 1.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "rescue",
+   "floor": 1,
+   "building": {
+    "name": "International Jewelry Center",
+    "address": "550 Hill St, Los Angeles, CA",
+    "stories": 13,
+    "year_built": 1981,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 31,
+     "tenants": [
+      "Bank of America",
+      "Gantmonds",
+      "J L Jems Inc",
+      "Worldwide Diamond Company"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 5,
+     "people": 53,
+     "tenants": [
+      "Aginian Accounting Corporation",
+      "Alex A & Co.",
+      "American Diamond Exchange",
+      "Bichachi Diamonds Group",
+      "Bridal Diamond Palace",
+      "Diamond Net",
+      "Gem Dynasty",
+      "Jgl & Company",
+      "LADD Diamonds",
+      "Lara's Jewelry",
+      "MB Jewelers",
+      "Ounce Jewelry",
+      "Ronelli Wholesale Diamonds & Jewelry",
+      "Sue & Ferris Designs",
+      "Wilson's Jewelry Inc",
+      "World Jewels"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 32,
+     "tenants": [
+      "BSH Diamond Corp",
+      "Bridal Rings Company",
+      "Gold Custom LA",
+      "Horizon Diamonds",
+      "Johnny B & Co",
+      "KC Jewelry",
+      "Pacific Empire Properties, LLC",
+      "Uralevich Urial",
+      "Watches and Watches"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 7,
+     "people": 56,
+     "tenants": [
+      "1-800 Loose Diamonds",
+      "3d Wax Printing by Jewelry Art Studio",
+      "Danital Gems & Diamonds",
+      "EGL USA",
+      "Golden State Jewelry",
+      "H. Dayan",
+      "Jewels By Joe Wholesale To Public",
+      "King of Jewelry",
+      "Milros",
+      "Modern Art Jewelers, Inc",
+      "Orchid Gems, Inc.",
+      "Oscar's Design Jewelry",
+      "Rising Star Diamonds",
+      "Vora Gems",
+      "WTC Diamonds",
+      "XO Jewels"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 80,
+     "tenants": [
+      "Baida Jewelry",
+      "Brink's",
+      "EGL USA",
+      "General Diamonds",
+      "HP Imports",
+      "Joshua J Fine Jewelry",
+      "Nor Design Fine Jewelry",
+      "Paradise Jewelry",
+      "Prijems, Inc.",
+      "Rish Diamonds",
+      "Silhouette Design",
+      "Stone View Holdings"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 57,
+     "tenants": [
+      "Amden Jewelry Inc.",
+      "C.K. Gems, Inc.",
+      "Cad Blu Inc",
+      "Diam Ventures",
+      "Diamplus Inc",
+      "Global Rings Jewelry",
+      "International House Platinum",
+      "Marvel Jewelry",
+      "Nice Diamonds",
+      "PMI Diamonds",
+      "Stardust Design",
+      "White Color Gems",
+      "Yes Group Inc"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 50,
+     "tenants": [
+      "Angara",
+      "Chammas Jewelry",
+      "Concierge Diamonds",
+      "Dia-Co Gems, Inc.",
+      "Emperor Diamonds Inc.",
+      "Fine Facets",
+      "Golden Pyramid",
+      "H & A Mounting",
+      "Kattan Diamonds & Jewelry",
+      "Luxury Diamonds, LLC",
+      "Palak Diam",
+      "Simran Collection",
+      "Sol Jewelry Designs, Inc.",
+      "The Right Source"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 58,
+     "tenants": [
+      "Amir A Diamonds",
+      "Double M Diamonds",
+      "EGA Diamond",
+      "Excel Diamonds, Inc.",
+      "Gamzo & Co",
+      "Guild Laboratories Inc",
+      "Kevin Jewelers",
+      "Lazar Diamonds",
+      "Logan Hollowell Jewelry",
+      "Ninacci Incorporated",
+      "Noble Diamonds, Inc.",
+      "Sabrina A Inc",
+      "Shawn International, Inc.",
+      "Sparkling Jewelry"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 11,
+      "exit sign": 0,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 0
+     }
+    },
+    {
+     "floor": 12,
+     "people": 39,
+     "tenants": [
+      "Aaron Henry",
+      "Ancora Designs",
+      "Baguette Masters Inc",
+      "Bijan Diamonds",
+      "Brilliant Gems",
+      "Casper Diamonds",
+      "Diamond Club West Coast",
+      "Gemological Lab & Appraisal",
+      "KARATRADE INC",
+      "Liven",
+      "Mounting Craft, Inc",
+      "S & N Jewelry",
+      "Simply Diamond",
+      "Skylab Diamond, Inc.",
+      "T. Mizrahi, Inc."
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 13,
+     "people": 123,
+     "tenants": [
+      "Adler Trading Company",
+      "B & J Diamonds Inc.",
+      "Catlery By Legend Diamonds",
+      "Day Trade Diamonds",
+      "Eshed",
+      "Gamzo & Co",
+      "Global Management",
+      "Icerock Diamonds",
+      "Konstant Jewels",
+      "Lala Bijou",
+      "Neon Gems, Inc.",
+      "Ori Diamonds",
+      "Parth Diamonds",
+      "Saravia Gems And Jewels",
+      "Unitrans",
+      "Varsha Diamonds, Inc."
+     ],
+     "scanned": false,
+     "seen": null
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 37,
+     "dir": "SW",
+     "lat": 34.047379367399294,
+     "lon": -118.25287062523918
+    },
+    {
+     "m": 42,
+     "dir": "NE",
+     "lat": 34.047911786638736,
+     "lon": -118.25234874248822
+    },
+    {
+     "m": 55,
+     "dir": "W",
+     "lat": 34.04759010929908,
+     "lon": -118.2531424489797
+    },
+    {
+     "m": 71,
+     "dir": "S",
+     "lat": 34.04696566593919,
+     "lon": -118.25276994610591
+    },
+    {
+     "m": 77,
+     "dir": "N",
+     "lat": 34.04826782160834,
+     "lon": -118.25250916097423
+    }
+   ],
+   "staging": [
+    {
+     "m": 533,
+     "dir": "SE",
+     "lat": 34.043840985,
+     "lon": -118.24893951499999,
+     "score": 0.206
+    },
+    {
+     "m": 315,
+     "dir": "SE",
+     "lat": 34.0461168,
+     "lon": -118.24962616,
+     "score": 0.201
+    },
+    {
+     "m": 178,
+     "dir": "W",
+     "lat": 34.047254679999995,
+     "lon": -118.25443268,
+     "score": 0.196
+    }
+   ],
+   "scan": {
+    "floor": 11,
+    "exact": false,
+    "link": "https://my.matterport.com/show/?m=tsaz3uu9Nk9"
+   },
+   "vision": {
+    "scan_points": 11,
+    "scan_points_with": {
+     "exit sign": 0,
+     "stairs": 0,
+     "fire extinguisher": 0,
+     "fire alarm pull station": 0
+    },
+    "image_urls": [
+     "/img/vision/tsaz3uu9Nk9/005_2.jpg"
+    ]
+   },
+   "walk": null,
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "LAFD: Vehicle crashed into ground-floor lobby, floor 1, International Jewelry Center, 550 S Hill St. Please meet fire crew at the building with keys and fire panel access."
+    }
+   ],
+   "tenant_flags": [
+    {
+     "tenant": "Worldwide Diamond Company; J L Jems Inc; Gantmonds",
+     "floor": 1,
+     "risk": "Possible small amounts of hazardous materials (from name only): compressed gas cylinders such as oxygen, acetylene or propane, and possibly cleaning or plating chemicals",
+     "why": "The names suggest jewelry or gem businesses, and some of these do bench repair with torches and chemicals. All industries are listed as Unknown and there are no descriptions, so this is only an inference. At 02:00 occupancy is probably near zero, and nothing points to vulnerable occupants or high occupancy on floor 1.",
+     "from_name_only": true
+    }
+   ],
+   "call": "Car crashed into the lobby on the 1st floor, 550 Hill St, Los Angeles. Time of call: 02:00 (night)."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Car crashed into the lobby on the 1st floor, 550 Hill St, Los Angeles. Time of call: 02:00 (night).\"}\n{\"t\": 0.1, \"step\": \"address_lookup\", \"detail\": \"550 S Hill St, Los Angeles -> 248704\"}\n{\"t\": 2.53, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"550 Hill St, Los Angeles\\\"}\"}\n{\"t\": 2.54, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 5.38, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/rescue/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 5.38, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 248704, \\\"floor\\\": 1, \\\"incident\\\": \\\"rescue\\\", \\\"incident_type\\\": \\\"vehicle_into_building\\\"}\"}\n{\"t\": 5.39, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/248704.md\\\"}\"}\n{\"t\": 16.31, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: vehicle crashed into the ground-floor lobby (vehicle_into_building, rescue), floor 1, International Jewelry Center, 550 S Hill St, Los Angele\"}\n{\"t\": 16.31, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Incident: vehicle crashed into the ground-floor lobby (vehicle into building), floor 1, International Jewelry Center, 550 S Hill St, Los Angeles, CA.\"}\n{\"t\": 18.96, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"LAFD: Vehicle crashed into ground-floor lobby, floor 1, International Jewelry Center, 550 S Hill St. Please meet fire crew at the building with keys and fire panel \"}\n{\"t\": 38.39, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 248704, \\\"note\\\": \\\"Vehicle into building, ground-floor lobby (floor 1), call at 02:00. Briefed: 4 floor-1 tenants (~31 by daytime headcount); possible torch gas or chemicals at the jewel\"}\n{\"t\": 71.3, \"step\": \"graded\", \"detail\": \"needs_revision - First line after the header is the most urgent fact for the incident category (rescue: elevators or keys): This is a rescue-category incident, and the rescue skill's order starts with ELEVATORS then WHO HAS KEYS. Put the ELEVATORS line, or the PROPERTY MGR/keys line, directly after the header (name/address/building line), before ON FLOOR and PEOPLE.\"}\n{\"t\": 71.3, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 71.31, \"step\": \"usage\", \"detail\": \"127954 in / 6775 out tokens, ~$0.65\"}\n{\"t\": 71.31, \"step\": \"done\", \"detail\": \"12 lines, 2 images\"}\n"
+}

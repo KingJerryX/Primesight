@@ -1,0 +1,93 @@
+{
+ "model_id": "2y9vzVj7S5w",
+ "name": "7457 Harwin Suite 200",
+ "floor": 2,
+ "sweeps": [
+  {
+   "id": "02ttb5gyhgdsc689ywc8mrgid",
+   "index": 0,
+   "xy": [
+    -1.6360487937927246,
+    1.741776704788208
+   ],
+   "hits": []
+  },
+  {
+   "id": "1ii47wa436pe95nk4b0tkmi4d",
+   "index": 1,
+   "xy": [
+    -2.926774263381958,
+    3.161501407623291
+   ],
+   "hits": []
+  },
+  {
+   "id": "83xdfpwpyd0ux4sgn36taps9c",
+   "index": 2,
+   "xy": [
+    -4.0766801834106445,
+    3.1118621826171875
+   ],
+   "hits": [
+    {
+     "label": "fire alarm pull station",
+     "score": 0.57,
+     "box": [
+      980,
+      704,
+      1025,
+      800
+     ],
+     "color": 0.0,
+     "face": 0
+    }
+   ]
+  },
+  {
+   "id": "ey1gny50g90f8y92p464at9ha",
+   "index": 3,
+   "xy": [
+    -5.178421974182129,
+    1.0188894271850586
+   ],
+   "hits": []
+  },
+  {
+   "id": "azdncz2b4ss0g11fa9d0khp5b",
+   "index": 4,
+   "xy": [
+    -2.747924327850342,
+    1.7691365480422974
+   ],
+   "hits": [
+    {
+     "label": "stairs",
+     "score": 0.51,
+     "box": [
+      0,
+      -1,
+      80,
+      68
+     ],
+     "face": 1
+    }
+   ]
+  },
+  {
+   "id": "87fr823by0wcdk8siccq2cfdc",
+   "index": 5,
+   "xy": [
+    -0.008515306748449802,
+    0.000608702888712287
+   ],
+   "hits": []
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 0,
+  "stairs": 1,
+  "fire extinguisher": 0,
+  "fire alarm pull station": 0
+ },
+ "seconds": 43
+}

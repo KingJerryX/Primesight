@@ -1,0 +1,636 @@
+{
+ "property_id": 248192,
+ "name": "One Park Plaza",
+ "address": "3250 wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0615626,
+ "lon": -118.2932592,
+ "type": "Office",
+ "stories": 22,
+ "gross_sqft": 733326.0,
+ "typical_floor_sqft": 18182.0,
+ "year_built": 1971,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Esfr",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 6
+  },
+  {
+   "type": "Freight",
+   "count": 3
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Baja's Grill",
+   "floor": 1,
+   "suite": "103",
+   "sqft": 5148.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Atlas Cafe",
+   "floor": 1,
+   "suite": "101A",
+   "sqft": 1845.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GEKLAW, Inc",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 31819.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Xfernet",
+   "floor": 3,
+   "suite": "301",
+   "sqft": 15909.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Children's Hospital Los Angeles",
+   "floor": 3,
+   "suite": null,
+   "sqft": 15910.0,
+   "employees": 324,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Children's Hospital Los Angeles",
+   "floor": 5,
+   "suite": null,
+   "sqft": 31818.0,
+   "employees": 324,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "McKay, De Lorimier & Acain",
+   "floor": 6,
+   "suite": "603",
+   "sqft": 8727.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Children's Hospital Los Angeles",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 10039.0,
+   "employees": 324,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Philippine Trade & Investment",
+   "floor": 6,
+   "suite": "602",
+   "sqft": 5297.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Baik Law Group APC",
+   "floor": 6,
+   "suite": "601",
+   "sqft": 7755.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Harriett Buhai Center For Family",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 5230.0,
+   "employees": 26,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TFI Trans",
+   "floor": 7,
+   "suite": "708",
+   "sqft": 11743.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Philippines Department of Tourism",
+   "floor": 7,
+   "suite": "707",
+   "sqft": 8247.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DBY Law",
+   "floor": 7,
+   "suite": null,
+   "sqft": 6598.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prime Nursing Services",
+   "floor": 10,
+   "suite": "1008",
+   "sqft": 8569.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Archdiocesan Youth Employment Services",
+   "floor": 10,
+   "suite": "1010",
+   "sqft": 3260.0,
+   "employees": 58,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of Ruben B Martinez",
+   "floor": 10,
+   "suite": "1003",
+   "sqft": 6326.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jenn International, Inc.",
+   "floor": 10,
+   "suite": "1004",
+   "sqft": 5698.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Paniotto Law Firm",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 4478.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Mike Razi, APC",
+   "floor": 11,
+   "suite": "1112",
+   "sqft": 3816.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jae Hun Lim, CPA",
+   "floor": 11,
+   "suite": "1104",
+   "sqft": 4210.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Harvey Erlich",
+   "floor": 11,
+   "suite": "1001",
+   "sqft": 4412.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DSH // architecture",
+   "floor": 11,
+   "suite": "1105",
+   "sqft": 3698.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Esdiac Global Systems Inc",
+   "floor": 11,
+   "suite": "1111",
+   "sqft": 5237.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CHLA Medical Group",
+   "floor": 11,
+   "suite": "1101a",
+   "sqft": 5670.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jang Trial Law Firm Inc",
+   "floor": 11,
+   "suite": "1106",
+   "sqft": 2000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Development Neuroscience",
+   "floor": 12,
+   "suite": "1201",
+   "sqft": 10606.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Adolescent and Young Adult Medicine",
+   "floor": 12,
+   "suite": "1202",
+   "sqft": 10606.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Community Health Intervention",
+   "floor": 12,
+   "suite": "1203",
+   "sqft": 10606.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bet Tzedek",
+   "floor": 13,
+   "suite": null,
+   "sqft": 31818.0,
+   "employees": 123,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CGI America",
+   "floor": 14,
+   "suite": "1408",
+   "sqft": 27568.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advanced Therapy Institute",
+   "floor": 15,
+   "suite": "1505",
+   "sqft": 4520.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Nielsen Firm",
+   "floor": 15,
+   "suite": "1510",
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "John Yoo, CPA",
+   "floor": 15,
+   "suite": "1503",
+   "sqft": 6608.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Emmanuel Nwabuzor, APC",
+   "floor": 15,
+   "suite": "1500C",
+   "sqft": 5879.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Okey George Chukwudobe",
+   "floor": 15,
+   "suite": "1500A",
+   "sqft": 4879.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "United Spine Care",
+   "floor": 15,
+   "suite": "1501",
+   "sqft": 1291.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Onwaeze Law Group, APC",
+   "floor": 15,
+   "suite": "1500B",
+   "sqft": 3698.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Moo Housing Inc.",
+   "floor": 15,
+   "suite": "1502",
+   "sqft": 1845.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Robert B. Sarvian, APC",
+   "floor": 16,
+   "suite": "1603",
+   "sqft": 6941.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Just Detention International",
+   "floor": 16,
+   "suite": "1630",
+   "sqft": 5523.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sun Data Supply",
+   "floor": 16,
+   "suite": "1620",
+   "sqft": 7743.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Commercial Property Management, Inc.",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": 3865.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vision Plan Of America",
+   "floor": 16,
+   "suite": "1610",
+   "sqft": 7746.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 16,
+   "suite": "1615",
+   "sqft": 2471.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AMS Design Studio",
+   "floor": 17,
+   "suite": "1760",
+   "sqft": 5090.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "California Sports And Spine Center",
+   "floor": 17,
+   "suite": "1705",
+   "sqft": 6500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HJS An Accountancy Corp",
+   "floor": 17,
+   "suite": "1700",
+   "sqft": 8628.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CHLA KINDD Program",
+   "floor": 17,
+   "suite": "1710",
+   "sqft": 7850.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 17,
+   "suite": "1700",
+   "sqft": 3750.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kim Joo & Associates",
+   "floor": 18,
+   "suite": "1805",
+   "sqft": 18494.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 18,
+   "suite": "1800",
+   "sqft": 11761.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Popkin, Shamir, & Golan",
+   "floor": 19,
+   "suite": "1918",
+   "sqft": 7715.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Farmers Insurance",
+   "floor": 19,
+   "suite": "1903",
+   "sqft": 7226.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gomez Law, APC",
+   "floor": 19,
+   "suite": "1901",
+   "sqft": 5031.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Green Box Loans",
+   "floor": 19,
+   "suite": "1900",
+   "sqft": 6973.0,
+   "employees": 69,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Michael K. Khim Accountancy",
+   "floor": 19,
+   "suite": "1905",
+   "sqft": 4873.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of Mark H. Aprahamian",
+   "floor": 20,
+   "suite": "2000",
+   "sqft": 6941.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LCJ Insurance Services, Inc.",
+   "floor": 20,
+   "suite": "2008",
+   "sqft": 4130.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ronzio & Associates",
+   "floor": 20,
+   "suite": "2010,2020",
+   "sqft": 7698.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mary Lee APC",
+   "floor": 20,
+   "suite": "2003",
+   "sqft": 6471.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Howard Lynch",
+   "floor": 20,
+   "suite": "2002",
+   "sqft": 1058.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate General of Sri Lanka",
+   "floor": 21,
+   "suite": "2180",
+   "sqft": 15909.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kostiv Cardinal",
+   "floor": 21,
+   "suite": "2100",
+   "sqft": 15909.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Dominguez Firm",
+   "floor": 22,
+   "suite": null,
+   "sqft": 31818.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Realtech Leasing & Management Co.",
+   "phone": "5553081773"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": 700
+  }
+ ],
+ "matterport_models": [
+  "MFhskYSBMMe"
+ ]
+}

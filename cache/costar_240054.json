@@ -1,0 +1,26 @@
+{
+ "property_id": 240054,
+ "name": "Belchase Bldg",
+ "address": "263 Sam Houston Pky, Houston, TX",
+ "lat": 29.9416795,
+ "lon": -95.4018971,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 87611.0,
+ "typical_floor_sqft": 87282.0,
+ "year_built": 1978,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "7S6Uw9RUofT"
+ ]
+}

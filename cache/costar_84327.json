@@ -1,0 +1,38 @@
+{
+ "property_id": 84327,
+ "name": "8600 Burton Way",
+ "address": "8600 Burton Way, Los Angeles, CA",
+ "lat": 34.0719165,
+ "lon": -118.3797715,
+ "type": "Multifamily",
+ "stories": 4,
+ "gross_sqft": 87360.0,
+ "typical_floor_sqft": 4923.0,
+ "year_built": 1988,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Air Productions LLC",
+   "floor": 3,
+   "suite": "301",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Redwood - 8600 Burton",
+   "phone": "5552292350"
+  }
+ ],
+ "matterport_models": [
+  "BqvyP9u6nMz",
+  "yXEdba7fZLA"
+ ]
+}

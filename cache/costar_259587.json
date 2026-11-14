@@ -1,0 +1,26 @@
+{
+ "property_id": 259587,
+ "name": "Broxton Plaza",
+ "address": "911 Broxton Ave, Los Angeles, CA",
+ "lat": 34.063404,
+ "lon": -118.447304,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 18437.0,
+ "typical_floor_sqft": 6146.0,
+ "year_built": 1980,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  }
+ ],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "rDU2DaDBbyz"
+ ]
+}

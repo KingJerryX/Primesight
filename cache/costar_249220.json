@@ -1,0 +1,341 @@
+{
+ "property_id": 249220,
+ "name": "Ernst & Young Plaza",
+ "address": "725 Figueroa St, Los Angeles, CA",
+ "lat": 34.0494514,
+ "lon": -118.260793,
+ "type": "Office",
+ "stories": 41,
+ "gross_sqft": 968184.0,
+ "typical_floor_sqft": 24000.0,
+ "year_built": 1985,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 19
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Chase Bank",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 19152.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clune Construction",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 24000.0,
+   "employees": 135,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pacific Council",
+   "floor": 4,
+   "suite": null,
+   "sqft": 14966.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Comren Commercial Renovation",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1793.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Arbitration Association",
+   "floor": 4,
+   "suite": null,
+   "sqft": 11060.0,
+   "employees": 107,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Office Furniture Group Inc",
+   "floor": 4,
+   "suite": null,
+   "sqft": 4170.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EY",
+   "floor": 5,
+   "suite": null,
+   "sqft": 24000.0,
+   "employees": 1100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EY",
+   "floor": 6,
+   "suite": null,
+   "sqft": 24000.0,
+   "employees": 1100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EY",
+   "floor": 7,
+   "suite": null,
+   "sqft": 24000.0,
+   "employees": 1100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EY",
+   "floor": 8,
+   "suite": null,
+   "sqft": 24000.0,
+   "employees": 1100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EY",
+   "floor": 9,
+   "suite": null,
+   "sqft": 16500.0,
+   "employees": 1100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "United States Secret Service",
+   "floor": 11,
+   "suite": null,
+   "sqft": 24000.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "United States Secret Service",
+   "floor": 12,
+   "suite": null,
+   "sqft": 24000.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "United States Secret Service",
+   "floor": 13,
+   "suite": null,
+   "sqft": 23910.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "United States Secret Service",
+   "floor": 14,
+   "suite": null,
+   "sqft": 23000.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EY",
+   "floor": 15,
+   "suite": null,
+   "sqft": 23000.0,
+   "employees": 1100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Carrier Johnson",
+   "floor": 16,
+   "suite": "1650",
+   "sqft": 5296.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 17,
+   "suite": "1700",
+   "sqft": 8503.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Yacoubian Powell Attorneys at Law",
+   "floor": 17,
+   "suite": "1750",
+   "sqft": 7210.0,
+   "employees": 48,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kevin Davis Insurance Services",
+   "floor": 18,
+   "suite": null,
+   "sqft": 24000.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Amwins",
+   "floor": 19,
+   "suite": "1900",
+   "sqft": 23389.0,
+   "employees": 120,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Berkley Custom Insurance Managers",
+   "floor": 22,
+   "suite": null,
+   "sqft": 3750.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "R&D Incentives Group",
+   "floor": 22,
+   "suite": null,
+   "sqft": 9141.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jackson Lewis P.C.",
+   "floor": 27,
+   "suite": null,
+   "sqft": 24000.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jackson Lewis P.C.",
+   "floor": 28,
+   "suite": null,
+   "sqft": 24000.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Moon Law Group",
+   "floor": 31,
+   "suite": null,
+   "sqft": 24000.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Great American Custom Insurance Services",
+   "floor": 33,
+   "suite": "3300",
+   "sqft": 14011.0,
+   "employees": 120,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Essential Access Health",
+   "floor": 33,
+   "suite": null,
+   "sqft": 13321.0,
+   "employees": 80,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gilsanz Murray Stefieck Inc",
+   "floor": 33,
+   "suite": null,
+   "sqft": 1017.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Great American Custom Insurance Services",
+   "floor": 34,
+   "suite": "3300",
+   "sqft": 24000.0,
+   "employees": 120,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pillsbury Winthrop Shaw Pittman",
+   "floor": 36,
+   "suite": "3500",
+   "sqft": 24000.0,
+   "employees": 75,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Saiful Bouquet Structural Engineers",
+   "floor": 37,
+   "suite": null,
+   "sqft": 25315.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WCG",
+   "floor": 40,
+   "suite": "4050",
+   "sqft": 11581.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 41,
+   "suite": "4130",
+   "sqft": 2648.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

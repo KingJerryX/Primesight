@@ -1,0 +1,19 @@
+{"t": 0.0, "step": "call_received", "detail": "Smoke reported on the 4th floor, 1801 Century Park, Los Angeles. Time of call: Saturday 15:00."}
+{"t": 0.3, "step": "address_lookup", "detail": "1801 Century Park E, Los Angeles -> 247344"}
+{"t": 4.36, "step": "find_building", "detail": "{\"address\": \"1801 Century Park, Los Angeles\"}"}
+{"t": 4.36, "step": "read_file", "detail": "{\"file_path\": \"/playbook/skills/fire/SKILL.md\", \"limit\": 1000}"}
+{"t": 4.36, "step": "read_file", "detail": "{\"file_path\": \"/playbook/incidents.json\", \"limit\": 1000}"}
+{"t": 6.7, "step": "gather_building", "detail": "{\"property_id\": 247344, \"floor\": 4, \"incident\": \"fire\", \"incident_type\": \"smoke\"}"}
+{"t": 6.71, "step": "read_file", "detail": "{\"file_path\": \"/buildings/247344.md\"}"}
+{"t": 23.48, "step": "task", "detail": "{\"subagent_type\": \"tenant-risk\", \"description\": \"Incident: smoke investigation, floor 4, 1801 Century Park E, Los Angeles (property 247344). Saturday 15:00 call. Flag only physical risks (vulnerable o"}
+{"t": 23.48, "step": "task", "detail": "{\"subagent_type\": \"notify-writer\", \"description\": \"Write and queue a short text to the building's people so they can meet the fire crew. Incident: smoke investigation, floor 4, Century Park East, 1801"}
+{"t": 23.48, "step": "task", "detail": "{\"subagent_type\": \"inside-scout\", \"description\": \"Scan id gacELDAHQEZ (floor 4, 1801 Century Park E, exact floor). Smoke investigation. Find walk distance from scan start to nearest fire alarm pull st"}
+{"t": 23.48, "step": "task", "detail": "{\"subagent_type\": \"outside-scout\", \"description\": \"Property id 247344 (1801 Century Park E, Los Angeles). Incident: smoke investigation on floor 4. Report live wind (from direction, mph, where smoke d"}
+{"t": 25.38, "step": "helper:outside_now", "detail": "{\"property_id\": 247344}"}
+{"t": 25.8, "step": "helper:walk_to", "detail": "{\"scan_id\": \"gacELDAHQEZ\", \"target\": \"fire alarm pull station\"}"}
+{"t": 25.82, "step": "helper:walk_to", "detail": "{\"scan_id\": \"gacELDAHQEZ\", \"target\": \"exit sign\"}"}
+{"t": 27.61, "step": "helper:queue_text", "detail": "{\"to\": \"property manager\", \"text\": \"Fire Dept: smoke investigation on floor 4 at 1801 Century Park E. Crew responding. Please meet the crew on arrival and bring building keys and fire panel access.\"}"}
+{"t": 45.26, "step": "add_building_note", "detail": "{\"property_id\": 247344, \"note\": \"Smoke reported floor 4 (Sat 15:00). Briefing sent; PM Douglas Emmett texted to meet crew with keys and fire panel access. Scan floor 4: exit signs at 25/41 points, no "}
+{"t": 59.3, "step": "graded", "detail": "satisfied"}
+{"t": 59.3, "step": "usage", "detail": "119561 in / 6399 out tokens, ~$0.61"}
+{"t": 59.3, "step": "done", "detail": "11 lines, 2 images"}

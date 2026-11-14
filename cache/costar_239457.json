@@ -1,0 +1,31 @@
+{
+ "property_id": 239457,
+ "name": null,
+ "address": "2511 Mt Houston Rd, Houston, TX",
+ "lat": 29.895918,
+ "lon": -95.447737,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 92000.0,
+ "typical_floor_sqft": 92000.0,
+ "year_built": 1985,
+ "construction": "Metal",
+ "sprinklers": "yes",
+ "sprinkler_type": "Dry",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 14000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "93b1MyV7kai"
+ ]
+}

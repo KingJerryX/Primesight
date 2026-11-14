@@ -1,0 +1,426 @@
+{
+ "property_id": 237365,
+ "name": "Northwest Commerce Building",
+ "address": "14405 Walters Rd, Houston, TX",
+ "lat": 29.9927255,
+ "lon": -95.4844296,
+ "type": "Office",
+ "stories": 10,
+ "gross_sqft": 193554.0,
+ "typical_floor_sqft": 17469.0,
+ "year_built": 1984,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Precision Site Works, LLC",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 349.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DDWD HCS Services",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 349.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Clinic Neuropsychological Services PLLC",
+   "floor": 1,
+   "suite": "142",
+   "sqft": 349.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Infinity Fuels Inc",
+   "floor": 1,
+   "suite": "145",
+   "sqft": 349.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "THV Insurance Agency",
+   "floor": 1,
+   "suite": "144",
+   "sqft": 349.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PHH Mortgage Corporation",
+   "floor": 2,
+   "suite": "210-A",
+   "sqft": 5795.0,
+   "employees": 37,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advantis",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 13138.0,
+   "employees": 86,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 210.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mimi's Caring Angels",
+   "floor": 7,
+   "suite": "780",
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zytech Consulting, LLC",
+   "floor": 7,
+   "suite": "770",
+   "sqft": 2500.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aenor Aesthetics Medical Spa, LLC",
+   "floor": 8,
+   "suite": "830",
+   "sqft": 1048.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Essential Credentials",
+   "floor": 8,
+   "suite": "809",
+   "sqft": 198.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hamda Chiropractic Clinic",
+   "floor": 8,
+   "suite": "825",
+   "sqft": 2124.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Noble Psychiatry",
+   "floor": 8,
+   "suite": "865",
+   "sqft": 505.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Body & Lashed by Bae LLC",
+   "floor": 8,
+   "suite": "801",
+   "sqft": 886.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jackie O' Management LLC",
+   "floor": 8,
+   "suite": "860",
+   "sqft": 1398.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Onsite Global Logistics",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 873.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Care Bammel",
+   "floor": 8,
+   "suite": "870",
+   "sqft": 873.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Strategic Training and Consulting, LLC",
+   "floor": 8,
+   "suite": "803",
+   "sqft": 873.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lighthouse Mental Health Counseling",
+   "floor": 8,
+   "suite": "806",
+   "sqft": 873.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "E.A. Insurance & Income Tax",
+   "floor": 8,
+   "suite": "805",
+   "sqft": 873.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "845",
+   "sqft": 430.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gentle Hands Mobile Phlebotomy and More LLC",
+   "floor": 8,
+   "suite": null,
+   "sqft": 524.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Turnkey PMC LLC",
+   "floor": 8,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Thompson P.C.",
+   "floor": 9,
+   "suite": "960",
+   "sqft": 1747.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "House of JV",
+   "floor": 9,
+   "suite": "932",
+   "sqft": 1018.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mels Insurance Agency LLC",
+   "floor": 9,
+   "suite": "938",
+   "sqft": 873.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Andara Solutions LLC",
+   "floor": 9,
+   "suite": "934",
+   "sqft": 1048.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Luxury Tax Empire",
+   "floor": 9,
+   "suite": "942",
+   "sqft": 873.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Independent AV & Video, Inc.",
+   "floor": 9,
+   "suite": "930",
+   "sqft": 873.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "946",
+   "sqft": 285.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Graceful Memorial & Bayou Family Funeral Home",
+   "floor": 10,
+   "suite": "1004",
+   "sqft": 1191.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Harmony at Home Senior Care",
+   "floor": 10,
+   "suite": "1023",
+   "sqft": 871.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Medical Supply Source LLC",
+   "floor": 10,
+   "suite": "1014",
+   "sqft": 524.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AHRMD International, LLC",
+   "floor": 10,
+   "suite": "1002",
+   "sqft": 1048.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Restorations By Sabra, LLC",
+   "floor": 10,
+   "suite": "1010",
+   "sqft": 524.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dignified-Tech LLC",
+   "floor": 10,
+   "suite": "1024",
+   "sqft": 1398.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "A1 Affinity Care",
+   "floor": 10,
+   "suite": "1008",
+   "sqft": 1048.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RBS Aftermarket & Motorsports Group",
+   "floor": 10,
+   "suite": "1009",
+   "sqft": 524.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blackstone Industries LLC",
+   "floor": 10,
+   "suite": "1022",
+   "sqft": 1747.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sage3 Insurance Group, LLC",
+   "floor": 10,
+   "suite": "1001",
+   "sqft": 873.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1020",
+   "sqft": 520.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Distinctive Touch Ultrasound, LLC.",
+   "floor": 10,
+   "suite": null,
+   "sqft": 1048.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Boxer Property",
+   "phone": "5557110142"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 50
+  },
+  {
+   "type": "Covered",
+   "spaces": 675
+  }
+ ],
+ "matterport_models": [
+  "ThfCq6T7tLX",
+  "Zu81BS8tJw9"
+ ]
+}

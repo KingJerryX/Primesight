@@ -1,0 +1,687 @@
+{
+ "property_id": 246941,
+ "name": "Westside Towers East Bldg",
+ "address": "11835 Olympic Blvd, Los Angeles, CA",
+ "lat": 34.0332338,
+ "lon": -118.451628,
+ "type": "Office",
+ "stories": 12,
+ "gross_sqft": 244392.0,
+ "typical_floor_sqft": 20366.0,
+ "year_built": 1985,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Wells Fargo",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 4000.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pacific Surgical Distribution",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2250.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "145E",
+   "sqft": 1401.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chiropractic West",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 3255.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Greg Morris Cards",
+   "floor": 2,
+   "suite": "295",
+   "sqft": 2037.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Edward Jones",
+   "floor": 2,
+   "suite": null,
+   "sqft": 3301.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "200E",
+   "sqft": 9726.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gratia Capital LLC",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tomita Law Office",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1145.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zemanek & Mills APC",
+   "floor": 3,
+   "suite": "360E",
+   "sqft": 1371.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trish Haight",
+   "floor": 4,
+   "suite": "405",
+   "sqft": 1200.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trident Cosmetic & Family Dentistry",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 3055.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Modern Class",
+   "floor": 4,
+   "suite": "425",
+   "sqft": 3500.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Douglas Emmett",
+   "floor": 4,
+   "suite": "445",
+   "sqft": 1629.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pickell & Company",
+   "floor": 4,
+   "suite": "460",
+   "sqft": 2037.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Saul Reiss",
+   "floor": 4,
+   "suite": "415",
+   "sqft": 2037.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "450E",
+   "sqft": 5854.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Summit Center",
+   "floor": 4,
+   "suite": "465e",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Goldline",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 11800.0,
+   "employees": 75,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "540W",
+   "sqft": 825.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "540E",
+   "sqft": 2275.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Perry Neidorf & Grassl",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 1629.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Panoptic Fund Administration",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 1629.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prime Media Connect",
+   "floor": 6,
+   "suite": "645",
+   "sqft": 1629.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rosen Capital Advisors, LLC",
+   "floor": 6,
+   "suite": "640-1",
+   "sqft": 611.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "610E",
+   "sqft": 2832.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "695E",
+   "sqft": 1547.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "690E",
+   "sqft": 1148.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "640E",
+   "sqft": 1436.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ades Investment Counsel, Inc.",
+   "floor": 7,
+   "suite": "705",
+   "sqft": 1500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Picco & Presley",
+   "floor": 7,
+   "suite": "725",
+   "sqft": 3055.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sinica Education",
+   "floor": 7,
+   "suite": "745",
+   "sqft": 3055.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gary G. Cohen & Associates, Inc.",
+   "floor": 7,
+   "suite": "705-1",
+   "sqft": 1018.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Amerprise Financial",
+   "floor": 7,
+   "suite": "735",
+   "sqft": 3055.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Orcinus Group",
+   "floor": 7,
+   "suite": "775e",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "715E",
+   "sqft": 1152.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Katchko, Vitirllo & Karikomi",
+   "floor": 8,
+   "suite": "860",
+   "sqft": 1629.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Woodcliff Corporation",
+   "floor": 8,
+   "suite": "825",
+   "sqft": 1529.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Claery & Hammond LLP",
+   "floor": 8,
+   "suite": "835",
+   "sqft": 1629.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silverman Theologou LLP",
+   "floor": 8,
+   "suite": "855",
+   "sqft": 1528.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Grand Park Law Group",
+   "floor": 8,
+   "suite": "870",
+   "sqft": 1629.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Meridian Counseling",
+   "floor": 8,
+   "suite": "815",
+   "sqft": 1629.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "hospice-of-nation",
+   "floor": 8,
+   "suite": "830E",
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nora B, PT",
+   "floor": 9,
+   "suite": "925",
+   "sqft": 1929.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Irwin Entertainment",
+   "floor": 9,
+   "suite": "920",
+   "sqft": 5911.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Airports Corporation",
+   "floor": 10,
+   "suite": "1090",
+   "sqft": 2011.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jennings, Steine & Co.",
+   "floor": 10,
+   "suite": "1055",
+   "sqft": 1703.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zakeri & Associates",
+   "floor": 10,
+   "suite": "1030",
+   "sqft": 1703.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bartko Pavia",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 2021.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wave Psychiatric Group",
+   "floor": 10,
+   "suite": "1040",
+   "sqft": 1703.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1065E",
+   "sqft": 1959.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "West Coast Escrow",
+   "floor": 11,
+   "suite": "1120",
+   "sqft": 1833.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Artisan Cap",
+   "floor": 11,
+   "suite": "1155",
+   "sqft": 1833.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pierce Construction Law",
+   "floor": 11,
+   "suite": "1150",
+   "sqft": 2306.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of Hedy Golshani",
+   "floor": 11,
+   "suite": "1160",
+   "sqft": 1833.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Title Resource Group",
+   "floor": 11,
+   "suite": "1120-1",
+   "sqft": 1018.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Jacobson Group, Inc.",
+   "floor": 11,
+   "suite": null,
+   "sqft": 2401.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arena Network",
+   "floor": 11,
+   "suite": "1135e",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1120E",
+   "sqft": 2330.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1125E",
+   "sqft": 2120.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "edcahoots",
+   "floor": 12,
+   "suite": "1280",
+   "sqft": 2037.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Seltzer Business Management Inc.",
+   "floor": 12,
+   "suite": "1265",
+   "sqft": 2037.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Executive Mental Health",
+   "floor": 12,
+   "suite": "1270",
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sadler Medical Group, Inc.",
+   "floor": 12,
+   "suite": "1275",
+   "sqft": 2037.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KLW Management, Inc.",
+   "floor": 12,
+   "suite": "1210",
+   "sqft": 2097.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Developmental Pediatrics",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 2500.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Medina Value Partners",
+   "floor": 12,
+   "suite": "1285",
+   "sqft": 2037.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stagecoach Entertainment",
+   "floor": 12,
+   "suite": "1235",
+   "sqft": 2037.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Advocates",
+   "floor": 12,
+   "suite": "1250E",
+   "sqft": 1992.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beyond Bulk",
+   "floor": 12,
+   "suite": "1245E",
+   "sqft": 1917.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Platinum Studios, Inc",
+   "floor": 12,
+   "suite": "1235e",
+   "sqft": null,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1245",
+   "sqft": 1917.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "122gc4639J7",
+  "26BXWG4Vz1F",
+  "5LJ9LoVB8yB",
+  "BhDvKS8TTfz",
+  "F54kJ6ax3cC",
+  "PB8SFCW3JCS",
+  "PXnFDUQqzc3",
+  "T7w6PBrTGdC"
+ ]
+}

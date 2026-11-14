@@ -1,0 +1,372 @@
+{
+ "property_id": 246899,
+ "name": "Executive Tower",
+ "address": "11400 Olympic Blvd, Los Angeles, CA",
+ "lat": 34.0361802,
+ "lon": -118.4428766,
+ "type": "Office",
+ "stories": 17,
+ "gross_sqft": 259923.0,
+ "typical_floor_sqft": 14137.0,
+ "year_built": 1989,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "EP Wealth Advisors",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 2009.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Il Moro Restaurant",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 4589.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VIV Athletic Club",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 10841.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Premier Workspaces",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 26548.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Citrin Cooperman",
+   "floor": 3,
+   "suite": "325, 350",
+   "sqft": 7063.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Levy Moss\u00e9 & Co",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 6868.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Danjaq",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 2693.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gaglione, Dolan & Kaplan",
+   "floor": 4,
+   "suite": "425",
+   "sqft": 2993.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Richard Manion Architecture",
+   "floor": 4,
+   "suite": null,
+   "sqft": 2993.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WESSCO International",
+   "floor": 4,
+   "suite": null,
+   "sqft": 5507.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "590",
+   "sqft": 5703.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 2472.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trade-in Solutions",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 2244.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mental Fitness Clinic",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 2051.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shebby Hirashima",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 3403.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Berman Financial Services",
+   "floor": 6,
+   "suite": "635",
+   "sqft": 3714.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Solutions Acquisitions",
+   "floor": 6,
+   "suite": null,
+   "sqft": 1349.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Amplified Management",
+   "floor": 7,
+   "suite": "740",
+   "sqft": 1400.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wolf Wallenstein",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 1688.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BluSky Technology Services",
+   "floor": 7,
+   "suite": null,
+   "sqft": 2400.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PacShores Mortgage",
+   "floor": 8,
+   "suite": "830, 840",
+   "sqft": 4200.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Urban Offerings",
+   "floor": 8,
+   "suite": null,
+   "sqft": 2563.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ira & Larry Goldberg Auctioneers",
+   "floor": 8,
+   "suite": null,
+   "sqft": 3614.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Meridian Group",
+   "floor": 8,
+   "suite": "860",
+   "sqft": 3623.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "840",
+   "sqft": 1148.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wolf, Rifkin, Shapiro, Schulman & Rabkin",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 13860.0,
+   "employees": 65,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wolf, Rifkin, Shapiro, Schulman & Rabkin",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 7848.0,
+   "employees": 65,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Greysteel",
+   "floor": 10,
+   "suite": "1060",
+   "sqft": 4816.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Katz Cassidy",
+   "floor": 10,
+   "suite": null,
+   "sqft": 3031.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boingo Wireless",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 8689.0,
+   "employees": 76,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1150",
+   "sqft": 6318.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tillster",
+   "floor": 12,
+   "suite": "1250",
+   "sqft": 8000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ServPro",
+   "floor": 14,
+   "suite": "1450",
+   "sqft": 7587.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Victor Sherman P.L.C.",
+   "floor": 15,
+   "suite": "1500",
+   "sqft": 3000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Schwartz & Shapiro",
+   "floor": 15,
+   "suite": "1510",
+   "sqft": 3500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Evening Star",
+   "floor": 15,
+   "suite": "1520",
+   "sqft": 3345.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gaytan & Leevan",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": 14000.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Danjaq",
+   "floor": 17,
+   "suite": "1700",
+   "sqft": 14000.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "2cLAWCVj1tA",
+  "5xViZEoqi5n",
+  "BkjvwqdchVY",
+  "C7sMGY7UZfL",
+  "YbKz5PKbzwp",
+  "bZ8jxbUviCF",
+  "iAw7TsDLoof",
+  "jfiEvosX974",
+  "vNxGNVDgVs9"
+ ]
+}

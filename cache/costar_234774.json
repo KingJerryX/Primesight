@@ -1,0 +1,32 @@
+{
+ "property_id": 234774,
+ "name": null,
+ "address": "1370 40th St, Houston, TX",
+ "lat": 29.8197918,
+ "lon": -95.3806109,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 122095.0,
+ "typical_floor_sqft": 121375.0,
+ "year_built": 1960,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Johns Manville",
+   "floor": 1,
+   "suite": "2",
+   "sqft": 121375.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "JTWchWzREKd",
+  "rJotER7YwRb"
+ ]
+}

@@ -1,0 +1,220 @@
+{
+ "property_id": 240079,
+ "name": null,
+ "address": "12621 Featherwood Dr, Houston, TX",
+ "lat": 29.6172598,
+ "lon": -95.2117739,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 86317.0,
+ "typical_floor_sqft": 28772.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Robert Whitley Attorney at Law",
+   "floor": 1,
+   "suite": "165",
+   "sqft": 2589.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "140",
+   "sqft": 2361.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 968.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dunaway",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 3589.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Maldonado Legal",
+   "floor": 2,
+   "suite": "245",
+   "sqft": 749.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Worldwide Court Reporters Inc",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 4432.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eurenco Additives, Inc.",
+   "floor": 2,
+   "suite": "230",
+   "sqft": 2877.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clay Consulting",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 2877.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wells Fargo Advisors",
+   "floor": 2,
+   "suite": "242",
+   "sqft": 4316.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "General Steamship Agencies",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "285",
+   "sqft": 4093.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "295",
+   "sqft": 2661.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ardoin Law Firm P.C.",
+   "floor": 3,
+   "suite": "322",
+   "sqft": 5820.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hillebrand Gori",
+   "floor": 3,
+   "suite": "390",
+   "sqft": 12372.0,
+   "employees": 82,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ozark Dental Lab",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 1157.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Legacy Community Development Corp",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 2419.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sandler",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 4598.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 740.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nettles & Co.",
+   "floor": 3,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 2419.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "321",
+   "sqft": 791.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "ikwzReQLKZ6"
+ ]
+}

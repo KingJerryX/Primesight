@@ -1,0 +1,477 @@
+{
+ "property_id": 247386,
+ "name": "Century Park",
+ "address": "1880 Century Park, Los Angeles, CA",
+ "lat": 34.0620034,
+ "lon": -118.4140717,
+ "type": "Office",
+ "stories": 15,
+ "gross_sqft": 340603.0,
+ "typical_floor_sqft": 21687.0,
+ "year_built": 1969,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 7
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Novak Contemporary Art",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 2000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "906 Cafe",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 2185.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lavazza",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 1280.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Banc of California",
+   "floor": 1,
+   "suite": "104",
+   "sqft": 3500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 1566.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Galaxy Discovery Inc.",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1200.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "215",
+   "sqft": 1055.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gerber & Co.",
+   "floor": 2,
+   "suite": null,
+   "sqft": 8839.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sklar Kirsh LLP",
+   "floor": 3,
+   "suite": null,
+   "sqft": 14039.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wallensky Spatz & Associates",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1689.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Surpin, Mayersohn & Coghill LLP",
+   "floor": 4,
+   "suite": "404",
+   "sqft": 2179.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gondim Law Corp",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 4937.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "413",
+   "sqft": 1501.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "402",
+   "sqft": 916.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Joelle Uzyel",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1559.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Held Properties",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 3295.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Heimanson & Wolf LLP",
+   "floor": 5,
+   "suite": "508",
+   "sqft": 2525.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dempsey Law P.C.",
+   "floor": 5,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Abrishamcar Law Group",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 1129.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bellwether Enterprise",
+   "floor": 6,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cirque Analytics",
+   "floor": 6,
+   "suite": "613",
+   "sqft": 1291.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "615",
+   "sqft": 995.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "FACT Family",
+   "floor": 6,
+   "suite": "512",
+   "sqft": 1784.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Turning Point",
+   "floor": 6,
+   "suite": "612",
+   "sqft": 1345.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unisource Credit",
+   "floor": 7,
+   "suite": "716",
+   "sqft": 1700.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 2396.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "J&Y Law",
+   "floor": 7,
+   "suite": null,
+   "sqft": 1200.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "716",
+   "sqft": 1704.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "711",
+   "sqft": 5119.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Paycom",
+   "floor": 8,
+   "suite": "810",
+   "sqft": 1159.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Variant Equity",
+   "floor": 8,
+   "suite": "825",
+   "sqft": 1000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 2322.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mann Gelon Smith Sroka Lee LLP",
+   "floor": 9,
+   "suite": null,
+   "sqft": 1200.0,
+   "employees": 110,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Corient Advisors LLC",
+   "floor": 10,
+   "suite": "1020",
+   "sqft": 3273.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Citizens Business Bank",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 2883.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shelter Asset Management",
+   "floor": 10,
+   "suite": null,
+   "sqft": 2400.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fischbach, Perlstein, Lieberman & Almond LLP",
+   "floor": 10,
+   "suite": "1011",
+   "sqft": 2469.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1014",
+   "sqft": 4578.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Steel Peak Wealth Management LLC",
+   "floor": 10,
+   "suite": "1017",
+   "sqft": 4893.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tarter Krinsky & Drogin",
+   "floor": 11,
+   "suite": "1104",
+   "sqft": 3480.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LA Century Law",
+   "floor": 11,
+   "suite": "1101",
+   "sqft": 7918.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1101",
+   "sqft": 8607.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 14,
+   "suite": "1404",
+   "sqft": 984.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ehrenpreis Immigration Law",
+   "floor": 14,
+   "suite": null,
+   "sqft": 2700.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Lovell Firm",
+   "floor": 14,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gelfand, Rennert and Feldman LLC",
+   "floor": 15,
+   "suite": null,
+   "sqft": 21200.0,
+   "employees": 215,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gelfand, Rennert and Feldman LLC",
+   "floor": 16,
+   "suite": null,
+   "sqft": 21200.0,
+   "employees": 215,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Held Properties",
+   "phone": "5557258676"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": 656
+  }
+ ],
+ "matterport_models": [
+  "AKrxrSHBT5h",
+  "VebU8qiHp11",
+  "jtA1smGpuWc",
+  "swCBq3YtVoe"
+ ]
+}

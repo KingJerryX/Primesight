@@ -1,0 +1,37 @@
+{
+ "property_id": 91567,
+ "name": "Dover Place Apartments",
+ "address": "4137 Dover St, Houston, TX",
+ "lat": 29.6805702,
+ "lon": -95.2797272,
+ "type": "Multifamily",
+ "stories": 2,
+ "gross_sqft": 28766.0,
+ "typical_floor_sqft": 14383.0,
+ "year_built": 1970,
+ "construction": "WoodFrame",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Oak Leaf - Dover Place Apartments",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Oak Leaf - Dover Place Apartments",
+   "phone": "5555247018"
+  }
+ ],
+ "matterport_models": [
+  "Li9bEKqij44"
+ ]
+}

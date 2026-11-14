@@ -1,0 +1,403 @@
+{
+ "property_id": 239712,
+ "name": null,
+ "address": "1919 Loop , Houston, TX",
+ "lat": 29.810614,
+ "lon": -95.4341986,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 189328.0,
+ "typical_floor_sqft": 21542.0,
+ "year_built": 1977,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Quest Diagnostics",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 3625.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LabCorp",
+   "floor": 1,
+   "suite": "172",
+   "sqft": 3625.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Northwest Knee & Shoulder Center",
+   "floor": 1,
+   "suite": "115",
+   "sqft": 3000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clinical Pathology Lab",
+   "floor": 1,
+   "suite": "170A",
+   "sqft": 4108.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hany H Ahmed MD",
+   "floor": 1,
+   "suite": "140",
+   "sqft": 967.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trio Clinical Trials",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 1926.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Natera",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 2417.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Thomas Davies M.D",
+   "floor": 1,
+   "suite": "140B",
+   "sqft": 2082.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Chiro Center",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 1208.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Caneseco Eye",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 1208.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Isi Medical & Rehab Llc",
+   "floor": 1,
+   "suite": "180",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Institute of Digestive Health, PLLC",
+   "floor": 2,
+   "suite": "299",
+   "sqft": 2390.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alexandra Pellicena, MD Obstetrics & Gynecology",
+   "floor": 2,
+   "suite": "215",
+   "sqft": 1208.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bacon Psychiatric Associates",
+   "floor": 2,
+   "suite": "224",
+   "sqft": 770.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Van Tran Family Practice",
+   "floor": 2,
+   "suite": "218",
+   "sqft": 967.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vibrance",
+   "floor": 2,
+   "suite": "218A",
+   "sqft": 1208.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stardom Touches Body II",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 1208.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hellos Clinical Research",
+   "floor": 2,
+   "suite": null,
+   "sqft": 4350.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stanley Yang M.D. Internal Medicine",
+   "floor": 2,
+   "suite": "200A",
+   "sqft": 1208.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Renu Garg M.D. Pediatrics",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 1208.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Home Run Hitters International Inc",
+   "floor": 2,
+   "suite": "275",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nandita Gupta, M.D.",
+   "floor": 3,
+   "suite": "395",
+   "sqft": 2599.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas State Securities Board",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 2690.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Leila Vizirov",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 4833.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Williams & Company CPA's",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 2417.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Comptroller of Public Accounts",
+   "floor": 3,
+   "suite": "311",
+   "sqft": 4833.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wendy L. Prater Attorney At Law",
+   "floor": 4,
+   "suite": "490",
+   "sqft": 1195.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Senior Helpers",
+   "floor": 4,
+   "suite": "443",
+   "sqft": 2390.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "A. Sahir Saleem, MD",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 3648.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Asap Personel",
+   "floor": 4,
+   "suite": "477",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Victory Personal Care",
+   "floor": 4,
+   "suite": "425",
+   "sqft": 2500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Davidson Physical Therapy",
+   "floor": 4,
+   "suite": "430",
+   "sqft": 1150.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gaspy Home Healthcare",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 2112.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Buitron Law Firm, PC",
+   "floor": 4,
+   "suite": "480, 470",
+   "sqft": 2742.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HG Pediatrics",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 1450.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "445",
+   "sqft": 499.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Verrified Engineering Llc",
+   "floor": 4,
+   "suite": "420",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Railroad Commission of Texas",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 10684.0,
+   "employees": 51,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Comptroller of Public Accounts",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 4200.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Transwestern Real Estate Services",
+   "phone": "5552906454"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 361
+  },
+  {
+   "type": "Covered",
+   "spaces": 113
+  }
+ ],
+ "matterport_models": [
+  "CdKz33bz83S",
+  "N3uVi69rxbp"
+ ]
+}

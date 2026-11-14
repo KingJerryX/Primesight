@@ -1,0 +1,31 @@
+{
+ "property_id": 234004,
+ "name": null,
+ "address": "1801 Smith St, Houston, TX",
+ "lat": 29.7526332,
+ "lon": -95.3728675,
+ "type": "Office",
+ "stories": 21,
+ "gross_sqft": 661354.0,
+ "typical_floor_sqft": 21428.0,
+ "year_built": 1972,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 8
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  }
+ ],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "n1J5ASynouH",
+  "yhMUZhtUNEK"
+ ]
+}

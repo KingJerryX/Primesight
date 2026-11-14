@@ -1,0 +1,700 @@
+{
+ "property_id": 246819,
+ "name": "10801 National",
+ "address": "10801 National Blvd, Los Angeles, CA",
+ "lat": 34.0312422,
+ "lon": -118.4203608,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 68230.0,
+ "typical_floor_sqft": 10666.0,
+ "year_built": 1972,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "deliverLA",
+   "floor": 1,
+   "suite": "104",
+   "sqft": 1250.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Santa Monica CPR",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 1067.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Neiman Group Architect\u2019s, Inc.",
+   "floor": 1,
+   "suite": "107",
+   "sqft": 2149.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "103",
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beyzer Law",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 1067.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ali Optimal Wellness",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 1165.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Janice Lee Acupuncture",
+   "floor": 2,
+   "suite": "228",
+   "sqft": 400.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "OnlineSecurity",
+   "floor": 2,
+   "suite": "245",
+   "sqft": 400.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Roxbury Insurance Services",
+   "floor": 2,
+   "suite": "251",
+   "sqft": 400.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Karin Manger, LCSW",
+   "floor": 2,
+   "suite": "221",
+   "sqft": 400.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Joe Taravella, PhD",
+   "floor": 2,
+   "suite": "254",
+   "sqft": 300.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Office Of Carrera & Baez",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 1067.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arka Design & Build",
+   "floor": 2,
+   "suite": "227",
+   "sqft": 850.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Office p.S. Architecture + Urbanism",
+   "floor": 2,
+   "suite": "255",
+   "sqft": 1067.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "K\u2019hara Mckinney, LMFT",
+   "floor": 2,
+   "suite": "252",
+   "sqft": 400.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lenox Properties",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 1150.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Monica Ellison, M.A. LMFT",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 400.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "My LA Therapy",
+   "floor": 2,
+   "suite": "222, 223",
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lyn R. Greenberg, PhD",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 400.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Judith Messinger, LCSW",
+   "floor": 2,
+   "suite": "221A",
+   "sqft": 400.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "222",
+   "sqft": 450.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "7 Wonders Cinema",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Interim Healthcare of West Los Angeles",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Moving Images Entertainment Inc",
+   "floor": 3,
+   "suite": null,
+   "sqft": 745.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Essey Construction Co",
+   "floor": 3,
+   "suite": null,
+   "sqft": 298.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Faye & Faye Chiropractic",
+   "floor": 3,
+   "suite": null,
+   "sqft": 298.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kroner Environmental Service",
+   "floor": 4,
+   "suite": "415",
+   "sqft": 2500.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BH Fashion 26, LLC",
+   "floor": 4,
+   "suite": "404B",
+   "sqft": 600.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices Of Gary M. Schneider",
+   "floor": 4,
+   "suite": "405",
+   "sqft": 1200.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Visual Processing Institute",
+   "floor": 4,
+   "suite": "430",
+   "sqft": 1834.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Miroku Association",
+   "floor": 4,
+   "suite": "403",
+   "sqft": 2133.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BH Construction Co.",
+   "floor": 4,
+   "suite": "404",
+   "sqft": 700.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "404",
+   "sqft": 1700.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Upcurve Cloud",
+   "floor": 4,
+   "suite": "410",
+   "sqft": null,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Farmers Insurance",
+   "floor": 5,
+   "suite": "515",
+   "sqft": 2600.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ken Donaldson Insurance Agency",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 400.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Probate Superheroes: The Werner Law Firm",
+   "floor": 5,
+   "suite": "531",
+   "sqft": 400.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gloria Lavender E.A., Inc.",
+   "floor": 5,
+   "suite": "590",
+   "sqft": 400.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lotus Filmworks",
+   "floor": 5,
+   "suite": "500C",
+   "sqft": 200.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sanitas Home Health Care",
+   "floor": 5,
+   "suite": "579",
+   "sqft": 300.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Yolanda Chavez - The Red Dragon Group",
+   "floor": 5,
+   "suite": "545",
+   "sqft": 200.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jeanne Young, PhD",
+   "floor": 5,
+   "suite": "577",
+   "sqft": 200.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Anne Panofsky, PhD",
+   "floor": 5,
+   "suite": "577A",
+   "sqft": 200.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ticket Nation Corp.",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 200.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Confirmed Roofing Experts",
+   "floor": 5,
+   "suite": "573",
+   "sqft": 200.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Inovus Group Inc.",
+   "floor": 5,
+   "suite": "570",
+   "sqft": 200.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Commerce Street Associates",
+   "floor": 5,
+   "suite": "578A",
+   "sqft": 200.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Turner Smith Company",
+   "floor": 5,
+   "suite": "578",
+   "sqft": 200.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shana Bacal Lutsky, LCSW",
+   "floor": 5,
+   "suite": "574",
+   "sqft": 200.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Steven Korbin, Esq.",
+   "floor": 5,
+   "suite": "575",
+   "sqft": 200.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Exersys Inc.",
+   "floor": 5,
+   "suite": "576",
+   "sqft": 200.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "571",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "24Hr Caregivers",
+   "floor": 5,
+   "suite": "576",
+   "sqft": 200.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Los Angeles Philanthropic Foundation",
+   "floor": 5,
+   "suite": null,
+   "sqft": 692.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "515",
+   "sqft": 925.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Saravita Properties, Inc.",
+   "floor": 6,
+   "suite": "601",
+   "sqft": 533.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Adrian Baca",
+   "floor": 6,
+   "suite": "614",
+   "sqft": 533.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Attarson & Associates",
+   "floor": 6,
+   "suite": "606",
+   "sqft": 533.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Levitt & Rosenblum",
+   "floor": 6,
+   "suite": "604",
+   "sqft": 533.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Matrix Strategies Inc",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 550.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Edge Americas Sports Inc",
+   "floor": 6,
+   "suite": "605",
+   "sqft": 533.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Medical Supplies DME, LLC",
+   "floor": 6,
+   "suite": "602",
+   "sqft": 600.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DC Clinic Acupuncture & Chiropractic",
+   "floor": 6,
+   "suite": "607",
+   "sqft": 700.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Susan P. Frankel, PhD",
+   "floor": 6,
+   "suite": "612",
+   "sqft": 533.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pacific Sands",
+   "floor": 6,
+   "suite": "609",
+   "sqft": 750.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Destination Motivation",
+   "floor": 6,
+   "suite": "611",
+   "sqft": 1587.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sharon R. Schwartz, PhD",
+   "floor": 6,
+   "suite": "613",
+   "sqft": 350.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zenvi Inc",
+   "floor": 6,
+   "suite": "610A",
+   "sqft": 533.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Liu Dong, Doctor of Acupuncture",
+   "floor": 6,
+   "suite": "610B",
+   "sqft": 533.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jafari Acupuncture Clinic",
+   "floor": 6,
+   "suite": null,
+   "sqft": 533.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "613",
+   "sqft": 350.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "612",
+   "sqft": 450.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Saravita Properties, Inc.",
+   "phone": "5555023900"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 50
+  },
+  {
+   "type": "Covered",
+   "spaces": 100
+  }
+ ],
+ "matterport_models": [
+  "pD14rf4q9uM",
+  "thbhAbKBg7E"
+ ]
+}

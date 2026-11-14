@@ -4,7 +4,7 @@ from concurrent.futures import ThreadPoolExecutor
 from . import costar, matterport, outside
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, "output")  # gitignored: sponsor imagery
+OUT = os.path.join(ROOT, "output")  # floor plans and aerials sent with briefings
 INCIDENTS = ("fire", "medical", "hazmat", "rescue", "security", "utility")  # categories in agentfs/incidents.json
 last = {}  # pid -> latest gather() result, so the server can find the images the agent pulled
 

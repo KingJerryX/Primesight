@@ -1,0 +1,13 @@
+{"t": 0.0, "step": "call_received", "detail": "Smoke reported on the 11th floor at 2100 West Loop South, Houston. Caller says the hallway is filling up."}
+{"t": 0.03, "step": "address_lookup", "detail": "2100 West Loop South, Houston -> 234088"}
+{"t": 2.11, "step": "find_building", "detail": "{\"address\": \"2100 West Loop South, Houston\"}"}
+{"t": 2.11, "step": "read_file", "detail": "{\"file_path\": \"/playbook/skills/fire/SKILL.md\", \"limit\": 1000}"}
+{"t": 3.49, "step": "gather_building", "detail": "{\"property_id\": 234088, \"floor\": 11, \"incident\": \"fire\"}"}
+{"t": 3.49, "step": "read_file", "detail": "{\"file_path\": \"/buildings/234088.md\"}"}
+{"t": 16.18, "step": "task", "detail": "{\"subagent_type\": \"tenant-risk\", \"description\": \"Incident: FIRE (smoke, hallway filling) on floor 11, 2100 West Loop South, Houston (property 234088), 16 stories. Flag tenants that change the response"}
+{"t": 16.18, "step": "task", "detail": "{\"subagent_type\": \"notify-writer\", \"description\": \"Incident: FIRE (smoke reported, hallway filling) on floor 11, 2100 West Loop South, Houston TX (property 234088). Elevators: 5 passenger elevators pe"}
+{"t": 16.18, "step": "read_file", "detail": "{\"file_path\": \"/scans/Lcv4jEgL8kk.json\", \"limit\": 300}"}
+{"t": 29.08, "step": "glob", "detail": "{\"pattern\": \"*Lcv4jEgL8kk*\", \"path\": \"/scans\"}"}
+{"t": 35.72, "step": "add_building_note", "detail": "{\"property_id\": 234088, \"note\": \"FIRE call, floor 11: smoke reported, caller said hallway filling. Briefing sent. Surgery center ste 1115 on 11 and Facial Plastic Surgery Associates on 12 flagged (fro"}
+{"t": 39.58, "step": "usage", "detail": "74078 in / 3611 out tokens, ~$0.37"}
+{"t": 39.59, "step": "done", "detail": "12 lines, 2 images"}

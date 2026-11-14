@@ -1,0 +1,272 @@
+{
+ "property_id": 249762,
+ "name": "Beverly Hills Medical Tower",
+ "address": "1125 beverly Dr, Los Angeles, CA",
+ "lat": 34.056853,
+ "lon": -118.396799,
+ "type": "Office",
+ "stories": 7,
+ "gross_sqft": 53900.0,
+ "typical_floor_sqft": 6737.0,
+ "year_built": 1984,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Beverly Surgery Center",
+   "floor": 1,
+   "suite": "111",
+   "sqft": 1624.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rx All Pharmacy",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3850.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Berman Women's Wellness Center",
+   "floor": 4,
+   "suite": "401, 402, 404",
+   "sqft": 1312.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beverly Hills Prestige Dental Group",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 1312.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beverly Hills Hyperbaric Medicine Center",
+   "floor": 4,
+   "suite": "405",
+   "sqft": 385.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Evolve Nuro Health",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 385.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nuha Ibrahim, M.D.",
+   "floor": 4,
+   "suite": "425",
+   "sqft": 385.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Derm Boss",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 527.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Todacan Llc",
+   "floor": 4,
+   "suite": "400",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Em Therapeutics",
+   "floor": 5,
+   "suite": "515",
+   "sqft": 385.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sinai Family Dentistry",
+   "floor": 5,
+   "suite": "525",
+   "sqft": 770.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "National Ambulatory Surgery Center",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 770.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "B. Sam Tabibian",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 770.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beverly Surgery Center",
+   "floor": 5,
+   "suite": "535",
+   "sqft": 770.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Surgery Center of Beverly Hills",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 2568.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morris B. Silver, M.D.",
+   "floor": 6,
+   "suite": "601A",
+   "sqft": 2566.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jeffrey A Hirsch M.D.",
+   "floor": 6,
+   "suite": "603",
+   "sqft": 385.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nancy Blumstein M.D.",
+   "floor": 6,
+   "suite": "613",
+   "sqft": 770.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Celina M. Nadelman, M.D.",
+   "floor": 6,
+   "suite": "602",
+   "sqft": 770.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CHODAKIEWITZ, JACOB, M.D.",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 385.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allergy & Asthma Associates",
+   "floor": 7,
+   "suite": "740",
+   "sqft": 1350.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "California Eye Medical Center, Inc.",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 1925.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beverly Drive Dental Care",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 385.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advanced California Dental Clinic",
+   "floor": 7,
+   "suite": "750B",
+   "sqft": 385.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Theodore Friedman M.D.",
+   "floor": 7,
+   "suite": "730",
+   "sqft": 770.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alex P.  Ford, M.D.",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 385.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Jedamist",
+   "phone": "5555105641"
+  }
+ ],
+ "matterport_models": [
+  "9UPNi9zn48C",
+  "bpVgQkuWMDJ"
+ ]
+}

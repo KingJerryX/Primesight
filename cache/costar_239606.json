@@ -1,0 +1,361 @@
+{
+ "property_id": 239606,
+ "name": "One Park 10",
+ "address": "16225 Park Ten Pl, Houston, TX",
+ "lat": 29.786281,
+ "lon": -95.6638164,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 162919.0,
+ "typical_floor_sqft": 20365.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Park Ten Cafe",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 1321.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ROCHAS FIRM",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 6171.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trendsetter Vulcan Offshore",
+   "floor": 1,
+   "suite": "135",
+   "sqft": 3747.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trendsetter Vulcan Offshore",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 3747.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Awalt Construction",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Guidance Residential",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 3853.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bayotech",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 6593.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Creel & Associates, Inc.",
+   "floor": 2,
+   "suite": "275",
+   "sqft": 6373.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alcozer law Firm",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 5156.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Petro Tal Llc",
+   "floor": 2,
+   "suite": "200",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Forager Energy",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 500.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jon Corbell & Associate's",
+   "floor": 4,
+   "suite": "470",
+   "sqft": 2000.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Joy Pipe USA",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 2564.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gateway Gathering & Marketing Co",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 4060.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MUNDO LIFE LLC",
+   "floor": 4,
+   "suite": "475",
+   "sqft": 2351.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Red Trident Inc",
+   "floor": 4,
+   "suite": "480",
+   "sqft": 3846.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Endeavor Construction Solutions, LLC",
+   "floor": 4,
+   "suite": "425",
+   "sqft": 6548.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 9853.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 1576.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 14833.0,
+   "employees": 141,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pep Wellness Center Pllc",
+   "floor": 5,
+   "suite": "500",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Deborah J Gennero DDS Dentistry",
+   "floor": 6,
+   "suite": "695",
+   "sqft": 3569.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Operational Sustainability, LLC.",
+   "floor": 6,
+   "suite": "605",
+   "sqft": 3052.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 3426.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hyperlinks Media Llc",
+   "floor": 6,
+   "suite": "600",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 5315.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DHL Drawback Services",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 5011.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dor\u00e9 Rothberg Law",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 9911.0,
+   "employees": 45,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": null,
+   "sqft": 6492.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Borregaard USA, Inc.",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 1787.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "810",
+   "sqft": 1323.0,
+   "employees": null,
+   "industry": "ProfessionalScientificAndTechnicalServices",
+   "about": null
+  },
+  {
+   "name": "Calming Communities, PLLC",
+   "floor": 8,
+   "suite": "870",
+   "sqft": 2733.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Korn Ferry",
+   "floor": 8,
+   "suite": "845",
+   "sqft": 5550.0,
+   "employees": 37,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AT&T Mobility",
+   "floor": 8,
+   "suite": "840",
+   "sqft": 2241.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 1144.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Interra Properties LLC",
+   "phone": "5557435171"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 560
+  }
+ ],
+ "matterport_models": [
+  "RLtSVR9nXwz",
+  "RP84X6jCNoK",
+  "pEV51oMtt1H",
+  "tWkT129a2QB"
+ ]
+}

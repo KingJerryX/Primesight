@@ -1,0 +1,228 @@
+{
+ "property_id": 247001,
+ "name": "Gateway Los Angeles",
+ "address": "12424 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0412829,
+ "lon": -118.4703738,
+ "type": "Office",
+ "stories": 14,
+ "gross_sqft": 154898.0,
+ "typical_floor_sqft": 16182.0,
+ "year_built": 1986,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Life Gym Brentwood",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 3701.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Westside Music Conservatory",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 5182.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Coast Asset Management",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 2310.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Charles River Associates",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 3850.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stori",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 3850.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hip Hop Tax Corporation",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 875.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Law Office of Jacquelynn L. Hansen, APC",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 875.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Olive Street Capital Partners",
+   "floor": 7,
+   "suite": "715",
+   "sqft": 875.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consultax Professional Associates",
+   "floor": 8,
+   "suite": "860",
+   "sqft": 3850.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Altior Healthcare",
+   "floor": 8,
+   "suite": "800-1",
+   "sqft": 949.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Paradigm Treatment",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 2289.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Feinberg, Mindel, Brandt & Klein, LLP",
+   "floor": 9,
+   "suite": null,
+   "sqft": 11625.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Taylor & Ring",
+   "floor": 9,
+   "suite": null,
+   "sqft": 3775.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GPK & Associates",
+   "floor": 10,
+   "suite": "1040",
+   "sqft": 2310.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nida & Romyn, P.C.",
+   "floor": 10,
+   "suite": "1030",
+   "sqft": 3850.0,
+   "employees": 26,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Russ August & Kabat",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 5390.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate General of Greece",
+   "floor": 11,
+   "suite": "1170",
+   "sqft": 6160.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Medkiff & Company, Inc.",
+   "floor": 11,
+   "suite": "1130",
+   "sqft": 2310.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Callas & Carlson",
+   "floor": 11,
+   "suite": "1150",
+   "sqft": 2610.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Russ August & Kabat",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 15092.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Italian Trade Agency",
+   "floor": 14,
+   "suite": "1400, 1440, 1450",
+   "sqft": 14489.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "CHcLaNFM9YU",
+  "CZDAaGbk1cB",
+  "DBo6CUPdtB4",
+  "TaQT8eCFEnm",
+  "gbgnqTa82ko"
+ ]
+}

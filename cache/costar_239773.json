@@ -1,0 +1,290 @@
+{
+ "property_id": 239773,
+ "name": null,
+ "address": "2500 Wilcrest Dr, Houston, TX",
+ "lat": 29.7383522,
+ "lon": -95.5724508,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 109793.0,
+ "typical_floor_sqft": 18299.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Homerite Services LLC",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 3660.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 5255.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 858.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Terminix Consumer Services, LLC",
+   "floor": 1,
+   "suite": "30010-4",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 6347.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SSEPSA",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 1464.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Little John Transportation Services",
+   "floor": 2,
+   "suite": "204",
+   "sqft": 2303.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Homerite Services LLC",
+   "floor": 2,
+   "suite": "202",
+   "sqft": 5306.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mark Adams, LSCW-ACP",
+   "floor": 2,
+   "suite": "206",
+   "sqft": 915.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "THgINK Health & Wealth Management LLC",
+   "floor": 2,
+   "suite": "228",
+   "sqft": 1830.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Complete Life & Health Insurance Angency",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 1830.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sedgwick",
+   "floor": 2,
+   "suite": "203",
+   "sqft": 4575.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 3,
+   "suite": null,
+   "sqft": 12043.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elite Flex Chiropractic Care",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 1226.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "America Multiservice Insurance",
+   "floor": 4,
+   "suite": "402",
+   "sqft": 407.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "415",
+   "sqft": 1033.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Center For Healthy Sexuality",
+   "floor": 4,
+   "suite": "416",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PHP Agency",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 8450.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Guidry Insurance Agency",
+   "floor": 4,
+   "suite": "430",
+   "sqft": 1830.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 18298.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Christine Brannan M.Ed., LPC, LCDC",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 889.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NonOpWells Inc",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 2297.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NoHiddenPay LLC",
+   "floor": 6,
+   "suite": "625",
+   "sqft": 549.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TMC Consulting Group Inc",
+   "floor": 6,
+   "suite": "622",
+   "sqft": 915.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Liberty Technology Solutions",
+   "floor": 6,
+   "suite": "624",
+   "sqft": 1464.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Intervene K-12",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 1830.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 8548.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 614.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "89ZfuXUfteK",
+  "VaYyHerJFpr",
+  "ZZRkmZ3crtP",
+  "bXoD96AbYjy"
+ ]
+}

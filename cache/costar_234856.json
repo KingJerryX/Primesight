@@ -1,0 +1,438 @@
+{
+ "property_id": 234856,
+ "name": "Central Square",
+ "address": "2100 Travis St, Houston, TX",
+ "lat": 29.748859,
+ "lon": -95.3729754,
+ "type": "Office",
+ "stories": 15,
+ "gross_sqft": 294878.0,
+ "typical_floor_sqft": 21924.0,
+ "year_built": 1957,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Bonchon",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 4163.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Golden Edge Barbershop",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 1696.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Illuminated Ink",
+   "floor": 1,
+   "suite": "105B",
+   "sqft": 1182.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Good Times Kitchen + Bar",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 1725.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Law Office of Daniel D. Horowitz, III PC",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2226.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Midtown Central Square, LLC",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Deborah L. Thompson, PLLC",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 2500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nadel",
+   "floor": 2,
+   "suite": null,
+   "sqft": 5381.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Harris County Veterans Services Department",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 26,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stonefield Homes",
+   "floor": 2,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JAG CPA & Co.",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Inner Peace Chiropractic",
+   "floor": 3,
+   "suite": "345",
+   "sqft": 421.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brows By Jaydee",
+   "floor": 3,
+   "suite": "390",
+   "sqft": 694.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Crystal IV Hydration & Aesthetics",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 842.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fab Inc Hair Studio",
+   "floor": 3,
+   "suite": "380",
+   "sqft": 669.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Highglam Aesthetics",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 462.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RNC Lending Agency",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 726.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nroda Beauty",
+   "floor": 3,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 519.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AvidXchange",
+   "floor": 3,
+   "suite": null,
+   "sqft": 10873.0,
+   "employees": 57,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dripped Nails & Spa",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Carphoria Dealer Services",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 1812.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royall & Fleschler CPAs",
+   "floor": 5,
+   "suite": null,
+   "sqft": 2800.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Goodwille Pierre",
+   "floor": 8,
+   "suite": "825",
+   "sqft": 2147.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Idea Farm",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 1667.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Skin Freak Aesthetics",
+   "floor": 8,
+   "suite": "810",
+   "sqft": 1320.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "815",
+   "sqft": 1050.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "801",
+   "sqft": 1989.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "805",
+   "sqft": 872.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Culburtson Resources",
+   "floor": 8,
+   "suite": "840",
+   "sqft": 1129.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lavish Hairtique",
+   "floor": 8,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WAXED Luxury Wax Lounge",
+   "floor": 8,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Payne Law Firm",
+   "floor": 8,
+   "suite": null,
+   "sqft": 2861.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "City of Houston Housing and Community Development",
+   "floor": 9,
+   "suite": null,
+   "sqft": 21924.0,
+   "employees": 168,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "City of Houston Housing and Community Development",
+   "floor": 10,
+   "suite": null,
+   "sqft": 21924.0,
+   "employees": 168,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1102",
+   "sqft": 461.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 804.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pediatrix",
+   "floor": 12,
+   "suite": "1250",
+   "sqft": 5818.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 14,
+   "suite": "1485",
+   "sqft": 416.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Poison 91 Fleurs",
+   "floor": 14,
+   "suite": null,
+   "sqft": 700.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "StoneManor Homes",
+   "floor": 14,
+   "suite": "1450",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 14,
+   "suite": "1480",
+   "sqft": 3950.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bayview Holdings",
+   "floor": 15,
+   "suite": "1555",
+   "sqft": 1200.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nikohl Brow Co.",
+   "floor": 15,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nori Sold It",
+   "floor": 15,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": 420
+  }
+ ],
+ "matterport_models": [
+  "2Bm3m5NDXV6",
+  "tk6ppRKVSwE"
+ ]
+}

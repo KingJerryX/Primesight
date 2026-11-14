@@ -1,0 +1,352 @@
+{
+ "property_id": 236424,
+ "name": "Landry's, Inc.",
+ "address": "1510 West Loop, Houston, TX",
+ "lat": 29.7524901,
+ "lon": -95.4565556,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 111064.0,
+ "typical_floor_sqft": 13883.0,
+ "year_built": 2001,
+ "construction": "Steel",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Landry's, LLC",
+   "floor": 1,
+   "suite": null,
+   "sqft": 14375.0,
+   "employees": 338,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "McCormick & Schmick\u2019s",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Claim Jumper Steakhouse & Bar",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rainforest Caf\u00e9",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chart House",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morton's",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mastro's Restaurants",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Oceanaire Seafood Room",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Saltgrass Steak House",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Grotto Italian Restaurant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "La Griglia",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Joe's Crab Shack",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Willie G's Post Oak, Inc.",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kincaid's",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BR Guest Hospitallity",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Devon Seafood Grill",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Palm Restaurant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fertitta Hospitality, LLC",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Inn At The Ballpark Catering, Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houlihan's",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Landry's, LLC",
+   "floor": 2,
+   "suite": null,
+   "sqft": 14375.0,
+   "employees": 338,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brenner's Steakhouse",
+   "floor": 2,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cadillac Bar",
+   "floor": 2,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Landry's, LLC",
+   "floor": 3,
+   "suite": null,
+   "sqft": 14375.0,
+   "employees": 338,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Babin's Seafood House",
+   "floor": 3,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Landry's, LLC",
+   "floor": 4,
+   "suite": null,
+   "sqft": 14375.0,
+   "employees": 338,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bubba Gump Shrimp Co.",
+   "floor": 4,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Landry's, LLC",
+   "floor": 5,
+   "suite": null,
+   "sqft": 14375.0,
+   "employees": 338,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Landry's Seafood House",
+   "floor": 5,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Landry's, LLC",
+   "floor": 6,
+   "suite": null,
+   "sqft": 14375.0,
+   "employees": 338,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mitchell's Fish Market",
+   "floor": 6,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Landry's, LLC",
+   "floor": 7,
+   "suite": null,
+   "sqft": 14375.0,
+   "employees": 338,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Del Frisco's Grille",
+   "floor": 7,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Landry's, LLC",
+   "floor": 8,
+   "suite": null,
+   "sqft": 14375.0,
+   "employees": 338,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brick House Tavern + Tap",
+   "floor": 8,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vic & Anthony's Steakhouse",
+   "floor": 8,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Landry's, LLC",
+   "phone": "5559749448"
+  }
+ ],
+ "matterport_models": [
+  ""
+ ]
+}

@@ -1,0 +1,9 @@
+{"t": 0.0, "step": "call_received", "detail": "Smoke reported on the 30th floor at 1000 Louisiana St, Houston. Alarm panel shows floor 30."}
+{"t": 0.02, "step": "address_lookup", "detail": "1000 Louisiana St, Houston -> 233899"}
+{"t": 1.95, "step": "find_building", "detail": "{\"address\": \"1000 Louisiana St, Houston\"}"}
+{"t": 4.15, "step": "gather_building", "detail": "{\"property_id\": 233899, \"floor\": 30, \"incident\": \"fire\"}"}
+{"t": 4.15, "step": "read_file", "detail": "{\"file_path\": \"/buildings/233899.md\"}"}
+{"t": 11.4, "step": "task", "detail": "{\"subagent_type\": \"tenant-risk\", \"description\": \"Building: Wells Fargo Plaza, 1000 Louisiana St, Houston (71 stories). Incident: FIRE, smoke on floor 30. Tenants JSON: {\\\"on_floor\\\":[{\\\"name\\\":\\\"NextD"}
+{"t": 19.05, "step": "add_building_note", "detail": "{\"property_id\": 233899, \"note\": \"FIRE: smoke reported floor 30 (NextDecade Corporation), alarm panel floor 30. Briefing sent; ~2441 above on 31-71, NextDecade also on 31-33; 575 employees listed (like"}
+{"t": 23.26, "step": "usage", "detail": "37685 in / 1564 out tokens, ~$0.18"}
+{"t": 23.26, "step": "done", "detail": "12 lines, 2 images"}

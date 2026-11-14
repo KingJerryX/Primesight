@@ -1,0 +1,78 @@
+{
+ "property_id": 240979,
+ "name": "Northwest Medical Plaza III",
+ "address": "17045 St. Edwards Dr, Houston, TX",
+ "lat": 30.01918,
+ "lon": -95.442443,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 40201.0,
+ "typical_floor_sqft": 13433.0,
+ "year_built": 1976,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Continental Electrolysis & Laser Clinic",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 2470.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Northwest Houston Arthritis Center",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 3711.0,
+   "employees": 24,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hyperbaric Physiscians Of Houston",
+   "floor": 1,
+   "suite": "106",
+   "sqft": 2470.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pregnancy Specialist Center of Texas",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 3356.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr Mehrad Zarghouni",
+   "floor": 3,
+   "suite": "301",
+   "sqft": 3546.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Transwestern Real Estate Services",
+   "phone": "5556061176"
+  }
+ ],
+ "matterport_models": [
+  "V6BTYjxYwnW"
+ ]
+}

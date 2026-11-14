@@ -1,0 +1,275 @@
+{
+ "property_id": 238125,
+ "name": "Aldine Business Center",
+ "address": "2021 Aldine Mail Route Rd, Houston, TX",
+ "lat": 29.903492,
+ "lon": -95.353454,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 89825.0,
+ "typical_floor_sqft": 89825.0,
+ "year_built": 1978,
+ "construction": "Metal",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "MechaFab Industries",
+   "floor": 1,
+   "suite": "701",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 6250.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "High-Tech Insulation, Inc.",
+   "floor": 1,
+   "suite": "907",
+   "sqft": 1000.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elite Underground Tools LLC",
+   "floor": 1,
+   "suite": "301",
+   "sqft": 3214.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Billy's Small Engine Repair",
+   "floor": 1,
+   "suite": "1021",
+   "sqft": 1000.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1250.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "703",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "1031 & 1032",
+   "sqft": 2500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "602",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MP Torque Converters",
+   "floor": 1,
+   "suite": "802",
+   "sqft": 2695.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "George Auto Service",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1797.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elite Auto & Repair",
+   "floor": 1,
+   "suite": "604",
+   "sqft": 1797.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "C&C Glass And Marble",
+   "floor": 1,
+   "suite": "704",
+   "sqft": 1797.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Thermal Pro Insulation",
+   "floor": 1,
+   "suite": "1009",
+   "sqft": 4491.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "La Gran Barata Furniture",
+   "floor": 1,
+   "suite": "904",
+   "sqft": 15875.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lewis Tree Service",
+   "floor": 1,
+   "suite": "1027",
+   "sqft": 4491.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arredondo Western Wear",
+   "floor": 1,
+   "suite": "502",
+   "sqft": 898.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tomb Of Jesus Church",
+   "floor": 1,
+   "suite": "1010",
+   "sqft": 1797.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rays Total Comfort",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1797.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Santos Boxing Gym",
+   "floor": 1,
+   "suite": "1024",
+   "sqft": 4491.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "1100",
+   "sqft": 6600.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "503",
+   "sqft": 1125.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "901",
+   "sqft": 1250.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "902",
+   "sqft": 1250.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DMI General Contractor",
+   "floor": 1,
+   "suite": "1013",
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aldine Fitness Gym and Shakes",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4491.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "PDSropogrFx",
+  "mDTVypQhRFd"
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "property_id": 23453,
+ "name": "Halstead",
+ "address": "4620 Braeswood Blvd, Houston, TX",
+ "lat": 29.6832727,
+ "lon": -95.4574326,
+ "type": "Multifamily",
+ "stories": 9,
+ "gross_sqft": 389004.0,
+ "typical_floor_sqft": 38036.0,
+ "year_built": 1965,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unique Garage Door Service & Repair",
+   "floor": 1,
+   "suite": "115",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "TCL - Halstead",
+   "phone": "5552778480"
+  }
+ ],
+ "matterport_models": [
+  "UB6oWuzBkCT",
+  "b5vccaGnSgF",
+  "gyZheVAREBg",
+  "nZ7VXC2Rona"
+ ]
+}

@@ -1,0 +1,637 @@
+{
+ "text": "Cardiac arrest on the 36th floor, 1000 Louisiana St, Houston. Caller is a coworker, patient is unresponsive.",
+ "out": {
+  "briefing": "PRIMESIGHT | MEDICAL | FLOOR 36 - cardiac arrest, unresponsive\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX | 71 stories | built 1983 | steel | sprinklers: yes\nELEVATOR: freight car on record (fits stretcher), plus passenger cars\nON FLOOR: CME Group, suite not on record, about 16 people in the daytime\nWHO TO ASK: Property mgr CBRE 5556193343 (texted to meet crew and hold freight car)\nINSIDE: 3D scan of floor 36, 18 scan points\nEXIT SIGNS seen at 11 of 18 scan points, pull stations at 2\nSTAGING: open lot about 491 m SW (aerial search, verify)\nNOT KNOWN: AED location, freight elevator location, suite number, stair locations, sprinkler type\nhttps://my.matterport.com/show/?m=jUnF84zghQk",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\233899_jUnF84zghQk_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\233899_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/233899_jUnF84zghQk_plan_marked.jpg",
+   "/img/233899_aerial.jpg"
+  ],
+  "property_id": 233899,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire Dept: cardiac arrest, floor 36 (CME Group), Wells Fargo Plaza. Please recall freight elevator to lobby and hold it for EMS stretcher, and meet EMS crew on arrival."
+   }
+  ],
+  "tenant_flags": [],
+  "_facts": {
+   "incident": "medical",
+   "floor": 36,
+   "building": {
+    "name": "Wells Fargo Plaza",
+    "address": "1000 Louisiana St, Houston, TX",
+    "stories": 71,
+    "year_built": 1983,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 155,
+     "tenants": [
+      "Wells Fargo Bank"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 2,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 3,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 4,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 5,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 6,
+     "people": 15,
+     "tenants": [
+      "Ares Management Corp"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 7,
+     "people": 155,
+     "tenants": [
+      "Wells Fargo Bank"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 8,
+     "people": 161,
+     "tenants": [
+      "Wells Fargo Home Mortgage"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 9,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 10,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 11,
+     "people": 20,
+     "tenants": [
+      "The BVA Group",
+      "Unknown tenant"
+     ],
+     "scanned": true
+    },
+    {
+     "floor": 12,
+     "people": 161,
+     "tenants": [
+      "Wells Fargo Advisors"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 13,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 14,
+     "people": 56,
+     "tenants": [
+      "Green Valley Construction",
+      "Riverstone Holdings"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 15,
+     "people": 0,
+     "tenants": [
+      "Sky Project Management"
+     ],
+     "scanned": true
+    },
+    {
+     "floor": 16,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 17,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 18,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 19,
+     "people": 36,
+     "tenants": [
+      "Cawley, Gillespie & Associates",
+      "DLR Group",
+      "Infrastructure Engineering"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 20,
+     "people": 67,
+     "tenants": [
+      "Foley & Lardner"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 21,
+     "people": 67,
+     "tenants": [
+      "Foley & Lardner"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 22,
+     "people": 67,
+     "tenants": [
+      "Foley & Lardner"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 23,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 24,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 25,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 26,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 27,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 28,
+     "people": 116,
+     "tenants": [
+      "Clark Hill"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 29,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 30,
+     "people": 144,
+     "tenants": [
+      "NextDecade Corporation"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 31,
+     "people": 144,
+     "tenants": [
+      "NextDecade Corporation"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 32,
+     "people": 144,
+     "tenants": [
+      "NextDecade Corporation"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 33,
+     "people": 144,
+     "tenants": [
+      "NextDecade Corporation"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 34,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 35,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 36,
+     "people": 16,
+     "tenants": [
+      "CME Group"
+     ],
+     "scanned": true
+    },
+    {
+     "floor": 37,
+     "people": 0,
+     "tenants": [],
+     "scanned": true
+    },
+    {
+     "floor": 38,
+     "people": 125,
+     "tenants": [
+      "Morgan Lewis"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 39,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 40,
+     "people": 125,
+     "tenants": [
+      "Morgan Lewis"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 41,
+     "people": 125,
+     "tenants": [
+      "Morgan Lewis"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 42,
+     "people": 125,
+     "tenants": [
+      "Morgan Lewis"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 43,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 44,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 45,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 46,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 47,
+     "people": 162,
+     "tenants": [
+      "PwC"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 48,
+     "people": 162,
+     "tenants": [
+      "PwC"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 49,
+     "people": 96,
+     "tenants": [
+      "Susman Godfrey"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 50,
+     "people": 96,
+     "tenants": [
+      "Susman Godfrey"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 51,
+     "people": 96,
+     "tenants": [
+      "Susman Godfrey"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 52,
+     "people": 45,
+     "tenants": [
+      "Next Wave Energy Partners"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 53,
+     "people": 0,
+     "tenants": [],
+     "scanned": true
+    },
+    {
+     "floor": 54,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 55,
+     "people": 162,
+     "tenants": [
+      "PwC"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 56,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 57,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 58,
+     "people": 162,
+     "tenants": [
+      "PwC"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 59,
+     "people": 44,
+     "tenants": [
+      "Sidley Austin"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 60,
+     "people": 44,
+     "tenants": [
+      "Sidley Austin"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 61,
+     "people": 44,
+     "tenants": [
+      "Sidley Austin"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 62,
+     "people": 44,
+     "tenants": [
+      "Sidley Austin"
+     ],
+     "scanned": true
+    },
+    {
+     "floor": 63,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 64,
+     "people": 37,
+     "tenants": [
+      "Polsinelli"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 65,
+     "people": 33,
+     "tenants": [
+      "England & Company",
+      "Unknown tenant"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 66,
+     "people": 120,
+     "tenants": [
+      "Greenberg Traurig LLP"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 67,
+     "people": 120,
+     "tenants": [
+      "Greenberg Traurig LLP"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 68,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 69,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 70,
+     "people": 30,
+     "tenants": [
+      "Cathexis"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 71,
+     "people": 0,
+     "tenants": [],
+     "scanned": true
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 61,
+     "dir": "N",
+     "lat": 29.758996379044213,
+     "lon": -95.36810486959516
+    },
+    {
+     "m": 62,
+     "dir": "NE",
+     "lat": 29.758718239132076,
+     "lon": -95.367644427794
+    },
+    {
+     "m": 67,
+     "dir": "E",
+     "lat": 29.75834786024168,
+     "lon": -95.3675267822937
+    },
+    {
+     "m": 70,
+     "dir": "S",
+     "lat": 29.757831599054743,
+     "lon": -95.36826260511435
+    },
+    {
+     "m": 77,
+     "dir": "S",
+     "lat": 29.75781601360711,
+     "lon": -95.36792919513842
+    }
+   ],
+   "staging": [
+    {
+     "m": 491,
+     "dir": "SW",
+     "lat": 29.756330249999998,
+     "lon": -95.37265777500001,
+     "score": 0.232
+    },
+    {
+     "m": 365,
+     "dir": "W",
+     "lat": 29.758118555,
+     "lon": -95.37197112999999,
+     "score": 0.214
+    },
+    {
+     "m": 364,
+     "dir": "W",
+     "lat": 29.75871465,
+     "lon": -95.37197112999999,
+     "score": 0.212
+    }
+   ],
+   "scan": {
+    "floor": 36,
+    "exact": true,
+    "link": "https://my.matterport.com/show/?m=jUnF84zghQk"
+   },
+   "vision": {
+    "scan_points": 18,
+    "scan_points_with": {
+     "exit sign": 11,
+     "stairs": 0,
+     "fire extinguisher": 0,
+     "fire alarm pull station": 2
+    },
+    "image_urls": [
+     "/img/vision/jUnF84zghQk/000_2.jpg",
+     "/img/vision/jUnF84zghQk/001_3.jpg",
+     "/img/vision/jUnF84zghQk/002_0.jpg",
+     "/img/vision/jUnF84zghQk/002_1.jpg",
+     "/img/vision/jUnF84zghQk/002_2.jpg",
+     "/img/vision/jUnF84zghQk/004_1.jpg",
+     "/img/vision/jUnF84zghQk/005_2.jpg",
+     "/img/vision/jUnF84zghQk/005_3.jpg",
+     "/img/vision/jUnF84zghQk/007_0.jpg",
+     "/img/vision/jUnF84zghQk/007_1.jpg",
+     "/img/vision/jUnF84zghQk/008_0.jpg",
+     "/img/vision/jUnF84zghQk/009_1.jpg"
+    ]
+   },
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire Dept: cardiac arrest, floor 36 (CME Group), Wells Fargo Plaza. Please recall freight elevator to lobby and hold it for EMS stretcher, and meet EMS crew on arrival."
+    }
+   ],
+   "tenant_flags": [],
+   "call": "Cardiac arrest on the 36th floor, 1000 Louisiana St, Houston. Caller is a coworker, patient is unresponsive."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Cardiac arrest on the 36th floor, 1000 Louisiana St, Houston. Caller is a coworker, patient is unresponsive.\"}\n{\"t\": 0.02, \"step\": \"address_lookup\", \"detail\": \"1000 Louisiana St, Houston -> 233899\"}\n{\"t\": 2.03, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"1000 Louisiana St, Houston\\\"}\"}\n{\"t\": 2.03, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/medical/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 4.02, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 233899, \\\"floor\\\": 36, \\\"incident\\\": \\\"medical\\\"}\"}\n{\"t\": 4.02, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/233899.md\\\"}\"}\n{\"t\": 13.94, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: medical, cardiac arrest, patient unresponsive, floor 36, Wells Fargo Plaza, 1000 Louisiana St, Houston (71 stories). Tenants JSON: {\\\\\\\"on_floo\"}\n{\"t\": 13.94, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Incident: medical - cardiac arrest, patient unresponsive. Floor 36 (tenant CME Group, suite unknown). Address: Wells Fargo Plaza, 1000 Louisiana St, \"}\n{\"t\": 19.54, \"step\": \"queue_text\", \"detail\": \"property manager: Fire Dept: cardiac arrest, floor 36 (CME Group), Wells Fargo Plaza. Please recall freight elevator to lobby and hold it for EMS stretcher, and meet EM\"}\n{\"t\": 19.54, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire Dept: cardiac arrest, floor 36 (CME Group), Wells Fargo Plaza. Please recall freight elevator to lobby and hold it for EMS stretcher, and meet EMS crew on arri\"}\n{\"t\": 25.09, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 233899, \\\"note\\\": \\\"MEDICAL: cardiac arrest, floor 36 (CME Group), patient unresponsive, caller coworker. Briefing sent; freight elevator on record for stretcher; exact-floor scan availab\"}\n{\"t\": 28.26, \"step\": \"usage\", \"detail\": \"63877 in / 2310 out tokens, ~$0.30\"}\n{\"t\": 28.26, \"step\": \"done\", \"detail\": \"10 lines, 2 images\"}\n"
+}

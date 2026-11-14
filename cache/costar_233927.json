@@ -1,0 +1,41 @@
+{
+ "property_id": 233927,
+ "name": "800 Bell",
+ "address": "800 Bell St, Houston, TX",
+ "lat": 29.753624,
+ "lon": -95.369571,
+ "type": "Office",
+ "stories": 46,
+ "gross_sqft": 1320075.0,
+ "typical_floor_sqft": 29068.0,
+ "year_built": 1962,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 30
+  },
+  {
+   "type": "Freight",
+   "count": 4
+  },
+  {
+   "type": "Parking",
+   "count": 6
+  }
+ ],
+ "tenants": [],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Shorenstein - ExxonMobil Building",
+   "phone": "5552352858"
+  }
+ ],
+ "matterport_models": [
+  "AyQEoYpB3Hx",
+  "zYdLbVFphGC"
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "property_id": 23693,
+ "name": null,
+ "address": "535 20th St, Houston, TX",
+ "lat": 29.8042416,
+ "lon": -95.4073553,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 11300.0,
+ "typical_floor_sqft": 5650.0,
+ "year_built": 1973,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Sola Salon Studios",
+   "floor": 1,
+   "suite": null,
+   "sqft": 5580.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "CyonCYC5sNd"
+ ]
+}

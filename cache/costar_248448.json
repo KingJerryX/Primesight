@@ -1,0 +1,51 @@
+{
+ "property_id": 248448,
+ "name": "Title Guarantee Building",
+ "address": "411 5th St, Los Angeles, CA",
+ "lat": 34.049098,
+ "lon": -118.251883,
+ "type": "Multifamily",
+ "stories": 12,
+ "gross_sqft": 111113.0,
+ "typical_floor_sqft": 8450.0,
+ "year_built": 1930,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 8450.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": null,
+   "sqft": 4000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Quality Parking",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "WGwGhrEsrJ3",
+  "WSJ8x9ja1zx",
+  "ju4pqUnA7m3"
+ ]
+}

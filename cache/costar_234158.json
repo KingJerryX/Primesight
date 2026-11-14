@@ -1,0 +1,500 @@
+{
+ "property_id": 234158,
+ "name": "2603 Augusta",
+ "address": "2603 Augusta Dr, Houston, TX",
+ "lat": 29.7393787,
+ "lon": -95.4823331,
+ "type": "Office",
+ "stories": 16,
+ "gross_sqft": 259464.0,
+ "typical_floor_sqft": 14870.0,
+ "year_built": 1984,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Shutterabia",
+   "floor": 1,
+   "suite": "175",
+   "sqft": 1450.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Duff, Kitchel & Company, PC",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 2277.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "115",
+   "sqft": 1413.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Milano Legal Group",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 2473.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Bank & Trust",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 5733.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pardo & Homan P.C.",
+   "floor": 2,
+   "suite": "270",
+   "sqft": 1113.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 4639.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Krj Management",
+   "floor": 3,
+   "suite": null,
+   "sqft": 3250.0,
+   "employees": 29,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Infinity Power Partners",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 2680.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Guaranteed Rate",
+   "floor": 4,
+   "suite": null,
+   "sqft": 2014.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BioCure",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1050.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BioCure",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 4912.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "430",
+   "sqft": 4678.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 2325.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 4081.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "575",
+   "sqft": 1242.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 16485.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 6698.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "775",
+   "sqft": 850.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "740",
+   "sqft": 1431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ApexOne Investment Partners",
+   "floor": 7,
+   "suite": null,
+   "sqft": 7280.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ayming",
+   "floor": 8,
+   "suite": "805",
+   "sqft": 4266.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate of Ecuador",
+   "floor": 8,
+   "suite": null,
+   "sqft": 2219.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "840",
+   "sqft": 2309.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "825",
+   "sqft": 753.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 1856.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LandPark Commercial",
+   "floor": 8,
+   "suite": null,
+   "sqft": 2745.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 1856.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "905",
+   "sqft": 2028.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "910",
+   "sqft": 1962.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Porter Law Firm, PLLC",
+   "floor": 9,
+   "suite": null,
+   "sqft": 7830.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Duff, Kitchel & Company, PC",
+   "floor": 9,
+   "suite": null,
+   "sqft": 1389.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nance & Simpson, LLP",
+   "floor": 10,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Your Part-Time Controller",
+   "floor": 10,
+   "suite": null,
+   "sqft": 2230.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1025",
+   "sqft": 1571.0,
+   "employees": null,
+   "industry": "ProfessionalScientificAndTechnicalServices",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1070",
+   "sqft": 4545.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas American Title Company",
+   "floor": 11,
+   "suite": null,
+   "sqft": 7526.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1175",
+   "sqft": 4755.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wilson & Johnson, L.L.P.",
+   "floor": 11,
+   "suite": null,
+   "sqft": 1955.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alcotra",
+   "floor": 12,
+   "suite": null,
+   "sqft": 632.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Menard Financial Group",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 2530.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rymer, Echols & Nelson-Archer, P.C.",
+   "floor": 12,
+   "suite": "1270",
+   "sqft": 7555.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wanhua Chemical Group Co.",
+   "floor": 12,
+   "suite": "1260",
+   "sqft": 2176.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hampton & King",
+   "floor": 13,
+   "suite": "1300",
+   "sqft": 7576.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boulware & Valoir",
+   "floor": 13,
+   "suite": null,
+   "sqft": 1978.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fulcrum Technology Solutions",
+   "floor": 13,
+   "suite": null,
+   "sqft": 4871.0,
+   "employees": 64,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Maddox Thomson & Associates PC",
+   "floor": 14,
+   "suite": null,
+   "sqft": 9959.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Vitality & Aesthetics Institute",
+   "floor": 14,
+   "suite": "1450",
+   "sqft": 3095.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Strive",
+   "floor": 15,
+   "suite": "1525",
+   "sqft": 5229.0,
+   "employees": 34,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1500",
+   "sqft": 7597.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1525",
+   "sqft": 5229.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1550",
+   "sqft": 3611.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Johnston, LLC",
+   "floor": 16,
+   "suite": null,
+   "sqft": 15378.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "XSC8HVkwJH2",
+  "tRTXZQYBNxg"
+ ]
+}

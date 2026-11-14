@@ -1,0 +1,44 @@
+{
+ "property_id": 235279,
+ "name": null,
+ "address": "3401 Navigation Blvd, Houston, TX",
+ "lat": 29.7578876,
+ "lon": -95.335362,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 238125.0,
+ "typical_floor_sqft": 238011.0,
+ "year_built": 1980,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Cubework",
+   "floor": 1,
+   "suite": "3401",
+   "sqft": 102100.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Catalyst Trading Company, LTD",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 49911.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "6o4bon1PnmR",
+  "9aJfjCPz5Zo",
+  "QTNqWm45mtS",
+  "QgKWM2hhiuR",
+  "bN6GDQYA4yF"
+ ]
+}

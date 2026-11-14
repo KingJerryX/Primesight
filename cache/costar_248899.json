@@ -1,0 +1,278 @@
+{
+ "property_id": 248899,
+ "name": null,
+ "address": "6310 San Vicente Blvd, Los Angeles, CA",
+ "lat": 34.0606018,
+ "lon": -118.36761,
+ "type": "Office",
+ "stories": 5,
+ "gross_sqft": 111418.0,
+ "typical_floor_sqft": 21592.0,
+ "year_built": 1970,
+ "construction": "Unknown",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Stella Coffee",
+   "floor": 1,
+   "suite": "106",
+   "sqft": 5000.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Haven Entertainment",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 5000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "STUDEO",
+   "floor": 1,
+   "suite": "107",
+   "sqft": 5000.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Steven B Richlin, Od, Inc",
+   "floor": 1,
+   "suite": "100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "United Medical Imaging Healthcare",
+   "floor": 1,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Schwartz Kales Accountancy Corp",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 1700.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "STUDEO",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 1081.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Amy Weinberg MD",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 750.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AMA Regenerative Medicine & Skincare",
+   "floor": 2,
+   "suite": "285",
+   "sqft": 4755.0,
+   "employees": 31,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pardee Brothers",
+   "floor": 2,
+   "suite": "255",
+   "sqft": 1081.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Physical Thearpy Specialist",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 1081.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Danny Shiri, DDS",
+   "floor": 2,
+   "suite": "295",
+   "sqft": 2490.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Miracle Mile Pediatrics",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 1081.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hidden Treasures ABA Services",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 1351.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "West Coast Dental & Orthodontics",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 3917.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Darlene Basch, LCSW",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 2161.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Susan M. Morrison, MD",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 6464.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Facial Spa La",
+   "floor": 3,
+   "suite": "325",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Scott L Whitman Law Offices",
+   "floor": 4,
+   "suite": "430",
+   "sqft": 7132.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Paul Murdoch Architects",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 7132.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ravan Law",
+   "floor": 4,
+   "suite": "401",
+   "sqft": 5403.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jeffrey Chernin Ph D Mft",
+   "floor": 4,
+   "suite": "410",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Paragon Business Management",
+   "floor": 5,
+   "suite": "501",
+   "sqft": 3242.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Highland Film Group",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 5403.0,
+   "employees": 27,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Center for Fetal Medicine & Women's Ultrasound",
+   "floor": 5,
+   "suite": "530, 520",
+   "sqft": 5403.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr.Rubencio Quintana",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 7132.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Villoura Luxury Rentals",
+   "floor": 5,
+   "suite": null,
+   "sqft": 433.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "JswS8miVU6X"
+ ]
+}

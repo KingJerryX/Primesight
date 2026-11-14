@@ -1,0 +1,145 @@
+{
+ "property_id": 239601,
+ "name": "Paragon Center I",
+ "address": "450 Gears Rd, Houston, TX",
+ "lat": 29.9465882,
+ "lon": -95.4212289,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 192858.0,
+ "typical_floor_sqft": 22504.0,
+ "year_built": 1984,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Dhs Interpreting & Translating Services",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Smart Card Processing",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hamza \"the Legend\" Security Services",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Iv Rx Holdings, Llc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Patient Choice Labs",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Healing Through Caring Homecare, Llc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mcb Environmental & Demolition",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Green Worldwide Shipping",
+   "floor": 2,
+   "suite": "212",
+   "sqft": 3500.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Greater Greenspoint Redevelopment Authority",
+   "floor": 2,
+   "suite": "200",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gulf Coast Library",
+   "floor": 3,
+   "suite": null,
+   "sqft": 3400.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Manager Training & Development",
+   "floor": 5,
+   "suite": "500",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CMG",
+   "floor": 6,
+   "suite": null,
+   "sqft": 4347.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "4wShWrJEkf7",
+  "FTkFHSZ4isL",
+  "kwF8vecZ2Dr"
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "property_id": 236191,
+ "name": null,
+ "address": "17449 Village Green Dr, Houston, TX",
+ "lat": 29.891907,
+ "lon": -95.582637,
+ "type": "Flex",
+ "stories": 1,
+ "gross_sqft": 52117.0,
+ "typical_floor_sqft": 52117.0,
+ "year_built": 1983,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "State Farm",
+   "floor": 1,
+   "suite": "17483",
+   "sqft": 1804.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AS-Schneider America, Inc.",
+   "floor": 1,
+   "suite": "17449",
+   "sqft": 6351.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Business Integrators Services, L.L.C.",
+   "floor": 1,
+   "suite": "17465",
+   "sqft": 2500.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rivergate Construction",
+   "floor": 1,
+   "suite": "17485",
+   "sqft": 3597.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cy-Fair Aft",
+   "floor": 1,
+   "suite": "17461",
+   "sqft": 2367.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advanced Connections, Inc.",
+   "floor": 1,
+   "suite": "17471",
+   "sqft": 4096.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Notta Garage",
+   "floor": 1,
+   "suite": "17475",
+   "sqft": 1927.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "17473",
+   "sqft": 2740.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Controls & Engraving LLC",
+   "floor": 1,
+   "suite": "17459",
+   "sqft": 2066.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "17455",
+   "sqft": 3303.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "17481",
+   "sqft": 1850.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Raman Rasa LLC",
+   "floor": 1,
+   "suite": "17461 A",
+   "sqft": 3000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Good Things Natural Health",
+   "floor": 1,
+   "suite": "17451-",
+   "sqft": 3000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Inframark",
+   "floor": 1,
+   "suite": "17495",
+   "sqft": 7720.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "PLPZJBUixWt"
+ ]
+}

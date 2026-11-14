@@ -1,0 +1,104 @@
+{
+ "property_id": 240993,
+ "name": "Mitchelldale Business Park - Building 12",
+ "address": "5151 Mitchelldale St, Houston, TX",
+ "lat": 29.8131299,
+ "lon": -95.4651552,
+ "type": "Flex",
+ "stories": 1,
+ "gross_sqft": 34203.0,
+ "typical_floor_sqft": 34203.0,
+ "year_built": 1974,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Action Calibration & Service Inc",
+   "floor": 1,
+   "suite": "B4",
+   "sqft": 3420.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Intergroup Association, Inc",
+   "floor": 1,
+   "suite": "B10",
+   "sqft": 4000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Everde Growers",
+   "floor": 1,
+   "suite": "B2",
+   "sqft": 4269.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brooks Pest Solutions",
+   "floor": 1,
+   "suite": "B11",
+   "sqft": 3762.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vici",
+   "floor": 1,
+   "suite": "B1",
+   "sqft": 4238.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SK Houston Constructions",
+   "floor": 1,
+   "suite": "B2Ba",
+   "sqft": 6306.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Straight Frets",
+   "floor": 1,
+   "suite": "B5",
+   "sqft": 4104.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Teeny Wahini",
+   "floor": 1,
+   "suite": "B3",
+   "sqft": 4104.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Tube Products, Inc.",
+   "floor": 1,
+   "suite": "a2",
+   "sqft": null,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "uhFCsagczZd",
+  "x64K9dkpwBJ"
+ ]
+}

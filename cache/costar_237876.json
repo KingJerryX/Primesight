@@ -1,0 +1,113 @@
+{
+ "property_id": 237876,
+ "name": null,
+ "address": "15340 Vantage Pky, Houston, TX",
+ "lat": 29.9426793,
+ "lon": -95.362653,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 19247.0,
+ "typical_floor_sqft": 19247.0,
+ "year_built": 1984,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "TK Group Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3491.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Officepro Supply Company LLC",
+   "floor": 1,
+   "suite": "250",
+   "sqft": 3000.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mainstage Theatrical Supply Inc",
+   "floor": 1,
+   "suite": "260",
+   "sqft": 3675.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "200",
+   "sqft": 4636.0,
+   "employees": null,
+   "industry": "RetailersOrWholesalers",
+   "about": null
+  },
+  {
+   "name": "Fast Freight Services of Texas",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "220",
+   "sqft": 2537.0,
+   "employees": null,
+   "industry": "RetailersOrWholesalers",
+   "about": null
+  },
+  {
+   "name": "Hobas",
+   "floor": 1,
+   "suite": "250",
+   "sqft": 7556.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "200",
+   "sqft": 4636.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Biohealth Rx, Llc",
+   "floor": 1,
+   "suite": "220",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "260",
+   "sqft": 3765.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "Lq7i5ZwtLFe",
+  "TSm7NDULaWu"
+ ]
+}

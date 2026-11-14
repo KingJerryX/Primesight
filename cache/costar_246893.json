@@ -1,0 +1,404 @@
+{
+ "property_id": 246893,
+ "name": "CPLA",
+ "address": "11340 Olympic Blvd, Los Angeles, CA",
+ "lat": 34.0374321,
+ "lon": -118.4416541,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 84850.0,
+ "typical_floor_sqft": 28283.0,
+ "year_built": 1975,
+ "construction": "WoodFrame",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Bo Macdonald, DDS",
+   "floor": 1,
+   "suite": "148",
+   "sqft": 2100.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Appa Real Estate",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 1367.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dialogue AI, Inc.",
+   "floor": 1,
+   "suite": "138",
+   "sqft": 1400.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "West Los Angeles Chiropractic",
+   "floor": 1,
+   "suite": "165",
+   "sqft": 1400.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Transwestern Property Company West",
+   "floor": 1,
+   "suite": "140",
+   "sqft": 1267.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Emma Accupuncture & Chinese Medicine",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 1400.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Alto Experience",
+   "floor": 1,
+   "suite": "175",
+   "sqft": 2100.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 2267.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SpineX",
+   "floor": 2,
+   "suite": "222",
+   "sqft": 1200.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Evidence Based Therapy Partners",
+   "floor": 2,
+   "suite": "268",
+   "sqft": 1200.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "neuro8connect",
+   "floor": 2,
+   "suite": "266",
+   "sqft": 1200.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dempsey Productions",
+   "floor": 2,
+   "suite": "206",
+   "sqft": 1200.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "City News Service, Inc.",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 1200.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trulo",
+   "floor": 2,
+   "suite": "207",
+   "sqft": 1200.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Right Place Counseling",
+   "floor": 2,
+   "suite": "255",
+   "sqft": 600.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ROWI",
+   "floor": 2,
+   "suite": "260, 265",
+   "sqft": 2100.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brian P. Kamel & Associates",
+   "floor": 2,
+   "suite": "204",
+   "sqft": 1200.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clearview Outpatient",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 1200.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Innovative Home Health Care",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 1200.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "S-Go International, Inc.",
+   "floor": 2,
+   "suite": "209",
+   "sqft": 1200.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sawtelle Smiles Dental",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 1200.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Resolution Escrow",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 1200.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Margy Sperry",
+   "floor": 2,
+   "suite": "275",
+   "sqft": 1200.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Steve Deitelbaum",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 950.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Social Foundations",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 1037.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Walker Chiropractic",
+   "floor": 3,
+   "suite": "357",
+   "sqft": 1006.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elite Psychology Group",
+   "floor": 3,
+   "suite": "385",
+   "sqft": 1053.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pia Ligeti, MFT",
+   "floor": 3,
+   "suite": "375",
+   "sqft": 950.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "North Star Families",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 950.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Clinical Collective",
+   "floor": 3,
+   "suite": "335",
+   "sqft": 1053.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "David Narrang, PhD",
+   "floor": 3,
+   "suite": "356",
+   "sqft": 1023.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "I-Grace",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 950.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Emily Drury, LCSW",
+   "floor": 3,
+   "suite": "352",
+   "sqft": 950.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Zhai Acupuncture",
+   "floor": 3,
+   "suite": "365",
+   "sqft": 1072.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bon Air Inc",
+   "floor": 3,
+   "suite": "302",
+   "sqft": 950.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Glowing Smiles Orthodontics",
+   "floor": 3,
+   "suite": "337",
+   "sqft": 1051.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lynn Kilroy, PhD",
+   "floor": 3,
+   "suite": "380",
+   "sqft": 1124.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Todd H. Yamada, Inc.",
+   "floor": 3,
+   "suite": "360",
+   "sqft": 950.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Westside DBT, Inc",
+   "floor": 3,
+   "suite": "307",
+   "sqft": 950.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 1483.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rogoway Law Group",
+   "floor": 3,
+   "suite": "303",
+   "sqft": 827.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

@@ -1,0 +1,547 @@
+{
+ "property_id": 233905,
+ "name": "TC Energy Center",
+ "address": "700 Louisiana St, Houston, TX",
+ "lat": 29.7607687,
+ "lon": -95.366467,
+ "type": "Office",
+ "stories": 56,
+ "gross_sqft": 1281007.0,
+ "typical_floor_sqft": 22875.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 30
+  },
+  {
+   "type": "Freight",
+   "count": 4
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Murphy\u2019s Deli",
+   "floor": 0,
+   "suite": null,
+   "sqft": 1061.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "M-M Properties",
+   "floor": 2,
+   "suite": null,
+   "sqft": 16439.0,
+   "employees": 62,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ziegler Cooper Architects",
+   "floor": 3,
+   "suite": null,
+   "sqft": 5354.0,
+   "employees": 85,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "U.S. Attorney's Office",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 26728.0,
+   "employees": 880,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "U.S. Attorney's Office",
+   "floor": 5,
+   "suite": "400",
+   "sqft": 26664.0,
+   "employees": 880,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "U.S. Attorney's Office",
+   "floor": 6,
+   "suite": "400",
+   "sqft": 30009.0,
+   "employees": 880,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "U.S. Attorney's Office",
+   "floor": 7,
+   "suite": "400",
+   "sqft": 15599.0,
+   "employees": 880,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TC Energy",
+   "floor": 9,
+   "suite": null,
+   "sqft": 30005.0,
+   "employees": 1536,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TC Energy",
+   "floor": 10,
+   "suite": null,
+   "sqft": 30005.0,
+   "employees": 1536,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TC Energy",
+   "floor": 11,
+   "suite": null,
+   "sqft": 30000.0,
+   "employees": 1536,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TC Energy",
+   "floor": 12,
+   "suite": null,
+   "sqft": 30000.0,
+   "employees": 1536,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TC Energy",
+   "floor": 13,
+   "suite": "1300",
+   "sqft": 30012.0,
+   "employees": 1536,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TC Energy",
+   "floor": 14,
+   "suite": null,
+   "sqft": 30000.0,
+   "employees": 1536,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TC Energy",
+   "floor": 15,
+   "suite": null,
+   "sqft": 30000.0,
+   "employees": 1536,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TC Energy",
+   "floor": 16,
+   "suite": null,
+   "sqft": 30284.0,
+   "employees": 1536,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "M-M Properties",
+   "floor": 17,
+   "suite": null,
+   "sqft": 3328.0,
+   "employees": 62,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BMO",
+   "floor": 21,
+   "suite": "2100",
+   "sqft": 30000.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TC Energy",
+   "floor": 22,
+   "suite": null,
+   "sqft": 30000.0,
+   "employees": 1536,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hicks Thomas, LLP",
+   "floor": 23,
+   "suite": "2300",
+   "sqft": 30000.0,
+   "employees": 59,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Verdant Specialty Solutions",
+   "floor": 24,
+   "suite": null,
+   "sqft": 11433.0,
+   "employees": 76,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cherry Bekaert",
+   "floor": 25,
+   "suite": "2550",
+   "sqft": 21117.0,
+   "employees": 70,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cherry Bekaert",
+   "floor": 25,
+   "suite": "2500",
+   "sqft": 8883.0,
+   "employees": 70,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "O'Melveny & Myers",
+   "floor": 26,
+   "suite": "2600",
+   "sqft": 30000.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "O'Melveny & Myers",
+   "floor": 27,
+   "suite": "2700",
+   "sqft": 12985.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wright Close Barger & Guzman",
+   "floor": 30,
+   "suite": "3000",
+   "sqft": 25943.0,
+   "employees": 51,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wright Close Barger & Guzman",
+   "floor": 31,
+   "suite": "3000",
+   "sqft": 17143.0,
+   "employees": 51,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 31,
+   "suite": "3150",
+   "sqft": 1708.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alvarez & Marsal",
+   "floor": 32,
+   "suite": null,
+   "sqft": 25900.0,
+   "employees": 301,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alvarez & Marsal",
+   "floor": 33,
+   "suite": null,
+   "sqft": 23557.0,
+   "employees": 301,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mayer Brown",
+   "floor": 34,
+   "suite": null,
+   "sqft": 23557.0,
+   "employees": 216,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mayer Brown",
+   "floor": 35,
+   "suite": null,
+   "sqft": 24746.0,
+   "employees": 216,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mayer Brown",
+   "floor": 36,
+   "suite": null,
+   "sqft": 22800.0,
+   "employees": 216,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Weil",
+   "floor": 37,
+   "suite": null,
+   "sqft": 22800.0,
+   "employees": 85,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GulfStar Group Investment Bankers",
+   "floor": 38,
+   "suite": "3800",
+   "sqft": 18740.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pontem Energy Capital",
+   "floor": 38,
+   "suite": null,
+   "sqft": 4060.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Quinn Emanuel Urquhart & Sullivan",
+   "floor": 39,
+   "suite": "3900",
+   "sqft": 12207.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Servcorp",
+   "floor": 39,
+   "suite": null,
+   "sqft": 11553.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 39,
+   "suite": "3911",
+   "sqft": 153.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 39,
+   "suite": "3912",
+   "sqft": 130.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 39,
+   "suite": "3904",
+   "sqft": 115.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ford+Bergner LLP",
+   "floor": 41,
+   "suite": "4100",
+   "sqft": 17559.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Keener Investments",
+   "floor": 42,
+   "suite": "4250",
+   "sqft": 15477.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Strawn Pickens LLP",
+   "floor": 42,
+   "suite": "4220",
+   "sqft": 3923.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 42,
+   "suite": null,
+   "sqft": 8130.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alpha Omega Power",
+   "floor": 42,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kilpatrick",
+   "floor": 43,
+   "suite": null,
+   "sqft": 19400.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pachulski Stang Ziehl & Jones LLP",
+   "floor": 45,
+   "suite": "4500",
+   "sqft": 4259.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Parker Sanchez & Donnelly PLLC",
+   "floor": 45,
+   "suite": "4505",
+   "sqft": 2950.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Howley Law PLLC",
+   "floor": 45,
+   "suite": "4545",
+   "sqft": 6099.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Citadel",
+   "floor": 46,
+   "suite": null,
+   "sqft": 10903.0,
+   "employees": 73,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "White Deer Energy",
+   "floor": 47,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Midstream Texas Operating LLC",
+   "floor": 47,
+   "suite": "4770",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Le\u00f3n Cosgrove Jim\u00e9nez, LLP",
+   "floor": 53,
+   "suite": null,
+   "sqft": 4186.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Le\u00f3n Cosgrove Jim\u00e9nez, LLP",
+   "floor": 54,
+   "suite": "5300",
+   "sqft": 4186.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alvarez & Marsal",
+   "floor": null,
+   "suite": null,
+   "sqft": null,
+   "employees": 301,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "M-M Properties",
+   "phone": "5552339089"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "gGm7vFc9YgS",
+  "rjEYw8eRQpf"
+ ]
+}

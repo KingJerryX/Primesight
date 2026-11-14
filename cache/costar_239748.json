@@ -1,0 +1,519 @@
+{
+ "property_id": 239748,
+ "name": null,
+ "address": "2646 Loop , Houston, TX",
+ "lat": 29.6794344,
+ "lon": -95.4207655,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 107539.0,
+ "typical_floor_sqft": 17756.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Kellie's Sitting Service, Inc.",
+   "floor": 1,
+   "suite": "115",
+   "sqft": 1556.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "St. Michael's Neurology",
+   "floor": 1,
+   "suite": "106",
+   "sqft": 2283.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MWG Financial Solutions & Tax Services, LLC",
+   "floor": 1,
+   "suite": "195.",
+   "sqft": 1917.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Legendary Watch Protection",
+   "floor": 1,
+   "suite": "155",
+   "sqft": 299.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MEN inc",
+   "floor": 1,
+   "suite": "180C",
+   "sqft": 417.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zhou Medical Solutions",
+   "floor": 1,
+   "suite": "182",
+   "sqft": 523.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royal Diamond Auto Group",
+   "floor": 1,
+   "suite": "181",
+   "sqft": 871.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wellcom Realty LLC",
+   "floor": 1,
+   "suite": "122",
+   "sqft": 523.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Plexus Neurodiagnostics",
+   "floor": 1,
+   "suite": "104",
+   "sqft": 1743.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 705.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "New Channel Healthcare Service",
+   "floor": 2,
+   "suite": "270",
+   "sqft": 1183.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Quality One Medical Services, Inc.",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 2053.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sirte Med Primary Care",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 2923.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Skin Bar Med Spa",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 871.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tax Aid USA",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 336.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Danna's Touch",
+   "floor": 2,
+   "suite": "265",
+   "sqft": 349.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Carver Group",
+   "floor": 2,
+   "suite": "275",
+   "sqft": 349.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "First Choice Ambulance",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 1913.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of Gerard Lynch",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 747.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sibling Healthcare Solutions, LLC",
+   "floor": 3,
+   "suite": "355",
+   "sqft": 2295.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Henderson Law Group",
+   "floor": 3,
+   "suite": "380",
+   "sqft": 1151.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chs Health Group",
+   "floor": 3,
+   "suite": "360.",
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diamond Counseling",
+   "floor": 3,
+   "suite": "375",
+   "sqft": 767.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advanced Practice House Calls",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 871.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Razor Rection",
+   "floor": 3,
+   "suite": "385",
+   "sqft": 871.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Level Up Hair Studio",
+   "floor": 3,
+   "suite": "377",
+   "sqft": 871.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Cochran Firm",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1683.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blakes Blessing Healthcare",
+   "floor": 4,
+   "suite": "422",
+   "sqft": 697.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shun B Salon",
+   "floor": 4,
+   "suite": "460",
+   "sqft": 1696.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "McKinley Cuts",
+   "floor": 4,
+   "suite": "430B",
+   "sqft": 528.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royal Tipz",
+   "floor": 4,
+   "suite": "401",
+   "sqft": 562.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Serenity Health Care",
+   "floor": 4,
+   "suite": "423",
+   "sqft": 1010.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Saditty Krownz Luxury Hair Studio",
+   "floor": 4,
+   "suite": "400F",
+   "sqft": 509.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Moolah Tax Services",
+   "floor": 4,
+   "suite": "400E",
+   "sqft": 287.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Glam Braids and Beauty",
+   "floor": 4,
+   "suite": "400H",
+   "sqft": 505.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Yvonne Kew, MD, PLLC",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 2037.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Addicted to Glam",
+   "floor": 4,
+   "suite": "405",
+   "sqft": 871.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Frontline & Diva's Only Salon",
+   "floor": 4,
+   "suite": "415.",
+   "sqft": 871.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Johnson Uvukansi",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 871.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sandra Willis Carrier, DDS",
+   "floor": 5,
+   "suite": "575",
+   "sqft": 1117.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DH Creative Design LLC",
+   "floor": 5,
+   "suite": "565",
+   "sqft": 421.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Valerie Wells",
+   "floor": 5,
+   "suite": "566",
+   "sqft": 330.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "41Recovery",
+   "floor": 5,
+   "suite": "560",
+   "sqft": 1591.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "505G",
+   "sqft": 456.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Joe da Chopstar, LLC",
+   "floor": 5,
+   "suite": "530",
+   "sqft": 871.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 1248.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "560",
+   "sqft": 1570.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "FinishLine Tax Solutions",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 2649.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Down Wit It Taxes",
+   "floor": 6,
+   "suite": "655",
+   "sqft": 697.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hargest-Davis Investments",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Piping Technology and Products",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 5228.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Life Wave Hospice",
+   "floor": 6,
+   "suite": "635",
+   "sqft": 3485.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Skin and Beauty Academy",
+   "floor": 6,
+   "suite": "645",
+   "sqft": 2440.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Oxley Leasing, LLC",
+   "phone": "5559806802"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 350
+  }
+ ],
+ "matterport_models": [
+  "KNjFtmNVFhd",
+  "PSHJavrY2qy",
+  "fDZ27gS1Qkr",
+  "upzMqrEqy2f"
+ ]
+}

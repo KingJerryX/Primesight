@@ -1,0 +1,280 @@
+{
+ "model_id": "iAw7TsDLoof",
+ "name": "Executive Tower - Suite 620 - 1,349 SF",
+ "floor": 6,
+ "sweeps": [
+  {
+   "id": "httix5g2s6afwgrr3xuksn6fd",
+   "index": 0,
+   "xy": [
+    4.225335121154785,
+    -2.4254369735717773
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.9,
+     "box": [
+      857,
+      386,
+      901,
+      416
+     ],
+     "color": 0.617,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "iawbhezcxtgk8swsi9inzt87d",
+   "index": 1,
+   "xy": [
+    8.237022399902344,
+    -2.2137300968170166
+   ],
+   "hits": []
+  },
+  {
+   "id": "129hm1nwteuydygy1nikn95hb",
+   "index": 2,
+   "xy": [
+    6.135225772857666,
+    -3.629992961883545
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.89,
+     "box": [
+      912,
+      424,
+      946,
+      446
+     ],
+     "color": 0.652,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "6tkz2qggmep587b2i5fgpf3yd",
+   "index": 3,
+   "xy": [
+    1.9840368032455444,
+    -1.5355249643325806
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.93,
+     "box": [
+      70,
+      234,
+      139,
+      320
+     ],
+     "color": 0.488,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "62mkkt2z4554khpt9er867gkd",
+   "index": 4,
+   "xy": [
+    0.7279559969902039,
+    -2.893125534057617
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.52,
+     "box": [
+      490,
+      358,
+      500,
+      402
+     ],
+     "color": 0.45,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "bunprnzwke6p1b8230b9fdhwb",
+   "index": 5,
+   "xy": [
+    4.26453161239624,
+    -5.011253833770752
+   ],
+   "hits": []
+  },
+  {
+   "id": "ukcucchu4cpw0s2acgfae0qqd",
+   "index": 6,
+   "xy": [
+    4.058183193206787,
+    -6.38419246673584
+   ],
+   "hits": []
+  },
+  {
+   "id": "73wmnyzze6dx0u5hnmnfw3bba",
+   "index": 7,
+   "xy": [
+    6.155574798583984,
+    -5.062503814697266
+   ],
+   "hits": []
+  },
+  {
+   "id": "fwdd48una77zkg75ana363pxd",
+   "index": 8,
+   "xy": [
+    8.255722045898438,
+    -5.678717136383057
+   ],
+   "hits": []
+  },
+  {
+   "id": "hxb89ze7he196nwxupapugxpd",
+   "index": 9,
+   "xy": [
+    9.785408020019531,
+    -4.956289768218994
+   ],
+   "hits": [
+    {
+     "label": "stairs",
+     "score": 0.5,
+     "box": [
+      578,
+      688,
+      664,
+      824
+     ],
+     "face": 0
+    },
+    {
+     "label": "stairs",
+     "score": 0.56,
+     "box": [
+      589,
+      720,
+      650,
+      802
+     ],
+     "face": 0
+    }
+   ]
+  },
+  {
+   "id": "t5irdq4hmdm79a5gz7tzmn2cd",
+   "index": 10,
+   "xy": [
+    2.6815688610076904,
+    -6.310544490814209
+   ],
+   "hits": []
+  },
+  {
+   "id": "iehh956dkhfq07271trampzyb",
+   "index": 11,
+   "xy": [
+    4.177029132843018,
+    -3.748384475708008
+   ],
+   "hits": []
+  },
+  {
+   "id": "x69n6yrsakctqycbsxykt37cd",
+   "index": 12,
+   "xy": [
+    10.031350135803223,
+    -2.041323184967041
+   ],
+   "hits": [
+    {
+     "label": "stairs",
+     "score": 0.8,
+     "box": [
+      683,
+      740,
+      730,
+      822
+     ],
+     "face": 0
+    }
+   ]
+  },
+  {
+   "id": "6prb49t4tqzw2994c1ts4u0ca",
+   "index": 13,
+   "xy": [
+    4.15473747253418,
+    -0.33669614791870117
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.9,
+     "box": [
+      600,
+      376,
+      652,
+      408
+     ],
+     "color": 0.493,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "aqmiuibaqesr28gh6y5nhdi1d",
+   "index": 14,
+   "xy": [
+    1.0564684867858887,
+    -6.126689434051514
+   ],
+   "hits": []
+  },
+  {
+   "id": "q7xqgaptyid2c18csrfgsxb3b",
+   "index": 15,
+   "xy": [
+    1.8141239881515503,
+    -0.0443420335650444
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.89,
+     "box": [
+      643,
+      146,
+      765,
+      221
+     ],
+     "color": 0.704,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "wzxxksy7yu3cfu3n612885r2d",
+   "index": 16,
+   "xy": [
+    -0.056157201528549194,
+    0.004269035533070564
+   ],
+   "hits": []
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 6,
+  "stairs": 2,
+  "fire extinguisher": 0,
+  "fire alarm pull station": 0
+ },
+ "seconds": 99
+}

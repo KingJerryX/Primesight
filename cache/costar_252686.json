@@ -1,0 +1,67 @@
+{
+ "property_id": 252686,
+ "name": null,
+ "address": "2460 12th St, Los Angeles, CA",
+ "lat": 34.0223223,
+ "lon": -118.2280701,
+ "type": "Industrial",
+ "stories": 2,
+ "gross_sqft": 89490.0,
+ "typical_floor_sqft": 68511.0,
+ "year_built": 1988,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Esfr",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Dailylook",
+   "floor": 1,
+   "suite": "C",
+   "sqft": 22696.0,
+   "employees": 108,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wantable",
+   "floor": 1,
+   "suite": "B",
+   "sqft": 17128.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Seamless Land Inc.",
+   "floor": 1,
+   "suite": "A",
+   "sqft": 17128.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wantable",
+   "floor": 2,
+   "suite": "B",
+   "sqft": 5245.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Seamless Land Inc.",
+   "floor": 2,
+   "suite": "A",
+   "sqft": 15734.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "7uGp7ELMhzh"
+ ]
+}

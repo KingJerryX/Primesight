@@ -1,0 +1,288 @@
+{
+ "property_id": 240038,
+ "name": "Sage Park Office Building",
+ "address": "2121 Sage Rd, Houston, TX",
+ "lat": 29.745295,
+ "lon": -95.4665119,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 110388.0,
+ "typical_floor_sqft": 36796.0,
+ "year_built": 1978,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Dry",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Windsor Travel Corp",
+   "floor": 1,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Carol Vaughan",
+   "floor": 1,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CAC",
+   "floor": 1,
+   "suite": "145",
+   "sqft": 1839.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aurora Technical Services, LLC",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 9000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Open Title Texas LLC",
+   "floor": 1,
+   "suite": "140",
+   "sqft": 1126.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Doorstep Digital LLC",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "190",
+   "sqft": 1310.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 5610.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 2128.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prime Laser Center",
+   "floor": 2,
+   "suite": "228",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TCT Oil Brokers",
+   "floor": 2,
+   "suite": null,
+   "sqft": 6500.0,
+   "employees": 24,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nick Lopez Tailoring",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 1839.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "268",
+   "sqft": 1247.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "268",
+   "sqft": 1247.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 1934.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "245",
+   "sqft": 1961.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vista Agency",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 5103.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 6448.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Phoenix Ifs",
+   "floor": 2,
+   "suite": "240a",
+   "sqft": 3010.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Barnhart Interests, Inc.",
+   "floor": 3,
+   "suite": "333",
+   "sqft": 8500.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Novatecture Design Group, Inc.",
+   "floor": 3,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sage Road Capital",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1200.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Law Office of Nora V. Law",
+   "floor": 3,
+   "suite": "390",
+   "sqft": 1000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kay Counseling Services, PLLC",
+   "floor": 3,
+   "suite": "378",
+   "sqft": 981.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Forrest Group LLC",
+   "floor": 3,
+   "suite": null,
+   "sqft": 400.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "385",
+   "sqft": 1086.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 1117.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "378",
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "9yCsDfRs1QK",
+  "w8xkD9SCzQo"
+ ]
+}

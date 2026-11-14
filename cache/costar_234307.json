@@ -1,0 +1,86 @@
+{
+ "property_id": 234307,
+ "name": "Building B",
+ "address": "2121 Brittmoore Rd, Houston, TX",
+ "lat": 29.81914,
+ "lon": -95.5714509,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 24000.0,
+ "typical_floor_sqft": 24000.0,
+ "year_built": 2000,
+ "construction": "Steel",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "JW Machine Systems",
+   "floor": 1,
+   "suite": "900",
+   "sqft": 1965.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rug Mart",
+   "floor": 1,
+   "suite": "1700",
+   "sqft": 2000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "1300",
+   "sqft": 1316.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reymisa Group LLC",
+   "floor": 1,
+   "suite": "1600",
+   "sqft": 2056.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AMRL Performance Tuning",
+   "floor": 1,
+   "suite": "800",
+   "sqft": 1920.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lone Star Water",
+   "floor": 1,
+   "suite": "1800",
+   "sqft": 1920.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "1000",
+   "sqft": 1970.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "8aW4HzxcYN1",
+  "YxDJNDVpTRv"
+ ]
+}

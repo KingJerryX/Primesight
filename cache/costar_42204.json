@@ -1,0 +1,166 @@
+{
+ "property_id": 42204,
+ "name": "Echelon at Television Center",
+ "address": "6311 Romaine St, Los Angeles, CA",
+ "lat": 34.0895216,
+ "lon": -118.3293653,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 238325.0,
+ "typical_floor_sqft": 59581.0,
+ "year_built": 1956,
+ "construction": "Unknown",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": null
+  },
+  {
+   "type": "Freight",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Film/Art  Original Film Posters",
+   "floor": 1,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gathers Strategies Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": 450.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EoS Fitness",
+   "floor": 1,
+   "suite": null,
+   "sqft": 50000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hollywood Retouching",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pugliese Photographic, Inc.",
+   "floor": 2,
+   "suite": null,
+   "sqft": 8000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": null,
+   "sqft": 5060.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lola Production",
+   "floor": 3,
+   "suite": null,
+   "sqft": 5944.0,
+   "employees": 39,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DCM",
+   "floor": 3,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Stephen Burton",
+   "floor": 3,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Soundchef",
+   "floor": 3,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "4363",
+   "sqft": 552.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "4369",
+   "sqft": 185.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "Bldg 7-7329",
+   "sqft": 683.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "Bldg-4 4375",
+   "sqft": 5106.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

@@ -1,0 +1,357 @@
+{
+ "property_id": 256390,
+ "name": "The Collection",
+ "address": "521 7th St, Los Angeles, CA",
+ "lat": 34.0472828,
+ "lon": -118.2560373,
+ "type": "Office",
+ "stories": 13,
+ "gross_sqft": 95550.0,
+ "typical_floor_sqft": 7404.0,
+ "year_built": 1913,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  },
+  {
+   "type": "Parking",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mohawk Carpeting",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Brand List",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Crow Holdings Development",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 5150.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Andreu World",
+   "floor": 3,
+   "suite": "301",
+   "sqft": 2088.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gold on Grand Salon",
+   "floor": 4,
+   "suite": "401",
+   "sqft": 915.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LGS Group",
+   "floor": 4,
+   "suite": "404",
+   "sqft": 750.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Skin Sirens LA",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The David S Companies",
+   "floor": 4,
+   "suite": "408",
+   "sqft": 2450.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Design Workshop, Inc.",
+   "floor": 5,
+   "suite": "508",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "A3 Engineering",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 2394.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Park & Eve",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 1157.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Matter Media Group",
+   "floor": 6,
+   "suite": "607",
+   "sqft": 1158.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Mode Agency",
+   "floor": 6,
+   "suite": "601",
+   "sqft": 2136.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Agave Music & Media",
+   "floor": 6,
+   "suite": "609",
+   "sqft": 800.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AE3 Partners",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 2012.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ASD|SKY",
+   "floor": 7,
+   "suite": "705",
+   "sqft": 750.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Summa International",
+   "floor": 8,
+   "suite": "809",
+   "sqft": 407.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Star Insights",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 920.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Architype",
+   "floor": 8,
+   "suite": "801",
+   "sqft": 1049.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Switzer Group",
+   "floor": 8,
+   "suite": "808",
+   "sqft": 1700.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr. Tamika Torres",
+   "floor": 9,
+   "suite": "908",
+   "sqft": 650.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tenants Law Firm",
+   "floor": 9,
+   "suite": "906",
+   "sqft": 650.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Real Momentum",
+   "floor": 9,
+   "suite": "904",
+   "sqft": 650.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Litigation, P.C.",
+   "floor": 9,
+   "suite": "907",
+   "sqft": 650.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lattitude 33",
+   "floor": 9,
+   "suite": "905",
+   "sqft": 650.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Initiate Justice Action",
+   "floor": 9,
+   "suite": "902",
+   "sqft": 650.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ClinEXUS",
+   "floor": 9,
+   "suite": "912",
+   "sqft": 650.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Joseph L. Cruz, APC",
+   "floor": 9,
+   "suite": "903",
+   "sqft": 650.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brilliant Corners",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 5788.0,
+   "employees": 27,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brilliant Corners",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 4076.0,
+   "employees": 27,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tangram Interiors",
+   "floor": 12,
+   "suite": "1204",
+   "sqft": 650.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boulder Associates",
+   "floor": 13,
+   "suite": "1304",
+   "sqft": 7500.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sit On It Seating",
+   "floor": 13,
+   "suite": "1300",
+   "sqft": 835.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "9TyMi5jEKvT",
+  "JmZerFRzBrw",
+  "iBaq82nj14x"
+ ]
+}

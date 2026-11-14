@@ -1,0 +1,24 @@
+{
+ "property_id": 240473,
+ "name": null,
+ "address": "11011 Jones Rd, Houston, TX",
+ "lat": 29.9340429,
+ "lon": -95.5855063,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 14864.0,
+ "typical_floor_sqft": 7071.0,
+ "year_built": 1983,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "Wp1jw8s96yZ",
+  "ae3rT7aVPZZ",
+  "tV6sgdstVwp",
+  "uhSfgv4TFmL"
+ ]
+}

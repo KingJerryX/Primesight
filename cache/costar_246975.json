@@ -1,0 +1,520 @@
+{
+ "property_id": 246975,
+ "name": "Wilshire Bundy Plaza",
+ "address": "12121 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0440434,
+ "lon": -118.4680431,
+ "type": "Office",
+ "stories": 14,
+ "gross_sqft": 313749.0,
+ "typical_floor_sqft": 22410.0,
+ "year_built": 1984,
+ "construction": "Unknown",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 6
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  },
+  {
+   "type": "Parking",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Sola Salons",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 7843.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Printers Company",
+   "floor": 1,
+   "suite": "104",
+   "sqft": 2241.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elite Orthosport Physical Therapy Inc.",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 8392.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vienna Pastry",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 1793.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Farzam Law",
+   "floor": 1,
+   "suite": "108",
+   "sqft": 1793.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WM Group West Engineers",
+   "floor": 2,
+   "suite": "202",
+   "sqft": 1201.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cel & Associates, Inc.",
+   "floor": 2,
+   "suite": "204",
+   "sqft": 1201.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of Gail D Kass",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 1245.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Defense Tax Partners",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 1201.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Yaofeng Hu, DOM, L. Ac",
+   "floor": 2,
+   "suite": "203",
+   "sqft": 1201.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Patriot Gold Group",
+   "floor": 2,
+   "suite": "208",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lurie & Associates",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 3362.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cermak And Inglin LLP",
+   "floor": 3,
+   "suite": "322",
+   "sqft": 2241.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Irving Reifman",
+   "floor": 3,
+   "suite": "303",
+   "sqft": 2241.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BSI",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 2241.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Social Security Administration",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 22186.0,
+   "employees": 146,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lavinsky Law",
+   "floor": 5,
+   "suite": "501",
+   "sqft": 2241.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Celerity Partners",
+   "floor": 5,
+   "suite": "512",
+   "sqft": 1793.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aikenhead, Cipes & Supanich",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 2241.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gianelli & Morris",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 2241.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Weston, Garrou & Mooney",
+   "floor": 5,
+   "suite": "525",
+   "sqft": 3362.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nameco Insurance Services, Inc.",
+   "floor": 5,
+   "suite": "555",
+   "sqft": 2017.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "530",
+   "sqft": 3330.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sift Payments",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 2241.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jacobson Equities",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 2241.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PSRS of Los Angeles",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 2157.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JALMAR PROPERTIES, INC.",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 2913.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Douglas Emmett Management, LLC",
+   "floor": 7,
+   "suite": "730",
+   "sqft": 2241.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "John M. Pagano, CPA",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 2017.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oakwood Capital Management LLC",
+   "floor": 7,
+   "suite": "715",
+   "sqft": 2913.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LKS & Associates",
+   "floor": 7,
+   "suite": "740",
+   "sqft": 2241.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "775",
+   "sqft": 3361.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aci Licensing, Llc",
+   "floor": 7,
+   "suite": "725",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cypress Equity Investments LLC",
+   "floor": 8,
+   "suite": "801",
+   "sqft": 3362.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Barrister Executive Suites, Inc.",
+   "floor": 8,
+   "suite": "810",
+   "sqft": 8292.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reliant Capital",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 5603.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hawk Ridge Capital Management",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 11205.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Harris Corporation",
+   "floor": 9,
+   "suite": "910",
+   "sqft": 10981.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arena Capital",
+   "floor": 10,
+   "suite": "1010",
+   "sqft": 4482.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "InVita Healthcare Technologies",
+   "floor": 10,
+   "suite": "1005",
+   "sqft": 2341.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Northstrand",
+   "floor": 10,
+   "suite": "1015",
+   "sqft": 2341.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Angarella Law",
+   "floor": 11,
+   "suite": "1103",
+   "sqft": 4482.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1111",
+   "sqft": 7861.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cloudaccess Inc",
+   "floor": 11,
+   "suite": "1111",
+   "sqft": null,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1120",
+   "sqft": 5909.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Legion Partners",
+   "floor": 12,
+   "suite": "1240",
+   "sqft": 2913.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wealth Enhancement Group",
+   "floor": 12,
+   "suite": "1250",
+   "sqft": 5378.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bernet International Trading",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 6275.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Welcome Tech",
+   "floor": 12,
+   "suite": "1201",
+   "sqft": 2241.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Law Offices of Devermont & Devermont",
+   "floor": 12,
+   "suite": "1260",
+   "sqft": 2913.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lehrman, Villegas, Chinery & Douglas, LLP",
+   "floor": 13,
+   "suite": "1300",
+   "sqft": 16009.0,
+   "employees": 42,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lot 5 Media & Post",
+   "floor": 14,
+   "suite": "1400",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "EDPfUAZYML9",
+  "JiFoKKA6Hzt",
+  "KvBMNx77mMz",
+  "g8oPEGiVwN5"
+ ]
+}

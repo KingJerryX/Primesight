@@ -1,0 +1,231 @@
+{
+ "property_id": 248948,
+ "name": "The Sunset Landmark",
+ "address": "6525 Sunset Blvd, Los Angeles, CA",
+ "lat": 34.098432,
+ "lon": -118.332174,
+ "type": "Office",
+ "stories": 10,
+ "gross_sqft": 121442.0,
+ "typical_floor_sqft": 3200.0,
+ "year_built": 1923,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 1
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Stella Selftape Studio",
+   "floor": 0,
+   "suite": "101",
+   "sqft": 300.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hollywood Athletic Club",
+   "floor": 0,
+   "suite": null,
+   "sqft": 2900.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Camden Escrow",
+   "floor": 1,
+   "suite": "G10",
+   "sqft": 650.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diana Georger, MFT",
+   "floor": 2,
+   "suite": "203",
+   "sqft": 1137.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hollywood Athletic Club",
+   "floor": 2,
+   "suite": null,
+   "sqft": 10233.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kirby Tepper LMFT",
+   "floor": 3,
+   "suite": "306",
+   "sqft": 1280.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "304.5",
+   "sqft": 144.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "303",
+   "sqft": 464.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 336.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Grand Jete",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "404.5",
+   "sqft": 144.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 336.0,
+   "employees": null,
+   "industry": "ArtsEntertainmentAndRecreation",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "502",
+   "sqft": 384.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "503",
+   "sqft": 464.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blank Square Productions",
+   "floor": 6,
+   "suite": "605",
+   "sqft": 2400.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Affirmative Entertainment",
+   "floor": 7,
+   "suite": null,
+   "sqft": 2400.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "804",
+   "sqft": 448.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "806",
+   "sqft": 640.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "802",
+   "sqft": 384.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "803",
+   "sqft": 464.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alexis Kim",
+   "floor": 9,
+   "suite": null,
+   "sqft": 2400.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Sunset Landmark Investment, LLC",
+   "phone": "5553375726"
+  }
+ ],
+ "matterport_models": [
+  "5aChjBk12JV",
+  "bzfsUE7rA4o"
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "property_id": 249315,
+ "name": null,
+ "address": "835 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.049962,
+ "lon": -118.258779,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 46782.0,
+ "typical_floor_sqft": 6206.0,
+ "year_built": 1969,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Jolt Mobile",
+   "floor": 2,
+   "suite": null,
+   "sqft": 650.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Spurgin Development Company",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 2100.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Menchaca & Company LLP",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 2005.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 972.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Magic Circle Cube",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 1000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arcina Risk Group",
+   "floor": 4,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Urban Fiduciaries",
+   "floor": 5,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Troy Construction Design",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 6287.0,
+   "employees": 45,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NorthStar Moving Company",
+   "floor": 5,
+   "suite": null,
+   "sqft": 650.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Captain IT",
+   "floor": 5,
+   "suite": null,
+   "sqft": 120.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "KnZNc1FonU2",
+  "LdUQHoZG7Xw",
+  "Rzfyg3SUDVn",
+  "stbRTmccWMD"
+ ]
+}

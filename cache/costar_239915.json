@@ -1,0 +1,179 @@
+{
+ "property_id": 239915,
+ "name": "Rockstar Building",
+ "address": "5700 Central Dr, Houston, TX",
+ "lat": 29.8490131,
+ "lon": -95.4942376,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 73401.0,
+ "typical_floor_sqft": 18454.0,
+ "year_built": 1983,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Coti Photography",
+   "floor": 1,
+   "suite": "190",
+   "sqft": 1652.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TWFG Insurance",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 3303.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "USA Gabby's Tax",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 4588.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cassie Hernandez",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 2231.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vatani Consulting Engineers",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 1500.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Agelly Ware And Co",
+   "floor": 2,
+   "suite": "250a",
+   "sqft": 6601.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "World Financial Group",
+   "floor": 2,
+   "suite": "230a",
+   "sqft": 1652.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Phil Am Insurance Agency",
+   "floor": 2,
+   "suite": "250q",
+   "sqft": 1652.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AFSCME",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 2848.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Solaris Pediatric Therapy",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 1652.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Desi the Diva",
+   "floor": 4,
+   "suite": "401B",
+   "sqft": 3487.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vmichelle Mua",
+   "floor": 4,
+   "suite": "401",
+   "sqft": 2753.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jackie Martinez Makeup",
+   "floor": 4,
+   "suite": "401C",
+   "sqft": 1652.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "V&A Cleaning",
+   "floor": 4,
+   "suite": "402",
+   "sqft": 2089.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Paper Pencil Pen",
+   "floor": 4,
+   "suite": "401",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Rockstar Building, LLC",
+   "phone": "5552270523"
+  }
+ ],
+ "matterport_models": [
+  "HiEPzBGtAN1",
+  "SeopdNigQ8v",
+  "o3MxwzEsiWP",
+  "qn9Xcmg3TSq"
+ ]
+}

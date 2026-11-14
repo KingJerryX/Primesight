@@ -1,0 +1,172 @@
+{
+ "property_id": 246954,
+ "name": "Brentwood Saltair",
+ "address": "11999 San Vicente Blvd, Los Angeles, CA",
+ "lat": 34.052633,
+ "lon": -118.4728461,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 59429.0,
+ "typical_floor_sqft": 15000.0,
+ "year_built": 1986,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Meyers Nave",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 1774.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Leluxe",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 2128.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nourmand & Associates",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3193.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "European Investment Management Service",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 6259.0,
+   "employees": 45,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Breitbart News Network LLC",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 2303.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Douglas Emmett, Office of The Building",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 100.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "201",
+   "sqft": 1751.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hilton Capital Mgmt.",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 2134.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pacific Urban Investors, LLC",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 2639.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Schonbuch Hallissy LLP",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 7137.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Next Wave Advisory Group LLC",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 1921.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Basemakers",
+   "floor": 3,
+   "suite": "335",
+   "sqft": 1220.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Balaban & Spielberger",
+   "floor": 3,
+   "suite": null,
+   "sqft": 3343.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "European Investment Management Service",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 1330.0,
+   "employees": 45,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sitrick & Company",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 10333.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allvision Canada",
+   "floor": 4,
+   "suite": "460",
+   "sqft": 3110.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "J32x1oWiYKn",
+  "uEhG6yzmYPw"
+ ]
+}

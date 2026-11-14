@@ -1,0 +1,298 @@
+{
+ "property_id": 237993,
+ "name": "Westheimer Central Plaza",
+ "address": "11200 Westheimer Rd, Houston, TX",
+ "lat": 29.737322,
+ "lon": -95.5740042,
+ "type": "Office",
+ "stories": 10,
+ "gross_sqft": 324850.0,
+ "typical_floor_sqft": 18251.0,
+ "year_built": 1982,
+ "construction": "Unknown",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Silver Star Properties REIT, Inc.",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 1635.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Investment Support Systems Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hyperlinks Media Llc",
+   "floor": 1,
+   "suite": "115",
+   "sqft": null,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Therapeutic Behavioral Health Associates",
+   "floor": 2,
+   "suite": "202",
+   "sqft": 797.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fura Tax Services",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 2315.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Third Coast Maintenance",
+   "floor": 2,
+   "suite": "203",
+   "sqft": 354.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Immeka Group",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 1659.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tax 2 U",
+   "floor": 2,
+   "suite": "222",
+   "sqft": 723.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DermaGenesis Skin & Body Care",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 1409.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Histeel Pipe & Tube, Inc",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 2187.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Novetus Engineering LLC",
+   "floor": 3,
+   "suite": "360",
+   "sqft": 8870.0,
+   "employees": 59,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Custom Logistics Of Texas Llc",
+   "floor": 4,
+   "suite": "404",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Baowin Steel",
+   "floor": 5,
+   "suite": "535",
+   "sqft": 1589.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Voltair Consulting Engineers",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 2400.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SreeVee Americas Inc",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 1411.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Transamerica Financial Advisors, Inc.",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 2199.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eyebrow Factory By Yailin",
+   "floor": 6,
+   "suite": "602",
+   "sqft": 826.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "604",
+   "sqft": 1184.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "I-care",
+   "floor": 6,
+   "suite": "625",
+   "sqft": 4248.0,
+   "employees": 68,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nikkei Financial Times",
+   "floor": 6,
+   "suite": "606",
+   "sqft": 2978.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": null,
+   "sqft": 832.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Geonamic Systems",
+   "floor": 7,
+   "suite": "775",
+   "sqft": 2846.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Capital Concepts",
+   "floor": 7,
+   "suite": "777",
+   "sqft": null,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cive Consulting",
+   "floor": 8,
+   "suite": "890",
+   "sqft": null,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BizSuites by Hartman",
+   "floor": 9,
+   "suite": "904",
+   "sqft": 7894.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LS Realty Advisors Inc.",
+   "floor": 10,
+   "suite": null,
+   "sqft": 13743.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "iGet Services LLC",
+   "floor": 10,
+   "suite": "1025",
+   "sqft": 2648.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "5Engineering LLC",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 3525.0,
+   "employees": 38,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 125
+  },
+  {
+   "type": "Covered",
+   "spaces": 385
+  }
+ ],
+ "matterport_models": [
+  "jtfVRiouTPW",
+  "yn8RZv9QB2W"
+ ]
+}

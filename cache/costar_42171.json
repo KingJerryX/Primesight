@@ -1,0 +1,341 @@
+{
+ "property_id": 42171,
+ "name": null,
+ "address": "1925 Century Park , Los Angeles, CA",
+ "lat": 34.0604446,
+ "lon": -118.4143871,
+ "type": "Office",
+ "stories": 24,
+ "gross_sqft": 469251.0,
+ "typical_floor_sqft": 19000.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 10
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "FedEx Office",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4200.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Noble Cleaners",
+   "floor": 1,
+   "suite": "F",
+   "sqft": 1300.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Esquire Bank",
+   "floor": 1,
+   "suite": "A",
+   "sqft": 3800.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Carla Cafe",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Concord Wilshire Properties",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 3108.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Holwick Constructors, Inc",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 934.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Charlston, Revich, Harris & Hoffman LLP",
+   "floor": 3,
+   "suite": null,
+   "sqft": 3175.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Knobbe Martens",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 8851.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 3145.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "460",
+   "sqft": 2887.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Epstein Becker Green",
+   "floor": 5,
+   "suite": null,
+   "sqft": 18699.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Summers Levine Lipsic & Hersh LLP",
+   "floor": 8,
+   "suite": null,
+   "sqft": 5269.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Weinberg & Company",
+   "floor": 11,
+   "suite": null,
+   "sqft": 3115.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1140",
+   "sqft": 1057.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1180",
+   "sqft": 3388.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Actionist",
+   "floor": 12,
+   "suite": "1250",
+   "sqft": 11874.0,
+   "employees": 44,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Finn Partners",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 2230.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "New Act Travel Inc",
+   "floor": 12,
+   "suite": "1260",
+   "sqft": 3773.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ACF Investment Bank",
+   "floor": 13,
+   "suite": "1360",
+   "sqft": 4335.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JAMS",
+   "floor": 14,
+   "suite": "1450",
+   "sqft": 18699.0,
+   "employees": 124,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Resolution Economics",
+   "floor": 15,
+   "suite": null,
+   "sqft": 18699.0,
+   "employees": 39,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Industrious",
+   "floor": 17,
+   "suite": null,
+   "sqft": 19881.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Industrious",
+   "floor": 18,
+   "suite": null,
+   "sqft": 19881.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vedder Price",
+   "floor": 19,
+   "suite": null,
+   "sqft": 18699.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shrier Wealth Management",
+   "floor": 20,
+   "suite": "2060",
+   "sqft": 934.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 20,
+   "suite": "2000",
+   "sqft": 14122.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Glancy Prongay Wolke & Rotter",
+   "floor": 21,
+   "suite": "2100",
+   "sqft": 5534.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Merino Yebri LLP",
+   "floor": 21,
+   "suite": "2140",
+   "sqft": 3244.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Greenstone Law A.P.C.",
+   "floor": 21,
+   "suite": "2100",
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Phillips, Erlewine, Given & Carlin LLP",
+   "floor": 21,
+   "suite": "2100",
+   "sqft": 1500.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 21,
+   "suite": "2150",
+   "sqft": 6677.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GTB",
+   "floor": 22,
+   "suite": null,
+   "sqft": 18699.0,
+   "employees": 124,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kidder Mathews",
+   "floor": 23,
+   "suite": "2350",
+   "sqft": 12699.0,
+   "employees": 84,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Munck Wilson Mandala",
+   "floor": 23,
+   "suite": null,
+   "sqft": 6000.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "ZEz1wXsUkD9"
+ ]
+}

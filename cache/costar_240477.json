@@ -1,0 +1,131 @@
+{
+ "property_id": 240477,
+ "name": "Memorial Village",
+ "address": "11601 Katy Fwy, Houston, TX",
+ "lat": 29.7837862,
+ "lon": -95.5876962,
+ "type": "Multifamily",
+ "stories": 2,
+ "gross_sqft": 124506.0,
+ "typical_floor_sqft": 15150.0,
+ "year_built": 1976,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Caring Adoptions",
+   "floor": 1,
+   "suite": "109",
+   "sqft": null,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Graphic Maps Of Houston Ltd",
+   "floor": 1,
+   "suite": "103",
+   "sqft": 0.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chemical Marketing Associates",
+   "floor": 1,
+   "suite": "223",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fanning & Herrington CPA",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 0.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Weber Chiropractic Center",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 0.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Synergy Insurance Group",
+   "floor": 1,
+   "suite": "603-RCF",
+   "sqft": 0.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "D B Williams Contractors",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Whiplash Lash & Skin Studio",
+   "floor": 1,
+   "suite": "507",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sheykh Obeyd Foundation International, Inc",
+   "floor": 1,
+   "suite": "110",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Affiliated Insurance Agents, LLC",
+   "floor": 2,
+   "suite": "217",
+   "sqft": 0.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ins/mark Of America",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 0.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Builders Academy",
+   "floor": 2,
+   "suite": "223",
+   "sqft": null,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "pjqDx29hUBa",
+  "zC9AGzpFona"
+ ]
+}

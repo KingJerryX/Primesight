@@ -1,0 +1,109 @@
+{
+ "property_id": 239740,
+ "name": "One Bering Park",
+ "address": "750 Bering Dr, Houston, TX",
+ "lat": 29.7584308,
+ "lon": -95.4805743,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 114196.0,
+ "typical_floor_sqft": 18746.0,
+ "year_built": 1981,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Kirksey Homes",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 750.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Creative Tonic",
+   "floor": 1,
+   "suite": "115",
+   "sqft": 1500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SouthState Bank",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 16496.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Business Cents",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Brownstone Group",
+   "floor": 4,
+   "suite": null,
+   "sqft": 18746.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Clerkley Watkins Group",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 3000.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Verde Operating Company, LLC",
+   "floor": 5,
+   "suite": "515",
+   "sqft": 3912.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SouthState Bank",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 11834.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ramey Chandler Quinn, P.C.",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 13844.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "56J8N2456tL",
+  "qG4ZCnP8xuT"
+ ]
+}

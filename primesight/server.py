@@ -89,7 +89,8 @@ def facts(f, incident):
     vis, vpath = None, os.path.join(VISION, f"{scan.get('id')}.json")
     if scan and os.path.exists(vpath):
         v = json.load(open(vpath, encoding="utf-8"))
-        imgs = sorted(os.listdir(os.path.join(VISION, scan["id"])))[:12]
+        d = os.path.join(VISION, scan["id"])  # annotated faces stay local (not in git): a fresh clone has none
+        imgs = sorted(os.listdir(d))[:12] if os.path.isdir(d) else []
         vis = {"scan_points": len(v["sweeps"]), "scan_points_with": v["sweeps_with"],
                "image_urls": [f"/img/vision/{scan['id']}/{n}" for n in imgs]}
     return {"incident": incident, "floor": fl,

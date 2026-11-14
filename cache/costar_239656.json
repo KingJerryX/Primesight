@@ -1,0 +1,54 @@
+{
+ "property_id": 239656,
+ "name": null,
+ "address": "6100 Hillcroft Ave, Houston, TX",
+ "lat": 29.713852,
+ "lon": -95.497166,
+ "type": "Office",
+ "stories": 7,
+ "gross_sqft": 147763.0,
+ "typical_floor_sqft": 19582.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Xavier Academy",
+   "floor": 1,
+   "suite": null,
+   "sqft": 9791.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Xavier Academy",
+   "floor": 2,
+   "suite": null,
+   "sqft": 19582.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "E8D6YgkmFXC",
+  "LjSr7uhs7Sd"
+ ]
+}

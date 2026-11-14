@@ -1,0 +1,49 @@
+{
+ "property_id": 240029,
+ "name": "Willowbrook Place II",
+ "address": "17350 State Highway 249 , Houston, TX",
+ "lat": 29.9571526,
+ "lon": -95.5415921,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 40075.0,
+ "typical_floor_sqft": 13485.0,
+ "year_built": 1984,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Reflections Counseling Of Texas Llc",
+   "floor": 1,
+   "suite": "22017178",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Metro Fire Apparatus Specialists",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 4597.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bizee",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 2023.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "ydzXab1mZt5"
+ ]
+}

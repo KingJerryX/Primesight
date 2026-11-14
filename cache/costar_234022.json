@@ -1,0 +1,587 @@
+{
+ "property_id": 234022,
+ "name": "Northbelt",
+ "address": "363 Sam Houston Pky, Houston, TX",
+ "lat": 29.9419034,
+ "lon": -95.3971127,
+ "type": "Office",
+ "stories": 20,
+ "gross_sqft": 449006.0,
+ "typical_floor_sqft": 20000.0,
+ "year_built": 1981,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 7
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Realty.com Commercial",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 5974.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cinco And Tres Coffee",
+   "floor": 1,
+   "suite": null,
+   "sqft": 970.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Designs Can Empower Llc",
+   "floor": 1,
+   "suite": "1",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gaspy Hospice, Inc",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 5238.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BB&W Architects",
+   "floor": 3,
+   "suite": "380",
+   "sqft": 3519.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Slayistry",
+   "floor": 3,
+   "suite": "360",
+   "sqft": 685.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Healistic Touch And Luxe Legacy",
+   "floor": 4,
+   "suite": "470",
+   "sqft": 1029.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NewU Beauty",
+   "floor": 4,
+   "suite": "480",
+   "sqft": 1175.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Styled By Slimm",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 823.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 1015.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "425",
+   "sqft": 8964.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ByGod's Grace Financial",
+   "floor": 4,
+   "suite": "490",
+   "sqft": 1186.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Borusan Pipe",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 2531.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Resolurions Hospice",
+   "floor": 5,
+   "suite": "545",
+   "sqft": 2531.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tax Services Of Houston LLC",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 223.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dream Counseling Center",
+   "floor": 6,
+   "suite": "605",
+   "sqft": 354.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Crystal CoWorks",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 4536.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "H5 Strategic Alliances",
+   "floor": 6,
+   "suite": "615",
+   "sqft": 120.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Count It All Joy Tax Group",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 409.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 597.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morgan Systems Intl Inc",
+   "floor": 7,
+   "suite": "790",
+   "sqft": 3668.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PPC Insulators",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 1587.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Celo Trade Inc",
+   "floor": 7,
+   "suite": "745",
+   "sqft": 2445.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Meiko America Inc",
+   "floor": 7,
+   "suite": "770",
+   "sqft": 2445.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Executive Tax Lounge",
+   "floor": 7,
+   "suite": "725",
+   "sqft": 1278.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Safe Have  Mental Health Solutions",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 2559.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Criaco & Samperi",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 6445.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Transocean Shipping",
+   "floor": 8,
+   "suite": "880",
+   "sqft": 2177.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hooper, Langley & Associates, P.C.",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 3690.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Front Cover Hair Studios",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 1508.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Studio Nine Salon Suites",
+   "floor": 9,
+   "suite": "905",
+   "sqft": 1021.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Upperhairchelon And Spa",
+   "floor": 9,
+   "suite": "910",
+   "sqft": 1021.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DeLa Dweer Hair",
+   "floor": 9,
+   "suite": "920",
+   "sqft": 1429.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diverse Destination",
+   "floor": 9,
+   "suite": "930",
+   "sqft": 2042.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SV Beauty And Spa",
+   "floor": 9,
+   "suite": "928",
+   "sqft": 1633.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AP TK Hair",
+   "floor": 9,
+   "suite": "915",
+   "sqft": 2409.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "926",
+   "sqft": 1234.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "940",
+   "sqft": 3339.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AP Consulting TX LLC",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 600.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advanced Chiropractic Relief",
+   "floor": 10,
+   "suite": "1060",
+   "sqft": 3439.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Art Artistry Beauty Suites",
+   "floor": 10,
+   "suite": "1025",
+   "sqft": 6255.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "InkMore Studios",
+   "floor": 10,
+   "suite": "1055",
+   "sqft": 1456.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bellaire Wellness Center",
+   "floor": 10,
+   "suite": "950",
+   "sqft": 1038.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Obex Worldwide Limited",
+   "floor": 10,
+   "suite": "1045",
+   "sqft": 1586.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1040",
+   "sqft": 3846.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 11,
+   "suite": null,
+   "sqft": 13612.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ameriprise Financial, Inc.",
+   "floor": 14,
+   "suite": null,
+   "sqft": 5498.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beyond BeautyAcademy",
+   "floor": 14,
+   "suite": "1470",
+   "sqft": 4681.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jewels Beauty LLC",
+   "floor": 14,
+   "suite": "1425",
+   "sqft": 2354.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "A And S Multi Service",
+   "floor": 14,
+   "suite": "1430",
+   "sqft": 587.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Wallace Law Firm",
+   "floor": 14,
+   "suite": "1400",
+   "sqft": 1177.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Emerald Studio Suites",
+   "floor": 16,
+   "suite": "1650",
+   "sqft": 6774.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Argo Texas Group",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": 9162.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Square Biz Solutions",
+   "floor": 16,
+   "suite": "1670",
+   "sqft": 4424.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "All The Rave",
+   "floor": 17,
+   "suite": "1760",
+   "sqft": 5099.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vip Spa",
+   "floor": 17,
+   "suite": "1730",
+   "sqft": 4395.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Pink Spa And Lounge",
+   "floor": 17,
+   "suite": "1750",
+   "sqft": 7955.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Strategic Growth Alliance 366",
+   "floor": 18,
+   "suite": "1800",
+   "sqft": 8616.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Count It All Joy LLC",
+   "floor": 18,
+   "suite": null,
+   "sqft": 7761.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Realty.com",
+   "phone": "5559806802"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "SurfaceTandem",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": 1182
+  },
+  {
+   "type": "CoveredTandem",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "2qk7u5GRW68",
+  "Fv5Q2P8Kmsf"
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "property_id": 236735,
+ "name": "Tanner Office Building",
+ "address": "11302 Tanner Rd, Houston, TX",
+ "lat": 29.8506767,
+ "lon": -95.5781054,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 44370.0,
+ "typical_floor_sqft": 22000.0,
+ "year_built": 1982,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 1
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Vertika Structural Engineers, LLC",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 1100.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "maY9nfN7Uxd",
+  "ntkpQBCqybT"
+ ]
+}

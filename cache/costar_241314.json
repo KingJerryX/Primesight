@@ -1,0 +1,76 @@
+{
+ "property_id": 241314,
+ "name": "Building 2",
+ "address": "13451 Fondren Rd, Houston, TX",
+ "lat": 29.6265927,
+ "lon": -95.5067971,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 24000.0,
+ "typical_floor_sqft": 24000.0,
+ "year_built": 1983,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Andy's Mercedes",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JCC Autobody Shop",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4800.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "13455",
+   "sqft": 2400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Elite",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4800.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "13453",
+   "sqft": 2400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "13463",
+   "sqft": 2400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "MLLaxT2ppiR"
+ ]
+}

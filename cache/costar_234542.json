@@ -1,0 +1,157 @@
+{
+ "property_id": 234542,
+ "name": "Central Park Northwest",
+ "address": "2500 Central Pky, Houston, TX",
+ "lat": 29.8106844,
+ "lon": -95.4646955,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 66612.0,
+ "typical_floor_sqft": 66612.0,
+ "year_built": 1979,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Troxler",
+   "floor": 1,
+   "suite": "L",
+   "sqft": 3600.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mechantek",
+   "floor": 1,
+   "suite": "B",
+   "sqft": 2638.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Let Me Personalize",
+   "floor": 1,
+   "suite": "K",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Flexion",
+   "floor": 1,
+   "suite": "W",
+   "sqft": 3146.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "50 Floor",
+   "floor": 1,
+   "suite": "C",
+   "sqft": 1000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GETT North America",
+   "floor": 1,
+   "suite": "D",
+   "sqft": 5026.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AmPd Labs, Inc.",
+   "floor": 1,
+   "suite": "R",
+   "sqft": 6644.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Koehn & Associates",
+   "floor": 1,
+   "suite": "Z",
+   "sqft": 6000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sign Age",
+   "floor": 1,
+   "suite": "S",
+   "sqft": 3750.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ccs Facility Services",
+   "floor": 1,
+   "suite": "G",
+   "sqft": 6000.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "S & R Waterproofing",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "C",
+   "sqft": 2195.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "U",
+   "sqft": 3380.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texprint",
+   "floor": 1,
+   "suite": null,
+   "sqft": 4320.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texprint",
+   "floor": null,
+   "suite": null,
+   "sqft": null,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "pKxwhSK22MX"
+ ]
+}

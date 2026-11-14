@@ -1,0 +1,228 @@
+{
+ "property_id": 349493,
+ "name": "53 West",
+ "address": "5373 Alabama St, Houston, TX",
+ "lat": 29.7375634,
+ "lon": -95.4700402,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 98292.0,
+ "typical_floor_sqft": 16174.0,
+ "year_built": 1976,
+ "construction": "Steel",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Yorktown Dental Spa",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Woody's Furs",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 2534.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "114",
+   "sqft": 3663.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Realty Group",
+   "floor": 1,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Galleria Aesthetics",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2173.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "108",
+   "sqft": 1409.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Women's Healthcare Associates",
+   "floor": 2,
+   "suite": "206",
+   "sqft": 3234.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WellnessSpace",
+   "floor": 2,
+   "suite": "204",
+   "sqft": 3234.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "\u00c9lan Hair Studio",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 732.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "202",
+   "sqft": 2927.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Connor Investment Real Estate",
+   "floor": 3,
+   "suite": "315",
+   "sqft": 2458.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "S & P Interests",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 1332.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Physicians Hair Restoration Houston",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Uptown Jewelry Buyer",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 750.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Environmental Industrial Service",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Urban Office",
+   "floor": 4,
+   "suite": null,
+   "sqft": 16174.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Urban Office",
+   "floor": 5,
+   "suite": null,
+   "sqft": 16174.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GREA",
+   "floor": 6,
+   "suite": null,
+   "sqft": 5970.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Saikin Rosenberg",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 5969.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shellist Lazarz Slobin",
+   "floor": 6,
+   "suite": null,
+   "sqft": 4235.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "WEDGE Group",
+   "phone": null
+  }
+ ],
+ "matterport_models": [
+  "8o8GBUGUSWB",
+  "PEWVexvkDsD",
+  "ZfuPmrJewFN"
+ ]
+}

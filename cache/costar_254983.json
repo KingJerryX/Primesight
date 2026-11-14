@@ -1,0 +1,70 @@
+{
+ "property_id": 254983,
+ "name": "Hollywood Production Center 4",
+ "address": "6350 Santa Monica Blvd, Los Angeles, CA",
+ "lat": 34.090486,
+ "lon": -118.328039,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 29057.0,
+ "typical_floor_sqft": 14529.0,
+ "year_built": 1946,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Hollywood Production Center",
+   "floor": 1,
+   "suite": null,
+   "sqft": 130.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brasil Kiss Coffeebar",
+   "floor": 1,
+   "suite": null,
+   "sqft": 130.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "227",
+   "sqft": 150.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Hollywood Production Center",
+   "phone": "5552154876"
+  }
+ ],
+ "matterport_models": [
+  "9vQuqgpsS3Y",
+  "S3q5nP7WC5i"
+ ]
+}

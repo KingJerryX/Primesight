@@ -1,0 +1,43 @@
+{
+ "property_id": 234648,
+ "name": "CityNorth 6",
+ "address": "12450 Greenspoint Dr, Houston, TX",
+ "lat": 29.948556,
+ "lon": -95.409407,
+ "type": "Office",
+ "stories": 14,
+ "gross_sqft": 362893.0,
+ "typical_floor_sqft": 25462.0,
+ "year_built": 1987,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 7
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Lincoln Property Company",
+   "phone": "5551115071"
+  }
+ ],
+ "matterport_models": [
+  "LbEsnPZjKe2",
+  "qJAR9bWo1ix",
+  "qcdyTgY98qu",
+  "u3g7N2UqKjU"
+ ]
+}

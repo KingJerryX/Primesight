@@ -1,0 +1,155 @@
+{
+ "property_id": 8810904,
+ "name": "Josephine DTLA",
+ "address": "801 Hope St, Los Angeles, CA",
+ "lat": 34.046373,
+ "lon": -118.259684,
+ "type": "Multifamily",
+ "stories": 22,
+ "gross_sqft": 300000.0,
+ "typical_floor_sqft": 33712.0,
+ "year_built": 2014,
+ "construction": "Steel",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Philz Coffee Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1740.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 996.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1250.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jersey Mike's Subs",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Studio H Landscape Architecture",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "B",
+   "sqft": 1200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Milkcow Cafe",
+   "floor": 1,
+   "suite": "B",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hoke Poke",
+   "floor": 1,
+   "suite": "b",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Movita Juice Bar",
+   "floor": 1,
+   "suite": "D",
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kablan Management Inc.",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prosodos Holdings, LLC",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "1BToKRDx8fv",
+  "5ccpzGRBuXZ",
+  "CkYAnvDkzcE",
+  "GeYaycUegRq",
+  "JNZqnhPEuqz",
+  "KZHZf3212e2",
+  "Nxcj5RHQLsV",
+  "U4CE5mB4hNV",
+  "U73dRpUA1PB",
+  "XYRYg284c54",
+  "YdgBmru6tmT",
+  "YfHF8tLtz6F",
+  "Z64v4cgY2wK",
+  "a4dsTtD1bBD",
+  "oKGisoDAueG",
+  "sMDNxvQZZ1L",
+  "uDt4wHxzvF7"
+ ]
+}

@@ -1,0 +1,273 @@
+{
+ "property_id": 246850,
+ "name": "Westwood Center",
+ "address": "1100 Glendon Ave, Los Angeles, CA",
+ "lat": 34.0606623,
+ "lon": -118.4437868,
+ "type": "Office",
+ "stories": 24,
+ "gross_sqft": 360475.0,
+ "typical_floor_sqft": 15174.0,
+ "year_built": 1965,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 5
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Kaplan International Languages",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 12000.0,
+   "employees": 82,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Edith V Stewart Dr",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mail 2 World",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Compliagent",
+   "floor": 1,
+   "suite": "15",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Heart & Armor Foundation For Veterans Health",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "David B Norton Inc",
+   "floor": 1,
+   "suite": "17",
+   "sqft": null,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Drake Star",
+   "floor": 9,
+   "suite": "905",
+   "sqft": 3885.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gendler, Kelly & Cunningham",
+   "floor": 9,
+   "suite": "920",
+   "sqft": 1000.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UCLA GIM & HSR",
+   "floor": 9,
+   "suite": "850",
+   "sqft": 8695.0,
+   "employees": 171,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Altman Solon",
+   "floor": 9,
+   "suite": null,
+   "sqft": 2778.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1140",
+   "sqft": 1693.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1130",
+   "sqft": 1678.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UCLA - Center For Prehospital Care",
+   "floor": 12,
+   "suite": null,
+   "sqft": 7731.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blended Strategy Group",
+   "floor": 12,
+   "suite": null,
+   "sqft": 7731.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nelson Hardiman Healthcare Lawyers",
+   "floor": 14,
+   "suite": "1400",
+   "sqft": 20535.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shamrock Capital Advisors LLC",
+   "floor": 16,
+   "suite": null,
+   "sqft": 11232.0,
+   "employees": 55,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Creation Partners",
+   "floor": 17,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vast.ai Inc",
+   "floor": 18,
+   "suite": "1840",
+   "sqft": 3516.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 18,
+   "suite": "1800",
+   "sqft": 10564.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Niagen Bioscience",
+   "floor": 18,
+   "suite": null,
+   "sqft": 10564.0,
+   "employees": 67,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Azoff Company",
+   "floor": 20,
+   "suite": "2000",
+   "sqft": 19423.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Robert Ashley Psychiatry",
+   "floor": null,
+   "suite": "PH-4",
+   "sqft": 2000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elisa Newman, MD",
+   "floor": null,
+   "suite": "PH-7",
+   "sqft": 8457.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PEAKPsychLA, PC",
+   "floor": null,
+   "suite": "PH-8",
+   "sqft": 876.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": null,
+   "suite": "PH001",
+   "sqft": 2694.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "59U6s4YUbrP",
+  "H5aa4aAhFRk",
+  "fHvqa8ECHcE",
+  "wTPxqGzX534"
+ ]
+}

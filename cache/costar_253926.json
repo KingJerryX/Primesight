@@ -1,0 +1,30 @@
+{
+ "property_id": 253926,
+ "name": null,
+ "address": "6151 Santa Monica Blvd, Los Angeles, CA",
+ "lat": 34.091011,
+ "lon": -118.323569,
+ "type": "Flex",
+ "stories": 2,
+ "gross_sqft": 18060.0,
+ "typical_floor_sqft": 9030.0,
+ "year_built": 1985,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

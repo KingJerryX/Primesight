@@ -1,0 +1,402 @@
+{
+ "property_id": 246839,
+ "name": null,
+ "address": "10960 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0579863,
+ "lon": -118.4458778,
+ "type": "Office",
+ "stories": 24,
+ "gross_sqft": 543804.0,
+ "typical_floor_sqft": 25000.0,
+ "year_built": 1971,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 10
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  },
+  {
+   "type": "Parking",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Bites",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2820.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Keller Williams Realty",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 5252.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Edinger Pain Management",
+   "floor": 1,
+   "suite": null,
+   "sqft": 5252.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Equinox",
+   "floor": 2,
+   "suite": null,
+   "sqft": 20764.0,
+   "employees": 250,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Earthbar",
+   "floor": 2,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Equinox",
+   "floor": 3,
+   "suite": null,
+   "sqft": 20764.0,
+   "employees": 250,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wealth Enhancement Group",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1200.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Easy Health",
+   "floor": 4,
+   "suite": "406",
+   "sqft": 2091.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NKSFB LLC",
+   "floor": 5,
+   "suite": null,
+   "sqft": 24941.0,
+   "employees": 250,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NKSFB LLC",
+   "floor": 6,
+   "suite": null,
+   "sqft": 24995.0,
+   "employees": 250,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bedford Law Group",
+   "floor": 7,
+   "suite": null,
+   "sqft": 3810.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nardiello Turanchik Tompkins LLP",
+   "floor": 7,
+   "suite": "760",
+   "sqft": 1805.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hamilton Wealth",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 2862.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Robert Half",
+   "floor": 9,
+   "suite": null,
+   "sqft": 11037.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "980",
+   "sqft": 2788.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NKSFB LLC",
+   "floor": 10,
+   "suite": null,
+   "sqft": 12436.0,
+   "employees": 250,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arixa Capital Corporation",
+   "floor": 10,
+   "suite": null,
+   "sqft": 10314.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SingerLewak",
+   "floor": 11,
+   "suite": null,
+   "sqft": 14289.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1120",
+   "sqft": 2132.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1150",
+   "sqft": 4343.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Adler Weiner Research",
+   "floor": 12,
+   "suite": null,
+   "sqft": 6300.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1220",
+   "sqft": 2376.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1230",
+   "sqft": 1948.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "De Castro, West, Chodorow, Mendler, Glickfeld",
+   "floor": 14,
+   "suite": null,
+   "sqft": 13074.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Northmarq",
+   "floor": 14,
+   "suite": null,
+   "sqft": 5061.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blevans, Itzkowitz & Cantrell, LLP",
+   "floor": 14,
+   "suite": "1410",
+   "sqft": 3264.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advanced Networks",
+   "floor": 14,
+   "suite": "1415",
+   "sqft": 1444.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UCLA Center for Health Policy Research",
+   "floor": 15,
+   "suite": null,
+   "sqft": 16893.0,
+   "employees": 51,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bresee-Warner Financial Advisors",
+   "floor": 15,
+   "suite": null,
+   "sqft": 1696.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Korshak, Kracoff, Kong & Sugano, L.L.P.",
+   "floor": 15,
+   "suite": null,
+   "sqft": 6411.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": 22502.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NeuroSigma",
+   "floor": 19,
+   "suite": null,
+   "sqft": 1948.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pattern Ventures",
+   "floor": 19,
+   "suite": "1900",
+   "sqft": 20578.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Slatt Capital",
+   "floor": 19,
+   "suite": "1960",
+   "sqft": 2370.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morgan Stanley",
+   "floor": 20,
+   "suite": "2040",
+   "sqft": 25000.0,
+   "employees": 70,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 21,
+   "suite": null,
+   "sqft": 9000.0,
+   "employees": null,
+   "industry": "AdministrativeAndSupportServices",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 21,
+   "suite": null,
+   "sqft": 9486.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Frost LLP",
+   "floor": 21,
+   "suite": null,
+   "sqft": 6514.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 22,
+   "suite": null,
+   "sqft": 26351.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "3y4awxwULs1",
+  "7SQXTviZZFS",
+  "mGwp39QhiHx"
+ ]
+}

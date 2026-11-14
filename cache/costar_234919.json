@@ -1,0 +1,94 @@
+{
+ "property_id": 234919,
+ "name": "Building 1",
+ "address": "11381 Meadowglen Ln, Houston, TX",
+ "lat": 29.731917,
+ "lon": -95.578026,
+ "type": "Flex",
+ "stories": 1,
+ "gross_sqft": 35800.0,
+ "typical_floor_sqft": 35800.0,
+ "year_built": 1984,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Online Valves Ltd",
+   "floor": 1,
+   "suite": "G",
+   "sqft": 4350.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pharoah Cleaning",
+   "floor": 1,
+   "suite": "A",
+   "sqft": 4350.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "J",
+   "sqft": 2550.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Horizon Oxygen and Medical Equipment, Inc.",
+   "floor": 1,
+   "suite": "B",
+   "sqft": 6100.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GROCERIESWORLD LLC",
+   "floor": 1,
+   "suite": "F",
+   "sqft": 4400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Homebridge Care",
+   "floor": 1,
+   "suite": "E",
+   "sqft": 4400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mccrory-cti Services Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dti A-group, Llc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

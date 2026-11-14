@@ -1,0 +1,170 @@
+{
+ "property_id": 247365,
+ "name": "The Plaza",
+ "address": "1840 Century Park , Los Angeles, CA",
+ "lat": 34.0623316,
+ "lon": -118.4146779,
+ "type": "Office",
+ "stories": 19,
+ "gross_sqft": 345705.0,
+ "typical_floor_sqft": 18391.0,
+ "year_built": 1971,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 8
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Zesty Cafe",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 3533.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Charles Schwab",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 6000.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "42 West",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 17554.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Charles Schwab",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 5715.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 10217.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Theodora Oringher",
+   "floor": 5,
+   "suite": null,
+   "sqft": 8230.0,
+   "employees": 29,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Door Dash",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 17554.0,
+   "employees": 85,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Initiative",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 17447.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Turner, Leffolk, Latent",
+   "floor": 13,
+   "suite": "1300",
+   "sqft": 18730.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cain",
+   "floor": 14,
+   "suite": "1400",
+   "sqft": 17301.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Spyglass Media Group",
+   "floor": 15,
+   "suite": "1500",
+   "sqft": 17368.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Golin",
+   "floor": 16,
+   "suite": "1600A",
+   "sqft": 8941.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Weber Shandwick",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": 8942.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Equity Advisor Group",
+   "floor": 17,
+   "suite": "1700",
+   "sqft": 2000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Greenberg Traurig LLP",
+   "floor": 19,
+   "suite": "1900",
+   "sqft": 17469.0,
+   "employees": 140,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "9oZmoKx1Dsv"
+ ]
+}

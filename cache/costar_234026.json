@@ -1,0 +1,31 @@
+{
+ "property_id": 234026,
+ "name": "Three WestLake Park",
+ "address": "550 Westlake Park Blvd, Houston, TX",
+ "lat": 29.7804231,
+ "lon": -95.6309685,
+ "type": "Office",
+ "stories": 19,
+ "gross_sqft": 419671.0,
+ "typical_floor_sqft": 21465.0,
+ "year_built": 1983,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 9
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  }
+ ],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "ng9SNPajJp7",
+  "pvNJn1BA1eo"
+ ]
+}

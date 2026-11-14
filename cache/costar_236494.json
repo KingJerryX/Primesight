@@ -1,0 +1,310 @@
+{
+ "property_id": 236494,
+ "name": "Galleria Park I",
+ "address": "5251 Westheimer Rd, Houston, TX",
+ "lat": 29.7397792,
+ "lon": -95.4674466,
+ "type": "Office",
+ "stories": 11,
+ "gross_sqft": 216841.0,
+ "typical_floor_sqft": 19463.0,
+ "year_built": 1976,
+ "construction": "Steel",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "P.F. Chang's",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 7750.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Creative Financial Staffing",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 2919.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate General of Vietnam",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 6148.0,
+   "employees": 73,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CBMM North America, Inc.",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 2711.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unigas",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 2167.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nini Collection",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 2486.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 2575.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Remax Commercial Real Estate Advisors",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 2660.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Uplift Hospice",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 5672.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 2214.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Miller Family Holdings, Co.",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 2147.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 4885.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bayou Midstream",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 5918.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DryDel Shipping",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 2650.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beacon Hill Staffing Group",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 2783.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GEOEX MCG LLC",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 1900.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Max Midstream Texas",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 7146.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "X-Factor Med Spa",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 2496.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arthur Lawrence",
+   "floor": 7,
+   "suite": "730",
+   "sqft": 3095.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AMCO",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 3445.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Model Mortgage",
+   "floor": 8,
+   "suite": "830",
+   "sqft": 2235.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "North American Interpipe",
+   "floor": 8,
+   "suite": "810",
+   "sqft": 4235.0,
+   "employees": 27,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 3411.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Impex Capital Group",
+   "floor": 9,
+   "suite": "925",
+   "sqft": 3196.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Infodat",
+   "floor": 9,
+   "suite": "940",
+   "sqft": 4142.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Global Impex Group",
+   "floor": 9,
+   "suite": "910",
+   "sqft": 3546.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Just Energy",
+   "floor": 10,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 126,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Just Energy",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 18000.0,
+   "employees": 126,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Just Energy",
+   "floor": 10,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 126,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Just Energy",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 12285.0,
+   "employees": 126,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Just Energy",
+   "floor": 11,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 126,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

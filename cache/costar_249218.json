@@ -1,0 +1,275 @@
+{
+ "property_id": 249218,
+ "name": "Corporation Building",
+ "address": "724 Spring St, Los Angeles, CA",
+ "lat": 34.0438615,
+ "lon": -118.252585,
+ "type": "Office",
+ "stories": 14,
+ "gross_sqft": 70008.0,
+ "typical_floor_sqft": 5001.0,
+ "year_built": 1916,
+ "construction": "Steel",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Civilization Coffee + Kitchen",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "Food Hall Bar/Restrn",
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "B Studios",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "C K Architecture",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hush, Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Bar Method",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Omgivning",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Burgershop",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nannopuppet",
+   "floor": 1,
+   "suite": "0",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "King & Siegel LLP",
+   "floor": 2,
+   "suite": "201",
+   "sqft": 860.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jaxx",
+   "floor": 2,
+   "suite": "203",
+   "sqft": 860.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Fogle Law Firm LLC",
+   "floor": 3,
+   "suite": "301, 302",
+   "sqft": 3000.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Y&M Architects",
+   "floor": 3,
+   "suite": "300",
+   "sqft": null,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "My Project Couture",
+   "floor": 4,
+   "suite": "404",
+   "sqft": 1739.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aha Tattooing Studio",
+   "floor": 4,
+   "suite": "401, 402",
+   "sqft": 1720.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Border Inc",
+   "floor": 7,
+   "suite": "701",
+   "sqft": 1207.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LA Weekly",
+   "floor": 7,
+   "suite": "703",
+   "sqft": 2505.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "701",
+   "sqft": 1107.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "702",
+   "sqft": 925.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shomof Hospitality Llc",
+   "floor": 8,
+   "suite": "801",
+   "sqft": 2269.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Citify Management Notary",
+   "floor": 8,
+   "suite": "802",
+   "sqft": 2268.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DWC Dordi Williams Cohen LLP Law",
+   "floor": 9,
+   "suite": "901",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hanson LA",
+   "floor": 10,
+   "suite": "1002",
+   "sqft": 4300.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pride AD Purpose Studio",
+   "floor": 11,
+   "suite": "1101",
+   "sqft": 870.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mer Ubu",
+   "floor": 12,
+   "suite": "1201, 1202",
+   "sqft": 2505.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fluidity",
+   "floor": 14,
+   "suite": "1401, 1403",
+   "sqft": 1250.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DA LLC",
+   "floor": 14,
+   "suite": "1402",
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "Bt2c7mbCmcX",
+  "Dmnn1FexeJp"
+ ]
+}

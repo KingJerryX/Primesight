@@ -1,0 +1,300 @@
+{
+ "property_id": 249530,
+ "name": "The Launch at Airport Center",
+ "address": "5901 Century Blvd, Los Angeles, CA",
+ "lat": 33.9461041,
+ "lon": -118.386624,
+ "type": "Office",
+ "stories": 15,
+ "gross_sqft": 291817.0,
+ "typical_floor_sqft": 20844.0,
+ "year_built": 1968,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 5
+  },
+  {
+   "type": "Freight",
+   "count": 2
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Gateway LA",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 1709.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trimana",
+   "floor": 1,
+   "suite": "104",
+   "sqft": 1541.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Concentra - Century Airport",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 7087.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LAX Integrated Express Solutions",
+   "floor": 2,
+   "suite": null,
+   "sqft": 20844.0,
+   "employees": 357,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ABM Industries Incorporated",
+   "floor": 4,
+   "suite": "418",
+   "sqft": 2250.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Connections for Children",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 9077.0,
+   "employees": 61,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "405",
+   "sqft": 1798.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eurobound",
+   "floor": 5,
+   "suite": "508",
+   "sqft": 1245.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hong Kong Tourism Board",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 5211.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Austin Commercial",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 3765.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Career Strategies",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 5211.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LAWA",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 6657.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Barrister Executive Suites, Inc.",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 4676.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dioszeghy Henry Deenihan Ijei, LLC",
+   "floor": 8,
+   "suite": "828",
+   "sqft": 4135.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "822",
+   "sqft": 1828.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "830",
+   "sqft": 3232.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dar El Salam Islamic World Travel",
+   "floor": 10,
+   "suite": "1002",
+   "sqft": 5211.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reynolds, Smith, and Hills",
+   "floor": 10,
+   "suite": "1030",
+   "sqft": 5149.0,
+   "employees": 34,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mason & Gatto, Inc.",
+   "floor": 10,
+   "suite": "1001",
+   "sqft": 4169.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1004",
+   "sqft": 829.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Curtis-Rosenthal, Inc.",
+   "floor": 12,
+   "suite": "1230A",
+   "sqft": 4169.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Carlson & Messer LLP",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 9321.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Landmark Equity Properties",
+   "floor": 12,
+   "suite": "1230B",
+   "sqft": 4747.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jet Midwest",
+   "floor": 14,
+   "suite": "1410",
+   "sqft": 6571.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Geosyntec Consultants",
+   "floor": 14,
+   "suite": "1450",
+   "sqft": 7087.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ERMC Aviation Services",
+   "floor": 15,
+   "suite": "1530",
+   "sqft": 10488.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EFC Wealth Management Firm",
+   "floor": 15,
+   "suite": "1516",
+   "sqft": 3198.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "SurfaceTandem",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": 700
+  },
+  {
+   "type": "CoveredTandem",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "5c26cRrmjSJ",
+  "G8aTQZadJS4",
+  "WhqAmKQ3YYP",
+  "dBNiovjUmUx",
+  "xC4K5CrMK92"
+ ]
+}

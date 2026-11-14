@@ -1,0 +1,104 @@
+{
+ "property_id": 239313,
+ "name": null,
+ "address": "130 Mitchell Rd, Houston, TX",
+ "lat": 29.8825811,
+ "lon": -95.3889142,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 85000.0,
+ "typical_floor_sqft": 85000.0,
+ "year_built": 1971,
+ "construction": "Metal",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "OEM Autospace",
+   "floor": 1,
+   "suite": "9A",
+   "sqft": 4250.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Xotic",
+   "floor": 1,
+   "suite": "10",
+   "sqft": 5100.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Apex Fitness",
+   "floor": 1,
+   "suite": null,
+   "sqft": 8500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "130-1-2",
+   "sqft": 1460.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "130-1-4",
+   "sqft": 1460.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "130-1-8",
+   "sqft": 1450.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "130-2-2",
+   "sqft": 1458.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "130-2-5",
+   "sqft": 1458.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "130-2-8",
+   "sqft": 1458.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "959DKYA735C",
+  "PDuyh2cF6zT"
+ ]
+}

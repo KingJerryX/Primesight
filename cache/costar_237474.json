@@ -1,0 +1,31 @@
+{
+ "property_id": 237474,
+ "name": null,
+ "address": "12050 Proctor St, Houston, TX",
+ "lat": 29.9104656,
+ "lon": -95.4663774,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 33611.0,
+ "typical_floor_sqft": 33611.0,
+ "year_built": 1978,
+ "construction": "Metal",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Vita International Inc.",
+   "floor": 1,
+   "suite": null,
+   "sqft": 33611.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "BNGoeNCMHtk"
+ ]
+}

@@ -1,0 +1,5 @@
+{"t": 0.0, "step": "call_received", "detail": "Smoke reported on 37th floor, 1000 Louisiana St Houston"}
+{"t": 0.06, "step": "address_lookup", "detail": "1000 Louisiana St, Houston -> 233899"}
+{"t": 0.06, "step": "mode", "detail": "no ANTHROPIC_API_KEY: sending the draft briefing"}
+{"t": 0.06, "step": "gather_building", "detail": "floor 37, fire"}
+{"t": 8.47, "step": "done", "detail": "12 lines, 2 images"}

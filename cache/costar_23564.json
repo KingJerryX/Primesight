@@ -1,0 +1,297 @@
+{
+ "property_id": 23564,
+ "name": "Piney Point Offices I",
+ "address": "2450 Fondren Rd, Houston, TX",
+ "lat": 29.740858,
+ "lon": -95.5219659,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 76030.0,
+ "typical_floor_sqft": 29697.0,
+ "year_built": 1981,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Jebco",
+   "floor": 1,
+   "suite": "112",
+   "sqft": 1800.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zindlers Service Co Inc",
+   "floor": 1,
+   "suite": "113",
+   "sqft": 2073.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fred R Bakht MD",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 2000.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Petro-Guard Company, Inc.",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 2073.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Noex Management",
+   "floor": 1,
+   "suite": "105B",
+   "sqft": 3000.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SCENT Houston",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 2213.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JP Society Enterprises",
+   "floor": 1,
+   "suite": "111",
+   "sqft": 1204.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 2533.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pulse Chiropractic Clinic",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2200.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Land Tejas Companies",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 8010.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Piney Point Women's Center",
+   "floor": 2,
+   "suite": "275",
+   "sqft": 1296.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CBA Land Capital, LP",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 1296.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Atlas Glinn, LLC",
+   "floor": 2,
+   "suite": "255",
+   "sqft": 784.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Dentistry at Memorial",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 1748.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PCR Tires",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 493.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kirkwood Properties, Inc",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 2855.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diagnostic Enterprises",
+   "floor": 2,
+   "suite": "265",
+   "sqft": 2591.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Starwood Land",
+   "floor": 2,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Transstar Commercial Management",
+   "floor": 3,
+   "suite": "307",
+   "sqft": 400.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Smooke Dental",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 1366.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Piney Point Oral & Maxillofacial Surgery",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 1200.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stuart J Nathan & Associates",
+   "floor": 3,
+   "suite": "312",
+   "sqft": 3887.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Children's Pediatrics",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 7500.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Piney Point Dermatology",
+   "floor": 3,
+   "suite": "311",
+   "sqft": 1296.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alan Robin Law",
+   "floor": 3,
+   "suite": "309",
+   "sqft": 800.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Energy Training Resources LLC",
+   "floor": 3,
+   "suite": "303",
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lively Exploration Co",
+   "floor": 3,
+   "suite": "308",
+   "sqft": 1000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Law Giant",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 642.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stuart J Nathan & Associates",
+   "floor": 3,
+   "suite": "306",
+   "sqft": 3109.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "308",
+   "sqft": 1059.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "fEqu4q25qYs"
+ ]
+}

@@ -1,0 +1,991 @@
+{
+ "property_id": 239600,
+ "name": "Wells Fargo Bank Building",
+ "address": "12941 North Fwy, Houston, TX",
+ "lat": 29.9544993,
+ "lon": -95.4191671,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 192512.0,
+ "typical_floor_sqft": 21738.0,
+ "year_built": 1982,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Win Win Business & Tax Solutions, LLP",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 1204.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wells Fargo",
+   "floor": 1,
+   "suite": "122",
+   "sqft": 2500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Guru Services",
+   "floor": 1,
+   "suite": "106",
+   "sqft": 600.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SuretyDNA Testing Sevices",
+   "floor": 1,
+   "suite": "106-3",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Inspire Consulting",
+   "floor": 1,
+   "suite": "104-2",
+   "sqft": 600.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KYOK",
+   "floor": 1,
+   "suite": "117",
+   "sqft": 400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Crown Of  Wealth",
+   "floor": 1,
+   "suite": "106-2",
+   "sqft": 400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "A Creative Mood",
+   "floor": 1,
+   "suite": "104-1",
+   "sqft": 400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Leavern Tax",
+   "floor": 1,
+   "suite": "106-1",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "D&M Beauty",
+   "floor": 1,
+   "suite": "106-6",
+   "sqft": 800.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mr Jepelectric",
+   "floor": 1,
+   "suite": "104-3",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Carpet",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Injury Center of Houston",
+   "floor": 2,
+   "suite": "216",
+   "sqft": 1000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Verdi Rountree Lethermon",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advance Tax Relief",
+   "floor": 2,
+   "suite": "226A",
+   "sqft": 2215.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TXIL Firearms",
+   "floor": 2,
+   "suite": "221",
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zoa Multiservices",
+   "floor": 2,
+   "suite": "206-1",
+   "sqft": 600.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Exsyst Inc",
+   "floor": 2,
+   "suite": "222",
+   "sqft": 200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "All Points Enviornmental",
+   "floor": 2,
+   "suite": "206-2",
+   "sqft": 400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Liah Wellness Center",
+   "floor": 2,
+   "suite": "224",
+   "sqft": 200.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Monica Garza Studio",
+   "floor": 2,
+   "suite": "226B",
+   "sqft": 400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JH",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 2000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AMIYAH Chanel",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 4100.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "US Internal Revenue Service",
+   "floor": 3,
+   "suite": "316",
+   "sqft": 21570.0,
+   "employees": 45,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "OfficeRing",
+   "floor": 4,
+   "suite": "400A",
+   "sqft": 1079.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Greenspoint Pharmacy & Healthcare Services Llc",
+   "floor": 4,
+   "suite": "418",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Goobal Partners Law Firm",
+   "floor": 4,
+   "suite": "402",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aesthetics Professional Skin Care",
+   "floor": 4,
+   "suite": "408",
+   "sqft": 160.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Galpa Construction",
+   "floor": 4,
+   "suite": "433",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JE Tax Insurance",
+   "floor": 4,
+   "suite": "400G",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Candy Cain Customs",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1294.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Casa De Gracia",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kalore Beauty",
+   "floor": 4,
+   "suite": "400E",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Phone Pro",
+   "floor": 4,
+   "suite": "400B",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Bulls Firm",
+   "floor": 4,
+   "suite": "429",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Armando Valdez Insurance",
+   "floor": 4,
+   "suite": "400F",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SMG Barber Studio",
+   "floor": 4,
+   "suite": "404",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Takeria Bill MBA",
+   "floor": 4,
+   "suite": "406",
+   "sqft": 1510.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alluring Creations",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 125.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Pinky Addext And Ty",
+   "floor": 5,
+   "suite": "560-7",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Natural White Smile",
+   "floor": 5,
+   "suite": "560-1",
+   "sqft": 164.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TBlake3 The Barber",
+   "floor": 5,
+   "suite": "515-3",
+   "sqft": 123.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beautifully Rooted In Love",
+   "floor": 5,
+   "suite": "560-3",
+   "sqft": 161.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lenny Cuts",
+   "floor": 5,
+   "suite": "560-6",
+   "sqft": 156.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lavish X Leanne",
+   "floor": 5,
+   "suite": "515-11",
+   "sqft": 100.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lab Test And More",
+   "floor": 5,
+   "suite": "515-1",
+   "sqft": 154.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hystik Adhesive Tape",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 863.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dolled Up Texas",
+   "floor": 5,
+   "suite": "560-20",
+   "sqft": 159.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Exclusive Hair",
+   "floor": 5,
+   "suite": "515-5",
+   "sqft": 111.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tax And Services",
+   "floor": 5,
+   "suite": "515-7",
+   "sqft": 81.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Versy Media",
+   "floor": 5,
+   "suite": "515-4",
+   "sqft": 125.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Riveras Photography LLC",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Carmichael Kingdom Inc",
+   "floor": 5,
+   "suite": "515-111",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Her Intuitve Wellness",
+   "floor": 5,
+   "suite": "515-6",
+   "sqft": 90.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fresh Face Oasis",
+   "floor": 5,
+   "suite": "515-9",
+   "sqft": 128.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cynthia Martin",
+   "floor": 5,
+   "suite": null,
+   "sqft": 162.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royal Tattoo Studio",
+   "floor": 5,
+   "suite": null,
+   "sqft": 125.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dr Genial Rodriguez",
+   "floor": 5,
+   "suite": null,
+   "sqft": 166.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Africab Branding House",
+   "floor": 5,
+   "suite": "503",
+   "sqft": 927.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lapse Transport Action LLC",
+   "floor": 5,
+   "suite": "560-5",
+   "sqft": 158.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Touched By Simone",
+   "floor": 6,
+   "suite": "635-15",
+   "sqft": 154.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lashes By Michelle And Company",
+   "floor": 6,
+   "suite": "605G",
+   "sqft": 647.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Keeping It Kute",
+   "floor": 6,
+   "suite": "635-3",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mekias Hair Illusions",
+   "floor": 6,
+   "suite": "635-13",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "2 Demichios",
+   "floor": 6,
+   "suite": "635-8",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Harmony Worship Academy",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 908.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Captice Bar",
+   "floor": 6,
+   "suite": "635-2",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fabiola Alvarez",
+   "floor": 6,
+   "suite": "609",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ink Addiction",
+   "floor": 6,
+   "suite": "635-1",
+   "sqft": 128.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eleven 30 Ink",
+   "floor": 6,
+   "suite": "605B",
+   "sqft": 647.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Belle Beauty",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Storage GK Investments",
+   "floor": 6,
+   "suite": "635 -10",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Crystal Beauty Bar",
+   "floor": 6,
+   "suite": "600A",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Propel Realty",
+   "floor": 6,
+   "suite": "608",
+   "sqft": 2325.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beauty 2 Real",
+   "floor": 6,
+   "suite": "605",
+   "sqft": 4307.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "My Cleaning Services",
+   "floor": 6,
+   "suite": "600JJ",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Luudt Scents And More",
+   "floor": 6,
+   "suite": "605A",
+   "sqft": 647.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wolfpack Dealer Solutions",
+   "floor": 6,
+   "suite": "600E",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rotal Love Holistic Healing",
+   "floor": 6,
+   "suite": "600F",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Noches Poder Y Milagros",
+   "floor": 6,
+   "suite": "611",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ikara Hair Co",
+   "floor": 6,
+   "suite": "635-9",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Perfox LLC",
+   "floor": 6,
+   "suite": "600C",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royal Gold Auto Group",
+   "floor": 6,
+   "suite": null,
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JML Tax Service",
+   "floor": 6,
+   "suite": "600J",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pilato Trucking",
+   "floor": 6,
+   "suite": "605H",
+   "sqft": 431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bres Beauty Vanite",
+   "floor": 6,
+   "suite": "635 - 16",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Smoke Religion Tattoos",
+   "floor": 6,
+   "suite": "635-4",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vies Photography LLC",
+   "floor": 6,
+   "suite": "635-12",
+   "sqft": 216.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Linda Trevino Photography",
+   "floor": 6,
+   "suite": "635-11",
+   "sqft": 269.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "State Farm",
+   "floor": 6,
+   "suite": "608",
+   "sqft": null,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Roofing Linares LLC",
+   "floor": 7,
+   "suite": null,
+   "sqft": 2890.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sevenity And Seven House",
+   "floor": 8,
+   "suite": "800-8",
+   "sqft": 452.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dental Care And Implants",
+   "floor": 8,
+   "suite": "800D",
+   "sqft": 452.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TRP Styles",
+   "floor": 8,
+   "suite": "800-7",
+   "sqft": 452.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cordlinx Transportation Services",
+   "floor": 8,
+   "suite": "800E",
+   "sqft": 452.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GMB Productions",
+   "floor": 8,
+   "suite": "800-6",
+   "sqft": 1355.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TF Comsultants",
+   "floor": 8,
+   "suite": "800-3",
+   "sqft": 1129.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "1 Stop Income Tax And Insurance",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 5644.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Shop",
+   "floor": 8,
+   "suite": "800-10",
+   "sqft": 452.0,
+   "employees": null,
+   "industry": "RetailersOrWholesalers",
+   "about": null
+  },
+  {
+   "name": "Heating System And Real Estate",
+   "floor": 8,
+   "suite": "800-1",
+   "sqft": 452.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Buckz Recycling",
+   "floor": 8,
+   "suite": "800-9",
+   "sqft": 452.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "OWT KUTZ LLC",
+   "floor": 8,
+   "suite": "800K",
+   "sqft": 452.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Goys Multiservices",
+   "floor": 8,
+   "suite": "800-5",
+   "sqft": 452.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Honest Honeyshots",
+   "floor": 8,
+   "suite": "800R",
+   "sqft": 452.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "La Esquina Media",
+   "floor": 8,
+   "suite": "800F",
+   "sqft": 452.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AC Media TV",
+   "floor": 8,
+   "suite": "800G",
+   "sqft": 452.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 45
+  },
+  {
+   "type": "Covered",
+   "spaces": 571
+  }
+ ],
+ "matterport_models": [
+  "KCw8EUDnwMe"
+ ]
+}

@@ -1,0 +1,655 @@
+{
+ "property_id": 239774,
+ "name": "Westchase Square",
+ "address": "2825 Wilcrest Dr, Houston, TX",
+ "lat": 29.7337741,
+ "lon": -95.5708694,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 152250.0,
+ "typical_floor_sqft": 25375.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Esfr",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "CivilCorp",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 1500.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nexlar, LLC",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 1778.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "New Essence Healthcare",
+   "floor": 1,
+   "suite": "162",
+   "sqft": 1200.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Thy Nguyen CPA",
+   "floor": 1,
+   "suite": "122",
+   "sqft": 561.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "David Nguyen Law Group",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 651.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Absolute Mortgage and Lending",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Adibe Law Group",
+   "floor": 1,
+   "suite": "177",
+   "sqft": 600.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Avari Financial Services Center",
+   "floor": 1,
+   "suite": "138",
+   "sqft": 2030.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Avari Financial Services Center",
+   "floor": 1,
+   "suite": "111",
+   "sqft": 2538.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fidelity National Title",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2902.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Farmers Insurance",
+   "floor": 2,
+   "suite": "267",
+   "sqft": 600.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Commonhouse Co",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 1631.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TDS Equipment and Service, Inc.",
+   "floor": 2,
+   "suite": "216",
+   "sqft": 1359.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Go Real Estate LLC",
+   "floor": 2,
+   "suite": "281",
+   "sqft": 1000.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Partner Resource Network",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 1050.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Polaris Ultrasound",
+   "floor": 2,
+   "suite": "257",
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "USPE",
+   "floor": 2,
+   "suite": null,
+   "sqft": 900.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HTown Engineers LLC",
+   "floor": 2,
+   "suite": "218",
+   "sqft": 1436.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "West Plaza Management",
+   "floor": 2,
+   "suite": null,
+   "sqft": 3500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "King Marketing Company",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2457.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fortune Healthcare Inc.",
+   "floor": 3,
+   "suite": "312",
+   "sqft": 1300.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Visiting Angels",
+   "floor": 3,
+   "suite": "315",
+   "sqft": 800.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shah Smith & Associates",
+   "floor": 3,
+   "suite": "375",
+   "sqft": 8881.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dorothy Tiedt",
+   "floor": 3,
+   "suite": "328",
+   "sqft": 761.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Raj R. Brahmbhatt, CPA",
+   "floor": 3,
+   "suite": "374",
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "QUS Solutions",
+   "floor": 3,
+   "suite": "308",
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Champions NextGen Real Estate",
+   "floor": 3,
+   "suite": "361",
+   "sqft": 738.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ecogreen Oleochemicals",
+   "floor": 4,
+   "suite": "418",
+   "sqft": 1990.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tiltpixel",
+   "floor": 4,
+   "suite": "499",
+   "sqft": 2100.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "G&G Realty Texas",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 800.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Farmers Insurance",
+   "floor": 4,
+   "suite": "461",
+   "sqft": 600.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Global Merchant Processing Inc.",
+   "floor": 4,
+   "suite": "489",
+   "sqft": 714.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Senior Memorial Plan",
+   "floor": 4,
+   "suite": "407",
+   "sqft": 1588.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "486",
+   "sqft": 1019.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nina Resources LP",
+   "floor": 4,
+   "suite": "460",
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Victoria Heavenly Spa",
+   "floor": 4,
+   "suite": "411",
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BW Industrial Construction",
+   "floor": 4,
+   "suite": "421",
+   "sqft": 6671.0,
+   "employees": 44,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allied Procurement Int., LLC.",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 1269.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Space Electronics",
+   "floor": 5,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Premier Realty & Associates",
+   "floor": 5,
+   "suite": "536",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Neutra Life Sciences",
+   "floor": 5,
+   "suite": "560",
+   "sqft": 2814.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Monumental Engineering Services",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 685.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vina Healthcare",
+   "floor": 5,
+   "suite": "508",
+   "sqft": 702.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pinnacle Mortgage Company",
+   "floor": 5,
+   "suite": "570",
+   "sqft": 750.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daxwell",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 2030.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diane Gremmel",
+   "floor": 5,
+   "suite": "572",
+   "sqft": 1000.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GlowingSeas",
+   "floor": 5,
+   "suite": "510",
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marvela Hair Extensions & Color Salon",
+   "floor": 5,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "City Patrol Services",
+   "floor": 5,
+   "suite": "530",
+   "sqft": 2030.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Novara Construction",
+   "floor": 5,
+   "suite": "555",
+   "sqft": 761.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mirage Healthcare",
+   "floor": 5,
+   "suite": "518",
+   "sqft": 2030.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rahgozar Law Firm, PLLC",
+   "floor": 5,
+   "suite": null,
+   "sqft": 640.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Delta Financial",
+   "floor": 5,
+   "suite": "553",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": null,
+   "sqft": 270.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Sunita Kapoor, PC",
+   "floor": 6,
+   "suite": null,
+   "sqft": 1200.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DESSS",
+   "floor": 6,
+   "suite": "608",
+   "sqft": 3778.0,
+   "employees": 32,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Star Group Wealth Management",
+   "floor": 6,
+   "suite": "654",
+   "sqft": 1506.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Doan Financial Group",
+   "floor": 6,
+   "suite": "678",
+   "sqft": 1800.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TN Associates, Inc.",
+   "floor": 6,
+   "suite": "616",
+   "sqft": 2306.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jeremy S Sweet LLC.",
+   "floor": 6,
+   "suite": "672",
+   "sqft": 1269.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Axciton Systems, Inc.",
+   "floor": 6,
+   "suite": "618",
+   "sqft": 3299.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tax Recourse, LLC",
+   "floor": 6,
+   "suite": "669",
+   "sqft": 3000.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Glo Salon & Spa",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 761.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": null,
+   "sqft": 648.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Muscle Therapeutic Center",
+   "floor": 6,
+   "suite": "690",
+   "sqft": 965.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Christian Strong Law",
+   "floor": 6,
+   "suite": null,
+   "sqft": 1050.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mile Technologies, Inc.",
+   "floor": 6,
+   "suite": null,
+   "sqft": 992.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "West Plaza Management",
+   "phone": "5553467501"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "SgKbPPm1YYW",
+  "dqAzgcvs42P"
+ ]
+}

@@ -1,0 +1,290 @@
+{
+ "text": "EV fire on parking level 2, 1225 Loop Fwy, Houston. Time of call: 03:30.",
+ "out": {
+  "briefing": "PRIMESIGHT | EV / PARKING GARAGE FIRE | PARKING LEVEL 2\n1225 Loop Fwy, Houston, TX\nABOVE FIRE: whole building, ~57 on floor 1 + ~370 on floors 2-11 by daytime headcount; call at 03:30, likely far fewer on site\nON FLOOR 1: Johnson O'Connor Research Foundation (ste 100); Salvato Interests (ste 115); High Tower Cafe & Deli (ste 118); Heights Chiropractic Center (ste 120) +1 more\nFLAGGED: possible IT/UPS batteries at Rack Route Technology fl 3; possible kitchen gas at High Tower Cafe fl 1 (from name only)\nPARKING: 360 covered + 120 surface spaces; 1 parking elevator (also 4 passenger, 1 freight)\nWATER/WIND: 17 hydrants within 300 m, nearest 68 m N, 137 m W | wind from ENE 7.8 mph, gusts 23.7, smoke drifts WSW | 53F\nBUILDING: 11 stories, built 1984, steel frame, sprinklers yes (type not known)\nROOF: membrane | OPEN LOT for staging ~78 m S (aerial search, verify)\nINSIDE: no scan of garage or floor 1; nearest is floor 7 (same core, layout may differ); exit signs seen from 9 of 11 scan points, not stair locations\nNOT KNOWN: stair and standpipe locations, garage levels and layout, clearance height, EV chargers, neighbouring buildings, building contacts\nSCAN: https://my.matterport.com/show/?m=PfDGxZeDnkz",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\236914_PfDGxZeDnkz_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\236914_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/236914_PfDGxZeDnkz_plan_marked.jpg",
+   "/img/236914_aerial.jpg"
+  ],
+  "property_id": 236914,
+  "texts": [],
+  "tenant_flags": [
+   {
+    "tenant": "Rack Route Technology, LLC",
+    "floor": 3,
+    "risk": "Possible server or IT equipment with battery backup (UPS) and high electrical load",
+    "why": "No description is available. The name only suggests rack-mounted IT gear. If it's there, battery or UPS systems could add hazards if fire or smoke spreads up from the garage, and crews may need to cut power. Confirm with building management.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "High Tower Cafe & Deli",
+    "floor": 1,
+    "risk": "Likely commercial kitchen with possible gas service and cooking oils",
+    "why": "No description is available. The name suggests a food service setup on the floor closest to the garage, which may mean gas lines or appliances to isolate. It is probably closed at 03:30.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "fire",
+   "floor": 1,
+   "building": {
+    "name": null,
+    "address": "1225 Loop Fwy, Houston, TX",
+    "stories": 11,
+    "year_built": 1984,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 57,
+     "tenants": [
+      "Coldwell Banker Realty - Heights",
+      "Heights Chiropractic Center",
+      "High Tower Cafe & Deli",
+      "Johnson O'Connor Research Foundation",
+      "Salvato Interests"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 104,
+     "tenants": [
+      "EnerGeo Alliance",
+      "Greg Buchanan, RFC",
+      "Miller & Associates",
+      "Stellar International Commercial Real Estate",
+      "Texas A & M University",
+      "The Brokerage Inc."
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 20,
+     "tenants": [
+      "Court Reporters Clearinghouse",
+      "Denuna Law Firm",
+      "Grand Oak Capital Managment",
+      "HarmonyCares",
+      "Rack Route Technology, LLC",
+      "The Vanguard Agency",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 44,
+     "tenants": [
+      "Italy-American Chamber of Commerce of Texas",
+      "KSM",
+      "The McKiernan Group",
+      "Title Data Incorporated",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 5,
+     "people": 38,
+     "tenants": [
+      "Prime Tine Executives",
+      "Smith & Hassler",
+      "Special Kids Care",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 23,
+     "tenants": [
+      "Monshaugen & Van Huff, P.C.",
+      "Ranger Licensing",
+      "Ranger Steel",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 7,
+     "people": 21,
+     "tenants": [
+      "Bunker Steel Corporation",
+      "Condon & Company, P.C.",
+      "Luxury Homes Realty",
+      "Old Republic Title Insurance Company",
+      "Triton International Limited"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 11,
+      "exit sign": 9,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 0
+     }
+    },
+    {
+     "floor": 8,
+     "people": 50,
+     "tenants": [
+      "H2B, Inc.",
+      "Memphis Electronic",
+      "Oaks Counseling Associates",
+      "Van Leeuwen Pipe and Tube Group",
+      "Wealth Benefit Advisors"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 28,
+     "tenants": [
+      "PractiSage Therapist Collective",
+      "The Bayley Law Firm, PLLC",
+      "Title Data Incorporated",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 20,
+     "tenants": [
+      "Chirosports Performance & Rehab",
+      "Conceal Touch",
+      "Daiichi Jitsugyo America Inc",
+      "IMS Engineers",
+      "Patrick M. Flynn",
+      "Spearpoint Resources",
+      "Top Notch Garage Doors, LLC",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 21,
+     "tenants": [
+      "American Commercial Barge Line",
+      "C.R. Wannamaker Law PLLC",
+      "EUTEX International, Inc.",
+      "Gregory Law, PLLC",
+      "Ponderosa Oil & Gas, LLC",
+      "Tange, Mann & Garza"
+     ],
+     "scanned": false,
+     "seen": null
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 68,
+     "dir": "N",
+     "lat": 29.812429724684577,
+     "lon": -95.42095886874006
+    },
+    {
+     "m": 137,
+     "dir": "W",
+     "lat": 29.81174194859871,
+     "lon": -95.42242063922787
+    },
+    {
+     "m": 142,
+     "dir": "W",
+     "lat": 29.81227299068719,
+     "lon": -95.42238117760836
+    }
+   ],
+   "staging": [
+    {
+     "m": 78,
+     "dir": "S",
+     "lat": 29.811157100000003,
+     "lon": -95.42072295999998,
+     "score": 0.213
+    },
+    {
+     "m": 176,
+     "dir": "SE",
+     "lat": 29.811157099999996,
+     "lon": -95.41934967,
+     "score": 0.206
+    },
+    {
+     "m": 129,
+     "dir": "SW",
+     "lat": 29.811157100000003,
+     "lon": -95.422096255,
+     "score": 0.2
+    }
+   ],
+   "scan": {
+    "floor": 7,
+    "exact": false,
+    "link": "https://my.matterport.com/show/?m=PfDGxZeDnkz"
+   },
+   "vision": {
+    "scan_points": 11,
+    "scan_points_with": {
+     "exit sign": 9,
+     "stairs": 0,
+     "fire extinguisher": 0,
+     "fire alarm pull station": 0
+    },
+    "image_urls": [
+     "/img/vision/PfDGxZeDnkz/001_0.jpg",
+     "/img/vision/PfDGxZeDnkz/001_2.jpg",
+     "/img/vision/PfDGxZeDnkz/001_3.jpg",
+     "/img/vision/PfDGxZeDnkz/002_1.jpg",
+     "/img/vision/PfDGxZeDnkz/002_3.jpg",
+     "/img/vision/PfDGxZeDnkz/003_1.jpg",
+     "/img/vision/PfDGxZeDnkz/003_2.jpg",
+     "/img/vision/PfDGxZeDnkz/004_2.jpg",
+     "/img/vision/PfDGxZeDnkz/004_3.jpg",
+     "/img/vision/PfDGxZeDnkz/005_2.jpg",
+     "/img/vision/PfDGxZeDnkz/006_2.jpg",
+     "/img/vision/PfDGxZeDnkz/007_0.jpg"
+    ]
+   },
+   "walk": null,
+   "texts": [],
+   "tenant_flags": [
+    {
+     "tenant": "Rack Route Technology, LLC",
+     "floor": 3,
+     "risk": "Possible server or IT equipment with battery backup (UPS) and high electrical load",
+     "why": "No description is available. The name only suggests rack-mounted IT gear. If it's there, battery or UPS systems could add hazards if fire or smoke spreads up from the garage, and crews may need to cut power. Confirm with building management.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "High Tower Cafe & Deli",
+     "floor": 1,
+     "risk": "Likely commercial kitchen with possible gas service and cooking oils",
+     "why": "No description is available. The name suggests a food service setup on the floor closest to the garage, which may mean gas lines or appliances to isolate. It is probably closed at 03:30.",
+     "from_name_only": true
+    }
+   ],
+   "call": "EV fire on parking level 2, 1225 Loop Fwy, Houston. Time of call: 03:30."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"EV fire on parking level 2, 1225 Loop Fwy, Houston. Time of call: 03:30.\"}\n{\"t\": 0.06, \"step\": \"address_lookup\", \"detail\": \"1225 N Loop Fwy W, Houston -> 236914\"}\n{\"t\": 4.21, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"1225 Loop Fwy, Houston\\\"}\"}\n{\"t\": 4.21, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/fire/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 4.22, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 6.45, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 236914, \\\"floor\\\": 1, \\\"incident\\\": \\\"fire\\\", \\\"incident_type\\\": \\\"parking_garage_fire\\\"}\"}\n{\"t\": 6.45, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/236914.md\\\"}\"}\n{\"t\": 19.66, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: EV (electric vehicle) fire on parking level 2, 1225 Loop Fwy, Houston (property 236914), 11-story office, call at 03:30. Garage level counts \"}\n{\"t\": 19.66, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"outside-scout\\\", \\\"description\\\": \\\"Property id 236914 (1225 Loop Fwy, Houston). Incident: EV fire on parking level 2 (parking garage fire). Report live wind (from direction, mph, where\"}\n{\"t\": 21.41, \"step\": \"helper:outside_now\", \"detail\": \"{\\\"property_id\\\": 236914}\"}\n{\"t\": 38.15, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 236914, \\\"note\\\": \\\"03:30 call: EV fire on parking level 2 (briefed on floor 1 basis, whole building above). Still no building contacts on record, nobody notified. Wind from ENE 7.8 mph, \"}\n{\"t\": 53.44, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 53.44, \"step\": \"usage\", \"detail\": \"104850 in / 5201 out tokens, ~$0.52\"}\n{\"t\": 53.44, \"step\": \"done\", \"detail\": \"12 lines, 2 images\"}\n"
+}

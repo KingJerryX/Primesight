@@ -1,0 +1,193 @@
+{
+ "property_id": 255843,
+ "name": null,
+ "address": "530 8th St, Los Angeles, CA",
+ "lat": 34.039364,
+ "lon": -118.249988,
+ "type": "Flex",
+ "stories": 6,
+ "gross_sqft": 45720.0,
+ "typical_floor_sqft": 7000.0,
+ "year_built": 1947,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 1
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Lupite\u2019s Flowers",
+   "floor": 1,
+   "suite": null,
+   "sqft": 5250.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 6750.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CID",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1050.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "K2 Investment, Inc.",
+   "floor": 4,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Siamak Kalhor Consulting",
+   "floor": 4,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tricycle Design Studio LLC",
+   "floor": 4,
+   "suite": "402",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lura Eyewear LLC",
+   "floor": 4,
+   "suite": "401",
+   "sqft": 0.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Noir Network International LLC",
+   "floor": 4,
+   "suite": "403",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sla System Corp",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "403",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "RetailersOrWholesalers",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "402",
+   "sqft": 1250.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "401",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lab2learn Inc",
+   "floor": 4,
+   "suite": "402",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chain & Charm Jewelry",
+   "floor": 4,
+   "suite": null,
+   "sqft": 6000.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": null,
+   "sqft": 7000.0,
+   "employees": null,
+   "industry": "ArtsEntertainmentAndRecreation",
+   "about": null
+  },
+  {
+   "name": "FD Photo Studio",
+   "floor": 5,
+   "suite": null,
+   "sqft": 7000.0,
+   "employees": 47,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "J & Lee's Fashion",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lush",
+   "floor": null,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "Cazdko3zF9J"
+ ]
+}

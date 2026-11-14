@@ -1,0 +1,22 @@
+{
+ "property_id": 239228,
+ "name": null,
+ "address": "11939 Aldine Westfield Rd, Houston, TX",
+ "lat": 29.886301,
+ "lon": -95.3561598,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 40600.0,
+ "typical_floor_sqft": 40600.0,
+ "year_built": 1977,
+ "construction": "Metal",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "8yhbSMyRiXQ",
+  "9yBnBD3ievg"
+ ]
+}

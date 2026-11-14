@@ -1,0 +1,371 @@
+{
+ "property_id": 239731,
+ "name": "Brookhollow Two",
+ "address": "9800 Northwest Fwy, Houston, TX",
+ "lat": 29.804894,
+ "lon": -95.451614,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 100763.0,
+ "typical_floor_sqft": 16794.0,
+ "year_built": 1972,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Enverus",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 1660.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Construction Managers of Southeast Texas",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 1713.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Galvestob Womens Business Center",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 830.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DealPro Properties",
+   "floor": 1,
+   "suite": "140B",
+   "sqft": 830.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Maestro Property Buyers",
+   "floor": 1,
+   "suite": "140A",
+   "sqft": 1047.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 999.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Solar One",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 1678.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 968.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Phoenix Security Academy",
+   "floor": 1,
+   "suite": null,
+   "sqft": 830.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Al-Anon",
+   "floor": 2,
+   "suite": "201",
+   "sqft": 337.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PSI Test Center",
+   "floor": 2,
+   "suite": "220, 200",
+   "sqft": 3212.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Microdose Infusion",
+   "floor": 2,
+   "suite": "215",
+   "sqft": 2757.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "IHS Group of Companies",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 830.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "202",
+   "sqft": 492.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cordell Law Firm, P.L.L.C.",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1400.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "211",
+   "sqft": 1009.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pipkins Investigations",
+   "floor": 3,
+   "suite": "306",
+   "sqft": 600.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Combined Law Enforcement",
+   "floor": 3,
+   "suite": "307",
+   "sqft": 450.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Paradigm eDiscovery Solutions",
+   "floor": 3,
+   "suite": "315",
+   "sqft": 3427.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Lash Labbb",
+   "floor": 3,
+   "suite": "304",
+   "sqft": 467.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Nielsen Law Firm",
+   "floor": 3,
+   "suite": null,
+   "sqft": 10341.0,
+   "employees": 85,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allied Universal Security",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "415",
+   "sqft": 7754.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Therapy for Anyone",
+   "floor": 5,
+   "suite": "504",
+   "sqft": 423.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Center for Assisted Learning",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 450.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MSB Surety Bonds",
+   "floor": 5,
+   "suite": "502",
+   "sqft": 1008.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GI Specialist of Houston",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 3170.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Melland Engineering & Consulting",
+   "floor": 5,
+   "suite": "512",
+   "sqft": 609.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Betsa",
+   "floor": 5,
+   "suite": "515",
+   "sqft": 830.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cultivate Hair Co",
+   "floor": 5,
+   "suite": "513",
+   "sqft": 830.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "506",
+   "sqft": 1090.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "507",
+   "sqft": 1112.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Iron Gate Build & Design",
+   "floor": 5,
+   "suite": "508",
+   "sqft": 450.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elevated Med Solutions",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 1196.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kinder Morgan, Inc",
+   "floor": 6,
+   "suite": "613",
+   "sqft": 252.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kinder Morgan, Inc",
+   "floor": 6,
+   "suite": "611",
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 140
+  },
+  {
+   "type": "Covered",
+   "spaces": 100
+  }
+ ],
+ "matterport_models": [
+  "8SQkDA3Fz5a",
+  "BfjYay5KMPo",
+  "YnZqEwSebtw"
+ ]
+}

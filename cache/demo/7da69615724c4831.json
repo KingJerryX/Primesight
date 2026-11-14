@@ -1,0 +1,444 @@
+{
+ "text": "Smoke reported on the 4th floor, 1801 Century Park, Los Angeles. Time of call: Saturday 15:00.",
+ "out": {
+  "briefing": "PRIMESIGHT | SMOKE INVESTIGATION | FLOOR 4 | Century Park East, 1801 Century Park E, Los Angeles, CA\nABOVE FIRE: ~668 people on floors 5-25 by daytime headcount. Call Sat 15:00, so likely far fewer on site. Fl 7 Mediapro Studios: possible production gear (from name only)\nON FLOOR: ~57 by daytime headcount (Sat, likely fewer). Ste 450 Bluefox Entertainment, ste 460 Bruin Biometrics (possible electronics/batteries, from name only), ste 470 Wiesman Pirian Law, ste 475 Structure Law Group, ste 490 Simple House Films + unknown tenant\nWATER/WIND: 12 hydrants within 300 m, nearest 33-37 m N, ~70 m W, 72 m SE. Wind from ENE 7 mph (gusts 9), smoke drifts WSW, 59F\nINSIDE: 3D scan of this floor, 41 scan points. EXIT SIGNS seen from 25 of 41 points (not stair locations). Walk from scan start: exit sign ~6 m, far end ~18 m. No pull station seen at any point\nBUILDING: 25 stories, built 1972, steel frame, sprinklers yes. 8 passenger elevators, 1 freight\nROOF: membrane, 8 vents, 2 skylights. OPEN LOT for staging ~110 m SE (aerial search, verify)\nFLOOR 1: Up Fitness, possible gym, may be busy Sat afternoon (from name only)\nPROPERTY MGR: Douglas Emmett - Century Park Plaza 5550856585 (texted to meet crew)\nNOT KNOWN: sprinkler type, stair locations, standpipe locations\nSCAN: https://my.matterport.com/show/?m=gacELDAHQEZ",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\247344_gacELDAHQEZ_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\247344_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/247344_gacELDAHQEZ_plan_marked.jpg",
+   "/img/247344_aerial.jpg"
+  ],
+  "property_id": 247344,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire Dept: smoke investigation on floor 4 at 1801 Century Park E. Crew responding. Please meet the crew on arrival and bring building keys and fire panel access."
+   }
+  ],
+  "tenant_flags": [
+   {
+    "tenant": "Unknown tenant (Suite 490)",
+    "floor": 4,
+    "risk": "Unknown occupancy on the fire floor",
+    "why": "The record has no name, industry or headcount. It is listed in Suite 490, the same suite as Simple House Films, so what is in that space and how many people are there is unknown. Check it during the search.",
+    "from_name_only": false
+   },
+   {
+    "tenant": "Bruin Biometrics LLC",
+    "floor": 4,
+    "risk": "Possible device lab, electronics or battery storage on the fire floor",
+    "why": "The name suggests a medical device or biometric technology company that might have prototype electronics or lithium batteries. The data has no description to confirm this, so treat it as unconfirmed. Listed with 8 employees.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Up Fitness",
+    "floor": 1,
+    "risk": "Possibly many people present on a Saturday afternoon",
+    "why": "The name suggests a gym, which may be busy at 15:00 on a Saturday while nearby offices are probably mostly empty. Its location on floor 1 matters for exits and evacuation. No headcount or description was provided.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Mediapro Studios US",
+    "floor": 7,
+    "risk": "Possible production equipment, three floors above the fire floor",
+    "why": "The name suggests a media or production studio that could have lighting, electrical gear or batteries, and smoke may rise toward floor 7. The data has no description to confirm this.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "fire",
+   "floor": 4,
+   "building": {
+    "name": "Century Park East",
+    "address": "1801 Century Park , Los Angeles, CA",
+    "stories": 25,
+    "year_built": 1972,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 88,
+     "tenants": [
+      "DKC Public Relations",
+      "Network Capital Funding",
+      "Preferred Bank",
+      "Up Fitness"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 7,
+     "tenants": [
+      "Keystone Document Discovery"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 12,
+     "tenants": [
+      "Slesigner Communications"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 57,
+     "tenants": [
+      "Bluefox Entertainment",
+      "Bruin Biometrics LLC",
+      "Simple House Films",
+      "Structure Law Group, LLP",
+      "The Law Offices of Wiesman Pirian",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 41,
+      "exit sign": 25,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 0
+     }
+    },
+    {
+     "floor": 5,
+     "people": 7,
+     "tenants": [
+      "Sarraf Law Firm"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 12,
+     "tenants": [
+      "American Israel Public Affairs Committee"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 7,
+     "people": 77,
+     "tenants": [
+      "1st Avenue Capital",
+      "Avantus",
+      "Mediapro Studios US",
+      "Unisource National Lender Services"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 71,
+     "tenants": [
+      "Blue Lake Capital",
+      "Melmed Law Group",
+      "Much Shelist",
+      "Nosrati Law"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 42,
+     "tenants": [
+      "Comstock Realty Partners",
+      "Gary Iskowitz & Company",
+      "Natixis Corporate and Investment Banking"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 9,
+     "tenants": [
+      "Kids Capital Management Inc.",
+      "Remy Investors & Consultants Inc.",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 12,
+     "people": 47,
+     "tenants": [
+      "Novian & Novian LLP",
+      "Robert M. Baria",
+      "United Express Messengers Inc"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 13,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 14,
+     "people": 59,
+     "tenants": [
+      "AWAIM",
+      "Aaxis Group",
+      "Sherwood Holdings Inc.",
+      "Square Nine Capital"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 15,
+     "people": 12,
+     "tenants": [
+      "American Wool Services Inc.",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 16,
+     "people": 40,
+     "tenants": [
+      "TroyGould Attorneys"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 17,
+     "people": 40,
+     "tenants": [
+      "TroyGould Attorneys"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 18,
+     "people": 35,
+     "tenants": [
+      "Briones PC",
+      "Kasowitz",
+      "Lagstein Law Firm",
+      "Stonebridge Capital Management",
+      "Trade Commission Of Spain In LA",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 19,
+     "people": 38,
+     "tenants": [
+      "Mercer Global Advisors, Inc.",
+      "Ripple Industries LLC",
+      "Ruttenberg IP Law, A Professional Corporation",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 20,
+     "people": 8,
+     "tenants": [
+      "Odeon Capital Group",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 21,
+     "people": 41,
+     "tenants": [
+      "Harold Davidson & Associates, Inc.",
+      "Mather | Anderson",
+      "Optimus Properties, LLC",
+      "Sinay Co LLC"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 22,
+     "people": 60,
+     "tenants": [
+      "CI America"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 23,
+     "people": 65,
+     "tenants": [
+      "Kilpatrick Townsend And Stockton"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 24,
+     "people": 2,
+     "tenants": [
+      "Barrister Executive Suites"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 25,
+     "people": 2,
+     "tenants": [
+      "Barrister Executive Suites"
+     ],
+     "scanned": false,
+     "seen": null
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 37,
+     "dir": "N",
+     "lat": 34.06259108002213,
+     "lon": -118.41585280087881
+    },
+    {
+     "m": 70,
+     "dir": "W",
+     "lat": 34.062120006887326,
+     "lon": -118.41656336398337
+    },
+    {
+     "m": 71,
+     "dir": "SE",
+     "lat": 34.06186105794164,
+     "lon": -118.41521924170746
+    },
+    {
+     "m": 144,
+     "dir": "SE",
+     "lat": 34.06158440628542,
+     "lon": -118.41448991372982
+    }
+   ],
+   "staging": [
+    {
+     "m": 110,
+     "dir": "SE",
+     "lat": 34.06147694,
+     "lon": -118.415107725,
+     "score": 0.219
+    },
+    {
+     "m": 422,
+     "dir": "S",
+     "lat": 34.058632679999995,
+     "lon": -118.417167665,
+     "score": 0.21
+    },
+    {
+     "m": 151,
+     "dir": "S",
+     "lat": 34.060908095,
+     "lon": -118.41579437499999,
+     "score": 0.201
+    }
+   ],
+   "scan": {
+    "floor": 4,
+    "exact": true,
+    "link": "https://my.matterport.com/show/?m=gacELDAHQEZ"
+   },
+   "vision": {
+    "scan_points": 41,
+    "scan_points_with": {
+     "exit sign": 25,
+     "stairs": 0,
+     "fire extinguisher": 0,
+     "fire alarm pull station": 0
+    },
+    "image_urls": [
+     "/img/vision/gacELDAHQEZ/000_2.jpg",
+     "/img/vision/gacELDAHQEZ/001_2.jpg",
+     "/img/vision/gacELDAHQEZ/002_1.jpg",
+     "/img/vision/gacELDAHQEZ/002_2.jpg",
+     "/img/vision/gacELDAHQEZ/003_1.jpg",
+     "/img/vision/gacELDAHQEZ/005_0.jpg",
+     "/img/vision/gacELDAHQEZ/005_2.jpg",
+     "/img/vision/gacELDAHQEZ/007_2.jpg",
+     "/img/vision/gacELDAHQEZ/008_2.jpg",
+     "/img/vision/gacELDAHQEZ/008_3.jpg",
+     "/img/vision/gacELDAHQEZ/009_2.jpg",
+     "/img/vision/gacELDAHQEZ/010_2.jpg"
+    ]
+   },
+   "walk": "walk from scan start: exit sign ~6 m (6 m), far end ~18 m",
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire Dept: smoke investigation on floor 4 at 1801 Century Park E. Crew responding. Please meet the crew on arrival and bring building keys and fire panel access."
+    }
+   ],
+   "tenant_flags": [
+    {
+     "tenant": "Unknown tenant (Suite 490)",
+     "floor": 4,
+     "risk": "Unknown occupancy on the fire floor",
+     "why": "The record has no name, industry or headcount. It is listed in Suite 490, the same suite as Simple House Films, so what is in that space and how many people are there is unknown. Check it during the search.",
+     "from_name_only": false
+    },
+    {
+     "tenant": "Bruin Biometrics LLC",
+     "floor": 4,
+     "risk": "Possible device lab, electronics or battery storage on the fire floor",
+     "why": "The name suggests a medical device or biometric technology company that might have prototype electronics or lithium batteries. The data has no description to confirm this, so treat it as unconfirmed. Listed with 8 employees.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Up Fitness",
+     "floor": 1,
+     "risk": "Possibly many people present on a Saturday afternoon",
+     "why": "The name suggests a gym, which may be busy at 15:00 on a Saturday while nearby offices are probably mostly empty. Its location on floor 1 matters for exits and evacuation. No headcount or description was provided.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Mediapro Studios US",
+     "floor": 7,
+     "risk": "Possible production equipment, three floors above the fire floor",
+     "why": "The name suggests a media or production studio that could have lighting, electrical gear or batteries, and smoke may rise toward floor 7. The data has no description to confirm this.",
+     "from_name_only": true
+    }
+   ],
+   "call": "Smoke reported on the 4th floor, 1801 Century Park, Los Angeles. Time of call: Saturday 15:00."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Smoke reported on the 4th floor, 1801 Century Park, Los Angeles. Time of call: Saturday 15:00.\"}\n{\"t\": 0.3, \"step\": \"address_lookup\", \"detail\": \"1801 Century Park E, Los Angeles -> 247344\"}\n{\"t\": 4.36, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"1801 Century Park, Los Angeles\\\"}\"}\n{\"t\": 4.36, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/fire/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 4.36, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 6.7, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 247344, \\\"floor\\\": 4, \\\"incident\\\": \\\"fire\\\", \\\"incident_type\\\": \\\"smoke\\\"}\"}\n{\"t\": 6.71, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/247344.md\\\"}\"}\n{\"t\": 23.48, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: smoke investigation, floor 4, 1801 Century Park E, Los Angeles (property 247344). Saturday 15:00 call. Flag only physical risks (vulnerable o\"}\n{\"t\": 23.48, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Write and queue a short text to the building's people so they can meet the fire crew. Incident: smoke investigation, floor 4, Century Park East, 1801\"}\n{\"t\": 23.48, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"inside-scout\\\", \\\"description\\\": \\\"Scan id gacELDAHQEZ (floor 4, 1801 Century Park E, exact floor). Smoke investigation. Find walk distance from scan start to nearest fire alarm pull st\"}\n{\"t\": 23.48, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"outside-scout\\\", \\\"description\\\": \\\"Property id 247344 (1801 Century Park E, Los Angeles). Incident: smoke investigation on floor 4. Report live wind (from direction, mph, where smoke d\"}\n{\"t\": 25.38, \"step\": \"helper:outside_now\", \"detail\": \"{\\\"property_id\\\": 247344}\"}\n{\"t\": 25.8, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"gacELDAHQEZ\\\", \\\"target\\\": \\\"fire alarm pull station\\\"}\"}\n{\"t\": 25.82, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"gacELDAHQEZ\\\", \\\"target\\\": \\\"exit sign\\\"}\"}\n{\"t\": 27.61, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire Dept: smoke investigation on floor 4 at 1801 Century Park E. Crew responding. Please meet the crew on arrival and bring building keys and fire panel access.\\\"}\"}\n{\"t\": 45.26, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 247344, \\\"note\\\": \\\"Smoke reported floor 4 (Sat 15:00). Briefing sent; PM Douglas Emmett texted to meet crew with keys and fire panel access. Scan floor 4: exit signs at 25/41 points, no \"}\n{\"t\": 59.3, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 59.3, \"step\": \"usage\", \"detail\": \"119561 in / 6399 out tokens, ~$0.61\"}\n{\"t\": 59.3, \"step\": \"done\", \"detail\": \"11 lines, 2 images\"}\n"
+}

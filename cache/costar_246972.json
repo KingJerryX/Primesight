@@ -1,0 +1,594 @@
+{
+ "property_id": 246972,
+ "name": null,
+ "address": "12100 wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0434909,
+ "lon": -118.467632,
+ "type": "Office",
+ "stories": 19,
+ "gross_sqft": 365325.0,
+ "typical_floor_sqft": 19467.0,
+ "year_built": 1985,
+ "construction": "Unknown",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 7
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Law Offices of Fred Mashian",
+   "floor": 2,
+   "suite": "245",
+   "sqft": 9000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brentwood Real Estate Group",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 1168.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ascribe",
+   "floor": 2,
+   "suite": "280-1",
+   "sqft": 1168.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Salem & Associates LLP",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 2725.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gibbs Giden",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 3893.0,
+   "employees": 24,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fairbank, Maslin, Maullin Metz & Associates",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 3309.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MG Partners",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 3115.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lederer & Nojima",
+   "floor": 4,
+   "suite": "480",
+   "sqft": 3893.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cislo & Thomas LLP",
+   "floor": 4,
+   "suite": "1700",
+   "sqft": 2021.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kerendian & Associates",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 3893.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Buchholtz, Harris, Levine & Brennan",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 4093.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cotsen Foundation for the Art of Teaching",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 2920.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "iBorrow",
+   "floor": 5,
+   "suite": "515",
+   "sqft": 3301.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Maze Investments",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 3020.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Integrity Growth Partners",
+   "floor": 6,
+   "suite": "605",
+   "sqft": 3893.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cannella Media Dtc",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 4867.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Eric R. Yamamoto",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 2920.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 3459.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sterling West Escrow",
+   "floor": 7,
+   "suite": null,
+   "sqft": 3893.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "785",
+   "sqft": 2370.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 13212.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Columbus Healthcare Services",
+   "floor": 8,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "High Touch Group",
+   "floor": 8,
+   "suite": null,
+   "sqft": 100.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "R & R Private Wealth Management Group",
+   "floor": 9,
+   "suite": "925",
+   "sqft": 4867.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Boesch Law Group",
+   "floor": 9,
+   "suite": "905",
+   "sqft": 6813.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Product. AI",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 4867.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pacific Properties Group",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 3309.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Linzer Law Group",
+   "floor": 10,
+   "suite": "1090",
+   "sqft": 2531.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brisky Net Lease",
+   "floor": 10,
+   "suite": "1035",
+   "sqft": 2531.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rosenberg and Pick, A Law Corporation",
+   "floor": 10,
+   "suite": "1025",
+   "sqft": 2531.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Quantum Real Estate Advisors, Inc.",
+   "floor": 10,
+   "suite": "1030",
+   "sqft": 2531.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silver Rock Financial",
+   "floor": 10,
+   "suite": null,
+   "sqft": 3996.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1040",
+   "sqft": 1890.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GR Properties USA, Inc.",
+   "floor": 11,
+   "suite": "1180",
+   "sqft": 2336.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zephyr",
+   "floor": 11,
+   "suite": "1135",
+   "sqft": 2531.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1155",
+   "sqft": 3462.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Schwartz & Janzen LLP",
+   "floor": 11,
+   "suite": null,
+   "sqft": 2920.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 5710.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vision to Learn",
+   "floor": 12,
+   "suite": "1275",
+   "sqft": 3601.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Law Offices of Homa Molayem",
+   "floor": 12,
+   "suite": "1225",
+   "sqft": 4867.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Adeptus",
+   "floor": 12,
+   "suite": "1210",
+   "sqft": 3893.0,
+   "employees": 34,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 3890.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SNS Law Group, Inc.",
+   "floor": 14,
+   "suite": "1420",
+   "sqft": 7787.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prager Metis",
+   "floor": 14,
+   "suite": null,
+   "sqft": 2101.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Steven Ross",
+   "floor": 14,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "London & Co.",
+   "floor": 15,
+   "suite": "1540",
+   "sqft": 3504.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Cuneo & Verano",
+   "floor": 15,
+   "suite": "1550",
+   "sqft": 3693.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Walker & Dunlop",
+   "floor": 15,
+   "suite": "1500",
+   "sqft": 5036.0,
+   "employees": 32,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Scott Spell Law",
+   "floor": 15,
+   "suite": "1520",
+   "sqft": 3115.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1510",
+   "sqft": 4119.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Armbruster Goldsmith & Delvac",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": 4293.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Esensten Law",
+   "floor": 16,
+   "suite": "1660",
+   "sqft": 3893.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cannon Trading",
+   "floor": 16,
+   "suite": "1640",
+   "sqft": 3893.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tiger Capital Group, Inc.",
+   "floor": 16,
+   "suite": "1630",
+   "sqft": 1947.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 16,
+   "suite": "1650",
+   "sqft": 3428.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regent Properties",
+   "floor": 17,
+   "suite": "1750",
+   "sqft": 4293.0,
+   "employees": 45,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bluewater Battery Logistics",
+   "floor": 17,
+   "suite": "1710",
+   "sqft": 2316.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tokyu Land",
+   "floor": 19,
+   "suite": "1950",
+   "sqft": 5795.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 19,
+   "suite": "1980",
+   "sqft": 2030.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Douglas Emmett Management, LLC",
+   "floor": null,
+   "suite": "M-20",
+   "sqft": 1163.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "My Meal Cafe",
+   "floor": null,
+   "suite": "M-30",
+   "sqft": 1745.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ameli Law Group",
+   "floor": null,
+   "suite": "M-50",
+   "sqft": 2000.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "XVPPwqqbFdB",
+  "ZKvhhd6eXKJ"
+ ]
+}

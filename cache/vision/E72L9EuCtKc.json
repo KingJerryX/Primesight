@@ -1,0 +1,162 @@
+{
+ "model_id": "E72L9EuCtKc",
+ "name": "Elevator Lobby with Immediate Suite 380 Access",
+ "floor": 3,
+ "sweeps": [
+  {
+   "id": "db9uzmw3c2g1t8zwn08yutbka",
+   "index": 0,
+   "xy": [
+    0.0,
+    0.0
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.78,
+     "box": [
+      485,
+      407,
+      505,
+      423
+     ],
+     "color": 0.566,
+     "face": 0
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.58,
+     "box": [
+      708,
+      538,
+      716,
+      578
+     ],
+     "color": 0.0,
+     "face": 0
+    },
+    {
+     "label": "exit sign",
+     "score": 0.52,
+     "box": [
+      389,
+      418,
+      405,
+      440
+     ],
+     "color": 0.011,
+     "face": 3
+    }
+   ]
+  },
+  {
+   "id": "tkpz7r8ytyb5m0wwg6mprg0pb",
+   "index": 1,
+   "xy": [
+    0.0,
+    0.0
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.55,
+     "box": [
+      566,
+      418,
+      582,
+      440
+     ],
+     "color": 0.011,
+     "face": 1
+    },
+    {
+     "label": "exit sign",
+     "score": 0.52,
+     "box": [
+      938,
+      387,
+      962,
+      405
+     ],
+     "color": 0.076,
+     "face": 2
+    },
+    {
+     "label": "exit sign",
+     "score": 0.7,
+     "box": [
+      662,
+      401,
+      688,
+      419
+     ],
+     "color": 0.393,
+     "face": 2
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.62,
+     "box": [
+      946,
+      546,
+      956,
+      592
+     ],
+     "color": 0.0,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "8buy3amb9tqpnhpnipzxa8nnc",
+   "index": 2,
+   "xy": [
+    0.0,
+    0.0
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.78,
+     "box": [
+      636,
+      415,
+      660,
+      432
+     ],
+     "color": 0.463,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "6df35udwx8hsm5ayd99i3pdad",
+   "index": 3,
+   "xy": [
+    0.0,
+    0.0
+   ],
+   "hits": [
+    {
+     "label": "fire alarm pull station",
+     "score": 0.71,
+     "box": [
+      195,
+      -2,
+      241,
+      73
+     ],
+     "color": 0.0,
+     "face": 0
+    }
+   ]
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 3,
+  "stairs": 0,
+  "fire extinguisher": 0,
+  "fire alarm pull station": 0
+ },
+ "seconds": 24
+}

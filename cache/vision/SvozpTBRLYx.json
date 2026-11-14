@@ -1,0 +1,76 @@
+{
+ "model_id": "SvozpTBRLYx",
+ "name": "2100 West Loop South - Suite 1420",
+ "floor": 14,
+ "sweeps": [
+  {
+   "id": "kc4fx0c3csczempkmc6633h5d",
+   "index": 0,
+   "xy": [
+    0.10993226617574692,
+    -0.0817837044596672
+   ],
+   "hits": [
+    {
+     "label": "fire alarm pull station",
+     "score": 0.88,
+     "box": [
+      408,
+      380,
+      438,
+      418
+     ],
+     "color": 0.0,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "7yk7iiciq21bxp6ys5ua1pwzb",
+   "index": 1,
+   "xy": [
+    8.660005569458008,
+    -3.8210442066192627
+   ],
+   "hits": [
+    {
+     "label": "fire alarm pull station",
+     "score": 0.81,
+     "box": [
+      851,
+      425,
+      877,
+      448
+     ],
+     "color": 0.0,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "zgu43n24g8wxpb0q6t0tw80nc",
+   "index": 2,
+   "xy": [
+    3.696211099624634,
+    -4.787242412567139
+   ],
+   "hits": []
+  },
+  {
+   "id": "ehdxzmixsn13n1wciug3k712d",
+   "index": 3,
+   "xy": [
+    -0.9031331539154053,
+    -5.097894668579102
+   ],
+   "hits": []
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 0,
+  "stairs": 0,
+  "fire extinguisher": 0,
+  "fire alarm pull station": 0
+ },
+ "seconds": 36
+}

@@ -1,0 +1,203 @@
+{
+ "property_id": 240262,
+ "name": "Greenbriar Atrium I",
+ "address": "16630 Imperial Valley Dr, Houston, TX",
+ "lat": 29.9415732,
+ "lon": -95.3954711,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 88013.0,
+ "typical_floor_sqft": 48278.0,
+ "year_built": 1977,
+ "construction": "Unknown",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Heavenly Hands Barber & Beauty Lounge",
+   "floor": 1,
+   "suite": "115a",
+   "sqft": 500.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Infprmation Gateway Printing Service",
+   "floor": 1,
+   "suite": "144",
+   "sqft": 3862.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PCP Trucking School",
+   "floor": 1,
+   "suite": "141",
+   "sqft": 3862.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tax Pros 4 Tax Services",
+   "floor": 1,
+   "suite": "152C",
+   "sqft": 966.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zegen Motors",
+   "floor": 1,
+   "suite": "113",
+   "sqft": 1931.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pure Precision",
+   "floor": 1,
+   "suite": "115c",
+   "sqft": 2414.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nails By Shugg",
+   "floor": 1,
+   "suite": "152A",
+   "sqft": 483.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ahop MMRTA",
+   "floor": 1,
+   "suite": "146",
+   "sqft": 3379.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Universal Church",
+   "floor": 1,
+   "suite": "135",
+   "sqft": 1448.0,
+   "employees": 4,
+   "industry": "PersonalServices",
+   "about": null
+  },
+  {
+   "name": "Locz By Chicca",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Indeleble",
+   "floor": 1,
+   "suite": "117",
+   "sqft": 2414.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Art Of Healing",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Comfort Ac & Heating",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Immigration & Naturalization Service",
+   "floor": 2,
+   "suite": null,
+   "sqft": 19550.0,
+   "employees": 120,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dee Cosmetics",
+   "floor": 2,
+   "suite": "39",
+   "sqft": 795.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NBCT Family",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1987.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aliento Radio",
+   "floor": 2,
+   "suite": "255",
+   "sqft": 1987.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Inter Generational House Of Prayer",
+   "floor": 2,
+   "suite": "274",
+   "sqft": 1987.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nova Refining Corp",
+   "floor": 2,
+   "suite": "207",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Insurance Corner",
+   "floor": 2,
+   "suite": "239",
+   "sqft": null,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "Qo8RAcWhyaG",
+  "cvcUKq4RNH4"
+ ]
+}

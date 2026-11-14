@@ -1,0 +1,379 @@
+{
+ "property_id": 239912,
+ "name": "The Meadows at Interwood",
+ "address": "14950 Heathrow Forest Pky, Houston, TX",
+ "lat": 29.9353851,
+ "lon": -95.3233397,
+ "type": "Office",
+ "stories": 5,
+ "gross_sqft": 147605.0,
+ "typical_floor_sqft": 29521.0,
+ "year_built": 1984,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  },
+  {
+   "type": "Parking",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "CaroTrans",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 2347.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Benckenstein Reviere and Dresden",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 2347.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "195",
+   "sqft": 2635.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "145",
+   "sqft": 815.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GeoSpatial Innovations, Inc.",
+   "floor": 1,
+   "suite": "160a",
+   "sqft": 2347.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "FedEx Trade Networks",
+   "floor": 1,
+   "suite": "185",
+   "sqft": 3520.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dominion Aesthetic Technologies, Inc.",
+   "floor": 1,
+   "suite": "190",
+   "sqft": 1467.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shipco Transport Houston",
+   "floor": 1,
+   "suite": "175",
+   "sqft": 5867.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 1846.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 3550.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "145",
+   "sqft": 815.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Children's Home Care",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 5867.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NMT Projects International Americas Inc",
+   "floor": 2,
+   "suite": "230",
+   "sqft": 2153.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mid-america Overseas",
+   "floor": 2,
+   "suite": "285",
+   "sqft": 3227.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BrandSafway",
+   "floor": 2,
+   "suite": "290",
+   "sqft": 3128.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nexpera, LLC",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 9388.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Waterfront Maritime Services",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 3227.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Circle 8 Crane Services",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 2347.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tioga Pipe",
+   "floor": 3,
+   "suite": "390",
+   "sqft": 5867.0,
+   "employees": 24,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Astrocare Visiting Health Care",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 7460.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ROCKWOOL",
+   "floor": 3,
+   "suite": "330a",
+   "sqft": 4276.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Claycomb Associates",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 5867.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rogers & Brown",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1200.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ams-par Consultant",
+   "floor": 3,
+   "suite": "330",
+   "sqft": null,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cargolux Airlines International S.A.",
+   "floor": 4,
+   "suite": "490",
+   "sqft": 1486.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "National Air Cargo",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 6488.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Combi Lift Projects LLC",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 1980.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RCR Global Logistics",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 1467.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 1553.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 3979.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Property Tax Partners",
+   "floor": null,
+   "suite": "580",
+   "sqft": 5867.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ABM Insurance & Benefit Services, Inc",
+   "floor": null,
+   "suite": null,
+   "sqft": 5281.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HRST Inc",
+   "floor": null,
+   "suite": "535",
+   "sqft": 1675.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sedgwick",
+   "floor": null,
+   "suite": "520a",
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PERI",
+   "floor": null,
+   "suite": "550a",
+   "sqft": 2347.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EFI Global",
+   "floor": null,
+   "suite": "520",
+   "sqft": 3824.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aprojects USA LLC",
+   "floor": null,
+   "suite": "530a",
+   "sqft": 2934.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Brummett & Company",
+   "phone": "5552075735"
+  }
+ ],
+ "matterport_models": [
+  "ErFdUtzdUej",
+  "pM5jJEEzEjQ"
+ ]
+}

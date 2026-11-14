@@ -1,0 +1,301 @@
+{
+ "property_id": 246935,
+ "name": "Landmark II",
+ "address": "11766 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0479833,
+ "lon": -118.4618504,
+ "type": "Office",
+ "stories": 18,
+ "gross_sqft": 393744.0,
+ "typical_floor_sqft": 21875.0,
+ "year_built": 1989,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 8
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Equity Union Real Estate",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 6199.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Servis & Taylor Jewellers",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3801.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BRC Advisors -  BH, Inc.",
+   "floor": 2,
+   "suite": "270",
+   "sqft": 4866.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Consulate General of Finland",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1318.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wavsys",
+   "floor": 2,
+   "suite": null,
+   "sqft": 8595.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate General of Romania",
+   "floor": 2,
+   "suite": null,
+   "sqft": 4842.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 1747.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bulgaria",
+   "floor": 4,
+   "suite": "470",
+   "sqft": 3141.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Abacus",
+   "floor": 4,
+   "suite": null,
+   "sqft": 3035.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gotfredson & Associates",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 10036.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate General of Lithuania in Los Angeles",
+   "floor": 5,
+   "suite": null,
+   "sqft": 2600.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dakota Financial",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 7352.0,
+   "employees": 57,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Weintraub, Zolkin, Talerico & Selth LLP",
+   "floor": 7,
+   "suite": "730",
+   "sqft": 4164.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KHIKS",
+   "floor": 7,
+   "suite": null,
+   "sqft": 3150.0,
+   "employees": 27,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hughes Marino",
+   "floor": 7,
+   "suite": "760",
+   "sqft": 5540.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Caltius Capital Management",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 7437.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Borstein Enterprises",
+   "floor": 8,
+   "suite": null,
+   "sqft": 3981.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pinscreen",
+   "floor": 8,
+   "suite": "840",
+   "sqft": 9950.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 7429.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Residents Medical",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 14384.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ridano",
+   "floor": 12,
+   "suite": "1220",
+   "sqft": 448.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate General of the Republic of Croatia",
+   "floor": 12,
+   "suite": "1250",
+   "sqft": 447.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consolate General of the Republic Of Azerbaijan",
+   "floor": 14,
+   "suite": "1",
+   "sqft": 4850.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pender Capital",
+   "floor": 14,
+   "suite": null,
+   "sqft": 9796.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JRK Property Holdings",
+   "floor": 15,
+   "suite": null,
+   "sqft": 21368.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Israel Ministry Of Tourism",
+   "floor": 16,
+   "suite": null,
+   "sqft": 10684.0,
+   "employees": 37,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Israel Ministry Of Tourism",
+   "floor": 16,
+   "suite": null,
+   "sqft": 10684.0,
+   "employees": 37,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 17,
+   "suite": "1700",
+   "sqft": 24628.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "A2dg4xeLX4j",
+  "Q86tz1TmmZy",
+  "QscHhfLUHqf",
+  "SWQdck4mND6",
+  "U2L3HNYPmPs"
+ ]
+}

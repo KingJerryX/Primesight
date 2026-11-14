@@ -1,0 +1,29 @@
+{
+ "property_id": 239721,
+ "name": null,
+ "address": "509 Sam Houston Pky, Houston, TX",
+ "lat": 29.941736,
+ "lon": -95.39279,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 84000.0,
+ "typical_floor_sqft": 14000.0,
+ "year_built": 1984,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "Taq8xMJWhdM",
+  "Uba85a86ULB",
+  "mLLixNvEF3u",
+  "uuxPZfVgF5Z"
+ ]
+}

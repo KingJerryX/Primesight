@@ -1,0 +1,126 @@
+{
+ "property_id": 239631,
+ "name": "Westchase Point",
+ "address": "1250 Sam Houston Pky, Houston, TX",
+ "lat": 29.749166,
+ "lon": -95.558654,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 160000.0,
+ "typical_floor_sqft": 19917.0,
+ "year_built": 1984,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Royal Air",
+   "floor": 1,
+   "suite": null,
+   "sqft": 19414.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royal Air",
+   "floor": 2,
+   "suite": null,
+   "sqft": 19414.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MTZ Law Group",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royal Air",
+   "floor": 3,
+   "suite": null,
+   "sqft": 19414.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royal Air",
+   "floor": 4,
+   "suite": null,
+   "sqft": 19414.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royal Air",
+   "floor": 5,
+   "suite": null,
+   "sqft": 19414.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Air I Am Duct & Chimney",
+   "floor": 5,
+   "suite": "508",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royal Air",
+   "floor": 6,
+   "suite": null,
+   "sqft": 19414.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royal Air",
+   "floor": 7,
+   "suite": null,
+   "sqft": 19414.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Royal Air",
+   "floor": 8,
+   "suite": null,
+   "sqft": 19414.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "L4Ek72SkWE6",
+  "LLwtf6jme2P"
+ ]
+}

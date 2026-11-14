@@ -1,0 +1,116 @@
+{
+ "model_id": "upzMqrEqy2f",
+ "name": "Suite 450",
+ "floor": 4,
+ "sweeps": [
+  {
+   "id": "nm0qnxm9k7hr95uz0s7hbu5zc",
+   "index": 0,
+   "xy": [
+    7.771357536315918,
+    4.251096248626709
+   ],
+   "hits": []
+  },
+  {
+   "id": "148d23fkn5228rsmu14pm2knc",
+   "index": 1,
+   "xy": [
+    1.149420976638794,
+    -0.2470846027135849
+   ],
+   "hits": []
+  },
+  {
+   "id": "iqx4h7gus54msksk6ueq9whab",
+   "index": 2,
+   "xy": [
+    4.790807723999023,
+    3.4481213092803955
+   ],
+   "hits": []
+  },
+  {
+   "id": "9f04ppn3w5q83scp5s45f9nxb",
+   "index": 3,
+   "xy": [
+    7.254965305328369,
+    -0.4390870928764343
+   ],
+   "hits": []
+  },
+  {
+   "id": "5rcu7ne6uq3a2tw4n4imfsmqc",
+   "index": 4,
+   "xy": [
+    8.880782127380371,
+    5.718430042266846
+   ],
+   "hits": [
+    {
+     "label": "fire alarm pull station",
+     "score": 0.91,
+     "box": [
+      524,
+      185,
+      566,
+      246
+     ],
+     "color": 0.004,
+     "face": 1
+    }
+   ]
+  },
+  {
+   "id": "6gwt508s3sdgrt5mqddgt9ftb",
+   "index": 5,
+   "xy": [
+    4.479325294494629,
+    0.2796836793422699
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.54,
+     "box": [
+      646,
+      618,
+      655,
+      632
+     ],
+     "color": 0.532,
+     "face": 3
+    }
+   ]
+  },
+  {
+   "id": "518fh6zy4pd17bf2fz2tdb31d",
+   "index": 6,
+   "xy": [
+    0.0676206722855568,
+    -0.0034713693894445896
+   ],
+   "hits": [
+    {
+     "label": "fire alarm pull station",
+     "score": 0.74,
+     "box": [
+      142,
+      331,
+      173,
+      364
+     ],
+     "color": 0.0,
+     "face": 1
+    }
+   ]
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 1,
+  "stairs": 0,
+  "fire extinguisher": 0,
+  "fire alarm pull station": 0
+ },
+ "seconds": 41
+}

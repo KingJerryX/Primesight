@@ -1,0 +1,511 @@
+{
+ "property_id": 246824,
+ "name": "Westwood Place",
+ "address": "10866 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0588706,
+ "lon": -118.442234,
+ "type": "Office",
+ "stories": 16,
+ "gross_sqft": 199017.0,
+ "typical_floor_sqft": 12439.0,
+ "year_built": 1987,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 5
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "10750 Braddock, Llc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sos Admissions Llc",
+   "floor": 1,
+   "suite": "4",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "John R Ronge Attorney At Law",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 3524.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 2075.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 1718.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Yourist Law Corp",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 1882.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 1718.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 3096.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WDC & Associates, LLP",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1447.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Westwood Village",
+   "floor": 3,
+   "suite": null,
+   "sqft": 5699.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JCJ, LLP",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 1365.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pacifica Ventures",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 1449.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 1449.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 13830.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Interview Sos Career Service",
+   "floor": 4,
+   "suite": "407",
+   "sqft": null,
+   "employees": 170,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "La Brea Law Firm",
+   "floor": 5,
+   "suite": "565",
+   "sqft": 2510.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Watchdog Real Estate Advisory Services",
+   "floor": 5,
+   "suite": null,
+   "sqft": 1005.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Clear Capital",
+   "floor": 6,
+   "suite": "670",
+   "sqft": 1974.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 3443.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ami Asset Management Corp",
+   "floor": 7,
+   "suite": "770",
+   "sqft": 3642.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fiore Legal",
+   "floor": 7,
+   "suite": "740",
+   "sqft": 2892.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Deldar",
+   "floor": 7,
+   "suite": null,
+   "sqft": 1284.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pacific Urban Investors, LLC",
+   "floor": 7,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 5173.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pine Companies",
+   "floor": 8,
+   "suite": null,
+   "sqft": 2010.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of Devin Sawdayl",
+   "floor": 8,
+   "suite": null,
+   "sqft": 1200.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 2068.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Taylor & Lieberman",
+   "floor": 9,
+   "suite": null,
+   "sqft": 8227.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Office of Elena Mebtahi",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 1792.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "930",
+   "sqft": 2022.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "930",
+   "sqft": 2022.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ground Control Business Management",
+   "floor": 10,
+   "suite": "10",
+   "sqft": 12438.0,
+   "employees": 70,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alchemy Entertainment",
+   "floor": 11,
+   "suite": "1140",
+   "sqft": 2524.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1110",
+   "sqft": 2232.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 4077.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1105",
+   "sqft": 1428.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Los Angeles Singles",
+   "floor": 11,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1130",
+   "sqft": 1642.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The California Consumer Attorneys",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 5202.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kramer Trial Lawyers",
+   "floor": 12,
+   "suite": "1270",
+   "sqft": 2920.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jr Berry Search Group Inc",
+   "floor": 12,
+   "suite": "1210",
+   "sqft": null,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "McNicholas & McNicholas, LLP",
+   "floor": 14,
+   "suite": null,
+   "sqft": 4350.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LifeStance Health",
+   "floor": 14,
+   "suite": "1410",
+   "sqft": 2500.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silton Group",
+   "floor": 15,
+   "suite": null,
+   "sqft": 1414.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kopple, Klinger & Elbaz LLP",
+   "floor": 15,
+   "suite": "1500",
+   "sqft": 1000.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Women's Brain Health Initiative",
+   "floor": 15,
+   "suite": null,
+   "sqft": 694.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1560",
+   "sqft": 6430.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Geddes and Company",
+   "floor": 16,
+   "suite": "1650",
+   "sqft": 5328.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shintani Group",
+   "floor": 16,
+   "suite": "1625",
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HCR Wealth Advisors",
+   "floor": 16,
+   "suite": null,
+   "sqft": 6110.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Swedish Henry LLC",
+   "floor": null,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "4G8RW7vWcf6",
+  "B7gDwp79wSB",
+  "vREJCj87fbd"
+ ]
+}

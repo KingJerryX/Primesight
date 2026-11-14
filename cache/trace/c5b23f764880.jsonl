@@ -1,0 +1,16 @@
+{"t": 0.0, "step": "call_received", "detail": "Sprinkler pipe burst, water flowing on the 6th floor, 363 Sam Houston Pky, Houston."}
+{"t": 0.61, "step": "address_lookup", "detail": "363 N Sam Houston Pky E, Houston -> 234022"}
+{"t": 3.4, "step": "find_building", "detail": "{\"address\": \"363 Sam Houston Pky, Houston\"}"}
+{"t": 3.4, "step": "read_file", "detail": "{\"file_path\": \"/playbook/skills/utility/SKILL.md\", \"limit\": 1000}"}
+{"t": 3.4, "step": "read_file", "detail": "{\"file_path\": \"/playbook/incidents.json\", \"limit\": 1000}"}
+{"t": 5.68, "step": "gather_building", "detail": "{\"property_id\": 234022, \"floor\": 6, \"incident\": \"utility\", \"incident_type\": \"sprinkler_flow\"}"}
+{"t": 5.68, "step": "read_file", "detail": "{\"file_path\": \"/buildings/234022.md\"}"}
+{"t": 20.93, "step": "task", "detail": "{\"subagent_type\": \"tenant-risk\", \"description\": \"Incident: sprinkler pipe burst, water flowing on floor 6 (utility / sprinkler_flow), Northbelt, 363 Sam Houston Pky, Houston TX, 20 stories. Water runs"}
+{"t": 20.94, "step": "task", "detail": "{\"subagent_type\": \"notify-writer\", \"description\": \"Write and queue a short text for the building's people so they can meet the fire crew. Incident: sprinkler pipe burst, water flowing on floor 6 (spri"}
+{"t": 20.95, "step": "task", "detail": "{\"subagent_type\": \"inside-scout\", \"description\": \"Scan id Fv5Q2P8Kmsf (floor 6, Northbelt, 363 Sam Houston Pky, Houston). Incident: sprinkler pipe burst, water flowing on floor 6. Find: nearest fire e"}
+{"t": 23.49, "step": "helper:walk_to", "detail": "{\"scan_id\": \"Fv5Q2P8Kmsf\", \"target\": \"fire extinguisher\"}"}
+{"t": 24.91, "step": "helper:queue_text", "detail": "{\"to\": \"property manager\", \"text\": \"Fire Dept: sprinkler pipe burst, water flowing on floor 6 at 363 Sam Houston Pky. Please meet the fire crew on arrival with sprinkler riser/shutoff access and keys."}
+{"t": 41.16, "step": "add_building_note", "detail": "{\"property_id\": 234022, \"note\": \"Utility/sprinkler_flow: sprinkler pipe burst, water flowing on floor 6. Briefing sent; text to property manager Realty.com 5559806802 queued but not sent yet. Riser an"}
+{"t": 55.98, "step": "graded", "detail": "satisfied"}
+{"t": 55.99, "step": "usage", "detail": "105702 in / 5983 out tokens, ~$0.54"}
+{"t": 56.0, "step": "done", "detail": "11 lines, 2 images"}

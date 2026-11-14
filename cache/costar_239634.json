@@ -1,0 +1,484 @@
+{
+ "property_id": 239634,
+ "name": null,
+ "address": "520 Post Oak Blvd, Houston, TX",
+ "lat": 29.753994,
+ "lon": -95.452408,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 165130.0,
+ "typical_floor_sqft": 19393.0,
+ "year_built": 1977,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Sebastian Construction Group",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 1999.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Magnolia City Jewelers",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 1853.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bella Madre",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 1066.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Title Houston Holdings",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 4606.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Level 3 Communications",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sola Oil And Gas",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 600.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oshman Interests",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1600.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JH Blades",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 9274.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bryant + Stacy Group",
+   "floor": 2,
+   "suite": "265",
+   "sqft": 2255.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Currux Vision",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 1000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Moyes",
+   "floor": 2,
+   "suite": "275",
+   "sqft": 1509.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Madison Avenue Design",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 589.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 7863.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Builders Auction Company",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 1242.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sponsel Miller Greenberg PLLC",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 3786.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "C Payne II FLP",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 1999.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Main Street Commercial Partners",
+   "floor": 3,
+   "suite": "380",
+   "sqft": 3865.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 2215.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "372",
+   "sqft": 1672.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BlueByrd",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 4116.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Superpath",
+   "floor": 4,
+   "suite": "457",
+   "sqft": 959.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MSHC.NET Multisport Health Center",
+   "floor": 4,
+   "suite": "480.",
+   "sqft": 6000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alteris Capital Partners",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 600.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Home Smart Realty, LLC",
+   "floor": 4,
+   "suite": "455",
+   "sqft": 2247.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Worldwide Express",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 7218.0,
+   "employees": 47,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "First Choice Management Group",
+   "floor": 5,
+   "suite": "575",
+   "sqft": 1788.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dearman Systems",
+   "floor": 5,
+   "suite": "555",
+   "sqft": 1794.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Amanda Demanda Law Group",
+   "floor": 5,
+   "suite": "585",
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bruce Wallace Attorney",
+   "floor": 5,
+   "suite": "560",
+   "sqft": 970.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oak Hill Commercial Real Estate",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 7222.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Juniper Amarillo Holdings",
+   "floor": 5,
+   "suite": "575",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CJR Renewables",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 13103.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Clarus Group",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 3207.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morris, Lendais, Hollrah & Snowden, PLLC",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 6729.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Galene Financial",
+   "floor": 7,
+   "suite": "780",
+   "sqft": 1709.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Frost Patel & Company, P.C.",
+   "floor": 7,
+   "suite": "Ste 740",
+   "sqft": 1865.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Maron Marvel",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 2544.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Thoma & Associates",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 1599.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lmi Capital",
+   "floor": 7,
+   "suite": "720",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "777",
+   "sqft": 2339.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "740",
+   "sqft": 3540.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Browne McGregor Architects",
+   "floor": 8,
+   "suite": "880",
+   "sqft": 3200.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Genesis Park",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 4063.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "First Bight Ventures",
+   "floor": 8,
+   "suite": "825",
+   "sqft": 3157.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Auric Engineers Llc",
+   "floor": 8,
+   "suite": "895",
+   "sqft": 4115.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Convergent Science",
+   "floor": 8,
+   "suite": "890",
+   "sqft": 2431.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Siebert Williams Shank",
+   "floor": 8,
+   "suite": "830",
+   "sqft": 1200.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Maxgrip Americas Inc",
+   "floor": 8,
+   "suite": "850",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 1826.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Griffin Partners, Inc.",
+   "phone": "5558696342"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 116
+  },
+  {
+   "type": "Covered",
+   "spaces": 465
+  }
+ ],
+ "matterport_models": [
+  "KSutZSPX8J5"
+ ]
+}

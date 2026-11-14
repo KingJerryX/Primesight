@@ -1,0 +1,229 @@
+{
+ "property_id": 275290,
+ "name": null,
+ "address": "915 Mateo St, Los Angeles, CA",
+ "lat": 34.0318643,
+ "lon": -118.2326104,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 55350.0,
+ "typical_floor_sqft": 18450.0,
+ "year_built": 1923,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 0,
+   "suite": "101",
+   "sqft": 1287.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nacholand",
+   "floor": 0,
+   "suite": "104",
+   "sqft": 1535.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 0,
+   "suite": "102",
+   "sqft": 1622.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 0,
+   "suite": "108",
+   "sqft": 1402.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "7 Hills Productions",
+   "floor": 0,
+   "suite": "109",
+   "sqft": 1128.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nacholand",
+   "floor": 1,
+   "suite": "211",
+   "sqft": 1128.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nacholand",
+   "floor": 1,
+   "suite": "213",
+   "sqft": 894.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 1402.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "203",
+   "sqft": 1128.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fieldo-Gu",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1128.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "113",
+   "sqft": 1274.0,
+   "employees": null,
+   "industry": "Information",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "201",
+   "sqft": 1287.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "205",
+   "sqft": 1128.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Raw Juicery",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Los Feliz Airlines",
+   "floor": 2,
+   "suite": "308",
+   "sqft": 1402.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "201",
+   "sqft": 1287.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "303",
+   "sqft": 1128.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "305",
+   "sqft": 1128.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hobnail",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1128.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bjoern Kommerell",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1402.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HOUS Studios",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1128.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Makeup Artistry by Fengwan Qing",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1200.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "305",
+   "sqft": 1128.0,
+   "employees": null,
+   "industry": "PersonalServices",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "kzjwhdhvo5S"
+ ]
+}

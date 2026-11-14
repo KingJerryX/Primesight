@@ -1,0 +1,22 @@
+{
+ "property_id": 239356,
+ "name": null,
+ "address": "1902 Rankin Rd, Houston, TX",
+ "lat": 29.9644843,
+ "lon": -95.369538,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 152788.0,
+ "typical_floor_sqft": 152788.0,
+ "year_built": 1980,
+ "construction": "Metal",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "21fi9ao6CEi",
+  "5zu1Yjzrt5d"
+ ]
+}

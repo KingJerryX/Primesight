@@ -1,0 +1,563 @@
+{
+ "property_id": 248895,
+ "name": "6300 Wilshire",
+ "address": "6300 Wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0631433,
+ "lon": -118.3664397,
+ "type": "Office",
+ "stories": 22,
+ "gross_sqft": 417118.0,
+ "typical_floor_sqft": 18960.0,
+ "year_built": 1971,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 8
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Schools First Federal Credit Union",
+   "floor": 1,
+   "suite": null,
+   "sqft": 18617.0,
+   "employees": 45,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 3954.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stuf Storage",
+   "floor": 2,
+   "suite": "200, 250",
+   "sqft": 21938.0,
+   "employees": 55,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rently",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 11079.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "South African Consulate General",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 7217.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Harder Stonerock LLP",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 3324.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fisher Harris Shapiro",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 4000.0,
+   "employees": 26,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Secure Nursing",
+   "floor": 7,
+   "suite": "715",
+   "sqft": 2212.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate General of Belgium",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 1106.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "704",
+   "sqft": 4363.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "705",
+   "sqft": 1246.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "707",
+   "sqft": 1247.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "M&Y Personal Injury Lawyers",
+   "floor": 8,
+   "suite": "807",
+   "sqft": 1123.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vital Research",
+   "floor": 8,
+   "suite": "860",
+   "sqft": 6569.0,
+   "employees": 49,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Law Offices of Paul Herzog",
+   "floor": 8,
+   "suite": "805",
+   "sqft": 1123.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Identification Data & Imaging",
+   "floor": 8,
+   "suite": "830",
+   "sqft": 2116.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RSL and Company, an Accountancy Corporation",
+   "floor": 8,
+   "suite": "880",
+   "sqft": 2247.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fate Foods, LLC",
+   "floor": 8,
+   "suite": "840",
+   "sqft": 1123.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Niasoff Group",
+   "floor": 8,
+   "suite": "800",
+   "sqft": 2197.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "810",
+   "sqft": 2039.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "820",
+   "sqft": 1687.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Brandman Agency, Inc",
+   "floor": 9,
+   "suite": "970",
+   "sqft": 1150.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Creative Circle",
+   "floor": 9,
+   "suite": "930",
+   "sqft": 1150.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Drip hydration",
+   "floor": 9,
+   "suite": "980",
+   "sqft": 1150.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EF Collection LLC",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 1150.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Essencemediacom",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 22998.0,
+   "employees": 154,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1130",
+   "sqft": 3078.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "After School All-Stars",
+   "floor": 12,
+   "suite": "1210",
+   "sqft": 5829.0,
+   "employees": 38,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sensa Pay",
+   "floor": 12,
+   "suite": "1230",
+   "sqft": 2573.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BRS/Gage",
+   "floor": 14,
+   "suite": "1430",
+   "sqft": 1899.0,
+   "employees": 48,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Western Avenue Capital",
+   "floor": 14,
+   "suite": "1490",
+   "sqft": 2057.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bent Caryl & Kroll, LLP",
+   "floor": 14,
+   "suite": "1415",
+   "sqft": 2164.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trygstad, Schwab & Trygstad",
+   "floor": 14,
+   "suite": "1425",
+   "sqft": 2210.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ISearch Group",
+   "floor": 14,
+   "suite": "1450",
+   "sqft": 2164.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate General Of Ireland",
+   "floor": 14,
+   "suite": "1440",
+   "sqft": 6946.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alias Intelligence",
+   "floor": 14,
+   "suite": "1470",
+   "sqft": 1270.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BWA",
+   "floor": 14,
+   "suite": "1460",
+   "sqft": 2164.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JR&K Properties",
+   "floor": 14,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allred, Maroko, & Goldberg",
+   "floor": 15,
+   "suite": "1500",
+   "sqft": 7541.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kape Property Management",
+   "floor": 15,
+   "suite": "1590",
+   "sqft": 2151.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AST Defeasance Service",
+   "floor": 15,
+   "suite": "1560",
+   "sqft": 1204.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Egality Law LLP",
+   "floor": 15,
+   "suite": "1505",
+   "sqft": 1497.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "bBA Studios",
+   "floor": 15,
+   "suite": "1520",
+   "sqft": 1600.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Jewish Committee",
+   "floor": 15,
+   "suite": "1510",
+   "sqft": 2155.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1507",
+   "sqft": 2783.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Getty Images",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": 22326.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "F3 Law",
+   "floor": 17,
+   "suite": "1700",
+   "sqft": 4990.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "E & L, Llp",
+   "floor": 17,
+   "suite": "1740",
+   "sqft": 11341.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 17,
+   "suite": "1720",
+   "sqft": 3140.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Levine & Blit LLP",
+   "floor": 18,
+   "suite": "1870",
+   "sqft": 5491.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The ARBA Group",
+   "floor": 18,
+   "suite": "1800",
+   "sqft": 5491.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Idomeneo Enterprises Inc",
+   "floor": 18,
+   "suite": "1850",
+   "sqft": 5491.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rapid Medical",
+   "floor": 18,
+   "suite": "1820",
+   "sqft": 5051.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Burson",
+   "floor": 19,
+   "suite": null,
+   "sqft": 11230.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Manela & Co.",
+   "floor": 20,
+   "suite": "2030",
+   "sqft": 4035.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "New York Life",
+   "floor": 20,
+   "suite": "2010",
+   "sqft": 5993.0,
+   "employees": 39,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "IW Group",
+   "floor": 20,
+   "suite": null,
+   "sqft": 6600.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JSF Financial",
+   "floor": 21,
+   "suite": "2100",
+   "sqft": 10419.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "The Swig Company",
+   "phone": "5559934380"
+  }
+ ],
+ "matterport_models": [
+  ""
+ ]
+}

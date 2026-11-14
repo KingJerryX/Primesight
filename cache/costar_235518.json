@@ -1,0 +1,33 @@
+{
+ "property_id": 235518,
+ "name": "CityNorth 1",
+ "address": "233 Benmar Dr, Houston, TX",
+ "lat": 29.9435561,
+ "lon": -95.4058157,
+ "type": "Office",
+ "stories": 12,
+ "gross_sqft": 261983.0,
+ "typical_floor_sqft": 21130.0,
+ "year_built": 1982,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 6
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  }
+ ],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "GaesM4Rs7Nt",
+  "hUwABosp7AC",
+  "jPJLCegATts",
+  "ovo1QLTMq6u"
+ ]
+}

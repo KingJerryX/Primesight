@@ -1,0 +1,60 @@
+{
+ "property_id": 240056,
+ "name": "North Harris Parkway Center",
+ "address": "16416 Northchase Dr, Houston, TX",
+ "lat": 29.9376352,
+ "lon": -95.4016576,
+ "type": "Office",
+ "stories": 3,
+ "gross_sqft": 65243.0,
+ "typical_floor_sqft": 21356.0,
+ "year_built": 1980,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Alitair Pharmaceuticals Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": 21356.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alitair Pharmaceuticals Inc",
+   "floor": 2,
+   "suite": null,
+   "sqft": 21356.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alitair Pharmaceuticals Inc",
+   "floor": 3,
+   "suite": null,
+   "sqft": 21356.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Old Vine Management Group",
+   "phone": "5553024445"
+  }
+ ],
+ "matterport_models": [
+  "sFHc6KSNCB1"
+ ]
+}

@@ -1,0 +1,237 @@
+{
+ "property_id": 246836,
+ "name": "The Tower",
+ "address": "10940 wilshire Blvd, Los Angeles, CA",
+ "lat": 34.0581582,
+ "lon": -118.4450454,
+ "type": "Office",
+ "stories": 24,
+ "gross_sqft": 223797.0,
+ "typical_floor_sqft": 9136.0,
+ "year_built": 1988,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 5
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Read to a Child",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 4050.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Westwood Village Synogogue",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 4050.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dan Baird",
+   "floor": 1,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Premier Workspaces",
+   "floor": 6,
+   "suite": null,
+   "sqft": 13984.0,
+   "employees": 88,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Denenberg Tuffley",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 4494.0,
+   "employees": 29,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Darvish Firm",
+   "floor": 8,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DX Plumbing and Hydro Jetting",
+   "floor": 8,
+   "suite": "818",
+   "sqft": 7463.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "810",
+   "sqft": 3691.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Olmstead Williams Communications, Inc.",
+   "floor": 12,
+   "suite": null,
+   "sqft": 4320.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Select Resources International",
+   "floor": 12,
+   "suite": null,
+   "sqft": 2158.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aof Management",
+   "floor": 14,
+   "suite": "1450",
+   "sqft": 1436.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1525",
+   "sqft": 3193.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Premier Workspaces",
+   "floor": 16,
+   "suite": null,
+   "sqft": 7000.0,
+   "employees": 88,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bobby Babai",
+   "floor": 16,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wilshire Advisory Group",
+   "floor": 17,
+   "suite": "1700",
+   "sqft": 6605.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sunbit",
+   "floor": 18,
+   "suite": "1850",
+   "sqft": 6426.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cypress Land Company",
+   "floor": 19,
+   "suite": null,
+   "sqft": 4500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nahai Law Group",
+   "floor": 19,
+   "suite": "1910",
+   "sqft": 4093.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Holtz, Slavett, Drabkin & Warner",
+   "floor": 20,
+   "suite": "Ste 2000",
+   "sqft": 9457.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Asvar Law",
+   "floor": 21,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gelber Realty",
+   "floor": 22,
+   "suite": "2250",
+   "sqft": 7573.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "6Z3p5m9AcFQ",
+  "GyixtiZLr6d",
+  "SXhK1s1DhAp",
+  "TUxHMD27KtN",
+  "U7AC7onUGpD",
+  "jUPNX68GzPa",
+  "jeQCuU9hBDR",
+  "vkbu4hAnvxS"
+ ]
+}

@@ -1,0 +1,115 @@
+{
+ "property_id": 240001,
+ "name": null,
+ "address": "397 Sam Houston Pky, Houston, TX",
+ "lat": 29.940281,
+ "lon": -95.397279,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 71758.0,
+ "typical_floor_sqft": 17939.0,
+ "year_built": 1979,
+ "construction": "Unknown",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "RMF Tax Services",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 1012.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Faith United",
+   "floor": 1,
+   "suite": null,
+   "sqft": 16929.0,
+   "employees": 380,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Key Center Church",
+   "floor": 2,
+   "suite": null,
+   "sqft": 17939.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Iglesia De Cristo",
+   "floor": 3,
+   "suite": "315",
+   "sqft": 510.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reach Out America",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 850.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Faith United",
+   "floor": 3,
+   "suite": null,
+   "sqft": 6864.0,
+   "employees": 380,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AGA Equipment",
+   "floor": 4,
+   "suite": null,
+   "sqft": 335.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gazaway & Co",
+   "floor": 4,
+   "suite": "475",
+   "sqft": 222.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Faith United",
+   "floor": 4,
+   "suite": null,
+   "sqft": 17252.0,
+   "employees": 380,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "Kamop9QengW",
+  "Tnf2k4rxaJY",
+  "hXsQLNJ9589",
+  "oY3UunDxzch"
+ ]
+}

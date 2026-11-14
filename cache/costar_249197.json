@@ -1,0 +1,135 @@
+{
+ "property_id": 249197,
+ "name": null,
+ "address": "7060 Hollywood Blvd, Los Angeles, CA",
+ "lat": 34.1011671,
+ "lon": -118.3436283,
+ "type": "Office",
+ "stories": 12,
+ "gross_sqft": 198964.0,
+ "typical_floor_sqft": 15286.0,
+ "year_built": 1971,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Buffalo Wild Wings",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3525.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 17361.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bourhis Law Group",
+   "floor": 2,
+   "suite": "214",
+   "sqft": null,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Golden Gate Legal",
+   "floor": 5,
+   "suite": "530",
+   "sqft": 1962.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 3445.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 2437.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 1240.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nadel",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 3186.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 2962.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 2463.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "730",
+   "sqft": 1240.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Withered Tree, LLC",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 2962.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

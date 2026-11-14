@@ -1,0 +1,173 @@
+{
+ "property_id": 350372,
+ "name": "Bellaire Medical Professional Building",
+ "address": "6550 Mapleridge St, Houston, TX",
+ "lat": 29.709744,
+ "lon": -95.474863,
+ "type": "Office",
+ "stories": 2,
+ "gross_sqft": 81576.0,
+ "typical_floor_sqft": 32507.0,
+ "year_built": 1979,
+ "construction": "Metal",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Alliance Healthcare Group",
+   "floor": 1,
+   "suite": "117",
+   "sqft": 1000.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aesthetica Organic Spa",
+   "floor": 1,
+   "suite": "124",
+   "sqft": 1865.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Leidos QTC Health Services",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 7993.0,
+   "employees": 52,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Innovative Allergy",
+   "floor": 1,
+   "suite": "115.",
+   "sqft": 4021.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Modern Eye Vision & Surgery",
+   "floor": 1,
+   "suite": "118",
+   "sqft": 4201.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Barbara Bush Internal Medicine",
+   "floor": 1,
+   "suite": "101a",
+   "sqft": 1594.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "opSolutions",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 1594.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prestige Pharmacy",
+   "floor": 1,
+   "suite": "116",
+   "sqft": 1594.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Heart of Houston",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 1594.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Permanent Makeup by Kim",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 1594.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Healthy Hair Firm",
+   "floor": 2,
+   "suite": "215",
+   "sqft": 1010.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DM Clinical Research",
+   "floor": 2,
+   "suite": "201",
+   "sqft": 3000.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Medicus Rx Pharmacy, Inc",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 1440.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Pediatric Therapy",
+   "floor": 2,
+   "suite": "214",
+   "sqft": 867.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Lice Place",
+   "floor": 2,
+   "suite": "229",
+   "sqft": 1070.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "201",
+   "sqft": 5673.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "THASDAsdrw3",
+  "i8Q5pWYiYvf",
+  "mtUS93XRggA"
+ ]
+}

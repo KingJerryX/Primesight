@@ -1,0 +1,281 @@
+{
+ "text": "Smoke reported on the 11th floor at 2100 West Loop South, Houston. Caller says the hallway is filling up.",
+ "out": {
+  "briefing": "PRIMESIGHT | FIRE | FLOOR 11 | 2100 West Loop S, Houston TX\nABOVE FIRE: ~83 people on floors 12-16. Fl 12 Facial Plastic Surgery Associates: possible sedated patients, oxygen (from name only)\nON FLOOR: ~30 people (daytime headcount): American Title Co; Stuart N. Wilson & Assoc; Harberg & Huvard LLP; ste 1110 unknown tenant; ste 1115 surgery center\nON FLOOR RISK: Houston Weight Loss Surgery Center ste 1115: possible sedated or limited-mobility patients, oxygen (from name only)\nHYDRANTS: 68 m NE, 84 m S\nINSIDE: no scan of 11. Nearest is floor 12 (same core, layout may differ), 18 scan points\nBUILDING: 16 stories, built 1974, steel frame, sprinklers yes, 5 passenger elevators\nROOF: membrane, 2 AC units\nOPEN LOT for staging ~229 m N (aerial search, verify)\nPROPERTY MGR: no contacts on file\nNOT KNOWN: sprinkler type, stair locations, standpipe locations\nSCAN: https://my.matterport.com/show/?m=Lcv4jEgL8kk",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\234088_Lcv4jEgL8kk_plan.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\234088_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/234088_Lcv4jEgL8kk_plan.jpg",
+   "/img/234088_aerial.jpg"
+  ],
+  "property_id": 234088,
+  "texts": [],
+  "tenant_flags": [
+   {
+    "tenant": "Houston Weight Loss Surgery Center",
+    "floor": 11,
+    "risk": "Possible patients who can't evacuate on their own, plus medical gases",
+    "why": "Suite 1115 is on the fire floor. The name suggests a surgical practice. If it does procedures on site, patients may be sedated, recovering or have limited mobility. Bariatric patients may need special equipment to move, and oxygen or other medical gas cylinders may be present. No description was available to confirm any of this.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Facial Plastic Surgery Associates",
+    "floor": 12,
+    "risk": "Possible sedated or recovering patients, plus medical gases",
+    "why": "This tenant is one floor above the fire, where smoke is likely to spread. The name suggests a surgical practice that may treat patients on site under anesthesia, with oxygen or medical gas cylinders present. Patients may need help evacuating. No description was available to confirm any of this.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Unknown tenant",
+    "floor": 11,
+    "risk": "Unknown occupancy on the fire floor",
+    "why": "Suite 1110 is on the fire floor, but there is no name, staff count or description, so occupants and contents are unknown. Search it.",
+    "from_name_only": false
+   },
+   {
+    "tenant": "Regus",
+    "floor": 9,
+    "risk": "Shared office space with occupants who change daily",
+    "why": "Regus runs shared, flexible offices, and it also has floor 8. The number of people inside likely changes day to day and may be higher than the tenant list shows. Visitors may not know the exits. Floor 9 is two floors below the fire. This is inferred from the brand name only.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "fire",
+   "floor": 11,
+   "building": {
+    "name": null,
+    "address": "2100 West Loop, Houston, TX",
+    "stories": 16,
+    "year_built": 1974,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    },
+    {
+     "floor": 2,
+     "people": 0,
+     "tenants": [
+      "Unknown tenant"
+     ],
+     "scanned": true
+    },
+    {
+     "floor": 3,
+     "people": 0,
+     "tenants": [],
+     "scanned": true
+    },
+    {
+     "floor": 4,
+     "people": 20,
+     "tenants": [
+      "Houston Pain & Spine",
+      "Unknown tenant"
+     ],
+     "scanned": true
+    },
+    {
+     "floor": 5,
+     "people": 8,
+     "tenants": [
+      "Good Hearts Youth & Family Services"
+     ],
+     "scanned": true
+    },
+    {
+     "floor": 6,
+     "people": 42,
+     "tenants": [
+      "EDM Builds",
+      "JAB",
+      "Nousbo",
+      "Unknown tenant",
+      "Weitzman, Pathak & Associates"
+     ],
+     "scanned": true
+    },
+    {
+     "floor": 7,
+     "people": 10,
+     "tenants": [
+      "Dakota Enterprises",
+      "Unknown tenant"
+     ],
+     "scanned": true
+    },
+    {
+     "floor": 8,
+     "people": 1,
+     "tenants": [
+      "Regus"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 9,
+     "people": 1,
+     "tenants": [
+      "Regus"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 10,
+     "people": 20,
+     "tenants": [
+      "HVS",
+      "Unknown tenant"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 11,
+     "people": 30,
+     "tenants": [
+      "American Title Company",
+      "Harberg & Huvard LLP",
+      "Houston Weight Loss Surgery Center",
+      "Stuart N. Wilson & Associates, PC",
+      "Unknown tenant"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 12,
+     "people": 26,
+     "tenants": [
+      "Amador Law Firm",
+      "Facial Plastic Surgery Associates",
+      "Unknown tenant"
+     ],
+     "scanned": true
+    },
+    {
+     "floor": 13,
+     "people": 0,
+     "tenants": [
+      "Unknown tenant"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 14,
+     "people": 37,
+     "tenants": [
+      "LeadOrigin",
+      "SVR Law",
+      "Summit Capital Partners",
+      "Unknown tenant"
+     ],
+     "scanned": true
+    },
+    {
+     "floor": 15,
+     "people": 20,
+     "tenants": [
+      "The American Club",
+      "Tribute Energy"
+     ],
+     "scanned": false
+    },
+    {
+     "floor": 16,
+     "people": 0,
+     "tenants": [],
+     "scanned": false
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 68,
+     "dir": "NE",
+     "lat": 29.74653499857321,
+     "lon": -95.45725794516366
+    },
+    {
+     "m": 84,
+     "dir": "S",
+     "lat": 29.745300397639966,
+     "lon": -95.4575913742358
+    },
+    {
+     "m": 84,
+     "dir": "SW",
+     "lat": 29.745593803961235,
+     "lon": -95.4583720488223
+    }
+   ],
+   "staging": [
+    {
+     "m": 229,
+     "dir": "N",
+     "lat": 29.7479844,
+     "lon": -95.45848846499999,
+     "score": 0.235
+    },
+    {
+     "m": 185,
+     "dir": "SW",
+     "lat": 29.745003575,
+     "lon": -95.45917510999999,
+     "score": 0.234
+    },
+    {
+     "m": 332,
+     "dir": "SW",
+     "lat": 29.744407399999996,
+     "lon": -95.46054840000001,
+     "score": 0.224
+    }
+   ],
+   "scan": {
+    "floor": 12,
+    "exact": false,
+    "link": "https://my.matterport.com/show/?m=Lcv4jEgL8kk"
+   },
+   "vision": null,
+   "texts": [],
+   "tenant_flags": [
+    {
+     "tenant": "Houston Weight Loss Surgery Center",
+     "floor": 11,
+     "risk": "Possible patients who can't evacuate on their own, plus medical gases",
+     "why": "Suite 1115 is on the fire floor. The name suggests a surgical practice. If it does procedures on site, patients may be sedated, recovering or have limited mobility. Bariatric patients may need special equipment to move, and oxygen or other medical gas cylinders may be present. No description was available to confirm any of this.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Facial Plastic Surgery Associates",
+     "floor": 12,
+     "risk": "Possible sedated or recovering patients, plus medical gases",
+     "why": "This tenant is one floor above the fire, where smoke is likely to spread. The name suggests a surgical practice that may treat patients on site under anesthesia, with oxygen or medical gas cylinders present. Patients may need help evacuating. No description was available to confirm any of this.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Unknown tenant",
+     "floor": 11,
+     "risk": "Unknown occupancy on the fire floor",
+     "why": "Suite 1110 is on the fire floor, but there is no name, staff count or description, so occupants and contents are unknown. Search it.",
+     "from_name_only": false
+    },
+    {
+     "tenant": "Regus",
+     "floor": 9,
+     "risk": "Shared office space with occupants who change daily",
+     "why": "Regus runs shared, flexible offices, and it also has floor 8. The number of people inside likely changes day to day and may be higher than the tenant list shows. Visitors may not know the exits. Floor 9 is two floors below the fire. This is inferred from the brand name only.",
+     "from_name_only": true
+    }
+   ],
+   "call": "Smoke reported on the 11th floor at 2100 West Loop South, Houston. Caller says the hallway is filling up."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Smoke reported on the 11th floor at 2100 West Loop South, Houston. Caller says the hallway is filling up.\"}\n{\"t\": 0.04, \"step\": \"address_lookup\", \"detail\": \"2100 West Loop South, Houston -> 234088\"}\n{\"t\": 2.75, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"2100 West Loop South, Houston\\\"}\"}\n{\"t\": 2.75, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/fire/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 4.57, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 234088, \\\"floor\\\": 11, \\\"incident\\\": \\\"fire\\\"}\"}\n{\"t\": 4.57, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/234088.md\\\"}\"}\n{\"t\": 19.26, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: FIRE (smoke, caller says hallway filling), floor 11, 2100 West Loop South, Houston (property 234088), 16 stories. Tenants JSON:\\\\nOn floor 11:\"}\n{\"t\": 19.26, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Incident: FIRE (smoke on floor 11, hallway filling). Address: 2100 West Loop South, Houston TX (property 234088). Elevator/entrance data: 5 passenger\"}\n{\"t\": 19.26, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/scans/Lcv4jEgL8kk.json\\\", \\\"limit\\\": 300}\"}\n{\"t\": 29.43, \"step\": \"glob\", \"detail\": \"{\\\"pattern\\\": \\\"*Lcv4jEgL8kk*\\\", \\\"path\\\": \\\"/scans\\\"}\"}\n{\"t\": 36.59, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 234088, \\\"note\\\": \\\"FIRE call, floor 11: smoke reported, caller said hallway filling. Briefing sent. Houston Weight Loss Surgery Center ste 1115 (fl 11) and Facial Plastic Surgery Associa\"}\n{\"t\": 51.56, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 51.56, \"step\": \"usage\", \"detail\": \"82736 in / 4249 out tokens, ~$0.42\"}\n{\"t\": 51.56, \"step\": \"done\", \"detail\": \"12 lines, 2 images\"}\n"
+}

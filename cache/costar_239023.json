@@ -1,0 +1,32 @@
+{
+ "property_id": 239023,
+ "name": null,
+ "address": "3423 Hopper Rd, Houston, TX",
+ "lat": 29.8798046,
+ "lon": -95.3341037,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 17818.0,
+ "typical_floor_sqft": 17818.0,
+ "year_built": 1967,
+ "construction": "Unknown",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Gray Welding Inc",
+   "floor": 1,
+   "suite": null,
+   "sqft": 17818.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "Era64dSF3Ft",
+  "SQWPkwnXxU8"
+ ]
+}

@@ -1,0 +1,474 @@
+{
+ "property_id": 841767,
+ "name": "6400 Fannin",
+ "address": "6400 Fannin St, Houston, TX",
+ "lat": 29.7150502,
+ "lon": -95.3973646,
+ "type": "Office",
+ "stories": 30,
+ "gross_sqft": 510355.0,
+ "typical_floor_sqft": 17012.0,
+ "year_built": 2007,
+ "construction": "Steel",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Starbucks",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1250.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Walgreens",
+   "floor": 1,
+   "suite": null,
+   "sqft": 3250.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UT Physicians Cancer Center",
+   "floor": 2,
+   "suite": null,
+   "sqft": 3212.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vasso Grill",
+   "floor": 2,
+   "suite": "213",
+   "sqft": 1156.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vasso Grill",
+   "floor": 2,
+   "suite": "218",
+   "sqft": 4058.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vasso Grill",
+   "floor": 2,
+   "suite": "223",
+   "sqft": 1074.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann",
+   "floor": 13,
+   "suite": null,
+   "sqft": 17011.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ertan Digestive Disease Center",
+   "floor": 14,
+   "suite": null,
+   "sqft": 17011.0,
+   "employees": 113,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann",
+   "floor": 15,
+   "suite": null,
+   "sqft": 17011.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann",
+   "floor": 16,
+   "suite": null,
+   "sqft": 17011.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann",
+   "floor": 17,
+   "suite": null,
+   "sqft": 17011.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Robert Cizik Eye Clinic",
+   "floor": 18,
+   "suite": null,
+   "sqft": 16511.0,
+   "employees": 65,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Glasses By Phil",
+   "floor": 18,
+   "suite": "1800",
+   "sqft": null,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The OB/GYN Centre",
+   "floor": 19,
+   "suite": "1900",
+   "sqft": 2552.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Robert Cizik Eye Clinic",
+   "floor": 19,
+   "suite": null,
+   "sqft": 8846.0,
+   "employees": 65,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Medical Center Dental",
+   "floor": 20,
+   "suite": "2040",
+   "sqft": 2250.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UT Physicians Otorhinolaryngology",
+   "floor": 20,
+   "suite": "2010",
+   "sqft": 2120.0,
+   "employees": 37,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Center for Facial Plastic Surgery",
+   "floor": 20,
+   "suite": "2080",
+   "sqft": 3212.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aspire Fertility",
+   "floor": 20,
+   "suite": "2000.",
+   "sqft": 3237.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UTHealth",
+   "floor": 20,
+   "suite": "2070",
+   "sqft": 1361.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 20,
+   "suite": "2030",
+   "sqft": 898.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 20,
+   "suite": "2032",
+   "sqft": 1192.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Uthealth Houston Neurosciences-spine Center",
+   "floor": 20,
+   "suite": "2010",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DDS Associates",
+   "floor": 21,
+   "suite": "2110",
+   "sqft": 4718.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann Plaza Property Management",
+   "floor": 21,
+   "suite": "2190",
+   "sqft": 735.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UTHealth",
+   "floor": 21,
+   "suite": "2150",
+   "sqft": 1871.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann",
+   "floor": 21,
+   "suite": "2105",
+   "sqft": 1361.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Oculoplastics",
+   "floor": 22,
+   "suite": "2220",
+   "sqft": 1064.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 22,
+   "suite": "2250",
+   "sqft": 12158.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Nerve and Paralysis Institute",
+   "floor": 22,
+   "suite": "2290",
+   "sqft": 1361.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UTHealth",
+   "floor": 22,
+   "suite": "2200",
+   "sqft": 1531.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann",
+   "floor": 22,
+   "suite": "2210",
+   "sqft": 897.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann",
+   "floor": 23,
+   "suite": null,
+   "sqft": 17011.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 23,
+   "suite": null,
+   "sqft": 11824.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann",
+   "floor": 24,
+   "suite": null,
+   "sqft": 9877.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TIAA",
+   "floor": 24,
+   "suite": "2450",
+   "sqft": 3000.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 24,
+   "suite": "2440",
+   "sqft": 5211.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 24,
+   "suite": "2420",
+   "sqft": 4134.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brachial Plexus",
+   "floor": 24,
+   "suite": "2420",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann",
+   "floor": 25,
+   "suite": null,
+   "sqft": 17011.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann",
+   "floor": 26,
+   "suite": null,
+   "sqft": 17011.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UT Physicians Otorhinolaryngology",
+   "floor": 27,
+   "suite": "2700",
+   "sqft": 4253.0,
+   "employees": 37,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UTHealth",
+   "floor": 27,
+   "suite": "2730",
+   "sqft": 3062.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann",
+   "floor": 28,
+   "suite": null,
+   "sqft": 14511.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "UT Health",
+   "floor": 28,
+   "suite": null,
+   "sqft": 17011.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann",
+   "floor": 29,
+   "suite": null,
+   "sqft": 17011.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Hermann",
+   "floor": 30,
+   "suite": "3000",
+   "sqft": 24972.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": null,
+   "suite": null,
+   "sqft": 24076.0,
+   "employees": null,
+   "industry": "ProfessionalScientificAndTechnicalServices",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": null,
+   "suite": null,
+   "sqft": 1064.0,
+   "employees": null,
+   "industry": "ProfessionalScientificAndTechnicalServices",
+   "about": null
+  },
+  {
+   "name": "Labcorp",
+   "floor": null,
+   "suite": null,
+   "sqft": 3900.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "HikVF8edzjX",
+  "bz7iBBNhzYx",
+  "xi4mYLe5mXa"
+ ]
+}

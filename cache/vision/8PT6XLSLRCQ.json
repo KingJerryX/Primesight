@@ -1,0 +1,152 @@
+{
+ "model_id": "8PT6XLSLRCQ",
+ "name": "Suite 280",
+ "floor": 2,
+ "sweeps": [
+  {
+   "id": "2t1yn36cdfr1uh90cntafihpa",
+   "index": 0,
+   "xy": [
+    -5.0737762451171875,
+    0.6736233234405518
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.88,
+     "box": [
+      618,
+      398,
+      648,
+      425
+     ],
+     "color": 0.127,
+     "face": 2
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.5,
+     "box": [
+      616,
+      498,
+      626,
+      512
+     ],
+     "color": 0.0,
+     "face": 2
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.74,
+     "box": [
+      447,
+      469,
+      465,
+      482
+     ],
+     "color": 0.0,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "ebrzmh9cna7pk47xxwypuq2ka",
+   "index": 1,
+   "xy": [
+    -2.0804269313812256,
+    2.5711724758148193
+   ],
+   "hits": []
+  },
+  {
+   "id": "fka9bt200crbbpus825bi3k3a",
+   "index": 2,
+   "xy": [
+    -2.1413235664367676,
+    0.6311818361282349
+   ],
+   "hits": [
+    {
+     "label": "fire alarm pull station",
+     "score": 0.84,
+     "box": [
+      776,
+      358,
+      816,
+      420
+     ],
+     "color": 0.0,
+     "face": 1
+    },
+    {
+     "label": "exit sign",
+     "score": 0.94,
+     "box": [
+      465,
+      277,
+      532,
+      334
+     ],
+     "color": 0.184,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "kb4k58tu0bz4k4pgecr8mpgea",
+   "index": 3,
+   "xy": [
+    -5.033839225769043,
+    2.5543477535247803
+   ],
+   "hits": []
+  },
+  {
+   "id": "i5xbfu5tsw0pnbu6rhp759rbb",
+   "index": 4,
+   "xy": [
+    0.004140780307352543,
+    0.014012888073921204
+   ],
+   "hits": [
+    {
+     "label": "fire alarm pull station",
+     "score": 0.9,
+     "box": [
+      195,
+      553,
+      226,
+      627
+     ],
+     "color": 0.0,
+     "face": 2
+    }
+   ]
+  },
+  {
+   "id": "w6tiww06qrgt44a539pk8kiib",
+   "index": 5,
+   "xy": [
+    -7.615800857543945,
+    0.5429139137268066
+   ],
+   "hits": []
+  },
+  {
+   "id": "gs38r53iw8hw311acz3tg98da",
+   "index": 6,
+   "xy": [
+    -7.553604602813721,
+    2.6256983280181885
+   ],
+   "hits": []
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 2,
+  "stairs": 0,
+  "fire extinguisher": 0,
+  "fire alarm pull station": 0
+ },
+ "seconds": 40
+}

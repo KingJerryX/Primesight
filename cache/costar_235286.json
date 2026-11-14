@@ -1,0 +1,21 @@
+{
+ "property_id": 235286,
+ "name": null,
+ "address": "4444 Navigation Blvd, Houston, TX",
+ "lat": 29.7516565,
+ "lon": -95.3270048,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 15574.0,
+ "typical_floor_sqft": 15574.0,
+ "year_built": 1960,
+ "construction": "Metal",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [],
+ "matterport_models": [
+  "yyumT3a3rKn"
+ ]
+}

@@ -1,0 +1,230 @@
+{
+ "property_id": 239605,
+ "name": "One Northwind Plaza",
+ "address": "7600 Tidwell Rd, Houston, TX",
+ "lat": 29.8522108,
+ "lon": -95.5052095,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 280792.0,
+ "typical_floor_sqft": 18224.0,
+ "year_built": 1980,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Pilgrim Mortgage",
+   "floor": 1,
+   "suite": "105a",
+   "sqft": 1276.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Etix",
+   "floor": 1,
+   "suite": "103",
+   "sqft": 1769.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 8319.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JCJ Law Group",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 4573.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advanced Home Health Services",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 2167.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tristar Insurance Group, Inc.",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 1257.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "W. E. Brooks Law Firm",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 2338.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Traxler Consulting",
+   "floor": 3,
+   "suite": null,
+   "sqft": 693.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Equus Workforce Solutions",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 17951.0,
+   "employees": 119,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Polaris Logistics Group",
+   "floor": 5,
+   "suite": "502",
+   "sqft": 1769.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "City Wide Facility Solutions",
+   "floor": 5,
+   "suite": "501",
+   "sqft": 3049.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Magnum Producing, LP",
+   "floor": 5,
+   "suite": "505",
+   "sqft": 1566.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": null,
+   "sqft": 1947.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cravens Warren Commercial Insurance",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 6878.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "504",
+   "sqft": 901.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Smith & Burgess Process Safety Consulting",
+   "floor": 6,
+   "suite": null,
+   "sqft": 17947.0,
+   "employees": 55,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "OOCL (USA)",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 2548.0,
+   "employees": 29,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VeriSource Services, Inc.",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 600.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Frontier International",
+   "floor": 7,
+   "suite": "708",
+   "sqft": 1500.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Builtit Maintenance LLC",
+   "floor": 7,
+   "suite": "709",
+   "sqft": 1795.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "709",
+   "sqft": 987.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Versa Creative",
+   "floor": 8,
+   "suite": null,
+   "sqft": 17951.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "718TtwtiCse",
+  "XieJvP3kj4s"
+ ]
+}

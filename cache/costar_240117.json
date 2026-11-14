@@ -1,0 +1,67 @@
+{
+ "property_id": 240117,
+ "name": "Houston Technology Center",
+ "address": "5959 Corporate Dr, Houston, TX",
+ "lat": 29.7132915,
+ "lon": -95.5505272,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 567333.0,
+ "typical_floor_sqft": 141833.0,
+ "year_built": 1977,
+ "construction": "ReinforcedConcrete",
+ "sprinklers": "yes",
+ "sprinkler_type": "Esfr",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Ezee Fiber",
+   "floor": 0,
+   "suite": null,
+   "sqft": 94179.0,
+   "employees": 245,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Propio",
+   "floor": 1,
+   "suite": null,
+   "sqft": 29914.0,
+   "employees": 200,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2144.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Premier Wireless",
+   "floor": 1,
+   "suite": null,
+   "sqft": 7554.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PS LIGHTWAVE",
+   "floor": 3,
+   "suite": null,
+   "sqft": 11000.0,
+   "employees": 73,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "QpBGq4ytP82"
+ ]
+}

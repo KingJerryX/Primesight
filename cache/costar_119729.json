@@ -1,0 +1,413 @@
+{
+ "property_id": 119729,
+ "name": "Phoenix Tower",
+ "address": "3200 Southwest Fwy, Houston, TX",
+ "lat": 29.7306102,
+ "lon": -95.4286871,
+ "type": "Office",
+ "stories": 34,
+ "gross_sqft": 665332.0,
+ "typical_floor_sqft": 18547.0,
+ "year_built": 1984,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 8
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Millennium",
+   "floor": 1,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Skyline Deli and Cafe",
+   "floor": 9,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mcdonnel Group Group",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 6302.0,
+   "employees": 34,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Baylor College Of Medicine",
+   "floor": 11,
+   "suite": "1180",
+   "sqft": 3058.0,
+   "employees": 45,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brite's Oil And Gas Limited",
+   "floor": 11,
+   "suite": "1110",
+   "sqft": 1845.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1130",
+   "sqft": 4397.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1150",
+   "sqft": 4915.0,
+   "employees": null,
+   "industry": "ProfessionalScientificAndTechnicalServices",
+   "about": null
+  },
+  {
+   "name": "I. A. Naman + Associates, Inc",
+   "floor": 12,
+   "suite": "1200",
+   "sqft": 9814.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Anew Climate, LLC",
+   "floor": 13,
+   "suite": null,
+   "sqft": 3574.0,
+   "employees": 23,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Butler Cohen",
+   "floor": 15,
+   "suite": "1575",
+   "sqft": 5108.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dpr Construction",
+   "floor": 15,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GFT",
+   "floor": 16,
+   "suite": "1600",
+   "sqft": 25278.0,
+   "employees": 168,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 17,
+   "suite": "1700",
+   "sqft": 18320.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Equitable Advisors",
+   "floor": 18,
+   "suite": null,
+   "sqft": 6453.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Thompson & Horton LLP",
+   "floor": 20,
+   "suite": "2000",
+   "sqft": 13174.0,
+   "employees": 27,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Imagine Pediatrics",
+   "floor": 21,
+   "suite": "2100",
+   "sqft": 10806.0,
+   "employees": 72,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chelsea",
+   "floor": 21,
+   "suite": null,
+   "sqft": 3066.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brasada Capital Management",
+   "floor": 21,
+   "suite": null,
+   "sqft": 2455.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 21,
+   "suite": "2121",
+   "sqft": 3066.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Manchester Energy",
+   "floor": 22,
+   "suite": "2240",
+   "sqft": 5310.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Simon-Kucher",
+   "floor": 22,
+   "suite": "2210",
+   "sqft": 3707.0,
+   "employees": 24,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pinch Flatbed, Inc",
+   "floor": 22,
+   "suite": null,
+   "sqft": 1468.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 22,
+   "suite": "2240",
+   "sqft": 5310.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Donato Brown Pool & Moehlmann",
+   "floor": 23,
+   "suite": "2300",
+   "sqft": 21727.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Donato Brown Pool & Moehlmann",
+   "floor": 23,
+   "suite": "2305",
+   "sqft": 596.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allen Boone Humphries Robinson LLP",
+   "floor": 24,
+   "suite": "2400",
+   "sqft": 18450.0,
+   "employees": 95,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allen Boone Humphries Robinson LLP",
+   "floor": 25,
+   "suite": "2500",
+   "sqft": 25738.0,
+   "employees": 95,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allen Boone Humphries Robinson LLP",
+   "floor": 26,
+   "suite": "2600",
+   "sqft": 18450.0,
+   "employees": 95,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Perry Homes",
+   "floor": 27,
+   "suite": null,
+   "sqft": 25738.0,
+   "employees": 320,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Perry Homes",
+   "floor": 28,
+   "suite": null,
+   "sqft": 25738.0,
+   "employees": 320,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Britton Homes",
+   "floor": 28,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Perry Homes",
+   "floor": 29,
+   "suite": null,
+   "sqft": 25738.0,
+   "employees": 320,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rockspring Capital",
+   "floor": 30,
+   "suite": "10",
+   "sqft": 8761.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 30,
+   "suite": "3070",
+   "sqft": 6105.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 30,
+   "suite": "3030",
+   "sqft": 3584.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stanley Capital Management",
+   "floor": 31,
+   "suite": "3140",
+   "sqft": 1424.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RS&H",
+   "floor": 31,
+   "suite": null,
+   "sqft": 7296.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gruve",
+   "floor": 31,
+   "suite": "3120",
+   "sqft": 3730.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lassiter Law Firm",
+   "floor": 32,
+   "suite": "3250",
+   "sqft": 7345.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 33,
+   "suite": "3300",
+   "sqft": 7507.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 33,
+   "suite": "3350",
+   "sqft": 7018.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Blackbuck Resources LLC",
+   "floor": 34,
+   "suite": "3400",
+   "sqft": 18450.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

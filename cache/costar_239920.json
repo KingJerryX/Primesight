@@ -1,0 +1,677 @@
+{
+ "property_id": 239920,
+ "name": "Augusta Place",
+ "address": "2400 Augusta Dr, Houston, TX",
+ "lat": 29.7414986,
+ "lon": -95.4833002,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 130288.0,
+ "typical_floor_sqft": 32571.0,
+ "year_built": 1979,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Mabel & Associates Llc",
+   "floor": 1,
+   "suite": "141",
+   "sqft": 400.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mei's Cafe",
+   "floor": 1,
+   "suite": "124",
+   "sqft": 600.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Quick Passport & Visa Services",
+   "floor": 1,
+   "suite": "141b",
+   "sqft": 450.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pridestaff",
+   "floor": 1,
+   "suite": "103",
+   "sqft": 450.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elektra Hair Studio",
+   "floor": 1,
+   "suite": "114",
+   "sqft": 1050.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Triple Eight Thai Massage",
+   "floor": 1,
+   "suite": "183",
+   "sqft": 800.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Belle Therapy Massage & Bodywork",
+   "floor": 1,
+   "suite": "151",
+   "sqft": 736.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mesk Travel",
+   "floor": 1,
+   "suite": "191",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Peak Condition Houston",
+   "floor": 1,
+   "suite": "106",
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Snow Tree Dental",
+   "floor": 1,
+   "suite": "175",
+   "sqft": 5000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Massage By Dilara",
+   "floor": 1,
+   "suite": "192",
+   "sqft": 937.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Robert T. Stevenson, P.C., CPA",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 1200.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Memorial Health & Allergy",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Breathtaking events",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 800.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Agenu Laser and Electrolysis",
+   "floor": 1,
+   "suite": "184",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mcr Therapeutic Massage",
+   "floor": 1,
+   "suite": "140",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alterations by Ricardo",
+   "floor": 1,
+   "suite": "130",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Anastasia Aesthetics",
+   "floor": 1,
+   "suite": "180",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "L Skin Care Boutique",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Melanin Hair Bar",
+   "floor": 1,
+   "suite": "185",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Elektra Hair Studio",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 326.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 2450.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "At Your Side Home Care",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Raymond L Britton",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Avalon Body Sculpting & Skin Tightening",
+   "floor": 2,
+   "suite": "215",
+   "sqft": 937.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "River Oaks Chiropractic & Body Works",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 2280.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Skin Treatment",
+   "floor": 2,
+   "suite": "224",
+   "sqft": 800.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston TMJ Facial Pain and Sleep",
+   "floor": 2,
+   "suite": "276",
+   "sqft": 977.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rave Realty Group",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Polygon Physical Therapy",
+   "floor": 2,
+   "suite": "212",
+   "sqft": 3257.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kai Skincare",
+   "floor": 2,
+   "suite": "277",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tahamia Spain",
+   "floor": 2,
+   "suite": "266",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "J. Christopher",
+   "floor": 2,
+   "suite": "259",
+   "sqft": 977.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Siddity Max Studio",
+   "floor": 2,
+   "suite": "287",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Facelook Solution LLC",
+   "floor": 2,
+   "suite": "281",
+   "sqft": 1954.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Luxxe Day Spa",
+   "floor": 2,
+   "suite": "222",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AA Assurance Agency",
+   "floor": 2,
+   "suite": "275",
+   "sqft": 977.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "David M Redding",
+   "floor": 2,
+   "suite": "251",
+   "sqft": 1629.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Beautybee",
+   "floor": 2,
+   "suite": "226",
+   "sqft": 1954.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Looks International",
+   "floor": 2,
+   "suite": "285",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RP Jones, CPA",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bayou City Bodyworks",
+   "floor": 3,
+   "suite": "368",
+   "sqft": 800.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Deborah Longano",
+   "floor": 3,
+   "suite": "312",
+   "sqft": 800.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Massage Les Studios",
+   "floor": 3,
+   "suite": "309",
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Laurie L Plesant",
+   "floor": 3,
+   "suite": "367",
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Patriot Security EOC",
+   "floor": 3,
+   "suite": "329",
+   "sqft": 1398.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "QED Energy Associates",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 1954.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Body and Aesthetics Houston, LLC",
+   "floor": 3,
+   "suite": "314.",
+   "sqft": 1303.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lami Beauty Studio",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TC Galleria",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 1303.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lab Pros, LLC Laboratory",
+   "floor": 3,
+   "suite": "376",
+   "sqft": 977.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lab Pros, LLC Laboratory",
+   "floor": 3,
+   "suite": "369.",
+   "sqft": 937.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Htx Sports Massage",
+   "floor": 3,
+   "suite": "355",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Abbey Residential Services, Inc.",
+   "floor": 3,
+   "suite": "372",
+   "sqft": 1303.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Charmaine Co",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 1954.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Yana Kollina Russian Nails",
+   "floor": 3,
+   "suite": "308",
+   "sqft": 1629.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Al Cyrus, Tom Brooke",
+   "floor": 3,
+   "suite": "356",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Flawless Body Care",
+   "floor": 3,
+   "suite": "306",
+   "sqft": 651.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "State Farm",
+   "floor": 3,
+   "suite": "353",
+   "sqft": 651.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Augusta Energy Solutions",
+   "floor": 3,
+   "suite": "365",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 2374.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Joseph F. Davidow, M.D., P.A.",
+   "floor": 4,
+   "suite": "470",
+   "sqft": 800.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kirst Kosmoski, Inc.",
+   "floor": 4,
+   "suite": "405/407",
+   "sqft": 1492.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Evaluation Company",
+   "floor": 4,
+   "suite": "451",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gemology Recources",
+   "floor": 4,
+   "suite": "435",
+   "sqft": 2497.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Revenup Aesthetics at Skincare",
+   "floor": 4,
+   "suite": "426",
+   "sqft": 977.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sharon Leal Salon",
+   "floor": 4,
+   "suite": "454",
+   "sqft": 977.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gemstone Management",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 4886.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Be Beautiful Studio",
+   "floor": 4,
+   "suite": "408",
+   "sqft": 1629.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kks Environmental Llc",
+   "floor": 4,
+   "suite": "405",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "De Lara Law Firm, PLLC",
+   "floor": 4,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 311
+  },
+  {
+   "type": "Covered",
+   "spaces": 50
+  }
+ ],
+ "matterport_models": [
+  "NXYVeGtmPHp",
+  "aqUYXA8s1Bv"
+ ]
+}

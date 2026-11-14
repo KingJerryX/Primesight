@@ -1,0 +1,708 @@
+{
+ "property_id": 233903,
+ "name": "Williams Tower",
+ "address": "2800 Post Oak Blvd, Houston, TX",
+ "lat": 29.7375702,
+ "lon": -95.461339,
+ "type": "Office",
+ "stories": 64,
+ "gross_sqft": 1655703.0,
+ "typical_floor_sqft": 22700.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 39
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Murphy's Deli",
+   "floor": 0,
+   "suite": null,
+   "sqft": 18803.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CBRE",
+   "floor": 0,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Williams Companies, Inc.",
+   "floor": 0,
+   "suite": null,
+   "sqft": 7524.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate General Of Denmark",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Paradise Cards & Gifts",
+   "floor": 2,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CBRE",
+   "floor": 2,
+   "suite": null,
+   "sqft": 21163.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Williams Companies, Inc.",
+   "floor": 3,
+   "suite": null,
+   "sqft": 47275.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trammell Crow Company",
+   "floor": 4,
+   "suite": null,
+   "sqft": 2789.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "475",
+   "sqft": 9961.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CBRE",
+   "floor": 4,
+   "suite": null,
+   "sqft": 17669.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Williams Companies, Inc.",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CBRE",
+   "floor": 5,
+   "suite": null,
+   "sqft": 47984.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Williams Companies, Inc.",
+   "floor": 6,
+   "suite": null,
+   "sqft": 22630.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Williams Companies, Inc.",
+   "floor": 7,
+   "suite": null,
+   "sqft": 22628.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Williams Companies, Inc.",
+   "floor": 8,
+   "suite": null,
+   "sqft": 21048.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Williams Companies, Inc.",
+   "floor": 9,
+   "suite": null,
+   "sqft": 21954.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Williams Companies, Inc.",
+   "floor": 10,
+   "suite": null,
+   "sqft": 21968.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Williams Companies, Inc.",
+   "floor": 11,
+   "suite": null,
+   "sqft": 21968.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Williams Companies, Inc.",
+   "floor": 12,
+   "suite": null,
+   "sqft": 21968.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Williams Companies, Inc.",
+   "floor": 13,
+   "suite": null,
+   "sqft": 21968.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Williams Companies, Inc.",
+   "floor": 14,
+   "suite": null,
+   "sqft": 21968.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Williams Companies, Inc.",
+   "floor": 15,
+   "suite": null,
+   "sqft": 21974.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 19,
+   "suite": "1940",
+   "sqft": 1914.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 19,
+   "suite": "1930",
+   "sqft": 2145.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Merrill",
+   "floor": 22,
+   "suite": null,
+   "sqft": 21505.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Merrill",
+   "floor": 23,
+   "suite": null,
+   "sqft": 22677.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Inpex",
+   "floor": 24,
+   "suite": null,
+   "sqft": 4544.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Camden Property Trust",
+   "floor": 25,
+   "suite": null,
+   "sqft": 22784.0,
+   "employees": 250,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Camden Property Trust",
+   "floor": 26,
+   "suite": null,
+   "sqft": 20314.0,
+   "employees": 250,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Quanta Energized Services",
+   "floor": 26,
+   "suite": "2600",
+   "sqft": 2368.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Camden Property Trust",
+   "floor": 27,
+   "suite": null,
+   "sqft": 20314.0,
+   "employees": 250,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Camden Property Trust",
+   "floor": 28,
+   "suite": null,
+   "sqft": 20314.0,
+   "employees": 250,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Camden Property Trust",
+   "floor": 29,
+   "suite": null,
+   "sqft": 13183.0,
+   "employees": 250,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morgan Stanley",
+   "floor": 30,
+   "suite": null,
+   "sqft": 22694.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morgan Stanley",
+   "floor": 31,
+   "suite": null,
+   "sqft": 10651.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morgan Stanley",
+   "floor": 32,
+   "suite": null,
+   "sqft": 23104.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Morgan Stanley",
+   "floor": 33,
+   "suite": null,
+   "sqft": 14090.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Methanex Corporation",
+   "floor": 34,
+   "suite": "3400",
+   "sqft": 23101.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 37,
+   "suite": null,
+   "sqft": 23090.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 38,
+   "suite": null,
+   "sqft": 23090.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 39,
+   "suite": null,
+   "sqft": 20803.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 40,
+   "suite": null,
+   "sqft": 22606.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 41,
+   "suite": null,
+   "sqft": 21123.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Custom Installers",
+   "floor": 41,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Westward360",
+   "floor": 41,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 42,
+   "suite": null,
+   "sqft": 22263.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 43,
+   "suite": null,
+   "sqft": 23239.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 44,
+   "suite": null,
+   "sqft": 22591.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 45,
+   "suite": null,
+   "sqft": 23233.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 46,
+   "suite": null,
+   "sqft": 23233.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 47,
+   "suite": null,
+   "sqft": 20803.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hines REIT, Inc.",
+   "floor": 48,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 48,
+   "suite": null,
+   "sqft": 23233.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 49,
+   "suite": null,
+   "sqft": 21292.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 50,
+   "suite": null,
+   "sqft": 20861.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Industrial and Commercial Bank of China (USA)",
+   "floor": 51,
+   "suite": null,
+   "sqft": 2080.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LyondellBasell",
+   "floor": 51,
+   "suite": null,
+   "sqft": 5544.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Parkland Supply Corp",
+   "floor": 52,
+   "suite": "5200",
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Count Group",
+   "floor": 53,
+   "suite": "4025",
+   "sqft": 2234.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Commerceworks Technology Corp",
+   "floor": 55,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LieberLieber",
+   "floor": 55,
+   "suite": null,
+   "sqft": 5355.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NEWMEDIA.com",
+   "floor": 55,
+   "suite": null,
+   "sqft": 2500.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ROM Commercial Properties",
+   "floor": 56,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 56,
+   "suite": null,
+   "sqft": 246.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Titan Global Advisory",
+   "floor": 56,
+   "suite": "5600",
+   "sqft": 1000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Servcorp",
+   "floor": 56,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MMBG Investment Advisors",
+   "floor": 56,
+   "suite": null,
+   "sqft": 5621.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DiCecco Law Partners",
+   "floor": 56,
+   "suite": null,
+   "sqft": 4392.0,
+   "employees": 24,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Roberts Markel Weinberg Butler Hailey PC",
+   "floor": 57,
+   "suite": "5700",
+   "sqft": 19850.0,
+   "employees": 44,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Partners Group",
+   "floor": 58,
+   "suite": null,
+   "sqft": 4171.0,
+   "employees": 27,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Centurion Financial",
+   "floor": 59,
+   "suite": "5900",
+   "sqft": 2193.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 59,
+   "suite": "5925",
+   "sqft": 3588.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tri-Star",
+   "floor": 61,
+   "suite": "6100",
+   "sqft": 17057.0,
+   "employees": 113,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alterna Securities",
+   "floor": 63,
+   "suite": "6300",
+   "sqft": 8451.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hall Maines Lugrin",
+   "floor": 64,
+   "suite": "6400",
+   "sqft": 8451.0,
+   "employees": 32,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Hines",
+   "phone": "5559874089"
+  }
+ ],
+ "matterport_models": [
+  "eJKnR3x44eh"
+ ]
+}

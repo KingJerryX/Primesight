@@ -1,0 +1,181 @@
+{
+ "property_id": 42345,
+ "name": "International Mart",
+ "address": "155 Washington Blvd, Los Angeles, CA",
+ "lat": 34.032066,
+ "lon": -118.266212,
+ "type": "Office",
+ "stories": 12,
+ "gross_sqft": 182526.0,
+ "typical_floor_sqft": 15210.0,
+ "year_built": 1927,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Subway",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 850.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Albert Grigorian",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mural Conservancy of Los Angeles",
+   "floor": 1,
+   "suite": "G6",
+   "sqft": 350.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Real Estate Exchange Group",
+   "floor": 1,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "365 Thai Kitchen",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1780.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Loyal Subjects",
+   "floor": 2,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jason Shawn Alexander Studio",
+   "floor": 2,
+   "suite": "203",
+   "sqft": 1000.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Digital Buyer.com",
+   "floor": 3,
+   "suite": "306",
+   "sqft": 2400.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fashion Enterprise",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 1009.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nifty Genius",
+   "floor": 7,
+   "suite": "714",
+   "sqft": 4255.0,
+   "employees": 28,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Everyday Ritual",
+   "floor": 7,
+   "suite": "709",
+   "sqft": 3800.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Play Studios LA",
+   "floor": 8,
+   "suite": "840",
+   "sqft": 2900.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "inheal",
+   "floor": 8,
+   "suite": null,
+   "sqft": 2252.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kay Celine",
+   "floor": 10,
+   "suite": "1004",
+   "sqft": 2814.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wondergloss Studios",
+   "floor": 10,
+   "suite": "1020",
+   "sqft": 3100.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "155 Washington LLC",
+   "floor": 10,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Tarzana Offices & Medical Buildings, LLC",
+   "phone": "5556343453"
+  }
+ ],
+ "matterport_models": [
+  "LXCXLaCxS2t"
+ ]
+}

@@ -1,0 +1,649 @@
+{
+ "property_id": 239603,
+ "name": "Wells Fargo Building",
+ "address": "13201 Northwest Fwy, Houston, TX",
+ "lat": 29.8480853,
+ "lon": -95.5067373,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 134766.0,
+ "typical_floor_sqft": 17053.0,
+ "year_built": 1979,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Cole Health",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 10583.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DMB Insurance Group",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 3021.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SF Resources",
+   "floor": 1,
+   "suite": "119",
+   "sqft": 3241.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lumis MedSpa",
+   "floor": 2,
+   "suite": "275",
+   "sqft": 1200.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rarity Solutions",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 2899.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Focus Medical Supply",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 842.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "280A",
+   "sqft": 879.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Northwest General Insurance and Financial Services",
+   "floor": 2,
+   "suite": null,
+   "sqft": 1246.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GA Jersey Village",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 1853.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Women's Reproductive Services",
+   "floor": 3,
+   "suite": "365",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Family Shield Life Insurance",
+   "floor": 3,
+   "suite": "323A",
+   "sqft": 800.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RF Financial",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 1179.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Star Personnel",
+   "floor": 3,
+   "suite": "320",
+   "sqft": 1417.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Life Skills Academy",
+   "floor": 3,
+   "suite": "324",
+   "sqft": 674.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ultimate Texas Associates",
+   "floor": 3,
+   "suite": "324A",
+   "sqft": 935.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sanchez Law Firm",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 5721.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "M7 Services",
+   "floor": 4,
+   "suite": "405",
+   "sqft": 994.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "GMA Medical Billing",
+   "floor": 4,
+   "suite": "425",
+   "sqft": 1348.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NewLife Realty Group",
+   "floor": 4,
+   "suite": "415",
+   "sqft": 1179.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BixPlan",
+   "floor": 4,
+   "suite": "475",
+   "sqft": 842.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lapyz Plans & Permits",
+   "floor": 4,
+   "suite": "475A",
+   "sqft": 674.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Andre Thomas Law",
+   "floor": 4,
+   "suite": "485",
+   "sqft": 674.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Protax",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 1770.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sergio Cantu Photography",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 1072.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Home Exterior Systems",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1800.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Collective Realty Co.",
+   "floor": 4,
+   "suite": null,
+   "sqft": 1011.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Environmental Analytical Service",
+   "floor": 5,
+   "suite": "520",
+   "sqft": 842.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Hair Restoration & Wellness Center",
+   "floor": 5,
+   "suite": "512",
+   "sqft": 2040.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BES Group & Associates",
+   "floor": 5,
+   "suite": "503",
+   "sqft": 842.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AP Hospice Care LLC",
+   "floor": 5,
+   "suite": "518A",
+   "sqft": 842.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Holistic Weight Loss Center",
+   "floor": 5,
+   "suite": "516, 512B",
+   "sqft": 674.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Acclaim Mental Health Services",
+   "floor": 5,
+   "suite": "518",
+   "sqft": 842.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CENA Law Firm",
+   "floor": 5,
+   "suite": "570",
+   "sqft": 816.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reinforcing Houston",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 842.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Serrano Law Firm",
+   "floor": 5,
+   "suite": "588",
+   "sqft": 1101.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "580",
+   "sqft": 837.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "585",
+   "sqft": 754.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Whitmire Counseling & Supervision",
+   "floor": 6,
+   "suite": "670",
+   "sqft": 842.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "M & E Consulting",
+   "floor": 6,
+   "suite": "633",
+   "sqft": 1348.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Platinum Group Security",
+   "floor": 6,
+   "suite": "645",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Core Personnel Staffing Services",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 505.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Diamond Financial Group",
+   "floor": 6,
+   "suite": "637",
+   "sqft": 614.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Businestry",
+   "floor": 6,
+   "suite": "615",
+   "sqft": 1011.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reliable HR Solutions",
+   "floor": 6,
+   "suite": "683",
+   "sqft": 1011.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NW Saftey",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 842.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Lab Aesthetic Study",
+   "floor": 6,
+   "suite": "685",
+   "sqft": 337.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NB Health",
+   "floor": 6,
+   "suite": "668",
+   "sqft": 842.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Travelvax",
+   "floor": 6,
+   "suite": "635",
+   "sqft": 505.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cosmo Beauty Suites",
+   "floor": 6,
+   "suite": "625",
+   "sqft": 505.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TX Elite Roofing Services",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 842.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brows By Abrianna",
+   "floor": 6,
+   "suite": "662",
+   "sqft": 674.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Multicultural & Spanish Therapist Group",
+   "floor": 6,
+   "suite": "630",
+   "sqft": 1011.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ruth Rivera Law",
+   "floor": 6,
+   "suite": "677",
+   "sqft": 1088.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Custom Care Wellness",
+   "floor": 6,
+   "suite": "655",
+   "sqft": 2863.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marie Luxe Spa",
+   "floor": 6,
+   "suite": "655B",
+   "sqft": 505.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gary McGuire Development",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 1998.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Mind Body Counseling",
+   "floor": 7,
+   "suite": "770",
+   "sqft": 1058.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cornerstone Caregiving",
+   "floor": 7,
+   "suite": "777",
+   "sqft": 842.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Future Production",
+   "floor": 7,
+   "suite": "780",
+   "sqft": 1951.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Grupo Ayudate",
+   "floor": 7,
+   "suite": "715",
+   "sqft": 2118.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Integris Family Services",
+   "floor": 7,
+   "suite": "720",
+   "sqft": 681.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Roger Williams Academy",
+   "floor": 7,
+   "suite": "724",
+   "sqft": 1761.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Allegiance Hospice",
+   "floor": 7,
+   "suite": "790",
+   "sqft": 579.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Panquin Ramezani",
+   "floor": 7,
+   "suite": "760",
+   "sqft": 1008.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AKS Insurance & Taxes, Inc",
+   "floor": 7,
+   "suite": "702",
+   "sqft": 1363.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 7,
+   "suite": "785",
+   "sqft": 700.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 8,
+   "suite": null,
+   "sqft": 6786.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 380
+  },
+  {
+   "type": "Covered",
+   "spaces": 225
+  }
+ ],
+ "matterport_models": [
+  "E7xRXzkjMSE",
+  "MnXUqTokRqk"
+ ]
+}

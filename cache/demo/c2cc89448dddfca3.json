@@ -1,0 +1,407 @@
+{
+ "text": "Electrical fire in a server room on the 5th floor, 808 Travis St, Houston. Smoke visible from the street.",
+ "out": {
+  "briefing": "PRIMESIGHT | ELECTRICAL FIRE (SERVER ROOM, SMOKE SHOWING) | FLOOR 5\nEsperson - 808 Travis St, Houston, TX\nABOVE FIRE: ~349 people on floors 6-27, no tenant list for those floors\nON FLOOR: Houston Symphony (ste 500, 2103 sqft), headcount not known\nHYDRANTS: 46 m E, 46 m S (next 61 m NE)\nINSIDE: scan of this floor, 37 points. EXIT SIGNS seen from 9 of 37 points, PULL STATIONS from 4 of 37. Walk from scan start (not an entry): exit sign ~4 m, pull station ~24 m, far end ~50 m\nBUILDING: 27 stories, built 1941, masonry frame, sprinklers yes, 12 passenger + 1 freight elevator\nROOF: membrane, 4 AC units\nOPEN LOT for staging ~483 m SE (aerial search, verify)\nPROPERTY MGR: Cameron Management 5553362403 (texted to meet crew with engineer and keys)\nNOT KNOWN: sprinkler type, stair locations, standpipe locations, server room power shutoff, building engineer contact\n3D SCAN: https://my.matterport.com/show/?m=wovF4kpoaw4",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\233953_wovF4kpoaw4_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\233953_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/233953_wovF4kpoaw4_plan_marked.jpg",
+   "/img/233953_aerial.jpg"
+  ],
+  "property_id": 233953,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire dept: electrical fire, server room floor 5, smoke showing, 808 Travis. Meet crew at main entrance with engineer + keys. Have sprinkler type and server room power shutoff info."
+   }
+  ],
+  "tenant_flags": [
+   {
+    "tenant": "Occupants of floors 6-27 (no tenant list)",
+    "floor": null,
+    "risk": "High occupancy above the fire floor: about 349 people",
+    "why": "Building data puts about 349 people on floors 6-27, all above the floor 5 fire. Smoke is already visible from the street, and the building is a 1941 masonry high-rise, so smoke may spread upward through stairs, shafts and voids. Plan for vertical evacuation or shelter-in-place, stairwell pressurization and control, and searches above the fire. Individual tenants and any vulnerable people up there are unknown.",
+    "from_name_only": false
+   },
+   {
+    "tenant": "Houston Symphony",
+    "floor": 5,
+    "risk": "Fire-floor tenant with unknown occupants (Suite 500, 2,103 sq ft)",
+    "why": "This is the only listed tenant on the fire floor. Headcount is not given and the industry is Unknown, so check that Suite 500 is clear during the primary search. The name suggests administrative offices, possibly with visitors and stored instruments or archives. That guess comes only from the name; no hazardous materials or vulnerable occupants are documented.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "fire",
+   "floor": 5,
+   "building": {
+    "name": "Esperson",
+    "address": "808 Travis St, Houston, TX",
+    "stories": 27,
+    "year_built": 1941,
+    "construction": "Masonry",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 35,
+     "tenants": [
+      "Amegy Bank",
+      "Arovia",
+      "Cinnabon",
+      "Sunset Body Works Day Spa",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 15,
+     "tenants": [
+      "Allthenticate",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 16,
+     "tenants": [
+      "Ashby",
+      "Bailey Law Firm PLLC",
+      "Cameron Management",
+      "Unknown tenant",
+      "Verdad Exploration Mexico Llc"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 5,
+     "people": 0,
+     "tenants": [
+      "Houston Symphony"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 37,
+      "exit sign": 9,
+      "stairs": 1,
+      "fire extinguisher": 6,
+      "fire alarm pull station": 4
+     }
+    },
+    {
+     "floor": 6,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 7,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 20,
+     "tenants": [
+      "Osprey Resources Inc",
+      "Proxima Innovation LLC",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 18,
+     "tenants": [
+      "Energy Intelligence Group",
+      "Gaston & Thanheiser",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 118,
+     "tenants": [
+      "Branscomb Law",
+      "Martin, Disiere, Jefferson & Wisdom, L.L.P.",
+      "Mountaintop Consulting",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 12,
+     "people": 50,
+     "tenants": [
+      "Martin, Disiere, Jefferson & Wisdom, L.L.P."
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 13,
+     "people": 2,
+     "tenants": [
+      "Amegy Bank"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 14,
+     "people": 23,
+     "tenants": [
+      "Delaney Law Firm",
+      "Henneman Rau Kirklin & Smith LLP",
+      "MV2 Insurance Solutions",
+      "The Saman Law Firm",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 15,
+     "people": 56,
+     "tenants": [
+      "Consumer Protection Division",
+      "Stewart J. Guss Injury Accident Lawyers",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 16,
+     "people": 54,
+     "tenants": [
+      "David Dopkin, Attorney At Law",
+      "Kirby, Mathews and Walrath",
+      "Magna Operating",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 17,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 18,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 19,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 20,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 21,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 22,
+     "people": 3,
+     "tenants": [
+      "Kerrco Resources Llc"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 23,
+     "people": 5,
+     "tenants": [
+      "Spencer Fane LLP"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 24,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 25,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 26,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 27,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 46,
+     "dir": "E",
+     "lat": 29.75883894062657,
+     "lon": -95.36461569392658
+    },
+    {
+     "m": 46,
+     "dir": "S",
+     "lat": 29.758401250699926,
+     "lon": -95.36520577779223
+    },
+    {
+     "m": 61,
+     "dir": "NE",
+     "lat": 29.759159529902803,
+     "lon": -95.36461467017527
+    },
+    {
+     "m": 83,
+     "dir": "S",
+     "lat": 29.758060695903286,
+     "lon": -95.36521517053836
+    },
+    {
+     "m": 84,
+     "dir": "N",
+     "lat": 29.75952672075991,
+     "lon": -95.36532107110962
+    }
+   ],
+   "staging": [
+    {
+     "m": 483,
+     "dir": "SE",
+     "lat": 29.75633025,
+     "lon": -95.360984805,
+     "score": 0.219
+    },
+    {
+     "m": 526,
+     "dir": "SW",
+     "lat": 29.755734145,
+     "lon": -95.36922455,
+     "score": 0.205
+    },
+    {
+     "m": 391,
+     "dir": "SE",
+     "lat": 29.756926355,
+     "lon": -95.36167144999999,
+     "score": 0.204
+    }
+   ],
+   "scan": {
+    "floor": 5,
+    "exact": true,
+    "link": "https://my.matterport.com/show/?m=wovF4kpoaw4"
+   },
+   "vision": {
+    "scan_points": 37,
+    "scan_points_with": {
+     "exit sign": 9,
+     "stairs": 1,
+     "fire extinguisher": 6,
+     "fire alarm pull station": 4
+    },
+    "image_urls": [
+     "/img/vision/wovF4kpoaw4/000_0.jpg",
+     "/img/vision/wovF4kpoaw4/000_2.jpg",
+     "/img/vision/wovF4kpoaw4/001_1.jpg",
+     "/img/vision/wovF4kpoaw4/001_2.jpg",
+     "/img/vision/wovF4kpoaw4/001_3.jpg",
+     "/img/vision/wovF4kpoaw4/002_0.jpg",
+     "/img/vision/wovF4kpoaw4/003_1.jpg",
+     "/img/vision/wovF4kpoaw4/004_0.jpg",
+     "/img/vision/wovF4kpoaw4/004_2.jpg",
+     "/img/vision/wovF4kpoaw4/005_0.jpg",
+     "/img/vision/wovF4kpoaw4/006_0.jpg",
+     "/img/vision/wovF4kpoaw4/006_2.jpg"
+    ]
+   },
+   "walk": "walk from scan start: exit sign within ~4 m, far end ~50 m",
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire dept: electrical fire, server room floor 5, smoke showing, 808 Travis. Meet crew at main entrance with engineer + keys. Have sprinkler type and server room power shutoff info."
+    }
+   ],
+   "tenant_flags": [
+    {
+     "tenant": "Occupants of floors 6-27 (no tenant list)",
+     "floor": null,
+     "risk": "High occupancy above the fire floor: about 349 people",
+     "why": "Building data puts about 349 people on floors 6-27, all above the floor 5 fire. Smoke is already visible from the street, and the building is a 1941 masonry high-rise, so smoke may spread upward through stairs, shafts and voids. Plan for vertical evacuation or shelter-in-place, stairwell pressurization and control, and searches above the fire. Individual tenants and any vulnerable people up there are unknown.",
+     "from_name_only": false
+    },
+    {
+     "tenant": "Houston Symphony",
+     "floor": 5,
+     "risk": "Fire-floor tenant with unknown occupants (Suite 500, 2,103 sq ft)",
+     "why": "This is the only listed tenant on the fire floor. Headcount is not given and the industry is Unknown, so check that Suite 500 is clear during the primary search. The name suggests administrative offices, possibly with visitors and stored instruments or archives. That guess comes only from the name; no hazardous materials or vulnerable occupants are documented.",
+     "from_name_only": true
+    }
+   ],
+   "call": "Electrical fire in a server room on the 5th floor, 808 Travis St, Houston. Smoke visible from the street."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Electrical fire in a server room on the 5th floor, 808 Travis St, Houston. Smoke visible from the street.\"}\n{\"t\": 0.09, \"step\": \"address_lookup\", \"detail\": \"808 Travis St, Houston -> 233953\"}\n{\"t\": 4.35, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"808 Travis St, Houston\\\"}\"}\n{\"t\": 4.36, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/fire/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 4.36, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 7.15, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 233953, \\\"floor\\\": 5, \\\"incident\\\": \\\"fire\\\", \\\"incident_type\\\": \\\"electrical_fire\\\"}\"}\n{\"t\": 7.16, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/233953.md\\\"}\"}\n{\"t\": 26.39, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: electrical fire in a server room, floor 5, Esperson building, 808 Travis St, Houston (27 stories, built 1941, masonry, sprinklered). Smoke vi\"}\n{\"t\": 26.4, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Incident: electrical fire in a server room, floor 5, smoke visible from street. Address: Esperson, 808 Travis St, Houston, TX. Elevators per data: 12\"}\n{\"t\": 26.41, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"inside-scout\\\", \\\"description\\\": \\\"Scan id wovF4kpoaw4 (floor 5, 808 Travis St, exact floor). Find walk distance from scan start to the nearest fire alarm pull station and the nearest e\"}\n{\"t\": 29.48, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"wovF4kpoaw4\\\", \\\"target\\\": \\\"fire alarm pull station\\\"}\"}\n{\"t\": 29.48, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"wovF4kpoaw4\\\", \\\"target\\\": \\\"exit sign\\\"}\"}\n{\"t\": 33.43, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire dept: electrical fire, server room floor 5, smoke showing, 808 Travis. Meet crew at main entrance with engineer + keys. Have sprinkler type and server room pow\"}\n{\"t\": 42.42, \"step\": \"ls\", \"detail\": \"{\\\"path\\\": \\\"/buildings\\\"}\"}\n{\"t\": 48.09, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 233953, \\\"note\\\": \\\"Electrical fire in server room, floor 5 (Houston Symphony ste 500 on floor), smoke visible from street. Briefing sent; property manager Cameron Management texted to me\"}\n{\"t\": 61.65, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 61.65, \"step\": \"usage\", \"detail\": \"118858 in / 5385 out tokens, ~$0.58\"}\n{\"t\": 61.65, \"step\": \"done\", \"detail\": \"12 lines, 2 images\"}\n"
+}

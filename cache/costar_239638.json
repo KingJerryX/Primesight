@@ -1,0 +1,45 @@
+{
+ "property_id": 239638,
+ "name": "CCA-04-06, Viva Center",
+ "address": "11445 Compaq Center West Dr, Houston, TX",
+ "lat": 29.9905086,
+ "lon": -95.5828212,
+ "type": "Office",
+ "stories": 8,
+ "gross_sqft": 689000.0,
+ "typical_floor_sqft": 72450.0,
+ "year_built": 1987,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Defense in Depth Solutions",
+   "floor": 1,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Globalternative Solutions Llc",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "yp8J6s8tP1o"
+ ]
+}

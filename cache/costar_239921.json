@@ -1,0 +1,443 @@
+{
+ "property_id": 239921,
+ "name": "Two Bering Park",
+ "address": "800 Bering Dr, Houston, TX",
+ "lat": 29.7578818,
+ "lon": -95.4806279,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 178944.0,
+ "typical_floor_sqft": 44736.0,
+ "year_built": 1979,
+ "construction": "Masonry",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Houston Association Of Professional Landmen",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 400.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cushman and Wakefield of Texas, Inc",
+   "floor": 1,
+   "suite": "160",
+   "sqft": 500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Affiliates Prime Plus",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 5801.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ameriprise",
+   "floor": 1,
+   "suite": "105",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fraizer Oil Properties, LLC",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Doherty & Doherty, LLP",
+   "floor": 1,
+   "suite": "112",
+   "sqft": 6710.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tanglewood Aesthetics",
+   "floor": 1,
+   "suite": "109",
+   "sqft": 3132.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nelson Duffie Interests Inc",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 1342.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Outpost Travel Rental, LLC",
+   "floor": 1,
+   "suite": "106",
+   "sqft": 895.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Charles R. Gregg, Attorney at Law",
+   "floor": 1,
+   "suite": "100",
+   "sqft": 1342.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Garcia + Associates Architect",
+   "floor": 1,
+   "suite": "108",
+   "sqft": 895.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 1660.0,
+   "employees": null,
+   "industry": "FinancialInstitutions",
+   "about": null
+  },
+  {
+   "name": "Hail Tom L",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Biological Dentist",
+   "floor": 2,
+   "suite": "204",
+   "sqft": 1727.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Peckham Martin, PLLC",
+   "floor": 2,
+   "suite": "220",
+   "sqft": 4474.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Verity Advisors",
+   "floor": 2,
+   "suite": "225",
+   "sqft": 2237.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Moore Hospitality Management",
+   "floor": 2,
+   "suite": "206",
+   "sqft": 723.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Isla Carroll Turner Friendship",
+   "floor": 2,
+   "suite": "202",
+   "sqft": 1960.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Van Wey & Metzler",
+   "floor": 2,
+   "suite": "220b",
+   "sqft": null,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bradford N. Oesch, P.C.",
+   "floor": 2,
+   "suite": "201",
+   "sqft": 1342.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Crew Land Research LTD",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 1342.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wessels Private Wealth, LLC",
+   "floor": 2,
+   "suite": "200",
+   "sqft": 6710.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wess Seago LMT",
+   "floor": 2,
+   "suite": "216",
+   "sqft": 1342.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Scott & Selber Inc. Capital Management",
+   "floor": 2,
+   "suite": "208",
+   "sqft": 1342.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Buckley Law Firm",
+   "floor": 2,
+   "suite": "209",
+   "sqft": 895.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cummins' Interests",
+   "floor": 2,
+   "suite": "212",
+   "sqft": 6710.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Daniel S Brollier",
+   "floor": 2,
+   "suite": "205",
+   "sqft": 4474.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chickasaw Distributors, Inc.",
+   "floor": 3,
+   "suite": "330",
+   "sqft": 2165.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Reckling Insurance Group",
+   "floor": 3,
+   "suite": "310b",
+   "sqft": 450.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "J.M. Strange & Company",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 900.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Houston Dentists Tanglewood",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 1200.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Denson Company",
+   "floor": 3,
+   "suite": "304",
+   "sqft": 978.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Offshore Exploration And Production",
+   "floor": 3,
+   "suite": "315",
+   "sqft": 1025.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rockport Resources Capital Corporation",
+   "floor": 3,
+   "suite": "305",
+   "sqft": 895.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Insurance Agency",
+   "floor": 3,
+   "suite": "360",
+   "sqft": 895.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pfeffer Family",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 895.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Zimmerman Resources",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 895.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lone Star Production Company",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 3057.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arendale & Company PC",
+   "floor": 4,
+   "suite": "430",
+   "sqft": 3254.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stafford Properties Development Co",
+   "floor": 4,
+   "suite": "460",
+   "sqft": 930.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chateau Construction, Inc.",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 1342.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "RJ MacDonald Charitable Trust",
+   "floor": 4,
+   "suite": "415",
+   "sqft": 1342.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MWE Energy, INC.",
+   "floor": 4,
+   "suite": "401",
+   "sqft": 2237.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Perdenales Production",
+   "floor": 4,
+   "suite": "410",
+   "sqft": 895.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eagle National Resource Management",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 2237.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 55
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "ANXH68X64Gj",
+  "anYwjj7Pe2W"
+ ]
+}

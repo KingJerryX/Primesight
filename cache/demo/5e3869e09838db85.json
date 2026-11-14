@@ -1,0 +1,380 @@
+{
+ "text": "E-bike battery caught fire in an office on the 6th floor, 363 Sam Houston Pky, Houston.",
+ "out": {
+  "briefing": "PRIMESIGHT | LITHIUM BATTERY / E-BIKE FIRE | FLOOR 6 | Northbelt, 363 Sam Houston Pky, Houston TX\nABOVE FIRE: ~159 people on floors 7-20. Fl 7 Safe Have Mental Health Solutions, possible vulnerable clients (from name only). Fl 9 salons, possible flammable products (from name only)\nON FLOOR: Ste 600 Unknown tenant, 605 Dream Counseling Center (possible vulnerable clients, from name only), 610 Tax Services Of Houston, 615 H5 Strategic Alliances, 640 Count It All Joy Tax Group, 660 Crystal CoWorks 4536 sqft (possible high occupancy, from name only)\nWATER/WIND: 17 hydrants within 300 m, nearest ~137 m NE, 156 m NW. Wind from ENE 9 mph, gusts 23, smoke drifts WSW\nINSIDE: 3D scan of this floor, 12 scan points. Exit signs seen from 10 of 12 scan points, pull stations from 5. Walk from scan start (not the entry): exit sign ~1 m, pull station within ~4 m, far end ~17 m\nBUILDING: 20 stories, built 1981, steel frame, sprinklers yes, 7 passenger + 1 freight elevators\nCREW NOTE: 2026-11-14 sprinkler pipe burst with water flowing on floor 6. Riser and shutoff locations not in data\nROOF: membrane, 4 AC units, 2 vents, 1 skylight, no solar\nOPEN LOT for staging ~562 m SW and ~308 m E (aerial search, verify)\nPROPERTY MGR: Realty.com 5559806802 (text asking them to meet crew is queued, not sent yet)\nNOT KNOWN: stair locations, standpipe locations, sprinkler type, riser/shutoff, headcounts, any tenant battery storage\nSCAN: https://my.matterport.com/show/?m=Fv5Q2P8Kmsf",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\234022_Fv5Q2P8Kmsf_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\234022_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/234022_Fv5Q2P8Kmsf_plan_marked.jpg",
+   "/img/234022_aerial.jpg"
+  ],
+  "property_id": 234022,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire Dept: lithium e-bike battery fire in an office on floor 6, Northbelt, 363 Sam Houston Pky. Please meet the fire crew on arrival with keys and building info."
+   }
+  ],
+  "tenant_flags": [
+   {
+    "tenant": "Crystal CoWorks (Suite 660)",
+    "floor": 6,
+    "risk": "High occupancy",
+    "why": "(from name only) This looks like a coworking space. At 4,536 sq ft it is by far the largest tenant on the fire floor, and the number of people inside is unknown and may change through the day. Expect many occupants who don't know the building well, and plan a thorough primary search.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Dream Counseling Center (Suite 605)",
+    "floor": 6,
+    "risk": "Vulnerable occupants",
+    "why": "(from name only) A counseling practice on the fire floor may have clients in distress or with limited mobility who need help or calm guidance to get out.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Safe Have Mental Health Solutions",
+    "floor": 7,
+    "risk": "Vulnerable occupants",
+    "why": "(from name only) A mental health provider on the floor directly above the fire, where smoke is likely to reach first. Clients may need assistance. Suite number unknown.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Floor 9 salons (Studio Nine Salon Suites, Front Cover Hair Studios, Upperhairchelon And Spa, SV Beauty And Spa, others)",
+    "floor": 9,
+    "risk": "Hazardous materials",
+    "why": "(from name only) A cluster of hair and beauty salons above the fire floor probably stores flammable aerosols, solvents, and oxidizers such as peroxide and acetone. Salon clients may also be in chairs or under treatment. Check this floor during vertical ventilation and the smoke search.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "fire",
+   "floor": 6,
+   "building": {
+    "name": "Northbelt",
+    "address": "363 Sam Houston Pky, Houston, TX",
+    "stories": 20,
+    "year_built": 1981,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 0,
+     "tenants": [
+      "Cinco And Tres Coffee",
+      "Designs Can Empower Llc",
+      "Realty.com Commercial"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 17,
+     "tenants": [
+      "BB&W Architects",
+      "Gaspy Hospice, Inc",
+      "Slayistry"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 9,
+     "tenants": [
+      "ByGod's Grace Financial",
+      "Healistic Touch And Luxe Legacy",
+      "NewU Beauty",
+      "Styled By Slimm",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 5,
+     "people": 25,
+     "tenants": [
+      "Borusan Pipe",
+      "Resolurions Hospice"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 0,
+     "tenants": [
+      "Crystal CoWorks",
+      "Dream Counseling Center",
+      "H5 Strategic Alliances",
+      "Tax Services Of Houston LLC",
+      "The Count It All Joy Tax Group",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 12,
+      "exit sign": 10,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 5
+     }
+    },
+    {
+     "floor": 7,
+     "people": 52,
+     "tenants": [
+      "Celo Trade Inc",
+      "Meiko America Inc",
+      "Morgan Systems Intl Inc",
+      "PPC Insulators",
+      "Safe Have  Mental Health Solutions",
+      "The Executive Tax Lounge"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 36,
+     "tenants": [
+      "Criaco & Samperi",
+      "Hooper, Langley & Associates, P.C.",
+      "Transocean Shipping"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 4,
+     "tenants": [
+      "AP TK Hair",
+      "DeLa Dweer Hair",
+      "Diverse Destination",
+      "Front Cover Hair Studios",
+      "SV Beauty And Spa",
+      "Studio Nine Salon Suites",
+      "Unknown tenant",
+      "Upperhairchelon And Spa"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 14,
+     "tenants": [
+      "AP Consulting TX LLC",
+      "Advanced Chiropractic Relief",
+      "Bellaire Wellness Center",
+      "InkMore Studios",
+      "Obex Worldwide Limited",
+      "The Art Artistry Beauty Suites",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 2,
+     "tenants": [
+      "Regus"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 12,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 13,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 14,
+     "people": 30,
+     "tenants": [
+      "A And S Multi Service",
+      "Ameriprise Financial, Inc.",
+      "Beyond BeautyAcademy",
+      "Jewels Beauty LLC",
+      "The Wallace Law Firm"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 15,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 16,
+     "people": 5,
+     "tenants": [
+      "Argo Texas Group",
+      "Emerald Studio Suites",
+      "Square Biz Solutions"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 17,
+     "people": 6,
+     "tenants": [
+      "All The Rave",
+      "The Pink Spa And Lounge",
+      "Vip Spa"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 18,
+     "people": 10,
+     "tenants": [
+      "Count It All Joy LLC",
+      "Strategic Growth Alliance 366"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 19,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 20,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 137,
+     "dir": "NE",
+     "lat": 29.942778928383923,
+     "lon": -95.39611704675329
+    }
+   ],
+   "staging": [
+    {
+     "m": 562,
+     "dir": "SW",
+     "lat": 29.938572839999996,
+     "lon": -95.401496885,
+     "score": 0.249
+    },
+    {
+     "m": 308,
+     "dir": "E",
+     "lat": 29.9415479,
+     "lon": -95.39394378499999,
+     "score": 0.228
+    },
+    {
+     "m": 387,
+     "dir": "E",
+     "lat": 29.940952895,
+     "lon": -95.39325714,
+     "score": 0.224
+    }
+   ],
+   "scan": {
+    "floor": 6,
+    "exact": true,
+    "link": "https://my.matterport.com/show/?m=Fv5Q2P8Kmsf"
+   },
+   "vision": {
+    "scan_points": 12,
+    "scan_points_with": {
+     "exit sign": 10,
+     "stairs": 0,
+     "fire extinguisher": 0,
+     "fire alarm pull station": 5
+    },
+    "image_urls": [
+     "/img/vision/Fv5Q2P8Kmsf/000_1.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/001_2.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/001_3.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/002_0.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/003_1.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/003_3.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/004_0.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/004_1.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/004_2.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/005_0.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/005_2.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/006_1.jpg"
+    ]
+   },
+   "walk": "walk from scan start: exit sign within ~4 m, far end ~17 m",
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire Dept: lithium e-bike battery fire in an office on floor 6, Northbelt, 363 Sam Houston Pky. Please meet the fire crew on arrival with keys and building info."
+    }
+   ],
+   "tenant_flags": [
+    {
+     "tenant": "Crystal CoWorks (Suite 660)",
+     "floor": 6,
+     "risk": "High occupancy",
+     "why": "(from name only) This looks like a coworking space. At 4,536 sq ft it is by far the largest tenant on the fire floor, and the number of people inside is unknown and may change through the day. Expect many occupants who don't know the building well, and plan a thorough primary search.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Dream Counseling Center (Suite 605)",
+     "floor": 6,
+     "risk": "Vulnerable occupants",
+     "why": "(from name only) A counseling practice on the fire floor may have clients in distress or with limited mobility who need help or calm guidance to get out.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Safe Have Mental Health Solutions",
+     "floor": 7,
+     "risk": "Vulnerable occupants",
+     "why": "(from name only) A mental health provider on the floor directly above the fire, where smoke is likely to reach first. Clients may need assistance. Suite number unknown.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Floor 9 salons (Studio Nine Salon Suites, Front Cover Hair Studios, Upperhairchelon And Spa, SV Beauty And Spa, others)",
+     "floor": 9,
+     "risk": "Hazardous materials",
+     "why": "(from name only) A cluster of hair and beauty salons above the fire floor probably stores flammable aerosols, solvents, and oxidizers such as peroxide and acetone. Salon clients may also be in chairs or under treatment. Check this floor during vertical ventilation and the smoke search.",
+     "from_name_only": true
+    }
+   ],
+   "call": "E-bike battery caught fire in an office on the 6th floor, 363 Sam Houston Pky, Houston."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"E-bike battery caught fire in an office on the 6th floor, 363 Sam Houston Pky, Houston.\"}\n{\"t\": 0.07, \"step\": \"address_lookup\", \"detail\": \"363 N Sam Houston Pky E, Houston -> 234022\"}\n{\"t\": 2.93, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"363 Sam Houston Pky, Houston\\\"}\"}\n{\"t\": 2.94, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/fire/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 2.95, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 5.8, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 234022, \\\"floor\\\": 6, \\\"incident\\\": \\\"fire\\\", \\\"incident_type\\\": \\\"battery_fire\\\"}\"}\n{\"t\": 5.8, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/234022.md\\\"}\"}\n{\"t\": 21.11, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: lithium e-bike battery fire in an office, floor 6, Northbelt, 363 Sam Houston Pky, Houston (property 234022), 20 stories. Flag vulnerable occ\"}\n{\"t\": 21.11, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Incident: lithium e-bike battery fire in an office, floor 6. Address: Northbelt, 363 Sam Houston Pky, Houston TX (property 234022). Elevators: 7 pass\"}\n{\"t\": 21.12, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"inside-scout\\\", \\\"description\\\": \\\"Scan id Fv5Q2P8Kmsf (floor 6, exact floor, property 234022). Fire incident. Find walk distance from scan start to nearest fire alarm pull station and \"}\n{\"t\": 21.12, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"outside-scout\\\", \\\"description\\\": \\\"Property 234022, Northbelt, 363 Sam Houston Pky, Houston. Incident: lithium e-bike battery fire on floor 6 of 20 (toxic smoke). Return live wind (fro\"}\n{\"t\": 23.15, \"step\": \"helper:outside_now\", \"detail\": \"{\\\"property_id\\\": 234022}\"}\n{\"t\": 23.45, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"Fv5Q2P8Kmsf\\\", \\\"target\\\": \\\"fire alarm pull station\\\"}\"}\n{\"t\": 23.45, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"Fv5Q2P8Kmsf\\\", \\\"target\\\": \\\"exit sign\\\"}\"}\n{\"t\": 24.69, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire Dept: lithium e-bike battery fire in an office on floor 6, Northbelt, 363 Sam Houston Pky. Please meet the fire crew on arrival with keys and building info.\\\"}\"}\n{\"t\": 46.46, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 234022, \\\"note\\\": \\\"Fire/battery_fire: e-bike lithium battery fire in an office, floor 6. Briefing sent. A text asking property manager Realty.com 5559806802 to meet the crew is queued bu\"}\n{\"t\": 65.38, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 65.38, \"step\": \"usage\", \"detail\": \"121054 in / 7502 out tokens, ~$0.63\"}\n{\"t\": 65.39, \"step\": \"done\", \"detail\": \"12 lines, 2 images\"}\n"
+}

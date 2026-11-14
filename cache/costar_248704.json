@@ -1,0 +1,1536 @@
+{
+ "property_id": 248704,
+ "name": "International Jewelry Center",
+ "address": "550 Hill St, Los Angeles, CA",
+ "lat": 34.047576,
+ "lon": -118.2525474,
+ "type": "Office",
+ "stories": 13,
+ "gross_sqft": 399256.0,
+ "typical_floor_sqft": 24953.0,
+ "year_built": 1981,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 6
+  },
+  {
+   "type": "Freight",
+   "count": 1
+  },
+  {
+   "type": "Parking",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Bank of America",
+   "floor": 1,
+   "suite": null,
+   "sqft": 17953.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Worldwide Diamond Company",
+   "floor": 1,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gantmonds",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "J L Jems Inc",
+   "floor": 1,
+   "suite": "3",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LADD Diamonds",
+   "floor": 5,
+   "suite": "577",
+   "sqft": 800.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lara's Jewelry",
+   "floor": 5,
+   "suite": "570",
+   "sqft": 800.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bridal Diamond Palace",
+   "floor": 5,
+   "suite": "575",
+   "sqft": 3588.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gem Dynasty",
+   "floor": 5,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wilson's Jewelry Inc",
+   "floor": 5,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bichachi Diamonds Group",
+   "floor": 5,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aginian Accounting Corporation",
+   "floor": 5,
+   "suite": "585",
+   "sqft": 1247.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diamond Net",
+   "floor": 5,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Alex A & Co.",
+   "floor": 5,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sue & Ferris Designs",
+   "floor": 5,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MB Jewelers",
+   "floor": 5,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ronelli Wholesale Diamonds & Jewelry",
+   "floor": 5,
+   "suite": "Ste 515",
+   "sqft": 600.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "World Jewels",
+   "floor": 5,
+   "suite": "541",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "American Diamond Exchange",
+   "floor": 5,
+   "suite": null,
+   "sqft": 748.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ounce Jewelry",
+   "floor": 5,
+   "suite": "1970",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jgl & Company",
+   "floor": 5,
+   "suite": "507",
+   "sqft": null,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Horizon Diamonds",
+   "floor": 6,
+   "suite": "690",
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bridal Rings Company",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 800.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Watches and Watches",
+   "floor": 6,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Johnny B & Co",
+   "floor": 6,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KC Jewelry",
+   "floor": 6,
+   "suite": "640",
+   "sqft": 1430.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pacific Empire Properties, LLC",
+   "floor": 6,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BSH Diamond Corp",
+   "floor": 6,
+   "suite": "652",
+   "sqft": 748.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gold Custom LA",
+   "floor": 6,
+   "suite": null,
+   "sqft": 1100.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Uralevich Urial",
+   "floor": 6,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Milros",
+   "floor": 7,
+   "suite": "770",
+   "sqft": 800.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "H. Dayan",
+   "floor": 7,
+   "suite": "1382",
+   "sqft": 800.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EGL USA",
+   "floor": 7,
+   "suite": null,
+   "sqft": 1600.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "King of Jewelry",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Modern Art Jewelers, Inc",
+   "floor": 7,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "3d Wax Printing by Jewelry Art Studio",
+   "floor": 7,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jewels By Joe Wholesale To Public",
+   "floor": 7,
+   "suite": "1344",
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Golden State Jewelry",
+   "floor": 7,
+   "suite": "715",
+   "sqft": 800.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "WTC Diamonds",
+   "floor": 7,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Danital Gems & Diamonds",
+   "floor": 7,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oscar's Design Jewelry",
+   "floor": 7,
+   "suite": "725",
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rising Star Diamonds",
+   "floor": 7,
+   "suite": "1111",
+   "sqft": 540.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "XO Jewels",
+   "floor": 7,
+   "suite": "749",
+   "sqft": 594.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Orchid Gems, Inc.",
+   "floor": 7,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "1-800 Loose Diamonds",
+   "floor": 7,
+   "suite": "1020",
+   "sqft": 500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vora Gems",
+   "floor": 7,
+   "suite": "793",
+   "sqft": 748.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Baida Jewelry",
+   "floor": 8,
+   "suite": "830",
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brink's",
+   "floor": 8,
+   "suite": "801-80",
+   "sqft": 5400.0,
+   "employees": 36,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EGL USA",
+   "floor": 8,
+   "suite": null,
+   "sqft": 1600.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Paradise Jewelry",
+   "floor": 8,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prijems, Inc.",
+   "floor": 8,
+   "suite": null,
+   "sqft": 1600.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rish Diamonds",
+   "floor": 8,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "General Diamonds",
+   "floor": 8,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HP Imports",
+   "floor": 8,
+   "suite": "1045",
+   "sqft": 300.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nor Design Fine Jewelry",
+   "floor": 8,
+   "suite": "816",
+   "sqft": 748.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Silhouette Design",
+   "floor": 8,
+   "suite": "833",
+   "sqft": 850.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Joshua J Fine Jewelry",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 1247.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stone View Holdings",
+   "floor": 8,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Global Rings Jewelry",
+   "floor": 9,
+   "suite": null,
+   "sqft": 1600.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PMI Diamonds",
+   "floor": 9,
+   "suite": null,
+   "sqft": 1050.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nice Diamonds",
+   "floor": 9,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marvel Jewelry",
+   "floor": 9,
+   "suite": null,
+   "sqft": 1600.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "C.K. Gems, Inc.",
+   "floor": 9,
+   "suite": "901",
+   "sqft": 1400.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stardust Design",
+   "floor": 9,
+   "suite": "967A",
+   "sqft": 1300.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diam Ventures",
+   "floor": 9,
+   "suite": null,
+   "sqft": 743.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cad Blu Inc",
+   "floor": 9,
+   "suite": null,
+   "sqft": 748.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "White Color Gems",
+   "floor": 9,
+   "suite": "925",
+   "sqft": 1300.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Amden Jewelry Inc.",
+   "floor": 9,
+   "suite": null,
+   "sqft": 3500.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "International House Platinum",
+   "floor": 9,
+   "suite": null,
+   "sqft": 650.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diamplus Inc",
+   "floor": 9,
+   "suite": "905",
+   "sqft": null,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Yes Group Inc",
+   "floor": 9,
+   "suite": "915",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "H & A Mounting",
+   "floor": 10,
+   "suite": "763",
+   "sqft": 800.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Emperor Diamonds Inc.",
+   "floor": 10,
+   "suite": "1051",
+   "sqft": 800.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chammas Jewelry",
+   "floor": 10,
+   "suite": "1084",
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Golden Pyramid",
+   "floor": 10,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Right Source",
+   "floor": 10,
+   "suite": null,
+   "sqft": 3588.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Simran Collection",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 1600.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Angara",
+   "floor": 10,
+   "suite": "1015",
+   "sqft": 2217.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fine Facets",
+   "floor": 10,
+   "suite": "1088",
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Luxury Diamonds, LLC",
+   "floor": 10,
+   "suite": null,
+   "sqft": 594.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sol Jewelry Designs, Inc.",
+   "floor": 10,
+   "suite": "1020",
+   "sqft": 1050.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Palak Diam",
+   "floor": 10,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dia-Co Gems, Inc.",
+   "floor": 10,
+   "suite": "1055",
+   "sqft": 1247.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kattan Diamonds & Jewelry",
+   "floor": 10,
+   "suite": null,
+   "sqft": 5254.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Concierge Diamonds",
+   "floor": 10,
+   "suite": "1090",
+   "sqft": 2010.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lazar Diamonds",
+   "floor": 11,
+   "suite": "1175",
+   "sqft": 750.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Guild Laboratories Inc",
+   "floor": 11,
+   "suite": "1188",
+   "sqft": 850.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Excel Diamonds, Inc.",
+   "floor": 11,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "EGA Diamond",
+   "floor": 11,
+   "suite": null,
+   "sqft": 850.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shawn International, Inc.",
+   "floor": 11,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ninacci Incorporated",
+   "floor": 11,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Double M Diamonds",
+   "floor": 11,
+   "suite": null,
+   "sqft": 850.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sparkling Jewelry",
+   "floor": 11,
+   "suite": null,
+   "sqft": 1600.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Noble Diamonds, Inc.",
+   "floor": 11,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kevin Jewelers",
+   "floor": 11,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Logan Hollowell Jewelry",
+   "floor": 11,
+   "suite": "1133",
+   "sqft": 748.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gamzo & Co",
+   "floor": 11,
+   "suite": "1105",
+   "sqft": 1080.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Amir A Diamonds",
+   "floor": 11,
+   "suite": "1119",
+   "sqft": 748.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sabrina A Inc",
+   "floor": 11,
+   "suite": "1111",
+   "sqft": null,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Baguette Masters Inc",
+   "floor": 12,
+   "suite": null,
+   "sqft": 775.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Liven",
+   "floor": 12,
+   "suite": "833",
+   "sqft": 775.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bijan Diamonds",
+   "floor": 12,
+   "suite": null,
+   "sqft": 775.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mounting Craft, Inc",
+   "floor": 12,
+   "suite": null,
+   "sqft": 775.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Simply Diamond",
+   "floor": 12,
+   "suite": null,
+   "sqft": 775.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aaron Henry",
+   "floor": 12,
+   "suite": null,
+   "sqft": 1200.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "S & N Jewelry",
+   "floor": 12,
+   "suite": null,
+   "sqft": 775.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "KARATRADE INC",
+   "floor": 12,
+   "suite": null,
+   "sqft": 775.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Casper Diamonds",
+   "floor": 12,
+   "suite": null,
+   "sqft": 775.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brilliant Gems",
+   "floor": 12,
+   "suite": "1287",
+   "sqft": 1247.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diamond Club West Coast",
+   "floor": 12,
+   "suite": null,
+   "sqft": 850.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ancora Designs",
+   "floor": 12,
+   "suite": "988",
+   "sqft": 600.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "T. Mizrahi, Inc.",
+   "floor": 12,
+   "suite": "1218",
+   "sqft": 748.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Skylab Diamond, Inc.",
+   "floor": 12,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gemological Lab & Appraisal",
+   "floor": 12,
+   "suite": "1245",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Adler Trading Company",
+   "floor": 13,
+   "suite": "1384",
+   "sqft": 600.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unitrans",
+   "floor": 13,
+   "suite": "1307",
+   "sqft": 800.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Neon Gems, Inc.",
+   "floor": 13,
+   "suite": "1300",
+   "sqft": 600.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Parth Diamonds",
+   "floor": 13,
+   "suite": "1314",
+   "sqft": 748.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Day Trade Diamonds",
+   "floor": 13,
+   "suite": null,
+   "sqft": 600.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Varsha Diamonds, Inc.",
+   "floor": 13,
+   "suite": "1625",
+   "sqft": 1080.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Icerock Diamonds",
+   "floor": 13,
+   "suite": null,
+   "sqft": 643.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "B & J Diamonds Inc.",
+   "floor": 13,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Konstant Jewels",
+   "floor": 13,
+   "suite": "1340",
+   "sqft": 1247.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gamzo & Co",
+   "floor": 13,
+   "suite": null,
+   "sqft": 1247.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Saravia Gems And Jewels",
+   "floor": 13,
+   "suite": "1360",
+   "sqft": 1247.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lala Bijou",
+   "floor": 13,
+   "suite": "1309",
+   "sqft": 748.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Catlery By Legend Diamonds",
+   "floor": 13,
+   "suite": "1344",
+   "sqft": 1247.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ori Diamonds",
+   "floor": 13,
+   "suite": null,
+   "sqft": 750.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Global Management",
+   "floor": 13,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Eshed",
+   "floor": 13,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LA Imports",
+   "floor": 14,
+   "suite": "1403",
+   "sqft": 850.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Petri Gems, Inc.",
+   "floor": 14,
+   "suite": "1435",
+   "sqft": 850.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "K.R. Gems & Diamonds International",
+   "floor": 14,
+   "suite": null,
+   "sqft": 850.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "El Dorado Jewelry Inc",
+   "floor": 14,
+   "suite": null,
+   "sqft": 850.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Flawless International",
+   "floor": 14,
+   "suite": null,
+   "sqft": 850.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diamonds and Diamonds Corporation",
+   "floor": 14,
+   "suite": null,
+   "sqft": 850.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unique Diamond International Inc",
+   "floor": 14,
+   "suite": "1478",
+   "sqft": 765.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Uzan Realty",
+   "floor": 14,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mega Diamond Corp",
+   "floor": 14,
+   "suite": "1401",
+   "sqft": 748.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Continental Pearl",
+   "floor": 14,
+   "suite": "1440",
+   "sqft": 500.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hana Diamonds",
+   "floor": 14,
+   "suite": "1480",
+   "sqft": 748.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Berenji & Associates",
+   "floor": 14,
+   "suite": "1465",
+   "sqft": 748.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Empress Fine Jewelry",
+   "floor": 14,
+   "suite": "1456",
+   "sqft": 1247.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Snow White  Diamond",
+   "floor": 14,
+   "suite": "1407",
+   "sqft": 1247.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oleander& Co.",
+   "floor": 14,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Scharf Diamonds",
+   "floor": 14,
+   "suite": "1476",
+   "sqft": null,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pink Diamond",
+   "floor": 14,
+   "suite": null,
+   "sqft": 1600.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Optima Diamond",
+   "floor": 15,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "AG Gems Inc",
+   "floor": 15,
+   "suite": null,
+   "sqft": 850.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CVD Diamond",
+   "floor": 15,
+   "suite": "1550",
+   "sqft": 1711.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Super Gems Jewelry",
+   "floor": 15,
+   "suite": "1593",
+   "sqft": 1169.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "J.B And Brothers Pvt. Ltd",
+   "floor": 15,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Century Diamond",
+   "floor": 15,
+   "suite": null,
+   "sqft": 700.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ferrari Group",
+   "floor": 15,
+   "suite": null,
+   "sqft": 1800.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DBS Diamond",
+   "floor": 15,
+   "suite": null,
+   "sqft": 800.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Malca-Amit USA, LLC",
+   "floor": 15,
+   "suite": "1529",
+   "sqft": 360.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Levy Diamond Corp",
+   "floor": 16,
+   "suite": "1648",
+   "sqft": 850.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ALIZ Designs",
+   "floor": 16,
+   "suite": null,
+   "sqft": 850.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "King Plutarco Inc.",
+   "floor": 16,
+   "suite": "1652",
+   "sqft": 1247.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Design By Scorpio",
+   "floor": 16,
+   "suite": null,
+   "sqft": 850.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diamonds For Life",
+   "floor": 16,
+   "suite": null,
+   "sqft": 600.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Uneek",
+   "floor": 16,
+   "suite": null,
+   "sqft": 850.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dalumi Group",
+   "floor": 16,
+   "suite": null,
+   "sqft": 850.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Poli Trading Company",
+   "floor": 16,
+   "suite": "1649",
+   "sqft": 1080.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marcus Diamonds",
+   "floor": 16,
+   "suite": "1640",
+   "sqft": 1247.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ziva Jewels",
+   "floor": 16,
+   "suite": "1365",
+   "sqft": 748.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Cushman & Wakefield - International Jewelry Center",
+   "phone": "5554628716"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": 150
+  }
+ ],
+ "matterport_models": [
+  "tsaz3uu9Nk9"
+ ]
+}

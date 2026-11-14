@@ -1,0 +1,381 @@
+{
+ "property_id": 239890,
+ "name": "Denmark House",
+ "address": "12777 Jones Rd, Houston, TX",
+ "lat": 29.9581009,
+ "lon": -95.5859031,
+ "type": "Office",
+ "stories": 4,
+ "gross_sqft": 120312.0,
+ "typical_floor_sqft": 29847.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "FDI Creative Services",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 596.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regan Armstrong & Associates, PLLC",
+   "floor": 1,
+   "suite": "150",
+   "sqft": 2720.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Fleming - Bruce Law Firm, P.L.L.C.",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 894.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "State Farm",
+   "floor": 1,
+   "suite": "125",
+   "sqft": 1300.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Aplomb Real Estate",
+   "floor": 1,
+   "suite": "171",
+   "sqft": 894.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advisors Commercial Real Estate",
+   "floor": 1,
+   "suite": "106",
+   "sqft": 1191.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kathryn P. Peltier, C.P.A.",
+   "floor": 1,
+   "suite": "155",
+   "sqft": 1250.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Currier & Martin PLLC",
+   "floor": 1,
+   "suite": "165",
+   "sqft": 894.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Momentum Capital Funding",
+   "floor": 1,
+   "suite": "185",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Check 'n Go",
+   "floor": 1,
+   "suite": "175",
+   "sqft": 596.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Natural Remedes, LLC",
+   "floor": 1,
+   "suite": "195",
+   "sqft": 1489.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Belvoir Asset Management, LLC",
+   "floor": 1,
+   "suite": "135, 135A",
+   "sqft": 1764.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "JMC Investments, LP",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 894.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CR Diamond USA, Inc.",
+   "floor": 1,
+   "suite": "114",
+   "sqft": 894.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Proincident Inc",
+   "floor": 1,
+   "suite": "o",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jacobsen Hardy Golf Design",
+   "floor": 1,
+   "suite": "150",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Action Collision Center Llc",
+   "floor": 1,
+   "suite": "165",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "120",
+   "sqft": 717.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 439.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "102",
+   "sqft": 1265.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trust Guss Injury Lawyers",
+   "floor": 2,
+   "suite": "297A",
+   "sqft": 10025.0,
+   "employees": 24,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Liberty Litigation Support",
+   "floor": 2,
+   "suite": "280",
+   "sqft": 4900.0,
+   "employees": 21,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stewart J. Guss, Attorney at Law",
+   "floor": 2,
+   "suite": "297",
+   "sqft": 1489.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Horrocks",
+   "floor": 2,
+   "suite": "210",
+   "sqft": 8935.0,
+   "employees": 60,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gentiva Hospice",
+   "floor": 3,
+   "suite": "375-395",
+   "sqft": 1489.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cypress Pediatric OT",
+   "floor": 3,
+   "suite": "345",
+   "sqft": 2294.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TradeMark Insurance Agency, LLC",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 1489.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "308",
+   "sqft": 1758.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Advent Global Solutions Inc",
+   "floor": 4,
+   "suite": "445",
+   "sqft": 2681.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bayou City Breastfeeding",
+   "floor": 4,
+   "suite": "455",
+   "sqft": 2100.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Windsor Consultants",
+   "floor": 4,
+   "suite": "405",
+   "sqft": 1258.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Lincoln Law Firm",
+   "floor": 4,
+   "suite": "475",
+   "sqft": 1195.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Aaron's Company",
+   "floor": 4,
+   "suite": "485",
+   "sqft": 1410.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MSC Oil Corp",
+   "floor": 4,
+   "suite": "440",
+   "sqft": 1489.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "465",
+   "sqft": 819.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "445",
+   "sqft": 3948.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "MGS Realty Partners",
+   "phone": "5553477040"
+  }
+ ],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 236
+  },
+  {
+   "type": "Covered",
+   "spaces": null
+  }
+ ],
+ "matterport_models": [
+  "4z2y8ayqrWs",
+  "6BLGvbbHy6R",
+  "6M3cEZ6EXbM",
+  "L27mebZzrMW",
+  "cMyqySGEaPd",
+  "eQ284JtaJy4",
+  "vx2K8Srqg5N"
+ ]
+}

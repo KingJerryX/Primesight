@@ -1,0 +1,617 @@
+{
+ "property_id": 234013,
+ "name": "Weslayan Tower",
+ "address": "24 Greenway Plz, Houston, TX",
+ "lat": 29.730221,
+ "lon": -95.4408776,
+ "type": "Office",
+ "stories": 20,
+ "gross_sqft": 534419.0,
+ "typical_floor_sqft": 25499.0,
+ "year_built": 1981,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Engineered Business Environments",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 2546.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Skyline Deli and Cafe",
+   "floor": 3,
+   "suite": "350",
+   "sqft": 3894.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Federal Credit Union",
+   "floor": 3,
+   "suite": null,
+   "sqft": 6605.0,
+   "employees": 44,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "America First Refining",
+   "floor": 4,
+   "suite": "405",
+   "sqft": 3399.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Freedom AFI",
+   "floor": 4,
+   "suite": "445",
+   "sqft": 5986.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Montierra Minerals & Production Lp",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 800.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Houston Building Owners and Managers Association",
+   "floor": 4,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Trinity Legacy Partners",
+   "floor": 5,
+   "suite": "546",
+   "sqft": 4070.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pierce | Skrabanek",
+   "floor": 5,
+   "suite": null,
+   "sqft": 4000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pierce | Skrabanek",
+   "floor": 5,
+   "suite": "525",
+   "sqft": 3380.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "International Matex Tank Terminals of New Orleans",
+   "floor": 5,
+   "suite": "555",
+   "sqft": 1765.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Logix Sales & Marketing",
+   "floor": 5,
+   "suite": null,
+   "sqft": 1073.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nuevo Partners",
+   "floor": 5,
+   "suite": null,
+   "sqft": 1959.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bergeron Wealth Management Co LLC",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 1500.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Webster Vicknair Macleod",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 10150.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Inspire Clean Energy",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 7695.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Energy Texas",
+   "floor": 6,
+   "suite": "610",
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 2713.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Rhythm Energy",
+   "floor": 6,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stevenson & Murray",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 7771.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate General of Panama",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 1840.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Jeff Diamant PC",
+   "floor": 7,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Adapt 2 Solutions Inc",
+   "floor": 7,
+   "suite": null,
+   "sqft": 3515.0,
+   "employees": 14,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CCT USA LP",
+   "floor": 8,
+   "suite": "808",
+   "sqft": 1400.0,
+   "employees": 9,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Richard, Wayne, & Roberts",
+   "floor": 8,
+   "suite": "850",
+   "sqft": 10467.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hotaling Insurance Services",
+   "floor": 8,
+   "suite": "1320",
+   "sqft": 8521.0,
+   "employees": 33,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "806",
+   "sqft": 1188.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "802",
+   "sqft": 3112.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "THORE Underwriters",
+   "floor": 8,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "VACO",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 4500.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "960",
+   "sqft": 1447.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bowles Womack & Company",
+   "floor": 9,
+   "suite": null,
+   "sqft": 4646.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Engelhart Commodities Trading Partners",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 7640.0,
+   "employees": 51,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 12205.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Energy Ogre",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 17032.0,
+   "employees": 59,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Apex Health",
+   "floor": 11,
+   "suite": "1150",
+   "sqft": 9035.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Guided Capital Wealth Management",
+   "floor": 12,
+   "suite": "1203",
+   "sqft": 1608.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1215",
+   "sqft": 15475.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Oldham Little Church Foundation",
+   "floor": 12,
+   "suite": null,
+   "sqft": 1400.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 12,
+   "suite": "1209",
+   "sqft": 2983.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shamrock Trading Corporation",
+   "floor": 12,
+   "suite": null,
+   "sqft": 3500.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Saavi Energy Solutions",
+   "floor": 12,
+   "suite": "1205",
+   "sqft": 2160.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lewis Brisbois",
+   "floor": 13,
+   "suite": null,
+   "sqft": 14943.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lewis Brisbois",
+   "floor": 13,
+   "suite": "1300",
+   "sqft": 5842.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "STX Group",
+   "floor": 13,
+   "suite": null,
+   "sqft": 2838.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lewis Brisbois",
+   "floor": 14,
+   "suite": null,
+   "sqft": 29477.0,
+   "employees": 150,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Consulate General Of Israel",
+   "floor": 15,
+   "suite": "1500",
+   "sqft": 1500.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stegent Equity Advisors Inc",
+   "floor": 15,
+   "suite": "1507",
+   "sqft": 1958.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Innovapptive Inc.",
+   "floor": 15,
+   "suite": "1501",
+   "sqft": 9236.0,
+   "employees": 61,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1515",
+   "sqft": 3669.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hoffman Diamond Products",
+   "floor": 15,
+   "suite": "1513",
+   "sqft": 3550.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Patterson + Sheridan",
+   "floor": 16,
+   "suite": null,
+   "sqft": 29539.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Marriage Doctors.com",
+   "floor": 17,
+   "suite": "1703",
+   "sqft": 2546.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Integra US Marketing LLC",
+   "floor": 17,
+   "suite": "1702",
+   "sqft": 1928.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Introba",
+   "floor": 17,
+   "suite": "1712",
+   "sqft": 2931.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cenegenics",
+   "floor": 17,
+   "suite": "1707",
+   "sqft": 2311.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Pariveda Solutions",
+   "floor": 17,
+   "suite": null,
+   "sqft": 12628.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TYLin International Group",
+   "floor": 17,
+   "suite": "1725",
+   "sqft": 1066.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Edward Jones",
+   "floor": 17,
+   "suite": "1710",
+   "sqft": 1350.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Lucid Private Offices",
+   "floor": 18,
+   "suite": "1800",
+   "sqft": 29677.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MultiSensor AI",
+   "floor": 18,
+   "suite": "1800",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Audacy Texas, LLC",
+   "floor": 19,
+   "suite": "1900",
+   "sqft": 23152.0,
+   "employees": 169,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Audacy Texas, LLC",
+   "floor": 19,
+   "suite": null,
+   "sqft": 2200.0,
+   "employees": 169,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hudgins Law Firm",
+   "floor": 20,
+   "suite": null,
+   "sqft": 9305.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brain Health Consultants",
+   "floor": 20,
+   "suite": null,
+   "sqft": 3369.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Weycer, Kaplan, Pulaski & Zuber, P.C.",
+   "floor": 20,
+   "suite": "Ste 2050",
+   "sqft": 7500.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "686Yf4iAahV",
+  "khk5Er3pkJs"
+ ]
+}

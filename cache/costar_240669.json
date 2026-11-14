@@ -1,0 +1,107 @@
+{
+ "property_id": 240669,
+ "name": "Gemini Plaza",
+ "address": "1150 Gemini St, Houston, TX",
+ "lat": 29.5557379,
+ "lon": -95.1136134,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 158976.0,
+ "typical_floor_sqft": 26496.0,
+ "year_built": 1984,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Wet",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Bay Area Houston Economic Partnership",
+   "floor": 1,
+   "suite": "1050",
+   "sqft": 5588.0,
+   "employees": 18,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Titan Technologies",
+   "floor": 1,
+   "suite": null,
+   "sqft": 5500.0,
+   "employees": 36,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Universal Aviation",
+   "floor": 2,
+   "suite": null,
+   "sqft": 26496.0,
+   "employees": 176,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Universal Aviation",
+   "floor": 3,
+   "suite": null,
+   "sqft": 26496.0,
+   "employees": 176,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "4000",
+   "sqft": 6500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Matulis Law Firm",
+   "floor": 4,
+   "suite": "4200",
+   "sqft": 4000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "4000",
+   "sqft": 3700.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gulf Coast Protection District",
+   "floor": 4,
+   "suite": "4150",
+   "sqft": 4000.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "8ZCk6eDmEEU"
+ ]
+}

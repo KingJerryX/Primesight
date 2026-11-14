@@ -1,0 +1,67 @@
+{
+ "property_id": 275407,
+ "name": "South Park Lofts",
+ "address": "818 Grand Ave, Los Angeles, CA",
+ "lat": 34.0452047,
+ "lon": -118.2580729,
+ "type": "Multifamily",
+ "stories": 8,
+ "gross_sqft": 73792.0,
+ "typical_floor_sqft": 8997.0,
+ "year_built": 1924,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Hanks Bar",
+   "floor": 1,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "406",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Electric Church, Inc",
+   "floor": 6,
+   "suite": "607",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Andante Coffee",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "7YRz3bh9YAG",
+  "9qMVUMoUtrK",
+  "Cmyiznf1jAb",
+  "Tt4bZ48c6Z3",
+  "TwKYXia5UUp",
+  "U46jxryeKQK",
+  "hdKc3Ls7oCD",
+  "k1UoR9ZnyvV",
+  "nrCNXfrY2GT",
+  "xTxvrvrRVpE"
+ ]
+}

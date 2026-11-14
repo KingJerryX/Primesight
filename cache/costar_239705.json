@@ -1,0 +1,216 @@
+{
+ "property_id": 239705,
+ "name": null,
+ "address": "1800 St James Pl, Houston, TX",
+ "lat": 29.747499,
+ "lon": -95.4735696,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 101772.0,
+ "typical_floor_sqft": 16058.0,
+ "year_built": 1972,
+ "construction": "Masonry",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 2
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Beacon Financial Advisors",
+   "floor": 1,
+   "suite": "101",
+   "sqft": 1137.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Langdon Manor Books",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1097.0,
+   "employees": 19,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stan Creech Properties",
+   "floor": 2,
+   "suite": "208",
+   "sqft": 1290.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Odyssey Title",
+   "floor": 2,
+   "suite": "218",
+   "sqft": 2502.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Concept Tanks",
+   "floor": 2,
+   "suite": "211",
+   "sqft": 1500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Navitas Assurance Partners",
+   "floor": 2,
+   "suite": "207",
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "D.J. Mcmahon Interests",
+   "floor": 2,
+   "suite": "203",
+   "sqft": 800.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Best Hearing Aid Solutions",
+   "floor": 2,
+   "suite": "206",
+   "sqft": 811.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Excellence Limousine",
+   "floor": 3,
+   "suite": "309",
+   "sqft": 906.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Benefits Brokers Exchange",
+   "floor": 3,
+   "suite": "303",
+   "sqft": 1647.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Emerald Wings",
+   "floor": 3,
+   "suite": "310",
+   "sqft": 473.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Vita Realty",
+   "floor": 3,
+   "suite": "312",
+   "sqft": 1484.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Bernstein Investments",
+   "floor": 3,
+   "suite": "300",
+   "sqft": 3400.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Prime Management",
+   "floor": 3,
+   "suite": "302",
+   "sqft": 800.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hibbert Oil Producing Enterprise",
+   "floor": 3,
+   "suite": "311",
+   "sqft": 1301.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Orser And Henson",
+   "floor": 3,
+   "suite": "325",
+   "sqft": 1277.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The Akeeli Group",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fabrega Hood",
+   "floor": 3,
+   "suite": null,
+   "sqft": 900.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Tanglewood Coworking",
+   "floor": 5,
+   "suite": null,
+   "sqft": 5781.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "M&S Fairway",
+   "floor": 6,
+   "suite": null,
+   "sqft": 6526.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Laura Dale & Associates",
+   "floor": 6,
+   "suite": "620",
+   "sqft": 9474.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

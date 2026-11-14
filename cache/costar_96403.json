@@ -1,0 +1,420 @@
+{
+ "property_id": 96403,
+ "name": "One Westchase Center",
+ "address": "10777 Westheimer Rd, Houston, TX",
+ "lat": 29.7360513,
+ "lon": -95.5664949,
+ "type": "Office",
+ "stories": 12,
+ "gross_sqft": 500304.0,
+ "typical_floor_sqft": 38835.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "135N",
+   "sqft": 613.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "105S",
+   "sqft": 682.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "159N",
+   "sqft": 2562.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "107N",
+   "sqft": 943.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Adam Chuen",
+   "floor": 1,
+   "suite": "108N",
+   "sqft": 1198.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Overture 3D",
+   "floor": 1,
+   "suite": "107N",
+   "sqft": 943.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Sovi Financials",
+   "floor": 1,
+   "suite": "135",
+   "sqft": 1000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ace's Bistro",
+   "floor": 1,
+   "suite": "163",
+   "sqft": 1500.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Microseismic Inc.",
+   "floor": 2,
+   "suite": "250S",
+   "sqft": 24572.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Walker Elliott",
+   "floor": 2,
+   "suite": null,
+   "sqft": 648.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MDRN Dental",
+   "floor": 3,
+   "suite": null,
+   "sqft": 1922.0,
+   "employees": 6,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "BGE, Inc.",
+   "floor": 4,
+   "suite": null,
+   "sqft": 38835.0,
+   "employees": 300,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "550S",
+   "sqft": 9438.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "760S",
+   "sqft": 861.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "815N",
+   "sqft": 2144.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Christian Provider Service",
+   "floor": 8,
+   "suite": "830",
+   "sqft": 3750.0,
+   "employees": 25,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Quadro Architecture",
+   "floor": 8,
+   "suite": "805",
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dimensional Energy",
+   "floor": 8,
+   "suite": "815",
+   "sqft": 1000.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "MMC Resources, Inc.",
+   "floor": 8,
+   "suite": null,
+   "sqft": 790.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "808N",
+   "sqft": 1487.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Geosyntec Consultants",
+   "floor": 9,
+   "suite": null,
+   "sqft": 5587.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Brown and Caldwell",
+   "floor": 9,
+   "suite": null,
+   "sqft": 6925.0,
+   "employees": 22,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Maxim Healthcare Services",
+   "floor": 9,
+   "suite": null,
+   "sqft": 4500.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 9,
+   "suite": "940N",
+   "sqft": 4018.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Van Oord",
+   "floor": 10,
+   "suite": null,
+   "sqft": 1937.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Society Of Petroleum Engineers",
+   "floor": 10,
+   "suite": null,
+   "sqft": 6374.0,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1060",
+   "sqft": 1937.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Society Of Petroleum Engineers",
+   "floor": 10,
+   "suite": "1075",
+   "sqft": null,
+   "employees": 40,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "A Better Homecare",
+   "floor": 10,
+   "suite": "1010N",
+   "sqft": 3722.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 10,
+   "suite": "1030N",
+   "sqft": 5745.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Barri Financial Group",
+   "floor": 10,
+   "suite": "1040N",
+   "sqft": 9926.0,
+   "employees": 126,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "A Better Homecare",
+   "floor": 10,
+   "suite": "1010",
+   "sqft": 500.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Babcock Power",
+   "floor": 10,
+   "suite": "1025N",
+   "sqft": 2926.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "DolEx Financial Services",
+   "floor": 10,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 44,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Suarez Candler Law, PLLC",
+   "floor": 11,
+   "suite": null,
+   "sqft": 1000.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Regus",
+   "floor": 11,
+   "suite": null,
+   "sqft": 14603.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Passion Realty",
+   "floor": 11,
+   "suite": null,
+   "sqft": 1432.0,
+   "employees": 17,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Turner & Townsend",
+   "floor": 11,
+   "suite": null,
+   "sqft": 5933.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1160S",
+   "sqft": 5933.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Askenvironmental",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nh Tax Services",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1111N",
+   "sqft": 2192.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": null
+  },
+  {
+   "type": "Covered",
+   "spaces": 684
+  }
+ ],
+ "matterport_models": [
+  "APcPQztCXtZ",
+  "HXFPk9GGkmM"
+ ]
+}

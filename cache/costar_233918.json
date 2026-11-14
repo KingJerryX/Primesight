@@ -1,0 +1,341 @@
+{
+ "property_id": 233918,
+ "name": "3 Houston Center",
+ "address": "1301 McKinney St, Houston, TX",
+ "lat": 29.7558291,
+ "lon": -95.3616357,
+ "type": "Office",
+ "stories": 51,
+ "gross_sqft": 1311133.0,
+ "typical_floor_sqft": 24452.0,
+ "year_built": 1982,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 24
+  },
+  {
+   "type": "Freight",
+   "count": 2
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Industrious",
+   "floor": 3,
+   "suite": null,
+   "sqft": 23000.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PULSE",
+   "floor": 6,
+   "suite": null,
+   "sqft": 24573.0,
+   "employees": 343,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "PULSE",
+   "floor": 7,
+   "suite": null,
+   "sqft": 24657.0,
+   "employees": 343,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Walter P. Moore",
+   "floor": 10,
+   "suite": null,
+   "sqft": 24657.0,
+   "employees": 328,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Walter P. Moore",
+   "floor": 11,
+   "suite": null,
+   "sqft": 24657.0,
+   "employees": 328,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Galloway",
+   "floor": 14,
+   "suite": null,
+   "sqft": 8389.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 14,
+   "suite": "1425",
+   "sqft": 2017.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 15,
+   "suite": "1550",
+   "sqft": 6280.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Littler Mendelson P.C.",
+   "floor": 19,
+   "suite": "1900",
+   "sqft": 16295.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "FMI Corporation",
+   "floor": 20,
+   "suite": null,
+   "sqft": 5153.0,
+   "employees": 34,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CenTrio",
+   "floor": 20,
+   "suite": null,
+   "sqft": 5000.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kane Russell Coleman Logan",
+   "floor": 23,
+   "suite": "2300",
+   "sqft": 25123.0,
+   "employees": 35,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Chiron Financial LLC",
+   "floor": 28,
+   "suite": null,
+   "sqft": 9103.0,
+   "employees": 12,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Krell & Torigian",
+   "floor": 28,
+   "suite": "2885",
+   "sqft": 3153.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Affinity Tankers",
+   "floor": 29,
+   "suite": null,
+   "sqft": 1628.0,
+   "employees": 8,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Guggenheim Partners LLC",
+   "floor": 31,
+   "suite": null,
+   "sqft": 11190.0,
+   "employees": 75,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 31,
+   "suite": "3150",
+   "sqft": 3104.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "West Mermis",
+   "floor": 31,
+   "suite": null,
+   "sqft": 5605.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Netherland Sewell & Associates",
+   "floor": 32,
+   "suite": null,
+   "sqft": 25543.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "FTI Consulting",
+   "floor": 35,
+   "suite": "3500",
+   "sqft": 9950.0,
+   "employees": 100,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Baker Donelson",
+   "floor": 37,
+   "suite": null,
+   "sqft": 24500.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NRG Energy, Inc.",
+   "floor": 39,
+   "suite": "3900",
+   "sqft": 25307.0,
+   "employees": 2875,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NRG Energy, Inc.",
+   "floor": 40,
+   "suite": "3900",
+   "sqft": 25307.0,
+   "employees": 2875,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NRG Energy, Inc.",
+   "floor": 41,
+   "suite": null,
+   "sqft": 25546.0,
+   "employees": 2875,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NRG Energy, Inc.",
+   "floor": 42,
+   "suite": null,
+   "sqft": 25546.0,
+   "employees": 2875,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NRG Energy, Inc.",
+   "floor": 43,
+   "suite": null,
+   "sqft": 24452.0,
+   "employees": 2875,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NRG Energy, Inc.",
+   "floor": 44,
+   "suite": null,
+   "sqft": 24500.0,
+   "employees": 2875,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NRG Energy, Inc.",
+   "floor": 45,
+   "suite": null,
+   "sqft": 24500.0,
+   "employees": 2875,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NRG Energy, Inc.",
+   "floor": 46,
+   "suite": null,
+   "sqft": 24500.0,
+   "employees": 2875,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NRG Energy, Inc.",
+   "floor": 47,
+   "suite": null,
+   "sqft": 24500.0,
+   "employees": 2875,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NRG Energy, Inc.",
+   "floor": 48,
+   "suite": null,
+   "sqft": 24500.0,
+   "employees": 2875,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NRG Energy, Inc.",
+   "floor": 49,
+   "suite": null,
+   "sqft": 19000.0,
+   "employees": 2875,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NRG Energy, Inc.",
+   "floor": 50,
+   "suite": null,
+   "sqft": 19000.0,
+   "employees": 2875,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "NRG Energy, Inc.",
+   "floor": 51,
+   "suite": null,
+   "sqft": 19000.0,
+   "employees": 2875,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "JWtTP2g7mDj"
+ ]
+}

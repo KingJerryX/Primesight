@@ -1,0 +1,67 @@
+{
+ "property_id": 237585,
+ "name": "Building 1",
+ "address": "13401 Fondren Rd, Houston, TX",
+ "lat": 29.6270095,
+ "lon": -95.5067968,
+ "type": "Industrial",
+ "stories": 1,
+ "gross_sqft": 24742.0,
+ "typical_floor_sqft": 24742.0,
+ "year_built": 1983,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Francisco & Sons Auto Repair",
+   "floor": 1,
+   "suite": null,
+   "sqft": 6371.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "H-Town Liquidations",
+   "floor": 1,
+   "suite": null,
+   "sqft": 6371.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "13413",
+   "sqft": 4800.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "13401-B",
+   "sqft": 4800.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "13411",
+   "sqft": 2400.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "MLLaxT2ppiR"
+ ]
+}

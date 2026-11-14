@@ -1,0 +1,353 @@
+{
+ "property_id": 236844,
+ "name": null,
+ "address": "5300 Memorial Dr, Houston, TX",
+ "lat": 29.7620709,
+ "lon": -95.4160807,
+ "type": "Office",
+ "stories": 11,
+ "gross_sqft": 153671.0,
+ "typical_floor_sqft": 15362.0,
+ "year_built": 1983,
+ "construction": "Steel",
+ "sprinklers": "yes",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 4
+  },
+  {
+   "type": "Freight",
+   "count": null
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "Mint Dental Works",
+   "floor": 2,
+   "suite": "260",
+   "sqft": 3435.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "House & Robertson Architects",
+   "floor": 2,
+   "suite": "230",
+   "sqft": 2162.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 2,
+   "suite": "250",
+   "sqft": 1956.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "HungerRush",
+   "floor": 3,
+   "suite": null,
+   "sqft": 15329.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Walker Eisenbraun, LLC",
+   "floor": 4,
+   "suite": "475",
+   "sqft": 2325.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Title",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 1191.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "CFI Group-US",
+   "floor": 4,
+   "suite": "425",
+   "sqft": 1481.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Onemap Mineral Services, LLC",
+   "floor": 4,
+   "suite": "430",
+   "sqft": 7604.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "420",
+   "sqft": 2899.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Computershare",
+   "floor": 5,
+   "suite": "500",
+   "sqft": 10055.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Computershare",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 3247.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Computershare",
+   "floor": 5,
+   "suite": "580",
+   "sqft": 1999.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Plavnicky, Kinzel & Makowski LLP",
+   "floor": 6,
+   "suite": "675",
+   "sqft": 5054.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Gulf Coast Buisness Credit",
+   "floor": 6,
+   "suite": "620.",
+   "sqft": 3689.0,
+   "employees": 24,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ferrell Law Group",
+   "floor": 6,
+   "suite": "660",
+   "sqft": 821.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Ferrell Law Group",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 3100.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 2456.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Mayr Law, PC",
+   "floor": 7,
+   "suite": "750",
+   "sqft": 3565.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "John Cornyn US Senator for Texas",
+   "floor": 7,
+   "suite": "710",
+   "sqft": 2325.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "The James Street Group Llc",
+   "floor": 7,
+   "suite": "700",
+   "sqft": 9610.0,
+   "employees": 11,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nava Law Firm",
+   "floor": 7,
+   "suite": null,
+   "sqft": 500.0,
+   "employees": 2,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LAWBOSS",
+   "floor": 8,
+   "suite": "810",
+   "sqft": 1763.0,
+   "employees": 5,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "805",
+   "sqft": 6109.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Miles Mediation & Arbitration",
+   "floor": 8,
+   "suite": null,
+   "sqft": 6388.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 8,
+   "suite": "890",
+   "sqft": 5041.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diggs & Sadler",
+   "floor": 9,
+   "suite": "900",
+   "sqft": 7923.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Moleculin Biotech Inc.",
+   "floor": 9,
+   "suite": "950",
+   "sqft": 2333.0,
+   "employees": 15,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Spain, Price, Reader & Thompson P.C.",
+   "floor": 9,
+   "suite": "940",
+   "sqft": 5115.0,
+   "employees": 13,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kelly L. Fritsch, P.C.",
+   "floor": 10,
+   "suite": "1000",
+   "sqft": 4448.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kelvin Energy, Inc.",
+   "floor": 10,
+   "suite": "1050",
+   "sqft": 3525.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Arnold & Itkin L.L.P.",
+   "floor": 10,
+   "suite": "1020",
+   "sqft": 6639.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Wareing & Company",
+   "floor": 11,
+   "suite": "1100",
+   "sqft": 5726.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Concurrent CIO",
+   "floor": 11,
+   "suite": "1175",
+   "sqft": 4123.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 11,
+   "suite": "1150",
+   "sqft": 5776.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "parking": [
+  {
+   "type": "Surface",
+   "spaces": 27
+  },
+  {
+   "type": "Covered",
+   "spaces": 444
+  }
+ ],
+ "matterport_models": [
+  "1hKHLrDv39z",
+  "C2gfWLyrQ79",
+  "yMBqaf4sfuz"
+ ]
+}

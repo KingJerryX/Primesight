@@ -1,0 +1,145 @@
+{
+ "model_id": "ckSGDiqNnWR",
+ "name": "Suite 320",
+ "floor": 3,
+ "sweeps": [
+  {
+   "id": "etn4511a55mps9wnmqsh1q0rc",
+   "index": 0,
+   "xy": [
+    6.027282238006592,
+    -1.5953682661056519
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.81,
+     "box": [
+      900,
+      349,
+      940,
+      375
+     ],
+     "color": 0.172,
+     "face": 0
+    }
+   ]
+  },
+  {
+   "id": "1uceeb5xyi9aus1ny3eha8aec",
+   "index": 1,
+   "xy": [
+    5.553261756896973,
+    1.533137559890747
+   ],
+   "hits": []
+  },
+  {
+   "id": "4mm2pb3gye3zerhxya4iczccd",
+   "index": 2,
+   "xy": [
+    12.405051231384277,
+    -0.36222517490386963
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.57,
+     "box": [
+      588,
+      452,
+      606,
+      464
+     ],
+     "color": 0.056,
+     "face": 1
+    }
+   ]
+  },
+  {
+   "id": "zfw5czykz3t2cfq3r3a8knmrb",
+   "index": 3,
+   "xy": [
+    4.515604019165039,
+    -0.2678578794002533
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.83,
+     "box": [
+      431,
+      331,
+      471,
+      363
+     ],
+     "color": 0.17,
+     "face": 1
+    }
+   ]
+  },
+  {
+   "id": "78pett520gr4fexaxi9u06c1c",
+   "index": 4,
+   "xy": [
+    0.011230776086449623,
+    0.004659102763980627
+   ],
+   "hits": [
+    {
+     "label": "fire alarm pull station",
+     "score": 0.68,
+     "box": [
+      254,
+      625,
+      395,
+      818
+     ],
+     "color": 0.0,
+     "face": 1
+    },
+    {
+     "label": "fire alarm pull station",
+     "score": 0.59,
+     "box": [
+      256,
+      626,
+      356,
+      818
+     ],
+     "color": 0.0,
+     "face": 1
+    }
+   ]
+  },
+  {
+   "id": "b1ycwt88b17shi5af91rw174b",
+   "index": 5,
+   "xy": [
+    8.925263404846191,
+    0.8278473019599915
+   ],
+   "hits": [
+    {
+     "label": "exit sign",
+     "score": 0.83,
+     "box": [
+      609,
+      422,
+      630,
+      438
+     ],
+     "color": 0.14,
+     "face": 1
+    }
+   ]
+  }
+ ],
+ "sweeps_with": {
+  "exit sign": 3,
+  "stairs": 0,
+  "fire extinguisher": 0,
+  "fire alarm pull station": 0
+ },
+ "seconds": 94
+}

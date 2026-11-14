@@ -1,0 +1,187 @@
+{
+ "property_id": 252904,
+ "name": "The Chapman Flats",
+ "address": "750 Broadway , Los Angeles, CA",
+ "lat": 34.043922,
+ "lon": -118.254314,
+ "type": "Multifamily",
+ "stories": 13,
+ "gross_sqft": 165400.0,
+ "typical_floor_sqft": 13239.0,
+ "year_built": 1912,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Marcella Smith Dry Cleaning Llc",
+   "floor": 1,
+   "suite": null,
+   "sqft": 700.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Diamond Life Productions LLC",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "LA Brew Co",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "223",
+   "sqft": 680.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Kreation Juicery",
+   "floor": 1,
+   "suite": null,
+   "sqft": 1500.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "SRB Consulting Service",
+   "floor": 1,
+   "suite": "3",
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "CORNER",
+   "sqft": 1000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Star BBQ",
+   "floor": 1,
+   "suite": null,
+   "sqft": 7000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Flamingo Jewelry",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Korean barbeque",
+   "floor": 1,
+   "suite": null,
+   "sqft": 7000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "750",
+   "sqft": 10000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "758",
+   "sqft": 550.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Hashtag Coffee & Tea",
+   "floor": 1,
+   "suite": null,
+   "sqft": null,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Medicare Life Group",
+   "floor": 9,
+   "suite": "904",
+   "sqft": 0.0,
+   "employees": 1,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Shoop Loop, Inc.",
+   "floor": null,
+   "suite": null,
+   "sqft": 3000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Capacity Productions",
+   "floor": null,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Starbucks",
+   "floor": null,
+   "suite": null,
+   "sqft": 1750.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "Coast Meridain Properties - The Chapman Flats",
+   "phone": "5554691992"
+  }
+ ],
+ "matterport_models": [
+  "1ux5uKpD3Fh",
+  "7Gpfrv1Lt5M",
+  "7es942jVvyQ",
+  "BXqoh5667ey",
+  "igm8sGngSi5",
+  "yY99fLETJUf",
+  "zmbKRhpRz4G"
+ ]
+}

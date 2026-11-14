@@ -1,0 +1,76 @@
+{
+ "property_id": 237299,
+ "name": null,
+ "address": "4202 Directors Row, Houston, TX",
+ "lat": 29.8083286,
+ "lon": -95.450088,
+ "type": "Flex",
+ "stories": 1,
+ "gross_sqft": 13793.0,
+ "typical_floor_sqft": 11760.0,
+ "year_built": 1970,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": null,
+   "sqft": 5880.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Cable Installer Houston Texas-Fiber Network Cat5 C",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Quality Cable Installers, Llc",
+   "floor": 1,
+   "suite": null,
+   "sqft": 0.0,
+   "employees": 7,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 5300.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 3900.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 3900.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  "fzwh8a9NC7M"
+ ]
+}

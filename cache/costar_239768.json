@@ -1,0 +1,265 @@
+{
+ "property_id": 239768,
+ "name": null,
+ "address": "3200 Wilcrest Dr, Houston, TX",
+ "lat": 29.728522,
+ "lon": -95.5722404,
+ "type": "Office",
+ "stories": 6,
+ "gross_sqft": 222132.0,
+ "typical_floor_sqft": 37022.0,
+ "year_built": 1981,
+ "construction": "Steel",
+ "sprinklers": "no",
+ "sprinkler_type": "Unknown",
+ "elevators": [
+  {
+   "type": "Passenger",
+   "count": 3
+  },
+  {
+   "type": "Escalator",
+   "count": null
+  }
+ ],
+ "tenants": [
+  {
+   "name": "TKO Suites",
+   "floor": 1,
+   "suite": "170",
+   "sqft": 7548.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Stange Law Firm",
+   "floor": 1,
+   "suite": "110",
+   "sqft": 1978.0,
+   "employees": 3,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Texas Connections Academy",
+   "floor": 1,
+   "suite": "190",
+   "sqft": 3550.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 1,
+   "suite": "190",
+   "sqft": 3550.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Delta Corporation",
+   "floor": 2,
+   "suite": "230",
+   "sqft": 1511.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Nobles Grooms Wealth Advisors",
+   "floor": 2,
+   "suite": "240",
+   "sqft": 1532.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Primerica",
+   "floor": 2,
+   "suite": "Ste 200",
+   "sqft": 3000.0,
+   "employees": 20,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ReTech",
+   "floor": 2,
+   "suite": "235",
+   "sqft": 740.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Xcalibur Smart Mapping",
+   "floor": 2,
+   "suite": "275",
+   "sqft": 1534.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": null,
+   "sqft": 2000.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "340",
+   "sqft": 1792.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 3,
+   "suite": "370",
+   "sqft": 2478.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Dunaway",
+   "floor": 4,
+   "suite": "440/470",
+   "sqft": 13728.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "TeachMeGIS",
+   "floor": 4,
+   "suite": "450",
+   "sqft": 5639.0,
+   "employees": 10,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Freedom Hawk Equity",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 2034.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "State Farm",
+   "floor": 4,
+   "suite": "460",
+   "sqft": 2132.0,
+   "employees": 4,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "490",
+   "sqft": 1218.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "480",
+   "sqft": 1296.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "400",
+   "sqft": 2034.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "435",
+   "sqft": 1063.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 4,
+   "suite": "475",
+   "sqft": 842.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "ValueLink Software",
+   "floor": 5,
+   "suite": "575",
+   "sqft": 2419.0,
+   "employees": 16,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "John Crane",
+   "floor": 5,
+   "suite": "525",
+   "sqft": 5000.0,
+   "employees": 53,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Unknown tenant",
+   "floor": 5,
+   "suite": "550",
+   "sqft": 8425.0,
+   "employees": null,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Additech Inc",
+   "floor": 6,
+   "suite": "600",
+   "sqft": 6846.0,
+   "employees": 50,
+   "industry": "Unknown",
+   "about": null
+  },
+  {
+   "name": "Fastboy Investments",
+   "floor": 6,
+   "suite": "650",
+   "sqft": 20868.0,
+   "employees": 30,
+   "industry": "Unknown",
+   "about": null
+  }
+ ],
+ "contacts": [],
+ "matterport_models": [
+  ""
+ ]
+}

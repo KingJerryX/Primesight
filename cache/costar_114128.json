@@ -1,0 +1,31 @@
+{
+ "property_id": 114128,
+ "name": "Avenue M",
+ "address": "1720 Crestdale Dr, Houston, TX",
+ "lat": 29.8043579,
+ "lon": -95.5302655,
+ "type": "Multifamily",
+ "stories": 3,
+ "gross_sqft": 100965.596,
+ "typical_floor_sqft": 2440.0,
+ "year_built": 2021,
+ "construction": "Masonry",
+ "sprinklers": "unknown",
+ "sprinkler_type": "Unknown",
+ "elevators": [],
+ "tenants": [],
+ "contacts": [
+  {
+   "role": "Property manager",
+   "company": "REEP - Avenue M at 1720 Crestdale Apartments",
+   "phone": "5557356125"
+  }
+ ],
+ "matterport_models": [
+  "HX5qpPcpLDa",
+  "HqFP5fjKF23",
+  "pAwMXfGwacN",
+  "tYBMGp68y16",
+  "tyGA7CEpP56"
+ ]
+}

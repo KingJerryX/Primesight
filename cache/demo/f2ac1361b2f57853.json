@@ -1,0 +1,386 @@
+{
+ "text": "Worker with heat stroke on the 3rd floor, 3250 Wilshire Blvd, Los Angeles. Patient confused, very hot skin.",
+ "out": {
+  "briefing": "PRIMESIGHT | HEAT ILLNESS | FLOOR 3 | One Park Plaza, 3250 Wilshire Blvd, Los Angeles, CA\nELEVATOR: freight car on record (stretcher), 3 freight and 6 passenger cars\nON FLOOR: Children's Hospital Los Angeles (suite not listed); Xfernet (ste 301). About 116 people on this floor by tenant headcount (daytime).\nHEADCOUNT: Children's Hospital lists 324 employees on fl 3. Possible clinical or pediatric space (from name only).\nPROPERTY MGR: Realtech Leasing & Management Co. 5553081773. Text queued asking them to hold a freight car at the lobby and meet the crew.\nINSIDE: 3D scan of this floor, 124 scan points. Exit signs seen at 77 points, pull stations at 30. From scan start (not the lobby): exit sign ~7 m, possible stairs ~20 m (unreliable detection), far end ~77 m.\nBUILDING: 22 stories | built 1971 | steel frame | sprinklers: yes\nOPEN LOT for staging ~436 m E (aerial search, verify)\nCREW NOTE: Nov 14 elevator entrapment on fl 3. Car number and machine room location not known.\nNOT KNOWN: patient suite, stair locations, AED location, freight elevator location, current temperature, building cooling\nSCAN: https://my.matterport.com/show/?m=MFhskYSBMMe",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\248192_MFhskYSBMMe_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\248192_aerial.jpg"
+  ],
+  "image_urls": [
+   "/img/248192_MFhskYSBMMe_plan_marked.jpg",
+   "/img/248192_aerial.jpg"
+  ],
+  "property_id": 248192,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire Dept EMS responding to One Park Plaza, 3250 Wilshire Blvd: worker with heat stroke, confused, floor 3. Please hold a freight elevator at the lobby and meet the crew there."
+   }
+  ],
+  "tenant_flags": [
+   {
+    "tenant": "Children's Hospital Los Angeles",
+    "floor": 3,
+    "risk": "High occupancy on the incident floor",
+    "why": "The tenant list shows 324 employees in 15,910 sq ft on floor 3, the same floor as the patient. Expect crowded corridors, bystanders and slower elevator access. Staff may already be giving care, so get a handoff from them.",
+    "from_name_only": false
+   },
+   {
+    "tenant": "Children's Hospital Los Angeles",
+    "floor": 3,
+    "risk": "Possible pediatric patients or clinical space on the incident floor",
+    "why": "The tenant name suggests children and families could be present for care. The description is empty, so this may only be administrative office space. Confirm on arrival.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Children's Hospital Los Angeles",
+    "floor": 5,
+    "risk": "Possible pediatric patients or clinical space on nearby floors",
+    "why": "The same tenant is also listed on floors 5 and 6. If there is patient care there, those occupants may be vulnerable if the building needs to shelter or evacuate. This is not confirmed by any description.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "medical",
+   "floor": 3,
+   "building": {
+    "name": "One Park Plaza",
+    "address": "3250 wilshire Blvd, Los Angeles, CA",
+    "stories": 22,
+    "year_built": 1971,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 23,
+     "tenants": [
+      "Atlas Cafe",
+      "Baja's Grill"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 60,
+     "tenants": [
+      "GEKLAW, Inc"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 116,
+     "tenants": [
+      "Children's Hospital Los Angeles",
+      "Xfernet"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 124,
+      "exit sign": 77,
+      "stairs": 5,
+      "fire extinguisher": 26,
+      "fire alarm pull station": 30
+     }
+    },
+    {
+     "floor": 4,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 5,
+     "people": 108,
+     "tenants": [
+      "Children's Hospital Los Angeles"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 131,
+     "tenants": [
+      "Baik Law Group APC",
+      "Children's Hospital Los Angeles",
+      "McKay, De Lorimier & Acain",
+      "Philippine Trade & Investment"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 7,
+     "people": 54,
+     "tenants": [
+      "DBY Law",
+      "Harriett Buhai Center For Family",
+      "Philippines Department of Tourism",
+      "TFI Trans"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 94,
+     "tenants": [
+      "Archdiocesan Youth Employment Services",
+      "Jenn International, Inc.",
+      "Law Office of Ruben B Martinez",
+      "Paniotto Law Firm",
+      "Prime Nursing Services"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 76,
+     "tenants": [
+      "CHLA Medical Group",
+      "DSH // architecture",
+      "Esdiac Global Systems Inc",
+      "Jae Hun Lim, CPA",
+      "Jang Trial Law Firm Inc",
+      "Law Offices of Harvey Erlich",
+      "Law Offices of Mike Razi, APC"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 12,
+     "people": 70,
+     "tenants": [
+      "Adolescent and Young Adult Medicine",
+      "Community Health Intervention",
+      "Development Neuroscience"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 13,
+     "people": 123,
+     "tenants": [
+      "Bet Tzedek"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 14,
+     "people": 5,
+     "tenants": [
+      "CGI America"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 15,
+     "people": 74,
+     "tenants": [
+      "Advanced Therapy Institute",
+      "Emmanuel Nwabuzor, APC",
+      "John Yoo, CPA",
+      "Law Offices of Okey George Chukwudobe",
+      "Moo Housing Inc.",
+      "The Nielsen Firm",
+      "The Onwaeze Law Group, APC",
+      "United Spine Care"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 16,
+     "people": 42,
+     "tenants": [
+      "Commercial Property Management, Inc.",
+      "Just Detention International",
+      "Law Offices of Robert B. Sarvian, APC",
+      "Sun Data Supply",
+      "Unknown tenant",
+      "Vision Plan Of America"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 17,
+     "people": 28,
+     "tenants": [
+      "AMS Design Studio",
+      "CHLA KINDD Program",
+      "California Sports And Spine Center",
+      "HJS An Accountancy Corp",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 18,
+     "people": 5,
+     "tenants": [
+      "Kim Joo & Associates",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 19,
+     "people": 121,
+     "tenants": [
+      "Farmers Insurance",
+      "Gomez Law, APC",
+      "Green Box Loans",
+      "Michael K. Khim Accountancy",
+      "Popkin, Shamir, & Golan"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 20,
+     "people": 24,
+     "tenants": [
+      "LCJ Insurance Services, Inc.",
+      "Law Office of Mark H. Aprahamian",
+      "Law Offices of Howard Lynch",
+      "Mary Lee APC",
+      "Ronzio & Associates"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 21,
+     "people": 25,
+     "tenants": [
+      "Consulate General of Sri Lanka",
+      "Kostiv Cardinal"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 22,
+     "people": 35,
+     "tenants": [
+      "The Dominguez Firm"
+     ],
+     "scanned": false,
+     "seen": null
+    }
+   ],
+   "hydrants": [],
+   "staging": [
+    {
+     "m": 436,
+     "dir": "E",
+     "lat": 34.060339244999994,
+     "lon": -118.28876495499998,
+     "score": 0.226
+    },
+    {
+     "m": 421,
+     "dir": "E",
+     "lat": 34.060908095,
+     "lon": -118.28876495499998,
+     "score": 0.218
+    },
+    {
+     "m": 370,
+     "dir": "E",
+     "lat": 34.06261462,
+     "lon": -118.28945159999999,
+     "score": 0.205
+    }
+   ],
+   "scan": {
+    "floor": 3,
+    "exact": true,
+    "link": "https://my.matterport.com/show/?m=MFhskYSBMMe"
+   },
+   "vision": {
+    "scan_points": 124,
+    "scan_points_with": {
+     "exit sign": 77,
+     "stairs": 5,
+     "fire extinguisher": 26,
+     "fire alarm pull station": 30
+    },
+    "image_urls": [
+     "/img/vision/MFhskYSBMMe/000_0.jpg",
+     "/img/vision/MFhskYSBMMe/000_2.jpg",
+     "/img/vision/MFhskYSBMMe/000_3.jpg",
+     "/img/vision/MFhskYSBMMe/001_2.jpg",
+     "/img/vision/MFhskYSBMMe/001_3.jpg",
+     "/img/vision/MFhskYSBMMe/002_0.jpg",
+     "/img/vision/MFhskYSBMMe/002_2.jpg",
+     "/img/vision/MFhskYSBMMe/003_2.jpg",
+     "/img/vision/MFhskYSBMMe/003_3.jpg",
+     "/img/vision/MFhskYSBMMe/004_3.jpg",
+     "/img/vision/MFhskYSBMMe/005_1.jpg",
+     "/img/vision/MFhskYSBMMe/005_3.jpg"
+    ]
+   },
+   "walk": "walk from scan start: exit sign ~7 m (7 m), far end ~77 m",
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire Dept EMS responding to One Park Plaza, 3250 Wilshire Blvd: worker with heat stroke, confused, floor 3. Please hold a freight elevator at the lobby and meet the crew there."
+    }
+   ],
+   "tenant_flags": [
+    {
+     "tenant": "Children's Hospital Los Angeles",
+     "floor": 3,
+     "risk": "High occupancy on the incident floor",
+     "why": "The tenant list shows 324 employees in 15,910 sq ft on floor 3, the same floor as the patient. Expect crowded corridors, bystanders and slower elevator access. Staff may already be giving care, so get a handoff from them.",
+     "from_name_only": false
+    },
+    {
+     "tenant": "Children's Hospital Los Angeles",
+     "floor": 3,
+     "risk": "Possible pediatric patients or clinical space on the incident floor",
+     "why": "The tenant name suggests children and families could be present for care. The description is empty, so this may only be administrative office space. Confirm on arrival.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Children's Hospital Los Angeles",
+     "floor": 5,
+     "risk": "Possible pediatric patients or clinical space on nearby floors",
+     "why": "The same tenant is also listed on floors 5 and 6. If there is patient care there, those occupants may be vulnerable if the building needs to shelter or evacuate. This is not confirmed by any description.",
+     "from_name_only": true
+    }
+   ],
+   "call": "Worker with heat stroke on the 3rd floor, 3250 Wilshire Blvd, Los Angeles. Patient confused, very hot skin."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Worker with heat stroke on the 3rd floor, 3250 Wilshire Blvd, Los Angeles. Patient confused, very hot skin.\"}\n{\"t\": 0.08, \"step\": \"address_lookup\", \"detail\": \"3250 wilshire Blvd, Los Angeles -> 248192\"}\n{\"t\": 2.65, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"3250 Wilshire Blvd, Los Angeles\\\"}\"}\n{\"t\": 2.65, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/medical/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 2.65, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 5.82, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 248192, \\\"floor\\\": 3, \\\"incident\\\": \\\"medical\\\", \\\"incident_type\\\": \\\"heat_illness\\\"}\"}\n{\"t\": 5.83, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/248192.md\\\"}\"}\n{\"t\": 20.27, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: medical, heat illness (worker with heat stroke, confused, very hot skin), floor 3, One Park Plaza, 3250 Wilshire Blvd, Los Angeles (property \"}\n{\"t\": 20.27, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Write and queue a short text to the building contacts so they can meet the EMS crew. Incident: medical, heat illness (worker with heat stroke, confus\"}\n{\"t\": 20.27, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"inside-scout\\\", \\\"description\\\": \\\"Scan id MFhskYSBMMe (floor 3 of 3250 Wilshire Blvd, exact floor). Find the walk distance from the scan start to the nearest exit sign (also nearest st\"}\n{\"t\": 22.49, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"MFhskYSBMMe\\\", \\\"target\\\": \\\"exit sign\\\"}\"}\n{\"t\": 22.5, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"MFhskYSBMMe\\\", \\\"target\\\": \\\"stairs\\\"}\"}\n{\"t\": 25.98, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire Dept EMS responding to One Park Plaza, 3250 Wilshire Blvd: worker with heat stroke, confused, floor 3. Please hold a freight elevator at the lobby and meet the\"}\n{\"t\": 30.97, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 248192, \\\"note\\\": \\\"Heat illness (worker heat stroke, confused), floor 3. Briefing sent; property manager (Realtech 5553081773) text queued to hold a freight car at lobby and meet crew. P\"}\n{\"t\": 70.25, \"step\": \"graded\", \"detail\": \"needs_revision - First line after the header is the most urgent fact for a medical call (elevator or patient location): The line after 'PRIMESIGHT | HEAT ILLNESS | FLOOR 3' mixes the address with stories, year built, construction and sprinklers, so it is a building-stats line. Put the ELEVATOR line (freight car on record, stretcher) directly after the header (title, plus the address alone if it belongs to the header). Move the stories/year/construction/sprinkler stats lower, per the medical skill order.\"}\n{\"t\": 70.25, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 70.26, \"step\": \"usage\", \"detail\": \"137286 in / 7233 out tokens, ~$0.69\"}\n{\"t\": 70.26, \"step\": \"done\", \"detail\": \"11 lines, 2 images\"}\n"
+}
