@@ -87,7 +87,7 @@ def building(pid):
 
 # Game segments, one module each (primesight/<name>.py), each owning the routes under /drill/<name>/. A module may
 # define handle(path) for GETs and post(path, body) for POSTs, both returning (status, body, content type) or None.
-SEGMENTS = ("caller", "lineup", "crew", "rival")
+SEGMENTS = ("caller", "lineup", "rival")
 
 
 def _segments():

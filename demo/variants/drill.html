@@ -110,7 +110,7 @@
 <section id="intro">
   <div class="caps" style="color: var(--accent)">Dispatcher training</div>
   <h1>Brief the crew</h1>
-  <p>A 911 call comes in. Find the building, note what the crew needs from the data, then write the message you would send them in your own words. A team of AI graders checks it against the real building data.</p>
+  <p>A 911 call comes in. Find the building, note what the crew needs from the data, then write the message you would send them in your own words. A team of AI graders checks it against the real building data. Faster scores more, but only when the message is right.</p>
   <button class="btn" id="go">Take a call</button>
   <p class="caps" id="err" role="alert"></p>
 </section>
@@ -118,7 +118,7 @@
 <section id="play" hidden>
   <aside id="panel">
     <div class="time"><div><div class="caps dim">Incoming call</div><div id="kind" class="caps" style="color: var(--accent)"></div></div>
-      <div style="text-align: right"><output id="clock">0</output><div class="caps dim">target 60 s</div></div></div>
+      <div style="text-align: right"><output id="clock">0</output><div class="caps dim">full speed points under 40 s</div></div></div>
     <ol id="call" aria-live="polite"></ol>
     <div class="caps dim">Your notes</div>
     <ul id="notes"></ul>
@@ -170,9 +170,9 @@
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);  // all server data goes through this
 const TABS = { write: ["Write dispatch", ""], locate: ["Locate", "CoStar"], record: ["Record", "CoStar"], tenants: ["Tenants", "CoStar"], plan: ["Floor plan", "Matterport"] };
-const TARGET = 60, LINE_MS = 3200;  // the dispatch standard: 60 s; a new caller line every 3.2 s
+const TARGET = 40, LINE_MS = 3200;  // the clock turns red when the Speed part starts dropping (grader.FAST); a new caller line every 3.2 s
 let round, bld, t0, timer, lineTimer, allB = getBuildings().catch(() => []), lastCase;
-// The page's hooks: each game segment (drill-caller.js, drill-lineup.js, drill-crew.js, drill-rival.js) plugs in here
+// The page's hooks: each game segment (drill-caller.js, drill-lineup.js, drill-rival.js) plugs in here
 // from its own file, so segments never edit this page.
 //   drill.on("start", round)          after a round is set up (tabs drawn, call started)
 //   drill.on("picked", building)      after the player selects a building (Locate or any segment via drill.pick)
@@ -349,7 +349,7 @@ async function send() {
   });
   const held = emit("sent", { message, gid, thread: $("thread"), round }).filter(p => p && p.then);
   let g;
-  try { g = await api("/game/grade", { case: round.case, incident: round.incident.id, call: drill.callText ? drill.callText() : round.call.slice(1).join(" "), message, gid }); }
+  try { g = await api("/game/grade", { case: round.case, incident: round.incident.id, call: drill.callText ? drill.callText() : round.call.slice(1).join(" "), message, gid, secs }); }
   catch (e) { stop(); clearInterval(tick); $("grading").hidden = true; $("send").disabled = false; return alert("Grading failed. Is the server running? Try sending again."); }
   await new Promise(r => setTimeout(r, 1500));  // let the last verdicts land before the result covers them
   await Promise.race([Promise.allSettled(held), new Promise(r => setTimeout(r, 90_000))]);
@@ -359,11 +359,10 @@ async function send() {
 $("send").addEventListener("click", send);
 
 function result(g, secs, message) {
-  const late = Math.min(10, Math.floor(Math.max(0, secs - TARGET) / 10)), total = Math.max(0, g.score - late);
-  const NAMES = { location: ["Location", 35], emergency: ["Emergency", 10], needs: ["Needed facts", 25], accuracy: ["Accuracy", 15], delivery: ["Delivery", 15] };
+  const NAMES = { location: ["Location", 28], emergency: ["Emergency", 8], needs: ["Needed facts", 20], accuracy: ["Accuracy", 12], delivery: ["Delivery", 12], speed: ["Speed", 20] };
   const claims = g.claims.map(c => `<li class="${esc(c.verdict)}">${esc(c.claim)}<span class="dim">${esc(c.verdict.replace(/_/g, " "))}: ${esc(c.evidence)}</span></li>`).join("");
-  $("result").innerHTML = `<div class="caps dim">${esc(round.incident.label)} / ${Math.round(secs)} s${late ? ` (${late} off for going past ${TARGET} s)` : ""}</div>
-    <div class="score">${total}<span class="dim" style="font-size: .35em"> / ${g.out_of}</span></div>
+  $("result").innerHTML = `<div class="caps dim">${esc(round.incident.label)} / ${Math.round(secs)} s from the call to sent</div>
+    <div class="score">${g.score}<span class="dim" style="font-size: .35em"> / ${g.out_of}</span></div>
     <div class="parts">${Object.entries(g.parts).map(([k, v]) => `<div><span class="caps dim">${NAMES[k][0]}</span><b>${v} / ${NAMES[k][1]}</b></div>`).join("")}</div>
     <div class="cols">
       <div><h2 class="caps dim">What to do better</h2><ul id="feedback">${g.feedback.map(f => `<li>${esc(f)}</li>`).join("")}</ul>
@@ -382,7 +381,6 @@ $("go").addEventListener("click", start);
 </script>
 <script src="drill-caller.js"></script>
 <script src="drill-lineup.js"></script>
-<script src="drill-crew.js"></script>
 <script src="drill-rival.js"></script>
 </body>
 </html>

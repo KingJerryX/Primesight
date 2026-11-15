@@ -42,7 +42,8 @@ def post(path, body):
     if not os.path.exists(p):
         return 404, {"error": "no Primesight run cached for this call"}, J
     r = json.load(open(p, encoding="utf-8"))
-    return 200, {k: r.get(k) for k in KEEP}, J
+    from .grader import timed  # timed like the player: brief_s is how long Primesight took to write it
+    return 200, timed({k: r.get(k) for k in KEEP}, r.get("brief_s")), J
 
 
 # ---- The builder (local only, needs the CoStar kit; with ANTHROPIC_API_KEY it runs the real agent) ----

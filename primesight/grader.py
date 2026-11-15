@@ -364,9 +364,25 @@ def queue(suggestions, incident, case):
                 fh.write(json.dumps(row) + "\n")
 
 
-def grade(case, incident, call, message, gid=None):
+SPEED, FAST, SLOW = 20, 40, 160  # speed points of 100; all of them at FAST seconds or less, none at SLOW
+
+
+def timed(g, secs):
+    """Count the time: the content parts scaled down to 80, plus a Speed part worth up to 20, all of it at 40 s or less and
+    none at 160 s, times the share of the content the message got right, so a fast wrong message earns little.
+    g is grade()'s result; with no time (secs None) it comes back unchanged."""
+    if not g or isinstance(secs, bool) or not isinstance(secs, (int, float)) or not 0 <= secs < 86400:
+        return g
+    k = (100 - SPEED) / 100
+    parts, out = {p: round(v * k) for p, v in g["parts"].items()}, round(g["out_of"] * k)
+    parts["speed"] = round(SPEED * min(1, max(0, (SLOW - secs) / (SLOW - FAST))) * sum(parts.values()) / out)
+    return {**g, "parts": parts, "score": sum(parts.values()), "out_of": out + SPEED, "secs": round(secs, 1)}
+
+
+def grade(case, incident, call, message, gid=None, secs=None):
     """POST /game/grade. case is "<property id>_<scan id>" from /game/start. None if the case or message doesn't qualify.
-    gid: a 12-hex id the page picks, to follow the graders on GET /trace/<gid> while this call runs."""
+    gid: a 12-hex id the page picks, to follow the graders on GET /trace/<gid> while this call runs.
+    secs: how long the player took, call to send; with it the grade has a Speed part (timed())."""
     from .console_api import FLOORS
     if not isinstance(message, str) or not message.strip() or len(message) > MAX_CHARS or not isinstance(call, str):
         return None
@@ -392,9 +408,9 @@ def grade(case, incident, call, message, gid=None):
         parts["delivery"] = max(0, min(15, r.delivery.score))
         queue(r.suggestions, incident, case)
     feedback = r.feedback[:3] if r else [f"Missing: {c['why']}" for c in items if not c["ok"]][:3]
-    return {"score": sum(parts.values()), "out_of": 100 if r else 70, "parts": parts, "checks": items,
-            "claims": [c.model_dump() for c in r.claims] if r else [], "delivery": r.delivery.model_dump() if r else None,
-            "feedback": feedback, "suggestions_queued": len(r.suggestions) if r else 0}
+    return timed({"score": sum(parts.values()), "out_of": 100 if r else 70, "parts": parts, "checks": items,
+                  "claims": [c.model_dump() for c in r.claims] if r else [], "delivery": r.delivery.model_dump() if r else None,
+                  "feedback": feedback, "suggestions_queued": len(r.suggestions) if r else 0}, secs)
 
 
 if __name__ == "__main__":
@@ -409,6 +425,11 @@ if __name__ == "__main__":
     assert _has("1000 lousiana st", "louisiana") and _has("not breathng", "breath") and _has("frieght elevater", "freight")
     assert not _has("10000 louisiana", "1000") and _has("1000 louisiana", "1000") and not _has("smoke", "smith")
     assert not _has("travel", "travis") and not _has("cpr", "chest")
+    full = {"score": 100, "out_of": 100, "parts": {"location": 35, "emergency": 10, "needs": 25, "accuracy": 15, "delivery": 15}}
+    assert timed(full, 30)["score"] == 100 and timed(full, 100)["parts"]["speed"] == 10 and timed(full, 200)["score"] == 80
+    half = {"score": 45, "out_of": 70, "parts": {"location": 35, "emergency": 10, "needs": 0}}  # graders down: 56 + 20
+    assert timed(half, 10)["out_of"] == 76 and timed(half, 10)["parts"]["speed"] == 13 and timed(full, None) is full
+    assert timed(full, True) is full and timed({"score": 0, "out_of": 100, "parts": {"location": 0}}, 5)["score"] == 0
     assert _tenant_word("Ares Management Corp") == "ares" and _tenant_word("The Bank of Texas") == "texas"
     key = {"property_id": 1, "street_number": "1000", "street": "Louisiana St", "floor": 36, "stories": 71, "construction": "Steel",
            "sprinklers": "yes", "elevators": {"Passenger": None, "Freight": None}, "exit_signs_seen_in_scan": 3,

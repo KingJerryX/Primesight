@@ -24,7 +24,7 @@
   document.head.append(css);
 
   const esc = s => drill.esc(s);
-  const NAMES = { location: ["Location", 35], emergency: ["Emergency", 10], needs: ["Needed facts", 25], accuracy: ["Accuracy", 15], delivery: ["Delivery", 15] };
+  const NAMES = { location: ["Location", 28], emergency: ["Emergency", 8], needs: ["Needed facts", 20], accuracy: ["Accuracy", 12], delivery: ["Delivery", 12], speed: ["Speed", 20] };
   let token = 0;
 
   drill.on("result", async ({ g, message, el, round }) => {
@@ -40,15 +40,14 @@
     const verdict = d > 0 ? `You beat Primesight by ${d}` : d < 0 ? `Primesight wins by ${-d}` : "A tie with Primesight";
     const cell = (a, b) => `<td class="${a > b ? "rival-best" : ""}">${a}</td>`;
     const rows = keys.map(k => `<tr><td>${esc(NAMES[k][0])} <span class="dim">/ ${NAMES[k][1]}</span></td>${cell(+g.parts[k] || 0, +r.parts[k] || 0)}${cell(+r.parts[k] || 0, +g.parts[k] || 0)}</tr>`).join("");
-    const shown = parseInt(el.querySelector(".score")?.firstChild?.textContent, 10);
-    const late = Number.isFinite(shown) && out === g.out_of && shown !== you ? " Your grade here is before the time penalty: Primesight writes in seconds." : "";
+    const took = typeof r.secs === "number" ? ` Primesight took ${Math.round(r.secs)} s to write it; its Speed part counts that time the same way yours does.` : "";
     const sec = document.createElement("section");
     sec.id = "rival";
     sec.innerHTML = `<div class="caps dim">Beat Primesight</div>
       <div class="rival-verdict ${d > 0 ? "rival-win" : d < 0 ? "rival-lose" : ""}" aria-live="polite">${esc(verdict)}</div>
       <p class="rival-note">Primesight is this project's AI that texts crews a building briefing. It wrote its text for the same building, floor and emergency,
         and the same graders scored it against the same call.${r.source === "draft" ? " This is its no-AI draft, written from the building data alone." : ""}
-        It never hears the caller, so anything only the caller said is yours to win.${esc(late)}</p>
+        It never hears the caller, so anything only the caller said is yours to win.${esc(took)}</p>
       <table><thead><tr><th>Part</th><th>You</th><th>Primesight</th></tr></thead><tbody>${rows}</tbody>
         <tfoot><tr><td>Total <span class="dim">/ ${out}</span></td>${cell(you, them)}${cell(them, you)}</tr></tfoot></table>
       <div class="rival-texts">
