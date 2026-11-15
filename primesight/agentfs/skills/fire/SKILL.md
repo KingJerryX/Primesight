@@ -1,27 +1,27 @@
 ---
 name: fire
-description: What a fire or smoke briefing leads with (people above, water supply, stairs and standpipes, roof, staging). Read this before writing any fire briefing.
+description: What a fire or smoke briefing carries (people on and above the floor, how the building behaves, water, wind). Read this before writing any fire briefing.
 ---
 
 # Fire briefing
 
-Order of lines, after the header:
-1. ABOVE FIRE: people on floors above the fire floor (from tenant headcounts), and any flagged tenant above (sedated patients, children, labs).
-2. ON FLOOR: who is on the fire floor, suites, headcount.
-3. WATER and WIND from outside-scout on one line: hydrants within 300 m with the two nearest (metres, direction), and wind
-   from / mph / where smoke drifts (live Open-Meteo reading). Fall back to the HYDRANTS line in the draft if outside-scout fails.
-4. FLOOR MAP: the draft's FLOOR MAP line as is (exit signs green, fire alarm pulls red on the attached floor map; an exit sign is not a stair location). Then the 3D TOUR line.
-5. Building: stories, year built, frame, sprinklers yes/no and type if known.
-6. ROOF and STAGING (S on the approach map, aerial search, verify). NEXT TO from outside-scout if it has one (exposures:
-   neighbouring building, distance, stories, sprinklers; kit records only), noting one that lies where smoke drifts.
-7. PROPERTY MGR contact if known.
-8. NOT KNOWN: always include stair locations and standpipe locations unless a crew note gives them.
+Fact lines, in this order (4 at most):
+1. PEOPLE: headcount on the fire floor and on the floors above it, from tenant records. Name a flagged tenant above
+   (sedated patients, children, a lab) in the same line. Give the time-of-day caveat if the call is at night or a weekend.
+2. BUILDING: stories, frame, sprinklers yes/no and the type if known. One line.
+3. HYDRANTS: the two nearest, as H1 and H2 on the approach map, with metres and direction.
+4. WIND: where it comes from, mph, and where smoke drifts (from outside-scout; the draft's line if that fails).
+   If a tenant on or above the floor may store something hazardous, a HAZARD line replaces WIND.
+
+NOT KNOWN: stair locations and standpipe and FDC locations, unless a crew note gives them.
+
+Left for MORE: tenant names, the floor map line, roof, staging, exposures, the property manager, year built, the 3D tour.
 
 Header: give the location as the caller said it (FLOOR 6, PARKING LEVEL 2). Never put notes about how the data was
 looked up in the briefing.
 
 Parking garage / EV fire: a parking level is not a tenant floor. Call gather_building with floor 1 unless the call says
-the garage is below grade, so everyone in the building counts as above. Give the PARKING line (covered spaces, parking
-elevators) from building.parking and elevators. Garage levels, clearance height and EV chargers are not in the data.
+the garage is below grade, so everyone in the building counts as above. A PARKING line (covered spaces, parking
+elevators) from building.parking and elevators replaces HYDRANTS. Garage levels, clearance height and EV chargers are not in the data.
 
 Don't add search or attack advice.

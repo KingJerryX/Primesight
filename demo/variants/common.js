@@ -146,7 +146,7 @@ function lineLayer(line) {
   const l = line.toUpperCase();
   if (/^WIND/.test(l)) return "weather";
   if (/^(HYDRANTS|OPEN LOT|ROOF|STAGING|WATER)/.test(l)) return "vexcel";
-  if (/^(INSIDE|EXIT SIGNS|WALK|EXITS)/.test(l) || l.includes("SCAN")) return "matterport";
+  if (/^(INSIDE|EXIT SIGNS|WALK|EXITS|FLOOR MAP|3D TOUR)/.test(l) || l.includes("SCAN")) return "matterport";
   if (/^(NOTE|CREW|LAST CREW)/.test(l)) return "notes";
   if (/^(PRIMESIGHT|NOT KNOWN|HTTPS?:)/.test(l)) return "meta";
   return "costar";

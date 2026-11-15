@@ -36,6 +36,15 @@ def parse_call(text):
     return (int(m.group(1)) if m else 1), classify(text)["category"]
 
 
+def more(th):
+    """The answer to MORE in a crew thread: every gathered line the first text left out, from the same facts. No agent."""
+    floor, incident = parse_call(th["call"])
+    f = briefing.last.get(th["pid"])
+    if not f or f["floor"] != floor:
+        f = briefing.gather(th["pid"], floor)
+    return briefing.compose(f, incident, classify(th["call"])["label"], full=True)
+
+
 def brief(text, run_id, mode=None):
     """Agent when a key is set; otherwise the deterministic draft. Same output shape either way."""
     from .agent import find_building
@@ -168,8 +177,12 @@ def brief_or_replay(text, run_id, mode=None, passcode=None):
     (each trace line keeps its original t, so the projector can animate it). No passcode on the deploy: draft briefing."""
     store.put("latest", run_id)  # every projector follows the newest run (GET /latest)
     path = os.path.join(DEMO, hashlib.sha1(" ".join(text.lower().split()).encode()).hexdigest()[:16] + ".json")
-    if os.environ.get("PRIMESIGHT_REPLAY") and mode != "draft" and os.path.exists(path):
-        rec = json.load(open(path, encoding="utf-8"))
+    rec = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else None
+    # A recording made before the short briefing format is stale: run it again (which records it afresh) instead of
+    # replaying the old, longer text.
+    if rec and not rec["out"].get("briefing", "").rstrip().endswith(briefing.MORE_HINT):
+        rec = None
+    if os.environ.get("PRIMESIGHT_REPLAY") and mode != "draft" and rec:
         if rec["out"].get("_facts") is None:  # recorded before /run existed: rebuild facts once (~3 s, no LLM)
             floor, incident = parse_call(text)
             rec["out"]["_facts"] = facts(briefing.gather(rec["out"]["property_id"], floor), incident)

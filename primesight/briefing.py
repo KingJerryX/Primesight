@@ -147,91 +147,109 @@ def _people(tenants, floors):
     return total
 
 
-def compose(f, incident, label=None):
-    """Plain-text briefing for a phone screen. Every line is a fact from a named layer; unknowns are said out loud.
-    incident is a category (INCIDENTS); label is the incident type's name for the header ("Elevator entrapment")."""
+# What each kind of call needs first: at most four lines (keys of the line table in compose), in this order. Responders
+# asked for this themselves: what is sent en route "must be carefully selected" because there is little time to read it,
+# and a medical call needs only where the patient is and how to reach them (NISTIR 7193). The rest waits for MORE.
+FIRST = {
+    "medical": ("elevator", "on_floor", "manager"),
+    "fire": ("people", "building", "hydrants", "wind"),
+    "hazmat": ("industries", "people", "wind", "staging"),
+    "rescue": ("elevators", "manager", "on_floor", "building"),
+    "security": ("people", "on_floor", "manager", "floor_map"),
+    "utility": ("below", "elevators", "manager"),
+}
+# The gaps that change what a crew does, by kind of call. The first text names at most three (data gaps come first).
+UNKNOWN = {
+    "medical": ("AED location", "where the stretcher elevator is"),
+    "fire": ("stair locations", "standpipe and FDC locations"),
+    "hazmat": ("what is actually stored", "shutoff locations"),
+    "rescue": ("machine room location", "elevator car numbers"),
+    "security": ("camera locations", "which doors lock", "stair locations"),
+    "utility": ("riser and shutoff locations", "generator"),
+}
+MORE_HINT = "Reply MORE for the rest, or ask a question."
+
+
+def compose(f, incident, label=None, full=False):
+    """Plain-text briefing for a phone screen: header, address, the few lines this kind of call needs (FIRST), what is
+    not known, and how to get the rest. At most 8 lines. full=True is the answer to MORE: every line the first text left
+    out. Every line is a fact from a named layer. incident is a category (INCIDENTS); label is the incident type's name."""
     assert incident in INCIDENTS, incident
-    b, fl = f["building"], f["floor"]
+    b, fl, line = f["building"], f["floor"], {}
     on_floor = [t for t in b["tenants"] if t["floor"] == fl]
     elev = {e["type"] for e in b["elevators"]}
-    L = [f"PRIMESIGHT  |  {(label or incident).upper()}  |  FLOOR {fl}",
-         f"{b['name'] or ''} - {b['address']}".strip(" -"),
-         f"{b['stories']} stories  |  built {b['year_built'] or '?'}  |  {b['construction'].lower()} frame  |  sprinklers: {b['sprinklers']}"]
+    people = lambda floors: _people(b["tenants"], floors)
 
-    # Who's there
+    line["building"] = (f"BUILDING: {b['stories']} stories, {b['construction'].lower()} frame, built {b['year_built'] or '?'}, "
+                        f"sprinklers: {b['sprinklers']}" + (f" ({b['sprinkler_type'].lower()})" if b["sprinkler_type"] != "Unknown" else ""))
     if on_floor:
         names = sorted({(t["name"], t["suite"]) for t in on_floor}, key=lambda x: x[1] or "")
-        L.append("ON FLOOR: " + "; ".join(f"{n}" + (f" (ste {s})" if s else "") for n, s in names[:4])
-                 + (f" +{len(names) - 4} more" if len(names) > 4 else ""))
-        ppl = _people(b["tenants"], {fl})
-        if ppl:
-            L.append(f"~{ppl} people on this floor by tenant headcount (daytime)")
+        ppl = people({fl})
+        line["on_floor"] = ("ON FLOOR: " + "; ".join(n + (f" (ste {s})" if s else "") for n, s in names[:3])
+                            + (f" +{len(names) - 3} more" if len(names) > 3 else "") + (f", ~{ppl} people (daytime)" if ppl else ""))
     else:
-        L.append("ON FLOOR: no tenant on record (vacant, or not in data)")
-
+        line["on_floor"] = "ON FLOOR: no tenant on record (vacant, or not in data)"
     if incident == "fire" and b["stories"]:
-        above = _people(b["tenants"], set(range(fl + 1, b["stories"] + 1)))
-        if above:
-            L.append(f"ABOVE FIRE: ~{above} people on floors {fl + 1}-{b['stories']}")
+        above = people(set(range(fl + 1, b["stories"] + 1)))
+        line["people"] = (f"PEOPLE: ~{people({fl})} on floor {fl}, ~{above} above on floors {fl + 1}-{b['stories']} (daytime headcount)"
+                          if fl < b["stories"] else f"PEOPLE: ~{people({fl})} on floor {fl}, the top floor (daytime headcount)")
+    if incident in ("security", "hazmat"):
+        near = people(set(range(fl - 2, fl + 3)) - {fl})
+        line["people"] = f"PEOPLE: ~{people({fl})} on floor {fl}, ~{near} on floors {max(fl - 2, 1)}-{fl + 2} next to it (daytime headcount)"
     if incident == "medical":
-        L.append("ELEVATOR: freight car on record (stretcher)" if "Freight" in elev
-                 else "ELEVATOR: passenger only on record; freight unknown" if elev else "ELEVATOR: none on record")
-    if incident == "hazmat":
-        inds = sorted({t["industry"] for t in b["tenants"] if t["industry"] not in ("Unknown", "0")})
-        L.append("TENANT INDUSTRIES: " + (", ".join(inds[:5]) or "not recorded"))
-    if incident in ("rescue", "utility"):
-        cars = ", ".join(f"{e['count'] or '?'} {e['type'].lower()}" for e in b["elevators"])
-        L.append(f"ELEVATORS: {cars or 'none on record'}  |  {b['stories']} stories")
-    if incident == "security":
-        near = _people(b["tenants"], set(range(fl - 2, fl + 3)) - {fl})
-        if near:
-            L.append(f"NEARBY: ~{near} people on floors {max(fl - 2, 1)}-{fl + 2} (excluding {fl})")
+        line["elevator"] = ("ELEVATOR: freight car on record (fits a stretcher)" if "Freight" in elev
+                            else "ELEVATOR: passenger only on record; freight unknown" if elev else "ELEVATOR: none on record")
+    cars = ", ".join(f"{e['count'] or '?'} {e['type'].lower()}" for e in b["elevators"])
+    line["elevators"] = f"ELEVATORS: {cars or 'none on record'}, {b['stories']} stories"
+    inds = sorted({t["industry"] for t in b["tenants"] if t["industry"] not in ("Unknown", "0")})
+    line["industries"] = "TENANT INDUSTRIES: " + (", ".join(inds[:5]) or "not recorded")
     if incident == "utility" and fl > 1:
-        below = _people(b["tenants"], set(range(1, fl)))
-        L.append(f"BELOW: ~{below} people on floors 1-{fl - 1} (water runs down)  |  sprinklers: {b['sprinklers']}, type {b['sprinkler_type'].lower()}")
+        line["below"] = (f"BELOW: ~{people(set(range(1, fl)))} people on floors 1-{fl - 1} (water runs down), "
+                         f"sprinklers: {b['sprinklers']}, type {b['sprinkler_type'].lower()}")
 
     # Outside: the approach map (labelled aerial) carries positions; the text says what is on it
     amap = str(f.get("aerial") or "").endswith("_approach.jpg")
     on = lambda la, lo: amap and outside.on_map(b["lat"], b["lon"], la, lo)
-    if incident in ("fire", "hazmat") and f["hydrants"]:
+    if f["hydrants"]:
         labelled = [(m, d) for m, d, la, lo in f["hydrants"] if on(la, lo)][:2]
-        L.append("HYDRANTS: " + (", ".join(f"H{i} {m} m {d}" for i, (m, d) in enumerate(labelled, 1)) + " (approach map)" if labelled
-                                 else ", ".join(f"{m} m {d}" for m, d, *_ in f["hydrants"][:2])))
+        line["hydrants"] = "HYDRANTS: " + (", ".join(f"H{i} {m} m {d}" for i, (m, d) in enumerate(labelled, 1)) + " (approach map)" if labelled
+                                           else ", ".join(f"{m} m {d}" for m, d, *_ in f["hydrants"][:2]))
     w = f.get("wind")
-    if incident in ("fire", "hazmat") and w:
+    if w:
         frm = w["wind_direction_10m"]
-        L.append(f"WIND: from {outside.DIRS[round(frm / 45) % 8]} {round(w['wind_speed_10m'])} mph, smoke drifts "
-                 f"{outside.DIRS[round((frm + 180) / 45) % 8]}")
+        line["wind"] = (f"WIND: from {outside.DIRS[round(frm / 45) % 8]} {round(w['wind_speed_10m'])} mph, smoke drifts "
+                        f"{outside.DIRS[round((frm + 180) / 45) % 8]}")
     if f["staging"]:
         _, m, d, la, lo = f["staging"][0]
-        L.append(f"STAGING: open lot ~{m} m {d}" + (" (S on approach map" if on(la, lo) else " (off the approach map")
-                 + ", from aerial search, verify)")
+        line["staging"] = (f"STAGING: open lot ~{m} m {d}" + (" (S on approach map" if on(la, lo) else " (off the approach map")
+                           + ", from aerial search, verify)")
     roof = f["roof"]
-    if incident == "fire" and roof.get("roof-characteristics.material.class"):
-        L.append(f"ROOF: {roof['roof-characteristics.material.class']}"
-                 + (f", {roof['roof-objects.ac-unit.count']} AC unit(s)" if roof.get("roof-objects.ac-unit.count") else ""))
+    if roof.get("roof-characteristics.material.class"):
+        line["roof"] = (f"ROOF: {roof['roof-characteristics.material.class']}"
+                        + (f", {roof['roof-objects.ac-unit.count']} AC unit(s)" if roof.get("roof-objects.ac-unit.count") else ""))
 
-    # Inside
     # Inside: the marked floor map carries positions; never scan jargon (scan points, scan start) in crew text
     s, v = f["scan"], f.get("vision")
     if s and f.get("floorplan"):
         n = (v or {}).get("located") or {}
         marks = [f"{n[k]} {lab}{'s' if n[k] > 1 else ''} ({col})"
                  for k, lab, col in (("exit sign", "exit sign", "green"), ("fire alarm pull station", "fire alarm pull", "red")) if n.get(k)]
-        L.append((f"FLOOR MAP (floor {fl}, attached)" if f["scan_exact"] else f"FLOOR MAP is floor {s['floor']}, not {fl} (same core, layout may differ)")
-                 + (": " + ", ".join(marks) if marks else ""))
-    if s:
-        L.append(f"3D TOUR of floor {s['floor']}: {s['link']}")
-    else:  # never borrow rooms or routes from somewhere else: say plainly there is nothing
-        L.append("INSIDE: no interior scan" + (" with a known floor" if f["scans"] else " for this building"))
+        line["floor_map"] = ((f"FLOOR MAP (floor {fl}, attached)" if f["scan_exact"] else f"FLOOR MAP is floor {s['floor']}, not {fl} (same core, layout may differ)")
+                             + (": " + ", ".join(marks) if marks else ""))
+    line["tour"] = (f"3D TOUR of floor {s['floor']}: {s['link']}" if s  # never borrow rooms or routes from somewhere else
+                    else "INSIDE: no interior scan" + (" with a known floor" if f["scans"] else " for this building"))
     pm = next((c for c in b["contacts"] if c["role"] == "Property manager"), None)
     if pm:
-        L.append(f"PROPERTY MGR: {pm['company']} {pm['phone']}")
+        line["manager"] = f"PROPERTY MGR: {pm['company']} {pm['phone']}"
 
-    unknown = [k for k, v in (("sprinkler type", b["sprinkler_type"] == "Unknown"), ("stair and elevator locations", True)) if v] + f["gaps"]
-    L.append("NOT KNOWN: " + ", ".join(unknown))
-    return "\n".join(L)
-
+    first = [k for k in FIRST[incident] if line.get(k)]
+    unknown = f["gaps"] + list(UNKNOWN[incident]) + (["sprinkler type"] if b["sprinkler_type"] == "Unknown" and incident in ("fire", "utility") else [])
+    place = f"{b['name'] or ''} - {b['address']}".strip(" -")
+    if full:
+        rest = [line[k] for k in line if k not in first]
+        return "\n".join([f"MORE  |  {place}"] + rest + (["ALSO NOT KNOWN: " + ", ".join(unknown[3:])] if unknown[3:] else []))
+    return "\n".join([f"PRIMESIGHT  |  {(label or incident).upper()}  |  FLOOR {fl}", place] + [line[k] for k in first]
+                     + ["NOT KNOWN: " + ", ".join(unknown[:3]), MORE_HINT])
 
 if __name__ == "__main__":
     t = [{"name": "A", "floor": 30, "employees": 100}, {"name": "A", "floor": 31, "employees": 100},
