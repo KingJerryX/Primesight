@@ -58,8 +58,20 @@ def answer_key(pid, mid):
             "crew_notes": open(notes, encoding="utf-8").read()[-1500:] if os.path.exists(notes) else ""}
 
 
+def _close(token, word):
+    """A typo of word (or of a word starting with it): "lousiana", "breathng", "elevater", "arest"."""
+    from difflib import SequenceMatcher
+    return max(SequenceMatcher(None, token, word).ratio(), SequenceMatcher(None, token[:len(word)], word).ratio()) >= 0.8
+
+
 def _has(text, *words):
-    return any(re.search(rf"\b{re.escape(w.lower())}", text) for w in words if w)
+    """Any word said: as a word start ("breath" in "breathing"), a whole number ("1000", not "10000"), or, for words of 5+
+    letters, with a slip or two. Numbers stay exact: a wrong digit is a wrong address."""
+    words = [w.lower() for w in words if w]
+    if any(re.search(rf"\b{re.escape(w)}" + (r"\b" if w.isdigit() else ""), text) for w in words):
+        return True
+    toks = re.findall(r"[a-z]+", text)
+    return any(len(w) >= 5 and w.isalpha() and any(_close(t, w) for t in toks) for w in words)
 
 
 def _tenant_word(name):
@@ -67,9 +79,39 @@ def _tenant_word(name):
     return next((w for w in re.findall(r"[a-z0-9&']+", name.lower()) if len(w) > 2 and w not in STOP), None)
 
 
+_ONES = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen " \
+        "seventeen eighteen nineteen".split()
+_ORDS = "zeroth first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth " \
+        "fifteenth sixteenth seventeenth eighteenth nineteenth".split()
+_TENS = {w: 10 * i for i, w in enumerate("_ _ twenty thirty forty fifty sixty seventy eighty ninety".split()) if i > 1}
+_TENS_ORD = {w: 10 * i for i, w in enumerate("_ _ twentieth thirtieth fortieth fiftieth sixtieth seventieth eightieth ninetieth".split()) if i > 1}
+_UNIT = {**{w: (i, False) for i, w in enumerate(_ONES)}, **{w: (i, True) for i, w in enumerate(_ORDS)}}
+_NUM = re.compile(rf"\b(?:({'|'.join(_TENS)})(?:[\s-]+({'|'.join(w for w in _UNIT if _UNIT[w][0] < 10)}))?"
+                  rf"|({'|'.join(_TENS_ORD)})|({'|'.join(sorted(_UNIT, key=len, reverse=True))}))\b")
+
+
+def _digits(text):
+    """Number words as digits: "thirty-sixth" -> "36th", "floor six" -> "floor 6"."""
+    def one(m):
+        tens, unit, tens_ord, alone = m.groups()
+        if tens:
+            n, o = _TENS[tens] + (_UNIT[unit][0] if unit else 0), bool(unit and _UNIT[unit][1])
+        elif tens_ord:
+            n, o = _TENS_ORD[tens_ord], True
+        else:
+            n, o = _UNIT[alone]
+        return f"{n}th" if o else str(n)
+    return _NUM.sub(one, text)
+
+
 def floors_said(text):
-    """Every floor the message names: "floor 36", "36th floor", "fl 36", "36F"."""
-    pats = [r"\b(?:floor|fl\.?|level)\s*#?(\d{1,3})\b", r"\b(\d{1,3})(?:st|nd|rd|th)?\s*(?:floor|fl\b)", r"\b(\d{1,3})f\b"]
+    """Every floor the message names: "floor 36", "36th floor", "fl 36", "36F", "thirty-sixth floor", "floor six".
+    "71 floors" is the building's height, not a floor; "flor"/"flr" count as floor."""
+    text = _digits(text)
+    text = re.sub(r"\b[a-z]{4,6}\b", lambda m: "floor" if m[0] not in ("flood", "flour", "floors", "flows", "flowr") and
+                  m[0][0] == "f" and _close(m[0], "floor") else m[0], text)  # "flooor", "folor", "floir"
+    fl = r"(?:floor|flor|floo|flr|fl\.?|level|lvl)"
+    pats = [rf"\b{fl}\s*#?(\d{{1,3}})\b", r"\b(\d{1,3})(?:st|nd|rd|th)?\s*(?:floor|flor|flr|fl)\b(?!s)", r"\b(\d{1,3})f\b"]
     return {int(n) for p in pats for n in re.findall(p, text)}
 
 
@@ -360,6 +402,13 @@ if __name__ == "__main__":
     load_dotenv(os.path.join(paths.ROOT, ".env"))
     assert floors_said("cardiac arrest 36th floor") == {36} and floors_said("fl 36, 1000 louisiana") == {36}
     assert floors_said("floor 12 and level 3") == {12, 3} and floors_said("1000 Louisiana St") == set()
+    assert floors_said("thirty-sixth floor") == {36} == floors_said("floor thirty six") == floors_said("the thirty sixth flor")
+    assert floors_said("sixth floor") == {6} == floors_said("floor six") and floors_said("36th floor, 71 floors tall") == {36}
+    assert floors_said("36th flooor") == {36} == floors_said("folor 36") and floors_said("flood on 3") == set()
+    assert floors_said("twentieth floor") == {20} and floors_said("first floor lobby") == {1} and floors_said("four people") == set()
+    assert _has("1000 lousiana st", "louisiana") and _has("not breathng", "breath") and _has("frieght elevater", "freight")
+    assert not _has("10000 louisiana", "1000") and _has("1000 louisiana", "1000") and not _has("smoke", "smith")
+    assert not _has("travel", "travis") and not _has("cpr", "chest")
     assert _tenant_word("Ares Management Corp") == "ares" and _tenant_word("The Bank of Texas") == "texas"
     key = {"property_id": 1, "street_number": "1000", "street": "Louisiana St", "floor": 36, "stories": 71, "construction": "Steel",
            "sprinklers": "yes", "elevators": {"Passenger": None, "Freight": None}, "exit_signs_seen_in_scan": 3,

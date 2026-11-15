@@ -35,7 +35,9 @@
   #notes li { display: flex; justify-content: space-between; align-items: start; gap: 10px; padding: 7px 10px; background: #ffffff0a; font-size: 14px; animation: in .3s var(--ease); }
   #notes li.empty { background: none; padding: 0; color: var(--dim); }
   #notes li button { padding: 0 4px; border: 0; background: none; color: var(--dim); font-size: 16px; line-height: 1; } #notes li button:hover { color: var(--text); }
-  #towrite { margin-top: auto; }
+  #towrite { margin-top: auto; width: 100%; padding: 22px 20px; font-size: 17px; border-color: var(--accent); }
+  #notes li button.use { flex: 1; padding: 0; color: var(--text); font: inherit; font-size: 14px; text-align: left; cursor: pointer; }
+  #notes li button.use:hover { color: var(--accent); } #notes li button.use.used { color: var(--dim); }
   #tabs button.write { margin-left: auto; color: var(--accent); }
   #v-write { flex-direction: column; gap: 12px; } #v-write.on { display: flex; }
   #msg { flex: 1; width: 100%; max-width: 900px; box-sizing: border-box; min-height: 220px; resize: vertical; padding: 10px 12px; border: 1px solid var(--line); border-radius: 0;
@@ -142,7 +144,7 @@
     </div>
     <div class="view" id="v-write">
       <h2>Write the dispatch</h2>
-      <p class="note">In your own words: the text the crew reads on the way. Location and emergency first, then only what changes how they respond. They read it while driving, so keep it short. Your notes are on the left.</p>
+      <p class="note">In your own words: the text the crew reads on the way. Location and emergency first, then only what changes how they respond. They read it while driving, so keep it short. Click a note on the left to add it (Ctrl+Z takes it back out). Enter sends; Shift+Enter starts a new line.</p>
       <textarea id="msg" placeholder="e.g. Cardiac arrest, 36th floor, Wells Fargo Plaza, 1000 Louisiana St. Not breathing, CPR in progress. ..."></textarea>
       <div class="row"><span class="caps dim" id="words">0 words</span><button class="btn" id="send" disabled>Send to crew</button></div>
     </div>
@@ -194,10 +196,25 @@ function addNote(text, btn) {
   btn?.classList.add("used"); renderNotes();
 }
 function renderNotes() {
-  $("notes").innerHTML = notes.map((n, i) => `<li><span>${esc(n)}</span><button data-drop="${i}" aria-label="Remove note">&times;</button></li>`).join("") ||
-    `<li class="empty">Use Note on the call and the screens to collect what the crew needs.</li>`;
+  $("notes").innerHTML = notes.map((n, i) => `<li><button class="use" data-use="${i}" title="Add to the dispatch">${esc(n)}</button><button data-drop="${i}" aria-label="Remove note">&times;</button></li>`).join("") ||
+    `<li class="empty">Use Note on the call and the screens to collect what the crew needs. Click a note to add it to the dispatch.</li>`;
 }
-$("notes").addEventListener("click", e => { const b = e.target.closest("[data-drop]"); if (b) { notes.splice(+b.dataset.drop, 1); renderNotes(); } });
+// Clicking a note types it into the dispatch at the cursor, as its own sentence. execCommand("insertText") goes through
+// the textarea's own undo stack, so Ctrl+Z takes it back out (setRangeText would not be undoable).
+function useNote(text) {
+  tab("write");
+  const m = $("msg"); m.focus();
+  const before = m.value.slice(0, m.selectionStart), open = !before.trim() || /[.!?]\s*$/.test(before);
+  const sep = before && !/\s$/.test(before) ? (open ? " " : ". ") : "";  // after "...Louisiana St" add ". " first
+  let piece = sep + text.charAt(0).toUpperCase() + text.slice(1);       // every note starts a sentence
+  if (!/[.!?]$/.test(piece)) piece += ".";
+  if (!document.execCommand("insertText", false, piece + " ")) { m.setRangeText(piece + " ", m.selectionStart, m.selectionEnd, "end"); words(); }
+}
+$("notes").addEventListener("click", e => {
+  const d = e.target.closest("[data-drop]"), u = e.target.closest("[data-use]");
+  if (d) { notes.splice(+d.dataset.drop, 1); renderNotes(); }
+  else if (u) { useNote(notes[+u.dataset.use]); u.classList.add("used"); }
+});
 const pinBtn = (text, label = "Note") => `<button class="pin" data-pin="${esc(text)}">${esc(label)}</button>`;
 document.addEventListener("click", e => { const b = e.target.closest("[data-pin]"); if (b) addNote(b.dataset.pin, b); });
 function words() {
@@ -205,6 +222,9 @@ function words() {
   $("words").textContent = `${n} word${n === 1 ? "" : "s"}`; $("send").disabled = !n;
 }
 $("msg").addEventListener("input", words);
+$("msg").addEventListener("keydown", e => {  // Enter sends, Shift+Enter is a new line
+  if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); if (!$("send").disabled) send(); }
+});
 $("towrite").addEventListener("click", () => { tab("write"); $("msg").focus(); });
 
 function tab(name) {
