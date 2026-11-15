@@ -91,10 +91,6 @@
   #plate { position: relative; width: 62%; transform-style: preserve-3d; transform: rotateX(55deg); animation: turn 60s linear infinite; }
   @keyframes turn { from { transform: rotateX(55deg) rotateZ(0deg); } to { transform: rotateX(55deg) rotateZ(360deg); } }
   #plate .img { position: absolute; inset: 0; background: center / 100% 100% no-repeat; filter: saturate(.5) brightness(.85) contrast(1.15); outline: 1px solid #ffffff2e; }
-  .pin { position: absolute; width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 4px color-mix(in srgb, var(--c) 28%, #0000), 0 0 16px var(--c); transform-style: preserve-3d; }
-  .pin::before, .pin::after { content: ""; position: absolute; left: 4px; bottom: 5px; width: 2px; height: 56px; background: linear-gradient(to top, var(--c), #0000); transform-origin: bottom; transform: rotateX(-90deg); }
-  .pin::after { transform: rotateX(-90deg) rotateY(90deg); }
-  .pin.exit { --c: var(--ok); } .pin.alarm { --c: var(--accent); }
   /* Outside: the Vexcel photos, one direction after another. */
   #air { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .6s var(--ease); }
   #air.swap, #air:not([src]) { opacity: 0; }
@@ -137,7 +133,7 @@
 <section class="layers">
   <div class="head"><h2>Three views of one address</h2><span class="caps addr">808 Travis St, Houston</span></div>
   <div class="views">
-    <figure><div class="vis" id="v-scan"><div id="plate"></div></div><figcaption>Inside<span class="caps">Matterport scan, exits found by SAM 3</span></figcaption></figure>
+    <figure><div class="vis" id="v-scan"><div id="plate"></div></div><figcaption>Inside<span class="caps">Matterport 3D scan of the floor</span></figcaption></figure>
     <figure><div class="vis"><img id="air" alt=""><b class="caps" id="airname"></b></div><figcaption>Outside<span class="caps">Vexcel aerial photos</span></figcaption></figure>
     <figure><div class="vis" id="v-rec"><div id="stack"></div><dl id="facts"></dl></div><figcaption>On record<span class="caps">CoStar building data</span></figcaption></figure>
   </div>
@@ -148,7 +144,7 @@
     <h2>Known before the door</h2>
     <p>A crew usually learns a building on arrival: which entrance, which stairs, who is on the floor. Primesight reads the 3D scans, aerial photos and tenant records for that address and sends the answer as one text while the truck is still moving. Where the data runs out, it says so.</p>
   </div>
-  <div class="phone" role="img" aria-label="A crew texts a cardiac arrest on the 36th floor of 1000 Louisiana St. Primesight replies with the building, the freight elevator, the exit signs on that floor and what it does not know.">
+  <div class="phone" role="img" aria-label="A crew texts a cardiac arrest on the 36th floor of 1000 Louisiana St. Primesight replies with the building, the freight elevator, who is on the floor and what it does not know.">
     <div class="phone-top"><b>Primesight</b><span class="caps">From a recorded run, shortened</span></div>
     <div id="thread" class="thread" aria-hidden="true"></div>
   </div>
@@ -267,11 +263,10 @@ if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
 // Three views of one address: 808 Travis St, Houston (CoStar property 233953, scanned on floor 5). All live from the server;
 // if a request fails its box simply stays empty.
 const PID = 233953, SCAN_FLOOR = 5, byId = id => document.getElementById(id);
-// Inside: the floor plan with the located signs, turning.
+// Inside: the scanned floor plan, turning.
 fetch(`/floor/${PID}/${SCAN_FLOOR}`).then(r => r.ok ? r.json() : Promise.reject()).then(fv => {
   byId("plate").style.aspectRatio = fv.aspect;
-  byId("plate").innerHTML = `<div class="img" style="background-image:url(${fv.image})"></div>` +
-    fv.points.map(p => `<i class="pin ${p.kind === "exit sign" ? "exit" : "alarm"}" style="left:${p.x * 100}%;top:${p.y * 100}%"></i>`).join("");
+  byId("plate").innerHTML = `<div class="img" style="background-image:url(${fv.image})"></div>`;
 }).catch(() => {});
 // Outside: the Vexcel photo from above, then from each side. Each one is loaded before it is swapped in.
 const AIR = [["top", "From above"], ["north", "Looking north"], ["east", "Looking east"], ["south", "Looking south"], ["west", "Looking west"]];
@@ -301,9 +296,9 @@ fetch("/buildings").then(r => r.json()).then(list => {
 // and shortened. It plays when it scrolls into view and starts over a few seconds after the last message.
 const TEXTS = [
   ["me", "Cardiac arrest on the 36th floor, 1000 Louisiana St, Houston."],
-  ["it", "PRIMESIGHT | MEDICAL | FLOOR 36\nWells Fargo Plaza | 71 stories | built 1983 | steel | sprinklers: yes"],
-  ["it", "ELEVATOR: freight car on record (fits stretcher), plus passenger cars\nINSIDE: 3D scan of floor 36. EXIT SIGNS seen at 11 of 18 scan points"],
-  ["it", "NOT KNOWN: AED location, stair locations, suite number"],
+  ["it", "PRIMESIGHT | CARDIAC ARREST | FLOOR 36, 1000 Louisiana St | CPR: not stated\nWells Fargo Plaza, Houston, TX"],
+  ["it", "ELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: CME Group, ~16 people (daytime)"],
+  ["it", "NOT KNOWN: AED location, where the freight car is, CME Group suite"],
   ["me", "Which elevator fits our stretcher and who meets us?"],
   ["it", "ELEVATOR: freight car on record (fits stretcher). Where it is in the building is not known.\nMEETS YOU: the property manager. We texted them to meet the crew and bring the freight car to the lobby. They have not confirmed."],
 ];
