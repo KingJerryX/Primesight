@@ -265,7 +265,7 @@ def save_name(rid, name):
 
 def _grade(body):
     from .grader import grade
-    return grade(body.get("case"), body.get("incident"), body.get("call", ""), body.get("message"))
+    return grade(body.get("case"), body.get("incident"), body.get("call", ""), body.get("message"), body.get("gid"))
 
 
 def post(path, body):

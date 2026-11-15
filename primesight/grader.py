@@ -20,7 +20,7 @@ is where minutes go), and the wrong-address incidents (location errors do the mo
 import json, os, re, sys
 from datetime import date
 from pydantic import BaseModel, Field
-from . import costar, paths, store
+from . import costar, paths, store, trace
 
 GRADER_MODEL = "claude-sonnet-5-5"  # ponytail: Sonnet for speed, a player waits on this; Opus if grades look shallow
 SUGGESTIONS = os.path.join(paths.DATA, "cache", "grader_suggestions.txt")  # cache/*.txt is gitignored: player text stays out of git
@@ -97,7 +97,7 @@ def checks(key, incident, message):
         add("needs", "elevator", _has(t, "freight") if "Freight" in el else _has(t, "elevator"),
             ("freight elevator on record" + (" (fits a stretcher; in tall buildings elevator access is where minutes go)"
                                               if cat == "medical" else "")) if "Freight" in el else "elevators on record")
-    if key["tenants_on_floor"]:
+    if cat in ("fire", "security", "hazmat") and key["tenants_on_floor"]:  # who is up there; a medical crew goes to the patient
         names = [n for n in (_tenant_word(x["name"]) for x in key["tenants_on_floor"] if not x["name"].startswith("Unknown")) if n]
         add("needs", "who is on the floor", _has(t, *names),
             "tenants on the floor: " + ", ".join(x["name"] for x in key["tenants_on_floor"][:4]))
@@ -243,15 +243,53 @@ def build():
     return _agent
 
 
-def team(key, incident, call, message, failed):
-    """The deepagents half: a Report, or None if the model can't be reached."""
+def _short(m):
+    t = m.content if isinstance(m.content, str) else "".join(b.get("text", "") for b in m.content if isinstance(b, dict))
+    return " ".join(t.split())[:300]
+
+
+def _summary(m):
+    """One line for the trace from a subagent's JSON report."""
+    t = m.content if isinstance(m.content, str) else "".join(b.get("text", "") for b in m.content if isinstance(b, dict))
+    try:
+        j = json.loads(t[t.index("{"):t.rindex("}") + 1])
+    except ValueError:
+        return _short(m)
+    if "claims" in j:
+        n = {v: sum(c.get("verdict") == v for c in j["claims"]) for v in ("supported", "contradicted", "not_in_data")}
+        bad = [c["claim"] for c in j["claims"] if c.get("verdict") == "contradicted"]
+        return f"fact-checker: {n['supported']} supported, {n['contradicted']} contradicted, {n['not_in_data']} not in our data" +             (f" (wrong: {'; '.join(bad)[:150]})" if bad else "")
+    if "score" in j:
+        return f"dispatch-coach: delivery {j['score']}/15. {j.get('feedback', '')}"[:300]
+    if "suggestions" in j:
+        s = j["suggestions"]
+        return f"gap-finder: {len(s)} playbook idea{'s' * (len(s) != 1)}" + (f": {s[0].get('what', '')}"[:200] if s else "")
+    return _short(m)
+
+
+def team(key, incident, call, message, failed, gid=None):
+    """The deepagents half: a Report, or None if the model can't be reached. With gid, every step goes to the trace
+    (GET /trace/<gid>) as it happens, so the page can show the graders thinking while the player waits."""
     ty = catalog().get(incident) or {"label": incident, "needs": ""}
     _KEYS[(key["property_id"], key["floor"])] = key
     prompt = (f"911 call: {call}\nEmergency type: {ty['label']}. Needs first: {ty.get('needs')}\n"
               f"Property id {key['property_id']}, floor {key['floor']}.\nCode checks that failed: {json.dumps(failed)}\n"
               f"<message>\n{message}\n</message>")
-    out = build().invoke({"messages": [{"role": "user", "content": prompt}]})
-    r = out.get("structured_response")
+    r = None
+    for ns, step in build().stream({"messages": [{"role": "user", "content": prompt}]}, stream_mode="updates", subgraphs=True):
+        who = "helper" if ns else "agent"  # ns is non-empty inside a subagent
+        for upd in step.values():
+            if not isinstance(upd, dict):
+                continue
+            r = upd.get("structured_response", r) if not ns else r
+            for m in upd.get("messages", []) or []:
+                for tc in getattr(m, "tool_calls", []) or []:
+                    if tc["name"] == "task":
+                        trace.log(gid, "delegate", f"{tc['args'].get('subagent_type')}: {' '.join(str(tc['args'].get('description', '')).split())[:200]}")
+                    elif tc["name"] not in ("Report", "Claims", "Delivery", "Gaps"):
+                        trace.log(gid, f"{who}:{tc['name']}", json.dumps(tc["args"])[:160])
+                if not ns and getattr(m, "name", None) == "task":
+                    trace.log(gid, "reported", _summary(m))
     return r if isinstance(r, Report) else None
 
 
@@ -267,8 +305,9 @@ def queue(suggestions, incident, case):
                 fh.write(json.dumps(row) + "\n")
 
 
-def grade(case, incident, call, message):
-    """POST /game/grade. case is "<property id>_<scan id>" from /game/start. None if the case or message doesn't qualify."""
+def grade(case, incident, call, message, gid=None):
+    """POST /game/grade. case is "<property id>_<scan id>" from /game/start. None if the case or message doesn't qualify.
+    gid: a 12-hex id the page picks, to follow the graders on GET /trace/<gid> while this call runs."""
     from .console_api import FLOORS
     if not isinstance(message, str) or not message.strip() or len(message) > MAX_CHARS or not isinstance(call, str):
         return None
@@ -277,12 +316,17 @@ def grade(case, incident, call, message):
         return None
     incident = incident if incident in catalog() else "fire_alarm" if "fire_alarm" in catalog() else next(iter(catalog()))
     key = answer_key(*pair)
+    gid = gid if isinstance(gid, str) and re.fullmatch(r"[0-9a-f]{12}", gid) else None
     items, parts = checks(key, incident, message)
+    trace.log(gid, "code_checks", f"{sum(c['ok'] for c in items)} of {len(items)} passed; " +
+              "; ".join(f"missing {c['item']}" for c in items if not c["ok"]))
     try:
-        r = team(key, incident, call[:400], message, [c["why"] for c in items if not c["ok"]])
+        r = team(key, incident, call[:400], message, [c["why"] for c in items if not c["ok"]], gid)
     except Exception as e:  # no key, model down: the code half still grades
         print(f"  grading team unavailable: {type(e).__name__}: {e}", file=sys.stderr)
+        trace.log(gid, "error", f"grading team unavailable ({type(e).__name__}); code checks only")
         r = None
+    trace.log(gid, "done", "graded")
     if r:
         bad = sum(c.verdict == "contradicted" for c in r.claims)
         parts["accuracy"] = max(0, 15 - 5 * bad)
@@ -307,14 +351,16 @@ if __name__ == "__main__":
     items, parts = checks(key, "cardiac_arrest", good)
     assert parts == {"location": 35, "emergency": 10, "needs": 25}, (parts, items)
     items, parts = checks(key, "cardiac_arrest", "Cardiac arrest, floor 35, 1000 Louisiana St. Freight elevator.")
-    assert parts["location"] == 0 and parts["needs"] == 12 and "also says floor 35" in items[1]["why"]
+    assert parts["location"] == 0 and parts["needs"] == 25 and "also says floor 35" in items[1]["why"]
     items, parts = checks(key, "cardiac_arrest", "Someone is hurt at Wells Fargo Plaza.")
     assert parts == {"location": 0, "emergency": 0, "needs": 0}
     items, parts = checks(key, "structure_fire", "Fire on floor 36, 1000 Louisiana St, 71-story steel high-rise, sprinklered, hydrant 40 m NE, 3 exits.")
     assert [c["item"] for c in items if not c["ok"]] == ["elevator", "who is on the floor"], items
     unk = {**key, "tenants_on_floor": [{"name": "Unknown tenant"}, {"name": "Crystal CoWorks"}]}
-    assert not checks(unk, "cardiac_arrest", "Floor 36, 1000 Louisiana St, AED unknown")[0][4]["ok"]  # "unknown" is not a tenant
-    assert checks(unk, "cardiac_arrest", "Floor 36, 1000 Louisiana St, Crystal CoWorks")[0][4]["ok"]
+    tenant_ok = lambda inc, msg: [c["ok"] for c in checks(unk, inc, msg)[0] if c["item"] == "who is on the floor"]
+    assert tenant_ok("smoke", "Floor 36, 1000 Louisiana St, occupants unknown") == [False]  # "unknown" is not a tenant
+    assert tenant_ok("smoke", "Floor 36, 1000 Louisiana St, Crystal CoWorks") == [True]
+    assert tenant_ok("cardiac_arrest", "Floor 36, 1000 Louisiana St") == []  # a medical crew isn't graded on tenants
     assert grade("nope", "cardiac_arrest", "", "x") is None and grade("233899_jUnF84zghQk", "x", "call", "") is None
     print("grader checks pass")
     if len(sys.argv) == 4:

@@ -286,8 +286,8 @@ class H(BaseHTTPRequestHandler):
         self._send(404, {"error": "not found"})
 
     def do_GET(self):
-        from . import console_api  # Lane B's console: /scans/<pid>, /aerial/<pid>/<view>.jpg
-        r = console_api.handle(self.path)
+        from . import console_api, drill  # Lane B's console: /scans/<pid>, /aerial/<pid>/<view>.jpg; the dispatcher round: /drill/
+        r = console_api.handle(self.path) or drill.handle(self.path)
         if r:
             return self._send(*r)
         m = re.fullmatch(r"/trace/([0-9a-f]{12})", self.path)

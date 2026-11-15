@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primesight Dispatcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* The dispatcher round: a 911 call comes in line by line; the player finds the building, pins what the crew needs from
+     the data screens into a message, and sends it. primesight/grader.py grades it: code checks plus a deepagents team
+     whose steps show while the player waits. Routes: primesight/drill.py and POST /game/grade. */
+  [hidden] { display: none !important; }
+  body { font-size: 16px; line-height: 1.5; }
+  h1, h2 { font-weight: 400; letter-spacing: -.02em; margin: 0; }
+  button:disabled { cursor: default; opacity: .35; }
+  #intro { min-height: 100vh; display: grid; align-content: center; justify-items: center; gap: 22px; padding: 120px 20px 72px; text-align: center; }
+  #intro h1 { font-size: clamp(44px, 6.5vw, 92px); line-height: 1; }
+  #intro p { font-size: clamp(17px, 1.6vw, 22px); max-width: 32em; margin: 0 0 12px; }
+  #err { font-size: 12px; margin: 0; color: var(--accent); } #err:empty { display: none; }
+
+  body.playing { height: 100vh; overflow: clip; }
+  body.playing .nav { background: var(--ink); border-bottom: 1px solid var(--line); }
+  #play { display: grid; grid-template-columns: 420px 1fr; height: 100%; padding-top: 64px; box-sizing: border-box; }
+  #panel { display: flex; flex-direction: column; gap: 12px; padding: 16px 20px 14px; border-right: 1px solid var(--line); overflow-y: auto; min-height: 0; }
+  .time { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  #clock { font: 400 40px/1 var(--code); letter-spacing: -.03em; font-variant-numeric: tabular-nums; } #clock.late { color: var(--accent); }
+  #call { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; min-height: 120px; }
+  #call li { padding: 6px 10px; border-left: 2px solid var(--line); color: var(--text); animation: in .4s var(--ease); }
+  #call li:first-child { color: var(--dim); border-left-color: transparent; padding-left: 0; font-size: 14px; }
+  #call li button { margin-left: 6px; }
+  @keyframes in { from { opacity: 0; transform: translateY(6px); } }
+  #msg { width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px 12px; border: 1px solid var(--line); border-radius: 0;
+         background: #05050699; color: var(--text); font: 400 15px/1.45 var(--grot, inherit); }
+  #msg:focus { outline: 1px solid var(--accent); }
+  .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  #send { flex: 0 0 auto; }
+  .pin { padding: 2px 8px; border: 1px solid var(--line); border-radius: 0; background: none; color: var(--dim); font: 400 11px var(--code); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+  .pin:hover { color: var(--text); border-color: var(--text); } .pin.used { color: var(--ok); border-color: var(--ok); }
+
+  #stage { position: relative; display: flex; flex-direction: column; min-height: 0; background: #05080c; }
+  #tabs { display: flex; gap: 0; border-bottom: 1px solid var(--line); overflow-x: auto; }
+  #tabs button { padding: 14px 18px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: none; color: var(--dim); white-space: nowrap; }
+  #tabs button[aria-selected="true"] { color: var(--text); border-bottom-color: var(--accent); }
+  #tabs button .src { margin-left: 8px; color: #5d6873; }
+  .view { flex: 1; min-height: 0; overflow-y: auto; padding: 22px 26px; } .view:not(.on) { display: none; }
+  .view h2 { font-size: 20px; margin-bottom: 4px; } .view .note { margin: 0 0 16px; color: var(--dim); font-size: 14px; }
+  .field { display: flex; gap: 10px; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
+  .field input { padding: 8px 10px; border: 1px solid var(--line); border-radius: 0; background: #05050699; color: var(--text); font: 400 16px var(--code); }
+  #q { width: min(100%, 420px); } .num { width: 6ch; }
+  .list { list-style: none; margin: 0; padding: 0; max-width: 760px; }
+  .list li { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .list li .dim { font-size: 13px; }
+  #picked { margin: 0 0 18px; padding: 12px 14px; border: 1px solid var(--ok); max-width: 760px; } #picked:empty { display: none; }
+  .need { padding: 40px 0; color: var(--dim); }
+  #v-outside { position: relative; padding: 0; } #map { position: absolute; inset: 0; }
+  #aerial { position: absolute; z-index: 2; right: 14px; bottom: 14px; width: min(34%, 300px); border: 1px solid var(--line); background: #05080c; }
+  #aerial img { display: block; width: 100%; } #aerial .caps { padding: 6px 8px; font-size: 10px; }
+  #hydnote { position: absolute; z-index: 2; top: 14px; left: 14px; max-width: 60%; padding: 8px 12px; background: #05080ccc; border: 1px solid var(--line); font-size: 14px; }
+  .hyd { width: 18px; height: 18px; padding: 0; border-radius: 50%; background: var(--accent); border: 2px solid #fff; cursor: pointer; }
+  .hyd.used { background: var(--ok); }
+  .ring { width: 20px; height: 20px; border-radius: 50%; border: 2px solid #fff; pointer-events: none; }
+  .target { display: none; }
+  #planbox { position: relative; max-width: 900px; } #planbox img { display: block; width: 100%; }
+  .dot { position: absolute; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; border: 2px solid #fff; }
+  .dot.exit { background: var(--ok); } .dot.pull { background: #ff3b3b; }
+
+  /* Grading: the graders' steps as they happen, then the result. */
+  #grading, #result { position: fixed; z-index: 9; inset: 64px 0 0; overflow-y: auto; padding: 32px clamp(20px, 6vw, 96px) 60px; background: #050506f5; }
+  #steps { list-style: none; margin: 18px 0 0; padding: 0; max-width: 900px; font: 400 14px/1.5 var(--code); }
+  #steps li { display: grid; grid-template-columns: 6ch 18ch 1fr; gap: 12px; padding: 8px 0; border-top: 1px solid var(--line); animation: in .4s var(--ease); }
+  #steps li .who { color: var(--accent); } #steps li .t { color: var(--dim); }
+  #steps li.wait .who::after { content: " ..."; }
+  .score { font: 400 clamp(64px, 9vw, 120px)/1 var(--code); letter-spacing: -.04em; }
+  .parts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; max-width: 900px; margin: 18px 0 26px; }
+  .parts div { padding: 10px 12px; border: 1px solid var(--line); } .parts b { display: block; font: 400 24px var(--code); font-weight: 400; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 1100px; }
+  .cols h2 { font-size: 15px; margin: 0 0 8px; } .cols ul { list-style: none; margin: 0 0 22px; padding: 0; }
+  .cols li { padding: 7px 0 7px 22px; border-top: 1px solid var(--line); position: relative; font-size: 15px; }
+  .cols li::before { content: ""; position: absolute; left: 2px; top: 14px; width: 9px; height: 9px; border-radius: 50%; background: #5d6873; }
+  .cols li.ok::before, .cols li.supported::before { background: var(--ok); } .cols li.bad::before, .cols li.contradicted::before { background: var(--accent); }
+  .cols li .dim { display: block; font-size: 13px; }
+  #yours { white-space: pre-wrap; padding: 12px 14px; border: 1px solid var(--line); margin: 0 0 22px; }
+  #feedback li { font-size: 17px; }
+  @media (max-width: 860px) {
+    body.playing { height: auto; overflow: visible; }
+    #play { grid-template-columns: 1fr; height: auto; } #stage { min-height: 70vh; order: 2; } #panel { border-right: 0; }
+    .cols { grid-template-columns: 1fr; } #steps li { grid-template-columns: 5ch 1fr; } #steps li .d { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+<nav class="nav caps" aria-label="Primesight"><a href="dispatch-judge.html">First responder</a><a class="mark" href="home.html">Primesight</a><a href="drill.html" aria-current="page">Dispatcher</a></nav>
+
+<section id="intro">
+  <div class="caps" style="color: var(--accent)">Dispatcher training</div>
+  <h1>Brief the crew</h1>
+  <p>A 911 call comes in. Find the building, pull what the crew needs from the data, and write the message you would send them. A team of AI graders checks it against the real building data.</p>
+  <button class="btn" id="go">Take a call</button>
+  <p class="caps" id="err" role="alert"></p>
+</section>
+
+<section id="play" hidden>
+  <aside id="panel">
+    <div class="time"><div><div class="caps dim">Incoming call</div><div id="kind" class="caps" style="color: var(--accent)"></div></div>
+      <div style="text-align: right"><output id="clock">0</output><div class="caps dim">target 60 s</div></div></div>
+    <ol id="call" aria-live="polite"></ol>
+    <label class="caps dim" for="msg">Your message to the crew</label>
+    <textarea id="msg" placeholder="Pin facts from the screens on the right, or type. Location and emergency first."></textarea>
+    <div class="row"><span class="caps dim" id="words">0 words</span><button class="btn" id="send" disabled>Send to crew</button></div>
+  </aside>
+  <div id="stage">
+    <div id="tabs" role="tablist"></div>
+    <div class="view" id="v-locate">
+      <h2>Find the building</h2><p class="note">Search by name, street or city, the way the caller said it. Every other screen shows the building you pick.</p>
+      <div class="field"><input id="q" type="search" placeholder="e.g. Louisiana Houston" aria-label="Search buildings" autocomplete="off"></div>
+      <div id="picked"></div>
+      <ul class="list" id="hits"></ul>
+    </div>
+    <div class="view" id="v-record"><h2>Building record</h2><p class="note">CoStar</p><ul class="list" id="record"></ul></div>
+    <div class="view" id="v-tenants">
+      <h2>Who is inside</h2><p class="note">CoStar tenants by floor. Headcounts are capped at what the space holds.</p>
+      <div class="field"><label class="caps dim" for="tfloor">Floor</label><input class="num" id="tfloor" type="number" min="1"></div>
+      <ul class="list" id="tenants"></ul>
+    </div>
+    <div class="view" id="v-plan">
+      <h2>Floor plan</h2><p class="note">Matterport 3D scan. Green: exit signs, red: fire alarm pull stations, both found by SAM 3 in the scan's photos.</p>
+      <div class="field"><label class="caps dim" for="pfloor">Floor</label><input class="num" id="pfloor" type="number" min="1"><button class="pin" id="pshow">Show</button><span id="pnote" class="dim"></span></div>
+      <div id="planpins" class="field"></div>
+      <div id="planbox"></div>
+    </div>
+    <div class="view" id="v-outside">
+      <div id="map"></div>
+      <div id="hydnote">Orange dots are city hydrants. Click one to pin its distance from the building.</div>
+      <div id="aerial" hidden><img alt="Vexcel aerial photo of the building from above"><div class="caps dim">Vexcel aerial</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="grading" hidden aria-live="polite">
+  <div class="caps" style="color: var(--accent)">Message sent</div>
+  <h1>The graders are checking it</h1>
+  <p class="dim">Code checks the location and the facts first. Then a deepagents team splits the work: a fact-checker looks up the building, a dispatch coach judges the delivery, and a gap-finder looks for anything our playbook should learn.</p>
+  <ol id="steps"></ol>
+</section>
+
+<section id="result" hidden></section>
+
+<script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
+<script src="common.js"></script>
+<script src="site.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);  // all server data goes through this
+const TABS = { locate: ["Locate", "CoStar"], record: ["Record", "CoStar"], tenants: ["Tenants", "CoStar"], plan: ["Floor plan", "Matterport"], outside: ["Outside", "Vexcel, city"] };
+const TARGET = 60, LINE_MS = 3200;  // the dispatch standard: 60 s; a new caller line every 3.2 s
+let round, bld, t0, timer, lineTimer, allB = getBuildings().catch(() => []), M, marks = [], lastCase;
+window.drill = { get round() { return round; }, get building() { return bld; } };  // for the Playwright test
+
+// Insert a phrase at the cursor in the message, as its own sentence.
+let caret = null;  // where the player last put the cursor; null: pins go at the end
+function pinText(text, btn) {
+  const m = $("msg"), a = caret ?? m.value.length, before = m.value.slice(0, a).replace(/\s+$/, ""), after = m.value.slice(a);
+  const sep = before && !/[.,;:]$/.test(before) ? ". " : before ? " " : "";
+  m.value = before + sep + text + (after.trim() ? " " : "") + after.replace(/^\s+/, "");
+  const at = (before + sep + text).length; m.setSelectionRange(at, at); caret = caret === null ? null : at;
+  btn?.classList.add("used"); words();
+}
+const pinBtn = (text, label = "Pin") => `<button class="pin" data-pin="${esc(text)}">${esc(label)}</button>`;
+document.addEventListener("click", e => { const b = e.target.closest("[data-pin]"); if (b) pinText(b.dataset.pin, b); });
+function words() {
+  const n = $("msg").value.trim().split(/\s+/).filter(Boolean).length;
+  $("words").textContent = `${n} word${n === 1 ? "" : "s"}`; $("send").disabled = !n;
+}
+$("msg").addEventListener("input", words);
+for (const ev of ["click", "keyup"]) $("msg").addEventListener(ev, () => caret = $("msg").selectionStart === $("msg").value.length ? null : $("msg").selectionStart);
+
+function tab(name) {
+  for (const b of $("tabs").children) b.setAttribute("aria-selected", b.dataset.v === name);
+  for (const v of document.querySelectorAll(".view")) v.classList.toggle("on", v.id === "v-" + name);
+  if (name === "outside") outside();
+}
+$("tabs").addEventListener("click", e => { const b = e.target.closest("button"); if (b) tab(b.dataset.v); });
+
+async function start() {
+  $("go").disabled = true; $("err").textContent = "";
+  try { round = await api("/drill/start" + (lastCase ? `?avoid=${lastCase}` : "")); }
+  catch (e) { $("err").textContent = "No call could be set up. Is the Primesight server running?"; $("go").disabled = false; return; }
+  lastCase = round.case; bld = null;
+  clearInterval(timer); clearInterval(lineTimer);
+  marks.forEach(m => m.remove()); marks = [];
+  $("kind").textContent = ""; $("msg").value = ""; caret = null; words();
+  $("q").value = ""; $("hits").innerHTML = ""; $("picked").innerHTML = "";
+  for (const id of ["record", "tenants"]) $(id).innerHTML = `<li class="need">Find the building first (Locate).</li>`;
+  $("planbox").innerHTML = ""; $("planpins").innerHTML = ""; $("pnote").textContent = ""; $("pfloor").value = $("tfloor").value = "";
+  $("aerial").hidden = true;
+  $("tabs").innerHTML = round.screens.map(s => `<button role="tab" data-v="${s}">${TABS[s][0]}<span class="src caps">${TABS[s][1]}</span></button>`).join("");
+  $("intro").hidden = $("result").hidden = $("grading").hidden = true; $("play").hidden = false; document.body.classList.add("playing");
+  tab("locate");
+  // The call comes in a line at a time; each line the crew should hear can be pinned as it is.
+  $("call").innerHTML = "";
+  let i = 0;
+  const next = () => {
+    if (i >= round.call.length) return clearInterval(lineTimer);
+    const line = round.call[i++], li = document.createElement("li");
+    li.innerHTML = esc(line) + (i > 1 ? pinBtn(line.replace(/[.!?]+$/, "")) : "");
+    $("call").append(li);
+    if (i === 3) $("kind").textContent = round.incident.label;  // the call-taker has heard enough to code it
+  };
+  next(); lineTimer = setInterval(next, LINE_MS);
+  t0 = performance.now();
+  timer = setInterval(() => { const s = (performance.now() - t0) / 1000; $("clock").textContent = Math.floor(s); $("clock").classList.toggle("late", s > TARGET); }, 250);
+  $("q").focus();
+}
+
+// ---- Locate: search the buildings Primesight has, pick one ----
+$("q").addEventListener("input", async () => {
+  const q = $("q").value.trim(), list = q.length < 2 ? [] : matchBuildings(await allB, q).slice(0, 8);
+  $("hits").innerHTML = list.map(b => `<li><span>${esc(b.name || b.address)}<span class="dim"> ${esc([b.address, b.city, b.stories && b.stories + " stories"].filter(Boolean).join(" / "))}</span></span>
+    <button class="pin" data-pick="${b.pid}">Select</button></li>`).join("") || (q.length >= 2 ? `<li class="dim">No building matches. Try fewer words.</li>` : "");
+});
+$("hits").addEventListener("click", async e => {
+  const b = e.target.closest("[data-pick]"); if (!b) return;
+  try { bld = await api(`/drill/building/${b.dataset.pick}`); } catch (err) { $("picked").textContent = "That building's record could not load."; return; }
+  const addr = bld.address.replace(/, [A-Z]{2}$/, "");
+  $("picked").innerHTML = `<div class="caps dim">Selected</div><div>${esc(bld.name || addr)} / ${esc(addr)}</div>
+    <div class="field" style="margin: 8px 0 0">${pinBtn(addr, "Pin address")}${bld.name ? pinBtn(bld.name, "Pin name") : ""}</div>`;
+  $("record").innerHTML = bld.record.map(([k, v]) => `<li><span><span class="caps dim">${esc(k)}</span><br>${esc(v)}</span>${pinBtn(`${k.toLowerCase()}: ${v}`)}</li>`).join("");
+  tenants(); $("planbox").innerHTML = ""; $("planpins").innerHTML = ""; $("pnote").textContent = "";
+  marks.forEach(m => m.remove()); marks = []; $("aerial").hidden = true;
+  if ($("v-outside").classList.contains("on")) outside();
+});
+
+// ---- Tenants: one floor at a time ----
+function tenants() {
+  if (!bld) return;
+  const f = +$("tfloor").value, list = bld.tenants[f] || [];
+  if (!f) return $("tenants").innerHTML = `<li class="dim">Enter a floor. CoStar lists tenants on ${Object.keys(bld.tenants).length} floors here.</li>`;
+  const people = list.reduce((t, x) => t + (x.employees || 0), 0);
+  $("tenants").innerHTML = list.length ? list.map(t => `<li><span>${esc(t.name)}<span class="dim">${esc([t.industry, t.employees && `~${t.employees} staff`].filter(Boolean).join(" / "))}</span></span>${pinBtn(`${t.name}${t.employees ? ` (~${t.employees} staff)` : ""} on floor ${f}`)}</li>`).join("") +
+    (people ? `<li><span>About ${people} people on record on floor ${f}</span>${pinBtn(`about ${people} people on floor ${f}`)}</li>` : "")
+    : `<li class="dim">No tenants on record on floor ${f}.</li>`;
+}
+$("tfloor").addEventListener("input", tenants);
+
+// ---- Floor plan: the scanned floor nearest the one asked for ----
+async function plan() {
+  if (!bld) return $("pnote").textContent = "Find the building first.";
+  const f = +$("pfloor").value; if (!f) return;
+  $("pnote").textContent = "Loading the scan..."; $("planbox").innerHTML = ""; $("planpins").innerHTML = "";
+  let p;
+  try { p = await api(`/floor/${bld.pid}/${f}`); } catch (e) { return $("pnote").textContent = "No 3D scan with a floor plan for this building."; }
+  const exits = p.points.filter(x => x.kind === "exit sign").length, pulls = p.points.filter(x => x.kind !== "exit sign").length;
+  $("pnote").textContent = p.exact ? `Floor ${p.floor}` : `No scan of floor ${f}: this is floor ${p.floor}`;
+  $("planbox").innerHTML = `<img src="${esc(API + p.image)}" alt="Floor plan of floor ${esc(p.floor)} from the 3D scan">` +
+    p.points.map(x => `<span class="dot ${x.kind === "exit sign" ? "exit" : "pull"}" style="left:${x.x * 100}%;top:${x.y * 100}%" title="${esc(x.kind)}"></span>`).join("");
+  const on = p.exact ? `on floor ${p.floor}` : `on floor ${p.floor} (scan of a different floor)`;
+  $("planpins").innerHTML = (exits ? pinBtn(`${exits} exit sign${exits > 1 ? "s" : ""} ${on} in the 3D scan`, `Pin ${exits} exit signs`) : "") +
+    (pulls ? pinBtn(`${pulls} fire alarm pull station${pulls > 1 ? "s" : ""} ${on}`, `Pin ${pulls} pull stations`) : "") +
+    (!p.exact ? pinBtn(`3D scan is of floor ${p.floor}, not ${f}`, "Pin scan floor") : "");
+}
+$("pshow").addEventListener("click", plan);
+$("pfloor").addEventListener("keydown", e => e.key === "Enter" && plan());
+
+// ---- Outside (fires): city hydrants on the live map, the Vexcel photo of the building ----
+async function outside() {
+  if (!bld || marks.length || typeof maplibregl === "undefined") return;
+  if (!M) { M = makeMap("map"); M.ready = new Promise(r => M.map.on("load", r)); M.ring = new maplibregl.Marker({ element: Object.assign(document.createElement("div"), { className: "ring" }) }); }
+  let o; try { o = await api(`/drill/outside/${bld.pid}`); } catch (e) { return $("hydnote").textContent = "No outside data for this building."; }
+  $("aerial").querySelector("img").src = `${API}/aerial/${bld.pid}/top.jpg`; $("aerial").hidden = false;
+  $("aerial").querySelector("img").onerror = () => $("aerial").hidden = true;
+  await M.ready; M.map.resize();
+  M.ring.setLngLat([o.lon, o.lat]).addTo(M.map); M.fly({ lat: o.lat, lon: o.lon, stories: Math.max(bld.stories || 0, 60) });
+  $("hydnote").textContent = o.hydrants.length ? "Orange dots are city hydrants. Click one to pin its distance from the building." : "No city hydrant layer for this city.";
+  marks = o.hydrants.map(h => {
+    const el = Object.assign(document.createElement("button"), { type: "button", className: "hyd", title: "Hydrant" });
+    el.setAttribute("aria-label", "Hydrant"); el.onclick = () => pinText(`hydrant ${h.m} m ${h.dir} of the building`, el);
+    return new maplibregl.Marker({ element: el }).setLngLat([h.lon, h.lat]).addTo(M.map);
+  });
+}
+
+// ---- Send: grade, showing the graders' steps as they happen ----
+const STEP = { code_checks: "code", delegate: "team", reported: "report", "helper:look_up_building": "lookup", done: "done", error: "error" };
+function stepRow(s) {
+  let who = STEP[s.step] || s.step.replace(/^(agent|helper):/, ""), d = s.detail;
+  if (s.step === "delegate") { const [name, ...rest] = d.split(": "); who = name; d = rest.join(": "); }
+  if (s.step === "reported") { const [name, ...rest] = d.split(": "); if (rest.length) { who = name; d = rest.join(": "); } }
+  if (s.step === "helper:look_up_building") d = "looking up the building record, tenants, hydrants and scan";
+  return `<li><span class="t">${s.t.toFixed(1)}s</span><span class="who">${esc(who)}</span><span class="d">${esc(d)}</span></li>`;
+}
+async function send() {
+  const secs = (performance.now() - t0) / 1000, message = $("msg").value.trim();
+  clearInterval(timer); clearInterval(lineTimer); $("send").disabled = true;
+  const gid = [...crypto.getRandomValues(new Uint8Array(6))].map(b => b.toString(16).padStart(2, "0")).join("");
+  $("steps").innerHTML = `<li class="wait"><span class="t">0.0s</span><span class="who">sending</span><span class="d">to the graders</span></li>`;
+  $("grading").hidden = false;
+  let seen = 0, live = true;
+  const poll = async () => {
+    while (live) {
+      try {
+        const steps = (await api(`/trace/${gid}`)).split("\n").filter(Boolean).map(l => JSON.parse(l));
+        if (steps.length > seen) { $("steps").innerHTML = steps.map(stepRow).join("") + `<li class="wait"><span class="t"></span><span class="who">working</span><span class="d"></span></li>`; seen = steps.length; }
+      } catch (e) {}
+      await new Promise(r => setTimeout(r, 700));
+    }
+  };
+  poll();
+  let g;
+  try { g = await api("/game/grade", { case: round.case, incident: round.incident.id, call: round.call.slice(1).join(" "), message, gid }); }
+  catch (e) { live = false; $("grading").hidden = true; $("send").disabled = false; return alert("Grading failed. Is the server running? Try sending again."); }
+  live = false;
+  result(g, secs, message);
+}
+$("send").addEventListener("click", send);
+
+function result(g, secs, message) {
+  const late = Math.min(10, Math.floor(Math.max(0, secs - TARGET) / 10)), total = Math.max(0, g.score - late);
+  const NAMES = { location: ["Location", 35], emergency: ["Emergency", 10], needs: ["Needed facts", 25], accuracy: ["Accuracy", 15], delivery: ["Delivery", 15] };
+  const claims = g.claims.map(c => `<li class="${esc(c.verdict)}">${esc(c.claim)}<span class="dim">${esc(c.verdict.replace(/_/g, " "))}: ${esc(c.evidence)}</span></li>`).join("");
+  $("result").innerHTML = `<div class="caps dim">${esc(round.incident.label)} / ${Math.round(secs)} s${late ? ` (${late} off for going past ${TARGET} s)` : ""}</div>
+    <div class="score">${total}<span class="dim" style="font-size: .35em"> / ${g.out_of}</span></div>
+    <div class="parts">${Object.entries(g.parts).map(([k, v]) => `<div><span class="caps dim">${NAMES[k][0]}</span><b>${v} / ${NAMES[k][1]}</b></div>`).join("")}</div>
+    <div class="cols">
+      <div><h2 class="caps dim">What to do better</h2><ul id="feedback">${g.feedback.map(f => `<li>${esc(f)}</li>`).join("")}</ul>
+        <h2 class="caps dim">Your message</h2><div id="yours">${esc(message)}</div>
+        ${g.suggestions_queued ? `<p>Your message gave Primesight ${g.suggestions_queued === 1 ? "an idea" : g.suggestions_queued + " ideas"} for its playbook. Sent for review.</p>` : ""}</div>
+      <div><h2 class="caps dim">What the crew needed</h2><ul>${g.checks.map(c => `<li class="${c.ok ? "ok" : "bad"}">${esc(c.item)}<span class="dim">${esc(c.why)}</span></li>`).join("")}</ul>
+        ${claims ? `<h2 class="caps dim">Every fact you stated, checked</h2><ul>${claims}</ul>` : ""}</div>
+    </div>
+    <button class="btn" id="again">Take another call</button>`;
+  $("grading").hidden = true; $("result").hidden = false; $("result").scrollTop = 0;
+  $("again").onclick = start;
+}
+
+$("go").addEventListener("click", start);
+</script>
+</body>
+</html>
