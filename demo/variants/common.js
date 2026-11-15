@@ -88,7 +88,10 @@ function streamTrace(runId, onStep, onDone) {
   return () => { stopped = true; };
 }
 
-// Plain-language name for a trace step, for the projector.
+// The agent's helpers (subagents in primesight/agent.py), by what each one does.
+const HELPERS = { "tenant-risk": "Helper checks the tenants for hazards", "notify-writer": "Helper drafts a heads-up for the property manager",
+                  "inside-scout": "Helper reads the floor scan", "outside-scout": "Helper checks outside: wind and hydrants" };
+// Plain-language name for a trace step, for the projector and the first responder page.
 function stepLabel(d) {
   const tool = d.step.replace(/^helper:/, "");
   // Trace args are cut at 200 chars, so JSON.parse often fails: fall back to pulling single fields by regex.
@@ -99,13 +102,21 @@ function stepLabel(d) {
     case "call_received": return ["Call received", d.detail];
     case "address_lookup": return ["Address matched", d.detail];
     case "find_building": return ["Finds the building", detail?.address || d.detail];
-    case "read_file": return ["Reads a file", detail?.file_path || d.detail];
+    case "read_file": { const p = detail?.file_path || "", skill = p.match(/skills\/(\w+)\//);
+      return [skill ? `Opens the ${skill[1]} playbook` : p.startsWith("/buildings/") ? "Reads crew notes on this building" : p.startsWith("/scans/") ? "Reads the floor scan results"
+        : p.includes("AGENTS") ? "Reads its standing rules" : p.includes("incidents") ? "Looks up the kind of emergency" : "Reads a file", p || d.detail]; }
+    case "ls": case "glob": case "grep": return ["Looks through its files", detail?.path || detail?.pattern || d.detail];
+    case "write_todos": return ["Plans the steps", ""];
     case "gather_building": return ["Pulls CoStar + Matterport + Vexcel", detail ? `floor ${detail.floor}, ${detail.incident_type || detail.incident}` : d.detail];
-    case "task": return [`Hands off to ${detail?.subagent_type || "a helper"}`, detail?.description || ""];
+    case "task": return [HELPERS[detail?.subagent_type] || `Hands off to ${detail?.subagent_type || "a helper"}`, detail?.description || ""];
     case "queue_text": return ["Queues a text for building staff", detail ? `${detail.to}: ${detail.text}` : d.detail];
     case "walk_to": return ["Walks the scan graph", detail ? `to nearest ${detail.target}` : d.detail];
     case "outside_now": return ["Checks wind and hydrants now", "Open-Meteo + city hydrant layer"];
-    case "add_building_note": return ["Saves a building note", detail?.note || d.detail];    case "graded": return ["Grader verdict", d.detail];
+    case "add_building_note": return ["Saves a building note", detail?.note || d.detail];
+    case "graded": { const [verdict, ...gaps] = String(d.detail).split(" - "), why = gaps.join(" - ");  // "satisfied" or "needs_revision - rule: gap; ..."
+      return verdict === "satisfied" ? ["Grader: passed every rule", "At most 8 lines, nothing invented, facts not orders, guesses marked"]
+        : verdict === "needs_revision" ? ["Grader: sent back for a rewrite", why]
+        : verdict === "max_iterations_reached" ? ["Grader: still not satisfied, sent as written", why] : ["Grader could not finish", d.detail]; }
     case "usage": return ["Cost", d.detail];
     case "done": return ["Briefing sent", d.detail];
     case "mode": return ["Mode", d.detail];

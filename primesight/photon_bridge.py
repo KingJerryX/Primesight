@@ -112,7 +112,7 @@ class Bridge:
             self.since = items[-1]["createdAt"]
         return len(items)
 
-    def answer(self, handle, space, sender, text, parent=None):
+    def answer(self, handle, space, sender, text, parent=None, run_id=None):
         phone = key_for(handle)
         sms.log(phone, "crew", {"type": "text", "text": text})  # mirrored on phone.html?id=ph-..., handle never shown
 
@@ -135,7 +135,7 @@ class Bridge:
                         pass
         self.p.typing(space, sender, True)
         try:
-            sms.handle(phone, text, send, os.environ.get("PRIMESIGHT_PASSCODE"))  # registered phones may run the agent (daily cap still applies)
+            sms.handle(phone, text, send, os.environ.get("PRIMESIGHT_PASSCODE"), run_id)  # registered phones may run the agent (daily cap still applies)
         finally:
             self.p.typing(space, sender, False)
 
@@ -228,7 +228,7 @@ def thread_of(p, handle, days=60):
     return _threads.get(handle)
 
 
-def push(handle, text):
+def push(handle, text, run_id=None):
     """A dispatch sent from the console to a real phone: text it the dispatch, then answer it there like any crew text
     (ack, briefing, floor plan, aerial). Returns the simulator key that mirrors the thread (phone.html?id=<key>).
     RuntimeError when Photon isn't set up, the phone has never texted the line, or Photon refuses the send."""
@@ -241,9 +241,9 @@ def push(handle, text):
         raise RuntimeError("that phone has not texted the Photon line yet: text START to the line from it, then send again")
     b.p.send_text(*th, "DISPATCH: " + text)  # the thread shows what the console sent; a refused send surfaces here
     if os.environ.get("VERCEL"):  # serverless has no background: answer inside the request, as sms.simulate does
-        b.answer(handle, *th, text)
+        b.answer(handle, *th, text, run_id=run_id)
     else:
-        threading.Thread(target=b.answer, args=(handle, *th, text), daemon=True).start()
+        threading.Thread(target=b.answer, args=(handle, *th, text), kwargs={"run_id": run_id}, daemon=True).start()
     return key_for(handle)
 
 

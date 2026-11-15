@@ -33,7 +33,8 @@ def looks_like_dispatch(text):
     return bool(re.search(r"\d+\s+\w+", text)) and json.loads(find_building(text))
 
 
-def handle(phone, text, send, passcode=None):
+def handle(phone, text, send, passcode=None, run_id=None):
+    """run_id: the id a dispatch runs under, when the sender chose one (the console follows its trace); else a new one."""
     t = " ".join(text.split())
     th = store.get("thread:" + phone)
     try:
@@ -48,7 +49,7 @@ def handle(phone, text, send, passcode=None):
         hits = looks_like_dispatch(t)
         if hits:
             send({"type": "text", "text": f"PRIMESIGHT: got it. Building the briefing for {hits[0]['address']} (about 30-60 s)."})
-            run_id = uuid.uuid4().hex[:12]
+            run_id = run_id or uuid.uuid4().hex[:12]
             out = server.brief_or_replay(t, run_id, passcode=passcode)
             store.put("thread:" + phone, {"run_id": run_id, "pid": out.get("property_id"), "call": t})
             send({"type": "text", "text": out["briefing"], "run_id": run_id})
@@ -62,11 +63,11 @@ def handle(phone, text, send, passcode=None):
         send({"type": "text", "text": f"PRIMESIGHT: briefing failed ({type(e).__name__}). Proceed on standard procedure."})
 
 
-def simulate(phone, text, passcode=None):
+def simulate(phone, text, passcode=None, run_id=None):
     """Phone simulator: log the crew's text, answer in the background so the page can poll.
     On Vercel there is no background (the instance freezes after the response): answer inside the request instead."""
     log(phone, "crew", {"type": "text", "text": text})
-    args = (phone, text, lambda msg: log(phone, "primesight", msg), passcode)
+    args = (phone, text, lambda msg: log(phone, "primesight", msg), passcode, run_id)
     if os.environ.get("VERCEL"):
         return handle(*args)
     threading.Thread(target=handle, args=args, daemon=True).start()

@@ -270,7 +270,8 @@ Steps:
 
 Files: /buildings/ crew notes (read only; use add_building_note), /playbook/ your rules, /scans/<scan id>.json SAM 3 results
 per scan point. gather_building already summarizes the scan results in "vision"; if vision is null there is no /scans file, so don't look.
-Reply with only the briefing text."""
+Reply with only the briefing text. If a grader sends it back, fix what it names and reply again with only the briefing,
+header first: no note about what you changed."""
 
 # Graded before anything goes out: a grader model checks the final text against these, and the agent revises on a fail.
 RUBRIC_BRIEF = """The final message is the crew briefing. Criteria:
@@ -350,7 +351,7 @@ def run(call_text, run_id=None, rubric=RUBRIC_BRIEF):
                     if not ns and m.type == "ai":  # grader feedback comes back as a human message: skip it
                         out = m
     for ev in (build().get_state(cfg).values.get("_rubric_evaluations") or [])[seen:]:  # this turn's grades
-        gaps = "; ".join(f"{c['name']}: {c.get('gap', '')}" for c in ev["criteria"] if not c["passed"])
+        gaps = "; ".join(c.get("gap") or c["name"] for c in ev["criteria"] if not c["passed"])  # what the grader found, in its words
         trace.log(run_id, "graded", f"{ev['result']}" + (f" - {gaps}" if gaps else ""))
     tin = sum(u.get("input_tokens", 0) for u in usage.usage_metadata.values())
     tout = sum(u.get("output_tokens", 0) for u in usage.usage_metadata.values())

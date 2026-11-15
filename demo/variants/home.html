@@ -113,19 +113,6 @@
   #facts { margin: 0; display: grid; align-content: end; gap: 14px; }
   #facts dt { color: var(--dim); font: 400 10px var(--code); letter-spacing: .07em; text-transform: uppercase; }
   #facts dd { margin: 2px 0 0; font-size: clamp(20px, 2.2vw, 32px); line-height: 1; letter-spacing: -.01em; }
-  /* Known before the door: a text conversation that plays through, the way it lands on the crew's phone. */
-  .phone { justify-self: center; display: flex; flex-direction: column; width: min(100%, 380px); height: min(640px, 76vh); background: #000; border: 1px solid #ffffff38; border-radius: 36px; overflow: hidden; }
-  .phone-top { display: grid; justify-items: center; gap: 3px; padding: 20px 16px 13px; border-bottom: 1px solid #ffffff1c; }
-  .phone-top b { font-weight: 500; } .phone-top span { font-size: 10px; color: var(--dim); }
-  #thread { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; padding: 16px 14px 22px; overflow: hidden; }
-  .msg { flex: none; max-width: 86%; padding: 9px 13px; border-radius: 18px; font-size: 14px; line-height: 1.38; white-space: pre-line; animation: pop .35s var(--ease) both; }
-  .msg.me { align-self: flex-end; background: #2b8cff; border-bottom-right-radius: 6px; }
-  .msg.it { align-self: flex-start; background: #26282c; border-bottom-left-radius: 6px; }
-  .msg.dots { display: flex; gap: 5px; padding: 14px 15px; }
-  .msg.dots i { width: 7px; height: 7px; border-radius: 50%; background: #9aa0a6; animation: think 1s infinite; }
-  .msg.dots i:nth-child(2) { animation-delay: .15s; } .msg.dots i:nth-child(3) { animation-delay: .3s; }
-  @keyframes pop { from { opacity: 0; translate: 0 10px; scale: .96; } }
-  @keyframes think { 30% { opacity: .3; translate: 0 -3px; } }
 
   .why { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
   .why p { color: #ffffffc7; max-width: 30em; margin: 24px 0 36px; }
@@ -168,7 +155,7 @@
   </div>
   <div class="phone" role="img" aria-label="A crew texts a cardiac arrest on the 36th floor of 1000 Louisiana St. Primesight replies with the building, the freight elevator, the exit signs on that floor and what it does not know.">
     <div class="phone-top"><b>Primesight</b><span class="caps">From a recorded run, shortened</span></div>
-    <div id="thread" aria-hidden="true"></div>
+    <div id="thread" class="thread" aria-hidden="true"></div>
   </div>
 </section>
 
