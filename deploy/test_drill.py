@@ -79,11 +79,11 @@ with sync_playwright() as p:
     # Send, watch the graders, read the result
     page.click("#send")
     page.wait_for_selector("#grading:not([hidden])")
-    page.wait_for_function("document.querySelectorAll('#steps li:not(.wait)').length >= 2", timeout=60_000)
+    page.wait_for_function("document.querySelectorAll('#steps li').length >= 5", timeout=90_000)
     shot(page, "4_grading")
     page.wait_for_selector("#result:not([hidden]) .score", timeout=180_000)
     shot(page, "5_result")
-    steps = page.locator("#steps li:not(.wait)").all_inner_texts()
+    steps = page.locator("#steps li").all_inner_texts()
     print("grader steps seen:", len(steps)); [print("  ", s.replace("\n", " | ")[:150]) for s in steps]
     print("score:", page.inner_text("#result .score").replace("\n", " "))
     print("feedback:", page.locator("#feedback li").all_inner_texts())
