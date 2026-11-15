@@ -180,7 +180,9 @@ def queue_text(to: str, text: str, config: RunnableConfig) -> str:
     Queued texts are shown to the dispatcher; nothing is sent from here."""
     run_id = config.get("configurable", {}).get("thread_id")
     OUTBOX.setdefault(run_id, []).append({"to": to, "text": " ".join(text.split())})  # run() traces it as helper:queue_text
-    return "queued"
+    # The wording to repeat, spelled out: a briefing once turned "queued" into "texted to meet crew", and a crew reading
+    # "texted" expects someone already in the lobby.
+    return f"QUEUED, NOT SENT: a dispatcher must approve it. Anyone reporting this must write: text queued for {to} (not sent)."
 
 
 class Flag(BaseModel):
@@ -218,7 +220,8 @@ NOTIFY = {
                      "text per contact role with queue_text, each under 200 characters, plain ASCII. Say what is happening "
                      "and where (floor), and ask for one concrete thing the data supports: meet the crew at the main "
                      "entrance, recall the freight elevator to the lobby, bring keys and fire panel access. Never "
-                     "invent arrival times, names or entrances. Reply 'queued: <roles>' when done.",
+                     "invent arrival times, names or entrances. Nothing you queue is sent until a dispatcher approves it. "
+                     "Reply 'queued, not sent: <roles>' when done.",
     "model": ChatAnthropic(model=MODEL, max_tokens=1500),
     "tools": [queue_text],
 }
@@ -267,6 +270,8 @@ Steps:
    send the property id to outside-scout: live wind, temperature and every hydrant within 300 m.
 4. Read /buildings/<property_id>.md if it exists: crew notes from earlier incidents.
 5. Write the final briefing (rules in your memory and the skill), then save one line about this incident with add_building_note.
+   Texts notify-writer queued are NOT sent: write "text queued for <role> (not sent)", never that anyone was texted,
+   called, notified or is on the way.
 
 Files: /buildings/ crew notes (read only; use add_building_note), /playbook/ your rules, /scans/<scan id>.json SAM 3 results
 per scan point. gather_building already summarizes the scan results in "vision"; if vision is null there is no /scans file, so don't look.
@@ -370,7 +375,7 @@ def ask(run_id, text, call_text=None):
 if __name__ == "__main__":
     assert json.loads(find_building("1000 Louisiana St, Houston"))[0]["property_id"] == 233899
     assert json.loads(find_building("Smoke on floor 30, 1000 Louisiana St, Houston"))[0]["property_id"] == 233899
-    assert queue_text("property manager", "Fire on  12", {"configurable": {"thread_id": "t"}}) == "queued" \
+    assert queue_text("property manager", "Fire on  12", {"configurable": {"thread_id": "t"}}).startswith("QUEUED, NOT SENT") \
         and OUTBOX["t"] == [{"to": "property manager", "text": "Fire on 12"}]
     assert _from_header("I fixed the hydrants.\n\nPRIMESIGHT | FIRE | FLOOR 6\nx") == "PRIMESIGHT | FIRE | FLOOR 6\nx"
     assert _from_header("PRIMESIGHT | FIRE\nx") == "PRIMESIGHT | FIRE\nx" and _from_header("Stair B is locked.") == "Stair B is locked."
