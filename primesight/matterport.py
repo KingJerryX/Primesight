@@ -53,7 +53,7 @@ def pick(scans, floor):
 def detail(mid):
     m = gql("""query($id:ID!){model(id:$id){name
       assets{floorplans(provider:"matterport", flags:[photogramy]){format url resolution origin{x y}}}
-      locations{id label neighbors position{x y z} panos{skybox(resolution:"2k"){children}}}
+      locations{id neighbors position{x y z} panos{skybox(resolution:"2k"){children}}}
       mattertags{label description}
     }}""", {"id": mid})["model"]
     plans = [f for f in m["assets"]["floorplans"] if f["format"] == "jpg"]
@@ -63,8 +63,7 @@ def detail(mid):
         "floorplan_url": plans[0]["url"] if plans else None,  # signed CDN URL, expires: download, don't store
         # pixel = (x - origin.x) * res, height - (y - origin.y) * res (model y points up; checked against the image)
         "floorplan_frame": {"origin": (plans[0]["origin"]["x"], plans[0]["origin"]["y"]), "res": plans[0]["resolution"]} if plans else None,
-        # label = the scan number; Showcase's ss=<label + 1> opens at that point (checked on 29 of 29 points with the SDK)
-        "sweeps": [{"id": l["id"], "label": l["label"], "xy": (l["position"]["x"], l["position"]["y"]), "neighbors": l["neighbors"],
+        "sweeps": [{"id": l["id"], "xy": (l["position"]["x"], l["position"]["y"]), "neighbors": l["neighbors"],
                     "faces": (l["panos"][0]["skybox"]["children"][1:5] if l["panos"] else [])} for l in locs],
         "tags": [t["label"] for t in m["mattertags"] or []],
         "link": f"https://my.matterport.com/show/?m={mid}",

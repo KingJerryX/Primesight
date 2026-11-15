@@ -287,8 +287,7 @@ class H(BaseHTTPRequestHandler):
 
     def do_GET(self):
         from . import console_api  # Lane B's console: /scans/<pid>, /aerial/<pid>/<view>.jpg
-        from . import game_api  # the game: /game/config, /game/scan/<model>
-        r = console_api.handle(self.path) or game_api.handle(self.path)
+        r = console_api.handle(self.path)
         if r:
             return self._send(*r)
         m = re.fullmatch(r"/trace/([0-9a-f]{12})", self.path)
