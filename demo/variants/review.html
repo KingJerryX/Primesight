@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Primesight Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono&display=swap">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* The team's review of the playbook ideas the graders took from players' messages. Linked from nowhere; every request
+     needs PRIMESIGHT_REVIEW_KEY (primesight/review.py). Accepted ideas go into every call Primesight briefs. */
+  main { max-width: 980px; margin: 0 auto; padding: 96px 20px 60px; }
+  h1 { font-size: clamp(30px, 3.4vw, 44px); margin: 0 0 6px; } .lead { color: var(--dim); margin: 0 0 26px; max-width: 46em; }
+  #login { display: flex; gap: 8px; flex-wrap: wrap; max-width: 520px; } #login[hidden] { display: none; }
+  input, textarea { padding: 9px 12px; border: 1px solid var(--line); border-radius: 0; background: #05050699; color: var(--text); font: 400 16px var(--grot, inherit); }
+  #key { flex: 1; min-width: 0; font-family: var(--code); }
+  #err { color: var(--accent); min-height: 1.4em; margin: 10px 0 0; }
+  #filters { display: flex; gap: 0; border-bottom: 1px solid var(--line); margin: 0 0 18px; overflow-x: auto; } #filters[hidden] { display: none; }
+  #filters button { padding: 12px 16px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: none; color: var(--dim); white-space: nowrap; cursor: pointer; }
+  #filters button[aria-selected="true"] { color: var(--text); border-bottom-color: var(--accent); }
+  #list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  #list li { padding: 14px 16px; border: 1px solid var(--line); display: grid; gap: 8px; }
+  #list li.accepted { border-color: var(--ok); } #list li.dismissed { opacity: .55; }
+  .meta { display: flex; gap: 12px; flex-wrap: wrap; font: 400 11px var(--code); letter-spacing: .06em; text-transform: uppercase; color: var(--dim); }
+  .meta b { color: var(--accent); font-weight: 400; } li.accepted .meta b { color: var(--ok); }
+  .what { font-size: 18px; } .why { color: var(--dim); font-size: 14px; }
+  .what textarea { width: 100%; box-sizing: border-box; min-height: 70px; resize: vertical; font-size: 17px; }
+  .acts { display: flex; gap: 8px; flex-wrap: wrap; }
+  .acts button { padding: 6px 12px; border: 1px solid var(--line); border-radius: 0; background: none; color: var(--text); font: 400 12px var(--code); letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
+  .acts button:hover { border-color: var(--text); } .acts .yes { border-color: var(--ok); color: var(--ok); }
+  .empty { color: var(--dim); }
+</style>
+</head>
+<body>
+<nav class="nav caps" aria-label="Primesight"><a href="dispatch-judge.html">First responder</a><a class="mark" href="home.html">Primesight</a><a href="drill.html">Simulation</a></nav>
+<main>
+  <h1>Playbook review</h1>
+  <p class="lead">Ideas the graders took from players' dispatch messages: facts a player included that Primesight's playbook doesn't ask for.
+    Accept one, edited if you like, and Primesight gets it with every call it briefs. Dismissed ideas stay here, marked.</p>
+  <form id="login"><input id="key" type="password" placeholder="Review key" aria-label="Review key" autocomplete="current-password"><button class="btn">Open</button></form>
+  <p id="err" role="alert"></p>
+  <div id="filters" role="tablist" hidden></div>
+  <ul id="list"></ul>
+</main>
+<script src="common.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+const LABEL = { pending: "To review", accepted: "Accepted", dismissed: "Dismissed" };
+let key = "", ideas = [], show = "pending", editing = null;
+try { key = sessionStorage.getItem("primesight-review") || ""; } catch (e) {}
+
+async function call(path, body = {}) {
+  const r = await fetch(API + path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...body, key }) });
+  if (r.status === 403) throw new Error("That key is wrong.");
+  if (r.status === 404) throw new Error("Review isn't set up on this server (no PRIMESIGHT_REVIEW_KEY).");
+  if (!r.ok) throw new Error(`Something went wrong (${r.status}).`);
+  return (await r.json()).ideas;
+}
+async function load() {
+  try { ideas = await call("/review/list"); } catch (e) { $("err").textContent = e.message; $("login").hidden = false; return; }
+  try { sessionStorage.setItem("primesight-review", key); } catch (e) {}
+  $("err").textContent = ""; $("login").hidden = true; $("filters").hidden = false; render();
+}
+function render() {
+  $("filters").innerHTML = Object.entries(LABEL).map(([s, name]) =>
+    `<button role="tab" data-show="${s}" aria-selected="${s === show}">${name} ${ideas.filter(d => d.state === s).length}</button>`).join("");
+  const rows = ideas.filter(d => d.state === show).reverse();  // newest first
+  $("list").innerHTML = rows.map(d => `<li class="${d.state}" data-i="${d.i}">
+      <div class="meta"><b>${esc(d.incident.replace(/_/g, " "))}</b><span>${esc(d.date)}</span><span>building ${esc(String(d.case).split("_")[0])}</span></div>
+      <div class="what">${editing === d.i ? `<textarea aria-label="Wording to accept">${esc(d.what)}</textarea>` : esc(d.what)}</div>
+      ${d.why ? `<div class="why">${esc(d.why)}</div>` : ""}
+      <div class="acts">${editing === d.i ? `<button class="yes" data-do="save">Accept this wording</button><button data-do="cancel">Cancel</button>`
+        : (d.state !== "accepted" ? `<button class="yes" data-do="accepted">Accept</button>` : "") +
+          `<button data-do="edit">${d.state === "accepted" ? "Edit" : "Edit and accept"}</button>` +
+          (d.state !== "dismissed" ? `<button data-do="dismissed">Dismiss</button>` : "") +
+          (d.state !== "pending" ? `<button data-do="pending">Back to review</button>` : "")}</div></li>`).join("") ||
+    `<li class="empty">Nothing ${LABEL[show].toLowerCase()}.</li>`;
+}
+$("login").addEventListener("submit", e => { e.preventDefault(); key = $("key").value.trim(); load(); });
+$("filters").addEventListener("click", e => { const b = e.target.closest("[data-show]"); if (b) { show = b.dataset.show; editing = null; render(); } });
+$("list").addEventListener("click", async e => {
+  const b = e.target.closest("[data-do]"), li = e.target.closest("[data-i]");
+  if (!b || !li) return;
+  const i = +li.dataset.i, act = b.dataset.do;
+  if (act === "edit") { editing = i; render(); document.querySelector(`[data-i="${i}"] textarea`)?.focus(); return; }
+  if (act === "cancel") { editing = null; render(); return; }
+  const body = act === "save" ? { i, state: "accepted", what: li.querySelector("textarea").value.trim() } : { i, state: act };
+  if (act === "save" && !body.what) return;
+  b.disabled = true;
+  try { ideas = await call("/review/decide", body); editing = null; $("err").textContent = ""; render(); }
+  catch (err) { $("err").textContent = err.message; b.disabled = false; }
+});
+if (key) load();
+</script>
+</body>
+</html>

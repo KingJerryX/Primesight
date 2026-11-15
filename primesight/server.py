@@ -266,7 +266,8 @@ class H(BaseHTTPRequestHandler):
             return self._send(400, {"error": "body must be JSON"})
         from . import console_api  # the game: /game/start, /game/answer, /game/name
         from . import drill  # the dispatcher round's segments: /drill/<segment>/...
-        r = console_api.post(self.path, body) or drill.post(self.path, body)
+        from . import review  # the team's review of the graders' ideas: /review/ (needs PRIMESIGHT_REVIEW_KEY)
+        r = console_api.post(self.path, body) or drill.post(self.path, body) or review.post(self.path, body)
         if r:
             return self._send(*r)
         if self.path == "/brief":
