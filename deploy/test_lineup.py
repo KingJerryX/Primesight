@@ -53,8 +53,19 @@ with sync_playwright() as p:
             assert page.locator(".lineup-card.lineup-on").count() == 1
             addr = page.evaluate("drill.building.address.replace(/, [A-Z]{2}$/, '')")
             assert said.endswith(addr), (said, addr)
-            notes = page.locator("#notes li:not(.empty) span").all_inner_texts()
+            notes = page.locator("#notes li .use").all_inner_texts()
             assert addr in notes, (addr, notes)
+            # The picked building opens from above and from each side, like the first responder screen
+            assert page.locator("#lineup-viewer").is_visible() and page.locator("#lineup-strip button").count() == 5
+            for side in ("north", "east", "south", "west"):
+                page.click(f"#lineup-strip [data-view='{side}']")
+                page.wait_for_function(f"""() => {{ const i = document.querySelector('#lineup-big img');
+                  return (i.complete && i.naturalWidth > 0 && i.src.endsWith('/aerial/{target}/{side}.jpg')) || document.querySelector('.lineup-miss'); }}""", timeout=30_000)
+                ok = page.evaluate("!document.querySelector('.lineup-miss')")
+                print(f"  {side}: {'photo' if ok else 'no photo from this side'}")
+                if n == 0 and target == pid and side == "east":
+                    shot(page, "4_side_east")
+            page.click("#lineup-strip [data-view='top']")
         if n == 0:
             shot(page, "2_picked")
             page.locator("#tabs button[data-v='record']").click()
