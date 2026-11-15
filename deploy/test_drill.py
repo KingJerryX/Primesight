@@ -27,7 +27,9 @@ with sync_playwright() as p:
                     return route.fulfill(response=r)
             route.fulfill(response=r)
         page.route("**/drill/start*", deal)
-    page.goto(f"{a.base}/drill.html")
+    page.goto(f"{a.base}/home.html")  # the way a player gets there: the Game link in the nav
+    page.click("nav a:has-text('Game')")
+    page.wait_for_url("**/drill.html")
     page.click("#go")
     page.wait_for_function("drill.round && document.querySelectorAll('#call li').length >= 3", timeout=20_000)
     r = page.evaluate("drill.round")
@@ -86,11 +88,13 @@ with sync_playwright() as p:
     assert street in msg and f"floor {floor}" in msg and page.locator("#send").is_enabled()
 
     # Send, watch the graders, read the result
+    import time; t0 = time.time()
     page.click("#send")
     page.wait_for_selector("#grading:not([hidden])")
     page.wait_for_function("document.querySelectorAll('#steps li').length >= 5", timeout=90_000)
     shot(page, "4_grading")
     page.wait_for_selector("#result:not([hidden]) .score", timeout=180_000)
+    print(f"grading took {time.time() - t0:.0f} s")
     shot(page, "5_result")
     steps = page.locator("#steps li").all_inner_texts()
     print("grader steps seen:", len(steps)); [print("  ", s.replace("\n", " | ")[:150]) for s in steps]

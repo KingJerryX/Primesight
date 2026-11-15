@@ -73,6 +73,24 @@ def floors_said(text):
     return {int(n) for p in pats for n in re.findall(p, text)}
 
 
+# What the caller said that changes the response: the crew must hear it (NIOSH: relay the caller's information).
+# Matches the call scripts in drill.py. (item, why, words that show it was relayed)
+FROM_CALL = {
+    "cardiac_arrest": [("not breathing", "the caller says he is not breathing", ["breath", "apneic", "apnea", "pulseless"]),
+                       ("CPR", "a coworker is doing CPR", ["cpr", "compressions"])],
+    "fall": [("head injury", "she hit her head", ["head"]),
+             ("confused, bleeding", "she is confused and bleeding", ["confus", "disoriented", "altered", "blood", "bleed"])],
+    "breathing": [("chest", "his chest is tight", ["chest"]),
+                  ("how bad", "grey, sweating, a few words at a time", ["grey", "gray", "sweat", "pale", "words", "diaphor"])],
+    "elevator_entrapment": [("how many trapped", "four people in the car", ["four", "4"]),
+                            ("conditions", "getting hot, one panicking, nobody hurt", ["hot", "heat", "panic", "injur", "hurt"])],
+    "structure_fire": [("smoke showing", "black smoke from the windows", ["smoke"]),
+                       ("people inside", "some people may still be up there", ["inside", "trapped", "still", "unaccounted", "remain"])],
+    "smoke": [("what it smells like", "electrical burning smell, no flames", ["electric", "burning"]),
+              ("people on the floor", "a lot of people on the floor, no alarm", ["people", "occupants", "alarm"])],
+}
+
+
 def checks(key, incident, message):
     """The code half: [{"part", "item", "ok", "why"}] and the score for location, emergency and needed facts (70 of 100)."""
     t = " ".join(message.lower().split())
@@ -91,6 +109,8 @@ def checks(key, incident, message):
         f"floor {key['floor']}" + (f"; the message also says floor {', '.join(map(str, wrong))}" if wrong else ""))
     add("emergency", "what happened", _has(t, *ty["keywords"], *re.findall(r"[a-z]{4,}", ty["label"].lower())),
         f"name the emergency: {ty['label'].lower()}")
+    for item, why, words in FROM_CALL.get(incident, []):
+        add("needs", item, _has(t, *words), f"from the call: {why}")
 
     el = key["elevators"]
     if cat in ("medical", "rescue", "fire") and el:
@@ -347,15 +367,18 @@ if __name__ == "__main__":
     key = {"property_id": 1, "street_number": "1000", "street": "Louisiana St", "floor": 36, "stories": 71, "construction": "Steel",
            "sprinklers": "yes", "elevators": {"Passenger": None, "Freight": None}, "exit_signs_seen_in_scan": 3,
            "tenants_on_floor": [{"name": "Ares Management Corp"}], "hydrants": [{"m": 40, "dir": "NE"}]}
-    good = "Cardiac arrest, 36th floor, Wells Fargo Plaza, 1000 Louisiana St. Freight elevator on record. Ares Management on 36."
+    good = "Cardiac arrest, 36th floor, Wells Fargo Plaza, 1000 Louisiana St. Not breathing, CPR in progress. Freight elevator on record."
     items, parts = checks(key, "cardiac_arrest", good)
     assert parts == {"location": 35, "emergency": 10, "needs": 25}, (parts, items)
     items, parts = checks(key, "cardiac_arrest", "Cardiac arrest, floor 35, 1000 Louisiana St. Freight elevator.")
-    assert parts["location"] == 0 and parts["needs"] == 25 and "also says floor 35" in items[1]["why"]
+    assert parts["location"] == 0 and parts["needs"] == 8 and "also says floor 35" in items[1]["why"]
     items, parts = checks(key, "cardiac_arrest", "Someone is hurt at Wells Fargo Plaza.")
     assert parts == {"location": 0, "emergency": 0, "needs": 0}
-    items, parts = checks(key, "structure_fire", "Fire on floor 36, 1000 Louisiana St, 71-story steel high-rise, sprinklered, hydrant 40 m NE.")
+    items, parts = checks(key, "structure_fire", "Fire on floor 36, 1000 Louisiana St, black smoke, people may still be inside. 71-story steel high-rise, sprinklered, hydrant 40 m NE.")
     assert [c["item"] for c in items if not c["ok"]] == ["elevator", "who is on the floor"], items
+    weak = "Elevator entrapment, floor 36, 1000 Louisiana St. Freight elevator."  # left out the four people and the heat
+    assert checks(key, "elevator_entrapment", weak)[1]["needs"] == 8
+    assert checks(key, "elevator_entrapment", weak + " Four trapped, getting hot, nobody hurt.")[1]["needs"] == 25
     unk = {**key, "tenants_on_floor": [{"name": "Unknown tenant"}, {"name": "Crystal CoWorks"}]}
     tenant_ok = lambda inc, msg: [c["ok"] for c in checks(unk, inc, msg)[0] if c["item"] == "who is on the floor"]
     assert tenant_ok("smoke", "Floor 36, 1000 Louisiana St, occupants unknown") == [False]  # "unknown" is not a tenant
