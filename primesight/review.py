@@ -1,7 +1,7 @@
 """The team's review of the graders' playbook ideas (grader.queue writes them to the grader:suggestions stream).
 
 Only for us: every route needs PRIMESIGHT_REVIEW_KEY (in .env and the Vercel env; not the judges' passcode). Without
-the key set the routes answer 404, so the deploy shows nothing. The page is demo/variants/review.html, linked from nowhere.
+the key set the routes answer 404, so the deploy shows nothing. The page is demo/variants/admin.html (/admin.html), linked from nowhere, no navbar.
 POST /review/list    {"key"}                                   -> {"ideas": [{"i", "date", "incident", "case", "what", "why", "state"}]}
 POST /review/decide  {"key", "i", "state": accepted|dismissed|pending, "what"?}  -> the same list after the decision
 

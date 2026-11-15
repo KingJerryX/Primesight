@@ -342,7 +342,7 @@ def run(call_text, run_id=None, rubric=RUBRIC_BRIEF):
     cfg = {"configurable": {"thread_id": run_id}}
     seen = len(build().get_state(cfg).values.get("_rubric_evaluations") or [])
     out = None
-    from .review import lessons  # ideas the team accepted on review.html; "" when none
+    from .review import lessons  # ideas the team accepted on admin.html; "" when none
     extra = lessons() if not call_text.startswith("CREW:") else ""
     content = f"{call_text}\n\n{extra}" if extra else call_text
     with get_usage_metadata_callback() as usage:  # counts every model call, subagents included

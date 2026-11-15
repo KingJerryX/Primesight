@@ -24,7 +24,7 @@ with sync_playwright() as p:
     page = b.new_page(viewport={"width": 1400, "height": 900})
     errors = []
     page.on("pageerror", lambda e: errors.append(str(e)))
-    page.goto(f"{a.base}/review.html")
+    page.goto(f"{a.base}/admin.html")
     assert page.locator("#login").is_visible() and page.locator("#list li").count() == 0  # nothing without the key
     page.fill("#key", "not-the-key"); page.click("#login button")
     page.wait_for_function("document.getElementById('err').textContent.includes('wrong')")
