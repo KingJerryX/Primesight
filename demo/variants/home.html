@@ -29,7 +29,7 @@
   .dots button[aria-selected="true"] { opacity: 1; box-shadow: 0 1px 0 #fff; }
   .target { display: none; }  /* no ring on the hero: the raised building is the mark */
   /* Each scene casts its own colour over the map, so the three slides read apart at a glance: red for first responder, none for home, green for the simulation. */
-  /* The cast is a filter on the map's canvas only, so the call cards, hydrant dots and panels on top keep their own colours. */
+  /* The cast is a filter on the map's canvas only, so the call cards and panels on top keep their own colours. */
   #heromap canvas { transition: filter 1.2s var(--ease); }
   .hero[data-scene="0"] #heromap canvas { filter: sepia(.75) saturate(2.8) hue-rotate(-24deg) brightness(.95); }
   .hero[data-scene="2"] #heromap canvas { filter: sepia(.6) saturate(1.7) hue-rotate(95deg); }
@@ -47,15 +47,10 @@
   .call::before { content: ""; position: absolute; left: calc(50% - 5px); bottom: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); animation: beat 1.4s infinite; }
   @keyframes rise { from { opacity: 0; translate: 0 12px; } }
   @keyframes beat { from { box-shadow: 0 0 0 0 #ff5a36b3; } to { box-shadow: 0 0 0 16px #ff5a3600; } }
-  /* Game scene: a sweep from the building, its hydrants dropping in, a clock and the objectives ticking off. */
+  /* Simulation scene: a sweep from the building, a clock and the round's steps ticking off, as in drill.html. */
   .sonar { width: 14px; height: 14px; border-radius: 50%; background: #fff; }
   .sonar::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 1px solid #fff; animation: sweep 2.8s linear infinite; }
   @keyframes sweep { from { transform: scale(1); opacity: .9; } to { transform: scale(26); opacity: 0; } }
-  /* The dot is drawn on ::before: scaling the marker element itself would also scale the offset MapLibre places it with. */
-  .hydrant { width: 12px; height: 12px; }
-  .hydrant::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--blue); border: 2px solid #fff; animation: drop .45s var(--ease) both; transition: scale .3s var(--ease), box-shadow .3s; }
-  .hydrant.found::before { background: var(--ok); scale: 1.6; box-shadow: 0 0 0 7px #2ed3a759, 0 0 26px var(--ok); }
-  @keyframes drop { from { opacity: 0; scale: 2.6; } }
   #hud { position: absolute; z-index: 1; left: clamp(16px, 4vw, 56px); top: 104px; display: grid; gap: 9px; min-width: 200px; padding: 16px 18px; background: #050506cc; border: 1px solid var(--rule); }
   #hud b { margin-bottom: 6px; font: 400 46px/1 var(--code); letter-spacing: -.02em; text-transform: none; font-variant-numeric: tabular-nums; }
   #hud b::after { content: " s"; font-size: 14px; color: var(--dim); }
@@ -133,7 +128,7 @@
   <div class="slide"><h1>Simulation</h1><p>Be the dispatcher. Take a 911 call, dig through the building data, write the text the crew reads on the way, and AI graders score it.</p><a class="btn" href="drill.html">Start the simulation</a></div>
   <div class="dots caps" role="tablist" aria-label="Slides"><button role="tab">1</button><button role="tab">2</button><button role="tab">3</button></div>
   <div id="feed" class="caps" aria-hidden="true" hidden><b>Incoming calls</b></div>
-  <div id="hud" class="caps" aria-hidden="true" hidden><b id="clock">00.0</b><span>Hydrant</span><span>Exits</span><span>Elevators</span></div>
+  <div id="hud" class="caps" aria-hidden="true" hidden><b id="clock">00.0</b><span>Ask the caller</span><span>Pick the building</span><span>Send the dispatch</span></div>
   <div id="cursor" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="1.3"><path d="M6 2.5 11.5 8 6 13.5"/></svg></div>
 </section>
 
@@ -200,7 +195,7 @@ const SCENES = [
   },
   // Home: one building, close, circled.
   () => fly(TOWER, { padding: NO_PAD }),
-  // Game: straight down on one building, its real hydrants dropping in, a clock running and the objectives ticking off.
+  // Simulation: straight down on one building, a clock running and the round's steps ticking off.
   () => {
     fly(TRAVIS, { zoom: 17.4, pitch: 0, padding: NO_PAD });
     pin(TRAVIS, "sonar");
@@ -211,13 +206,6 @@ const SCENES = [
     undo.push(() => clearInterval(tick));
     hud.querySelectorAll("span").forEach((x, k) => later(() => x.className = "done", 5200 + k * 2400));
     later(() => { clearInterval(tick); hud.classList.add("sent"); }, 5200 + 2 * 2400);  // the clock stops with the last objective
-    const scene = undo;  // the hydrant list arrives later: only use it if this scene is still the one on screen
-    fetch(`https://services.arcgis.com/NummVBqZSIJKUeVR/ArcGIS/rest/services/wHydrant/FeatureServer/0/query?geometry=${TRAVIS.lon},${TRAVIS.lat}&geometryType=esriGeometryPoint&inSR=4326&distance=170&units=esriSRUnit_Meter&outFields=OBJECTID&returnGeometry=true&outSR=4326&f=json`)
-      .then(r => r.json()).then(d => {
-        if (scene !== undo) return;
-        const far = f => Math.hypot((f.geometry.x - TRAVIS.lon) * Math.cos(TRAVIS.lat * Math.PI / 180), f.geometry.y - TRAVIS.lat);
-        d.features.sort((a, b) => far(a) - far(b)).forEach((f, k) => later(() => { const el = pin({ lon: f.geometry.x, lat: f.geometry.y }, "hydrant"); if (!k) later(() => el.classList.add("found"), 3400); }, 1600 + k * 180));
-      }).catch(() => {});  // no hydrants, no problem: the clock and the objectives still run
   },
 ];
 const slides = [...document.querySelectorAll(".slide")], dots = [...document.querySelectorAll(".dots button")];

@@ -59,8 +59,10 @@ def build_one(case, iid, mode=None):
     pid, mid = CASES[case]
     floor = grader.answer_key(pid, mid)["floor"]
     b = next(x for x in server.buildings() if x["pid"] == pid)
-    label = INCIDENTS[iid][0]
-    sent = f"{label} on the {ordinal(floor)} floor, {b['address']}, {b['city']}."  # common.js dispatchText()
+    label = grader.catalog()[iid]["label"]  # the First responder page's label (/incidents), e.g. "Smoke investigation"
+    caller = call_text(pid, floor, iid)
+    # common.js dispatchText(), then the caller's words: Primesight hears the same call the player does
+    sent = f"{label} on the {ordinal(floor)} floor, {b['address']}, {b['city']}. Caller: \"{caller}\""
     run_id, t0 = uuid.uuid4().hex[:12], time.time()
     out = server.brief(sent, run_id, mode)
     text, took = out["briefing"], time.time() - t0
@@ -69,7 +71,7 @@ def build_one(case, iid, mode=None):
     m = re.search(r'"usage", "detail": "(\d+) in / (\d+) out', trace.read(run_id))
     agent_usd = (int(m.group(1)) * 4 + int(m.group(2)) * 20) / 1e6 if m else 0  # agent.run's own count, Opus 5.5 list
     with get_usage_metadata_callback() as u:
-        g = grader.grade(case, iid, call_text(pid, floor, iid), text)
+        g = grader.grade(case, iid, caller, text)
     if not g:
         raise RuntimeError(f"grader refused Primesight's text ({len(text)} chars)")
     if os.environ.get("ANTHROPIC_API_KEY") and g["out_of"] != 100:

@@ -265,9 +265,9 @@ Steps:
    what this incident type needs first (incident_needs), and the raw facts.
 3. In parallel, delegate with the task tool: tenants on or near the floor to tenant-risk, the contacts to notify-writer,
    and, only if the scan is of this exact floor and vision is not null, the scan id to inside-scout (fire and security:
-   pull station and exit sign; medical and rescue: exit sign; hazmat and utility: fire extinguisher). For fire, hazmat,
-   gas or smoke calls, and any type whose incident_needs mention wind or temperature (heat illness, unknown odor), also
-   send the property id to outside-scout: live wind, temperature and every hydrant within 300 m.
+   pull station and exit sign; medical and rescue: exit sign; hazmat and utility: fire extinguisher). For hazmat or gas
+   calls, and any type whose incident_needs mention wind or temperature (heat illness, unknown odor), also send the
+   property id to outside-scout: live wind and temperature. Fire and smoke don't need it: the approach map shows wind.
 4. Read /buildings/<property_id>.md if it exists: crew notes from earlier incidents.
 5. Write the final briefing (rules in your memory and the skill), then save one line about this incident with add_building_note.
    Texts notify-writer queued are NOT sent: write "text queued for <role> (not sent)", never that anyone was texted,
@@ -286,8 +286,9 @@ RUBRIC_BRIEF = """The final message is the crew briefing. Criteria:
 3. The NOT KNOWN line names at most 3 things, the ones that matter for this kind of call. If the floor map is from a different floor, the briefing says so.
 4. It states facts, not orders: no tactical instructions such as where to search or which stair to use.
 5. Tenant risks inferred from a name only are marked possible or "from name only".
-6. The first fact line is the most urgent for this incident type (fire: people on and above the floor; medical: the stretcher elevator; hazmat: what tenants may store; rescue: elevators; security: people on and near the floor; utility: sprinklers and people below, or elevators).
-7. Only what this kind of call needs, as its skill lists. A medical briefing has no building age, frame, sprinklers, hydrants, staging or roof. No briefing has a 3D tour link, a list of tenants beyond the incident floor, or a line the skill does not list: those are sent when the crew replies MORE.
+6. The header line gives the severity the caller reported (not breathing, number trapped, smoke and flames), never
+   "not stated" when the call reports it. The first fact line is the most urgent for this incident type (fire: people on and above the floor; medical: the stretcher elevator; hazmat: what tenants may store; rescue: elevators; security: people on and near the floor; utility: sprinklers and people below, or elevators).
+7. Only what this kind of call needs, as its skill lists. A medical briefing has no building age, frame, sprinklers, hydrants, staging or roof; a fire briefing has no hydrant or wind line. No briefing has a 3D tour link, a list of tenants beyond the incident floor, or a line the skill does not list: those are sent when the crew replies MORE.
 8. No 3D-capture words a firefighter wouldn't know: no "scan points", "scan start", "sweeps", and no walking distances
    measured from where the scanner began. Positions are shown on the attached FLOOR MAP and APPROACH MAP instead."""
 

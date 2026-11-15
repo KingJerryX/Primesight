@@ -47,7 +47,7 @@
       <div class="rival-verdict ${d > 0 ? "rival-win" : d < 0 ? "rival-lose" : ""}" aria-live="polite">${esc(verdict)}</div>
       <p class="rival-note">Primesight is this project's AI that texts crews a building briefing. It wrote its text for the same building, floor and emergency,
         and the same graders scored it against the same call.${r.source === "draft" ? " This is its no-AI draft, written from the building data alone." : ""}
-        It never hears the caller, so anything only the caller said is yours to win.${esc(took)}</p>
+        It heard the same caller you did.${esc(took)}</p>
       <table><thead><tr><th>Part</th><th>You</th><th>Primesight</th></tr></thead><tbody>${rows}</tbody>
         <tfoot><tr><td>Total <span class="dim">/ ${out}</span></td>${cell(you, them)}${cell(them, you)}</tr></tfoot></table>
       <div class="rival-texts">

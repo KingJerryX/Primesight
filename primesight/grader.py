@@ -35,7 +35,7 @@ def catalog():
 
 def answer_key(pid, mid):
     """The facts a good message can draw on, from the same data the briefing uses. No network except the cached hydrants."""
-    from .briefing import _cap
+    from .briefing import _cap, _people
     from .console_api import _hydrants
     from .vision import locate
     b = costar.building(pid)
@@ -46,15 +46,22 @@ def answer_key(pid, mid):
     notes = os.path.join(paths.DATA, "cache", "buildings", f"{pid}.md")
     return {"property_id": pid, "name": b["name"], "address": re.sub(r"\s+,", ",", b["address"]), "street_number": num,
             "street": street, "floor": floor, "stories": b["stories"], "year_built": b["year_built"],
-            "construction": b["construction"], "sprinklers": b["sprinklers"],
+            "construction": b["construction"], "sprinklers": b["sprinklers"], "sprinkler_type": b.get("sprinkler_type"),
             # listed types; CoStar often lists a type with no count, which means "has one", not "has none"
             "elevators": {e["type"]: e["count"] if e["count"] is not None else "on record, count unknown" for e in b["elevators"]},
-            "tenants_on_floor": [{"name": t["name"], "employees": _cap(t["employees"], [t]), "industry": t["industry"], "about": t["about"]} for t in on],
+            "tenants_on_floor": [{"name": t["name"], "suite": t.get("suite"), "employees": _cap(t["employees"], [t]),
+                                  "industry": t["industry"], "about": t["about"]} for t in on],
+            # daytime headcount on every floor above, as the briefing's PEOPLE line counts it
+            "people_above": _people(b["tenants"], set(range(floor + 1, (b["stories"] or floor) + 1))) if floor else None,
             "tenants_nearby": [{"name": t["name"], "floor": t["floor"]} for t in b["tenants"]
                                if t["floor"] and t["floor"] != floor and abs(t["floor"] - floor) <= 2][:8],
             "hydrants": [{"m": round(m), "dir": d} for m, d, *_ in sorted(_hydrants(b))[:3]] if b["lat"] else [],
             "exit_signs_seen_in_scan": sum(g["label"] == "exit sign" for g in locate(v["sweeps"])),  # signs, not exits
-            "contacts": [c["role"] for c in b["contacts"]],  # roles only: phone numbers never go to the model
+            # role and company, and whether a phone is on record: the number itself never goes to the model, so a
+            # number in the message for a contact with a phone on record is the recorded one, not an invention
+            "contacts": [f"{c['role']}: {c.get('company') or 'company not on record'}" +
+                         ("; phone on record (a number given for this contact comes from the record)" if c.get("phone") else "")
+                         for c in b["contacts"]],
             "crew_notes": open(notes, encoding="utf-8").read()[-1500:] if os.path.exists(notes) else ""}
 
 

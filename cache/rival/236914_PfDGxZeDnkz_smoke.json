@@ -1,17 +1,17 @@
 {
  "case": "236914_PfDGxZeDnkz",
  "incident": "smoke",
- "sent": "Smoke in building on the 7th floor, 1225 Loop Fwy, Houston.",
- "text": "PRIMESIGHT | SMOKE INVESTIGATION | FLOOR 7 | alarm: not stated\n1225 N Loop Fwy W, Houston, TX\nPEOPLE: ~21 on fl 7, ~119 on fl 8-11 (daytime); possible rehab clinic fl 10, counseling fl 8-9 (name only)\nBLDG: 11 stories, steel, wet sprinklers. ELEV: 4 passenger, 1 freight (fits hose/gear); recall: not on record\nHYDRANTS: H1 68 m N, H2 137 m W (approach map)\nWIND: from ENE 12 mph, gusts 27, smoke drifts WSW, 53F\nNOT KNOWN: stair locations; standpipe/FDC locations; smoke source and flames (not in call)\nReply MORE for the rest, or ask a question.",
+ "sent": "Smoke investigation on the 7th floor, 1225 Loop Fwy, Houston. Caller: \"I'm at the office building at 1225 on the North Loop, by the freeway, seventh floor. There's smoke in the hallway, it smells like something electrical burning. No flames that I can see. The alarm isn't going off. It's getting thicker by the copy room. Should we leave? There are a lot of us on this floor.\"",
+ "text": "PRIMESIGHT | SMOKE INVESTIGATION | FLOOR 7, 1225 N Loop Fwy W | electrical smell, hall smoke thicker by copy room, no flames, no alarm\nOffice building, 1225 N Loop Fwy W, Houston, TX\nPEOPLE: Fl 7 offices Triton, Condon, Bunker Steel +2, ~21+; ~119 on 8-11, possible clinics 8-10 (name only)\nBUILDING: 11 stories, steel, sprinklers yes (wet); elevators 4 passenger, 1 freight, 1 parking; recall: not on record\nNOT KNOWN: stair locations, standpipe locations, FDC location\nReply MORE for the rest, or ask a question.",
  "source": "agent",
- "score": 86,
+ "score": 97,
  "out_of": 100,
  "parts": {
   "location": 35,
   "emergency": 10,
-  "needs": 18,
+  "needs": 25,
   "accuracy": 15,
-  "delivery": 8
+  "delivery": 12
  },
  "checks": [
   {
@@ -35,7 +35,7 @@
   {
    "part": "needs",
    "item": "what it smells like",
-   "ok": false,
+   "ok": true,
    "why": "from the call: electrical burning smell, no flames"
   },
   {
@@ -53,7 +53,7 @@
   {
    "part": "needs",
    "item": "who is on the floor",
-   "ok": false,
+   "ok": true,
    "why": "who is on the floor (a headcount or the tenants): Bunker Steel Corporation, Condon & Company, P.C., Luxury Homes Realty, Triton International Limited"
   },
   {
@@ -77,29 +77,34 @@
  ],
  "claims": [
   {
-   "claim": "Address is 1225 N Loop Fwy W, Houston, TX",
+   "claim": "Building is at 1225 N Loop Fwy W, Houston, TX",
    "verdict": "supported",
-   "evidence": "Record reads 1225 Loop Fwy, Houston, TX. The 'N' and 'W' are not in it."
+   "evidence": "Data: 1225 Loop Fwy, Houston, TX. The N and W are not in the data."
   },
   {
-   "claim": "About 21 people on floor 7",
+   "claim": "Building is an office building",
+   "verdict": "not_in_data",
+   "evidence": "No building use or type field in the record."
+  },
+  {
+   "claim": "Floor 7 offices include Triton, Condon and Bunker Steel, plus 2 more (5 tenants)",
    "verdict": "supported",
-   "evidence": "Employees 5+10+1+5 = 21. Triton International's headcount is null."
+   "evidence": "Floor 7 lists 5 tenants: Bunker Steel, Condon, Luxury Homes, Triton, Old Republic Title."
   },
   {
-   "claim": "About 119 people on floors 8-11 (daytime)",
-   "verdict": "not_in_data",
-   "evidence": "Only floor 7 tenants are listed. Nearby tenants are on floors 5-6 only."
+   "claim": "About 21+ people on floor 7",
+   "verdict": "supported",
+   "evidence": "Employees 5+10+1+5=21. Triton's count is null, so 21+ fits."
   },
   {
-   "claim": "Possible rehab clinic on floor 10",
-   "verdict": "not_in_data",
-   "evidence": "No tenant data for floor 10."
+   "claim": "About 119 people on floors 8-11",
+   "verdict": "supported",
+   "evidence": "people_above: 119"
   },
   {
-   "claim": "Counseling tenant on floors 8-9",
+   "claim": "Possible clinics on floors 8-10",
    "verdict": "not_in_data",
-   "evidence": "No tenant data for floors 8-9."
+   "evidence": "No tenant data for floors 8-10. Nearby tenants list only floors 5-6."
   },
   {
    "claim": "Building has 11 stories",
@@ -107,79 +112,54 @@
    "evidence": "stories: 11"
   },
   {
-   "claim": "Steel construction",
+   "claim": "Construction is steel",
    "verdict": "supported",
    "evidence": "construction: Steel"
   },
   {
-   "claim": "Building has sprinklers",
+   "claim": "Sprinklers present, wet system",
    "verdict": "supported",
-   "evidence": "sprinklers: yes"
+   "evidence": "sprinklers: yes; sprinkler_type: Wet"
   },
   {
-   "claim": "Sprinklers are the wet type",
-   "verdict": "not_in_data",
-   "evidence": "The record says only 'yes', with no system type."
-  },
-  {
-   "claim": "4 passenger elevators",
+   "claim": "Elevators: 4 passenger, 1 freight, 1 parking",
    "verdict": "supported",
-   "evidence": "elevators Passenger: 4"
-  },
-  {
-   "claim": "1 freight elevator",
-   "verdict": "supported",
-   "evidence": "elevators Freight: 1"
-  },
-  {
-   "claim": "Freight elevator fits hose and gear",
-   "verdict": "not_in_data",
-   "evidence": "No elevator dimensions or capacity in the record."
+   "evidence": "Passenger 4, Freight 1, Parking 1"
   },
   {
    "claim": "Elevator recall is not on record",
-   "verdict": "supported",
-   "evidence": "No recall information in the record."
-  },
-  {
-   "claim": "Hydrant H1 is 68 m north",
-   "verdict": "supported",
-   "evidence": "hydrants: 68 m N"
-  },
-  {
-   "claim": "Hydrant H2 is 137 m west",
-   "verdict": "supported",
-   "evidence": "hydrants: 137 m W"
-  },
-  {
-   "claim": "Wind from ENE at 12 mph, gusts 27, smoke drifting WSW, 53F",
    "verdict": "not_in_data",
-   "evidence": "The record has no weather or wind data."
+   "evidence": "No elevator recall field in the data."
   },
   {
    "claim": "Stair locations are not known",
-   "verdict": "supported",
-   "evidence": "No stair locations. Only 3 exit signs seen in scan."
+   "verdict": "not_in_data",
+   "evidence": "No stair data. The scan only shows 3 exit signs."
   },
   {
-   "claim": "Standpipe and FDC locations are not known",
-   "verdict": "supported",
-   "evidence": "No standpipe or FDC data in the record."
+   "claim": "Standpipe locations are not known",
+   "verdict": "not_in_data",
+   "evidence": "No standpipe information in the record."
+  },
+  {
+   "claim": "FDC location is not known",
+   "verdict": "not_in_data",
+   "evidence": "No FDC information. Only hydrants are listed (68 m N, 137 m W, 142 m W)."
   }
  ],
  "delivery": {
-  "score": 8,
+  "score": 12,
   "nature_and_location_up_front": true,
-  "severity_stated": false,
-  "feedback": "Add severity right after the address: smoke thickening in the 7th-floor hallway, electrical odor, no flames seen. Then trim wind and hydrant detail."
+  "severity_stated": true,
+  "feedback": "Cut the agency tag, the repeated address and the \"Reply MORE\" line to get under 70 words, and list exits and pull stations."
  },
  "feedback": [
-  "Say what the caller reported: electrical burning smell, smoke getting thicker by the copy room, no flames seen, and no alarm sounding. Your message says 'not in call' for flames and source, but the call covers both.",
-  "Name who is on floor 7: Bunker Steel Corporation, Condon & Company, P.C., Luxury Homes Realty and Triton International Limited. Triton has no headcount on record, so ~21 is a partial count. The crew also needs the exits and pull stations seen on the floor.",
-  "Remove details the building data doesn't back: ~119 people on floors 8-11, the rehab and counseling tenants, wet sprinklers, the freight elevator fitting hose and gear, and the wind and temperature. The address also has an extra 'N' and 'W' (the record says 1225 Loop Fwy)."
+  "The playbook's third need is missing: exits and pull stations seen on the floor. The scan shows 3 exit signs, so list them. Saying stair locations are not known isn't enough.",
+  "Cut the agency tag, the repeated address and the \"Reply MORE\" line to get under 70 words. The crew needs people, sprinklers and exits first.",
+  "Two claims aren't backed by the data: \"office building\" and \"possible clinics 8-10\". Drop them or mark them as caller-reported. The record has no tenant data for floors 8-10, so \"119 above\" is the figure to use."
  ],
  "suggestions_queued": 2,
- "brief_s": 77.6,
- "cost_usd": 0.9272,
- "built": "2026-11-15 04:44"
+ "brief_s": 77.5,
+ "cost_usd": 0.9232,
+ "built": "2026-11-15 05:09"
 }

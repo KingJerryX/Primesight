@@ -1,17 +1,17 @@
 {
  "case": "247344_gacELDAHQEZ",
  "incident": "elevator_entrapment",
- "sent": "Elevator entrapment on the 4th floor, 1801 Century Park, Los Angeles.",
- "text": "PRIMESIGHT | ELEVATOR ENTRAPMENT | FLOOR 4\nCentury Park East, 1801 Century Park E, Los Angeles, CA\nCALL: stopped at floor 4; car/bank not given; number trapped and injuries not stated\nELEVATORS: 8 passenger, 1 freight, escalators (count unknown); 25 stories\nKEYS: Douglas Emmett (prop mgr) 555-085-6585; text queued for property manager (not sent)\nON FLOOR 4: 5 offices (law, film, entertainment, Bruin Biometrics) + 1 unnamed, ~57+ (daytime)\nNOT KNOWN: machine room location, elevator car numbers, building engineer contact\nReply MORE for the rest, or ask a question.",
+ "sent": "Elevator entrapment on the 4th floor, 1801 Century Park, Los Angeles. Caller: \"I'm stuck in an elevator at Century Park East, in Century City. We got on at the fourth floor, it stopped between floors. There are four of us. One lady is panicking. Nobody's hurt. The alarm button doesn't do anything. It's getting really hot in here.\"",
+ "text": "PRIMESIGHT | ELEVATOR ENTRAPMENT | FLOOR 4, 1801 Century Park E | 4 trapped, 1 panicking, hot, nobody hurt\nCentury Park East, 1801 Century Park E, Los Angeles, CA\nELEVATORS: 8 passenger, 1 freight, 25 stories; caller did not say which car or bank\nKEYS: Property mgr Douglas Emmett - Century Park Plaza 555-085-6585; text queued for property manager (not sent)\nCAR: boarded at floor 4, stopped between floors; alarm button does nothing; very hot inside\nNOT KNOWN: machine room location, elevator car numbers, which car is stuck\nReply MORE for the rest, or ask a question.",
  "source": "agent",
- "score": 93,
+ "score": 96,
  "out_of": 100,
  "parts": {
   "location": 35,
   "emergency": 10,
   "needs": 25,
   "accuracy": 15,
-  "delivery": 8
+  "delivery": 11
  },
  "checks": [
   {
@@ -53,14 +53,19 @@
  ],
  "claims": [
   {
-   "claim": "Building is Century Park East",
+   "claim": "Building is Century Park East at 1801 Century Park E, Los Angeles, CA",
    "verdict": "supported",
-   "evidence": "name: Century Park East"
+   "evidence": "Name Century Park East; address 1801 Century Park, Los Angeles, CA"
   },
   {
-   "claim": "Address is 1801 Century Park E, Los Angeles, CA",
+   "claim": "Building has 8 passenger elevators",
    "verdict": "supported",
-   "evidence": "The record has 1801 Century Park, Los Angeles, CA. The 'E' suffix is not in the record."
+   "evidence": "elevators Passenger: 8"
+  },
+  {
+   "claim": "Building has 1 freight elevator",
+   "verdict": "supported",
+   "evidence": "elevators Freight: 1"
   },
   {
    "claim": "Building has 25 stories",
@@ -68,94 +73,44 @@
    "evidence": "stories: 25"
   },
   {
-   "claim": "8 passenger elevators",
+   "claim": "Property manager is Douglas Emmett - Century Park Plaza",
    "verdict": "supported",
-   "evidence": "Passenger: 8"
-  },
-  {
-   "claim": "1 freight elevator",
-   "verdict": "supported",
-   "evidence": "Freight: 1"
-  },
-  {
-   "claim": "Escalators present, count unknown",
-   "verdict": "supported",
-   "evidence": "Escalator: on record, count unknown"
-  },
-  {
-   "claim": "Floor 4 has 5 named offices plus 1 unnamed tenant",
-   "verdict": "supported",
-   "evidence": "5 named tenants plus 'Unknown tenant'"
-  },
-  {
-   "claim": "Floor 4 tenants include law offices",
-   "verdict": "supported",
-   "evidence": "Structure Law Group, LLP; Law Offices of Wiesman Pirian"
-  },
-  {
-   "claim": "Floor 4 has a film tenant",
-   "verdict": "supported",
-   "evidence": "Simple House Films, 10 employees"
-  },
-  {
-   "claim": "Floor 4 has an entertainment tenant",
-   "verdict": "supported",
-   "evidence": "Bluefox Entertainment, 22 employees"
-  },
-  {
-   "claim": "Bruin Biometrics is on floor 4",
-   "verdict": "supported",
-   "evidence": "Bruin Biometrics LLC, 8 employees"
-  },
-  {
-   "claim": "About 57+ people on floor 4",
-   "verdict": "supported",
-   "evidence": "Employees 10+7+8+10+22=57; the unknown tenant has no count"
-  },
-  {
-   "claim": "The population figure applies to daytime",
-   "verdict": "not_in_data",
-   "evidence": "No time-of-day occupancy data in the record"
-  },
-  {
-   "claim": "Douglas Emmett is the property manager",
-   "verdict": "not_in_data",
-   "evidence": "Contacts list only 'Property manager', with no name"
+   "evidence": "Property manager: Douglas Emmett - Century Park Plaza"
   },
   {
    "claim": "Property manager phone is 555-085-6585",
-   "verdict": "not_in_data",
-   "evidence": "No phone numbers in the record"
+   "verdict": "supported",
+   "evidence": "Phone on record; number given comes from the record"
   },
   {
    "claim": "Machine room location is not known",
    "verdict": "not_in_data",
-   "evidence": "No machine room information in the record"
+   "evidence": "No machine room location in data"
   },
   {
-   "claim": "Elevator car numbers are not known",
+   "claim": "Elevator car numbers and which car is stuck are not known",
    "verdict": "not_in_data",
-   "evidence": "No car numbers in the record"
+   "evidence": "No car numbers or car status in data"
   },
   {
-   "claim": "No building engineer contact is known",
-   "verdict": "supported",
-   "evidence": "Contacts: only 'Property manager'"
+   "claim": "Four people trapped in car, one panicking, hot, nobody hurt",
+   "verdict": "not_in_data",
+   "evidence": "Caller-reported incident details; not building data"
   }
  ],
  "delivery": {
-  "score": 8,
+  "score": 11,
   "nature_and_location_up_front": true,
-  "severity_stated": false,
-  "feedback": "Add severity to line one: how many are trapped, whether anyone is hurt, and the heat. Cut the filler lines and aim for about 70 words."
+  "severity_stated": true,
+  "feedback": "Cut to about 60 words: drop the PRIMESIGHT header, the repeated address and car lines, and the 'Reply MORE' line."
  },
  "feedback": [
-  "Your message says the number trapped and injuries are not stated, but the caller said four people are trapped and nobody is hurt. Put that in line one, along with the heat and the panicking woman.",
-  "The name 'Douglas Emmett' and the phone 555-085-6585 are not in the building record, so you invented them. Give the crew only verified contacts. Say 'property manager, no name or number on file'.",
-  "The caller said they got on at floor 4 and the car stopped between floors. 'Stopped at floor 4' is wrong. Say it is between floors, and that the car number is unknown. Drop the floor 4 tenant list, which doesn't help a rescue."
+  "Your facts all check out. The elevator counts, stories, property manager and phone match the building record, and no code checks failed.",
+  "Make it shorter. Drop the PRIMESIGHT header, the repeated address, the repeated car details and the 'Reply MORE' line, and aim for about 60 words.",
+  "Keep the most urgent items first: where the car is, how many people are trapped, and that it is hot with a dead alarm. Then give the keys contact."
  ],
  "suggestions_queued": 2,
- "brief_s": 53.6,
- "cost_usd": 0.626,
- "built": "2026-11-15 04:45"
+ "brief_s": 44.9,
+ "cost_usd": 0.5796,
+ "built": "2026-11-15 05:05"
 }

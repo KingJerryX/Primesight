@@ -1,17 +1,17 @@
 {
  "case": "234022_Fv5Q2P8Kmsf",
  "incident": "fall",
- "sent": "Fall on the 6th floor, 363 Sam Houston Pky, Houston.",
- "text": "PRIMESIGHT | FALL / INJURY | FLOOR 6\nNorthbelt - 363 Sam Houston Pky, Houston, TX\nELEVATOR: 1 freight car on record (fits a stretcher), plus 7 passenger\nON FLOOR: 6 tenants, ste 600-660; largest Crystal CoWorks ste 660 (coworking, from name only); no headcount\nMEET: property mgr Realty.com 555-980-6802; text queued for property manager (not sent)\nFALL: how/height, what struck (head, neck, back), conscious/breathing/bleeding: not stated in call\nNOT KNOWN: patient's suite, AED location, where the freight car is\nReply MORE for the rest, or ask a question.",
+ "sent": "Fall / injury on the 6th floor, 363 Sam Houston Pky, Houston. Caller: \"Hi, I'm at Northbelt, the office building on Sam Houston Parkway, the sixth floor. A woman fell off a step ladder in our office. She hit her head. She's awake, but she's confused and there's blood. She's in her sixties, I think. She can't get up. Can you send someone? We're by the elevators.\"",
+ "text": "PRIMESIGHT | FALL / INJURY | FLOOR 6, 363 Sam Houston Pky | woman 60s fell off step ladder, hit head; awake, confused, bleeding, can't get up; breathing: not stated\nNorthbelt - 363 N Sam Houston Pky E, Houston, TX\nELEVATOR: 1 freight car on record (fits a stretcher), 7 passenger\nON FLOOR: caller is by the elevators; 6 suites 600-660, largest Crystal CoWorks ste 660\nMEET: property mgr Realty.com 555-980-6802, text queued for property manager (not sent)\nNOT KNOWN: patient's suite, AED location, where the freight elevator is\nReply MORE for the rest, or ask a question.",
  "source": "agent",
- "score": 92,
+ "score": 96,
  "out_of": 100,
  "parts": {
   "location": 35,
   "emergency": 10,
   "needs": 25,
   "accuracy": 15,
-  "delivery": 7
+  "delivery": 11
  },
  "checks": [
   {
@@ -53,94 +53,69 @@
  ],
  "claims": [
   {
-   "claim": "Building is Northbelt at 363 Sam Houston Pky, Houston, TX",
+   "claim": "The building is named Northbelt.",
    "verdict": "supported",
-   "evidence": "Name Northbelt; address 363 Sam Houston Pky, Houston, TX"
+   "evidence": "name: Northbelt"
   },
   {
-   "claim": "The building has 1 freight elevator",
+   "claim": "The address is 363 N Sam Houston Pky E, Houston, TX.",
+   "verdict": "not_in_data",
+   "evidence": "The record says 363 Sam Houston Pky, Houston, TX. It has no N or E."
+  },
+  {
+   "claim": "The building has 1 freight elevator.",
    "verdict": "supported",
    "evidence": "elevators: Freight 1"
   },
   {
-   "claim": "The building has 7 passenger elevators",
+   "claim": "The freight car fits a stretcher.",
+   "verdict": "not_in_data",
+   "evidence": "The record has no elevator dimensions or capacity."
+  },
+  {
+   "claim": "The building has 7 passenger elevators.",
    "verdict": "supported",
    "evidence": "elevators: Passenger 7"
   },
   {
-   "claim": "The freight car fits a stretcher",
-   "verdict": "not_in_data",
-   "evidence": "No elevator dimensions or stretcher capacity in the data"
-  },
-  {
-   "claim": "There are 6 tenants on floor 6",
+   "claim": "Floor 6 has 6 suites, numbered 600 to 660.",
    "verdict": "supported",
-   "evidence": "tenants_on_floor lists 6 entries, one of them 'Unknown tenant'"
+   "evidence": "Six suites: 600, 605, 610, 615, 640, 660"
   },
   {
-   "claim": "Tenant suites on the floor run from ste 600 to 660",
-   "verdict": "not_in_data",
-   "evidence": "No suite numbers in the data"
-  },
-  {
-   "claim": "Crystal CoWorks is the largest tenant on the floor",
-   "verdict": "not_in_data",
-   "evidence": "All tenant employee counts are null, so size can't be compared"
-  },
-  {
-   "claim": "Crystal CoWorks is in suite 660",
-   "verdict": "not_in_data",
-   "evidence": "No suite numbers in the data"
-  },
-  {
-   "claim": "Crystal CoWorks is a coworking business (inferred from name only)",
-   "verdict": "not_in_data",
-   "evidence": "Industry 'Unknown', about null; message admits name-only inference"
-  },
-  {
-   "claim": "No headcount is available for the floor",
+   "claim": "Crystal CoWorks is in suite 660.",
    "verdict": "supported",
-   "evidence": "employees null for every tenant on floor"
+   "evidence": "Crystal CoWorks suite 660"
   },
   {
-   "claim": "The property manager is Realty.com",
+   "claim": "Crystal CoWorks is the largest tenant on the floor.",
    "verdict": "not_in_data",
-   "evidence": "Contacts only list 'Property manager', with no company name"
+   "evidence": "Employees is null and no tenant has square footage, so size can't be compared."
   },
   {
-   "claim": "The property manager's phone number is 555-980-6802",
-   "verdict": "not_in_data",
-   "evidence": "Contacts list has no phone number"
-  },
-  {
-   "claim": "The patient's suite is not known",
-   "verdict": "not_in_data",
-   "evidence": "Data has no patient or suite information"
-  },
-  {
-   "claim": "The AED location is not known",
+   "claim": "The property manager is Realty.com.",
    "verdict": "supported",
-   "evidence": "No AED information in the data"
+   "evidence": "Property manager: Realty.com"
   },
   {
-   "claim": "The location of the freight car is not known",
+   "claim": "The property manager's phone number is 555-980-6802.",
    "verdict": "supported",
-   "evidence": "No elevator locations in the data"
+   "evidence": "The phone number matches the record."
   }
  ],
  "delivery": {
-  "score": 7,
+  "score": 11,
   "nature_and_location_up_front": true,
-  "severity_stated": false,
-  "feedback": "Open with severity right after nature and address, for example 'head injury, confused, bleeding, can't stand', and cut the filler and extra detail."
+  "severity_stated": true,
+  "feedback": "Cut the repeated address, the 'text queued' note and the 'Reply MORE' line to get under about 70 words."
  },
  "feedback": [
-  "The message says conscious and bleeding were 'not stated in call', but the caller said it. She hit her head, she's awake but confused, she's bleeding, she can't get up, and she's in her sixties. Put that in right after the address.",
-  "Several details aren't in the building data: suites 600-660, Crystal CoWorks as the largest tenant in ste 660, 'Realty.com' with the phone number 555-980-6802, and the freight car fitting a stretcher. Send only what the data shows, and mark the rest unknown.",
-  "Cut the filler and the headcount and tenant detail that don't help the crew. Give the elevator, the stairs if there's no elevator, and the caller's note that she is by the elevators."
+  "Don't state things the building record doesn't back up. 'Fits a stretcher' and 'largest' are invented, and the N and E in the address aren't in the record. Crews act on these, so say 'size not on record' or leave them out.",
+  "'Largest Crystal CoWorks' is a poor guess at the patient's suite. The caller never named a suite, so list the suites on the floor and say the suite is unknown. Say which elevator is closest to the caller, and give the stairs as a fallback.",
+  "Make it shorter. The address is repeated, and the 'text queued' and 'Reply MORE' lines add noise. Keep the patient's condition and 'breathing not stated' at the top."
  ],
  "suggestions_queued": 2,
- "brief_s": 46.3,
- "cost_usd": 0.695,
- "built": "2026-11-15 04:44"
+ "brief_s": 69.1,
+ "cost_usd": 0.9072,
+ "built": "2026-11-15 05:04"
 }

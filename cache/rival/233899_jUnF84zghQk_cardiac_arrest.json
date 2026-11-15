@@ -1,17 +1,17 @@
 {
  "case": "233899_jUnF84zghQk",
  "incident": "cardiac_arrest",
- "sent": "Cardiac arrest on the 36th floor, 1000 Louisiana St, Houston.",
- "text": "PRIMESIGHT | CARDIAC ARREST | FLOOR 36\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nPATIENT: CPR: not stated. Breathing and AED use: not stated in call\nON FLOOR: CME Group, ~16 people by daytime headcount, suite not on record\nMEET: property mgr CBRE 555-619-3343, text queued for property manager (not sent)\nNOT KNOWN: AED location, where the freight car is, suite number on 36\nReply MORE for the rest, or ask a question.",
+ "sent": "Cardiac arrest on the 36th floor, 1000 Louisiana St, Houston. Caller: \"I'm at Wells Fargo Plaza, Louisiana Street. My coworker just collapsed, oh my god. We're on the thirty-sixth floor. He's not breathing. I don't think he's breathing. Someone's doing CPR, they know how. Please hurry, we don't know if there's a defibrillator up here.\"",
+ "text": "PRIMESIGHT | CARDIAC ARREST | FLOOR 36, 1000 Louisiana St | not breathing, CPR in progress\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: CME Group, suite not on record, ~16 people by daytime headcount\nMEET: CBRE property mgr 555-619-3343, text queued for property manager (not sent)\nPATIENT: not breathing; CPR by someone the caller says is trained; AED use not stated, none known\nNOT KNOWN: AED location, where the freight elevator is, CME Group suite number\nReply MORE for the rest, or ask a question.",
  "source": "agent",
- "score": 93,
+ "score": 95,
  "out_of": 100,
  "parts": {
   "location": 35,
   "emergency": 10,
   "needs": 25,
   "accuracy": 15,
-  "delivery": 8
+  "delivery": 10
  },
  "checks": [
   {
@@ -53,69 +53,74 @@
  ],
  "claims": [
   {
-   "claim": "Building is Wells Fargo Plaza at 1000 Louisiana St, Houston, TX",
+   "claim": "Wells Fargo Plaza is at 1000 Louisiana St, Houston, TX",
    "verdict": "supported",
-   "evidence": "Name and address match the record."
+   "evidence": "address: 1000 Louisiana St, Houston, TX"
   },
   {
-   "claim": "A freight elevator is on record for the building",
+   "claim": "A freight elevator is on record",
    "verdict": "supported",
-   "evidence": "Elevators: Freight \"on record, count unknown\""
+   "evidence": "elevators Freight: on record, count unknown"
   },
   {
    "claim": "The freight car fits a stretcher",
    "verdict": "supported",
-   "evidence": "Crew notes: freight elevator on record for stretcher."
+   "evidence": "Crew notes: freight elevator on record for stretcher"
   },
   {
-   "claim": "CME Group is a tenant on floor 36",
+   "claim": "CME Group is on floor 36",
    "verdict": "supported",
    "evidence": "tenants_on_floor: CME Group"
   },
   {
-   "claim": "CME Group has about 16 people (daytime headcount)",
+   "claim": "CME Group's suite is not on record",
+   "verdict": "supported",
+   "evidence": "suite: null"
+  },
+  {
+   "claim": "About 16 people are on the floor",
    "verdict": "supported",
    "evidence": "CME Group employees: 16"
   },
   {
-   "claim": "CME Group's suite number is not on record",
-   "verdict": "supported",
-   "evidence": "No suite field in the tenant entry."
-  },
-  {
    "claim": "The property manager is CBRE",
-   "verdict": "not_in_data",
-   "evidence": "Contacts list only \"Property manager\"; no company named."
-  },
-  {
-   "claim": "The property manager's phone number is 555-619-3343",
-   "verdict": "not_in_data",
-   "evidence": "No phone number in the contacts."
-  },
-  {
-   "claim": "The location of the freight car in the building is unknown",
    "verdict": "supported",
-   "evidence": "Freight \"on record, count unknown\"; no location given."
+   "evidence": "contacts: Property manager: CBRE"
   },
   {
-   "claim": "The AED location is unknown",
+   "claim": "The CBRE property manager's phone number is 555-619-3343",
+   "verdict": "not_in_data",
+   "evidence": "Phone is said to be on record, but no number appears in the data"
+  },
+  {
+   "claim": "The AED location is not known",
    "verdict": "supported",
-   "evidence": "Crew notes: AED not known; no AED data."
+   "evidence": "Crew notes: AED not known; no AED data"
+  },
+  {
+   "claim": "The location of the freight elevator is not known",
+   "verdict": "supported",
+   "evidence": "Count unknown; no elevator location in data"
+  },
+  {
+   "claim": "An AED is not known to be on the floor",
+   "verdict": "not_in_data",
+   "evidence": "No AED data on file for this floor"
   }
  ],
  "delivery": {
-  "score": 8,
+  "score": 10,
   "nature_and_location_up_front": true,
-  "severity_stated": false,
-  "feedback": "State severity in line one, such as \"not breathing, CPR in progress\". Cut the header and the \"Reply MORE\" line."
+  "severity_stated": true,
+  "feedback": "Cut to about 60 words: drop the repeated address, the repeated patient line, the brand header and the 'Reply MORE' line."
  },
  "feedback": [
-  "The CBRE name and the 555-619-3343 number are not in the building data. Don't send a crew a contact you can't verify. Write \"property manager, no number on record\".",
-  "You wrote \"CPR: not stated. Breathing: not stated\", but the caller said he isn't breathing and a trained coworker is doing CPR. Put \"not breathing, CPR in progress\" at the top.",
-  "Cut the \"Reply MORE\" line and the \"text queued (not sent)\" note. Say who meets the crew and where, and keep the rest short."
+  "The phone number 555-619-3343 is not in the building data. Never give a crew a number you can't source. Say the CBRE property manager's phone is on record but the number isn't available.",
+  "Cut the message to about 60 words. Drop the repeated address, the repeated patient line, the brand header and the 'Reply MORE' line. The crew is moving and needs the essentials fast.",
+  "Don't say 'none known' about an AED on the floor. There is no AED data, so say 'AED location unknown'. You already list that under NOT KNOWN, so the PATIENT line doesn't need to repeat it."
  ],
- "suggestions_queued": 0,
- "brief_s": 49.5,
- "cost_usd": 0.6679,
- "built": "2026-11-15 04:44"
+ "suggestions_queued": 1,
+ "brief_s": 61.7,
+ "cost_usd": 0.7647,
+ "built": "2026-11-15 05:04"
 }

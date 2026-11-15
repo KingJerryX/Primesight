@@ -1,17 +1,17 @@
 {
  "case": "233899_jUnF84zghQk",
  "incident": "structure_fire",
- "sent": "Structure fire on the 36th floor, 1000 Louisiana St, Houston.",
- "text": "PRIMESIGHT | WORKING STRUCTURE FIRE | FLOOR 36 | alarm: not stated; smoke/flames: not stated\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nPEOPLE: office; ~16 on fl 36, ~1994 on fl 37-71 (daytime headcount); no hazmat or vulnerable flags\nBUILDING: 71 stories, steel, sprinklered; ELEV: passenger + freight cars (freight takes hose/gear)\nHYDRANTS: H1 61 m N, H2 62 m NE (approach map)\nWIND: from ENE 11 mph, gusts 25, smoke drifts WSW\nNOT KNOWN: stair locations, standpipe/FDC locations, recall: not on record\nReply MORE for the rest, or ask a question.",
+ "sent": "Working structure fire on the 36th floor, 1000 Louisiana St, Houston. Caller: \"There's a fire at Wells Fargo Plaza, Louisiana Street! On the thirty-sixth floor! There's smoke coming from one of the offices, black smoke. The fire alarm's going off, people are going down the stairs. I think some people are still up there, I don't know. I'm outside now, I can see smoke from the windows.\"",
+ "text": "PRIMESIGHT | STRUCTURE FIRE | FLOOR 36, 1000 Louisiana St | black smoke, alarm on, people may be inside\nWells Fargo Plaza, 1000 Louisiana St, Houston, TX\nPEOPLE: office; CME Group ~16 on 36; office ~1994 on 37-71 (daytime); Morgan Lewis 38 possibly large (name only)\nBUILDING: 71 stories, steel, sprinklers yes; elevators: passenger, freight; recall: not on record\nSMOKE: black, from one office on 36, seen at windows; thickness, flames, smell not stated\nNOT KNOWN: stair locations, standpipe and FDC locations, sprinkler type\nReply MORE for the rest, or ask a question.",
  "source": "agent",
- "score": 85,
+ "score": 95,
  "out_of": 100,
  "parts": {
   "location": 35,
   "emergency": 10,
-  "needs": 18,
+  "needs": 25,
   "accuracy": 15,
-  "delivery": 7
+  "delivery": 10
  },
  "checks": [
   {
@@ -41,7 +41,7 @@
   {
    "part": "needs",
    "item": "people inside",
-   "ok": false,
+   "ok": true,
    "why": "from the call: some people may still be up there"
   },
   {
@@ -53,7 +53,7 @@
   {
    "part": "needs",
    "item": "who is on the floor",
-   "ok": false,
+   "ok": true,
    "why": "who is on the floor (a headcount or the tenants): CME Group"
   },
   {
@@ -77,94 +77,99 @@
  ],
  "claims": [
   {
-   "claim": "Floor 36 has about 16 people (daytime headcount)",
+   "claim": "The building is Wells Fargo Plaza",
    "verdict": "supported",
-   "evidence": "CME Group, 16 employees on floor 36"
+   "evidence": "name: Wells Fargo Plaza"
   },
   {
-   "claim": "About 1994 people on floors 37-71",
+   "claim": "The address is 1000 Louisiana St, Houston, TX",
+   "verdict": "supported",
+   "evidence": "address: 1000 Louisiana St, Houston, TX"
+  },
+  {
+   "claim": "The people on the floor are office occupants",
    "verdict": "not_in_data",
-   "evidence": "No headcount for 37-71. An older note says ~2441 above floors 31-71."
+   "evidence": "CME Group industry is Unknown; no occupancy type is given"
   },
   {
-   "claim": "Floor 36 is office occupancy",
+   "claim": "CME Group has about 16 people on floor 36",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor: CME Group, employees 16"
+  },
+  {
+   "claim": "About 1994 people are in offices on floors 37-71",
+   "verdict": "supported",
+   "evidence": "people_above: 1994"
+  },
+  {
+   "claim": "The 1994 people above are there in the daytime",
    "verdict": "not_in_data",
-   "evidence": "CME Group industry listed as Unknown"
+   "evidence": "No time-of-day or occupancy schedule is on record"
   },
   {
-   "claim": "No hazmat or vulnerable flags",
+   "claim": "Morgan Lewis is on floor 38",
+   "verdict": "supported",
+   "evidence": "tenants_nearby: Morgan Lewis, floor 38"
+  },
+  {
+   "claim": "Morgan Lewis is possibly large",
    "verdict": "not_in_data",
-   "evidence": "No flags listed for floor 36. The 'no flags' note is for floor 30."
+   "evidence": "No headcount or size is given for Morgan Lewis"
   },
   {
-   "claim": "Building has 71 stories",
+   "claim": "The building has 71 stories",
    "verdict": "supported",
    "evidence": "stories: 71"
   },
   {
-   "claim": "Construction is steel",
+   "claim": "The construction is steel",
    "verdict": "supported",
    "evidence": "construction: Steel"
   },
   {
-   "claim": "Building is sprinklered",
+   "claim": "The building has sprinklers",
    "verdict": "supported",
    "evidence": "sprinklers: yes"
   },
   {
-   "claim": "Building has passenger and freight elevators",
+   "claim": "The building has passenger and freight elevators",
    "verdict": "supported",
    "evidence": "Passenger and Freight both on record, count unknown"
   },
   {
-   "claim": "Freight car takes hose and gear",
+   "claim": "Elevator recall is not on record",
    "verdict": "not_in_data",
-   "evidence": "Notes only say freight elevator on record for stretcher use"
-  },
-  {
-   "claim": "Hydrant H1 is 61 m north",
-   "verdict": "supported",
-   "evidence": "hydrants: 61 m N"
-  },
-  {
-   "claim": "Hydrant H2 is 62 m northeast",
-   "verdict": "supported",
-   "evidence": "hydrants: 62 m NE"
-  },
-  {
-   "claim": "Wind from ENE at 11 mph, gusts 25, smoke drifting WSW",
-   "verdict": "not_in_data",
-   "evidence": "No wind or weather data in building record"
+   "evidence": "No elevator recall information appears in the record"
   },
   {
    "claim": "Stair locations are not known",
    "verdict": "supported",
-   "evidence": "Crew notes: stair locations not known"
+   "evidence": "crew notes: stair locations not known"
   },
   {
-   "claim": "Standpipe/FDC locations are not known",
+   "claim": "Standpipe and FDC locations are not known",
    "verdict": "not_in_data",
-   "evidence": "No standpipe or FDC information in record"
+   "evidence": "No standpipe or FDC data is in the record"
   },
   {
-   "claim": "Elevator recall is not on record",
-   "verdict": "not_in_data",
-   "evidence": "No recall information in record"
+   "claim": "Sprinkler type is not known",
+   "verdict": "supported",
+   "evidence": "sprinkler_type: Unknown"
   }
  ],
  "delivery": {
-  "score": 7,
+  "score": 10,
   "nature_and_location_up_front": true,
-  "severity_stated": false,
-  "feedback": "State severity in line one, such as black smoke from 36th floor offices and people possibly still above. Cut the wind and hydrant detail."
+  "severity_stated": true,
+  "feedback": "Cut to about 60 words: drop the repeated address and the Reply MORE line, and say 'fire on 36, people above' as severity."
  },
  "feedback": [
-  "Line one says \"smoke/flames: not stated\", but the caller reported black smoke from an office and smoke from the windows. Lead with that. Also say people may still be above the fire, since the alarm is sounding and the caller isn't sure everyone got out.",
-  "Several claims aren't in the building data. The 1994 figure for floors 37-71 isn't on record (an older note says ~2441 for floors 31-71). \"Freight takes hose/gear\" and the wind details aren't on record either. Floor 36 is CME Group, so \"office\" and \"no vulnerable flags\" aren't confirmed. Drop them or mark them unverified.",
-  "Name the tenant on floor 36 (CME Group, 16 people) instead of just \"office\". Cut the wind and hydrant detail to keep the message short, and put the stairs and standpipes line, currently listed as not known, where the crew will see it."
+  "Don't state guesses as building facts. The data doesn't say the occupancy is office, that the ~1994 people are there in the daytime, or that Morgan Lewis is large. Drop them or label them as assumptions.",
+  "Cut the message to about 60 words. The address appears twice, and the 'Reply MORE' line and the 'thickness, flames, smell not stated' note add length without helping the crew. Lead with 'fire on 36, ~1994 people above'.",
+  "Good: nature, location, black smoke and people above the fire floor are up front, and the figures you cite (16 on 36, 1994 above, 71 stories, steel, sprinklers) all match the data. Say 'standpipe/FDC: no data on record' rather than 'not known', because the record has nothing on them."
  ],
- "suggestions_queued": 2,
- "brief_s": 80.4,
- "cost_usd": 0.953,
- "built": "2026-11-15 04:44"
+ "suggestions_queued": 1,
+ "brief_s": 68.1,
+ "cost_usd": 0.7481,
+ "built": "2026-11-15 05:09"
 }

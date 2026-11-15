@@ -7,10 +7,13 @@ Crews told NIST that what reaches them en route "must be carefully selected", be
 it, and that too much causes information overload. So the first text carries only what this kind of call needs.
 
 - Plain ASCII, at most 8 lines. No markdown, no bullets, no emoji. One fact per line, with a CAPS label first.
-- Keep each line under about 100 characters. Cut words, not facts: a line the crew has to scroll is a line they skip.
+- Keep each line under about 100 characters, and the whole text near 70 words. Cut words, not facts: a line the crew has
+  to scroll is a line they skip.
 - The shape, always:
-  1. the header from the draft (PRIMESIGHT | TYPE | FLOOR n, plus a few words from the call if it adds something)
-  2. the building name and address
+  1. the header: PRIMESIGHT | TYPE | FLOOR n, street address | then the severity the caller reported, in their facts:
+     "not breathing, CPR in progress", "4 trapped between floors, hot, nobody hurt", "black smoke, people may be inside".
+     When the call reports it, it is never "not stated".
+  2. the building name and the full address with city
   3. up to 4 fact lines: the ones the skill for this kind of call lists, in its order
   4. NOT KNOWN: at most 3 things, the gaps that change what this crew does
   5. the closing line, exactly: Reply MORE for the rest, or ask a question.
