@@ -1,7 +1,7 @@
 """The dispatcher round (demo/variants/drill.html): a 911 call comes in, the player finds the building, pulls what the
 crew needs from the data screens, and writes the dispatch message that primesight/grader.py grades.
 
-GET /drill/start[?avoid=<case>]  -> {"case", "incident": {"id", "label", "category"}, "call": [caller lines], "screens"}
+GET /drill/start[?avoid=<case>|?case=<case>&incident=<id>]  -> {"case", "incident": {"id", "label", "category"}, "call": [caller lines], "screens"}
 GET /drill/building/<pid>        -> {"pid", "name", "address", "stories", "lat", "lon", "record": [[label, value]],
                                      "tenants": {floor: [{"name", "industry", "employees"}]}}
 Grading is POST /game/grade (console_api.py) with this round's case and incident.
@@ -50,12 +50,13 @@ CALLS = {
 }
 
 
-def start(avoid=None):
-    """A random building floor and emergency. avoid: the case just played, which then comes last."""
-    order = sorted(random.sample(FLOORS, len(FLOORS)), key=lambda c: f"{c[0]}_{c[1]}" == avoid)
+def start(avoid=None, case=None, incident=None):
+    """A random building floor and emergency. avoid: the case just played, which then comes last. case and incident
+    (both valid) deal that exact call instead: the demo link, so the presenter knows which call comes up."""
+    order = sorted(random.sample(FLOORS, len(FLOORS)), key=lambda c: (f"{c[0]}_{c[1]}" != case, f"{c[0]}_{c[1]}" == avoid))
     pid, mid = order[0]
     floor = FLOOR[pid]
-    iid = random.choice(list(INCIDENTS))
+    iid = incident if case == f"{pid}_{mid}" and incident in INCIDENTS else random.choice(list(INCIDENTS))
     label, cat = INCIDENTS[iid]
     words = WORDS.get(floor, f"{floor}th")
     call = [line.format(where=WHERE[pid], floor=words) for line in CALLS[iid]]
@@ -114,9 +115,9 @@ def handle(path):
             r = getattr(mod, "handle", None) and mod.handle(path)
             if r:
                 return r
-    m = re.fullmatch(r"/drill/start(?:\?avoid=(\d+_\w{11}))?", path)
+    m = re.fullmatch(r"/drill/start(?:\?avoid=(\d+_\w{11})|\?case=(\d+_\w{11})&incident=(\w{1,40}))?", path)
     if m:
-        return 200, start(m.group(1)), J
+        return 200, start(m.group(1), m.group(2), m.group(3)), J
     m = re.fullmatch(r"/drill/building/(\d{1,10})", path)
     if m:
         out = building(int(m.group(1)))
@@ -130,6 +131,10 @@ if __name__ == "__main__":
         r = start()
         assert r["case"] in {f"{p}_{m}" for p, m in FLOORS} and len(r["call"]) == 6 and "{" not in "".join(r["call"])
         assert r["screens"] == SCREENS[r["incident"]["category"]]
+    r = start(case="233899_jUnF84zghQk", incident="structure_fire")
+    assert r["case"] == "233899_jUnF84zghQk" and r["incident"]["id"] == "structure_fire"
+    assert handle("/drill/start?case=233899_jUnF84zghQk&incident=smoke")[1]["incident"]["id"] == "smoke"
+    assert handle("/drill/start?case=233899_jUnF84zghQk&incident=nope")[1]["case"] == "233899_jUnF84zghQk"  # bad id: random kind
     assert all(start(avoid=f"{FLOORS[0][0]}_{FLOORS[0][1]}")["case"] != f"{FLOORS[0][0]}_{FLOORS[0][1]}" for _ in range(20))
     from .agent import CATALOG
     assert set(INCIDENTS) <= set(CATALOG) and all(CATALOG[i]["category"] == c for i, (_, c) in INCIDENTS.items())

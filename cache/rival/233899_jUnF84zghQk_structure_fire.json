@@ -2,16 +2,16 @@
  "case": "233899_jUnF84zghQk",
  "incident": "structure_fire",
  "sent": "Structure fire on the 36th floor, 1000 Louisiana St, Houston.",
- "text": "PRIMESIGHT  |  WORKING STRUCTURE FIRE  |  FLOOR 36\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nPEOPLE: ~16 on floor 36, ~1994 above on floors 37-71 (daytime headcount)\nBUILDING: 71 stories, steel frame, built 1983, sprinklers: yes\nHYDRANTS: H1 61 m N, H2 62 m NE (approach map)\nWIND: from E 10 mph, smoke drifts W\nNOT KNOWN: stair locations, standpipe and FDC locations, sprinkler type\nReply MORE for the rest, or ask a question.",
- "source": "draft",
- "score": 84,
+ "text": "PRIMESIGHT | WORKING STRUCTURE FIRE | FLOOR 36\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nPEOPLE: ~16 on floor 36, ~1994 above on floors 37-71 (daytime headcount); no risk tenants flagged\nBUILDING: 71 stories, steel frame, sprinklers: yes\nHYDRANTS: H1 61 m N, H2 62 m NE (approach map)\nWIND: from ENE 6 mph, gusts 22, smoke drifts WSW (ground-level reading)\nNOT KNOWN: stair locations, standpipe and FDC locations, sprinkler type\nReply MORE for the rest, or ask a question.",
+ "source": "agent",
+ "score": 83,
  "out_of": 100,
  "parts": {
   "location": 35,
   "emergency": 10,
   "needs": 14,
   "accuracy": 15,
-  "delivery": 10
+  "delivery": 9
  },
  "checks": [
   {
@@ -79,17 +79,22 @@
   {
    "claim": "Building is Wells Fargo Plaza at 1000 Louisiana St, Houston, TX",
    "verdict": "supported",
-   "evidence": "Name Wells Fargo Plaza, address 1000 Louisiana St, Houston, TX"
+   "evidence": "Name and address match: Wells Fargo Plaza, 1000 Louisiana St, Houston, TX"
   },
   {
-   "claim": "About 16 people are on floor 36",
+   "claim": "About 16 people on floor 36",
    "verdict": "supported",
-   "evidence": "CME Group, 16 employees, is the tenant on floor 36"
+   "evidence": "CME Group on floor 36, 16 employees"
   },
   {
-   "claim": "About 1994 people are above on floors 37-71 (daytime headcount)",
+   "claim": "About 1994 people above on floors 37-71 (daytime headcount)",
    "verdict": "not_in_data",
-   "evidence": "No headcount for floors 37-71. Only Morgan Lewis on floor 38 is listed."
+   "evidence": "Only Morgan Lewis (floor 38) is listed nearby. No headcount for floors 37-71."
+  },
+  {
+   "claim": "No risk tenants flagged",
+   "verdict": "supported",
+   "evidence": "Crew notes say tenant-risk: no flags. Those notes concern floor 30, not floor 36."
   },
   {
    "claim": "Building has 71 stories",
@@ -100,11 +105,6 @@
    "claim": "Steel frame construction",
    "verdict": "supported",
    "evidence": "construction: Steel"
-  },
-  {
-   "claim": "Built in 1983",
-   "verdict": "supported",
-   "evidence": "year_built: 1983"
   },
   {
    "claim": "Building has sprinklers",
@@ -122,14 +122,9 @@
    "evidence": "hydrants: 62 m NE"
   },
   {
-   "claim": "Wind is from the east at 10 mph",
+   "claim": "Wind from ENE at 6 mph, gusts 22, smoke drifting WSW",
    "verdict": "not_in_data",
-   "evidence": "No weather or wind data in the record"
-  },
-  {
-   "claim": "Smoke drifts west",
-   "verdict": "not_in_data",
-   "evidence": "No wind or smoke drift data in the record"
+   "evidence": "No wind or weather data in the building record"
   },
   {
    "claim": "Stair locations are not known",
@@ -137,29 +132,29 @@
    "evidence": "Crew notes: stair locations not known"
   },
   {
-   "claim": "Standpipe and FDC locations are not known",
-   "verdict": "not_in_data",
-   "evidence": "No standpipe or FDC information in the record"
-  },
-  {
    "claim": "Sprinkler type is not known",
    "verdict": "supported",
    "evidence": "Crew notes: sprinkler type not known"
+  },
+  {
+   "claim": "Standpipe and FDC locations are not known",
+   "verdict": "not_in_data",
+   "evidence": "No standpipe or FDC information in the record"
   }
  ],
  "delivery": {
-  "score": 10,
+  "score": 9,
   "nature_and_location_up_front": true,
   "severity_stated": false,
-  "feedback": "Add a plain severity line, such as black smoke showing from floor 36 windows and occupants possibly still above, and cut the extra building details."
+  "feedback": "State severity in the first line (black smoke from a 36th-floor office, occupants possibly still above) and cut non-essential details like steel frame and wind gusts."
  },
  "feedback": [
-  "Remove the ~1994 people figure and the wind line. Neither is in the building data, so you gave the crew invented numbers. Say that the headcount above floor 36 is unknown, and that people may still be up there, as the caller said.",
-  "Add severity near the top: black smoke from floor 36 windows, alarm sounding, and occupants possibly still on the upper floors. You also missed the freight elevator on record, and you named no tenant on 36. The tenant is CME Group, with 16 people.",
-  "Don't say standpipe and FDC locations are not known when the record has no standpipe data at all. Write 'no standpipe/FDC data on file'. Drop the 'Reply MORE' line and use the space for the facts crews need first."
+  "The ~1994 people above floors 37-71 is not in the building data, so the crew would be told an invented number. Give only what the record supports, such as CME Group's 16 on floor 36, and say the headcount above is unknown. Morgan Lewis on floor 38 is the only tenant listed above.",
+  "Say what the caller reported: black smoke from an office on 36, alarm sounding, and some people possibly still on the floor. Put that in the first line. The message never says the fire is serious or that people may be trapped.",
+  "Name CME Group as the tenant on floor 36 and include the freight elevator on record. Drop the wind, steel frame and story count, which the playbook doesn't ask for and which push out the stairs and standpipe needs."
  ],
  "suggestions_queued": 2,
- "brief_s": 4.1,
- "cost_usd": 0.107,
- "built": "2026-11-15 01:08"
+ "brief_s": 41.3,
+ "cost_usd": 0.6053,
+ "built": "2026-11-15 01:24"
 }

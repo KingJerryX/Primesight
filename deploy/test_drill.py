@@ -9,6 +9,7 @@ from playwright.sync_api import sync_playwright
 ap = argparse.ArgumentParser()
 ap.add_argument("--base", default="http://localhost:8787")
 ap.add_argument("--category", help="re-deal until the round is this category (fire, medical, rescue)")
+ap.add_argument("--demo", help="case/incident: open the demo link drill.html?case=..&incident=.. instead of a random call")
 ap.add_argument("--out", default=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "output", "drill_test"))
 a = ap.parse_args()
 os.makedirs(a.out, exist_ok=True)
@@ -27,14 +28,20 @@ with sync_playwright() as p:
                     return route.fulfill(response=r)
             route.fulfill(response=r)
         page.route("**/drill/start*", deal)
-    page.goto(f"{a.base}/home.html")  # the way a player gets there: the Game link in the nav
-    page.click("nav a:has-text('Game')")
-    page.wait_for_url("**/drill.html")
+    if a.demo:
+        case, inc = a.demo.split("/")
+        page.goto(f"{a.base}/drill.html?case={case}&incident={inc}")
+    else:
+        page.goto(f"{a.base}/home.html")  # the way a player gets there: the Game link in the nav
+        page.click("nav a:has-text('Game')")
+        page.wait_for_url("**/drill.html")
     page.click("#go")
     page.wait_for_function("drill.round && document.querySelectorAll('#call li').length >= 2", timeout=20_000)
     r = page.evaluate("drill.round")
     pid, cat = int(r["case"].split("_")[0]), r["incident"]["category"]
     print("round:", r["case"], r["incident"]["label"], "| screens", r["screens"])
+    if a.demo:
+        assert f'{r["case"]}/{r["incident"]["id"]}' == a.demo, r
     assert [t.inner_text().split("\n")[0] for t in page.locator("#tabs button").all()] and \
         page.locator("#tabs button").count() == len(r["screens"]) + 2  # + Which building, Write dispatch
     assert "outside" not in r["screens"] and ("tenants" in r["screens"]) == (cat == "fire")
@@ -94,6 +101,8 @@ with sync_playwright() as p:
     print("grader steps seen:", len(steps)); [print("  ", s.replace("\n", " | ")[:150]) for s in steps]
     print("score:", page.inner_text("#result .score").replace("\n", " "))
     print("feedback:", page.locator("#feedback li").all_inner_texts())
+    if page.locator("text=Beat Primesight").count():
+        print("rival:", page.locator("text=/(You beat Primesight|Primesight wins|tie)/i").first.inner_text())
     assert not errors, errors
     b.close()
 print("drill round played; screenshots in", os.path.abspath(a.out))

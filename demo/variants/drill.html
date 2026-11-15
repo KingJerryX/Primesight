@@ -215,7 +215,8 @@ $("tabs").addEventListener("click", e => { const b = e.target.closest("button");
 
 async function start() {
   $("go").disabled = true; $("err").textContent = "";
-  try { round = await api("/drill/start" + (lastCase ? `?avoid=${lastCase}` : "")); }
+  const want = new URLSearchParams(location.search), demo = !lastCase && want.get("case") && want.get("incident");  // drill.html?case=..&incident=.. deals that call first
+  try { round = await api("/drill/start" + (demo ? `?case=${encodeURIComponent(want.get("case"))}&incident=${encodeURIComponent(want.get("incident"))}` : lastCase ? `?avoid=${lastCase}` : "")); }
   catch (e) { $("err").textContent = "No call could be set up. Is the Primesight server running?"; $("go").disabled = false; return; }
   lastCase = round.case; bld = null;
   clearInterval(timer); clearInterval(lineTimer);

@@ -2,16 +2,16 @@
  "case": "247344_gacELDAHQEZ",
  "incident": "elevator_entrapment",
  "sent": "Elevator entrapment on the 4th floor, 1801 Century Park, Los Angeles.",
- "text": "PRIMESIGHT  |  ELEVATOR ENTRAPMENT  |  FLOOR 4\nCentury Park East - 1801 Century Park , Los Angeles, CA\nELEVATORS: 8 passenger, 1 freight, ? escalator, 25 stories\nPROPERTY MGR: Douglas Emmett - Century Park Plaza 5550856585\nON FLOOR: Bluefox Entertainment (ste 450); Bruin Biometrics LLC (ste 460); The Law Offices of Wiesman Pirian (ste 470) +3 more, ~57 people (daytime)\nBUILDING: 25 stories, steel frame, built 1972, sprinklers: yes\nNOT KNOWN: machine room location, elevator car numbers\nReply MORE for the rest, or ask a question.",
- "source": "draft",
- "score": 85,
+ "text": "PRIMESIGHT | ELEVATOR ENTRAPMENT | FLOOR 4\nCentury Park East - 1801 Century Park E, Los Angeles, CA\nELEVATORS: 8 passenger, 1 freight, escalator count unknown; 25 stories\nKEYS: Property mgr Douglas Emmett - Century Park Plaza 555-085-6585 (texted to meet crew in lobby)\nON FLOOR: Bluefox Ent (450), Bruin Biometrics (460), 2 law firms (470, 475), 2 in 490; ~57+ daytime\nNOT KNOWN: machine room location, elevator car numbers, building engineer contact\nReply MORE for the rest, or ask a question.",
+ "source": "agent",
+ "score": 84,
  "out_of": 100,
  "parts": {
   "location": 35,
   "emergency": 10,
   "needs": 17,
   "accuracy": 15,
-  "delivery": 8
+  "delivery": 7
  },
  "checks": [
   {
@@ -53,24 +53,9 @@
  ],
  "claims": [
   {
-   "claim": "The building is Century Park East at 1801 Century Park, Los Angeles, CA.",
+   "claim": "The building is Century Park East at 1801 Century Park E, Los Angeles, CA.",
    "verdict": "supported",
-   "evidence": "name Century Park East; address 1801 Century Park, Los Angeles, CA"
-  },
-  {
-   "claim": "The building has 8 passenger elevators.",
-   "verdict": "supported",
-   "evidence": "elevators Passenger: 8"
-  },
-  {
-   "claim": "The building has 1 freight elevator.",
-   "verdict": "supported",
-   "evidence": "elevators Freight: 1"
-  },
-  {
-   "claim": "The building has an escalator, count unknown.",
-   "verdict": "supported",
-   "evidence": "Escalator: on record, count unknown"
+   "evidence": "Data has Century Park East, 1801 Century Park, Los Angeles, CA. The \"E\" is not in the data."
   },
   {
    "claim": "The building has 25 stories.",
@@ -78,94 +63,94 @@
    "evidence": "stories: 25"
   },
   {
-   "claim": "The property manager is Douglas Emmett - Century Park Plaza, phone 5550856585.",
+   "claim": "The building has 8 passenger elevators.",
+   "verdict": "supported",
+   "evidence": "Passenger: 8"
+  },
+  {
+   "claim": "The building has 1 freight elevator.",
+   "verdict": "supported",
+   "evidence": "Freight: 1"
+  },
+  {
+   "claim": "The escalator count is unknown.",
+   "verdict": "supported",
+   "evidence": "Escalator is on record, count unknown."
+  },
+  {
+   "claim": "The property manager is Douglas Emmett - Century Park Plaza, phone 555-085-6585.",
    "verdict": "not_in_data",
-   "evidence": "contacts lists only 'Property manager'; no name or number"
+   "evidence": "Contacts list only \"Property manager\", with no name or phone."
+  },
+  {
+   "claim": "The property manager was texted to meet the crew in the lobby.",
+   "verdict": "not_in_data",
+   "evidence": "No dispatch or contact-action data."
   },
   {
    "claim": "Bluefox Entertainment is on floor 4.",
    "verdict": "supported",
-   "evidence": "tenants_on_floor includes Bluefox Entertainment, 22 employees"
+   "evidence": "Bluefox Entertainment, 22 employees, is in tenants_on_floor."
   },
   {
-   "claim": "Bluefox Entertainment is in suite 450.",
+   "claim": "Bluefox is in suite 450.",
    "verdict": "not_in_data",
-   "evidence": "No suite numbers in the tenant records"
+   "evidence": "No suite numbers in the tenant data."
   },
   {
-   "claim": "Bruin Biometrics LLC is on floor 4.",
+   "claim": "Bruin Biometrics is on floor 4.",
    "verdict": "supported",
-   "evidence": "tenants_on_floor includes Bruin Biometrics LLC, 8 employees"
+   "evidence": "Bruin Biometrics LLC, 8 employees, is in tenants_on_floor."
   },
   {
-   "claim": "Bruin Biometrics LLC is in suite 460.",
+   "claim": "Bruin Biometrics is in suite 460.",
    "verdict": "not_in_data",
-   "evidence": "No suite numbers in the tenant records"
+   "evidence": "No suite numbers in the tenant data."
   },
   {
-   "claim": "The Law Offices of Wiesman Pirian is on floor 4.",
+   "claim": "Two law firms are on the floor, in suites 470 and 475.",
    "verdict": "supported",
-   "evidence": "tenants_on_floor includes The Law Offices of Wiesman Pirian, 7 employees"
+   "evidence": "Structure Law Group and Wiesman Pirian are on the floor. The suite numbers are not in the data, so 470 and 475 are unconfirmed."
   },
   {
-   "claim": "The Law Offices of Wiesman Pirian is in suite 470.",
+   "claim": "Two tenants are in suite 490.",
    "verdict": "not_in_data",
-   "evidence": "No suite numbers in the tenant records"
+   "evidence": "Simple House Films and an unknown tenant are on the floor, but no suites are given."
   },
   {
-   "claim": "There are 3 more tenants on the floor besides the three named.",
+   "claim": "About 57 or more people are on the floor in the daytime.",
    "verdict": "supported",
-   "evidence": "6 tenants listed on floor 4; 3 are named in the message"
-  },
-  {
-   "claim": "About 57 people are on the floor.",
-   "verdict": "supported",
-   "evidence": "Employees 10+7+8+10+22 = 57; unknown tenant has none listed"
-  },
-  {
-   "claim": "The 57-person figure applies to the daytime.",
-   "verdict": "not_in_data",
-   "evidence": "Data gives employee counts only, with no time-of-day occupancy"
-  },
-  {
-   "claim": "The building has a steel frame.",
-   "verdict": "supported",
-   "evidence": "construction: Steel"
-  },
-  {
-   "claim": "The building was built in 1972.",
-   "verdict": "supported",
-   "evidence": "year_built: 1972"
-  },
-  {
-   "claim": "The building has sprinklers.",
-   "verdict": "supported",
-   "evidence": "sprinklers: yes"
+   "evidence": "Employees 10+7+8+10+22 = 57, plus an unknown tenant with no count."
   },
   {
    "claim": "The machine room location is not known.",
    "verdict": "not_in_data",
-   "evidence": "No machine room information in the data"
+   "evidence": "No machine room information in the data."
   },
   {
    "claim": "The elevator car numbers are not known.",
    "verdict": "not_in_data",
-   "evidence": "No elevator car numbers in the data"
+   "evidence": "Only elevator counts are given, with no car numbers."
+  },
+  {
+   "claim": "The building engineer contact is not known.",
+   "verdict": "supported",
+   "evidence": "Contacts list only the property manager."
   }
  ],
  "delivery": {
-  "score": 8,
+  "score": 7,
   "nature_and_location_up_front": true,
   "severity_stated": false,
-  "feedback": "Add severity right after location: four trapped between floors, one panicking, car getting hot, alarm not working, no injuries."
+  "feedback": "Say how many are trapped and their condition (four people, one panicking, heat rising, nobody hurt), and cut the tenant list and the 'Reply MORE' line."
  },
  "feedback": [
-  "Say how bad it is up front. Four people are trapped between floors, one is panicking, the car is getting hot, the alarm doesn't work, and nobody is hurt. Your message leaves all of this out.",
-  "Don't state facts the building data doesn't have. The property manager's name and number, the suite numbers (450/460/470) and the 'daytime' occupancy label aren't in the record. The data lists only a 'Property manager' contact, so say that no number is on file.",
-  "Tell the crew the car is stopped between floors, after boarding at floor 4. Floor 4 is only where they got on. Also ask for the stuck car's number and the machine room location, because the building has 8 passenger cars."
+  "Your message leaves out the caller's situation. Say four people are stuck between floors after boarding at floor 4, one is panicking, it is getting hot, nobody is hurt, and the alarm button doesn't work.",
+  "You gave a property manager name and phone number, plus a claim that they were texted. None of that is in the building data, which lists only \"Property manager\". Don't invent contacts or actions. Say the contact is unconfirmed.",
+  "Cut the tenant and suite list (the suite numbers aren't in the data either) and the 'Reply MORE' line. Spend that space on the trapped people and the keys."
  ],
  "suggestions_queued": 2,
- "brief_s": 2.9,
- "cost_usd": 0.1168,
- "built": "2026-11-15 01:09"
+ "brief_s": 41.7,
+ "cost_usd": 0.5521,
+ "built": "2026-11-15 01:24"
 }
