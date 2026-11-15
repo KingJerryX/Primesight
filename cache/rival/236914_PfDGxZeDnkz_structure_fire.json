@@ -1,0 +1,145 @@
+{
+ "case": "236914_PfDGxZeDnkz",
+ "incident": "structure_fire",
+ "sent": "Structure fire on the 7th floor, 1225 Loop Fwy, Houston.",
+ "text": "PRIMESIGHT  |  WORKING STRUCTURE FIRE  |  FLOOR 7\n1225 Loop Fwy, Houston, TX\nPEOPLE: ~21 on floor 7, ~119 above on floors 8-11 (daytime headcount)\nBUILDING: 11 stories, steel frame, built 1984, sprinklers: yes (wet)\nHYDRANTS: H1 68 m N (approach map)\nWIND: from E 8 mph, smoke drifts W\nNOT KNOWN: stair locations, standpipe and FDC locations\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 84,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 14,
+  "accuracy": 15,
+  "delivery": 10
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1225 Loop Fwy (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 7"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: working structure fire"
+  },
+  {
+   "part": "needs",
+   "item": "smoke showing",
+   "ok": true,
+   "why": "from the call: black smoke from the windows"
+  },
+  {
+   "part": "needs",
+   "item": "people inside",
+   "ok": false,
+   "why": "from the call: some people may still be up there"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": false,
+   "why": "freight elevator on record"
+  },
+  {
+   "part": "needs",
+   "item": "who is on the floor",
+   "ok": false,
+   "why": "who is on the floor (a headcount or the tenants): Bunker Steel Corporation, Condon & Company, P.C., Luxury Homes Realty, Triton International Limited"
+  },
+  {
+   "part": "needs",
+   "item": "sprinklers",
+   "ok": true,
+   "why": "sprinklers: yes"
+  },
+  {
+   "part": "needs",
+   "item": "height",
+   "ok": true,
+   "why": "11 stories"
+  },
+  {
+   "part": "needs",
+   "item": "construction",
+   "ok": true,
+   "why": "construction: steel"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The address is 1225 Loop Fwy, Houston, TX",
+   "verdict": "supported",
+   "evidence": "Address: 1225 Loop Fwy, Houston, TX"
+  },
+  {
+   "claim": "About 21 people are on floor 7",
+   "verdict": "supported",
+   "evidence": "Tenant employees on floor 7: 5+10+1+5 = 21. Triton's count is null."
+  },
+  {
+   "claim": "About 119 people are above on floors 8-11",
+   "verdict": "not_in_data",
+   "evidence": "The data has no tenant or headcount for floors 8-11."
+  },
+  {
+   "claim": "The building has 11 stories",
+   "verdict": "supported",
+   "evidence": "stories: 11"
+  },
+  {
+   "claim": "The building has a steel frame",
+   "verdict": "supported",
+   "evidence": "construction: Steel"
+  },
+  {
+   "claim": "The building was built in 1984",
+   "verdict": "supported",
+   "evidence": "year_built: 1984"
+  },
+  {
+   "claim": "The building has sprinklers",
+   "verdict": "supported",
+   "evidence": "sprinklers: yes"
+  },
+  {
+   "claim": "The sprinkler system is wet",
+   "verdict": "not_in_data",
+   "evidence": "The data gives sprinklers as 'yes' only, with no system type."
+  },
+  {
+   "claim": "Hydrant H1 is 68 m north",
+   "verdict": "supported",
+   "evidence": "hydrants: 68 m N"
+  },
+  {
+   "claim": "Wind is from the east at 8 mph and smoke drifts west",
+   "verdict": "not_in_data",
+   "evidence": "The data has no wind or weather information."
+  }
+ ],
+ "delivery": {
+  "score": 10,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "State severity plainly (black smoke from office, occupants possibly still above) and trim extras like build year and steel frame."
+ },
+ "feedback": [
+  "Don't send numbers the data doesn't support. The ~119 people above, the \"wet\" sprinkler type and the wind have no source in the building data. Send only verified facts, and mark anything else as unknown.",
+  "You missed three required items. You didn't say people may still be on the fire floor, as the caller reported. You didn't name the tenants on floor 7: Bunker Steel, Condon & Company, Luxury Homes Realty and Triton International. You didn't mention the freight elevator on record.",
+  "Open with severity: black smoke from an office on floor 7, alarm sounding, and some occupants possibly still upstairs. Cut the build year and steel frame, which aren't needed first."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 1.6,
+ "cost_usd": 0.1112,
+ "built": "2026-11-15 01:08"
+}

@@ -1,0 +1,121 @@
+{
+ "case": "234022_Fv5Q2P8Kmsf",
+ "incident": "cardiac_arrest",
+ "sent": "Cardiac arrest on the 6th floor, 363 Sam Houston Pky, Houston.",
+ "text": "PRIMESIGHT  |  CARDIAC ARREST  |  FLOOR 6\nNorthbelt - 363 Sam Houston Pky, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: Unknown tenant (ste 600); Dream Counseling Center (ste 605); Tax Services Of Houston LLC (ste 610) +3 more\nPROPERTY MGR: Realty.com 5559806802\nNOT KNOWN: AED location, where the stretcher elevator is\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 77,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 9
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "363 Sam Houston Pky (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 6"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: cardiac arrest"
+  },
+  {
+   "part": "needs",
+   "item": "not breathing",
+   "ok": false,
+   "why": "from the call: the caller says he is not breathing"
+  },
+  {
+   "part": "needs",
+   "item": "CPR",
+   "ok": false,
+   "why": "from the call: a coworker is doing CPR"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record (fits a stretcher; in tall buildings elevator access is where minutes go)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building is Northbelt at 363 Sam Houston Pky, Houston, TX",
+   "verdict": "supported",
+   "evidence": "Name Northbelt, address 363 Sam Houston Pky, Houston, TX"
+  },
+  {
+   "claim": "The building has a freight elevator on record",
+   "verdict": "supported",
+   "evidence": "elevators: Freight 1"
+  },
+  {
+   "claim": "The freight car fits a stretcher",
+   "verdict": "not_in_data",
+   "evidence": "Data gives only elevator counts, not car size"
+  },
+  {
+   "claim": "Unknown tenant is on floor 6 (ste 600)",
+   "verdict": "supported",
+   "evidence": "Unknown tenant listed on floor 6; suite number not in data"
+  },
+  {
+   "claim": "Dream Counseling Center is on floor 6 (ste 605)",
+   "verdict": "supported",
+   "evidence": "Dream Counseling Center on floor 6; suite number not in data"
+  },
+  {
+   "claim": "Tax Services Of Houston LLC is on floor 6 (ste 610)",
+   "verdict": "supported",
+   "evidence": "Tax Services Of Houston LLC on floor 6; suite number not in data"
+  },
+  {
+   "claim": "There are 3 more tenants on the floor beyond those listed",
+   "verdict": "supported",
+   "evidence": "6 tenants on floor; 3 listed, so 3 more"
+  },
+  {
+   "claim": "The property manager is Realty.com, phone 5559806802",
+   "verdict": "not_in_data",
+   "evidence": "Contacts lists only 'Property manager'; no name or number"
+  },
+  {
+   "claim": "The AED location is not known",
+   "verdict": "not_in_data",
+   "evidence": "No AED information in data"
+  },
+  {
+   "claim": "The location of the stretcher elevator is not known",
+   "verdict": "supported",
+   "evidence": "Data has 1 freight elevator but no location"
+  }
+ ],
+ "delivery": {
+  "score": 9,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "Add \"not breathing, CPR in progress\" to the first line; cut the tenant list and the \"Reply MORE\" line."
+ },
+ "feedback": [
+  "State severity in the first line: the caller says he isn't breathing and a coworker is doing CPR. Your message has neither, and the crew needs both.",
+  "Remove the stretcher claim and the property manager name and number. The data doesn't say the freight car fits a stretcher, and it lists no name or number for the manager. A crew could rely on a number that doesn't exist.",
+  "Trim the message: drop the +3 more tenants, the Reply MORE line and the suite numbers the data doesn't back. Say that the AED location is unknown and who will meet the crew."
+ ],
+ "suggestions_queued": 1,
+ "brief_s": 2.5,
+ "cost_usd": 0.0981,
+ "built": "2026-11-15 01:07"
+}

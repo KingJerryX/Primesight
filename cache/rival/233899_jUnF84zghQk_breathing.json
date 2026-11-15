@@ -1,0 +1,121 @@
+{
+ "case": "233899_jUnF84zghQk",
+ "incident": "breathing",
+ "sent": "Breathing problem on the 36th floor, 1000 Louisiana St, Houston.",
+ "text": "PRIMESIGHT  |  DIFFICULTY BREATHING / ALLERGIC REACTION  |  FLOOR 36\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: CME Group, ~16 people (daytime)\nPROPERTY MGR: CBRE 5556193343\nNOT KNOWN: AED location, where the stretcher elevator is\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 76,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 8
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1000 Louisiana St (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 36"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: difficulty breathing / allergic reaction"
+  },
+  {
+   "part": "needs",
+   "item": "chest",
+   "ok": false,
+   "why": "from the call: his chest is tight"
+  },
+  {
+   "part": "needs",
+   "item": "how bad",
+   "ok": false,
+   "why": "from the call: grey, sweating, a few words at a time"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record (fits a stretcher; in tall buildings elevator access is where minutes go)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building is Wells Fargo Plaza at 1000 Louisiana St, Houston, TX",
+   "verdict": "supported",
+   "evidence": "Name Wells Fargo Plaza; address 1000 Louisiana St, Houston, TX"
+  },
+  {
+   "claim": "A freight elevator is on record",
+   "verdict": "supported",
+   "evidence": "elevators: Freight \"on record, count unknown\""
+  },
+  {
+   "claim": "The freight car fits a stretcher",
+   "verdict": "supported",
+   "evidence": "Crew notes: \"freight elevator on record for stretcher\"; no car dimensions given"
+  },
+  {
+   "claim": "CME Group is on floor 36",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor: CME Group"
+  },
+  {
+   "claim": "About 16 people are on the floor",
+   "verdict": "supported",
+   "evidence": "CME Group employees: 16"
+  },
+  {
+   "claim": "The floor is occupied in the daytime",
+   "verdict": "not_in_data",
+   "evidence": "No occupancy schedule or hours in the data"
+  },
+  {
+   "claim": "The property manager is CBRE",
+   "verdict": "not_in_data",
+   "evidence": "contacts lists only \"Property manager\"; no company name"
+  },
+  {
+   "claim": "The property manager's phone number is 5556193343",
+   "verdict": "not_in_data",
+   "evidence": "No phone number in the contacts"
+  },
+  {
+   "claim": "The AED location is not known",
+   "verdict": "supported",
+   "evidence": "Crew notes: \"AED not known\"; no AED listed"
+  },
+  {
+   "claim": "The location of the stretcher elevator is not known",
+   "verdict": "supported",
+   "evidence": "Elevator count unknown; no location given"
+  }
+ ],
+ "delivery": {
+  "score": 8,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "State severity in the first line, such as 'grey, sweating, chest tight, speaking few words', and add air-quality or hazard info on the floor."
+ },
+ "feedback": [
+  "Severity is missing. Your message never says the patient is grey, sweating, has a tight chest and speaks only a few words at a time. Put that in the first line so the crew treats it as critical.",
+  "Three details aren't in the building data: 'CBRE', the phone number 5556193343, and 'daytime' occupancy. Remove them. A crew can't rely on a number that may be wrong. Write 'property manager contact: not on file'.",
+  "Nothing covers the air-quality cause or the suite, which were the needs listed first. Say that no air-quality information is on file for the floor, and give the CME Group suite if you have it. Say whether the patient should wait where he is or be met downstairs."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 3.9,
+ "cost_usd": 0.112,
+ "built": "2026-11-15 01:08"
+}

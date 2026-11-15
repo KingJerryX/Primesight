@@ -1,0 +1,171 @@
+{
+ "case": "236914_PfDGxZeDnkz",
+ "incident": "elevator_entrapment",
+ "sent": "Elevator entrapment on the 7th floor, 1225 Loop Fwy, Houston.",
+ "text": "PRIMESIGHT  |  ELEVATOR ENTRAPMENT  |  FLOOR 7\n1225 Loop Fwy, Houston, TX\nELEVATORS: 4 passenger, 1 freight, 1 parking, 11 stories\nON FLOOR: Triton International Limited (ste 705); Luxury Homes Realty (ste 710); Condon & Company, P.C. (ste 725) +2 more, ~21 people (daytime)\nBUILDING: 11 stories, steel frame, built 1984, sprinklers: yes (wet)\nNOT KNOWN: machine room location, elevator car numbers\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 86,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 17,
+  "accuracy": 15,
+  "delivery": 9
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1225 Loop Fwy (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 7"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: elevator entrapment"
+  },
+  {
+   "part": "needs",
+   "item": "how many trapped",
+   "ok": true,
+   "why": "from the call: four people in the car"
+  },
+  {
+   "part": "needs",
+   "item": "conditions",
+   "ok": false,
+   "why": "from the call: getting hot, one panicking, nobody hurt"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Address is 1225 Loop Fwy, Houston, TX",
+   "verdict": "supported",
+   "evidence": "1225 Loop Fwy, Houston, TX"
+  },
+  {
+   "claim": "The building has 4 passenger elevators",
+   "verdict": "supported",
+   "evidence": "elevators Passenger: 4"
+  },
+  {
+   "claim": "The building has 1 freight elevator",
+   "verdict": "supported",
+   "evidence": "elevators Freight: 1"
+  },
+  {
+   "claim": "The building has 1 parking elevator",
+   "verdict": "supported",
+   "evidence": "elevators Parking: 1"
+  },
+  {
+   "claim": "The building has 11 stories",
+   "verdict": "supported",
+   "evidence": "stories: 11"
+  },
+  {
+   "claim": "Triton International Limited is on floor 7",
+   "verdict": "supported",
+   "evidence": "Listed in tenants_on_floor"
+  },
+  {
+   "claim": "Triton International Limited is in suite 705",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the data"
+  },
+  {
+   "claim": "Luxury Homes Realty is on floor 7",
+   "verdict": "supported",
+   "evidence": "Listed in tenants_on_floor"
+  },
+  {
+   "claim": "Luxury Homes Realty is in suite 710",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the data"
+  },
+  {
+   "claim": "Condon & Company, P.C. is on floor 7",
+   "verdict": "supported",
+   "evidence": "Listed in tenants_on_floor, 10 employees"
+  },
+  {
+   "claim": "Condon & Company, P.C. is in suite 725",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the data"
+  },
+  {
+   "claim": "Two more tenants are on the floor besides the three named",
+   "verdict": "supported",
+   "evidence": "5 tenants listed; Bunker Steel and Old Republic Title are the other two"
+  },
+  {
+   "claim": "About 21 people are on the floor",
+   "verdict": "supported",
+   "evidence": "Employees 5+10+1+5 = 21; Triton count is null"
+  },
+  {
+   "claim": "The 21 people are present in the daytime",
+   "verdict": "not_in_data",
+   "evidence": "Data gives employee counts only, no time-of-day occupancy"
+  },
+  {
+   "claim": "The building is steel frame",
+   "verdict": "supported",
+   "evidence": "construction: Steel"
+  },
+  {
+   "claim": "The building was built in 1984",
+   "verdict": "supported",
+   "evidence": "year_built: 1984"
+  },
+  {
+   "claim": "The building has sprinklers",
+   "verdict": "supported",
+   "evidence": "sprinklers: yes"
+  },
+  {
+   "claim": "The sprinkler system is wet",
+   "verdict": "not_in_data",
+   "evidence": "Sprinkler type is not given, only 'yes'"
+  },
+  {
+   "claim": "The machine room location is not known",
+   "verdict": "not_in_data",
+   "evidence": "No machine room information in the data"
+  },
+  {
+   "claim": "Elevator car numbers are not known",
+   "verdict": "not_in_data",
+   "evidence": "No car numbers in the data"
+  }
+ ],
+ "delivery": {
+  "score": 9,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "State severity in the first line: four trapped between floors, no injuries, car hot, one panicking. Cut the building details."
+ },
+ "feedback": [
+  "Your message never says what the caller reported: four people stuck between floors, nobody hurt, the car is getting hot, one person is panicking. Put that in the first line. The code check for these facts failed.",
+  "Suite numbers (705, 710, 725), the 'daytime' occupancy, and 'wet' sprinklers are not in the building data. Remove them or mark them unverified, because the crew could act on invented details.",
+  "You gave elevator counts and stories, which was the right priority. But you never asked for the building engineer or property manager to bring keys, and the tenant, construction and sprinkler detail adds noise."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 2.2,
+ "cost_usd": 0.1114,
+ "built": "2026-11-15 01:10"
+}

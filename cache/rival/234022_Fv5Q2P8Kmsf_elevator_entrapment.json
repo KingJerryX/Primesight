@@ -1,0 +1,161 @@
+{
+ "case": "234022_Fv5Q2P8Kmsf",
+ "incident": "elevator_entrapment",
+ "sent": "Elevator entrapment on the 6th floor, 363 Sam Houston Pky, Houston.",
+ "text": "PRIMESIGHT  |  ELEVATOR ENTRAPMENT  |  FLOOR 6\nNorthbelt - 363 Sam Houston Pky, Houston, TX\nELEVATORS: 7 passenger, 1 freight, 20 stories\nPROPERTY MGR: Realty.com 5559806802\nON FLOOR: Unknown tenant (ste 600); Dream Counseling Center (ste 605); Tax Services Of Houston LLC (ste 610) +3 more\nBUILDING: 20 stories, steel frame, built 1981, sprinklers: yes (wet)\nNOT KNOWN: machine room location, elevator car numbers\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 76,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 8
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "363 Sam Houston Pky (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 6"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: elevator entrapment"
+  },
+  {
+   "part": "needs",
+   "item": "how many trapped",
+   "ok": false,
+   "why": "from the call: four people in the car"
+  },
+  {
+   "part": "needs",
+   "item": "conditions",
+   "ok": false,
+   "why": "from the call: getting hot, one panicking, nobody hurt"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Building is Northbelt at 363 Sam Houston Pky, Houston, TX",
+   "verdict": "supported",
+   "evidence": "name Northbelt, address 363 Sam Houston Pky, Houston, TX"
+  },
+  {
+   "claim": "Building has 7 passenger elevators",
+   "verdict": "supported",
+   "evidence": "elevators Passenger: 7"
+  },
+  {
+   "claim": "Building has 1 freight elevator",
+   "verdict": "supported",
+   "evidence": "elevators Freight: 1"
+  },
+  {
+   "claim": "Building has 20 stories",
+   "verdict": "supported",
+   "evidence": "stories: 20"
+  },
+  {
+   "claim": "Property manager is Realty.com, phone 5559806802",
+   "verdict": "not_in_data",
+   "evidence": "contacts lists only 'Property manager'; no name or number"
+  },
+  {
+   "claim": "Unknown tenant is on floor 6",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Unknown tenant"
+  },
+  {
+   "claim": "Unknown tenant is in suite 600",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in tenant data"
+  },
+  {
+   "claim": "Dream Counseling Center is on floor 6",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Dream Counseling Center"
+  },
+  {
+   "claim": "Dream Counseling Center is in suite 605",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in tenant data"
+  },
+  {
+   "claim": "Tax Services Of Houston LLC is on floor 6",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Tax Services Of Houston LLC"
+  },
+  {
+   "claim": "Tax Services Of Houston LLC is in suite 610",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in tenant data"
+  },
+  {
+   "claim": "There are 3 more tenants on the floor beyond those listed",
+   "verdict": "supported",
+   "evidence": "6 tenants on floor; 3 named, so 3 more"
+  },
+  {
+   "claim": "Construction is steel frame",
+   "verdict": "supported",
+   "evidence": "construction: Steel"
+  },
+  {
+   "claim": "Built in 1981",
+   "verdict": "supported",
+   "evidence": "year_built: 1981"
+  },
+  {
+   "claim": "Building has sprinklers",
+   "verdict": "supported",
+   "evidence": "sprinklers: yes"
+  },
+  {
+   "claim": "Sprinkler system is wet type",
+   "verdict": "not_in_data",
+   "evidence": "Data says only 'yes'; no system type given"
+  },
+  {
+   "claim": "Machine room location is not known",
+   "verdict": "supported",
+   "evidence": "No machine room location in data"
+  },
+  {
+   "claim": "Elevator car numbers are not known",
+   "verdict": "supported",
+   "evidence": "No elevator car numbers in data"
+  }
+ ],
+ "delivery": {
+  "score": 8,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "State severity first: four people stuck between floors, alarm dead, car getting hot, nobody hurt. Cut the build year and the reply prompt."
+ },
+ "feedback": [
+  "Your message never says four people are stuck, the car is getting hot, one person is panicking, or that nobody is hurt. Put that right after the header, for example: '4 trapped between floors, alarm dead, car heating up, 1 panicking, no injuries'.",
+  "Several details aren't in the building data: the property manager's name and number (Realty.com 5559806802), the suite numbers (600/605/610) and the 'wet' sprinkler type. Send only what the data supports. Say 'property manager: no contact on file' instead of inventing a number.",
+  "Cut the build year and construction type. Add the floor where the car stopped, which is between floors after boarding at 6. Ask the property manager or engineer to bring the keys."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 2.0,
+ "cost_usd": 0.1122,
+ "built": "2026-11-15 01:07"
+}

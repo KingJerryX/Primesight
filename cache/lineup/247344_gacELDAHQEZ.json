@@ -1,0 +1,10 @@
+{
+ "case": "247344_gacELDAHQEZ",
+ "pid": 247344,
+ "decoys": [
+  248192,
+  248704
+ ],
+ "clue": "I'm outside a really tall office tower, and the top of it steps in like a smaller box sitting on a wider, flat base. It's pale gray, and there's a grassy park with palm trees along the street on one side and a little plaza with tables and umbrellas on the other.",
+ "model": "claude-sonnet-5-5"
+}

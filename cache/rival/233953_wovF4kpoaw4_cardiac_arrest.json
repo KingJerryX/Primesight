@@ -1,0 +1,116 @@
+{
+ "case": "233953_wovF4kpoaw4",
+ "incident": "cardiac_arrest",
+ "sent": "Cardiac arrest on the 5th floor, 808 Travis St, Houston.",
+ "text": "PRIMESIGHT  |  CARDIAC ARREST  |  FLOOR 5\nEsperson - 808 Travis St, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: Houston Symphony (ste 500)\nPROPERTY MGR: Cameron Management 5553362403\nNOT KNOWN: AED location, where the stretcher elevator is\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 78,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 10
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "808 Travis St (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 5"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: cardiac arrest"
+  },
+  {
+   "part": "needs",
+   "item": "not breathing",
+   "ok": false,
+   "why": "from the call: the caller says he is not breathing"
+  },
+  {
+   "part": "needs",
+   "item": "CPR",
+   "ok": false,
+   "why": "from the call: a coworker is doing CPR"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record (fits a stretcher; in tall buildings elevator access is where minutes go)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building is Esperson at 808 Travis St, Houston, TX",
+   "verdict": "supported",
+   "evidence": "name Esperson, address 808 Travis St, Houston, TX"
+  },
+  {
+   "claim": "The building has a freight elevator on record",
+   "verdict": "supported",
+   "evidence": "elevators: Freight 1"
+  },
+  {
+   "claim": "The freight car fits a stretcher",
+   "verdict": "not_in_data",
+   "evidence": "No elevator dimensions or capacity in data"
+  },
+  {
+   "claim": "Houston Symphony is on floor 5",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor: Houston Symphony"
+  },
+  {
+   "claim": "Houston Symphony is in suite 500",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in data"
+  },
+  {
+   "claim": "Cameron Management is the property manager",
+   "verdict": "not_in_data",
+   "evidence": "Contact listed only as 'Property manager'. Cameron Management appears as a floor 4 tenant."
+  },
+  {
+   "claim": "The property manager's phone number is 5553362403",
+   "verdict": "not_in_data",
+   "evidence": "No phone numbers in data"
+  },
+  {
+   "claim": "The AED location is not known",
+   "verdict": "not_in_data",
+   "evidence": "No AED information in data"
+  },
+  {
+   "claim": "The location of the stretcher elevator is not known",
+   "verdict": "not_in_data",
+   "evidence": "No elevator locations in data"
+  }
+ ],
+ "delivery": {
+  "score": 10,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "Add \"not breathing, CPR in progress\" to the first line; the crew needs severity before the elevator and property details."
+ },
+ "feedback": [
+  "Say how bad it is up front: the caller says he is not breathing and a coworker is doing CPR. Your message has neither, and the crew needs both first.",
+  "Don't state things the building data doesn't support. It has no stretcher fit, no suite 500, and no phone number. Cameron Management is a floor 4 tenant, not the property manager. Give only what's on record: a freight elevator, Houston Symphony on floor 5, and a property manager contact.",
+  "Say plainly that the AED location and the elevator location are unknown. The data has no AED or elevator location information, so don't present anything about them as fact."
+ ],
+ "suggestions_queued": 0,
+ "brief_s": 3.8,
+ "cost_usd": 0.0897,
+ "built": "2026-11-15 01:06"
+}

@@ -338,7 +338,7 @@ def grade(case, incident, call, message, gid=None):
     trace.log(gid, "code_checks", f"{sum(c['ok'] for c in items)} of {len(items)} passed; " +
               "; ".join(f"missing {c['item']}" for c in items if not c["ok"]))
     try:
-        r = team(key, incident, call[:400], message, [c["why"] for c in items if not c["ok"]], gid)
+        r = team(key, incident, call[:1500], message, [c["why"] for c in items if not c["ok"]], gid)
     except Exception as e:  # no key, model down: the code half still grades
         print(f"  grading team unavailable: {type(e).__name__}: {e}", file=sys.stderr)
         trace.log(gid, "error", f"grading team unavailable ({type(e).__name__}); code checks only")

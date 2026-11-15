@@ -1,0 +1,10 @@
+{
+ "case": "234022_Fv5Q2P8Kmsf",
+ "pid": 234022,
+ "decoys": [
+  234036,
+  234088
+ ],
+ "clue": "It's a tall office tower with rounded corners, and the top is kind of an L-shape that curves around. It's light-colored, and there's a big parking garage right beside it on one side and a small parking lot with trees out front.",
+ "model": "claude-sonnet-5-5"
+}

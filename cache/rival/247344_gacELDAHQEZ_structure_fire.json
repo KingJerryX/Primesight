@@ -1,0 +1,160 @@
+{
+ "case": "247344_gacELDAHQEZ",
+ "incident": "structure_fire",
+ "sent": "Structure fire on the 4th floor, 1801 Century Park, Los Angeles.",
+ "text": "PRIMESIGHT  |  WORKING STRUCTURE FIRE  |  FLOOR 4\nCentury Park East - 1801 Century Park , Los Angeles, CA\nPEOPLE: ~57 on floor 4, ~668 above on floors 5-25 (daytime headcount)\nBUILDING: 25 stories, steel frame, built 1972, sprinklers: yes\nHYDRANTS: H1 37 m N, H2 70 m W (approach map)\nWIND: from NE 4 mph, smoke drifts SW\nNOT KNOWN: stair locations, standpipe and FDC locations, sprinkler type\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 88,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 18,
+  "accuracy": 15,
+  "delivery": 10
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1801 Century Park  (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 4"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: working structure fire"
+  },
+  {
+   "part": "needs",
+   "item": "smoke showing",
+   "ok": true,
+   "why": "from the call: black smoke from the windows"
+  },
+  {
+   "part": "needs",
+   "item": "people inside",
+   "ok": false,
+   "why": "from the call: some people may still be up there"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": false,
+   "why": "freight elevator on record"
+  },
+  {
+   "part": "needs",
+   "item": "who is on the floor",
+   "ok": true,
+   "why": "who is on the floor (a headcount or the tenants): Structure Law Group, LLP, The Law Offices of Wiesman Pirian, Bruin Biometrics LLC, Simple House Films"
+  },
+  {
+   "part": "needs",
+   "item": "sprinklers",
+   "ok": true,
+   "why": "sprinklers: yes"
+  },
+  {
+   "part": "needs",
+   "item": "height",
+   "ok": true,
+   "why": "25 stories"
+  },
+  {
+   "part": "needs",
+   "item": "construction",
+   "ok": true,
+   "why": "construction: steel"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Century Park East is at 1801 Century Park, Los Angeles, CA",
+   "verdict": "supported",
+   "evidence": "Address on record: 1801 Century Park, Los Angeles, CA"
+  },
+  {
+   "claim": "About 57 people are on floor 4",
+   "verdict": "supported",
+   "evidence": "Floor 4 tenant employees: 10+7+8+10+22 = 57 (one tenant has no count)"
+  },
+  {
+   "claim": "About 668 people are above on floors 5-25",
+   "verdict": "not_in_data",
+   "evidence": "Only floor 4 tenants and four nearby tenants are listed. No headcount for floors 5-25."
+  },
+  {
+   "claim": "The building has 25 stories",
+   "verdict": "supported",
+   "evidence": "stories: 25"
+  },
+  {
+   "claim": "The building is steel frame",
+   "verdict": "supported",
+   "evidence": "construction: Steel"
+  },
+  {
+   "claim": "The building was built in 1972",
+   "verdict": "supported",
+   "evidence": "year_built: 1972"
+  },
+  {
+   "claim": "The building has sprinklers",
+   "verdict": "supported",
+   "evidence": "sprinklers: yes"
+  },
+  {
+   "claim": "Hydrant H1 is 37 m north",
+   "verdict": "supported",
+   "evidence": "hydrants: 37 m N"
+  },
+  {
+   "claim": "Hydrant H2 is 70 m west",
+   "verdict": "supported",
+   "evidence": "hydrants: 70 m W"
+  },
+  {
+   "claim": "Wind is from the NE at 4 mph and smoke drifts SW",
+   "verdict": "not_in_data",
+   "evidence": "No wind or weather data in the building record."
+  },
+  {
+   "claim": "Stair locations are not known",
+   "verdict": "not_in_data",
+   "evidence": "No stair locations given. Scan saw 4 exit signs, positions not stated."
+  },
+  {
+   "claim": "Standpipe and FDC locations are not known",
+   "verdict": "not_in_data",
+   "evidence": "No standpipe or FDC data in the record."
+  },
+  {
+   "claim": "Sprinkler type is not known",
+   "verdict": "not_in_data",
+   "evidence": "Only sprinklers: yes. No type given."
+  }
+ ],
+ "delivery": {
+  "score": 10,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "Add severity right after the header, such as \"black smoke showing from 4th-floor offices, occupants possibly still above\", and cut the wind and building-age details."
+ },
+ "feedback": [
+  "The ~668 people above floors 5-25 is not in the building data, and neither is the wind. Delete both, or mark them as unverified. A crew could stage or search based on made-up numbers.",
+  "The caller said people may still be up there, and the message doesn't say so. Add it, along with the black smoke visible from the 4th-floor windows. The freight elevator is on record and you left it out. Add it to the stairs and access line.",
+  "Put the caller's report first, then the building facts. Trim the wind and the build year and 'steel frame'. The playbook asks for stairs, standpipes, sprinklers, hydrants, staging and roof, so give those facts priority. Staging and roof are missing."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 3.0,
+ "cost_usd": 0.1136,
+ "built": "2026-11-15 01:09"
+}

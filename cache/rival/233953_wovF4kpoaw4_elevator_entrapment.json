@@ -1,0 +1,141 @@
+{
+ "case": "233953_wovF4kpoaw4",
+ "incident": "elevator_entrapment",
+ "sent": "Elevator entrapment on the 5th floor, 808 Travis St, Houston.",
+ "text": "PRIMESIGHT  |  ELEVATOR ENTRAPMENT  |  FLOOR 5\nEsperson - 808 Travis St, Houston, TX\nELEVATORS: 12 passenger, 1 freight, ? escalator, 27 stories\nPROPERTY MGR: Cameron Management 5553362403\nON FLOOR: Houston Symphony (ste 500)\nBUILDING: 27 stories, masonry frame, built 1941, sprinklers: yes\nNOT KNOWN: machine room location, elevator car numbers\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 77,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 9
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "808 Travis St (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 5"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: elevator entrapment"
+  },
+  {
+   "part": "needs",
+   "item": "how many trapped",
+   "ok": false,
+   "why": "from the call: four people in the car"
+  },
+  {
+   "part": "needs",
+   "item": "conditions",
+   "ok": false,
+   "why": "from the call: getting hot, one panicking, nobody hurt"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building is Esperson at 808 Travis St, Houston, TX",
+   "verdict": "supported",
+   "evidence": "name Esperson; address 808 Travis St, Houston, TX"
+  },
+  {
+   "claim": "The building has 12 passenger elevators",
+   "verdict": "supported",
+   "evidence": "elevators Passenger: 12"
+  },
+  {
+   "claim": "The building has 1 freight elevator",
+   "verdict": "supported",
+   "evidence": "elevators Freight: 1"
+  },
+  {
+   "claim": "The building has escalators, but the count is unknown",
+   "verdict": "supported",
+   "evidence": "Escalator: on record, count unknown"
+  },
+  {
+   "claim": "The building has 27 stories",
+   "verdict": "supported",
+   "evidence": "stories: 27"
+  },
+  {
+   "claim": "The property manager is Cameron Management",
+   "verdict": "not_in_data",
+   "evidence": "Contacts list only 'Property manager', with no name. Cameron Management is a floor 4 tenant."
+  },
+  {
+   "claim": "The property manager's phone number is 5553362403",
+   "verdict": "not_in_data",
+   "evidence": "No phone number in the data"
+  },
+  {
+   "claim": "Houston Symphony is on floor 5",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor: Houston Symphony"
+  },
+  {
+   "claim": "Houston Symphony is in suite 500",
+   "verdict": "not_in_data",
+   "evidence": "No suite number given for the tenant"
+  },
+  {
+   "claim": "The building has a masonry frame",
+   "verdict": "supported",
+   "evidence": "construction: Masonry"
+  },
+  {
+   "claim": "The building was built in 1941",
+   "verdict": "supported",
+   "evidence": "year_built: 1941"
+  },
+  {
+   "claim": "The building has sprinklers",
+   "verdict": "supported",
+   "evidence": "sprinklers: yes"
+  },
+  {
+   "claim": "The machine room location is not known",
+   "verdict": "not_in_data",
+   "evidence": "No machine room information in the data"
+  },
+  {
+   "claim": "The elevator car numbers are not known",
+   "verdict": "not_in_data",
+   "evidence": "No elevator car numbers in the data"
+  }
+ ],
+ "delivery": {
+  "score": 9,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "State severity in line one: four people trapped between floors, none hurt, one panicking, car getting hot. Cut building trivia."
+ },
+ "feedback": [
+  "Your message never says how many people are trapped or how they are doing. Lead with: 4 trapped between floors, none hurt, 1 panicking, car getting hot.",
+  "The property manager line is invented. The data lists no name or phone number, and Cameron Management is a floor 4 tenant. A crew calling that number would reach the wrong party. Also drop the made-up suite 500.",
+  "The stuck car's floor is wrong. 'FLOOR 5' is where they boarded, and the car is stopped between floors. Cut filler such as masonry, 1941 and sprinklers, and say the manager or engineer needs to bring keys."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 3.7,
+ "cost_usd": 0.126,
+ "built": "2026-11-15 01:06"
+}

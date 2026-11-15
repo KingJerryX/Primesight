@@ -1,0 +1,155 @@
+{
+ "case": "234022_Fv5Q2P8Kmsf",
+ "incident": "smoke",
+ "sent": "Smoke in building on the 6th floor, 363 Sam Houston Pky, Houston.",
+ "text": "PRIMESIGHT  |  SMOKE INVESTIGATION  |  FLOOR 6\nNorthbelt - 363 Sam Houston Pky, Houston, TX\nPEOPLE: ~0 on floor 6, ~156 above on floors 7-20 (daytime headcount)\nBUILDING: 20 stories, steel frame, built 1981, sprinklers: yes (wet)\nHYDRANTS: H1 137 m NE (approach map)\nWIND: from E 9 mph, smoke drifts W\nNOT KNOWN: stair locations, standpipe and FDC locations\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 84,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 14,
+  "accuracy": 15,
+  "delivery": 10
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "363 Sam Houston Pky (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 6"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: smoke investigation"
+  },
+  {
+   "part": "needs",
+   "item": "what it smells like",
+   "ok": false,
+   "why": "from the call: electrical burning smell, no flames"
+  },
+  {
+   "part": "needs",
+   "item": "people on the floor",
+   "ok": true,
+   "why": "from the call: a lot of people on the floor, no alarm"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": false,
+   "why": "freight elevator on record"
+  },
+  {
+   "part": "needs",
+   "item": "who is on the floor",
+   "ok": false,
+   "why": "who is on the floor (a headcount or the tenants): Tax Services Of Houston LLC, Dream Counseling Center, Crystal CoWorks, H5 Strategic Alliances"
+  },
+  {
+   "part": "needs",
+   "item": "sprinklers",
+   "ok": true,
+   "why": "sprinklers: yes"
+  },
+  {
+   "part": "needs",
+   "item": "height",
+   "ok": true,
+   "why": "20 stories"
+  },
+  {
+   "part": "needs",
+   "item": "construction",
+   "ok": true,
+   "why": "construction: steel"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Building is Northbelt at 363 Sam Houston Pky, Houston, TX",
+   "verdict": "supported",
+   "evidence": "Name Northbelt, address 363 Sam Houston Pky, Houston, TX"
+  },
+  {
+   "claim": "About 0 people on floor 6",
+   "verdict": "not_in_data",
+   "evidence": "Tenants are listed on floor 6, but all employee counts are null"
+  },
+  {
+   "claim": "About 156 people above on floors 7-20 (daytime headcount)",
+   "verdict": "not_in_data",
+   "evidence": "No headcount or tenant data for floors 7-20"
+  },
+  {
+   "claim": "Building has 20 stories",
+   "verdict": "supported",
+   "evidence": "stories: 20"
+  },
+  {
+   "claim": "Steel frame construction",
+   "verdict": "supported",
+   "evidence": "construction: Steel"
+  },
+  {
+   "claim": "Built in 1981",
+   "verdict": "supported",
+   "evidence": "year_built: 1981"
+  },
+  {
+   "claim": "Sprinklers: yes",
+   "verdict": "supported",
+   "evidence": "sprinklers: yes"
+  },
+  {
+   "claim": "Sprinkler system is wet type",
+   "verdict": "not_in_data",
+   "evidence": "Sprinklers are listed only as 'yes'. The type is not given."
+  },
+  {
+   "claim": "Hydrant H1 is 137 m to the NE",
+   "verdict": "supported",
+   "evidence": "hydrants: 137 m NE"
+  },
+  {
+   "claim": "Wind from E at 9 mph, smoke drifts W",
+   "verdict": "not_in_data",
+   "evidence": "No wind or weather data in the record"
+  },
+  {
+   "claim": "Stair locations not known",
+   "verdict": "supported",
+   "evidence": "No stair locations in data; only 4 exit signs seen in scan"
+  },
+  {
+   "claim": "Standpipe and FDC locations not known",
+   "verdict": "supported",
+   "evidence": "No standpipe or FDC locations in data"
+  }
+ ],
+ "delivery": {
+  "score": 10,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "State severity in line one, such as smoke thickening in the hallway with no flames seen, then list people at risk and access."
+ },
+ "feedback": [
+  "Floor 6 headcount (~0) and the ~156 above are not in the data. The floor 6 tenants are on record but have no employee counts, and nothing exists for floors 7-20. Name the tenants (Tax Services Of Houston LLC, Dream Counseling Center, Crystal CoWorks, H5 Strategic Alliances) and say the headcount is unknown. The caller says there are a lot of people on 6, so ~0 is dangerous.",
+  "Your message leaves out the call details: electrical burning smell, no flames, smoke thickening by the copy room, and no alarm sounding. State severity in line one, and mention the freight elevator on record.",
+  "Wind (E 9 mph) and 'wet' sprinklers are not in the data, so remove them. Sprinklers are known only as 'yes'. Your exits are also incomplete. The scan shows 4 exit signs, so report those and any pull stations seen on the floor instead of only 'stairs not known'."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 1.7,
+ "cost_usd": 0.1008,
+ "built": "2026-11-15 01:07"
+}

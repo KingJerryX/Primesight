@@ -1,0 +1,141 @@
+{
+ "case": "233899_jUnF84zghQk",
+ "incident": "elevator_entrapment",
+ "sent": "Elevator entrapment on the 36th floor, 1000 Louisiana St, Houston.",
+ "text": "PRIMESIGHT  |  ELEVATOR ENTRAPMENT  |  FLOOR 36\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nELEVATORS: ? passenger, ? freight, 71 stories\nPROPERTY MGR: CBRE 5556193343\nON FLOOR: CME Group, ~16 people (daytime)\nBUILDING: 71 stories, steel frame, built 1983, sprinklers: yes\nNOT KNOWN: machine room location, elevator car numbers\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 75,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 7
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1000 Louisiana St (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 36"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: elevator entrapment"
+  },
+  {
+   "part": "needs",
+   "item": "how many trapped",
+   "ok": false,
+   "why": "from the call: four people in the car"
+  },
+  {
+   "part": "needs",
+   "item": "conditions",
+   "ok": false,
+   "why": "from the call: getting hot, one panicking, nobody hurt"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building is Wells Fargo Plaza at 1000 Louisiana St, Houston, TX.",
+   "verdict": "supported",
+   "evidence": "name Wells Fargo Plaza; address 1000 Louisiana St, Houston, TX"
+  },
+  {
+   "claim": "The building has 71 stories.",
+   "verdict": "supported",
+   "evidence": "stories: 71"
+  },
+  {
+   "claim": "The building has passenger elevators, but the count is unknown.",
+   "verdict": "supported",
+   "evidence": "Passenger: on record, count unknown"
+  },
+  {
+   "claim": "The building has freight elevators, but the count is unknown.",
+   "verdict": "supported",
+   "evidence": "Freight: on record, count unknown"
+  },
+  {
+   "claim": "The property manager is CBRE.",
+   "verdict": "not_in_data",
+   "evidence": "Contacts list only 'Property manager'; no company named"
+  },
+  {
+   "claim": "The property manager's phone number is 5556193343.",
+   "verdict": "not_in_data",
+   "evidence": "No phone number in the data"
+  },
+  {
+   "claim": "CME Group is a tenant on floor 36.",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor: CME Group"
+  },
+  {
+   "claim": "About 16 people are on the floor.",
+   "verdict": "supported",
+   "evidence": "CME Group employees: 16"
+  },
+  {
+   "claim": "The 16 people are present in the daytime.",
+   "verdict": "not_in_data",
+   "evidence": "No occupancy timing data"
+  },
+  {
+   "claim": "The building has a steel frame.",
+   "verdict": "supported",
+   "evidence": "construction: Steel"
+  },
+  {
+   "claim": "The building was built in 1983.",
+   "verdict": "supported",
+   "evidence": "year_built: 1983"
+  },
+  {
+   "claim": "The building has sprinklers.",
+   "verdict": "supported",
+   "evidence": "sprinklers: yes"
+  },
+  {
+   "claim": "The machine room location is not known.",
+   "verdict": "not_in_data",
+   "evidence": "No machine room location in the data"
+  },
+  {
+   "claim": "The elevator car numbers are not known.",
+   "verdict": "not_in_data",
+   "evidence": "No elevator car numbers in the data"
+  }
+ ],
+ "delivery": {
+  "score": 7,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "State severity in line one: four trapped between floors, one panicking, heat rising, nobody hurt, alarm dead. Cut the filler such as the build year."
+ },
+ "feedback": [
+  "Your message never says how many people are trapped (4), that one is panicking, that it's getting hot, or that nobody is hurt. Put that in line one, e.g. '4 trapped between floors, 1 panicking, heat rising, no injuries, alarm dead'.",
+  "The CBRE name, the phone number 5556193343 and 'daytime' are not in the building data. The data lists only 'Property manager'. Don't give the crew contact details you can't verify. Say the contact is on record but the number is not.",
+  "Cut the filler (steel frame, 1983, sprinklers, CME Group headcount). It doesn't help a rescue. Replace it with what the crew needs: passenger and freight counts are unknown, so say so. Add that the building engineer or property manager should bring the keys."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 3.9,
+ "cost_usd": 0.106,
+ "built": "2026-11-15 01:08"
+}

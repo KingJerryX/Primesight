@@ -31,16 +31,17 @@ with sync_playwright() as p:
     page.click("nav a:has-text('Game')")
     page.wait_for_url("**/drill.html")
     page.click("#go")
-    page.wait_for_function("drill.round && document.querySelectorAll('#call li').length >= 3", timeout=20_000)
+    page.wait_for_function("drill.round && document.querySelectorAll('#call li').length >= 2", timeout=20_000)
     r = page.evaluate("drill.round")
     pid, cat = int(r["case"].split("_")[0]), r["incident"]["category"]
     print("round:", r["case"], r["incident"]["label"], "| screens", r["screens"])
     assert [t.inner_text().split("\n")[0] for t in page.locator("#tabs button").all()] and \
-        page.locator("#tabs button").count() == len(r["screens"]) + 1  # + Write dispatch
+        page.locator("#tabs button").count() == len(r["screens"]) + 2  # + Which building, Write dispatch
     assert "outside" not in r["screens"] and ("tenants" in r["screens"]) == (cat == "fire")
 
     # Locate: search the street, pick the right building, note its address
     street = page.evaluate(f"allB.then(l => l.find(x => x.pid === {pid}).address)")
+    page.locator("#tabs button[data-v='locate']").click()  # the round opens on Which building
     page.fill("#q", street.split(" ", 1)[1])
     page.click(f"[data-pick='{pid}']")
     page.wait_for_function(f"drill.building && drill.building.pid === {pid}")

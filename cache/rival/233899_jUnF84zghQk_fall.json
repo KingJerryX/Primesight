@@ -1,0 +1,121 @@
+{
+ "case": "233899_jUnF84zghQk",
+ "incident": "fall",
+ "sent": "Fall on the 36th floor, 1000 Louisiana St, Houston.",
+ "text": "PRIMESIGHT  |  FALL / INJURY  |  FLOOR 36\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: CME Group, ~16 people (daytime)\nPROPERTY MGR: CBRE 5556193343\nNOT KNOWN: AED location, where the stretcher elevator is\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 76,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 8
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1000 Louisiana St (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 36"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: fall / injury"
+  },
+  {
+   "part": "needs",
+   "item": "head injury",
+   "ok": false,
+   "why": "from the call: she hit her head"
+  },
+  {
+   "part": "needs",
+   "item": "confused, bleeding",
+   "ok": false,
+   "why": "from the call: she is confused and bleeding"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record (fits a stretcher; in tall buildings elevator access is where minutes go)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building is Wells Fargo Plaza at 1000 Louisiana St, Houston, TX.",
+   "verdict": "supported",
+   "evidence": "Name Wells Fargo Plaza, address 1000 Louisiana St, Houston, TX."
+  },
+  {
+   "claim": "A freight elevator is on record for the building.",
+   "verdict": "supported",
+   "evidence": "Freight: on record, count unknown."
+  },
+  {
+   "claim": "The freight car fits a stretcher.",
+   "verdict": "supported",
+   "evidence": "Crew notes: freight elevator on record for stretcher."
+  },
+  {
+   "claim": "CME Group is a tenant on floor 36.",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor: CME Group."
+  },
+  {
+   "claim": "About 16 people are on the floor.",
+   "verdict": "supported",
+   "evidence": "CME Group employees: 16."
+  },
+  {
+   "claim": "The 16 people are there in the daytime.",
+   "verdict": "not_in_data",
+   "evidence": "No occupancy time-of-day data."
+  },
+  {
+   "claim": "The property manager is CBRE.",
+   "verdict": "not_in_data",
+   "evidence": "Contacts list only \"Property manager\", with no company named."
+  },
+  {
+   "claim": "The property manager's phone number is 5556193343.",
+   "verdict": "not_in_data",
+   "evidence": "No phone number in contacts."
+  },
+  {
+   "claim": "The AED location is not known.",
+   "verdict": "supported",
+   "evidence": "Crew notes: AED not known. No AED data."
+  },
+  {
+   "claim": "The location of the stretcher elevator is not known.",
+   "verdict": "supported",
+   "evidence": "Freight elevator count unknown. No location data."
+  }
+ ],
+ "delivery": {
+  "score": 8,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "Add severity right after the header, e.g. \"fall from ladder, head injury, confused, bleeding, can't get up, woman in 60s.\""
+ },
+ "feedback": [
+  "Say how hurt the patient is. Your message leaves out that she hit her head, is confused and is bleeding. Put \"fall from ladder, head injury, confused, bleeding, can't get up, woman in 60s\" right after the header.",
+  "Remove details the building data doesn't back up. There is no CBRE name or phone number 5556193343 on record, and nothing says \"daytime\". A wrong contact number could cost the crew time.",
+  "Your elevator line is right: the freight car fits a stretcher and you flagged that its location is unknown. Also add the suite, or say it isn't known, plus stairs as a backup if the elevator isn't available."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 4.7,
+ "cost_usd": 0.098,
+ "built": "2026-11-15 01:08"
+}

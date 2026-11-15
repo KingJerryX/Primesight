@@ -1,0 +1,116 @@
+{
+ "case": "233953_wovF4kpoaw4",
+ "incident": "fall",
+ "sent": "Fall on the 5th floor, 808 Travis St, Houston.",
+ "text": "PRIMESIGHT  |  FALL / INJURY  |  FLOOR 5\nEsperson - 808 Travis St, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: Houston Symphony (ste 500)\nPROPERTY MGR: Cameron Management 5553362403\nNOT KNOWN: AED location, where the stretcher elevator is\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 76,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 8
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "808 Travis St (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 5"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: fall / injury"
+  },
+  {
+   "part": "needs",
+   "item": "head injury",
+   "ok": false,
+   "why": "from the call: she hit her head"
+  },
+  {
+   "part": "needs",
+   "item": "confused, bleeding",
+   "ok": false,
+   "why": "from the call: she is confused and bleeding"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record (fits a stretcher; in tall buildings elevator access is where minutes go)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building is the Esperson at 808 Travis St, Houston, TX.",
+   "verdict": "supported",
+   "evidence": "Name Esperson, address 808 Travis St, Houston, TX."
+  },
+  {
+   "claim": "The building has a freight elevator on record.",
+   "verdict": "supported",
+   "evidence": "Elevators: Freight 1."
+  },
+  {
+   "claim": "The freight car fits a stretcher.",
+   "verdict": "not_in_data",
+   "evidence": "No car dimensions or stretcher capacity in the data."
+  },
+  {
+   "claim": "Houston Symphony is on floor 5.",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor: Houston Symphony."
+  },
+  {
+   "claim": "Houston Symphony is in suite 500.",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the data."
+  },
+  {
+   "claim": "Cameron Management is the property manager.",
+   "verdict": "not_in_data",
+   "evidence": "Contacts list only 'Property manager', no name. Cameron is a floor 4 tenant."
+  },
+  {
+   "claim": "The property manager's phone number is 5553362403.",
+   "verdict": "not_in_data",
+   "evidence": "No phone numbers in the data."
+  },
+  {
+   "claim": "The AED location is not known.",
+   "verdict": "not_in_data",
+   "evidence": "No AED information in the data."
+  },
+  {
+   "claim": "The location of the stretcher elevator is not known.",
+   "verdict": "not_in_data",
+   "evidence": "No elevator locations in the data."
+  }
+ ],
+ "delivery": {
+  "score": 8,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "Add severity on the first line, such as: woman in her 60s, head injury, confused, bleeding, can't stand."
+ },
+ "feedback": [
+  "Say what happened. Your message leaves out the head strike, the confusion and the bleeding. Lead with something like: woman in her 60s fell from a ladder, head injury, confused, bleeding, can't get up.",
+  "Don't send details the building data doesn't support. The suite number (500), the Cameron Management name and phone number, and the claim that the freight car fits a stretcher are not in the data. Cameron is a floor 4 tenant, not the property manager. A wrong number or name could send the crew the wrong way.",
+  "Check the floor against the elevator and suite facts. The data shows a freight elevator and Houston Symphony on floor 5, so use only those. Say plainly that the suite number and stretcher fit are unconfirmed. The caller also said she is by the elevators, so include that."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 3.9,
+ "cost_usd": 0.1067,
+ "built": "2026-11-15 01:06"
+}

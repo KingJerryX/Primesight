@@ -1,0 +1,160 @@
+{
+ "case": "233953_wovF4kpoaw4",
+ "incident": "smoke",
+ "sent": "Smoke in building on the 5th floor, 808 Travis St, Houston.",
+ "text": "PRIMESIGHT  |  SMOKE INVESTIGATION  |  FLOOR 5\nEsperson - 808 Travis St, Houston, TX\nPEOPLE: ~0 on floor 5, ~348 above on floors 6-27 (daytime headcount)\nBUILDING: 27 stories, masonry frame, built 1941, sprinklers: yes\nHYDRANTS: H1 46 m E, H2 46 m S (approach map)\nWIND: from E 10 mph, smoke drifts W\nNOT KNOWN: stair locations, standpipe and FDC locations, sprinkler type\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 87,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 18,
+  "accuracy": 15,
+  "delivery": 9
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "808 Travis St (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 5"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: smoke investigation"
+  },
+  {
+   "part": "needs",
+   "item": "what it smells like",
+   "ok": false,
+   "why": "from the call: electrical burning smell, no flames"
+  },
+  {
+   "part": "needs",
+   "item": "people on the floor",
+   "ok": true,
+   "why": "from the call: a lot of people on the floor, no alarm"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": false,
+   "why": "freight elevator on record"
+  },
+  {
+   "part": "needs",
+   "item": "who is on the floor",
+   "ok": true,
+   "why": "who is on the floor (a headcount or the tenants): Houston Symphony"
+  },
+  {
+   "part": "needs",
+   "item": "sprinklers",
+   "ok": true,
+   "why": "sprinklers: yes"
+  },
+  {
+   "part": "needs",
+   "item": "height",
+   "ok": true,
+   "why": "27 stories"
+  },
+  {
+   "part": "needs",
+   "item": "construction",
+   "ok": true,
+   "why": "construction: masonry"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Building is Esperson at 808 Travis St, Houston, TX",
+   "verdict": "supported",
+   "evidence": "Name Esperson, address 808 Travis St, Houston, TX"
+  },
+  {
+   "claim": "About 0 people on floor 5",
+   "verdict": "not_in_data",
+   "evidence": "Houston Symphony on floor 5, employees null; no headcount given"
+  },
+  {
+   "claim": "About 348 people on floors 6-27 (daytime headcount)",
+   "verdict": "not_in_data",
+   "evidence": "No headcount data for floors 6-27; only floors 3-5 tenants listed"
+  },
+  {
+   "claim": "Building has 27 stories",
+   "verdict": "supported",
+   "evidence": "stories: 27"
+  },
+  {
+   "claim": "Construction is masonry",
+   "verdict": "supported",
+   "evidence": "construction: Masonry"
+  },
+  {
+   "claim": "Built in 1941",
+   "verdict": "supported",
+   "evidence": "year_built: 1941"
+  },
+  {
+   "claim": "Building has sprinklers",
+   "verdict": "supported",
+   "evidence": "sprinklers: yes"
+  },
+  {
+   "claim": "Hydrant H1 is 46 m east",
+   "verdict": "supported",
+   "evidence": "Hydrant 46 m E"
+  },
+  {
+   "claim": "Hydrant H2 is 46 m south",
+   "verdict": "supported",
+   "evidence": "Hydrant 46 m S"
+  },
+  {
+   "claim": "Wind from E at 10 mph, smoke drifts W",
+   "verdict": "not_in_data",
+   "evidence": "No wind or weather data in record"
+  },
+  {
+   "claim": "Stair locations are not known",
+   "verdict": "supported",
+   "evidence": "No stair locations in data; only 4 exit signs seen"
+  },
+  {
+   "claim": "Standpipe and FDC locations are not known",
+   "verdict": "supported",
+   "evidence": "No standpipe or FDC data in record"
+  },
+  {
+   "claim": "Sprinkler type is not known",
+   "verdict": "supported",
+   "evidence": "Sprinklers only 'yes'; no type given"
+  }
+ ],
+ "delivery": {
+  "score": 9,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "State severity plainly, e.g. 'electrical-smelling smoke thickening in hallway, no flames, alarm not sounding', and drop the 'Reply MORE' line."
+ },
+ "feedback": [
+  "Four numbers have no source in the building record: ~0 people on floor 5, ~348 above, and the E 10 mph wind with W drift. Floor 5 has a tenant, the Houston Symphony, and the call says 'a lot of us' are there. Don't invent a headcount. Say occupancy is unknown and that the caller reports many people on 5.",
+  "Say what the call said: electrical-burning smell, smoke thickening near the copy room, no flames, and the alarm not sounding. Your message never mentions the smoke type or the silent alarm, and it leaves out that the caller is asking whether to evacuate.",
+  "Two things the record has are missing: exits seen on the floor (4 exit signs) and the freight elevator on record. Pull stations aren't in the data, so list them as unknown. Cut the 'Reply MORE' line."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 3.4,
+ "cost_usd": 0.1129,
+ "built": "2026-11-15 01:07"
+}

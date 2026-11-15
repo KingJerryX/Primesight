@@ -24,6 +24,7 @@ INCIDENTS = {"cardiac_arrest": ("Cardiac arrest", "medical"), "fall": ("Fall", "
 WHERE = {233953: "the Esperson building, on Travis downtown", 234022: "Northbelt, the office building on Sam Houston Parkway",
          236914: "the office building at 1225 on the North Loop, by the freeway", 233899: "Wells Fargo Plaza, Louisiana Street",
          247344: "Century Park East, in Century City"}
+FLOOR = {233953: 5, 234022: 6, 236914: 7, 233899: 36, 247344: 4}  # the SAM 3-scanned floor of each FLOORS scan
 WORDS = {4: "fourth", 5: "fifth", 6: "sixth", 7: "seventh", 36: "thirty-sixth"}
 # The caller's lines, as they come in. {where} and {floor} are filled per building. The 911 call-taker's questions are left
 # out: the player hears the answers. Some lines matter (breathing, CPR, people trapped), some are just panic.
@@ -53,7 +54,7 @@ def start(avoid=None):
     """A random building floor and emergency. avoid: the case just played, which then comes last."""
     order = sorted(random.sample(FLOORS, len(FLOORS)), key=lambda c: f"{c[0]}_{c[1]}" == avoid)
     pid, mid = order[0]
-    floor = {233953: 5, 234022: 6, 236914: 7, 233899: 36, 247344: 4}[pid]  # the SAM 3-scanned floor of each FLOORS scan
+    floor = FLOOR[pid]
     iid = random.choice(list(INCIDENTS))
     label, cat = INCIDENTS[iid]
     words = WORDS.get(floor, f"{floor}th")

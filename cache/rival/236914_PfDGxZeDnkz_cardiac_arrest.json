@@ -1,0 +1,141 @@
+{
+ "case": "236914_PfDGxZeDnkz",
+ "incident": "cardiac_arrest",
+ "sent": "Cardiac arrest on the 7th floor, 1225 Loop Fwy, Houston.",
+ "text": "PRIMESIGHT  |  CARDIAC ARREST  |  FLOOR 7\n1225 Loop Fwy, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: Triton International Limited (ste 705); Luxury Homes Realty (ste 710); Condon & Company, P.C. (ste 725) +2 more, ~21 people (daytime)\nNOT KNOWN: AED location, where the stretcher elevator is\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 76,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 8
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1225 Loop Fwy (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 7"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: cardiac arrest"
+  },
+  {
+   "part": "needs",
+   "item": "not breathing",
+   "ok": false,
+   "why": "from the call: the caller says he is not breathing"
+  },
+  {
+   "part": "needs",
+   "item": "CPR",
+   "ok": false,
+   "why": "from the call: a coworker is doing CPR"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record (fits a stretcher; in tall buildings elevator access is where minutes go)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building is at 1225 Loop Fwy, Houston, TX",
+   "verdict": "supported",
+   "evidence": "Address: 1225 Loop Fwy, Houston, TX"
+  },
+  {
+   "claim": "The building has a freight elevator on record",
+   "verdict": "supported",
+   "evidence": "elevators: Freight 1"
+  },
+  {
+   "claim": "The freight car fits a stretcher",
+   "verdict": "not_in_data",
+   "evidence": "No elevator dimensions or capacity in the data"
+  },
+  {
+   "claim": "Triton International Limited is on floor 7",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Triton International Limited"
+  },
+  {
+   "claim": "Triton International Limited is in suite 705",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in tenant records"
+  },
+  {
+   "claim": "Luxury Homes Realty is on floor 7",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Luxury Homes Realty, 1 employee"
+  },
+  {
+   "claim": "Luxury Homes Realty is in suite 710",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in tenant records"
+  },
+  {
+   "claim": "Condon & Company, P.C. is on floor 7",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Condon & Company, P.C., 10 employees"
+  },
+  {
+   "claim": "Condon & Company, P.C. is in suite 725",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in tenant records"
+  },
+  {
+   "claim": "Two more tenants are on the floor beyond the three named",
+   "verdict": "supported",
+   "evidence": "5 tenants listed; Bunker Steel and Old Republic Title are the other two"
+  },
+  {
+   "claim": "About 21 people are on the floor",
+   "verdict": "supported",
+   "evidence": "Employees 5+10+1+5=21; Triton count is null"
+  },
+  {
+   "claim": "The 21 people are present in the daytime",
+   "verdict": "not_in_data",
+   "evidence": "No occupancy schedule in the data"
+  },
+  {
+   "claim": "The AED location is not known",
+   "verdict": "not_in_data",
+   "evidence": "No AED information in data; crew_notes empty"
+  },
+  {
+   "claim": "The location of the stretcher elevator is not known",
+   "verdict": "not_in_data",
+   "evidence": "No elevator locations in the data"
+  }
+ ],
+ "delivery": {
+  "score": 8,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "Add severity right after the header, e.g. 'not breathing, CPR in progress', and cut the suite list and the reply prompt."
+ },
+ "feedback": [
+  "Say how bad it is: the patient is not breathing and a coworker is doing CPR. Both failed code checks, and the crew needs this before anything else.",
+  "Don't state things the building data doesn't support. The suite numbers (705, 710, 725) and 'fits a stretcher' aren't in the data, so remove them or mark them unconfirmed. Crews could go to the wrong door or plan the wrong equipment.",
+  "Say who meets the crew, because the message leaves that out. Cut the long tenant list and the 'Reply MORE' line so the key facts are easy to read."
+ ],
+ "suggestions_queued": 0,
+ "brief_s": 2.2,
+ "cost_usd": 0.1003,
+ "built": "2026-11-15 01:07"
+}

@@ -1,0 +1,10 @@
+{
+ "case": "236914_PfDGxZeDnkz",
+ "pid": 236914,
+ "decoys": [
+  237089,
+  235798
+ ],
+ "clue": "I'm outside a tall office building, about eleven floors, with a tan flat top that's notched in the middle like a wide V. It's got a big dark parking garage right behind it, a row of parking spaces out front, and a few trees on the right side.",
+ "model": "claude-sonnet-5-5"
+}

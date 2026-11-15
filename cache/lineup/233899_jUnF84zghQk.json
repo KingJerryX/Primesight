@@ -1,0 +1,10 @@
+{
+ "case": "233899_jUnF84zghQk",
+ "pid": 233899,
+ "decoys": [
+  233953,
+  234022
+ ],
+ "clue": "It's a really tall glass tower, like seventy floors, and the top is rounded on one side like a half circle. It's right in the middle of downtown with big office towers all around it and wide streets on every side, no parking lot or trees next to it.",
+ "model": "claude-sonnet-5-5"
+}

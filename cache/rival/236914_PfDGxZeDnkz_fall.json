@@ -1,0 +1,141 @@
+{
+ "case": "236914_PfDGxZeDnkz",
+ "incident": "fall",
+ "sent": "Fall on the 7th floor, 1225 Loop Fwy, Houston.",
+ "text": "PRIMESIGHT  |  FALL / INJURY  |  FLOOR 7\n1225 Loop Fwy, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: Triton International Limited (ste 705); Luxury Homes Realty (ste 710); Condon & Company, P.C. (ste 725) +2 more, ~21 people (daytime)\nNOT KNOWN: AED location, where the stretcher elevator is\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 77,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 9
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1225 Loop Fwy (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 7"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: fall / injury"
+  },
+  {
+   "part": "needs",
+   "item": "head injury",
+   "ok": false,
+   "why": "from the call: she hit her head"
+  },
+  {
+   "part": "needs",
+   "item": "confused, bleeding",
+   "ok": false,
+   "why": "from the call: she is confused and bleeding"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record (fits a stretcher; in tall buildings elevator access is where minutes go)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building is at 1225 Loop Fwy, Houston, TX",
+   "verdict": "supported",
+   "evidence": "Address: 1225 Loop Fwy, Houston, TX"
+  },
+  {
+   "claim": "The building has a freight elevator",
+   "verdict": "supported",
+   "evidence": "elevators: Freight: 1"
+  },
+  {
+   "claim": "The freight car fits a stretcher",
+   "verdict": "not_in_data",
+   "evidence": "No car dimensions or stretcher capacity in the data"
+  },
+  {
+   "claim": "Triton International Limited is on floor 7",
+   "verdict": "supported",
+   "evidence": "Listed in tenants_on_floor"
+  },
+  {
+   "claim": "Triton International Limited is in suite 705",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the data"
+  },
+  {
+   "claim": "Luxury Homes Realty is on floor 7",
+   "verdict": "supported",
+   "evidence": "Listed in tenants_on_floor, 1 employee"
+  },
+  {
+   "claim": "Luxury Homes Realty is in suite 710",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the data"
+  },
+  {
+   "claim": "Condon & Company, P.C. is on floor 7",
+   "verdict": "supported",
+   "evidence": "Listed in tenants_on_floor, 10 employees"
+  },
+  {
+   "claim": "Condon & Company, P.C. is in suite 725",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the data"
+  },
+  {
+   "claim": "Two more tenants are on the floor besides the three named",
+   "verdict": "supported",
+   "evidence": "5 tenants listed; Bunker Steel and Old Republic Title are the other two"
+  },
+  {
+   "claim": "About 21 people are on the floor",
+   "verdict": "supported",
+   "evidence": "Employees 5+10+1+5=21; Triton's count is null"
+  },
+  {
+   "claim": "The 21-person figure applies to daytime",
+   "verdict": "not_in_data",
+   "evidence": "Data gives employee counts only, with no time-of-day information"
+  },
+  {
+   "claim": "The AED location is not known",
+   "verdict": "not_in_data",
+   "evidence": "No AED information in the data"
+  },
+  {
+   "claim": "The location of the stretcher elevator is not known",
+   "verdict": "not_in_data",
+   "evidence": "No elevator locations in the data"
+  }
+ ],
+ "delivery": {
+  "score": 9,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "State severity in the first line, e.g. 'fall, head injury, confused, bleeding, can't get up', before listing suites and elevator details."
+ },
+ "feedback": [
+  "Say how bad it is first. Your message never mentions the head injury, the confusion or the bleeding, which are the reasons the crew needs to hurry. Open with something like 'fall from ladder, head strike, confused, bleeding, can't get up'.",
+  "Don't present unsupported details as facts. The data has no suite numbers (705, 710, 725), no stretcher capacity for the freight car, and no daytime headcount. Cut them or label them unverified. Suite numbers could send the crew to the wrong door.",
+  "Use the caller's location: she is on the 7th floor by the elevators. Say the freight elevator is the only elevator on record, and say there is no stairs info, instead of listing tenants that don't help the crew find her."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 2.0,
+ "cost_usd": 0.1132,
+ "built": "2026-11-15 01:07"
+}

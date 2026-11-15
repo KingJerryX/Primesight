@@ -1,0 +1,160 @@
+{
+ "case": "236914_PfDGxZeDnkz",
+ "incident": "smoke",
+ "sent": "Smoke in building on the 7th floor, 1225 Loop Fwy, Houston.",
+ "text": "PRIMESIGHT  |  SMOKE INVESTIGATION  |  FLOOR 7\n1225 Loop Fwy, Houston, TX\nPEOPLE: ~21 on floor 7, ~119 above on floors 8-11 (daytime headcount)\nBUILDING: 11 stories, steel frame, built 1984, sprinklers: yes (wet)\nHYDRANTS: H1 68 m N (approach map)\nWIND: from E 8 mph, smoke drifts W\nNOT KNOWN: stair locations, standpipe and FDC locations\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 80,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 14,
+  "accuracy": 15,
+  "delivery": 6
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1225 Loop Fwy (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 7"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: smoke investigation"
+  },
+  {
+   "part": "needs",
+   "item": "what it smells like",
+   "ok": false,
+   "why": "from the call: electrical burning smell, no flames"
+  },
+  {
+   "part": "needs",
+   "item": "people on the floor",
+   "ok": true,
+   "why": "from the call: a lot of people on the floor, no alarm"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": false,
+   "why": "freight elevator on record"
+  },
+  {
+   "part": "needs",
+   "item": "who is on the floor",
+   "ok": false,
+   "why": "who is on the floor (a headcount or the tenants): Bunker Steel Corporation, Condon & Company, P.C., Luxury Homes Realty, Triton International Limited"
+  },
+  {
+   "part": "needs",
+   "item": "sprinklers",
+   "ok": true,
+   "why": "sprinklers: yes"
+  },
+  {
+   "part": "needs",
+   "item": "height",
+   "ok": true,
+   "why": "11 stories"
+  },
+  {
+   "part": "needs",
+   "item": "construction",
+   "ok": true,
+   "why": "construction: steel"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Address is 1225 Loop Fwy, Houston, TX",
+   "verdict": "supported",
+   "evidence": "Address: 1225 Loop Fwy, Houston, TX"
+  },
+  {
+   "claim": "About 21 people on floor 7",
+   "verdict": "supported",
+   "evidence": "Tenant employees 5+10+1+5 = 21; Triton count is null"
+  },
+  {
+   "claim": "About 119 people above on floors 8-11",
+   "verdict": "not_in_data",
+   "evidence": "No tenant or headcount data for floors 8-11"
+  },
+  {
+   "claim": "Headcount is a daytime figure",
+   "verdict": "not_in_data",
+   "evidence": "Employee counts have no time-of-day basis"
+  },
+  {
+   "claim": "Building has 11 stories",
+   "verdict": "supported",
+   "evidence": "stories: 11"
+  },
+  {
+   "claim": "Steel frame construction",
+   "verdict": "supported",
+   "evidence": "construction: Steel"
+  },
+  {
+   "claim": "Built in 1984",
+   "verdict": "supported",
+   "evidence": "year_built: 1984"
+  },
+  {
+   "claim": "Building has sprinklers",
+   "verdict": "supported",
+   "evidence": "sprinklers: yes"
+  },
+  {
+   "claim": "Sprinkler system is wet type",
+   "verdict": "not_in_data",
+   "evidence": "Sprinkler type is not given, only 'yes'"
+  },
+  {
+   "claim": "Hydrant H1 is 68 m north",
+   "verdict": "supported",
+   "evidence": "hydrants: 68 m N"
+  },
+  {
+   "claim": "Wind is from the east at 8 mph, smoke drifts W",
+   "verdict": "not_in_data",
+   "evidence": "No wind or weather data"
+  },
+  {
+   "claim": "Stair locations are not known",
+   "verdict": "not_in_data",
+   "evidence": "No stair locations. Scan shows only 3 exit signs."
+  },
+  {
+   "claim": "Standpipe and FDC locations are not known",
+   "verdict": "not_in_data",
+   "evidence": "No standpipe or FDC data in the record"
+  }
+ ],
+ "delivery": {
+  "score": 6,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "State severity in the first line (e.g. 'electrical smoke thickening in hallway, alarm not sounding'), then trim wind, build year and filler."
+ },
+ "feedback": [
+  "Say what the caller reported: electrical burning smell, smoke thickening near the copy room, no flames seen, alarm not sounding. The crew needs this first, and your message leaves it out.",
+  "Remove the details that aren't in the building record: the 119 people above, the wind and smoke drift, and 'wet' sprinklers. Stating invented facts as real can mislead the crew. Give only what the data supports, such as sprinklers: yes.",
+  "Add what the crew needs on floor 7. Name the tenants (Bunker Steel, Condon & Company, Luxury Homes Realty, Triton International) and note the freight elevator on record. Also give the exit signs the scan shows and the pull stations. Don't say 'NOT KNOWN' about exits when the scan shows 3 exit signs."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 2.2,
+ "cost_usd": 0.1123,
+ "built": "2026-11-15 01:08"
+}

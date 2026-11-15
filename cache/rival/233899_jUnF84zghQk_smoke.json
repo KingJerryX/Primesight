@@ -1,0 +1,160 @@
+{
+ "case": "233899_jUnF84zghQk",
+ "incident": "smoke",
+ "sent": "Smoke in building on the 36th floor, 1000 Louisiana St, Houston.",
+ "text": "PRIMESIGHT  |  SMOKE INVESTIGATION  |  FLOOR 36\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nPEOPLE: ~16 on floor 36, ~1994 above on floors 37-71 (daytime headcount)\nBUILDING: 71 stories, steel frame, built 1983, sprinklers: yes\nHYDRANTS: H1 61 m N, H2 62 m NE (approach map)\nWIND: from E 10 mph, smoke drifts W\nNOT KNOWN: stair locations, standpipe and FDC locations, sprinkler type\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 83,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 14,
+  "accuracy": 15,
+  "delivery": 9
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1000 Louisiana St (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 36"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: smoke investigation"
+  },
+  {
+   "part": "needs",
+   "item": "what it smells like",
+   "ok": false,
+   "why": "from the call: electrical burning smell, no flames"
+  },
+  {
+   "part": "needs",
+   "item": "people on the floor",
+   "ok": true,
+   "why": "from the call: a lot of people on the floor, no alarm"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": false,
+   "why": "freight elevator on record"
+  },
+  {
+   "part": "needs",
+   "item": "who is on the floor",
+   "ok": false,
+   "why": "who is on the floor (a headcount or the tenants): CME Group"
+  },
+  {
+   "part": "needs",
+   "item": "sprinklers",
+   "ok": true,
+   "why": "sprinklers: yes"
+  },
+  {
+   "part": "needs",
+   "item": "height",
+   "ok": true,
+   "why": "71 stories"
+  },
+  {
+   "part": "needs",
+   "item": "construction",
+   "ok": true,
+   "why": "construction: steel"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building is Wells Fargo Plaza at 1000 Louisiana St, Houston, TX",
+   "verdict": "supported",
+   "evidence": "Name and address match the record."
+  },
+  {
+   "claim": "About 16 people are on floor 36",
+   "verdict": "supported",
+   "evidence": "CME Group, 16 employees on floor 36."
+  },
+  {
+   "claim": "About 1994 people are above on floors 37-71 (daytime headcount)",
+   "verdict": "not_in_data",
+   "evidence": "Only floor 38 Morgan Lewis is listed. An older note says ~2441 above floor 30."
+  },
+  {
+   "claim": "The building has 71 stories",
+   "verdict": "supported",
+   "evidence": "stories: 71"
+  },
+  {
+   "claim": "The building has a steel frame",
+   "verdict": "supported",
+   "evidence": "construction: Steel"
+  },
+  {
+   "claim": "The building was built in 1983",
+   "verdict": "supported",
+   "evidence": "year_built: 1983"
+  },
+  {
+   "claim": "The building has sprinklers",
+   "verdict": "supported",
+   "evidence": "sprinklers: yes"
+  },
+  {
+   "claim": "Hydrant H1 is 61 m north",
+   "verdict": "supported",
+   "evidence": "Hydrant 61 m N"
+  },
+  {
+   "claim": "Hydrant H2 is 62 m northeast",
+   "verdict": "supported",
+   "evidence": "Hydrant 62 m NE"
+  },
+  {
+   "claim": "The wind is from the east at 10 mph and smoke drifts west",
+   "verdict": "not_in_data",
+   "evidence": "No wind or weather data in the record."
+  },
+  {
+   "claim": "Stair locations are not known",
+   "verdict": "supported",
+   "evidence": "Crew notes: stair locations not known."
+  },
+  {
+   "claim": "Standpipe and FDC locations are not known",
+   "verdict": "not_in_data",
+   "evidence": "No standpipe or FDC information in the record."
+  },
+  {
+   "claim": "Sprinkler type is not known",
+   "verdict": "supported",
+   "evidence": "Crew notes: sprinkler type not known. The record gives only sprinklers: yes."
+  }
+ ],
+ "delivery": {
+  "score": 9,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "State severity in line one, e.g. \"thickening electrical smoke in hallway, no flames seen, alarm silent,\" before the building and hydrant details."
+ },
+ "feedback": [
+  "Say what the caller reported at the top: electrical burning smell, smoke thickening by the copy room, no flames, alarm not sounding. Your message never says this, so the crew doesn't know how serious it is.",
+  "Two numbers aren't in the building record: ~1994 people above (the record has only a ~2441 note for above floor 30) and the wind from E at 10 mph. Don't send figures you can't back up. Also, the standpipe/FDC \"not known\" line has nothing behind it in the data.",
+  "You left out the freight elevator on record, and you didn't name CME Group as the tenant on floor 36. You also gave no exits or pull stations, which this call type needs first. Hydrant distances don't make up for that."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 3.4,
+ "cost_usd": 0.1156,
+ "built": "2026-11-15 01:08"
+}

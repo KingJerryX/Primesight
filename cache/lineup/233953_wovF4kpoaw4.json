@@ -1,0 +1,10 @@
+{
+ "case": "233953_wovF4kpoaw4",
+ "pid": 233953,
+ "decoys": [
+  234022,
+  234036
+ ],
+ "clue": "It's a really tall old stone-looking building, light tan color, with a round tower-like top that steps back near the roof. There's an open parking lot right beside it, and the building wraps around that lot in an L shape.",
+ "model": "claude-sonnet-5-5"
+}

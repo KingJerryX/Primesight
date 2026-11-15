@@ -1,0 +1,146 @@
+{
+ "case": "247344_gacELDAHQEZ",
+ "incident": "breathing",
+ "sent": "Breathing problem on the 4th floor, 1801 Century Park, Los Angeles.",
+ "text": "PRIMESIGHT  |  DIFFICULTY BREATHING / ALLERGIC REACTION  |  FLOOR 4\nCentury Park East - 1801 Century Park , Los Angeles, CA\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: Bluefox Entertainment (ste 450); Bruin Biometrics LLC (ste 460); The Law Offices of Wiesman Pirian (ste 470) +3 more, ~57 people (daytime)\nPROPERTY MGR: Douglas Emmett - Century Park Plaza 5550856585\nNOT KNOWN: AED location, where the stretcher elevator is\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 76,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 8
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1801 Century Park  (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 4"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: difficulty breathing / allergic reaction"
+  },
+  {
+   "part": "needs",
+   "item": "chest",
+   "ok": false,
+   "why": "from the call: his chest is tight"
+  },
+  {
+   "part": "needs",
+   "item": "how bad",
+   "ok": false,
+   "why": "from the call: grey, sweating, a few words at a time"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record (fits a stretcher; in tall buildings elevator access is where minutes go)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building is Century Park East at 1801 Century Park, Los Angeles, CA",
+   "verdict": "supported",
+   "evidence": "Name Century Park East; address 1801 Century Park, Los Angeles, CA"
+  },
+  {
+   "claim": "The building has a freight elevator on record",
+   "verdict": "supported",
+   "evidence": "elevators: Freight 1"
+  },
+  {
+   "claim": "The freight car fits a stretcher",
+   "verdict": "not_in_data",
+   "evidence": "Elevator data gives counts only, no car dimensions"
+  },
+  {
+   "claim": "Bluefox Entertainment is on floor 4",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Bluefox Entertainment, 22 employees"
+  },
+  {
+   "claim": "Bluefox Entertainment is in suite 450",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in tenant data"
+  },
+  {
+   "claim": "Bruin Biometrics LLC is on floor 4",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Bruin Biometrics LLC, 8 employees"
+  },
+  {
+   "claim": "Bruin Biometrics LLC is in suite 460",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in tenant data"
+  },
+  {
+   "claim": "The Law Offices of Wiesman Pirian is on floor 4",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes The Law Offices of Wiesman Pirian, 7 employees"
+  },
+  {
+   "claim": "The Law Offices of Wiesman Pirian is in suite 470",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in tenant data"
+  },
+  {
+   "claim": "There are 3 more tenants on the floor beyond the three named",
+   "verdict": "supported",
+   "evidence": "6 tenants listed on floor 4; 3 not named"
+  },
+  {
+   "claim": "About 57 people are on the floor",
+   "verdict": "supported",
+   "evidence": "Employees 10+7+8+10+22 = 57; one tenant has no count"
+  },
+  {
+   "claim": "The 57 people figure is the daytime count",
+   "verdict": "not_in_data",
+   "evidence": "Data gives employee counts, no time-of-day occupancy"
+  },
+  {
+   "claim": "The property manager is Douglas Emmett - Century Park Plaza, phone 5550856585",
+   "verdict": "not_in_data",
+   "evidence": "contacts lists only 'Property manager', no name or number"
+  },
+  {
+   "claim": "The AED location is not known",
+   "verdict": "not_in_data",
+   "evidence": "No AED information in the data"
+  },
+  {
+   "claim": "The location of the stretcher elevator is not known",
+   "verdict": "not_in_data",
+   "evidence": "No elevator location data; only counts"
+  }
+ ],
+ "delivery": {
+  "score": 8,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "Add the patient's condition right after the header, e.g. 'adult male, grey, sweating, chest tight, speaking only a few words'."
+ },
+ "feedback": [
+  "Say how sick the patient is. Your message leaves out that he is grey, sweating, has a tight chest and can only speak a few words at a time. Both code checks on the call details failed because of this. Put it on the first line after the header.",
+  "Remove details the data doesn't back up. The data has no suite numbers (450/460/470), no stretcher fit for the freight car, no property manager name or phone, and no daytime occupancy figure. A crew could act on wrong information.",
+  "Say who can meet the crew and where, since the caller offered to come down. Also say how to find an AED, because the data has none and a chest-tight, grey patient could arrest."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 2.7,
+ "cost_usd": 0.1198,
+ "built": "2026-11-15 01:09"
+}

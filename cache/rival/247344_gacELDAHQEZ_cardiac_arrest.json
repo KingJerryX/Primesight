@@ -1,0 +1,151 @@
+{
+ "case": "247344_gacELDAHQEZ",
+ "incident": "cardiac_arrest",
+ "sent": "Cardiac arrest on the 4th floor, 1801 Century Park, Los Angeles.",
+ "text": "PRIMESIGHT  |  CARDIAC ARREST  |  FLOOR 4\nCentury Park East - 1801 Century Park , Los Angeles, CA\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: Bluefox Entertainment (ste 450); Bruin Biometrics LLC (ste 460); The Law Offices of Wiesman Pirian (ste 470) +3 more, ~57 people (daytime)\nPROPERTY MGR: Douglas Emmett - Century Park Plaza 5550856585\nNOT KNOWN: AED location, where the stretcher elevator is\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 77,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 9
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1801 Century Park  (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 4"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: cardiac arrest"
+  },
+  {
+   "part": "needs",
+   "item": "not breathing",
+   "ok": false,
+   "why": "from the call: the caller says he is not breathing"
+  },
+  {
+   "part": "needs",
+   "item": "CPR",
+   "ok": false,
+   "why": "from the call: a coworker is doing CPR"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record (fits a stretcher; in tall buildings elevator access is where minutes go)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Building is Century Park East at 1801 Century Park, Los Angeles, CA",
+   "verdict": "supported",
+   "evidence": "Name Century Park East, address 1801 Century Park, Los Angeles, CA"
+  },
+  {
+   "claim": "A freight elevator is on record",
+   "verdict": "supported",
+   "evidence": "elevators: Freight 1"
+  },
+  {
+   "claim": "The freight car fits a stretcher",
+   "verdict": "not_in_data",
+   "evidence": "Only the freight count is given. Car size is not recorded."
+  },
+  {
+   "claim": "Bluefox Entertainment is on floor 4",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Bluefox Entertainment, 22 employees"
+  },
+  {
+   "claim": "Bluefox Entertainment is in suite 450",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the tenant records"
+  },
+  {
+   "claim": "Bruin Biometrics LLC is on floor 4",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Bruin Biometrics LLC, 8 employees"
+  },
+  {
+   "claim": "Bruin Biometrics LLC is in suite 460",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the tenant records"
+  },
+  {
+   "claim": "The Law Offices of Wiesman Pirian is on floor 4",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes The Law Offices of Wiesman Pirian, 7 employees"
+  },
+  {
+   "claim": "The Law Offices of Wiesman Pirian is in suite 470",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the tenant records"
+  },
+  {
+   "claim": "Three more tenants are on the floor besides the three named",
+   "verdict": "supported",
+   "evidence": "6 tenants listed on floor 4; 3 named, so 3 more"
+  },
+  {
+   "claim": "About 57 people are on the floor",
+   "verdict": "supported",
+   "evidence": "Employees 10+7+8+10+22 = 57; the unknown tenant has no count"
+  },
+  {
+   "claim": "The 57 people figure applies to daytime",
+   "verdict": "not_in_data",
+   "evidence": "Data gives employee counts only, with no time-of-day occupancy"
+  },
+  {
+   "claim": "The property manager is Douglas Emmett - Century Park Plaza",
+   "verdict": "not_in_data",
+   "evidence": "contacts lists only 'Property manager', with no name"
+  },
+  {
+   "claim": "The property manager's phone number is 5550856585",
+   "verdict": "not_in_data",
+   "evidence": "No phone number in the contacts"
+  },
+  {
+   "claim": "The AED location is not known",
+   "verdict": "not_in_data",
+   "evidence": "No AED data in the record, so the gap is consistent with the data"
+  },
+  {
+   "claim": "The location of the stretcher elevator is not known",
+   "verdict": "not_in_data",
+   "evidence": "No elevator location data in the record"
+  }
+ ],
+ "delivery": {
+  "score": 9,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "Add \"not breathing, bystander CPR in progress\" to the first line; it tells the crew how urgent this is."
+ },
+ "feedback": [
+  "Your message never says he is not breathing or that a coworker is doing CPR. Put \"not breathing, bystander CPR in progress\" in the header line so the crew knows how urgent it is.",
+  "Several details are not in the building data: suite numbers (450, 460, 470), the property manager's name and phone number, and \"fits a stretcher\" for the freight car. Don't send details you can't back up. Say only that a freight elevator is on record and that its size is unknown.",
+  "\"Daytime\" is also not in the data. The 57 people is a sum of employee counts, so call it ~57 employees on record, not people on the floor. Also, the message never says who will meet the crew."
+ ],
+ "suggestions_queued": 0,
+ "brief_s": 3.0,
+ "cost_usd": 0.1087,
+ "built": "2026-11-15 01:08"
+}

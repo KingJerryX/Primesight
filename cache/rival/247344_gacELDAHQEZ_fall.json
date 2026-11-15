@@ -1,0 +1,141 @@
+{
+ "case": "247344_gacELDAHQEZ",
+ "incident": "fall",
+ "sent": "Fall on the 4th floor, 1801 Century Park, Los Angeles.",
+ "text": "PRIMESIGHT  |  FALL / INJURY  |  FLOOR 4\nCentury Park East - 1801 Century Park , Los Angeles, CA\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: Bluefox Entertainment (ste 450); Bruin Biometrics LLC (ste 460); The Law Offices of Wiesman Pirian (ste 470) +3 more, ~57 people (daytime)\nPROPERTY MGR: Douglas Emmett - Century Park Plaza 5550856585\nNOT KNOWN: AED location, where the stretcher elevator is\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 75,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 7
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1801 Century Park  (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 4"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: fall / injury"
+  },
+  {
+   "part": "needs",
+   "item": "head injury",
+   "ok": false,
+   "why": "from the call: she hit her head"
+  },
+  {
+   "part": "needs",
+   "item": "confused, bleeding",
+   "ok": false,
+   "why": "from the call: she is confused and bleeding"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record (fits a stretcher; in tall buildings elevator access is where minutes go)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building has a freight elevator on record.",
+   "verdict": "supported",
+   "evidence": "elevators: Freight 1"
+  },
+  {
+   "claim": "The freight car fits a stretcher.",
+   "verdict": "not_in_data",
+   "evidence": "No car dimensions or stretcher capacity in the data."
+  },
+  {
+   "claim": "Bluefox Entertainment is on floor 4.",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Bluefox Entertainment, 22 employees"
+  },
+  {
+   "claim": "Bluefox Entertainment is in suite 450.",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the tenant records."
+  },
+  {
+   "claim": "Bruin Biometrics LLC is on floor 4.",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Bruin Biometrics LLC, 8 employees"
+  },
+  {
+   "claim": "Bruin Biometrics LLC is in suite 460.",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the tenant records."
+  },
+  {
+   "claim": "The Law Offices of Wiesman Pirian is on floor 4.",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes The Law Offices of Wiesman Pirian, 7 employees"
+  },
+  {
+   "claim": "The Law Offices of Wiesman Pirian is in suite 470.",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the tenant records."
+  },
+  {
+   "claim": "Three more tenants are on the floor besides the three named.",
+   "verdict": "supported",
+   "evidence": "6 tenants listed on floor 4; 3 are named in the message."
+  },
+  {
+   "claim": "About 57 people are on the floor in the daytime.",
+   "verdict": "supported",
+   "evidence": "Employees 10+7+8+10+22 = 57; the unknown tenant has no count."
+  },
+  {
+   "claim": "The property manager is Douglas Emmett - Century Park Plaza.",
+   "verdict": "not_in_data",
+   "evidence": "Contacts lists only 'Property manager', with no name."
+  },
+  {
+   "claim": "The property manager's phone number is 5550856585.",
+   "verdict": "not_in_data",
+   "evidence": "No phone number in the data."
+  },
+  {
+   "claim": "The AED location is not known.",
+   "verdict": "not_in_data",
+   "evidence": "The data has no AED information."
+  },
+  {
+   "claim": "The location of the stretcher elevator is not known.",
+   "verdict": "not_in_data",
+   "evidence": "The data gives the freight elevator count only, not its location."
+  }
+ ],
+ "delivery": {
+  "score": 7,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "Add severity right after location, e.g. 'woman in 60s, head injury, confused, bleeding, can't stand', and cut the extra tenant and contact details."
+ },
+ "feedback": [
+  "Your message never says what happened. Put the patient first: woman in her 60s fell from a step ladder, hit her head, confused, bleeding, can't get up.",
+  "Suite numbers (450/460/470), the stretcher claim, and the property manager's name and phone aren't in the building data. Send only what the record shows, and mark the rest as unconfirmed.",
+  "Cut the tenant list and headcount. Lead with the elevator (freight car on record, location unknown) and say the caller is by the elevators on 4. Add stairs as a fallback."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 2.3,
+ "cost_usd": 0.114,
+ "built": "2026-11-15 01:08"
+}

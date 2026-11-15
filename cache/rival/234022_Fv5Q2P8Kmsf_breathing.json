@@ -1,0 +1,141 @@
+{
+ "case": "234022_Fv5Q2P8Kmsf",
+ "incident": "breathing",
+ "sent": "Breathing problem on the 6th floor, 363 Sam Houston Pky, Houston.",
+ "text": "PRIMESIGHT  |  DIFFICULTY BREATHING / ALLERGIC REACTION  |  FLOOR 6\nNorthbelt - 363 Sam Houston Pky, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: Unknown tenant (ste 600); Dream Counseling Center (ste 605); Tax Services Of Houston LLC (ste 610) +3 more\nPROPERTY MGR: Realty.com 5559806802\nNOT KNOWN: AED location, where the stretcher elevator is\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 74,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 6
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "363 Sam Houston Pky (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 6"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: difficulty breathing / allergic reaction"
+  },
+  {
+   "part": "needs",
+   "item": "chest",
+   "ok": false,
+   "why": "from the call: his chest is tight"
+  },
+  {
+   "part": "needs",
+   "item": "how bad",
+   "ok": false,
+   "why": "from the call: grey, sweating, a few words at a time"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record (fits a stretcher; in tall buildings elevator access is where minutes go)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building is Northbelt at 363 Sam Houston Pky, Houston, TX.",
+   "verdict": "supported",
+   "evidence": "name Northbelt; address 363 Sam Houston Pky, Houston, TX"
+  },
+  {
+   "claim": "A freight elevator car is on record for the building.",
+   "verdict": "supported",
+   "evidence": "elevators: Freight: 1"
+  },
+  {
+   "claim": "The freight car is large enough to fit a stretcher.",
+   "verdict": "not_in_data",
+   "evidence": "No elevator dimensions or capacity in the data."
+  },
+  {
+   "claim": "An unknown tenant is on floor 6.",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes 'Unknown tenant'"
+  },
+  {
+   "claim": "The unknown tenant is in suite 600.",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the tenant data."
+  },
+  {
+   "claim": "Dream Counseling Center is on floor 6.",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Dream Counseling Center"
+  },
+  {
+   "claim": "Dream Counseling Center is in suite 605.",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the tenant data."
+  },
+  {
+   "claim": "Tax Services Of Houston LLC is on floor 6.",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor includes Tax Services Of Houston LLC"
+  },
+  {
+   "claim": "Tax Services Of Houston LLC is in suite 610.",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the tenant data."
+  },
+  {
+   "claim": "Three more tenants are on the floor besides the three named.",
+   "verdict": "supported",
+   "evidence": "6 tenants on floor; 3 named, so 3 more"
+  },
+  {
+   "claim": "The property manager is Realty.com.",
+   "verdict": "not_in_data",
+   "evidence": "contacts lists only 'Property manager', with no company name."
+  },
+  {
+   "claim": "The property manager's phone number is 5559806802.",
+   "verdict": "not_in_data",
+   "evidence": "No phone number in the contacts."
+  },
+  {
+   "claim": "The AED location is not known.",
+   "verdict": "not_in_data",
+   "evidence": "No AED information in the data."
+  },
+  {
+   "claim": "The location of the stretcher elevator is not known.",
+   "verdict": "supported",
+   "evidence": "Data has only elevator counts, no car locations."
+  }
+ ],
+ "delivery": {
+  "score": 6,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "State severity (grey, sweating, chest tight, speaking few words) in the first line; cut the tenant list and the closing prompt."
+ },
+ "feedback": [
+  "Your message never states how sick the patient is. Lead with it: grey, sweating, chest tight, speaking only a few words at a time. The crew needs this to treat it as a possible cardiac event, not just a breathing problem.",
+  "Several details are invented. The suite numbers (600, 605, 610), the Realty.com name, the phone number 5559806802 and 'fits a stretcher' are not in the building data. Send only what the data shows: one freight elevator, and the tenant names on floor 6.",
+  "The message is mostly tenant names and a property manager line. Cut those, and put the elevator and the suite first. The data has no suite numbers, so say that plainly instead of guessing."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 1.7,
+ "cost_usd": 0.108,
+ "built": "2026-11-15 01:07"
+}

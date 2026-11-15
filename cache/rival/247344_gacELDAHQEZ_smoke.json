@@ -1,0 +1,160 @@
+{
+ "case": "247344_gacELDAHQEZ",
+ "incident": "smoke",
+ "sent": "Smoke in building on the 4th floor, 1801 Century Park, Los Angeles.",
+ "text": "PRIMESIGHT  |  SMOKE INVESTIGATION  |  FLOOR 4\nCentury Park East - 1801 Century Park , Los Angeles, CA\nPEOPLE: ~57 on floor 4, ~668 above on floors 5-25 (daytime headcount)\nBUILDING: 25 stories, steel frame, built 1972, sprinklers: yes\nHYDRANTS: H1 37 m N, H2 70 m W (approach map)\nWIND: from NE 4 mph, smoke drifts SW\nNOT KNOWN: stair locations, standpipe and FDC locations, sprinkler type\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 82,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 14,
+  "accuracy": 15,
+  "delivery": 8
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "1801 Century Park  (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 4"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: smoke investigation"
+  },
+  {
+   "part": "needs",
+   "item": "what it smells like",
+   "ok": false,
+   "why": "from the call: electrical burning smell, no flames"
+  },
+  {
+   "part": "needs",
+   "item": "people on the floor",
+   "ok": true,
+   "why": "from the call: a lot of people on the floor, no alarm"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": false,
+   "why": "freight elevator on record"
+  },
+  {
+   "part": "needs",
+   "item": "who is on the floor",
+   "ok": false,
+   "why": "who is on the floor (a headcount or the tenants): Structure Law Group, LLP, The Law Offices of Wiesman Pirian, Bruin Biometrics LLC, Simple House Films"
+  },
+  {
+   "part": "needs",
+   "item": "sprinklers",
+   "ok": true,
+   "why": "sprinklers: yes"
+  },
+  {
+   "part": "needs",
+   "item": "height",
+   "ok": true,
+   "why": "25 stories"
+  },
+  {
+   "part": "needs",
+   "item": "construction",
+   "ok": true,
+   "why": "construction: steel"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "Building name is Century Park East at 1801 Century Park, Los Angeles, CA",
+   "verdict": "supported",
+   "evidence": "Name Century Park East; address 1801 Century Park, Los Angeles, CA"
+  },
+  {
+   "claim": "About 57 people on floor 4",
+   "verdict": "supported",
+   "evidence": "Tenant employees 10+7+8+10+22 = 57; one unknown tenant has no count"
+  },
+  {
+   "claim": "About 668 people above on floors 5-25 (daytime headcount)",
+   "verdict": "not_in_data",
+   "evidence": "Only floor 4 tenants are listed; floors 5 and 6 appear only as nearby tenants"
+  },
+  {
+   "claim": "Building has 25 stories",
+   "verdict": "supported",
+   "evidence": "stories: 25"
+  },
+  {
+   "claim": "Steel frame construction",
+   "verdict": "supported",
+   "evidence": "construction: Steel"
+  },
+  {
+   "claim": "Built in 1972",
+   "verdict": "supported",
+   "evidence": "year_built: 1972"
+  },
+  {
+   "claim": "Building has sprinklers",
+   "verdict": "supported",
+   "evidence": "sprinklers: yes"
+  },
+  {
+   "claim": "Hydrant H1 is 37 m north",
+   "verdict": "supported",
+   "evidence": "hydrants: 37 m N"
+  },
+  {
+   "claim": "Hydrant H2 is 70 m west",
+   "verdict": "supported",
+   "evidence": "hydrants: 70 m W"
+  },
+  {
+   "claim": "Wind from NE at 4 mph, smoke drifts SW",
+   "verdict": "not_in_data",
+   "evidence": "No weather or wind data in the building record"
+  },
+  {
+   "claim": "Stair locations are not known",
+   "verdict": "supported",
+   "evidence": "No stair locations given; only 4 exit signs seen in scan"
+  },
+  {
+   "claim": "Standpipe and FDC locations are not known",
+   "verdict": "not_in_data",
+   "evidence": "No standpipe or FDC data in the record"
+  },
+  {
+   "claim": "Sprinkler type is not known",
+   "verdict": "supported",
+   "evidence": "Sprinklers listed only as yes; no type given"
+  }
+ ],
+ "delivery": {
+  "score": 8,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "State severity (thickening electrical smoke, no flames, alarm silent) in line one, and cut the wind and hydrant detail for floor access and hazards."
+ },
+ "feedback": [
+  "Say what the caller reported in line one: electrical-burning smoke, thickening near the copy room, no flames seen, alarm not sounding. Your message leaves all of that out.",
+  "Your ~668 people above on floors 5-25 and the wind and smoke-drift line are not in the building data. Remove them or mark them as unverified. Also name the floor 4 tenants (Structure Law Group, Wiesman Pirian, Bruin Biometrics, Simple House Films) and mention the freight elevator on record.",
+  "Move exits and pull stations seen on the floor ahead of the hydrants. Hydrant distances and the wind line crowd out what the crew needs first, and the data only shows 4 exit signs from the scan.)"
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 2.4,
+ "cost_usd": 0.1249,
+ "built": "2026-11-15 01:09"
+}

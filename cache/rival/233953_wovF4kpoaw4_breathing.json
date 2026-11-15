@@ -1,0 +1,116 @@
+{
+ "case": "233953_wovF4kpoaw4",
+ "incident": "breathing",
+ "sent": "Breathing problem on the 5th floor, 808 Travis St, Houston.",
+ "text": "PRIMESIGHT  |  DIFFICULTY BREATHING / ALLERGIC REACTION  |  FLOOR 5\nEsperson - 808 Travis St, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: Houston Symphony (ste 500)\nPROPERTY MGR: Cameron Management 5553362403\nNOT KNOWN: AED location, where the stretcher elevator is\nReply MORE for the rest, or ask a question.",
+ "source": "draft",
+ "score": 76,
+ "out_of": 100,
+ "parts": {
+  "location": 35,
+  "emergency": 10,
+  "needs": 8,
+  "accuracy": 15,
+  "delivery": 8
+ },
+ "checks": [
+  {
+   "part": "location",
+   "item": "address",
+   "ok": true,
+   "why": "808 Travis St (the building name alone isn't enough: crews route to a street address)"
+  },
+  {
+   "part": "location",
+   "item": "floor",
+   "ok": true,
+   "why": "floor 5"
+  },
+  {
+   "part": "emergency",
+   "item": "what happened",
+   "ok": true,
+   "why": "name the emergency: difficulty breathing / allergic reaction"
+  },
+  {
+   "part": "needs",
+   "item": "chest",
+   "ok": false,
+   "why": "from the call: his chest is tight"
+  },
+  {
+   "part": "needs",
+   "item": "how bad",
+   "ok": false,
+   "why": "from the call: grey, sweating, a few words at a time"
+  },
+  {
+   "part": "needs",
+   "item": "elevator",
+   "ok": true,
+   "why": "freight elevator on record (fits a stretcher; in tall buildings elevator access is where minutes go)"
+  }
+ ],
+ "claims": [
+  {
+   "claim": "The building is the Esperson at 808 Travis St, Houston, TX.",
+   "verdict": "supported",
+   "evidence": "name Esperson; address 808 Travis St, Houston, TX"
+  },
+  {
+   "claim": "The building has a freight elevator on record.",
+   "verdict": "supported",
+   "evidence": "elevators: Freight 1"
+  },
+  {
+   "claim": "The freight car fits a stretcher.",
+   "verdict": "not_in_data",
+   "evidence": "No elevator dimensions or capacity in the data"
+  },
+  {
+   "claim": "Houston Symphony is on floor 5.",
+   "verdict": "supported",
+   "evidence": "tenants_on_floor: Houston Symphony"
+  },
+  {
+   "claim": "Houston Symphony is in suite 500.",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the tenant data"
+  },
+  {
+   "claim": "Cameron Management is the property manager.",
+   "verdict": "not_in_data",
+   "evidence": "Cameron Management is listed as a floor 4 tenant. Contacts list only 'Property manager'."
+  },
+  {
+   "claim": "The property manager's phone number is 5553362403.",
+   "verdict": "not_in_data",
+   "evidence": "No phone numbers in the data"
+  },
+  {
+   "claim": "The AED location is not known.",
+   "verdict": "not_in_data",
+   "evidence": "No AED information in the data"
+  },
+  {
+   "claim": "The location of the stretcher elevator is not known.",
+   "verdict": "not_in_data",
+   "evidence": "Elevator data gives counts only, no locations"
+  }
+ ],
+ "delivery": {
+  "score": 8,
+  "nature_and_location_up_front": true,
+  "severity_stated": false,
+  "feedback": "Add severity right after location, e.g. 'grey, sweating, chest tight, speaking few words at a time,' and drop the 'Reply MORE' line."
+ },
+ "feedback": [
+  "Severity is missing. Tell the crew he is grey, sweating, has a tight chest and can only speak a few words at a time. That sounds like a possible cardiac event, and the crew needs it to prepare.",
+  "Don't invent facts. The building data has no suite number (ste 500), no stretcher fit for the freight car, and no phone number. Cameron Management is a floor 4 tenant, not the property manager. Say only what the data supports, such as 'Freight 1 on record, size not known' and 'Houston Symphony on floor 5'.",
+  "Drop 'Reply MORE'. Put the first needs up front: which elevator to use, the suite (say 'not in data' if it isn't there), and whether anything on the floor could affect the air. Also tell the caller to stay with him and not go down."
+ ],
+ "suggestions_queued": 2,
+ "brief_s": 3.7,
+ "cost_usd": 0.1072,
+ "built": "2026-11-15 01:06"
+}
