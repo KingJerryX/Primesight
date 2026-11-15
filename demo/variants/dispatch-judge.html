@@ -57,29 +57,26 @@
   .step:not([data-s="1"]) { padding: 40px clamp(24px, 4vw, 56px) 32px; }
   .step:not([data-s="1"]) h2 { font-size: clamp(34px, 3.4vw, 48px); margin-bottom: 28px; }
   .step:not([data-s="1"]) .head h2 { margin: 0; } .step:not([data-s="1"]) .head { margin-bottom: 20px; align-items: baseline; }
-  /* Step 3: one row per thing the agent did, as it does it. Helper rows sit in from the edge; the newest row pulses until the text is out. */
+  /* Step 3: the run sheet. Five stages, all on the page from the start as the plan, each lit as the agent reaches it and
+     filled with what it found. One colour: the stage under way is named in the accent and a line sweeps across its top. */
   #clock { color: var(--dim); font-size: 14px; }
-  #steps { list-style: none; padding: 0; margin: 0; }
-  #steps li { display: grid; grid-template-columns: 44px 1fr; gap: 2px 14px; padding: 11px 0; border-top: 1px solid var(--line); animation: pop .35s var(--ease) both; }
-  #steps li.helper { margin-left: 58px; }
-  #steps time { grid-row: span 2; padding-top: 5px; color: var(--dim); font: 12px var(--code); }
-  #steps b { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font: 400 18px/1.3 var(--grot); }
-  #steps span { grid-column: 2; color: var(--dim); font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  #steps span:empty { display: none; }
-  #steps em { font: 11px var(--code); letter-spacing: .07em; text-transform: uppercase; color: var(--c); border: 1px solid var(--c); padding: 2px 6px; }
-  #steps .ok b { color: var(--ok); } #steps .warn b { color: #f5c400; }
-  #steps .ok span, #steps .warn span { white-space: normal; }  /* what the grader found is worth reading in full */
-  #steps.live li:last-child time::after { content: ""; display: block; width: 7px; height: 7px; margin-top: 7px; border-radius: 50%; background: var(--accent); animation: think 1s infinite; }
-  .step[data-s="2"] .cats { grid-template-columns: repeat(6, 1fr); gap: 8px; margin-bottom: 20px; }
-  .step[data-s="2"] .cats button { font-size: 15px; padding: 12px; }
-  .step[data-s="2"] .rows { margin: 0; display: grid; grid-template-columns: 1fr 1fr; align-content: start; gap: 8px; }
-  /* Each emergency type is a boxed button, outlined like the categories above, so it reads as something to click. */
-  .step[data-s="2"] .row { font-size: 20px; padding: 15px 16px; align-items: center; border: 1px solid var(--line);
-                           transition: border-color .2s var(--ease), color .2s var(--ease); }
-  .step[data-s="2"] .row:hover, .step[data-s="2"] .row:focus-visible { border-color: var(--accent); outline: none; }
-  .step[data-s="2"] .row.sel { border-color: var(--accent); }
-  .step[data-s="2"] #text { font-size: 20px; padding: 20px 0; }
-  .step[data-s="2"] .foot button { padding: 18px; font-size: 13px; }
+  #run { margin: 0; scrollbar-color: var(--line) #0000; }
+  .stage { position: relative; display: grid; grid-template-columns: 124px 1fr 40px; gap: 0 20px; align-items: start; padding: 17px 0 19px; border-top: 1px solid var(--line);
+           opacity: .34; transition: opacity .5s var(--ease); }
+  .stage.on, .stage.done { opacity: 1; }
+  .stage h3 { margin: 0; padding-top: 6px; color: var(--dim); } .stage.on h3 { color: var(--accent); }
+  .stage time { padding-top: 6px; text-align: right; color: var(--dim); }
+  .stage.on::before { content: ""; position: absolute; top: -1px; left: 0; height: 1px; background: var(--accent); animation: sweep 1.8s var(--ease) infinite; }
+  @keyframes sweep { from { left: 0; width: 0; } 50% { width: 34%; } to { left: 100%; width: 0; } }
+  .stage p { margin: 0; color: var(--dim); font-size: 15px; line-height: 1.45; }
+  .stage p + p { margin-top: 4px; }
+  .stage .plan { font-size: 18px; } .stage .big { color: var(--text); font-size: 21px; line-height: 1.25; }
+  .srcs { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 14px 18px; margin-bottom: 10px; }
+  .srcs div { display: grid; gap: 2px; align-content: start; font-size: 15px; line-height: 1.35; }
+  .srcs b { margin-bottom: 5px; font: 400 11px var(--code); letter-spacing: .07em; text-transform: uppercase; color: var(--dim); }
+  .roles { display: grid; gap: 9px; }
+  .roles div { display: grid; grid-template-columns: minmax(96px, 150px) 1fr; gap: 14px; align-items: baseline; }
+  .roles b { font-weight: 400; font-size: 17px; } .roles span { color: var(--dim); font-size: 15px; line-height: 1.4; } .roles .got span { color: var(--text); }
 
   /* Dropdowns (floor, city): the sheet unfurls from the button, wiping down while its rows settle in one after another. */
   .drop { position: relative; }
@@ -170,7 +167,7 @@
   }
   @media (prefers-reduced-motion: reduce) {
     main, .step, .view, #aimg, .sheet, .sheet button { transition: none; }
-    .target::after, #floorbox.unset #floorbtn, #plate, #steps li, #steps.live li:last-child time::after, #phone, .msg, .msg.dots i { animation: none; }
+    .target::after, #floorbox.unset #floorbtn, #plate, .stage.on::before, #phone, .msg, .msg.dots i { animation: none; }
   }
 </style>
 </head>
@@ -200,7 +197,7 @@
     </section>
     <section class="step" data-s="3">
       <div class="head"><h2 id="runhead" aria-live="polite">Writing the briefing</h2><span class="caps" id="clock">0:00</span></div>
-      <ol class="rows live" id="steps"></ol>
+      <div class="rows" id="run"></div>
       <div class="foot" id="sent"><b id="sentmsg"></b><a id="phonelink" href="phone.html?id=judge" target="_blank">Open the thread</a><button class="ghost" id="again">New dispatch</button></div>
     </section>
   </aside>
@@ -447,21 +444,90 @@ function go(n) {
 // it mirrors the crew's phone thread (GET /sms) as the texts go out.
 const clock = sec => `${Math.floor(sec / 60)}:${String(Math.floor(sec % 60)).padStart(2, "0")}`;
 const say = (cls, text) => { const el = document.createElement("div"); el.className = `msg ${cls}`; el.textContent = text; $("thread").append(el); return el; };
-const SOURCES = [["costar", "CoStar records"], ["matterport", "Matterport scan"], ["vexcel", "Vexcel aerial"]];
+// The run sheet: [key, name, the plan shown until the agent gets there]. Trace steps move it along (primesight/agent.py).
+const STAGES = [["call", "The call", "Read the call and find the building"], ["building", "The building", "Pull its records, the floor scan and the aerial view"],
+  ["helpers", "Helpers", "Hand the tenants, the floor and the street to helpers"], ["check", "The check", "A second model checks the draft against 8 rules"],
+  ["text", "The text", "Text the briefing to the crew"]];
+// The agent's helpers: [name, what it is doing while it works].
+const ROLES = { "tenant-risk": ["Tenants", "looking for anything that changes the response"], "notify-writer": ["Property manager", "writing a heads-up"],
+                "inside-scout": ["Floor scan", "measuring the walk to the signs"], "outside-scout": ["Street", "checking the wind and hydrants now"] };
+// What the building stage shows: one column per source, from the same facts the stage in step 2 drew.
+function sources() {
+  const sc = s.sc, fv = s.fv, n = k => fv ? fv.points.filter(p => p.kind === k).length : 0;
+  const col = (name, ...lines) => `<div><b>${name}</b>${lines.filter(Boolean).map(l => `<span>${esc(l)}</span>`).join("")}</div>`;
+  if (!sc) return "";
+  const all = sc.floors.reduce((t, f) => t + f.people, 0), h = sc.hydrants[0], lot = sc.staging[0];
+  return `<div class="srcs">` + col("CoStar", some(sc.floors.length, "floor"), all ? `about ${all.toLocaleString()} people by day` : "no headcount on record")
+    + col("Matterport", fv ? `Floor ${fv.floor} scanned` : "No plan of this floor", fv && `${some(n("exit sign"), "exit sign")}, ${some(n("fire alarm pull station"), "alarm pull")}`)
+    + col("Vexcel", "Aerial of the block", lot && `Open lot ${lot.m} m ${lot.dir}`)
+    + col("City and weather", h ? `Nearest hydrant ${h.m} m ${h.dir}` : "No hydrant on record", sc.wind && `Wind from ${compass(sc.wind.from)}, ${sc.wind.mph} mph`) + `</div>`;
+}
 function follow(run, text) {
-  const t0 = performance.now(); let over = false, dots;
+  const t0 = performance.now(), read = [], walked = new Set(), checks = []; let over = false, dots, now = -1, gathered = false, noted = false, wrote;
+  const written = new Promise(done => wrote = done);  // resolves with the run's own seconds once the briefing is written
   const wait = on => { dots?.remove(); dots = on ? say("it dots", "") : null; if (dots) dots.innerHTML = "<i></i><i></i><i></i>"; };
-  $("steps").textContent = ""; $("thread").textContent = ""; $("steps").classList.add("live"); $("runhead").textContent = "Writing the briefing"; $("sentmsg").textContent = "";
+  $("run").innerHTML = STAGES.map(([k, name, plan]) => `<section class="stage" data-k="${k}"><h3 class="caps">${name}</h3><div class="body"><p class="plan">${plan}</p></div><time class="caps"></time></section>`).join("");
+  $("thread").textContent = ""; $("runhead").textContent = "Writing the briefing"; $("sentmsg").textContent = "";
   say("me", text); wait(true);
   const tick = setInterval(() => $("clock").textContent = clock((performance.now() - t0) / 1000), 500);
+  const stage = k => $("run").querySelector(`[data-k="${k}"]`), body = (k, html) => stage(k).querySelector(".body").innerHTML = html;
+  // Stage k is under way: the ones before it are finished, stamped with the run's own clock. It never goes backwards.
+  const enter = (k, t) => {
+    const i = STAGES.findIndex(x => x[0] === k);
+    if (i <= now) return;
+    now = i;
+    [...$("run").children].forEach((el, j) => { el.classList.toggle("on", j === i); if (j < i && !el.classList.contains("done")) { el.classList.add("done"); el.querySelector("time").textContent = clock(t); } });
+  };
+  // Scroll the sheet just far enough that the stage under way (or the last one, at the end) is in view.
+  const show = () => { const el = $("run").querySelector(".on") || $("run").lastElementChild, low = el.getBoundingClientRect().bottom - $("run").getBoundingClientRect().bottom; if (low > 0) $("run").scrollTop += low + 12; };
+  const building = () => body("building", (gathered ? sources() : "") + (read.length ? `<p>Read first: ${esc(read.join(", "))}</p>` : "") || `<p class="plan">${STAGES[1][2]}</p>`);
+  // One row per helper: its name, then what it is doing, then (got) what it came back with.
+  const role = (h, html, got) => {
+    if (!stage("helpers").querySelector(".roles")) body("helpers", `<div class="roles"></div>`);
+    let el = stage("helpers").querySelector(`[data-h="${h}"]`);
+    if (!el) { el = document.createElement("div"); el.dataset.h = h; el.innerHTML = `<b>${esc((ROLES[h] || [h])[0])}</b><span>${esc((ROLES[h] || [h, "working"])[1])}</span>`; stage("helpers").querySelector(".roles").append(el); }
+    if (html) { el.querySelector("span").innerHTML = html; el.classList.toggle("got", !!got); }
+  };
   const stopTrace = streamTrace(run, d => {
-    if (d.step === "usage") return;  // token counts: not for this screen
-    const [label, detail] = stepLabel(d), pulls = d.step === "gather_building";
-    const li = document.createElement("li"); li.className = `${d.who} ${d.step === "graded" ? (d.detail === "satisfied" ? "ok" : "warn") : ""}`;
-    li.innerHTML = `<time>${clock(d.t)}</time><b>${esc(pulls ? "Pulls the building's data" : label)}${pulls ? SOURCES.map(([k, name]) => `<em style="--c:${LAYER_COLORS[k]}">${name}</em>`).join("") : ""}</b><span>${esc(detail || "")}</span>`;
-    $("steps").append(li); $("steps").scrollTop = 1e9;
+    const tool = d.step.replace(/^helper:/, ""), arg = k => (String(d.detail).match(new RegExp(`"${k}": "([^"]*)`)) || [])[1] || "";  // args are cut at 200 chars: no JSON.parse
+    if (tool === "call_received") { enter("call", d.t); body("call", `<p class="big">${esc(s.i.label)}</p><p>Floor ${s.f}, ${esc(s.b.address)}, ${esc(s.b.city)}</p>`); }
+    else if (tool === "read_file" || tool === "gather_building") {
+      enter("building", d.t);
+      const p = arg("file_path"), skill = p.match(/skills\/(\w+)\//), what = skill ? `the ${skill[1]} playbook` : p.startsWith("/buildings/") ? "crew notes on this building" : p.includes("AGENTS") ? "its standing rules" : "";
+      if (tool === "gather_building") gathered = true; else if (what && !read.includes(what)) read.push(what);
+      building();
+    }
+    else if (tool === "task") { enter("helpers", d.t); role(arg("subagent_type") || "helper"); }
+    else if (tool === "queue_text") role("notify-writer", "Drafted a text for the property manager", true);
+    else if (tool === "walk_to") { walked.add(arg("target") === "exit sign" ? "exit sign" : "alarm pull"); role("inside-scout", `Measured the walk to the nearest ${[...walked].join(" and ")}`, true); }
+    else if (tool === "outside_now") role("outside-scout", "Live wind, and every hydrant within 300 m", true);
+    else if (tool === "add_building_note") { noted = true; enter("check", d.t); }  // the draft is written: the grader has it now
+    else if (tool === "graded") {
+      enter("check", d.t);
+      const [verdict, ...rest] = String(d.detail).split(" - "), found = esc(rest.join(" - "));
+      checks.push(verdict === "satisfied" ? `<p class="big">${checks.length ? "The rewrite passed all 8 rules" : "Passed all 8 rules"}</p>` : verdict === "needs_revision" ? `<p class="big">Sent back for a rewrite</p><p>${found}</p>`
+        : verdict === "max_iterations_reached" ? `<p class="big">Still not satisfied, sent as written</p><p>${found}</p>` : `<p>The check could not finish.</p>`);
+      body("check", checks.join(""));
+    }
+    else if (tool === "mode") for (const k of ["helpers", "check"]) body(k, `<p class="plan">Skipped. The agent is off on this server, so the plain draft is sent.</p>`);
+    else if (tool === "done") { enter("text", d.t); body("text", `<p class="plan">Briefing written. Sending it to the phone</p>`); wrote(d.t); }
+    else if (tool === "error") { end("Could not write the briefing"); wrote(0); }
+    show();
+  }, facts => {  // the finished run's facts: what the tenant helper flagged, and the text drafted for the manager
+    if (!facts) return;
+    const flag = (facts.tenant_flags || [])[0], draft = (facts.texts || [])[0];
+    if (stage("helpers").querySelector('[data-h="tenant-risk"]')) role("tenant-risk", flag ? `${esc(flag.tenant)}: ${esc(flag.risk)}` : "Nothing that changes the response", true);
+    if (draft) role("notify-writer", `Drafted, for the dispatcher to send: \u201c${esc(draft.text)}\u201d`, true);
   });
-  const end = (head, note) => { over = true; clearInterval(tick); wait(false); $("steps").classList.remove("live"); $("runhead").textContent = head; $("sentmsg").textContent = note; };
+  // where: the phone the briefing landed on (none: no briefing went out). foot: a line for the foot of the panel.
+  function end(head, where, foot = "") {
+    over = true; clearInterval(tick); wait(false); $("runhead").textContent = head; $("sentmsg").textContent = foot;
+    [...$("run").children].forEach(el => el.classList.remove("on"));
+    if (!where) return;
+    stage("text").classList.add("done"); stage("text").querySelector("time").textContent = $("clock").textContent;
+    body("text", `<p class="big">${where}</p>${noted ? "<p>A note is saved on this building for the next crew.</p>" : ""}`);
+    show();
+  }
   // The thread, from this dispatch on. The first text that is not the "got it" is the briefing (or the reason there is none).
   async function thread(key, real) {
     $("phonelink").href = `phone.html?id=${key}`; $("phonesub").textContent = real ? "The crew's phone" : "Phone simulator";
@@ -473,19 +539,22 @@ function follow(run, text) {
         for (const m of mine.slice(shown)) {
           shown++;
           if (m.from !== "primesight") continue;
+          // A recorded run answers at once, while its steps play back at the speed they were recorded: the briefing waits for them.
+          const brief = m.type === "text" && /^PRIMESIGHT\s*\|/.test(m.text), took = brief ? await written : 0;
           wait(false);
           if (m.type === "image") { const row = $("thread").querySelector(".pics") || $("thread").appendChild(Object.assign(document.createElement("div"), { className: "pics" }));
             const pic = document.createElement("div"); pic.className = "msg it pic"; pic.innerHTML = `<img src="${esc(API + m.url)}" alt="${esc(m.caption || "")}">`; row.append(pic); continue; }
           say("it", m.text);
           if (m.text.startsWith("PRIMESIGHT: got it")) wait(true);
-          else if (!over) /^PRIMESIGHT\s*\|/.test(m.text) ? end(`Delivered in ${Math.round(m.t - sentAt)} s`, real ? "Sent to the crew's phone" : "Sent to the phone simulator") : end("No briefing for this call", "");
+          else if (!over) brief ? end(`Delivered in ${Math.round(m.replayed ? took : m.t - sentAt)} s`, real ? "On the crew's phone" : "On the phone simulator", m.replayed ? "Replayed from a recorded run" : "")
+            : end("No briefing for this call");
         }
       } catch (e) { /* server busy: try again */ }
       if (over) quiet++;
       await new Promise(r => setTimeout(r, 800));
     }
   }
-  return { thread, stop: () => { over = true; clearInterval(tick); stopTrace(); } };
+  return { thread, stop: () => { over = true; clearInterval(tick); stopTrace(); wrote(0); } };
 }
 
 $("q").oninput = renderBuildings;

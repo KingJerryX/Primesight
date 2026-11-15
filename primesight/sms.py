@@ -52,7 +52,7 @@ def handle(phone, text, send, passcode=None, run_id=None):
             run_id = run_id or uuid.uuid4().hex[:12]
             out = server.brief_or_replay(t, run_id, passcode=passcode)
             store.put("thread:" + phone, {"run_id": run_id, "pid": out.get("property_id"), "call": t})
-            send({"type": "text", "text": out["briefing"], "run_id": run_id})
+            send({"type": "text", "text": out["briefing"], "run_id": run_id, "replayed": bool(out.get("replayed"))})
             for path, url, cap in zip(out.get("images") or [], out.get("image_urls") or [], ("Floorplan", "Aerial")):
                 send({"type": "image", "path": path, "url": url, "caption": f"{cap}: {out.get('property_id')}"})
             return
