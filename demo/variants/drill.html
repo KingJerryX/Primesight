@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="common.css">
 <link rel="stylesheet" href="site.css">
 <style>
-  /* The dispatcher round: a 911 call comes in line by line; the player finds the building, pins what the crew needs from
-     the data screens into a message, and sends it. primesight/grader.py grades it: code checks plus a deepagents team
+  /* The dispatcher round: a 911 call comes in line by line; the player finds the building, notes what the crew needs from
+     the data screens, then writes the dispatch message in their own words and sends it. primesight/grader.py grades it: code checks plus a deepagents team
      whose steps show while the player waits. Routes: primesight/drill.py and POST /game/grade. */
   [hidden] { display: none !important; }
   body { font-size: 16px; line-height: 1.5; }
@@ -32,10 +32,19 @@
   #call li:first-child { color: var(--dim); border-left-color: transparent; padding-left: 0; font-size: 14px; }
   #call li button { margin-left: 6px; }
   @keyframes in { from { opacity: 0; transform: translateY(6px); } }
-  #msg { width: 100%; box-sizing: border-box; min-height: 150px; resize: vertical; padding: 10px 12px; border: 1px solid var(--line); border-radius: 0;
-         background: #05050699; color: var(--text); font: 400 15px/1.45 var(--grot, inherit); }
+  #notes { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+  #notes li { display: flex; justify-content: space-between; align-items: start; gap: 10px; padding: 7px 10px; background: #ffffff0a; font-size: 14px; animation: in .3s var(--ease); }
+  #notes li.empty { background: none; padding: 0; color: var(--dim); }
+  #notes li button { padding: 0 4px; border: 0; background: none; color: var(--dim); font-size: 16px; line-height: 1; } #notes li button:hover { color: var(--text); }
+  #towrite { margin-top: auto; }
+  #tabs button.write { margin-left: auto; color: var(--accent); }
+  #v-write { flex-direction: column; gap: 12px; } #v-write.on { display: flex; }
+  #msg { flex: 1; width: 100%; max-width: 900px; box-sizing: border-box; min-height: 220px; resize: vertical; padding: 10px 12px; border: 1px solid var(--line); border-radius: 0;
+         background: #05050699; color: var(--text); font: 400 18px/1.5 var(--grot, inherit); }
   #msg:focus { outline: 1px solid var(--accent); }
-  .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; max-width: 900px; }
+  #v-plan label.show { display: flex; gap: 10px; align-items: center; margin: 0 0 12px; font: 400 14px var(--grot); text-transform: none; letter-spacing: 0; }
+  #signs { width: auto; margin: 0; flex: none; }
   #send { flex: 0 0 auto; }
   .pin { padding: 2px 8px; border: 1px solid var(--line); border-radius: 0; background: none; color: var(--dim); font: 400 11px var(--code); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
   .pin:hover { color: var(--text); border-color: var(--text); } .pin.used { color: var(--ok); border-color: var(--ok); }
@@ -109,7 +118,7 @@
 <section id="intro">
   <div class="caps" style="color: var(--accent)">Dispatcher training</div>
   <h1>Brief the crew</h1>
-  <p>A 911 call comes in. Find the building, pull what the crew needs from the data, and write the message you would send them. A team of AI graders checks it against the real building data.</p>
+  <p>A 911 call comes in. Find the building, note what the crew needs from the data, then write the message you would send them in your own words. A team of AI graders checks it against the real building data.</p>
   <button class="btn" id="go">Take a call</button>
   <p class="caps" id="err" role="alert"></p>
 </section>
@@ -119,9 +128,9 @@
     <div class="time"><div><div class="caps dim">Incoming call</div><div id="kind" class="caps" style="color: var(--accent)"></div></div>
       <div style="text-align: right"><output id="clock">0</output><div class="caps dim">target 60 s</div></div></div>
     <ol id="call" aria-live="polite"></ol>
-    <label class="caps dim" for="msg">Your message to the crew</label>
-    <textarea id="msg" placeholder="Pin facts from the screens on the right, or type. Location and emergency first."></textarea>
-    <div class="row"><span class="caps dim" id="words">0 words</span><button class="btn" id="send" disabled>Send to crew</button></div>
+    <div class="caps dim">Your notes</div>
+    <ul id="notes"></ul>
+    <button class="btn" id="towrite">Write the dispatch</button>
   </aside>
   <div id="stage">
     <div id="tabs" role="tablist"></div>
@@ -138,15 +147,22 @@
       <ul class="list" id="tenants"></ul>
     </div>
     <div class="view" id="v-plan">
-      <h2>Floor plan</h2><p class="note">Matterport 3D scan. Green: exit signs, red: fire alarm pull stations, both found by SAM 3 in the scan's photos.</p>
+      <h2>Floor plan</h2><p class="note">Floor map from the Matterport 3D scan. A scan usually covers one tenant's space, not the whole floor.</p>
       <div class="field"><label class="caps dim" for="pfloor">Floor</label><input class="num" id="pfloor" type="number" min="1"><button class="pin" id="pshow">Show</button><span id="pnote" class="dim"></span></div>
       <div id="planpins" class="field"></div>
+      <label class="show" hidden id="showsigns"><input type="checkbox" id="signs"> Show the exit signs the AI spotted in the scan's photos (signs, not exits: several can point to the same stair)</label>
       <div id="planbox"></div>
     </div>
     <div class="view" id="v-outside">
       <div id="map"></div>
-      <div id="hydnote">Orange dots are city hydrants. Click one to pin its distance from the building.</div>
+      <div id="hydnote">Orange dots are city hydrants. Click one to note its distance from the building.</div>
       <div id="aerial" hidden><img alt="Vexcel aerial photo of the building from above"><div class="caps dim">Vexcel aerial</div></div>
+    </div>
+    <div class="view" id="v-write">
+      <h2>Write the dispatch</h2>
+      <p class="note">In your own words: the text the crew reads on the way. Location and emergency first, then only what changes how they respond. They read it while driving, so keep it short. Your notes are on the left.</p>
+      <textarea id="msg" placeholder="e.g. Cardiac arrest, 36th floor, Wells Fargo Plaza, 1000 Louisiana St. Not breathing, CPR in progress. ..."></textarea>
+      <div class="row"><span class="caps dim" id="words">0 words</span><button class="btn" id="send" disabled>Send to crew</button></div>
     </div>
   </div>
 </section>
@@ -168,28 +184,31 @@
 <script>
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);  // all server data goes through this
-const TABS = { locate: ["Locate", "CoStar"], record: ["Record", "CoStar"], tenants: ["Tenants", "CoStar"], plan: ["Floor plan", "Matterport"], outside: ["Outside", "Vexcel, city"] };
+const TABS = { write: ["Write dispatch", ""], locate: ["Locate", "CoStar"], record: ["Record", "CoStar"], tenants: ["Tenants", "CoStar"], plan: ["Floor plan", "Matterport"], outside: ["Outside", "Vexcel, city"] };
 const TARGET = 60, LINE_MS = 3200;  // the dispatch standard: 60 s; a new caller line every 3.2 s
 let round, bld, t0, timer, lineTimer, allB = getBuildings().catch(() => []), M, marks = [], lastCase;
 window.drill = { get round() { return round; }, get building() { return bld; } };  // for the Playwright test
 
-// Insert a phrase at the cursor in the message, as its own sentence.
-let caret = null;  // where the player last put the cursor; null: pins go at the end
-function pinText(text, btn) {
-  const m = $("msg"), a = caret ?? m.value.length, before = m.value.slice(0, a).replace(/\s+$/, ""), after = m.value.slice(a);
-  const sep = before && !/[.,;:]$/.test(before) ? ". " : before ? " " : "";
-  m.value = before + sep + text + (after.trim() ? " " : "") + after.replace(/^\s+/, "");
-  const at = (before + sep + text).length; m.setSelectionRange(at, at); caret = caret === null ? null : at;
-  btn?.classList.add("used"); words();
+// Notes: what the player collects from the call and the screens. They stay on the left as a reference; the message is
+// written by hand in the Write tab, so choosing and phrasing is the player's work, not the page's.
+let notes = [];
+function addNote(text, btn) {
+  if (!notes.includes(text)) notes.push(text);
+  btn?.classList.add("used"); renderNotes();
 }
-const pinBtn = (text, label = "Pin") => `<button class="pin" data-pin="${esc(text)}">${esc(label)}</button>`;
-document.addEventListener("click", e => { const b = e.target.closest("[data-pin]"); if (b) pinText(b.dataset.pin, b); });
+function renderNotes() {
+  $("notes").innerHTML = notes.map((n, i) => `<li><span>${esc(n)}</span><button data-drop="${i}" aria-label="Remove note">&times;</button></li>`).join("") ||
+    `<li class="empty">Use Note on the call and the screens to collect what the crew needs.</li>`;
+}
+$("notes").addEventListener("click", e => { const b = e.target.closest("[data-drop]"); if (b) { notes.splice(+b.dataset.drop, 1); renderNotes(); } });
+const pinBtn = (text, label = "Note") => `<button class="pin" data-pin="${esc(text)}">${esc(label)}</button>`;
+document.addEventListener("click", e => { const b = e.target.closest("[data-pin]"); if (b) addNote(b.dataset.pin, b); });
 function words() {
   const n = $("msg").value.trim().split(/\s+/).filter(Boolean).length;
   $("words").textContent = `${n} word${n === 1 ? "" : "s"}`; $("send").disabled = !n;
 }
 $("msg").addEventListener("input", words);
-for (const ev of ["click", "keyup"]) $("msg").addEventListener(ev, () => caret = $("msg").selectionStart === $("msg").value.length ? null : $("msg").selectionStart);
+$("towrite").addEventListener("click", () => { tab("write"); $("msg").focus(); });
 
 function tab(name) {
   for (const b of $("tabs").children) b.setAttribute("aria-selected", b.dataset.v === name);
@@ -205,15 +224,15 @@ async function start() {
   lastCase = round.case; bld = null;
   clearInterval(timer); clearInterval(lineTimer);
   marks.forEach(m => m.remove()); marks = [];
-  $("kind").textContent = ""; $("msg").value = ""; caret = null; words();
+  $("kind").textContent = ""; $("msg").value = ""; words(); notes = []; renderNotes();
   $("q").value = ""; $("hits").innerHTML = ""; $("picked").innerHTML = "";
   for (const id of ["record", "tenants"]) $(id).innerHTML = `<li class="need">Find the building first (Locate).</li>`;
-  $("planbox").innerHTML = ""; $("planpins").innerHTML = ""; $("pnote").textContent = ""; $("pfloor").value = $("tfloor").value = "";
+  $("planbox").innerHTML = ""; $("planpins").innerHTML = ""; $("pnote").textContent = ""; $("pfloor").value = $("tfloor").value = ""; $("showsigns").hidden = true;
   $("aerial").hidden = true;
-  $("tabs").innerHTML = round.screens.map(s => `<button role="tab" data-v="${s}">${TABS[s][0]}<span class="src caps">${TABS[s][1]}</span></button>`).join("");
+  $("tabs").innerHTML = [...round.screens, "write"].map(s => `<button role="tab" data-v="${s}" class="${s === "write" ? "write" : ""}">${TABS[s][0]}<span class="src caps">${TABS[s][1]}</span></button>`).join("");
   $("intro").hidden = $("result").hidden = $("grading").hidden = true; $("play").hidden = false; document.body.classList.add("playing");
   tab("locate");
-  // The call comes in a line at a time; each line the crew should hear can be pinned as it is.
+  // The call comes in a line at a time; each line the crew should hear can be noted.
   $("call").innerHTML = "";
   let i = 0;
   const next = () => {
@@ -240,9 +259,9 @@ $("hits").addEventListener("click", async e => {
   try { bld = await api(`/drill/building/${b.dataset.pick}`); } catch (err) { $("picked").textContent = "That building's record could not load."; return; }
   const addr = bld.address.replace(/, [A-Z]{2}$/, "");
   $("picked").innerHTML = `<div class="caps dim">Selected</div><div>${esc(bld.name || addr)} / ${esc(addr)}</div>
-    <div class="field" style="margin: 8px 0 0">${pinBtn(addr, "Pin address")}${bld.name ? pinBtn(bld.name, "Pin name") : ""}</div>`;
+    <div class="field" style="margin: 8px 0 0">${pinBtn(addr, "Note address")}${bld.name ? pinBtn(bld.name, "Note name") : ""}</div>`;
   $("record").innerHTML = bld.record.map(([k, v]) => `<li><span><span class="caps dim">${esc(k)}</span><br>${esc(v)}</span>${pinBtn(`${k.toLowerCase()}: ${v}`)}</li>`).join("");
-  tenants(); $("planbox").innerHTML = ""; $("planpins").innerHTML = ""; $("pnote").textContent = "";
+  tenants(); $("planbox").innerHTML = ""; $("planpins").innerHTML = ""; $("pnote").textContent = ""; $("showsigns").hidden = true;
   marks.forEach(m => m.remove()); marks = []; $("aerial").hidden = true;
   if ($("v-outside").classList.contains("on")) outside();
 });
@@ -266,15 +285,14 @@ async function plan() {
   $("pnote").textContent = "Loading the scan..."; $("planbox").innerHTML = ""; $("planpins").innerHTML = "";
   let p;
   try { p = await api(`/floor/${bld.pid}/${f}`); } catch (e) { return $("pnote").textContent = "No 3D scan with a floor plan for this building."; }
-  const exits = p.points.filter(x => x.kind === "exit sign").length, pulls = p.points.filter(x => x.kind !== "exit sign").length;
+  const signs = p.points.filter(x => x.kind === "exit sign");
   $("pnote").textContent = p.exact ? `Floor ${p.floor}` : `No scan of floor ${f}: this is floor ${p.floor}`;
   $("planbox").innerHTML = `<img src="${esc(API + p.image)}" alt="Floor plan of floor ${esc(p.floor)} from the 3D scan">` +
-    p.points.map(x => `<span class="dot ${x.kind === "exit sign" ? "exit" : "pull"}" style="left:${x.x * 100}%;top:${x.y * 100}%" title="${esc(x.kind)}"></span>`).join("");
-  const on = p.exact ? `on floor ${p.floor}` : `on floor ${p.floor} (scan of a different floor)`;
-  $("planpins").innerHTML = (exits ? pinBtn(`${exits} exit sign${exits > 1 ? "s" : ""} ${on} in the 3D scan`, `Pin ${exits} exit signs`) : "") +
-    (pulls ? pinBtn(`${pulls} fire alarm pull station${pulls > 1 ? "s" : ""} ${on}`, `Pin ${pulls} pull stations`) : "") +
-    (!p.exact ? pinBtn(`3D scan is of floor ${p.floor}, not ${f}`, "Pin scan floor") : "");
+    signs.map(x => `<span class="dot exit" hidden style="left:${x.x * 100}%;top:${x.y * 100}%" title="exit sign"></span>`).join("");
+  $("signs").checked = false; $("showsigns").hidden = !signs.length;
+  $("planpins").innerHTML = !p.exact ? pinBtn(`3D scan is of floor ${p.floor}, not ${f}`, "Note scan floor") : "";
 }
+$("signs").addEventListener("change", () => $("planbox").querySelectorAll(".dot").forEach(d => d.hidden = !$("signs").checked));
 $("pshow").addEventListener("click", plan);
 $("pfloor").addEventListener("keydown", e => e.key === "Enter" && plan());
 
@@ -287,10 +305,10 @@ async function outside() {
   $("aerial").querySelector("img").onerror = () => $("aerial").hidden = true;
   await M.ready; M.map.resize();
   M.ring.setLngLat([o.lon, o.lat]).addTo(M.map); M.fly({ lat: o.lat, lon: o.lon, stories: Math.max(bld.stories || 0, 60) });
-  $("hydnote").textContent = o.hydrants.length ? "Orange dots are city hydrants. Click one to pin its distance from the building." : "No city hydrant layer for this city.";
+  $("hydnote").textContent = o.hydrants.length ? "Orange dots are city hydrants. Click one to note its distance from the building." : "No city hydrant layer for this city.";
   marks = o.hydrants.map(h => {
     const el = Object.assign(document.createElement("button"), { type: "button", className: "hyd", title: "Hydrant" });
-    el.setAttribute("aria-label", "Hydrant"); el.onclick = () => pinText(`hydrant ${h.m} m ${h.dir} of the building`, el);
+    el.setAttribute("aria-label", "Hydrant"); el.onclick = () => addNote(`hydrant ${h.m} m ${h.dir} of the building`, el);
     return new maplibregl.Marker({ element: el }).setLngLat([h.lon, h.lat]).addTo(M.map);
   });
 }

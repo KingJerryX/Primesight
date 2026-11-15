@@ -53,7 +53,7 @@ def answer_key(pid, mid):
             "tenants_nearby": [{"name": t["name"], "floor": t["floor"]} for t in b["tenants"]
                                if t["floor"] and t["floor"] != floor and abs(t["floor"] - floor) <= 2][:8],
             "hydrants": [{"m": round(m), "dir": d} for m, d, *_ in sorted(_hydrants(b))[:3]] if b["lat"] else [],
-            "exit_signs_on_floor": sum(g["label"] == "exit sign" for g in locate(v["sweeps"])),
+            "exit_signs_seen_in_scan": sum(g["label"] == "exit sign" for g in locate(v["sweeps"])),  # signs, not exits
             "contacts": [c["role"] for c in b["contacts"]],  # roles only: phone numbers never go to the model
             "crew_notes": open(notes, encoding="utf-8").read()[-1500:] if os.path.exists(notes) else ""}
 
@@ -99,8 +99,8 @@ def checks(key, incident, message):
                                               if cat == "medical" else "")) if "Freight" in el else "elevators on record")
     if cat in ("fire", "security", "hazmat") and key["tenants_on_floor"]:  # who is up there; a medical crew goes to the patient
         names = [n for n in (_tenant_word(x["name"]) for x in key["tenants_on_floor"] if not x["name"].startswith("Unknown")) if n]
-        add("needs", "who is on the floor", _has(t, *names),
-            "tenants on the floor: " + ", ".join(x["name"] for x in key["tenants_on_floor"][:4]))
+        add("needs", "who is on the floor", _has(t, *names) or bool(re.search(r"\b\d+\s*(?:people|occupants|staff|employees|workers)\b", t)),
+            "who is on the floor (a headcount or the tenants): " + ", ".join(x["name"] for x in key["tenants_on_floor"][:4]))
     if cat == "fire":
         if key["sprinklers"] and key["sprinklers"] != "Unknown":
             add("needs", "sprinklers", _has(t, "sprinkler"), f"sprinklers: {key['sprinklers']}")
@@ -111,8 +111,8 @@ def checks(key, incident, message):
             add("needs", "height", _has(t, str(key["stories"])) or _has(t, "high-rise", "high rise", "highrise"), f"{key['stories']} stories")
         if key["construction"]:
             add("needs", "construction", _has(t, key["construction"]), f"construction: {key['construction'].lower()}")
-    if cat in ("fire", "security") and key["exit_signs_on_floor"]:
-        add("needs", "exits", _has(t, "exit", "stair"), f"{key['exit_signs_on_floor']} exit signs found on the floor scan")
+    # No exit check: SAM 3 finds exit signs, not exits. Several signs point to one stair, a scan covers only part of a
+    # floor, and on two game floors one sign was counted twice (checked by eye, Nov 15). A count would grade noise.
 
     loc = (15 if out[0]["ok"] else 0) + (20 if out[1]["ok"] else 0)
     if wrong:
@@ -162,7 +162,7 @@ _KEYS = {}  # property id + floor -> answer key, for the fact-checker's tool
 
 def look_up_building(property_id: int, floor: int) -> str:
     """Primesight's data on one building and floor: CoStar record (address, stories, construction, sprinklers, elevators,
-    tenants on and near the floor), nearest city hydrants, exit signs SAM 3 found on the floor's 3D scan, and crew notes."""
+    tenants on and near the floor), nearest city hydrants, exit signs SAM 3 saw in the floor's 3D scan (signs, not exits: several can point to one stair, and a scan covers part of a floor), and crew notes."""
     k = _KEYS.get((int(property_id), int(floor)))
     return json.dumps(k, default=str) if k else json.dumps({"error": "no data for that building and floor in this round"})
 
@@ -345,7 +345,7 @@ if __name__ == "__main__":
     assert floors_said("floor 12 and level 3") == {12, 3} and floors_said("1000 Louisiana St") == set()
     assert _tenant_word("Ares Management Corp") == "ares" and _tenant_word("The Bank of Texas") == "texas"
     key = {"property_id": 1, "street_number": "1000", "street": "Louisiana St", "floor": 36, "stories": 71, "construction": "Steel",
-           "sprinklers": "yes", "elevators": {"Passenger": None, "Freight": None}, "exit_signs_on_floor": 3,
+           "sprinklers": "yes", "elevators": {"Passenger": None, "Freight": None}, "exit_signs_seen_in_scan": 3,
            "tenants_on_floor": [{"name": "Ares Management Corp"}], "hydrants": [{"m": 40, "dir": "NE"}]}
     good = "Cardiac arrest, 36th floor, Wells Fargo Plaza, 1000 Louisiana St. Freight elevator on record. Ares Management on 36."
     items, parts = checks(key, "cardiac_arrest", good)
@@ -354,13 +354,14 @@ if __name__ == "__main__":
     assert parts["location"] == 0 and parts["needs"] == 25 and "also says floor 35" in items[1]["why"]
     items, parts = checks(key, "cardiac_arrest", "Someone is hurt at Wells Fargo Plaza.")
     assert parts == {"location": 0, "emergency": 0, "needs": 0}
-    items, parts = checks(key, "structure_fire", "Fire on floor 36, 1000 Louisiana St, 71-story steel high-rise, sprinklered, hydrant 40 m NE, 3 exits.")
+    items, parts = checks(key, "structure_fire", "Fire on floor 36, 1000 Louisiana St, 71-story steel high-rise, sprinklered, hydrant 40 m NE.")
     assert [c["item"] for c in items if not c["ok"]] == ["elevator", "who is on the floor"], items
     unk = {**key, "tenants_on_floor": [{"name": "Unknown tenant"}, {"name": "Crystal CoWorks"}]}
     tenant_ok = lambda inc, msg: [c["ok"] for c in checks(unk, inc, msg)[0] if c["item"] == "who is on the floor"]
     assert tenant_ok("smoke", "Floor 36, 1000 Louisiana St, occupants unknown") == [False]  # "unknown" is not a tenant
     assert tenant_ok("smoke", "Floor 36, 1000 Louisiana St, Crystal CoWorks") == [True]
     assert tenant_ok("cardiac_arrest", "Floor 36, 1000 Louisiana St") == []  # a medical crew isn't graded on tenants
+    assert tenant_ok("smoke", "Floor 36, 1000 Louisiana St, about 21 people on the floor") == [True]  # a headcount answers it too
     assert grade("nope", "cardiac_arrest", "", "x") is None and grade("233899_jUnF84zghQk", "x", "call", "") is None
     print("grader checks pass")
     if len(sys.argv) == 4:
