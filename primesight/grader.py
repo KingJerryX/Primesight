@@ -98,7 +98,7 @@ def checks(key, incident, message):
             ("freight elevator on record" + (" (fits a stretcher; in tall buildings elevator access is where minutes go)"
                                               if cat == "medical" else "")) if "Freight" in el else "elevators on record")
     if key["tenants_on_floor"]:
-        names = [n for n in (_tenant_word(x["name"]) for x in key["tenants_on_floor"]) if n]
+        names = [n for n in (_tenant_word(x["name"]) for x in key["tenants_on_floor"] if not x["name"].startswith("Unknown")) if n]
         add("needs", "who is on the floor", _has(t, *names),
             "tenants on the floor: " + ", ".join(x["name"] for x in key["tenants_on_floor"][:4]))
     if cat == "fire":
@@ -312,6 +312,9 @@ if __name__ == "__main__":
     assert parts == {"location": 0, "emergency": 0, "needs": 0}
     items, parts = checks(key, "structure_fire", "Fire on floor 36, 1000 Louisiana St, 71-story steel high-rise, sprinklered, hydrant 40 m NE, 3 exits.")
     assert [c["item"] for c in items if not c["ok"]] == ["elevator", "who is on the floor"], items
+    unk = {**key, "tenants_on_floor": [{"name": "Unknown tenant"}, {"name": "Crystal CoWorks"}]}
+    assert not checks(unk, "cardiac_arrest", "Floor 36, 1000 Louisiana St, AED unknown")[0][4]["ok"]  # "unknown" is not a tenant
+    assert checks(unk, "cardiac_arrest", "Floor 36, 1000 Louisiana St, Crystal CoWorks")[0][4]["ok"]
     assert grade("nope", "cardiac_arrest", "", "x") is None and grade("233899_jUnF84zghQk", "x", "call", "") is None
     print("grader checks pass")
     if len(sys.argv) == 4:
