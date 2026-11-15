@@ -24,7 +24,7 @@ with sync_playwright() as p:
     page.on("pageerror", lambda e: OTHER.search(e.stack or str(e)) or errors.append(f"{e}\n{e.stack}"))
     page.on("request", lambda r: r.url.endswith("/game/grade") and graded.update(json.loads(r.post_data)))
     page.goto(f"{a.base}/home.html")
-    page.click("nav a:has-text('Game')")
+    page.click("nav a:has-text('Simulation')")
     page.wait_for_url("**/drill.html")
     page.click("#go")
     page.wait_for_selector("#caller-chips [data-caller-ask]", timeout=20_000)

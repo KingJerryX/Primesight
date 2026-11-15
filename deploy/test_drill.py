@@ -33,7 +33,7 @@ with sync_playwright() as p:
         page.goto(f"{a.base}/drill.html?case={case}&incident={inc}")
     else:
         page.goto(f"{a.base}/home.html")  # the way a player gets there: the Game link in the nav
-        page.click("nav a:has-text('Game')")
+        page.click("nav a:has-text('Simulation')")
         page.wait_for_url("**/drill.html")
     page.click("#go")
     page.wait_for_function("drill.round && document.querySelectorAll('#call li').length >= 2", timeout=20_000)
