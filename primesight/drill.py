@@ -4,20 +4,19 @@ crew needs from the data screens, and writes the dispatch message that primesigh
 GET /drill/start[?avoid=<case>]  -> {"case", "incident": {"id", "label", "category"}, "call": [caller lines], "screens"}
 GET /drill/building/<pid>        -> {"pid", "name", "address", "stories", "lat", "lon", "record": [[label, value]],
                                      "tenants": {floor: [{"name", "industry", "employees"}]}}
-GET /drill/outside/<pid>         -> {"lat", "lon", "hydrants": [{"lat", "lon", "m", "dir"}]}  nearest 12, city layer
 Grading is POST /game/grade (console_api.py) with this round's case and incident.
 
 Stateless on purpose: the round lives in the page, so any Vercel instance can serve any step. The building search runs
-in the page over GET /buildings; floor plans come from GET /floor/<pid>/<floor>; Vexcel from /aerial/<pid>/top.jpg.
+in the page over GET /buildings; floor plans come from GET /floor/<pid>/<floor>.
 """
 import random, re
 from . import costar
-from .console_api import FLOORS, _hydrants
+from .console_api import FLOORS
 
-# Screens per emergency category: only the data that changes this response. Hydrants and the aerial matter for fires;
-# tenants for fires (who is above, who needs help out), not for a medical crew going to one patient.
+# Screens per emergency category: only the data that changes this response. Tenants for fires (who is above, who needs
+# help out), not for a medical crew going to one patient. No hydrant screen: finding the nearest dot on a map was dull.
 SCREENS = {"medical": ["locate", "record", "plan"], "rescue": ["locate", "record", "plan"],
-           "fire": ["locate", "record", "tenants", "plan", "outside"]}
+           "fire": ["locate", "record", "tenants", "plan"]}
 INCIDENTS = {"cardiac_arrest": ("Cardiac arrest", "medical"), "fall": ("Fall", "medical"),
              "breathing": ("Breathing problem", "medical"), "elevator_entrapment": ("Elevator entrapment", "rescue"),
              "structure_fire": ("Structure fire", "fire"), "smoke": ("Smoke in building", "fire")}
@@ -84,24 +83,15 @@ def building(pid):
             "lon": b["lon"], "record": [[k, str(v)] for k, v in record if v not in (None, "")], "tenants": tenants}
 
 
-def outside(pid):
-    try:
-        b = costar.building(pid)
-    except (OSError, KeyError, ValueError):
-        return None
-    hyd = _hydrants(b)[:12] if b["lat"] else []
-    return {"lat": b["lat"], "lon": b["lon"], "hydrants": [{"lat": la, "lon": lo, "m": round(m), "dir": d} for m, d, la, lo in hyd]}
-
-
 def handle(path):
     """(status, body, content type) for a drill route, or None if the path isn't one."""
     J = "application/json"
     m = re.fullmatch(r"/drill/start(?:\?avoid=(\d+_\w{11}))?", path)
     if m:
         return 200, start(m.group(1)), J
-    m = re.fullmatch(r"/drill/(building|outside)/(\d{1,10})", path)
+    m = re.fullmatch(r"/drill/building/(\d{1,10})", path)
     if m:
-        out = (building if m.group(1) == "building" else outside)(int(m.group(2)))
+        out = building(int(m.group(1)))
         return (200, out, J) if out else (404, {"error": "no record for that building"}, J)
     return None
 
@@ -119,4 +109,5 @@ if __name__ == "__main__":
     assert b["tenants"][36][0]["name"] == "CME Group" and ["Elevators", "passenger, freight"] in b["record"], b["record"]
     assert all(not t["name"].startswith("Unknown") for ts in building(234022)["tenants"].values() for t in ts)
     assert handle("/drill/building/999999999")[0] == 404
-    print("drill checks pass;", len(outside(233899)["hydrants"]), "hydrants at 233899")
+    assert handle("/drill/outside/233899") is None
+    print("drill checks pass")

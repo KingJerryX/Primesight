@@ -5,7 +5,7 @@ python -m primesight.grader 233899_jUnF84zghQk cardiac_arrest "Cardiac arrest, f
 
 Two halves:
 - Code checks (score parts that can't be argued with): right address, right floor, the emergency named, and the facts
-  this emergency type needs that our data holds (freight elevator, tenants on the floor, sprinklers, hydrant...).
+  this emergency type needs that our data holds (freight elevator, tenants on the floor, sprinklers...).
   A wrong floor is the worst miss there is, so it zeroes the location score.
 - A deepagents grading team for what code can't judge: the orchestrator sends the message to three subagents in parallel:
   fact-checker (looks up the building with a tool and rules on every claim: supported, contradicted, not in our data),
@@ -124,9 +124,6 @@ def checks(key, incident, message):
     if cat == "fire":
         if key["sprinklers"] and key["sprinklers"] != "Unknown":
             add("needs", "sprinklers", _has(t, "sprinkler"), f"sprinklers: {key['sprinklers']}")
-        if key["hydrants"]:
-            h = key["hydrants"][0]
-            add("needs", "water", _has(t, "hydrant"), f"nearest hydrant {h['m']} m {h['dir']}")
         if key["stories"]:
             add("needs", "height", _has(t, str(key["stories"])) or _has(t, "high-rise", "high rise", "highrise"), f"{key['stories']} stories")
         if key["construction"]:

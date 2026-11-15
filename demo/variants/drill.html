@@ -5,7 +5,6 @@
 <title>Primesight Dispatcher</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono&display=swap">
-<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
 <link rel="stylesheet" href="common.css">
 <link rel="stylesheet" href="site.css">
 <style>
@@ -43,8 +42,6 @@
          background: #05050699; color: var(--text); font: 400 18px/1.5 var(--grot, inherit); }
   #msg:focus { outline: 1px solid var(--accent); }
   .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; max-width: 900px; }
-  #v-plan label.show { display: flex; gap: 10px; align-items: center; margin: 0 0 12px; font: 400 14px var(--grot); text-transform: none; letter-spacing: 0; }
-  #signs { width: auto; margin: 0; flex: none; }
   #send { flex: 0 0 auto; }
   .pin { padding: 2px 8px; border: 1px solid var(--line); border-radius: 0; background: none; color: var(--dim); font: 400 11px var(--code); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
   .pin:hover { color: var(--text); border-color: var(--text); } .pin.used { color: var(--ok); border-color: var(--ok); }
@@ -64,17 +61,8 @@
   .list li .dim { font-size: 13px; }
   #picked { margin: 0 0 18px; padding: 12px 14px; border: 1px solid var(--ok); max-width: 760px; } #picked:empty { display: none; }
   .need { padding: 40px 0; color: var(--dim); }
-  #v-outside { position: relative; padding: 0; } #map { position: absolute; inset: 0; }
-  #aerial { position: absolute; z-index: 2; right: 14px; bottom: 14px; width: min(34%, 300px); border: 1px solid var(--line); background: #05080c; }
-  #aerial img { display: block; width: 100%; } #aerial .caps { padding: 6px 8px; font-size: 10px; }
-  #hydnote { position: absolute; z-index: 2; top: 14px; left: 14px; max-width: 60%; padding: 8px 12px; background: #05080ccc; border: 1px solid var(--line); font-size: 14px; }
-  .hyd { width: 18px; height: 18px; padding: 0; border-radius: 50%; background: var(--accent); border: 2px solid #fff; cursor: pointer; }
-  .hyd.used { background: var(--ok); }
-  .ring { width: 20px; height: 20px; border-radius: 50%; border: 2px solid #fff; pointer-events: none; }
   .target { display: none; }
   #planbox { position: relative; max-width: 900px; } #planbox img { display: block; width: 100%; }
-  .dot { position: absolute; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; border: 2px solid #fff; }
-  .dot.exit { background: var(--ok); } .dot.pull { background: #ff3b3b; }
 
   /* Grading, modelled on the first responder page's step 3 (dispatch-judge.html): the graders' steps on the left as they
      happen, helper rows set in, the newest row pulsing; the crew's phone on the right with the message just sent. */
@@ -150,13 +138,7 @@
       <h2>Floor plan</h2><p class="note">Floor map from the Matterport 3D scan. A scan usually covers one tenant's space, not the whole floor.</p>
       <div class="field"><label class="caps dim" for="pfloor">Floor</label><input class="num" id="pfloor" type="number" min="1"><button class="pin" id="pshow">Show</button><span id="pnote" class="dim"></span></div>
       <div id="planpins" class="field"></div>
-      <label class="show" hidden id="showsigns"><input type="checkbox" id="signs"> Show the exit signs the AI spotted in the scan's photos (signs, not exits: several can point to the same stair)</label>
       <div id="planbox"></div>
-    </div>
-    <div class="view" id="v-outside">
-      <div id="map"></div>
-      <div id="hydnote">Orange dots are city hydrants. Click one to note its distance from the building.</div>
-      <div id="aerial" hidden><img alt="Vexcel aerial photo of the building from above"><div class="caps dim">Vexcel aerial</div></div>
     </div>
     <div class="view" id="v-write">
       <h2>Write the dispatch</h2>
@@ -178,15 +160,14 @@
 
 <section id="result" hidden></section>
 
-<script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
 <script src="common.js"></script>
 <script src="site.js"></script>
 <script>
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);  // all server data goes through this
-const TABS = { write: ["Write dispatch", ""], locate: ["Locate", "CoStar"], record: ["Record", "CoStar"], tenants: ["Tenants", "CoStar"], plan: ["Floor plan", "Matterport"], outside: ["Outside", "Vexcel, city"] };
+const TABS = { write: ["Write dispatch", ""], locate: ["Locate", "CoStar"], record: ["Record", "CoStar"], tenants: ["Tenants", "CoStar"], plan: ["Floor plan", "Matterport"] };
 const TARGET = 60, LINE_MS = 3200;  // the dispatch standard: 60 s; a new caller line every 3.2 s
-let round, bld, t0, timer, lineTimer, allB = getBuildings().catch(() => []), M, marks = [], lastCase;
+let round, bld, t0, timer, lineTimer, allB = getBuildings().catch(() => []), lastCase;
 window.drill = { get round() { return round; }, get building() { return bld; } };  // for the Playwright test
 
 // Notes: what the player collects from the call and the screens. They stay on the left as a reference; the message is
@@ -213,7 +194,6 @@ $("towrite").addEventListener("click", () => { tab("write"); $("msg").focus(); }
 function tab(name) {
   for (const b of $("tabs").children) b.setAttribute("aria-selected", b.dataset.v === name);
   for (const v of document.querySelectorAll(".view")) v.classList.toggle("on", v.id === "v-" + name);
-  if (name === "outside") outside();
 }
 $("tabs").addEventListener("click", e => { const b = e.target.closest("button"); if (b) tab(b.dataset.v); });
 
@@ -223,12 +203,10 @@ async function start() {
   catch (e) { $("err").textContent = "No call could be set up. Is the Primesight server running?"; $("go").disabled = false; return; }
   lastCase = round.case; bld = null;
   clearInterval(timer); clearInterval(lineTimer);
-  marks.forEach(m => m.remove()); marks = [];
   $("kind").textContent = ""; $("msg").value = ""; words(); notes = []; renderNotes();
   $("q").value = ""; $("hits").innerHTML = ""; $("picked").innerHTML = "";
   for (const id of ["record", "tenants"]) $(id).innerHTML = `<li class="need">Find the building first (Locate).</li>`;
-  $("planbox").innerHTML = ""; $("planpins").innerHTML = ""; $("pnote").textContent = ""; $("pfloor").value = $("tfloor").value = ""; $("showsigns").hidden = true;
-  $("aerial").hidden = true;
+  $("planbox").innerHTML = ""; $("planpins").innerHTML = ""; $("pnote").textContent = ""; $("pfloor").value = $("tfloor").value = "";
   $("tabs").innerHTML = [...round.screens, "write"].map(s => `<button role="tab" data-v="${s}" class="${s === "write" ? "write" : ""}">${TABS[s][0]}<span class="src caps">${TABS[s][1]}</span></button>`).join("");
   $("intro").hidden = $("result").hidden = $("grading").hidden = true; $("play").hidden = false; document.body.classList.add("playing");
   tab("locate");
@@ -261,9 +239,7 @@ $("hits").addEventListener("click", async e => {
   $("picked").innerHTML = `<div class="caps dim">Selected</div><div>${esc(bld.name || addr)} / ${esc(addr)}</div>
     <div class="field" style="margin: 8px 0 0">${pinBtn(addr, "Note address")}${bld.name ? pinBtn(bld.name, "Note name") : ""}</div>`;
   $("record").innerHTML = bld.record.map(([k, v]) => `<li><span><span class="caps dim">${esc(k)}</span><br>${esc(v)}</span>${pinBtn(`${k.toLowerCase()}: ${v}`)}</li>`).join("");
-  tenants(); $("planbox").innerHTML = ""; $("planpins").innerHTML = ""; $("pnote").textContent = ""; $("showsigns").hidden = true;
-  marks.forEach(m => m.remove()); marks = []; $("aerial").hidden = true;
-  if ($("v-outside").classList.contains("on")) outside();
+  tenants(); $("planbox").innerHTML = ""; $("planpins").innerHTML = ""; $("pnote").textContent = "";
 });
 
 // ---- Tenants: one floor at a time ----
@@ -285,37 +261,16 @@ async function plan() {
   $("pnote").textContent = "Loading the scan..."; $("planbox").innerHTML = ""; $("planpins").innerHTML = "";
   let p;
   try { p = await api(`/floor/${bld.pid}/${f}`); } catch (e) { return $("pnote").textContent = "No 3D scan with a floor plan for this building."; }
-  const signs = p.points.filter(x => x.kind === "exit sign");
   $("pnote").textContent = p.exact ? `Floor ${p.floor}` : `No scan of floor ${f}: this is floor ${p.floor}`;
-  $("planbox").innerHTML = `<img src="${esc(API + p.image)}" alt="Floor plan of floor ${esc(p.floor)} from the 3D scan">` +
-    signs.map(x => `<span class="dot exit" hidden style="left:${x.x * 100}%;top:${x.y * 100}%" title="exit sign"></span>`).join("");
-  $("signs").checked = false; $("showsigns").hidden = !signs.length;
+  $("planbox").innerHTML = `<img src="${esc(API + p.image)}" alt="Floor plan of floor ${esc(p.floor)} from the 3D scan">`;
   $("planpins").innerHTML = !p.exact ? pinBtn(`3D scan is of floor ${p.floor}, not ${f}`, "Note scan floor") : "";
 }
-$("signs").addEventListener("change", () => $("planbox").querySelectorAll(".dot").forEach(d => d.hidden = !$("signs").checked));
 $("pshow").addEventListener("click", plan);
 $("pfloor").addEventListener("keydown", e => e.key === "Enter" && plan());
 
-// ---- Outside (fires): city hydrants on the live map, the Vexcel photo of the building ----
-async function outside() {
-  if (!bld || marks.length || typeof maplibregl === "undefined") return;
-  if (!M) { M = makeMap("map"); M.ready = new Promise(r => M.map.on("load", r)); M.ring = new maplibregl.Marker({ element: Object.assign(document.createElement("div"), { className: "ring" }) }); }
-  let o; try { o = await api(`/drill/outside/${bld.pid}`); } catch (e) { return $("hydnote").textContent = "No outside data for this building."; }
-  $("aerial").querySelector("img").src = `${API}/aerial/${bld.pid}/top.jpg`; $("aerial").hidden = false;
-  $("aerial").querySelector("img").onerror = () => $("aerial").hidden = true;
-  await M.ready; M.map.resize();
-  M.ring.setLngLat([o.lon, o.lat]).addTo(M.map); M.fly({ lat: o.lat, lon: o.lon, stories: Math.max(bld.stories || 0, 60) });
-  $("hydnote").textContent = o.hydrants.length ? "Orange dots are city hydrants. Click one to note its distance from the building." : "No city hydrant layer for this city.";
-  marks = o.hydrants.map(h => {
-    const el = Object.assign(document.createElement("button"), { type: "button", className: "hyd", title: "Hydrant" });
-    el.setAttribute("aria-label", "Hydrant"); el.onclick = () => addNote(`hydrant ${h.m} m ${h.dir} of the building`, el);
-    return new maplibregl.Marker({ element: el }).setLngLat([h.lon, h.lat]).addTo(M.map);
-  });
-}
-
 // ---- Send: grade, showing the graders' steps as they happen (the first responder page's step 3, same trace stream) ----
 const GRADERS = { "fact-checker": "Fact-checker looks up every claim", "dispatch-coach": "Dispatch coach judges the delivery", "gap-finder": "Gap-finder looks for playbook ideas" };
-const SRC = [["costar", "CoStar"], ["matterport", "Matterport + SAM 3"], ["vexcel", "City hydrants"]];
+const SRC = [["costar", "CoStar"], ["matterport", "Matterport + SAM 3"], ["vexcel", "City data"]];
 function gradeStep(d) {  // [label, detail, row class, source tags]
   const [name, ...rest] = String(d.detail).split(": "), after = rest.join(": ");
   switch (d.step) {

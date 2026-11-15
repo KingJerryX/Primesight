@@ -37,7 +37,7 @@ with sync_playwright() as p:
     print("round:", r["case"], r["incident"]["label"], "| screens", r["screens"])
     assert [t.inner_text().split("\n")[0] for t in page.locator("#tabs button").all()] and \
         page.locator("#tabs button").count() == len(r["screens"]) + 1  # + Write dispatch
-    assert ("outside" in r["screens"]) == (cat == "fire") and ("tenants" in r["screens"]) == (cat == "fire")
+    assert "outside" not in r["screens"] and ("tenants" in r["screens"]) == (cat == "fire")
 
     # Locate: search the street, pick the right building, note its address
     street = page.evaluate(f"allB.then(l => l.find(x => x.pid === {pid}).address)")
@@ -54,25 +54,18 @@ with sync_playwright() as p:
         btn = page.locator(f"#record [data-pin^='{k}']")
         if btn.count():
             btn.click()
-    # Floor plan: no exit marks until the box is ticked
+    # Floor plan: the map alone, no exit-sign marks
     page.locator("#tabs button[data-v='plan']").click()
     page.fill("#pfloor", str(floor)); page.click("#pshow")
     page.wait_for_function("document.querySelector('#planbox img') || /No 3D scan/.test(document.querySelector('#pnote').textContent)", timeout=60_000)
     page.wait_for_timeout(800)
-    assert page.locator("#planbox .dot:visible").count() == 0
-    if page.locator("#signs").is_visible():
-        page.check("#signs"); assert page.locator("#planbox .dot:visible").count() > 0
+    assert page.locator("#planbox .dot, #signs").count() == 0
     shot(page, "2_plan")
     if cat == "fire":
         page.locator("#tabs button[data-v='tenants']").click()
         page.fill("#tfloor", str(floor))
         if page.locator("#tenants [data-pin]").count():
             page.click("#tenants [data-pin] >> nth=-1")  # the headcount line
-        page.locator("#tabs button[data-v='outside']").click()
-        page.wait_for_selector(".hyd", timeout=60_000)
-        page.wait_for_timeout(4000)  # the map flies in
-        page.locator(".hyd").first.click(force=True)
-        shot(page, "3_outside")
     notes = page.locator("#notes li:not(.empty) span").all_inner_texts()
     print("notes:", notes)
     assert notes and page.input_value("#msg") == "" and page.locator("#send").is_disabled()
