@@ -5,6 +5,8 @@ GET /aerial/<pid>/<view>.jpg   -> Vexcel image of the building; view is top, nor
 GET /floor/<pid>/<floor>       -> {"floor", "exact", "image", "aspect", "points": [{"kind", "x", "y"}]}: the scanned floor nearest to
                                   <floor>, its plan image, and where SAM 3 located exit signs and alarm pulls (x, y as fractions of the image)
 GET /floorimg/<scan id>.jpg    -> that floor plan image
+GET /scene/<pid>/<floor>       -> what the page draws for a floor before anything is sent: the /run facts (people floor by floor,
+                                  hydrants, staging) plus "wind" {"from", "mph"} and "elevators" [{"type", "count"}]
 
 The game (demo/variants/game.html): report the nearest hydrant, the exit signs and the elevators of a real building, on a clock.
 POST /game/start  {"avoid"?}                -> {"round", "building", "floor", "plan", "hydrants", "span_m", "record", "ask"}  (no answers); one of FLOORS
@@ -280,6 +282,16 @@ def post(path, body):
     return (200, out, JSON) if out is not None else (400, {"error": "no such round or route, or the round or name doesn't qualify"}, JSON)
 
 
+def scene(pid, floor):
+    """The same facts a briefing is written from (briefing.gather, ~3 s), shaped as GET /run shapes them, so the first
+    responder page can show what matters for the kind of emergency chosen while the dispatcher is still choosing."""
+    from . import briefing, server  # here, not at the top: server imports this module
+    f = briefing.gather(pid, floor)
+    w = f.get("wind")
+    return {**server.facts(f, None), "elevators": f["building"]["elevators"],
+            "wind": w and {"from": w["wind_direction_10m"], "mph": round(w["wind_speed_10m"])}}
+
+
 def handle(path):
     """(status, body, content type) for a console route, or None if the path isn't one."""
     if path == "/game/board":
@@ -298,6 +310,12 @@ def handle(path):
         except Exception:  # Matterport or the network is down: the page shows the map instead
             fv = None
         return (200, fv, JSON) if fv else (404, {"error": "no floor plan for this building"}, JSON)
+    m = re.fullmatch(r"/scene/(\d{1,10})/(\d{1,3})", path)
+    if m:
+        try:
+            return 200, scene(int(m.group(1)), int(m.group(2))), JSON
+        except Exception:  # unknown building, or its record is missing: the page keeps the plain floor plan
+            return 404, {"error": "no facts for this building"}, JSON
     m = re.fullmatch(r"/floorimg/(\w{11})\.jpg", path)
     if m:
         p = os.path.join(TMP, f"{m.group(1)}_plan.jpg")
@@ -307,6 +325,7 @@ def handle(path):
 
 if __name__ == "__main__":
     assert handle("/buildings") is None and handle("/aerial/1/../top.jpg") is None and handle("/aerial/1/up.jpg") is None
+    assert handle("/scene/1/1")[0] == 404 and handle("/scene/1/x") is None  # no such building; not a floor number
     assert len(FLOORS) == 5 and len({pid for pid, _ in FLOORS}) == 5
     for pid, mid in FLOORS:  # every game floor has its marked map, SAM 3 result and CoStar record on disk
         for f in (f"output/{pid}_{mid}_plan_marked.jpg", f"cache/vision/{mid}.json", f"cache/costar_{pid}.json"):

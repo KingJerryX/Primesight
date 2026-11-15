@@ -270,21 +270,24 @@ Steps:
 
 Files: /buildings/ crew notes (read only; use add_building_note), /playbook/ your rules, /scans/<scan id>.json SAM 3 results
 per scan point. gather_building already summarizes the scan results in "vision"; if vision is null there is no /scans file, so don't look.
-Reply with only the briefing text."""
+Reply with only the briefing text. If a grader sends it back, fix what it names and reply again with only the briefing,
+header first: no note about what you changed."""
 
 # Graded before anything goes out: a grader model checks the final text against these, and the agent revises on a fail.
 RUBRIC_BRIEF = """The final message is the crew briefing. Criteria:
-1. At most 12 lines, plain ASCII, no markdown or bullets.
+1. At most 8 lines, plain ASCII, no markdown or bullets: a header, the address, at most 4 fact lines, a NOT KNOWN line and
+   the closing line "Reply MORE for the rest, or ask a question."
 2. Every fact appears in a tool result in the transcript (gather_building, crew notes, tenant-risk). Nothing invented: no stair, standpipe or AED locations, names, entrances or arrival times that the tools did not give.
-3. It has a NOT KNOWN line, and if the 3D scan is from a different floor it says so.
+3. The NOT KNOWN line names at most 3 things, the ones that matter for this kind of call. If the floor map is from a different floor, the briefing says so.
 4. It states facts, not orders: no tactical instructions such as where to search or which stair to use.
 5. Tenant risks inferred from a name only are marked possible or "from name only".
-6. The first line after the header is the most urgent fact for this incident type (fire: people above; medical: elevator or patient location; hazmat: tenant risk; rescue: elevators or keys; security: people on and near the floor; utility: sprinklers or elevators).
-7. No 3D-capture words a firefighter wouldn't know: no "scan points", "scan start", "sweeps", and no walking distances
+6. The first fact line is the most urgent for this incident type (fire: people on and above the floor; medical: the stretcher elevator; hazmat: what tenants may store; rescue: elevators; security: people on and near the floor; utility: sprinklers and people below, or elevators).
+7. Only what this kind of call needs, as its skill lists. A medical briefing has no building age, frame, sprinklers, hydrants, staging or roof. No briefing has a 3D tour link, a list of tenants beyond the incident floor, or a line the skill does not list: those are sent when the crew replies MORE.
+8. No 3D-capture words a firefighter wouldn't know: no "scan points", "scan start", "sweeps", and no walking distances
    measured from where the scanner began. Positions are shown on the attached FLOOR MAP and APPROACH MAP instead."""
 
 RUBRIC_REPLY = """The final message answers a crew reply (the latest message starting "CREW:"). Criteria:
-1. At most 3 lines, plain ASCII.
+1. At most 3 lines, plain ASCII. If the crew asked for MORE, at most 8 lines of facts the first briefing left out.
 2. Facts come only from tool results or crew notes in the transcript; anything else is said to be not known.
 3. If the crew reported something about the building, add_building_note was called for it."""
 
@@ -348,7 +351,7 @@ def run(call_text, run_id=None, rubric=RUBRIC_BRIEF):
                     if not ns and m.type == "ai":  # grader feedback comes back as a human message: skip it
                         out = m
     for ev in (build().get_state(cfg).values.get("_rubric_evaluations") or [])[seen:]:  # this turn's grades
-        gaps = "; ".join(f"{c['name']}: {c.get('gap', '')}" for c in ev["criteria"] if not c["passed"])
+        gaps = "; ".join(c.get("gap") or c["name"] for c in ev["criteria"] if not c["passed"])  # what the grader found, in its words
         trace.log(run_id, "graded", f"{ev['result']}" + (f" - {gaps}" if gaps else ""))
     tin = sum(u.get("input_tokens", 0) for u in usage.usage_metadata.values())
     tout = sum(u.get("output_tokens", 0) for u in usage.usage_metadata.values())

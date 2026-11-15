@@ -1,14 +1,16 @@
 ---
 name: utility
-description: What a utility emergency briefing leads with (sprinkler water flow, flooding, power outage). Read this before writing any utility briefing.
+description: What a utility emergency briefing carries (sprinkler water flow, flooding, power outage). Read this before writing any utility briefing.
 ---
 
 # Utility briefing
 
-Order of lines, after the header:
-1. For water: SPRINKLERS (yes/no/unknown and type: wet, dry, ESFR) and the BELOW line (people on lower floors, since water runs down).
-   For power: ELEVATORS (entrapment risk) and stories.
-2. ON FLOOR: tenants on the floor, especially ones with equipment or servers (from tenant industries and descriptions).
-3. WHO TO CALL: property manager or building engineer with phone (shutoffs, generator, sprinkler riser).
-4. BUILDING: stories, year built, construction.
-5. NOT KNOWN: riser and shutoff locations, generator, unless a crew note gives them.
+Fact lines, in this order (3 is usual, 4 at most):
+1. For water: SPRINKLERS (yes/no/unknown and type: wet, dry, ESFR) and the people on lower floors, since water runs
+   down (the draft's BELOW line). For power: ELEVATORS (entrapment risk) and stories.
+2. ON FLOOR: tenants on the floor with equipment or servers (from tenant industries and descriptions). Skip it if none stands out.
+3. CALL: property manager or building engineer with phone (shutoffs, generator, sprinkler riser).
+
+NOT KNOWN: riser and shutoff locations, and the generator, unless a crew note gives them.
+
+Left for MORE: year built, frame, hydrants, staging, the floor map line, the 3D tour.

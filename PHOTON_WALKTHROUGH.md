@@ -50,3 +50,14 @@ Every text you send is mirrored on `phone.html?id=ph-<hash>`, and every run show
 - Shows the typing indicator while the agent works. Images go up as `multipart/related` attachments.
 - Conversations are keyed by a hash of the phone handle, so numbers never appear in logs, traces or page URLs.
 - `python -m primesight.photon_bridge selftest` runs the whole round trip against a local mock (no network).
+
+## 6. Send from the first responder page to a real phone
+By default the page's "Text it to the crew" button goes to the simulator (`phone.html?id=judge`). To make it text a real phone:
+
+1. That phone must already have texted the Photon line once (steps 3 above), because the shared line cannot text first.
+2. Add its number to `.env` (never to a committed file): `PRIMESIGHT_CREW_PHONE=+1XXXXXXXXXX`
+3. Restart the server.
+
+The phone then gets `DISPATCH: <the call>`, the acknowledgement, the briefing, the floor plan and the aerial. The page says
+"Sent to the crew's phone" and links to a mirror of the thread. If Photon can't reach the phone, the page says so.
+Remove the line from `.env` to go back to the simulator.

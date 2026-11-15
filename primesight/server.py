@@ -2,7 +2,8 @@
 
 python -m primesight.server            # http://localhost:8787
 POST /brief     {"text", "mode"?}     -> {"briefing", "images", "property_id", "run_id"}  mode "draft": no LLM, ~4 s
-POST /sms       {"phone", "text"}     -> phone simulator; replies on GET /sms/<phone>?after=n
+POST /sms       {"phone", "text", "run_id"?} -> phone simulator; replies on GET /sms/<phone>?after=n. A page that sends its own
+                                      run_id (12 hex) can follow GET /trace/<run_id> while the briefing is still being written
 GET  /latest, /buildings, /incidents  -> newest run_id; ranked buildings; incident catalog
 GET  /<page>.html                     -> demo pages (demo/ and demo/variants/)
 POST /ask       {"run_id", "text"}      -> {"answer"}  crew reply, continues that run's agent thread
@@ -34,6 +35,15 @@ def parse_call(text):
     t = text.lower()
     m = re.search(r"(\d+)(?:st|nd|rd|th)?\s*(?:floor|fl\b)", t) or re.search(r"floor\s*(\d+)", t)
     return (int(m.group(1)) if m else 1), classify(text)["category"]
+
+
+def more(th):
+    """The answer to MORE in a crew thread: every gathered line the first text left out, from the same facts. No agent."""
+    floor, incident = parse_call(th["call"])
+    f = briefing.last.get(th["pid"])
+    if not f or f["floor"] != floor:
+        f = briefing.gather(th["pid"], floor)
+    return briefing.compose(f, incident, classify(th["call"])["label"], full=True)
 
 
 def brief(text, run_id, mode=None):
@@ -168,8 +178,12 @@ def brief_or_replay(text, run_id, mode=None, passcode=None):
     (each trace line keeps its original t, so the projector can animate it). No passcode on the deploy: draft briefing."""
     store.put("latest", run_id)  # every projector follows the newest run (GET /latest)
     path = os.path.join(DEMO, hashlib.sha1(" ".join(text.lower().split()).encode()).hexdigest()[:16] + ".json")
-    if os.environ.get("PRIMESIGHT_REPLAY") and mode != "draft" and os.path.exists(path):
-        rec = json.load(open(path, encoding="utf-8"))
+    rec = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else None
+    # A recording made before the short briefing format is stale: run it again (which records it afresh) instead of
+    # replaying the old, longer text.
+    if rec and not rec["out"].get("briefing", "").rstrip().endswith(briefing.MORE_HINT):
+        rec = None
+    if os.environ.get("PRIMESIGHT_REPLAY") and mode != "draft" and rec:
         if rec["out"].get("_facts") is None:  # recorded before /run existed: rebuild facts once (~3 s, no LLM)
             floor, incident = parse_call(text)
             rec["out"]["_facts"] = facts(briefing.gather(rec["out"]["property_id"], floor), incident)
@@ -276,7 +290,17 @@ class H(BaseHTTPRequestHandler):
             if not re.fullmatch(r"[\w-]{1,32}", phone) or not str(body.get("text", "")).strip():
                 return self._send(400, {"error": "phone (a simulator id like sim-1, never a real number) and text are required"})
             from . import sms
-            sms.simulate(phone, body["text"], body.get("passcode"))
+            run_id = body.get("run_id") if re.fullmatch(r"[0-9a-f]{12}", str(body.get("run_id", ""))) else None
+            # The first responder console sends as "judge". With PRIMESIGHT_CREW_PHONE in .env that is a real phone:
+            # the dispatch and its briefing go there through Photon instead of to the simulator page.
+            crew = os.environ.get("PRIMESIGHT_CREW_PHONE") if phone == "judge" else None
+            if crew:
+                from . import photon_bridge
+                try:
+                    return self._send(200, {"ok": True, "real": True, "phone": photon_bridge.push(crew, body["text"], run_id)})
+                except RuntimeError as e:
+                    return self._send(409, {"error": str(e)})
+            sms.simulate(phone, body["text"], body.get("passcode"), run_id)
             return self._send(200, {"ok": True})
         if self.path == "/feedback":
             if not body.get("property_id") or not str(body.get("text", "")).strip():

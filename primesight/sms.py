@@ -3,6 +3,7 @@
 handle(phone, text, send) decides what the text is and calls send(msg) for each reply:
   {"type": "text", "text"}  or  {"type": "image", "url", "path", "caption"}
 - a dispatch (an address we can find)  -> quick ack, then the briefing, then floorplan + aerial
+- MORE in a thread with a run            -> every line the short briefing left out (no agent, no cost)
 - anything else in a thread with a run  -> crew follow-up, answered by the same agent thread (/ask)
 - "NOTE ..." / "REPORT ..."             -> saved as a building note; the next briefing leads with it
 - START / HELP                          -> how to use it
@@ -11,8 +12,8 @@ Safety: every failure still answers with something the crew can act on.
 import json, os, re, threading, time, uuid
 from . import server, store
 
-HELP = ("PRIMESIGHT: text a dispatch, e.g. 'Smoke on 30th floor, 1000 Louisiana St'. "
-        "Reply with questions about that building, or 'NOTE <what you found>' to update it for the next crew.")
+HELP = ("PRIMESIGHT: text a dispatch, e.g. 'Smoke on 30th floor, 1000 Louisiana St'. Reply MORE for the full details, "
+        "ask a question about that building, or send 'NOTE <what you found>' to update it for the next crew.")
 # In store (memory on a laptop, Supabase when deployed): "thread:<phone>" -> {"run_id", "pid", "call"};
 # stream "sms:<phone>" -> [{"n", "from", "text"|image fields, "t"}] for the simulator page.
 _lock = threading.Lock()
@@ -32,7 +33,8 @@ def looks_like_dispatch(text):
     return bool(re.search(r"\d+\s+\w+", text)) and json.loads(find_building(text))
 
 
-def handle(phone, text, send, passcode=None):
+def handle(phone, text, send, passcode=None, run_id=None):
+    """run_id: the id a dispatch runs under, when the sender chose one (the console follows its trace); else a new one."""
     t = " ".join(text.split())
     th = store.get("thread:" + phone)
     try:
@@ -42,10 +44,12 @@ def handle(phone, text, send, passcode=None):
         if m and th:
             server.add_note(th["pid"], m.group(2))
             return send({"type": "text", "text": "PRIMESIGHT: noted for this building. The next briefing leads with it."})
+        if t.upper().rstrip("?.!") in ("MORE", "DETAILS") and th:
+            return send({"type": "text", "text": server.more(th)})
         hits = looks_like_dispatch(t)
         if hits:
             send({"type": "text", "text": f"PRIMESIGHT: got it. Building the briefing for {hits[0]['address']} (about 30-60 s)."})
-            run_id = uuid.uuid4().hex[:12]
+            run_id = run_id or uuid.uuid4().hex[:12]
             out = server.brief_or_replay(t, run_id, passcode=passcode)
             store.put("thread:" + phone, {"run_id": run_id, "pid": out.get("property_id"), "call": t})
             send({"type": "text", "text": out["briefing"], "run_id": run_id})
@@ -59,11 +63,11 @@ def handle(phone, text, send, passcode=None):
         send({"type": "text", "text": f"PRIMESIGHT: briefing failed ({type(e).__name__}). Proceed on standard procedure."})
 
 
-def simulate(phone, text, passcode=None):
+def simulate(phone, text, passcode=None, run_id=None):
     """Phone simulator: log the crew's text, answer in the background so the page can poll.
     On Vercel there is no background (the instance freezes after the response): answer inside the request instead."""
     log(phone, "crew", {"type": "text", "text": text})
-    args = (phone, text, lambda msg: log(phone, "primesight", msg), passcode)
+    args = (phone, text, lambda msg: log(phone, "primesight", msg), passcode, run_id)
     if os.environ.get("VERCEL"):
         return handle(*args)
     threading.Thread(target=handle, args=args, daemon=True).start()
@@ -80,6 +84,9 @@ if __name__ == "__main__":
     assert "no address" in out[-1]["text"]
     handle("+15550000000", "Smoke reported on 37th floor, 1000 Louisiana St Houston", out.append)
     assert out[0 + 2]["text"].startswith("PRIMESIGHT: got it") and "FLOOR 37" in out[3]["text"], out
+    assert len(out[3]["text"].splitlines()) <= 8 and out[3]["text"].endswith(__import__("primesight.briefing").briefing.MORE_HINT), out[3]["text"]
+    handle("+15550000000", "more", out.append)
+    assert out[-1]["text"].startswith("MORE") and "3D TOUR" in out[-1]["text"] or "INSIDE" in out[-1]["text"], out[-1]
     handle("+15550000000", "NOTE stairwell B door sticks", out.append)
     assert out[-1]["text"].startswith("PRIMESIGHT: noted")
     print("\n".join(m.get("text") or m["url"] for m in out))
