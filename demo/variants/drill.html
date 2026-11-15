@@ -168,7 +168,23 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};
 const TABS = { write: ["Write dispatch", ""], locate: ["Locate", "CoStar"], record: ["Record", "CoStar"], tenants: ["Tenants", "CoStar"], plan: ["Floor plan", "Matterport"] };
 const TARGET = 60, LINE_MS = 3200;  // the dispatch standard: 60 s; a new caller line every 3.2 s
 let round, bld, t0, timer, lineTimer, allB = getBuildings().catch(() => []), lastCase;
-window.drill = { get round() { return round; }, get building() { return bld; } };  // for the Playwright test
+// The page's hooks: each game segment (drill-caller.js, drill-lineup.js, drill-crew.js, drill-rival.js) plugs in here
+// from its own file, so segments never edit this page.
+//   drill.on("start", round)          after a round is set up (tabs drawn, call started)
+//   drill.on("picked", building)      after the player selects a building (Locate or any segment via drill.pick)
+//   drill.on("sent", {message, gid, thread, round})   when the message goes to the graders; thread is the crew phone.
+//                                     A returned promise holds the result screen until it settles (at most 90 s).
+//   drill.on("result", {g, message, el, round})       after the result screen is drawn: append into el
+//   drill.customCall = (round, {callEl, line(text, noteable), reveal()}) => {}   replaces the scripted call
+//   drill.callText = () => string     what the grader is told the caller said (default: the scripted lines)
+//   drill.addTab(key, label, source, viewEl, {first})  a screen of your own, shown in every round
+//   drill.pick(pid), drill.addNote(text), drill.pinBtn(text, label), drill.tab(name), drill.esc(s), api(path, body)
+const hooks = {}, extraTabs = [];
+const emit = (ev, arg) => (hooks[ev] || []).map(f => { try { return f(arg); } catch (e) { console.error(ev, e); } });
+window.drill = { get round() { return round; }, get building() { return bld; },
+  on: (ev, f) => (hooks[ev] ||= []).push(f), customCall: null, callText: null,
+  addTab(key, label, source, viewEl, opt = {}) { TABS[key] = [label, source]; viewEl.id = "v-" + key; viewEl.classList.add("view"); $("stage").append(viewEl); extraTabs[opt.first ? "unshift" : "push"]({ key, first: !!opt.first }); },
+  pick: pid => pickBuilding(pid), addNote: t => addNote(t), pinBtn: (t, l) => pinBtn(t, l), tab: n => tab(n), esc: s => esc(s) };
 
 // Notes: what the player collects from the call and the screens. They stay on the left as a reference; the message is
 // written by hand in the Write tab, so choosing and phrasing is the player's work, not the page's.
@@ -207,12 +223,15 @@ async function start() {
   $("q").value = ""; $("hits").innerHTML = ""; $("picked").innerHTML = "";
   for (const id of ["record", "tenants"]) $(id).innerHTML = `<li class="need">Find the building first (Locate).</li>`;
   $("planbox").innerHTML = ""; $("planpins").innerHTML = ""; $("pnote").textContent = ""; $("pfloor").value = $("tfloor").value = "";
-  $("tabs").innerHTML = [...round.screens, "write"].map(s => `<button role="tab" data-v="${s}" class="${s === "write" ? "write" : ""}">${TABS[s][0]}<span class="src caps">${TABS[s][1]}</span></button>`).join("");
+  const screens = [...extraTabs.filter(t => t.first).map(t => t.key), ...round.screens, ...extraTabs.filter(t => !t.first).map(t => t.key), "write"];
+  $("tabs").innerHTML = screens.map(s => `<button role="tab" data-v="${s}" class="${s === "write" ? "write" : ""}">${TABS[s][0]}<span class="src caps">${TABS[s][1]}</span></button>`).join("");
   $("intro").hidden = $("result").hidden = $("grading").hidden = true; $("play").hidden = false; document.body.classList.add("playing");
-  tab("locate");
+  tab(screens[0]);
   // The call comes in a line at a time; each line the crew should hear can be noted.
   $("call").innerHTML = "";
-  let i = 0;
+  if (drill.customCall) drill.customCall(round, { callEl: $("call"), reveal: () => $("kind").textContent = round.incident.label,
+    line: (text, noteable = true) => { const li = document.createElement("li"); li.innerHTML = esc(text) + (noteable ? pinBtn(text.replace(/[.!?]+$/, "")) : ""); $("call").append(li); return li; } });
+  let i = drill.customCall ? round.call.length : 0;
   const next = () => {
     if (i >= round.call.length) return clearInterval(lineTimer);
     const line = round.call[i++], li = document.createElement("li");
@@ -223,7 +242,7 @@ async function start() {
   next(); lineTimer = setInterval(next, LINE_MS);
   t0 = performance.now();
   timer = setInterval(() => { const s = (performance.now() - t0) / 1000; $("clock").textContent = Math.floor(s); $("clock").classList.toggle("late", s > TARGET); }, 250);
-  $("q").focus();
+  emit("start", round);
 }
 
 // ---- Locate: search the buildings Primesight has, pick one ----
@@ -232,15 +251,16 @@ $("q").addEventListener("input", async () => {
   $("hits").innerHTML = list.map(b => `<li><span>${esc(b.name || b.address)}<span class="dim"> ${esc([b.address, b.city, b.stories && b.stories + " stories"].filter(Boolean).join(" / "))}</span></span>
     <button class="pin" data-pick="${b.pid}">Select</button></li>`).join("") || (q.length >= 2 ? `<li class="dim">No building matches. Try fewer words.</li>` : "");
 });
-$("hits").addEventListener("click", async e => {
-  const b = e.target.closest("[data-pick]"); if (!b) return;
-  try { bld = await api(`/drill/building/${b.dataset.pick}`); } catch (err) { $("picked").textContent = "That building's record could not load."; return; }
+$("hits").addEventListener("click", e => { const b = e.target.closest("[data-pick]"); if (b) pickBuilding(b.dataset.pick); });
+async function pickBuilding(pid) {
+  try { bld = await api(`/drill/building/${pid}`); } catch (err) { $("picked").textContent = "That building's record could not load."; return; }
   const addr = bld.address.replace(/, [A-Z]{2}$/, "");
   $("picked").innerHTML = `<div class="caps dim">Selected</div><div>${esc(bld.name || addr)} / ${esc(addr)}</div>
     <div class="field" style="margin: 8px 0 0">${pinBtn(addr, "Note address")}${bld.name ? pinBtn(bld.name, "Note name") : ""}</div>`;
   $("record").innerHTML = bld.record.map(([k, v]) => `<li><span><span class="caps dim">${esc(k)}</span><br>${esc(v)}</span>${pinBtn(`${k.toLowerCase()}: ${v}`)}</li>`).join("");
   tenants(); $("planbox").innerHTML = ""; $("planpins").innerHTML = ""; $("pnote").textContent = "";
-});
+  emit("picked", bld);
+}
 
 // ---- Tenants: one floor at a time ----
 function tenants() {
@@ -303,10 +323,12 @@ async function send() {
     $("steps").append(li);
     if (matchMedia("(pointer: fine)").matches) li.scrollIntoView({ block: "nearest", behavior: "smooth" });
   });
+  const held = emit("sent", { message, gid, thread: $("thread"), round }).filter(p => p && p.then);
   let g;
-  try { g = await api("/game/grade", { case: round.case, incident: round.incident.id, call: round.call.slice(1).join(" "), message, gid }); }
+  try { g = await api("/game/grade", { case: round.case, incident: round.incident.id, call: drill.callText ? drill.callText() : round.call.slice(1).join(" "), message, gid }); }
   catch (e) { stop(); clearInterval(tick); $("grading").hidden = true; $("send").disabled = false; return alert("Grading failed. Is the server running? Try sending again."); }
   await new Promise(r => setTimeout(r, 1500));  // let the last verdicts land before the result covers them
+  await Promise.race([Promise.allSettled(held), new Promise(r => setTimeout(r, 90_000))]);
   stop(); clearInterval(tick); $("steps").classList.remove("live");
   result(g, secs, message);
 }
@@ -329,9 +351,14 @@ function result(g, secs, message) {
     <button class="btn" id="again">Take another call</button>`;
   $("grading").hidden = true; $("result").hidden = false; $("result").scrollTop = 0;
   $("again").onclick = start;
+  emit("result", { g, message, el: $("result"), round });
 }
 
 $("go").addEventListener("click", start);
 </script>
+<script src="drill-caller.js"></script>
+<script src="drill-lineup.js"></script>
+<script src="drill-crew.js"></script>
+<script src="drill-rival.js"></script>
 </body>
 </html>

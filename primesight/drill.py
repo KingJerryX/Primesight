@@ -83,9 +83,36 @@ def building(pid):
             "lon": b["lon"], "record": [[k, str(v)] for k, v in record if v not in (None, "")], "tenants": tenants}
 
 
+# Game segments, one module each (primesight/<name>.py), each owning the routes under /drill/<name>/. A module may
+# define handle(path) for GETs and post(path, body) for POSTs, both returning (status, body, content type) or None.
+SEGMENTS = ("caller", "lineup", "crew", "rival")
+
+
+def _segments():
+    import importlib
+    for n in SEGMENTS:
+        yield importlib.import_module(f".{n}", __package__)
+
+
+def post(path, body):
+    """(status, body, content type) for a segment POST, or None."""
+    if not path.startswith("/drill/"):
+        return None
+    for mod in _segments():
+        r = getattr(mod, "post", None) and mod.post(path, body if isinstance(body, dict) else {})
+        if r:
+            return r
+    return None
+
+
 def handle(path):
     """(status, body, content type) for a drill route, or None if the path isn't one."""
     J = "application/json"
+    if path.startswith("/drill/"):
+        for mod in _segments():
+            r = getattr(mod, "handle", None) and mod.handle(path)
+            if r:
+                return r
     m = re.fullmatch(r"/drill/start(?:\?avoid=(\d+_\w{11}))?", path)
     if m:
         return 200, start(m.group(1)), J
