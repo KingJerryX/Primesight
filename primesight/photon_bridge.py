@@ -18,9 +18,9 @@ The shared line cannot text first: a phone must text it (START) before Primesigh
 import hashlib, json, mimetypes, os, sys, threading, time, urllib.error, urllib.parse, urllib.request, uuid
 from datetime import datetime, timedelta, timezone
 
-from . import sms, store
+from . import paths, sms, store
 
-API = os.environ.get("PHOTON_API", "https://api.photon.codes")
+API =os.environ.get("PHOTON_API", "https://api.photon.codes")
 
 
 def key_for(handle):
@@ -119,8 +119,11 @@ class Bridge:
         def send(msg):
             sms.log(phone, "primesight", msg)
             try:
-                if msg["type"] == "image" and msg.get("path") and os.path.exists(msg["path"]):
-                    self.p.send_image(space, sender, msg["path"])
+                if msg["type"] == "image":
+                    path = local_image(msg)
+                    if not path:
+                        raise FileNotFoundError(f"no local file for {msg.get('url')}")  # falls through to the link below
+                    self.p.send_image(space, sender, path)
                 elif msg["type"] == "text":
                     self.p.send_text(space, sender, msg["text"], parent)  # threads the reply under the crew's text
             except Exception as e:
@@ -185,6 +188,17 @@ def webhook(headers, raw):
     return 200, "answered"
 
 
+def local_image(msg):
+    """The image file on this machine, or None. A replayed recording carries the paths of the machine that recorded it,
+    so when that path is missing look for the same file name (the one in its /img/<name> URL) in our own output folder."""
+    p = msg.get("path")
+    if p and os.path.exists(p):
+        return p
+    name = os.path.basename(msg.get("url") or "")
+    p = os.path.join(paths.DATA, "output", name)
+    return p if name and os.path.exists(p) else None
+
+
 def public_url(path):
     return (os.environ.get("PRIMESIGHT_PUBLIC_URL", "").rstrip("/") + (path or "")) or "(image unavailable)"
 
@@ -198,6 +212,39 @@ def start_from_env():
     threading.Thread(target=b.run, daemon=True).start()
     print("[photon] bridge polling", file=sys.stderr)
     return b
+
+
+_threads = {}  # handle -> (space id, our sender id), found once from the phone's last text to the line
+
+
+def thread_of(p, handle, days=60):
+    """(space, sender) for texting a phone, taken from its most recent 1:1 text to the line; None if it has not texted
+    in that time. The shared line cannot text first, so a phone's own text is the only way in."""
+    if handle not in _threads:
+        since = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+        mine = [a for a in map(incoming, p.received(since)) if a and a[0] == handle]
+        if mine:
+            _threads[handle] = mine[-1][1:3]
+    return _threads.get(handle)
+
+
+def push(handle, text):
+    """A dispatch sent from the console to a real phone: text it the dispatch, then answer it there like any crew text
+    (ack, briefing, floor plan, aerial). Returns the simulator key that mirrors the thread (phone.html?id=<key>).
+    RuntimeError when Photon isn't set up, the phone has never texted the line, or Photon refuses the send."""
+    k, pid = os.environ.get("PHOTON_API_KEY"), os.environ.get("PHOTON_PROJECT_ID")
+    if not (k and pid):
+        raise RuntimeError("Photon is not set up on this server (PHOTON_API_KEY and PHOTON_PROJECT_ID)")
+    b = Bridge(Photon(k, pid, os.environ.get("PHOTON_API", API)))
+    th = thread_of(b.p, handle)
+    if not th:
+        raise RuntimeError("that phone has not texted the Photon line yet: text START to the line from it, then send again")
+    b.p.send_text(*th, "DISPATCH: " + text)  # the thread shows what the console sent; a refused send surfaces here
+    if os.environ.get("VERCEL"):  # serverless has no background: answer inside the request, as sms.simulate does
+        b.answer(handle, *th, text)
+    else:
+        threading.Thread(target=b.answer, args=(handle, *th, text), daemon=True).start()
+    return key_for(handle)
 
 
 def selftest():
@@ -273,8 +320,21 @@ def selftest():
     os.remove(img)
     assert got["attachments"][0]["contentType"] == "image/jpeg" and got["messages"][-1]["content"] == {"type": "attachment", "attachmentId": "pho_att_1"}
     assert "sms:" + key_for("sim-crew-handle") in store._ev and "sim-crew-handle" not in json.dumps(store._ev)
+    n = len(got["messages"])  # a dispatch pushed from the console: the DISPATCH line, then the same answer path
+    assert thread_of(p, "sim-crew-handle") == ("pho_spc_1", "pho_usr_line") and thread_of(p, "never-texted") is None
+    assert push("sim-crew-handle", "help") == key_for("sim-crew-handle")
+    for _ in range(50):
+        if len(got["messages"]) >= n + 2:
+            break
+        time.sleep(0.1)
+    assert got["messages"][n]["content"]["text"] == "DISPATCH: help" and got["messages"][n + 1]["content"]["text"] == sms.HELP
+    try:
+        push("never-texted", "help")
+        raise AssertionError("a phone that never texted the line must be refused")
+    except RuntimeError:
+        pass
     srv.shutdown()
-    print("photon bridge selftest ok: poll, paging, dedupe, group skip, reply route, typing, multipart upload")
+    print("photon bridge selftest ok: poll, paging, dedupe, group skip, reply route, typing, multipart upload, console push")
 
 
 if __name__ == "__main__":

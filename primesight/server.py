@@ -276,6 +276,15 @@ class H(BaseHTTPRequestHandler):
             if not re.fullmatch(r"[\w-]{1,32}", phone) or not str(body.get("text", "")).strip():
                 return self._send(400, {"error": "phone (a simulator id like sim-1, never a real number) and text are required"})
             from . import sms
+            # The first responder console sends as "judge". With PRIMESIGHT_CREW_PHONE in .env that is a real phone:
+            # the dispatch and its briefing go there through Photon instead of to the simulator page.
+            crew = os.environ.get("PRIMESIGHT_CREW_PHONE") if phone == "judge" else None
+            if crew:
+                from . import photon_bridge
+                try:
+                    return self._send(200, {"ok": True, "real": True, "phone": photon_bridge.push(crew, body["text"])})
+                except RuntimeError as e:
+                    return self._send(409, {"error": str(e)})
             sms.simulate(phone, body["text"], body.get("passcode"))
             return self._send(200, {"ok": True})
         if self.path == "/feedback":

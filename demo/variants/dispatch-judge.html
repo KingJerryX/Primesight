@@ -157,7 +157,7 @@
       <div class="rows" id="types"></div>
       <div id="text"></div>
       <div class="foot" id="foot2"><button class="ghost" data-go="1">Back</button><button class="primary" id="send" disabled>Text it to the crew</button></div>
-      <div class="foot" id="sent" hidden><b>Sent to the crew</b><a href="phone.html?id=judge" target="_blank">Open the phone</a><button class="ghost" id="again">New dispatch</button></div>
+      <div class="foot" id="sent" hidden><b id="sentmsg">Sent to the crew</b><a id="phonelink" href="phone.html?id=judge" target="_blank">Open the phone</a><button class="ghost" id="again">New dispatch</button></div>
     </section>
   </aside>
   <div id="stage">
@@ -326,8 +326,18 @@ $("types").onclick = e => { const r = e.target.closest(".row"); if (r) { s.i = I
 document.addEventListener("click", e => { const n = e.target.closest("[data-go]"); if (n && !n.disabled) go(+n.dataset.go); });
 $("send").onclick = async () => {
   $("send").disabled = true;
-  try { await api("/sms", { phone: "judge", text: $("text").textContent }); $("foot2").hidden = true; $("sent").hidden = false; }
-  catch (e) { $("text").textContent = "Could not send. Check that the Primesight server is running, then try again."; $("send").disabled = false; }
+  try {
+    // With a crew phone set on the server the text goes to that real phone through Photon; otherwise to the simulator page.
+    const r = await api("/sms", { phone: "judge", text: $("text").textContent });
+    $("sentmsg").textContent = r.real ? "Sent to the crew's phone" : "Sent to the crew";
+    $("phonelink").href = `phone.html?id=${r.real ? r.phone : "judge"}`; $("phonelink").textContent = r.real ? "See the thread" : "Open the phone";
+    $("foot2").hidden = true; $("sent").hidden = false;
+  } catch (e) {
+    // 409: Photon could not reach the phone (it has to text the line first). Anything else: the server itself.
+    $("text").textContent = /409/.test(e.message) ? "Could not reach the crew's phone. Text START to the Primesight line from that phone, then send again."
+      : "Could not send. Check that the Primesight server is running, then try again.";
+    $("send").disabled = false;
+  }
 };
 $("again").onclick = () => location.reload();
 // Keys. Up and down move through the buildings like a selection screen, left and right through the views of the chosen one,
