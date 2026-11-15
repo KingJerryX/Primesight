@@ -87,7 +87,10 @@ def build(only=None, force=False, mode=None, workers=4):
     from dotenv import load_dotenv
     load_dotenv(os.path.join(paths.ROOT, ".env"))
     import tempfile
-    from . import agent, briefing, grader, store, trace
+    from . import agent, briefing, grader, review, store, trace
+    tips = review.lessons()  # the team's accepted ideas live in Supabase: read them before the store goes local
+    review.lessons = lambda: tips
+    print(f"accepted playbook ideas in each run: {tips.count(chr(10) + '- ')}", file=sys.stderr)
     store.remote = False  # this run's traces and notes stay on this laptop, never in the deploy's Supabase
     briefing.OUT = trace.DIR = tempfile.mkdtemp(prefix="rival_")  # nor in the repo's output/ images and cache/trace/
     grader.queue = lambda *a: None  # Primesight's own text must not feed the playbook review queue
@@ -130,5 +133,5 @@ if __name__ == "__main__":
     assert post("/drill/rival", {"case": case, "incident": "x" * 5000})[0] == 400
     assert post("/drill/rival", {"case": [case], "incident": "fall"})[0] == 400
     r = post("/drill/rival", {"case": case, "incident": "fall"})
-    assert r[0] in (200, 404) and (r[0] == 404 or set(r[1]) == set(KEEP)), r
+    assert r[0] in (200, 404) and (r[0] == 404 or set(r[1]) == set(KEEP) | {"secs"} and "speed" in r[1]["parts"]), r
     print("rival checks pass")

@@ -2,16 +2,16 @@
  "case": "233899_jUnF84zghQk",
  "incident": "structure_fire",
  "sent": "Structure fire on the 36th floor, 1000 Louisiana St, Houston.",
- "text": "PRIMESIGHT | WORKING STRUCTURE FIRE | FLOOR 36\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nPEOPLE: ~16 on floor 36, ~1994 above on floors 37-71 (daytime headcount); no risk tenants flagged\nBUILDING: 71 stories, steel frame, sprinklers: yes\nHYDRANTS: H1 61 m N, H2 62 m NE (approach map)\nWIND: from ENE 6 mph, gusts 22, smoke drifts WSW (ground-level reading)\nNOT KNOWN: stair locations, standpipe and FDC locations, sprinkler type\nReply MORE for the rest, or ask a question.",
+ "text": "PRIMESIGHT | WORKING STRUCTURE FIRE | FLOOR 36 | alarm: not stated; smoke/flames: not stated\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nPEOPLE: office; ~16 on fl 36, ~1994 on fl 37-71 (daytime headcount); no hazmat or vulnerable flags\nBUILDING: 71 stories, steel, sprinklered; ELEV: passenger + freight cars (freight takes hose/gear)\nHYDRANTS: H1 61 m N, H2 62 m NE (approach map)\nWIND: from ENE 11 mph, gusts 25, smoke drifts WSW\nNOT KNOWN: stair locations, standpipe/FDC locations, recall: not on record\nReply MORE for the rest, or ask a question.",
  "source": "agent",
- "score": 83,
+ "score": 85,
  "out_of": 100,
  "parts": {
   "location": 35,
   "emergency": 10,
-  "needs": 14,
+  "needs": 18,
   "accuracy": 15,
-  "delivery": 9
+  "delivery": 7
  },
  "checks": [
   {
@@ -47,7 +47,7 @@
   {
    "part": "needs",
    "item": "elevator",
-   "ok": false,
+   "ok": true,
    "why": "freight elevator on record"
   },
   {
@@ -77,24 +77,24 @@
  ],
  "claims": [
   {
-   "claim": "Building is Wells Fargo Plaza at 1000 Louisiana St, Houston, TX",
+   "claim": "Floor 36 has about 16 people (daytime headcount)",
    "verdict": "supported",
-   "evidence": "Name and address match: Wells Fargo Plaza, 1000 Louisiana St, Houston, TX"
+   "evidence": "CME Group, 16 employees on floor 36"
   },
   {
-   "claim": "About 16 people on floor 36",
-   "verdict": "supported",
-   "evidence": "CME Group on floor 36, 16 employees"
-  },
-  {
-   "claim": "About 1994 people above on floors 37-71 (daytime headcount)",
+   "claim": "About 1994 people on floors 37-71",
    "verdict": "not_in_data",
-   "evidence": "Only Morgan Lewis (floor 38) is listed nearby. No headcount for floors 37-71."
+   "evidence": "No headcount for 37-71. An older note says ~2441 above floors 31-71."
   },
   {
-   "claim": "No risk tenants flagged",
-   "verdict": "supported",
-   "evidence": "Crew notes say tenant-risk: no flags. Those notes concern floor 30, not floor 36."
+   "claim": "Floor 36 is office occupancy",
+   "verdict": "not_in_data",
+   "evidence": "CME Group industry listed as Unknown"
+  },
+  {
+   "claim": "No hazmat or vulnerable flags",
+   "verdict": "not_in_data",
+   "evidence": "No flags listed for floor 36. The 'no flags' note is for floor 30."
   },
   {
    "claim": "Building has 71 stories",
@@ -102,14 +102,24 @@
    "evidence": "stories: 71"
   },
   {
-   "claim": "Steel frame construction",
+   "claim": "Construction is steel",
    "verdict": "supported",
    "evidence": "construction: Steel"
   },
   {
-   "claim": "Building has sprinklers",
+   "claim": "Building is sprinklered",
    "verdict": "supported",
    "evidence": "sprinklers: yes"
+  },
+  {
+   "claim": "Building has passenger and freight elevators",
+   "verdict": "supported",
+   "evidence": "Passenger and Freight both on record, count unknown"
+  },
+  {
+   "claim": "Freight car takes hose and gear",
+   "verdict": "not_in_data",
+   "evidence": "Notes only say freight elevator on record for stretcher use"
   },
   {
    "claim": "Hydrant H1 is 61 m north",
@@ -122,9 +132,9 @@
    "evidence": "hydrants: 62 m NE"
   },
   {
-   "claim": "Wind from ENE at 6 mph, gusts 22, smoke drifting WSW",
+   "claim": "Wind from ENE at 11 mph, gusts 25, smoke drifting WSW",
    "verdict": "not_in_data",
-   "evidence": "No wind or weather data in the building record"
+   "evidence": "No wind or weather data in building record"
   },
   {
    "claim": "Stair locations are not known",
@@ -132,29 +142,29 @@
    "evidence": "Crew notes: stair locations not known"
   },
   {
-   "claim": "Sprinkler type is not known",
-   "verdict": "supported",
-   "evidence": "Crew notes: sprinkler type not known"
+   "claim": "Standpipe/FDC locations are not known",
+   "verdict": "not_in_data",
+   "evidence": "No standpipe or FDC information in record"
   },
   {
-   "claim": "Standpipe and FDC locations are not known",
+   "claim": "Elevator recall is not on record",
    "verdict": "not_in_data",
-   "evidence": "No standpipe or FDC information in the record"
+   "evidence": "No recall information in record"
   }
  ],
  "delivery": {
-  "score": 9,
+  "score": 7,
   "nature_and_location_up_front": true,
   "severity_stated": false,
-  "feedback": "State severity in the first line (black smoke from a 36th-floor office, occupants possibly still above) and cut non-essential details like steel frame and wind gusts."
+  "feedback": "State severity in line one, such as black smoke from 36th floor offices and people possibly still above. Cut the wind and hydrant detail."
  },
  "feedback": [
-  "The ~1994 people above floors 37-71 is not in the building data, so the crew would be told an invented number. Give only what the record supports, such as CME Group's 16 on floor 36, and say the headcount above is unknown. Morgan Lewis on floor 38 is the only tenant listed above.",
-  "Say what the caller reported: black smoke from an office on 36, alarm sounding, and some people possibly still on the floor. Put that in the first line. The message never says the fire is serious or that people may be trapped.",
-  "Name CME Group as the tenant on floor 36 and include the freight elevator on record. Drop the wind, steel frame and story count, which the playbook doesn't ask for and which push out the stairs and standpipe needs."
+  "Line one says \"smoke/flames: not stated\", but the caller reported black smoke from an office and smoke from the windows. Lead with that. Also say people may still be above the fire, since the alarm is sounding and the caller isn't sure everyone got out.",
+  "Several claims aren't in the building data. The 1994 figure for floors 37-71 isn't on record (an older note says ~2441 for floors 31-71). \"Freight takes hose/gear\" and the wind details aren't on record either. Floor 36 is CME Group, so \"office\" and \"no vulnerable flags\" aren't confirmed. Drop them or mark them unverified.",
+  "Name the tenant on floor 36 (CME Group, 16 people) instead of just \"office\". Cut the wind and hydrant detail to keep the message short, and put the stairs and standpipes line, currently listed as not known, where the crew will see it."
  ],
  "suggestions_queued": 2,
- "brief_s": 41.3,
- "cost_usd": 0.6053,
- "built": "2026-11-15 01:24"
+ "brief_s": 80.4,
+ "cost_usd": 0.953,
+ "built": "2026-11-15 04:44"
 }

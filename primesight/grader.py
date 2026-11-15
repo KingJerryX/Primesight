@@ -104,15 +104,19 @@ def _digits(text):
     return _NUM.sub(one, text)
 
 
-def floors_said(text):
-    """Every floor the message names: "floor 36", "36th floor", "fl 36", "36F", "thirty-sixth floor", "floor six".
+def floor_hits(text):
+    """In order of appearance. Every floor the message names: "floor 36", "36th floor", "fl 36", "36F", "thirty-sixth floor", "floor six".
     "71 floors" is the building's height, not a floor; "flor"/"flr" count as floor."""
     text = _digits(text)
     text = re.sub(r"\b[a-z]{4,6}\b", lambda m: "floor" if m[0] not in ("flood", "flour", "floors", "flows", "flowr") and
                   m[0][0] == "f" and _close(m[0], "floor") else m[0], text)  # "flooor", "folor", "floir"
     fl = r"(?:floor|flor|floo|flr|fl\.?|level|lvl)"
     pats = [rf"\b{fl}\s*#?(\d{{1,3}})\b", r"\b(\d{1,3})(?:st|nd|rd|th)?\s*(?:floor|flor|flr|fl)\b(?!s)", r"\b(\d{1,3})f\b"]
-    return {int(n) for p in pats for n in re.findall(p, text)}
+    return [int(m[1]) for m in sorted((m for p in pats for m in re.finditer(p, text)), key=lambda m: m.start())]
+
+
+def floors_said(text):
+    return set(floor_hits(text))
 
 
 # What the caller said that changes the response: the crew must hear it (NIOSH: relay the caller's information).
@@ -145,10 +149,10 @@ def checks(key, incident, message):
     street_word = _tenant_word(key["street"]) or key["street"].lower()
     add("location", "address", _has(t, key["street_number"]) and _has(t, street_word),
         f"{key['street_number']} {key['street']} (the building name alone isn't enough: crews route to a street address)")
-    said = floors_said(t)
-    wrong = sorted(said - {key["floor"]})
-    add("location", "floor", key["floor"] in said and not wrong,
-        f"floor {key['floor']}" + (f"; the message also says floor {', '.join(map(str, wrong))}" if wrong else ""))
+    hits = floor_hits(t)  # the first floor named is where the crew goes; floors after it ("~119 on fl 8-11") are context
+    first = hits[0] if hits else None
+    add("location", "floor", first == key["floor"],
+        f"floor {key['floor']}" + (f"; the message sends the crew to floor {first} first" if first not in (None, key["floor"]) else ""))
     add("emergency", "what happened", _has(t, *ty["keywords"], *re.findall(r"[a-z]{4,}", ty["label"].lower())),
         f"name the emergency: {ty['label'].lower()}")
     for item, why, words in FROM_CALL.get(incident, []):
@@ -174,7 +178,7 @@ def checks(key, incident, message):
     # floor, and on two game floors one sign was counted twice (checked by eye, Nov 15). A count would grade noise.
 
     loc = (15 if out[0]["ok"] else 0) + (20 if out[1]["ok"] else 0)
-    if wrong:
+    if first not in (None, key["floor"]):
         loc = 0  # a wrong floor sends the crew to the wrong place: nothing else in the location counts
     needs = [c for c in out if c["part"] == "needs"]
     need_pts = round(25 * sum(c["ok"] for c in needs) / len(needs)) if needs else 25
@@ -438,7 +442,10 @@ if __name__ == "__main__":
     items, parts = checks(key, "cardiac_arrest", good)
     assert parts == {"location": 35, "emergency": 10, "needs": 25}, (parts, items)
     items, parts = checks(key, "cardiac_arrest", "Cardiac arrest, floor 35, 1000 Louisiana St. Freight elevator.")
-    assert parts["location"] == 0 and parts["needs"] == 8 and "also says floor 35" in items[1]["why"]
+    assert parts["location"] == 0 and parts["needs"] == 8 and "to floor 35 first" in items[1]["why"]
+    assert checks(key, "cardiac_arrest", good + " About 120 people on fl 37-40.")[1]["location"] == 35  # context floors
+    assert checks(key, "cardiac_arrest", "Floor 37 is clear. " + good)[1]["location"] == 0
+    assert floor_hits("floor 36, people on floors 37-40, fl 38") == [36, 38]
     items, parts = checks(key, "cardiac_arrest", "Someone is hurt at Wells Fargo Plaza.")
     assert parts == {"location": 0, "emergency": 0, "needs": 0}
     items, parts = checks(key, "structure_fire", "Fire on floor 36, 1000 Louisiana St, black smoke, people may still be inside. 71-story steel high-rise, sprinklered, hydrant 40 m NE.")

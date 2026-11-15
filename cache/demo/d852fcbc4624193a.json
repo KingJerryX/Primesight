@@ -1,0 +1,317 @@
+{
+ "text": "Smoke investigation on the 7th floor, 1225 Loop Fwy, Houston.",
+ "out": {
+  "briefing": "PRIMESIGHT | SMOKE INVESTIGATION | FLOOR 7 | alarm: not stated\n1225 N Loop Fwy W, Houston, TX\nPEOPLE: ~21 on 7, ~119 on 8-11 (daytime); possible counseling 8, therapy 9, rehab 10 (name only)\nBUILDING: 11 stories, steel frame, sprinklers yes (wet)\nHYDRANTS: H1 68 m N, H2 137 m W (approach map)\nWIND: from ENE 11 mph, gusts 28, smoke drifts WSW\nNOT KNOWN: stair locations; standpipe and FDC locations; smoke where/thick/smell, flames: not stated\nReply MORE for the rest, or ask a question.",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\236914_PfDGxZeDnkz_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\236914_aerial_approach.jpg"
+  ],
+  "image_urls": [
+   "/img/236914_PfDGxZeDnkz_plan_marked.jpg",
+   "/img/236914_aerial_approach.jpg"
+  ],
+  "property_id": 236914,
+  "texts": [],
+  "tenant_flags": [
+   {
+    "tenant": "Special Kids Care",
+    "floor": 5,
+    "risk": "vulnerable occupants",
+    "why": "The name suggests care for children, possibly with special needs. Children may need help evacuating. Floor 5 is 2 floors below the smoke, so confirm whether anyone is there and plan an assisted evacuation if needed.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Oaks Counseling Associates",
+    "floor": 8,
+    "risk": "vulnerable occupants",
+    "why": "The name suggests a counseling practice with clients on site. Floor 8 is directly above the smoke floor. Clients may be distressed or unfamiliar with the building's exits.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "PractiSage Therapist Collective",
+    "floor": 9,
+    "risk": "vulnerable occupants",
+    "why": "The name suggests a therapy practice with clients on site. Floor 9 is above the smoke floor, so clients may need help with exit routes.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Chirosports Performance & Rehab",
+    "floor": 10,
+    "risk": "vulnerable occupants",
+    "why": "The name suggests chiropractic or rehab patients, who may have limited mobility and need help on the stairs from floor 10. Hazmat note: no tenant on floor 7 or above has a description pointing to hazardous storage. The steel, pipe and electronics names on floors 6, 7 and 8 (Bunker Steel, Ranger Steel, Van Leeuwen Pipe and Tube, Memphis Electronic) are probably sales offices in an office building, but this is not confirmed. Overall, hazardous storage seems unlikely.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "fire",
+   "floor": 7,
+   "building": {
+    "name": null,
+    "address": "1225 Loop Fwy, Houston, TX",
+    "stories": 11,
+    "year_built": 1984,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 57,
+     "tenants": [
+      "Coldwell Banker Realty - Heights",
+      "Heights Chiropractic Center",
+      "High Tower Cafe & Deli",
+      "Johnson O'Connor Research Foundation",
+      "Salvato Interests"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 104,
+     "tenants": [
+      "EnerGeo Alliance",
+      "Greg Buchanan, RFC",
+      "Miller & Associates",
+      "Stellar International Commercial Real Estate",
+      "Texas A & M University",
+      "The Brokerage Inc."
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 20,
+     "tenants": [
+      "Court Reporters Clearinghouse",
+      "Denuna Law Firm",
+      "Grand Oak Capital Managment",
+      "HarmonyCares",
+      "Rack Route Technology, LLC",
+      "The Vanguard Agency",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 44,
+     "tenants": [
+      "Italy-American Chamber of Commerce of Texas",
+      "KSM",
+      "The McKiernan Group",
+      "Title Data Incorporated",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 5,
+     "people": 38,
+     "tenants": [
+      "Prime Tine Executives",
+      "Smith & Hassler",
+      "Special Kids Care",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 23,
+     "tenants": [
+      "Monshaugen & Van Huff, P.C.",
+      "Ranger Licensing",
+      "Ranger Steel",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 7,
+     "people": 21,
+     "tenants": [
+      "Bunker Steel Corporation",
+      "Condon & Company, P.C.",
+      "Luxury Homes Realty",
+      "Old Republic Title Insurance Company",
+      "Triton International Limited"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 11,
+      "exit sign": 9,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 0
+     }
+    },
+    {
+     "floor": 8,
+     "people": 50,
+     "tenants": [
+      "H2B, Inc.",
+      "Memphis Electronic",
+      "Oaks Counseling Associates",
+      "Van Leeuwen Pipe and Tube Group",
+      "Wealth Benefit Advisors"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 28,
+     "tenants": [
+      "PractiSage Therapist Collective",
+      "The Bayley Law Firm, PLLC",
+      "Title Data Incorporated",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 20,
+     "tenants": [
+      "Chirosports Performance & Rehab",
+      "Conceal Touch",
+      "Daiichi Jitsugyo America Inc",
+      "IMS Engineers",
+      "Patrick M. Flynn",
+      "Spearpoint Resources",
+      "Top Notch Garage Doors, LLC",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 21,
+     "tenants": [
+      "American Commercial Barge Line",
+      "C.R. Wannamaker Law PLLC",
+      "EUTEX International, Inc.",
+      "Gregory Law, PLLC",
+      "Ponderosa Oil & Gas, LLC",
+      "Tange, Mann & Garza"
+     ],
+     "scanned": false,
+     "seen": null
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 68,
+     "dir": "N",
+     "lat": 29.812429724684577,
+     "lon": -95.42095886874006
+    },
+    {
+     "m": 137,
+     "dir": "W",
+     "lat": 29.81174194859871,
+     "lon": -95.42242063922787
+    },
+    {
+     "m": 142,
+     "dir": "W",
+     "lat": 29.81227299068719,
+     "lon": -95.42238117760836
+    }
+   ],
+   "staging": [
+    {
+     "m": 78,
+     "dir": "S",
+     "lat": 29.811157100000003,
+     "lon": -95.42072295999998,
+     "score": 0.213
+    },
+    {
+     "m": 176,
+     "dir": "SE",
+     "lat": 29.811157099999996,
+     "lon": -95.41934967,
+     "score": 0.206
+    },
+    {
+     "m": 129,
+     "dir": "SW",
+     "lat": 29.811157100000003,
+     "lon": -95.422096255,
+     "score": 0.2
+    }
+   ],
+   "scan": {
+    "floor": 7,
+    "exact": true,
+    "link": "https://my.matterport.com/show/?m=PfDGxZeDnkz"
+   },
+   "vision": {
+    "scan_points": 11,
+    "scan_points_with": {
+     "exit sign": 9,
+     "stairs": 0,
+     "fire extinguisher": 0,
+     "fire alarm pull station": 0
+    },
+    "image_urls": [
+     "/img/vision/PfDGxZeDnkz/001_0.jpg",
+     "/img/vision/PfDGxZeDnkz/001_2.jpg",
+     "/img/vision/PfDGxZeDnkz/001_3.jpg",
+     "/img/vision/PfDGxZeDnkz/002_1.jpg",
+     "/img/vision/PfDGxZeDnkz/002_3.jpg",
+     "/img/vision/PfDGxZeDnkz/003_1.jpg",
+     "/img/vision/PfDGxZeDnkz/003_2.jpg",
+     "/img/vision/PfDGxZeDnkz/004_2.jpg",
+     "/img/vision/PfDGxZeDnkz/004_3.jpg",
+     "/img/vision/PfDGxZeDnkz/005_2.jpg",
+     "/img/vision/PfDGxZeDnkz/006_2.jpg",
+     "/img/vision/PfDGxZeDnkz/007_0.jpg"
+    ]
+   },
+   "texts": [],
+   "tenant_flags": [
+    {
+     "tenant": "Special Kids Care",
+     "floor": 5,
+     "risk": "vulnerable occupants",
+     "why": "The name suggests care for children, possibly with special needs. Children may need help evacuating. Floor 5 is 2 floors below the smoke, so confirm whether anyone is there and plan an assisted evacuation if needed.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Oaks Counseling Associates",
+     "floor": 8,
+     "risk": "vulnerable occupants",
+     "why": "The name suggests a counseling practice with clients on site. Floor 8 is directly above the smoke floor. Clients may be distressed or unfamiliar with the building's exits.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "PractiSage Therapist Collective",
+     "floor": 9,
+     "risk": "vulnerable occupants",
+     "why": "The name suggests a therapy practice with clients on site. Floor 9 is above the smoke floor, so clients may need help with exit routes.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Chirosports Performance & Rehab",
+     "floor": 10,
+     "risk": "vulnerable occupants",
+     "why": "The name suggests chiropractic or rehab patients, who may have limited mobility and need help on the stairs from floor 10. Hazmat note: no tenant on floor 7 or above has a description pointing to hazardous storage. The steel, pipe and electronics names on floors 6, 7 and 8 (Bunker Steel, Ranger Steel, Van Leeuwen Pipe and Tube, Memphis Electronic) are probably sales offices in an office building, but this is not confirmed. Overall, hazardous storage seems unlikely.",
+     "from_name_only": true
+    }
+   ],
+   "call": "Smoke investigation on the 7th floor, 1225 Loop Fwy, Houston."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Smoke investigation on the 7th floor, 1225 Loop Fwy, Houston.\"}\n{\"t\": 0.23, \"step\": \"address_lookup\", \"detail\": \"1225 N Loop Fwy W, Houston -> 236914\"}\n{\"t\": 3.26, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"1225 Loop Fwy, Houston\\\"}\"}\n{\"t\": 3.35, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/fire/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 3.42, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 5.57, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 236914, \\\"floor\\\": 7, \\\"incident\\\": \\\"fire\\\", \\\"incident_type\\\": \\\"smoke\\\"}\"}\n{\"t\": 5.64, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/236914.md\\\"}\"}\n{\"t\": 19.09, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: smoke investigation, floor 7, 1225 Loop Fwy, Houston (property 236914), 11-story office building. Flag occupants on floor 7 and floors above \"}\n{\"t\": 19.18, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"inside-scout\\\", \\\"description\\\": \\\"Scan id PfDGxZeDnkz (floor 7, 1225 Loop Fwy, Houston; smoke investigation). Find the nearest fire alarm pull station and the nearest exit sign. Report\"}\n{\"t\": 19.26, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"outside-scout\\\", \\\"description\\\": \\\"Property id 236914 (1225 Loop Fwy, Houston, 11 stories). Incident: smoke investigation on floor 7, could become a working fire. Report live wind (dir\"}\n{\"t\": 20.85, \"step\": \"helper:outside_now\", \"detail\": \"{\\\"property_id\\\": 236914}\"}\n{\"t\": 21.87, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"PfDGxZeDnkz\\\", \\\"target\\\": \\\"fire alarm pull station\\\"}\"}\n{\"t\": 21.98, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"PfDGxZeDnkz\\\", \\\"target\\\": \\\"exit sign\\\"}\"}\n{\"t\": 38.44, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 236914, \\\"note\\\": \\\"Smoke investigation call, floor 7. Briefing sent. Call did not state alarm, smoke location or thickness. Wind ENE 11 mph (gusts 28), 53F. H1 68-70 m N, H2 137 m W. No \"}\n{\"t\": 81.98, \"step\": \"graded\", \"detail\": \"needs_revision - NOT KNOWN lists stair locations; standpipe and FDC locations; and smoke location, thickness and smell. That is well over 3 items. Trim it to the 3 that matter most, or fold the smoke details into one item.; The WIND line adds the temperature (53F), which the fire skill's WIND line does not list (direction from, mph, smoke drift). Remove the temperature and leave it for MORE.; The smoke-details addition requires saying whether flames are visible. The briefing gives smoke location, thickness and smell as not in the call but never mentions flames. Add 'flames: not stated'.\"}\n{\"t\": 82.05, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 82.2, \"step\": \"usage\", \"detail\": \"158790 in / 9270 out tokens, ~$0.82\"}\n{\"t\": 82.29, \"step\": \"done\", \"detail\": \"8 lines, 2 images\"}\n"
+}

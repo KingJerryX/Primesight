@@ -1,0 +1,401 @@
+{
+ "text": "Elevator entrapment on the 4th floor, 1801 Century Park, Los Angeles.",
+ "out": {
+  "briefing": "PRIMESIGHT | ELEVATOR ENTRAPMENT | FLOOR 4\nCentury Park East - 1801 Century Park E, Los Angeles, CA\nELEVATORS: 8 passenger, 1 freight, escalators (count unknown); 25 stories\nSTUCK CAR: car/bank not stated; stopped at floor 4 per call; trapped: not stated; injuries: not stated\nKEYS: Property mgr Douglas Emmett - Century Park Plaza 555-085-6585; text queued for property manager (not sent)\nON FLOOR: 6 tenant listings, law/film/entertainment offices, ~57 people (daytime headcount)\nNOT KNOWN: machine room location, elevator car numbers, building engineer contact\nReply MORE for the rest, or ask a question.",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\247344_gacELDAHQEZ_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\247344_aerial_approach.jpg"
+  ],
+  "image_urls": [
+   "/img/247344_gacELDAHQEZ_plan_marked.jpg",
+   "/img/247344_aerial_approach.jpg"
+  ],
+  "property_id": 247344,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire Dept: Elevator entrapment, floor 4, 1801 Century Park E. Please meet the fire crew in the lobby with elevator keys and machine room access."
+   }
+  ],
+  "tenant_flags": [
+   {
+    "tenant": "Floor 4 (all tenants, summary)",
+    "floor": 4,
+    "risk": "No flags: no vulnerable-occupant, hazmat or unusual-occupancy concern found. Known headcount is 57.",
+    "why": "Listed headcounts: Structure Law Group 10, Wiesman Pirian 7, Bruin Biometrics 8, Simple House Films 10, Bluefox Entertainment 22, for a total of 57. One more tenant, also listed in suite 490, has no headcount given. All appear to be ordinary offices (law, film or entertainment, and a small biometrics company). Nothing in the data points to vulnerable people, hazardous materials or unusual occupancy. Nearby floors were also checked and nothing changes the response for a floor 4 elevator entrapment.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "rescue",
+   "floor": 4,
+   "building": {
+    "name": "Century Park East",
+    "address": "1801 Century Park , Los Angeles, CA",
+    "stories": 25,
+    "year_built": 1972,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 88,
+     "tenants": [
+      "DKC Public Relations",
+      "Network Capital Funding",
+      "Preferred Bank",
+      "Up Fitness"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 7,
+     "tenants": [
+      "Keystone Document Discovery"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 12,
+     "tenants": [
+      "Slesigner Communications"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 57,
+     "tenants": [
+      "Bluefox Entertainment",
+      "Bruin Biometrics LLC",
+      "Simple House Films",
+      "Structure Law Group, LLP",
+      "The Law Offices of Wiesman Pirian",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 41,
+      "exit sign": 25,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 0
+     }
+    },
+    {
+     "floor": 5,
+     "people": 7,
+     "tenants": [
+      "Sarraf Law Firm"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 12,
+     "tenants": [
+      "American Israel Public Affairs Committee"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 7,
+     "people": 77,
+     "tenants": [
+      "1st Avenue Capital",
+      "Avantus",
+      "Mediapro Studios US",
+      "Unisource National Lender Services"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 71,
+     "tenants": [
+      "Blue Lake Capital",
+      "Melmed Law Group",
+      "Much Shelist",
+      "Nosrati Law"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 42,
+     "tenants": [
+      "Comstock Realty Partners",
+      "Gary Iskowitz & Company",
+      "Natixis Corporate and Investment Banking"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 9,
+     "tenants": [
+      "Kids Capital Management Inc.",
+      "Remy Investors & Consultants Inc.",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 12,
+     "people": 47,
+     "tenants": [
+      "Novian & Novian LLP",
+      "Robert M. Baria",
+      "United Express Messengers Inc"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 13,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 14,
+     "people": 59,
+     "tenants": [
+      "AWAIM",
+      "Aaxis Group",
+      "Sherwood Holdings Inc.",
+      "Square Nine Capital"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 15,
+     "people": 12,
+     "tenants": [
+      "American Wool Services Inc.",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 16,
+     "people": 40,
+     "tenants": [
+      "TroyGould Attorneys"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 17,
+     "people": 40,
+     "tenants": [
+      "TroyGould Attorneys"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 18,
+     "people": 35,
+     "tenants": [
+      "Briones PC",
+      "Kasowitz",
+      "Lagstein Law Firm",
+      "Stonebridge Capital Management",
+      "Trade Commission Of Spain In LA",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 19,
+     "people": 38,
+     "tenants": [
+      "Mercer Global Advisors, Inc.",
+      "Ripple Industries LLC",
+      "Ruttenberg IP Law, A Professional Corporation",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 20,
+     "people": 8,
+     "tenants": [
+      "Odeon Capital Group",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 21,
+     "people": 41,
+     "tenants": [
+      "Harold Davidson & Associates, Inc.",
+      "Mather | Anderson",
+      "Optimus Properties, LLC",
+      "Sinay Co LLC"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 22,
+     "people": 60,
+     "tenants": [
+      "CI America"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 23,
+     "people": 65,
+     "tenants": [
+      "Kilpatrick Townsend And Stockton"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 24,
+     "people": 2,
+     "tenants": [
+      "Barrister Executive Suites"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 25,
+     "people": 2,
+     "tenants": [
+      "Barrister Executive Suites"
+     ],
+     "scanned": false,
+     "seen": null
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 37,
+     "dir": "N",
+     "lat": 34.06259108002213,
+     "lon": -118.41585280087881
+    },
+    {
+     "m": 70,
+     "dir": "W",
+     "lat": 34.062120006887326,
+     "lon": -118.41656336398337
+    },
+    {
+     "m": 71,
+     "dir": "SE",
+     "lat": 34.06186105794164,
+     "lon": -118.41521924170746
+    },
+    {
+     "m": 144,
+     "dir": "SE",
+     "lat": 34.06158440628542,
+     "lon": -118.41448991372982
+    }
+   ],
+   "staging": [
+    {
+     "m": 110,
+     "dir": "SE",
+     "lat": 34.06147694,
+     "lon": -118.415107725,
+     "score": 0.219
+    },
+    {
+     "m": 422,
+     "dir": "S",
+     "lat": 34.058632679999995,
+     "lon": -118.417167665,
+     "score": 0.21
+    },
+    {
+     "m": 151,
+     "dir": "S",
+     "lat": 34.060908095,
+     "lon": -118.41579437499999,
+     "score": 0.201
+    }
+   ],
+   "scan": {
+    "floor": 4,
+    "exact": true,
+    "link": "https://my.matterport.com/show/?m=gacELDAHQEZ"
+   },
+   "vision": {
+    "scan_points": 41,
+    "scan_points_with": {
+     "exit sign": 25,
+     "stairs": 0,
+     "fire extinguisher": 0,
+     "fire alarm pull station": 0
+    },
+    "image_urls": [
+     "/img/vision/gacELDAHQEZ/000_2.jpg",
+     "/img/vision/gacELDAHQEZ/001_2.jpg",
+     "/img/vision/gacELDAHQEZ/002_1.jpg",
+     "/img/vision/gacELDAHQEZ/002_2.jpg",
+     "/img/vision/gacELDAHQEZ/003_1.jpg",
+     "/img/vision/gacELDAHQEZ/005_0.jpg",
+     "/img/vision/gacELDAHQEZ/005_2.jpg",
+     "/img/vision/gacELDAHQEZ/007_2.jpg",
+     "/img/vision/gacELDAHQEZ/008_2.jpg",
+     "/img/vision/gacELDAHQEZ/008_3.jpg",
+     "/img/vision/gacELDAHQEZ/009_2.jpg",
+     "/img/vision/gacELDAHQEZ/010_2.jpg"
+    ]
+   },
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire Dept: Elevator entrapment, floor 4, 1801 Century Park E. Please meet the fire crew in the lobby with elevator keys and machine room access."
+    }
+   ],
+   "tenant_flags": [
+    {
+     "tenant": "Floor 4 (all tenants, summary)",
+     "floor": 4,
+     "risk": "No flags: no vulnerable-occupant, hazmat or unusual-occupancy concern found. Known headcount is 57.",
+     "why": "Listed headcounts: Structure Law Group 10, Wiesman Pirian 7, Bruin Biometrics 8, Simple House Films 10, Bluefox Entertainment 22, for a total of 57. One more tenant, also listed in suite 490, has no headcount given. All appear to be ordinary offices (law, film or entertainment, and a small biometrics company). Nothing in the data points to vulnerable people, hazardous materials or unusual occupancy. Nearby floors were also checked and nothing changes the response for a floor 4 elevator entrapment.",
+     "from_name_only": true
+    }
+   ],
+   "call": "Elevator entrapment on the 4th floor, 1801 Century Park, Los Angeles."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Elevator entrapment on the 4th floor, 1801 Century Park, Los Angeles.\"}\n{\"t\": 0.17, \"step\": \"address_lookup\", \"detail\": \"1801 Century Park E, Los Angeles -> 247344\"}\n{\"t\": 2.99, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"1801 Century Park, Los Angeles\\\"}\"}\n{\"t\": 3.08, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/rescue/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 4.78, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 247344, \\\"floor\\\": 4, \\\"incident\\\": \\\"rescue\\\", \\\"incident_type\\\": \\\"elevator_entrapment\\\"}\"}\n{\"t\": 4.85, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/247344.md\\\"}\"}\n{\"t\": 17.33, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: elevator entrapment, floor 4, Century Park East, 1801 Century Park E, Los Angeles (property 247344). Flag occupants that change the response \"}\n{\"t\": 17.39, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Incident: elevator entrapment, floor 4, Century Park East, 1801 Century Park E, Los Angeles. Building has 8 passenger elevators and 1 freight; car nu\"}\n{\"t\": 17.47, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"inside-scout\\\", \\\"description\\\": \\\"Scan id gacELDAHQEZ (floor 4, exact floor, Century Park East, 1801 Century Park E). Find the nearest exit sign(s) and report positions; also say if an\"}\n{\"t\": 17.53, \"step\": \"glob\", \"detail\": \"{\\\"pattern\\\": \\\"*\\\", \\\"path\\\": \\\"/buildings\\\"}\"}\n{\"t\": 19.89, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"gacELDAHQEZ\\\", \\\"target\\\": \\\"exit sign\\\"}\"}\n{\"t\": 20.02, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"gacELDAHQEZ\\\", \\\"target\\\": \\\"stairs\\\"}\"}\n{\"t\": 21.68, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire Dept: Elevator entrapment, floor 4, 1801 Century Park E. Please meet the fire crew in the lobby with elevator keys and machine room access.\\\"}\"}\n{\"t\": 30.37, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 247344, \\\"note\\\": \\\"Elevator entrapment reported at floor 4; call gave no car number, trapped count or injuries. Data: 8 passenger + 1 freight elevators, machine room location and car num\"}\n{\"t\": 46.04, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 46.13, \"step\": \"usage\", \"detail\": \"93019 in / 5344 out tokens, ~$0.48\"}\n{\"t\": 46.2, \"step\": \"done\", \"detail\": \"8 lines, 2 images\"}\n"
+}

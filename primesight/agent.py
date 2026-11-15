@@ -345,8 +345,12 @@ def run(call_text, run_id=None, rubric=RUBRIC_BRIEF):
     from .review import lessons  # ideas the team accepted on admin.html; "" when none
     extra = lessons() if not call_text.startswith("CREW:") else ""
     content = f"{call_text}\n\n{extra}" if extra else call_text
+    check = rubric  # the reviewer checks the accepted ideas too; rule 7 ("only what the skill lists") must not cut them
+    if extra and rubric == RUBRIC_BRIEF:
+        check = rubric + ("\n9. Each team-approved addition below that fits this kind of call is in the briefing: the fact, or the"
+                          " item marked not stated / not on record. These count as lines the skill lists for rule 7.\n" + extra)
     with get_usage_metadata_callback() as usage:  # counts every model call, subagents included
-        for ns, step in build().stream({"messages": [{"role": "user", "content": content}], "rubric": rubric},
+        for ns, step in build().stream({"messages": [{"role": "user", "content": content}], "rubric": check},
                                        cfg, stream_mode="updates", subgraphs=True):
             who = "helper" if ns else "agent"  # ns is non-empty inside a subagent
             for upd in step.values():

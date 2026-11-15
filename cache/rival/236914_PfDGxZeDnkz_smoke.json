@@ -2,16 +2,16 @@
  "case": "236914_PfDGxZeDnkz",
  "incident": "smoke",
  "sent": "Smoke in building on the 7th floor, 1225 Loop Fwy, Houston.",
- "text": "PRIMESIGHT  |  SMOKE INVESTIGATION  |  FLOOR 7\n1225 Loop Fwy, Houston, TX\nPEOPLE: ~21 on floor 7, ~119 above on floors 8-11 (daytime headcount)\nBUILDING: 11 stories, steel frame, built 1984, sprinklers: yes (wet)\nHYDRANTS: H1 68 m N (approach map)\nWIND: from E 8 mph, smoke drifts W\nNOT KNOWN: stair locations, standpipe and FDC locations\nReply MORE for the rest, or ask a question.",
- "source": "draft",
- "score": 80,
+ "text": "PRIMESIGHT | SMOKE INVESTIGATION | FLOOR 7 | alarm: not stated\n1225 N Loop Fwy W, Houston, TX\nPEOPLE: ~21 on fl 7, ~119 on fl 8-11 (daytime); possible rehab clinic fl 10, counseling fl 8-9 (name only)\nBLDG: 11 stories, steel, wet sprinklers. ELEV: 4 passenger, 1 freight (fits hose/gear); recall: not on record\nHYDRANTS: H1 68 m N, H2 137 m W (approach map)\nWIND: from ENE 12 mph, gusts 27, smoke drifts WSW, 53F\nNOT KNOWN: stair locations; standpipe/FDC locations; smoke source and flames (not in call)\nReply MORE for the rest, or ask a question.",
+ "source": "agent",
+ "score": 86,
  "out_of": 100,
  "parts": {
   "location": 35,
   "emergency": 10,
-  "needs": 14,
+  "needs": 18,
   "accuracy": 15,
-  "delivery": 6
+  "delivery": 8
  },
  "checks": [
   {
@@ -47,7 +47,7 @@
   {
    "part": "needs",
    "item": "elevator",
-   "ok": false,
+   "ok": true,
    "why": "freight elevator on record"
   },
   {
@@ -77,24 +77,29 @@
  ],
  "claims": [
   {
-   "claim": "Address is 1225 Loop Fwy, Houston, TX",
+   "claim": "Address is 1225 N Loop Fwy W, Houston, TX",
    "verdict": "supported",
-   "evidence": "Address: 1225 Loop Fwy, Houston, TX"
+   "evidence": "Record reads 1225 Loop Fwy, Houston, TX. The 'N' and 'W' are not in it."
   },
   {
    "claim": "About 21 people on floor 7",
    "verdict": "supported",
-   "evidence": "Tenant employees 5+10+1+5 = 21; Triton count is null"
+   "evidence": "Employees 5+10+1+5 = 21. Triton International's headcount is null."
   },
   {
-   "claim": "About 119 people above on floors 8-11",
+   "claim": "About 119 people on floors 8-11 (daytime)",
    "verdict": "not_in_data",
-   "evidence": "No tenant or headcount data for floors 8-11"
+   "evidence": "Only floor 7 tenants are listed. Nearby tenants are on floors 5-6 only."
   },
   {
-   "claim": "Headcount is a daytime figure",
+   "claim": "Possible rehab clinic on floor 10",
    "verdict": "not_in_data",
-   "evidence": "Employee counts have no time-of-day basis"
+   "evidence": "No tenant data for floor 10."
+  },
+  {
+   "claim": "Counseling tenant on floors 8-9",
+   "verdict": "not_in_data",
+   "evidence": "No tenant data for floors 8-9."
   },
   {
    "claim": "Building has 11 stories",
@@ -102,14 +107,9 @@
    "evidence": "stories: 11"
   },
   {
-   "claim": "Steel frame construction",
+   "claim": "Steel construction",
    "verdict": "supported",
    "evidence": "construction: Steel"
-  },
-  {
-   "claim": "Built in 1984",
-   "verdict": "supported",
-   "evidence": "year_built: 1984"
   },
   {
    "claim": "Building has sprinklers",
@@ -117,9 +117,29 @@
    "evidence": "sprinklers: yes"
   },
   {
-   "claim": "Sprinkler system is wet type",
+   "claim": "Sprinklers are the wet type",
    "verdict": "not_in_data",
-   "evidence": "Sprinkler type is not given, only 'yes'"
+   "evidence": "The record says only 'yes', with no system type."
+  },
+  {
+   "claim": "4 passenger elevators",
+   "verdict": "supported",
+   "evidence": "elevators Passenger: 4"
+  },
+  {
+   "claim": "1 freight elevator",
+   "verdict": "supported",
+   "evidence": "elevators Freight: 1"
+  },
+  {
+   "claim": "Freight elevator fits hose and gear",
+   "verdict": "not_in_data",
+   "evidence": "No elevator dimensions or capacity in the record."
+  },
+  {
+   "claim": "Elevator recall is not on record",
+   "verdict": "supported",
+   "evidence": "No recall information in the record."
   },
   {
    "claim": "Hydrant H1 is 68 m north",
@@ -127,34 +147,39 @@
    "evidence": "hydrants: 68 m N"
   },
   {
-   "claim": "Wind is from the east at 8 mph, smoke drifts W",
+   "claim": "Hydrant H2 is 137 m west",
+   "verdict": "supported",
+   "evidence": "hydrants: 137 m W"
+  },
+  {
+   "claim": "Wind from ENE at 12 mph, gusts 27, smoke drifting WSW, 53F",
    "verdict": "not_in_data",
-   "evidence": "No wind or weather data"
+   "evidence": "The record has no weather or wind data."
   },
   {
    "claim": "Stair locations are not known",
-   "verdict": "not_in_data",
-   "evidence": "No stair locations. Scan shows only 3 exit signs."
+   "verdict": "supported",
+   "evidence": "No stair locations. Only 3 exit signs seen in scan."
   },
   {
    "claim": "Standpipe and FDC locations are not known",
-   "verdict": "not_in_data",
-   "evidence": "No standpipe or FDC data in the record"
+   "verdict": "supported",
+   "evidence": "No standpipe or FDC data in the record."
   }
  ],
  "delivery": {
-  "score": 6,
+  "score": 8,
   "nature_and_location_up_front": true,
   "severity_stated": false,
-  "feedback": "State severity in the first line (e.g. 'electrical smoke thickening in hallway, alarm not sounding'), then trim wind, build year and filler."
+  "feedback": "Add severity right after the address: smoke thickening in the 7th-floor hallway, electrical odor, no flames seen. Then trim wind and hydrant detail."
  },
  "feedback": [
-  "Say what the caller reported: electrical burning smell, smoke thickening near the copy room, no flames seen, alarm not sounding. The crew needs this first, and your message leaves it out.",
-  "Remove the details that aren't in the building record: the 119 people above, the wind and smoke drift, and 'wet' sprinklers. Stating invented facts as real can mislead the crew. Give only what the data supports, such as sprinklers: yes.",
-  "Add what the crew needs on floor 7. Name the tenants (Bunker Steel, Condon & Company, Luxury Homes Realty, Triton International) and note the freight elevator on record. Also give the exit signs the scan shows and the pull stations. Don't say 'NOT KNOWN' about exits when the scan shows 3 exit signs."
+  "Say what the caller reported: electrical burning smell, smoke getting thicker by the copy room, no flames seen, and no alarm sounding. Your message says 'not in call' for flames and source, but the call covers both.",
+  "Name who is on floor 7: Bunker Steel Corporation, Condon & Company, P.C., Luxury Homes Realty and Triton International Limited. Triton has no headcount on record, so ~21 is a partial count. The crew also needs the exits and pull stations seen on the floor.",
+  "Remove details the building data doesn't back: ~119 people on floors 8-11, the rehab and counseling tenants, wet sprinklers, the freight elevator fitting hose and gear, and the wind and temperature. The address also has an extra 'N' and 'W' (the record says 1225 Loop Fwy)."
  ],
  "suggestions_queued": 2,
- "brief_s": 2.2,
- "cost_usd": 0.1123,
- "built": "2026-11-15 01:08"
+ "brief_s": 77.6,
+ "cost_usd": 0.9272,
+ "built": "2026-11-15 04:44"
 }

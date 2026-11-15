@@ -1,0 +1,780 @@
+{
+ "text": "Working structure fire on the 36th floor, 1000 Louisiana St, Houston.",
+ "out": {
+  "briefing": "PRIMESIGHT | WORKING STRUCTURE FIRE | FLOOR 36 | alarm, smoke, flames: not stated\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nPEOPLE: offices; ~16 on floor 36, ~1994 above on 37-71 (daytime headcount)\nBUILDING: 71 stories, steel frame, sprinklers: yes\nELEVATORS: passenger + freight, no counts; freight car can carry hose and gear; recall: not on record\nWATER/WIND: H1 61 m N, H2 62 m NE (approach map); wind ENE 13 mph gusts 30, smoke drifts WSW\nNOT KNOWN: stair locations, standpipe and FDC locations, sprinkler type\nReply MORE for the rest, or ask a question.",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\233899_jUnF84zghQk_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\233899_aerial_approach.jpg"
+  ],
+  "image_urls": [
+   "/img/233899_jUnF84zghQk_plan_marked.jpg",
+   "/img/233899_aerial_approach.jpg"
+  ],
+  "property_id": 233899,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire dept: working structure fire on floor 36, Wells Fargo Plaza, 1000 Louisiana St. Please meet the fire crew at the building with keys and fire control room access."
+   }
+  ],
+  "tenant_flags": [
+   {
+    "tenant": "CME Group",
+    "floor": 36,
+    "risk": "Known occupants on the fire floor",
+    "why": "This tenant is on floor 36, the fire floor. The data lists 16 employees in 2,424 sq ft. That is a normal office load, but it gives a headcount to check during search and evacuation. The data does not show any vulnerable occupants or hazardous materials.",
+    "from_name_only": false
+   },
+   {
+    "tenant": "Morgan Lewis",
+    "floor": 38,
+    "risk": "Occupants two floors above the fire",
+    "why": "This tenant is on floor 38, above the fire, so smoke and evacuation could affect them. There is no description or headcount. The name suggests a law firm, which would usually be a regular office, but that is a guess from the name only. Nothing points to hazardous materials or vulnerable occupants.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "fire",
+   "floor": 36,
+   "building": {
+    "name": "Wells Fargo Plaza",
+    "address": "1000 Louisiana St, Houston, TX",
+    "stories": 71,
+    "year_built": 1983,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 155,
+     "tenants": [
+      "Wells Fargo Bank"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 5,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 15,
+     "tenants": [
+      "Ares Management Corp"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 7,
+     "people": 155,
+     "tenants": [
+      "Wells Fargo Bank"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 161,
+     "tenants": [
+      "Wells Fargo Home Mortgage"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 20,
+     "tenants": [
+      "The BVA Group",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 74,
+      "exit sign": 26,
+      "stairs": 1,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 0
+     }
+    },
+    {
+     "floor": 12,
+     "people": 161,
+     "tenants": [
+      "Wells Fargo Advisors"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 13,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 14,
+     "people": 56,
+     "tenants": [
+      "Green Valley Construction",
+      "Riverstone Holdings"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 15,
+     "people": 0,
+     "tenants": [
+      "Sky Project Management"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 261,
+      "exit sign": 139,
+      "stairs": 8,
+      "fire extinguisher": 87,
+      "fire alarm pull station": 18
+     }
+    },
+    {
+     "floor": 16,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 17,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 18,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 19,
+     "people": 36,
+     "tenants": [
+      "Cawley, Gillespie & Associates",
+      "DLR Group",
+      "Infrastructure Engineering"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 20,
+     "people": 67,
+     "tenants": [
+      "Foley & Lardner"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 21,
+     "people": 67,
+     "tenants": [
+      "Foley & Lardner"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 22,
+     "people": 67,
+     "tenants": [
+      "Foley & Lardner"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 23,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 24,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 25,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 26,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 27,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 28,
+     "people": 116,
+     "tenants": [
+      "Clark Hill"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 29,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 30,
+     "people": 144,
+     "tenants": [
+      "NextDecade Corporation"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 31,
+     "people": 144,
+     "tenants": [
+      "NextDecade Corporation"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 32,
+     "people": 144,
+     "tenants": [
+      "NextDecade Corporation"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 33,
+     "people": 144,
+     "tenants": [
+      "NextDecade Corporation"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 34,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 35,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 36,
+     "people": 16,
+     "tenants": [
+      "CME Group"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 18,
+      "exit sign": 11,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 2
+     }
+    },
+    {
+     "floor": 37,
+     "people": 0,
+     "tenants": [],
+     "scanned": true,
+     "seen": {
+      "scan_points": 44,
+      "exit sign": 15,
+      "stairs": 0,
+      "fire extinguisher": 1,
+      "fire alarm pull station": 1
+     }
+    },
+    {
+     "floor": 38,
+     "people": 125,
+     "tenants": [
+      "Morgan Lewis"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 39,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 40,
+     "people": 125,
+     "tenants": [
+      "Morgan Lewis"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 41,
+     "people": 125,
+     "tenants": [
+      "Morgan Lewis"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 42,
+     "people": 125,
+     "tenants": [
+      "Morgan Lewis"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 43,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 44,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 45,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 46,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 47,
+     "people": 162,
+     "tenants": [
+      "PwC"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 48,
+     "people": 162,
+     "tenants": [
+      "PwC"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 49,
+     "people": 96,
+     "tenants": [
+      "Susman Godfrey"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 50,
+     "people": 96,
+     "tenants": [
+      "Susman Godfrey"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 51,
+     "people": 96,
+     "tenants": [
+      "Susman Godfrey"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 52,
+     "people": 45,
+     "tenants": [
+      "Next Wave Energy Partners"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 53,
+     "people": 0,
+     "tenants": [],
+     "scanned": true,
+     "seen": {
+      "scan_points": 115,
+      "exit sign": 43,
+      "stairs": 1,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 4
+     }
+    },
+    {
+     "floor": 54,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 55,
+     "people": 162,
+     "tenants": [
+      "PwC"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 56,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 57,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 58,
+     "people": 162,
+     "tenants": [
+      "PwC"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 59,
+     "people": 44,
+     "tenants": [
+      "Sidley Austin"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 60,
+     "people": 44,
+     "tenants": [
+      "Sidley Austin"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 61,
+     "people": 44,
+     "tenants": [
+      "Sidley Austin"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 62,
+     "people": 44,
+     "tenants": [
+      "Sidley Austin"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 86,
+      "exit sign": 34,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 1
+     }
+    },
+    {
+     "floor": 63,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 64,
+     "people": 37,
+     "tenants": [
+      "Polsinelli"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 65,
+     "people": 33,
+     "tenants": [
+      "England & Company",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 66,
+     "people": 120,
+     "tenants": [
+      "Greenberg Traurig LLP"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 67,
+     "people": 120,
+     "tenants": [
+      "Greenberg Traurig LLP"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 68,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 69,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 70,
+     "people": 30,
+     "tenants": [
+      "Cathexis"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 71,
+     "people": 0,
+     "tenants": [],
+     "scanned": true,
+     "seen": {
+      "scan_points": 49,
+      "exit sign": 21,
+      "stairs": 1,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 9
+     }
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 61,
+     "dir": "N",
+     "lat": 29.758996379044213,
+     "lon": -95.36810486959516
+    },
+    {
+     "m": 62,
+     "dir": "NE",
+     "lat": 29.758718239132076,
+     "lon": -95.367644427794
+    },
+    {
+     "m": 67,
+     "dir": "E",
+     "lat": 29.75834786024168,
+     "lon": -95.3675267822937
+    },
+    {
+     "m": 70,
+     "dir": "S",
+     "lat": 29.757831599054743,
+     "lon": -95.36826260511435
+    },
+    {
+     "m": 77,
+     "dir": "S",
+     "lat": 29.75781601360711,
+     "lon": -95.36792919513842
+    }
+   ],
+   "staging": [
+    {
+     "m": 491,
+     "dir": "SW",
+     "lat": 29.756330249999998,
+     "lon": -95.37265777500001,
+     "score": 0.232
+    },
+    {
+     "m": 365,
+     "dir": "W",
+     "lat": 29.758118555,
+     "lon": -95.37197112999999,
+     "score": 0.214
+    },
+    {
+     "m": 364,
+     "dir": "W",
+     "lat": 29.75871465,
+     "lon": -95.37197112999999,
+     "score": 0.212
+    }
+   ],
+   "scan": {
+    "floor": 36,
+    "exact": true,
+    "link": "https://my.matterport.com/show/?m=jUnF84zghQk"
+   },
+   "vision": {
+    "scan_points": 18,
+    "scan_points_with": {
+     "exit sign": 11,
+     "stairs": 0,
+     "fire extinguisher": 0,
+     "fire alarm pull station": 2
+    },
+    "image_urls": [
+     "/img/vision/jUnF84zghQk/000_2.jpg",
+     "/img/vision/jUnF84zghQk/001_3.jpg",
+     "/img/vision/jUnF84zghQk/002_0.jpg",
+     "/img/vision/jUnF84zghQk/002_1.jpg",
+     "/img/vision/jUnF84zghQk/002_2.jpg",
+     "/img/vision/jUnF84zghQk/004_1.jpg",
+     "/img/vision/jUnF84zghQk/005_2.jpg",
+     "/img/vision/jUnF84zghQk/005_3.jpg",
+     "/img/vision/jUnF84zghQk/007_0.jpg",
+     "/img/vision/jUnF84zghQk/007_1.jpg",
+     "/img/vision/jUnF84zghQk/008_0.jpg",
+     "/img/vision/jUnF84zghQk/009_1.jpg"
+    ]
+   },
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire dept: working structure fire on floor 36, Wells Fargo Plaza, 1000 Louisiana St. Please meet the fire crew at the building with keys and fire control room access."
+    }
+   ],
+   "tenant_flags": [
+    {
+     "tenant": "CME Group",
+     "floor": 36,
+     "risk": "Known occupants on the fire floor",
+     "why": "This tenant is on floor 36, the fire floor. The data lists 16 employees in 2,424 sq ft. That is a normal office load, but it gives a headcount to check during search and evacuation. The data does not show any vulnerable occupants or hazardous materials.",
+     "from_name_only": false
+    },
+    {
+     "tenant": "Morgan Lewis",
+     "floor": 38,
+     "risk": "Occupants two floors above the fire",
+     "why": "This tenant is on floor 38, above the fire, so smoke and evacuation could affect them. There is no description or headcount. The name suggests a law firm, which would usually be a regular office, but that is a guess from the name only. Nothing points to hazardous materials or vulnerable occupants.",
+     "from_name_only": true
+    }
+   ],
+   "call": "Working structure fire on the 36th floor, 1000 Louisiana St, Houston."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Working structure fire on the 36th floor, 1000 Louisiana St, Houston.\"}\n{\"t\": 0.22, \"step\": \"address_lookup\", \"detail\": \"1000 Louisiana St, Houston -> 233899\"}\n{\"t\": 3.32, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"1000 Louisiana St, Houston\\\"}\"}\n{\"t\": 3.61, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/fire/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 3.68, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 7.66, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 233899, \\\"floor\\\": 36, \\\"incident\\\": \\\"fire\\\", \\\"incident_type\\\": \\\"structure_fire\\\"}\"}\n{\"t\": 7.74, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/233899.md\\\"}\"}\n{\"t\": 19.07, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: working structure fire, floor 36, Wells Fargo Plaza, 1000 Louisiana St, Houston (71 stories, property 233899). Flag vulnerable occupants, haz\"}\n{\"t\": 19.26, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Incident: working structure fire, floor 36, Wells Fargo Plaza, 1000 Louisiana St, Houston, TX. Data shows passenger and freight elevators on record (\"}\n{\"t\": 19.34, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"inside-scout\\\", \\\"description\\\": \\\"Scan id jUnF84zghQk (floor 36, Wells Fargo Plaza, 1000 Louisiana St, Houston). Working structure fire on this floor. Find the nearest fire alarm pull \"}\n{\"t\": 19.49, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"outside-scout\\\", \\\"description\\\": \\\"Property id 233899 (Wells Fargo Plaza, 1000 Louisiana St, Houston, 71 stories). Incident: working structure fire on floor 36. Report live wind (direc\"}\n{\"t\": 21.52, \"step\": \"helper:outside_now\", \"detail\": \"{\\\"property_id\\\": 233899}\"}\n{\"t\": 21.61, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"jUnF84zghQk\\\", \\\"target\\\": \\\"fire alarm pull station\\\"}\"}\n{\"t\": 21.69, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"jUnF84zghQk\\\", \\\"target\\\": \\\"exit sign\\\"}\"}\n{\"t\": 24.12, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire dept: working structure fire on floor 36, Wells Fargo Plaza, 1000 Louisiana St. Please meet the fire crew at the building with keys and fire control room acces\"}\n{\"t\": 44.6, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 233899, \\\"note\\\": \\\"FIRE: working structure fire floor 36 (CME Group, ~16 office), call gave no alarm/smoke/flame details. Briefing sent; ~1994 above on 37-71; elevator counts and recall \"}\n{\"t\": 80.98, \"step\": \"graded\", \"detail\": \"needs_revision - Remove 'text queued for CBRE prop mgr (not sent)' from the BUILDING line. The property manager is listed under 'Left for MORE', and a queued-text status is not a fire briefing line.\"}\n{\"t\": 81.07, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 81.15, \"step\": \"usage\", \"detail\": \"164270 in / 9081 out tokens, ~$0.84\"}\n{\"t\": 81.22, \"step\": \"done\", \"detail\": \"8 lines, 2 images\"}\n"
+}

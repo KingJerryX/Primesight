@@ -2,16 +2,16 @@
  "case": "234022_Fv5Q2P8Kmsf",
  "incident": "fall",
  "sent": "Fall on the 6th floor, 363 Sam Houston Pky, Houston.",
- "text": "PRIMESIGHT  |  FALL / INJURY  |  FLOOR 6\nNorthbelt - 363 Sam Houston Pky, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: Unknown tenant (ste 600); Dream Counseling Center (ste 605); Tax Services Of Houston LLC (ste 610) +3 more\nPROPERTY MGR: Realty.com 5559806802\nNOT KNOWN: AED location, where the stretcher elevator is\nReply MORE for the rest, or ask a question.",
- "source": "draft",
- "score": 74,
+ "text": "PRIMESIGHT | FALL / INJURY | FLOOR 6\nNorthbelt - 363 Sam Houston Pky, Houston, TX\nELEVATOR: 1 freight car on record (fits a stretcher), plus 7 passenger\nON FLOOR: 6 tenants, ste 600-660; largest Crystal CoWorks ste 660 (coworking, from name only); no headcount\nMEET: property mgr Realty.com 555-980-6802; text queued for property manager (not sent)\nFALL: how/height, what struck (head, neck, back), conscious/breathing/bleeding: not stated in call\nNOT KNOWN: patient's suite, AED location, where the freight car is\nReply MORE for the rest, or ask a question.",
+ "source": "agent",
+ "score": 92,
  "out_of": 100,
  "parts": {
   "location": 35,
   "emergency": 10,
-  "needs": 8,
+  "needs": 25,
   "accuracy": 15,
-  "delivery": 6
+  "delivery": 7
  },
  "checks": [
   {
@@ -35,13 +35,13 @@
   {
    "part": "needs",
    "item": "head injury",
-   "ok": false,
+   "ok": true,
    "why": "from the call: she hit her head"
   },
   {
    "part": "needs",
    "item": "confused, bleeding",
-   "ok": false,
+   "ok": true,
    "why": "from the call: she is confused and bleeding"
   },
   {
@@ -53,84 +53,94 @@
  ],
  "claims": [
   {
-   "claim": "The building is Northbelt at 363 Sam Houston Pky, Houston, TX.",
+   "claim": "Building is Northbelt at 363 Sam Houston Pky, Houston, TX",
    "verdict": "supported",
-   "evidence": "Name Northbelt; address 363 Sam Houston Pky, Houston, TX."
+   "evidence": "Name Northbelt; address 363 Sam Houston Pky, Houston, TX"
   },
   {
-   "claim": "A freight elevator is on record for the building.",
+   "claim": "The building has 1 freight elevator",
    "verdict": "supported",
-   "evidence": "elevators: Freight 1 (Passenger 7)."
+   "evidence": "elevators: Freight 1"
   },
   {
-   "claim": "The freight car fits a stretcher.",
-   "verdict": "not_in_data",
-   "evidence": "No car dimensions or stretcher capacity in the record."
-  },
-  {
-   "claim": "An unknown tenant is on floor 6.",
+   "claim": "The building has 7 passenger elevators",
    "verdict": "supported",
-   "evidence": "tenants_on_floor includes 'Unknown tenant'."
+   "evidence": "elevators: Passenger 7"
   },
   {
-   "claim": "The unknown tenant is in suite 600.",
+   "claim": "The freight car fits a stretcher",
    "verdict": "not_in_data",
-   "evidence": "No suite numbers in the tenant data."
+   "evidence": "No elevator dimensions or stretcher capacity in the data"
   },
   {
-   "claim": "Dream Counseling Center is on floor 6.",
+   "claim": "There are 6 tenants on floor 6",
    "verdict": "supported",
-   "evidence": "tenants_on_floor includes Dream Counseling Center."
+   "evidence": "tenants_on_floor lists 6 entries, one of them 'Unknown tenant'"
   },
   {
-   "claim": "Dream Counseling Center is in suite 605.",
+   "claim": "Tenant suites on the floor run from ste 600 to 660",
    "verdict": "not_in_data",
-   "evidence": "No suite numbers in the tenant data."
+   "evidence": "No suite numbers in the data"
   },
   {
-   "claim": "Tax Services Of Houston LLC is on floor 6.",
+   "claim": "Crystal CoWorks is the largest tenant on the floor",
+   "verdict": "not_in_data",
+   "evidence": "All tenant employee counts are null, so size can't be compared"
+  },
+  {
+   "claim": "Crystal CoWorks is in suite 660",
+   "verdict": "not_in_data",
+   "evidence": "No suite numbers in the data"
+  },
+  {
+   "claim": "Crystal CoWorks is a coworking business (inferred from name only)",
+   "verdict": "not_in_data",
+   "evidence": "Industry 'Unknown', about null; message admits name-only inference"
+  },
+  {
+   "claim": "No headcount is available for the floor",
    "verdict": "supported",
-   "evidence": "tenants_on_floor includes Tax Services Of Houston LLC."
+   "evidence": "employees null for every tenant on floor"
   },
   {
-   "claim": "Tax Services Of Houston LLC is in suite 610.",
+   "claim": "The property manager is Realty.com",
    "verdict": "not_in_data",
-   "evidence": "No suite numbers in the tenant data."
+   "evidence": "Contacts only list 'Property manager', with no company name"
   },
   {
-   "claim": "Three more tenants are on the floor beyond the three listed.",
+   "claim": "The property manager's phone number is 555-980-6802",
+   "verdict": "not_in_data",
+   "evidence": "Contacts list has no phone number"
+  },
+  {
+   "claim": "The patient's suite is not known",
+   "verdict": "not_in_data",
+   "evidence": "Data has no patient or suite information"
+  },
+  {
+   "claim": "The AED location is not known",
    "verdict": "supported",
-   "evidence": "6 tenants on floor; 3 listed, so 3 more."
+   "evidence": "No AED information in the data"
   },
   {
-   "claim": "The property manager is Realty.com, phone 5559806802.",
-   "verdict": "not_in_data",
-   "evidence": "contacts lists only 'Property manager'; no name or number."
-  },
-  {
-   "claim": "The AED location is not known.",
-   "verdict": "not_in_data",
-   "evidence": "No AED information in the record."
-  },
-  {
-   "claim": "The location of the stretcher elevator is not known.",
-   "verdict": "not_in_data",
-   "evidence": "No elevator locations in the record; only counts."
+   "claim": "The location of the freight car is not known",
+   "verdict": "supported",
+   "evidence": "No elevator locations in the data"
   }
  ],
  "delivery": {
-  "score": 6,
+  "score": 7,
   "nature_and_location_up_front": true,
   "severity_stated": false,
-  "feedback": "State severity in line one, e.g. 'woman ~60s, head injury, confused, bleeding, can't get up', and cut the tenant list."
+  "feedback": "Open with severity right after nature and address, for example 'head injury, confused, bleeding, can't stand', and cut the filler and extra detail."
  },
  "feedback": [
-  "Your message never says how hurt she is. Put it in line one: woman in her 60s, fell from a ladder, hit her head, confused, bleeding, can't get up.",
-  "You made up details that aren't in the building record: suite numbers 600, 605 and 610, the property manager's name and phone number, and that the freight car fits a stretcher. A crew could act on these. Send only what the record shows.",
-  "Don't send a tenant list. Say which elevator to use, and say that the record has no suite numbers or elevator locations. Also say the caller is by the elevators on floor 6."
+  "The message says conscious and bleeding were 'not stated in call', but the caller said it. She hit her head, she's awake but confused, she's bleeding, she can't get up, and she's in her sixties. Put that in right after the address.",
+  "Several details aren't in the building data: suites 600-660, Crystal CoWorks as the largest tenant in ste 660, 'Realty.com' with the phone number 555-980-6802, and the freight car fitting a stretcher. Send only what the data shows, and mark the rest unknown.",
+  "Cut the filler and the headcount and tenant detail that don't help the crew. Give the elevator, the stairs if there's no elevator, and the caller's note that she is by the elevators."
  ],
  "suggestions_queued": 2,
- "brief_s": 1.6,
- "cost_usd": 0.1185,
- "built": "2026-11-15 01:07"
+ "brief_s": 46.3,
+ "cost_usd": 0.695,
+ "built": "2026-11-15 04:44"
 }

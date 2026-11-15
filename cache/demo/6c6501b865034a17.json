@@ -1,0 +1,379 @@
+{
+ "text": "Fall / injury on the 6th floor, 363 Sam Houston Pky, Houston.",
+ "out": {
+  "briefing": "PRIMESIGHT | FALL / INJURY | FLOOR 6\nNorthbelt - 363 N Sam Houston Pky E, Houston, TX\nELEVATOR: 1 freight car on record (fits a stretcher), plus 7 passenger\nFALL: how they fell, what they struck, conscious/breathing/bleeding: not stated in call\nON FLOOR: 6 suites 600-660; largest Crystal CoWorks 660 (possible coworking); no headcounts\nMEET: property manager Realty.com 555-980-6802, text queued for property manager (not sent)\nNOT KNOWN: patient's suite, AED location, where the freight elevator is\nReply MORE for the rest, or ask a question.",
+  "images": [
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\234022_Fv5Q2P8Kmsf_plan_marked.jpg",
+   "C:\\Users\\start\\Desktop\\Projects\\HackPrinceton\\output\\234022_aerial_approach.jpg"
+  ],
+  "image_urls": [
+   "/img/234022_Fv5Q2P8Kmsf_plan_marked.jpg",
+   "/img/234022_aerial_approach.jpg"
+  ],
+  "property_id": 234022,
+  "texts": [
+   {
+    "to": "property manager",
+    "text": "Fire Dept: EMS en route for a fall injury on floor 6, Northbelt 363 Sam Houston Pky. Please meet EMS at front entrance with freight elevator held in lobby. Where is the AED, if any?"
+   }
+  ],
+  "tenant_flags": [
+   {
+    "tenant": "Dream Counseling Center (Suite 605)",
+    "floor": 6,
+    "risk": "possible (from name only): vulnerable occupants. Counseling clients, possibly people in emotional distress, may be in the suite.",
+    "why": "The name suggests a counseling or mental health practice on the incident floor. Crews may meet clients in distress, so a calm approach and attention to privacy may help. There is no description or industry data to confirm this.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Crystal CoWorks (Suite 660)",
+    "floor": 6,
+    "risk": "possible (from name only): higher and changing occupancy. This may be a shared coworking space with many unrelated occupants and visitors.",
+    "why": "It is the largest suite on floor 6 at 4,536 sq ft, and the name suggests coworking. That could mean more people in the corridors and in the way of patient access or carry-out. No headcount is given.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Safe Have Mental Health Solutions",
+    "floor": 7,
+    "risk": "possible (from name only): vulnerable occupants. Mental health clients may be present.",
+    "why": "This is one floor above the incident. It matters only if crews stage there, the patient's location is uncertain, or a client is involved. No description is provided.",
+    "from_name_only": true
+   },
+   {
+    "tenant": "Resolurions Hospice",
+    "floor": 5,
+    "risk": "possible (from name only): likely an administrative office. Seriously ill patients are probably not on site, but this is not confirmed.",
+    "why": "Hospice providers usually care for patients at home, so this suite is probably office staff. It is listed only because it is one floor below the incident and no description confirms what goes on there. No sign of stored medical supplies or hazmat.",
+    "from_name_only": true
+   }
+  ],
+  "_facts": {
+   "incident": "medical",
+   "floor": 6,
+   "building": {
+    "name": "Northbelt",
+    "address": "363 Sam Houston Pky, Houston, TX",
+    "stories": 20,
+    "year_built": 1981,
+    "construction": "Steel",
+    "sprinklers": "yes"
+   },
+   "floors": [
+    {
+     "floor": 1,
+     "people": 0,
+     "tenants": [
+      "Cinco And Tres Coffee",
+      "Designs Can Empower Llc",
+      "Realty.com Commercial"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 2,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 3,
+     "people": 17,
+     "tenants": [
+      "BB&W Architects",
+      "Gaspy Hospice, Inc",
+      "Slayistry"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 4,
+     "people": 9,
+     "tenants": [
+      "ByGod's Grace Financial",
+      "Healistic Touch And Luxe Legacy",
+      "NewU Beauty",
+      "Styled By Slimm",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 5,
+     "people": 25,
+     "tenants": [
+      "Borusan Pipe",
+      "Resolurions Hospice"
+     ],
+     "scanned": true,
+     "seen": null
+    },
+    {
+     "floor": 6,
+     "people": 0,
+     "tenants": [
+      "Crystal CoWorks",
+      "Dream Counseling Center",
+      "H5 Strategic Alliances",
+      "Tax Services Of Houston LLC",
+      "The Count It All Joy Tax Group",
+      "Unknown tenant"
+     ],
+     "scanned": true,
+     "seen": {
+      "scan_points": 12,
+      "exit sign": 10,
+      "stairs": 0,
+      "fire extinguisher": 0,
+      "fire alarm pull station": 5
+     }
+    },
+    {
+     "floor": 7,
+     "people": 49,
+     "tenants": [
+      "Celo Trade Inc",
+      "Meiko America Inc",
+      "Morgan Systems Intl Inc",
+      "PPC Insulators",
+      "Safe Have  Mental Health Solutions",
+      "The Executive Tax Lounge"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 8,
+     "people": 36,
+     "tenants": [
+      "Criaco & Samperi",
+      "Hooper, Langley & Associates, P.C.",
+      "Transocean Shipping"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 9,
+     "people": 4,
+     "tenants": [
+      "AP TK Hair",
+      "DeLa Dweer Hair",
+      "Diverse Destination",
+      "Front Cover Hair Studios",
+      "SV Beauty And Spa",
+      "Studio Nine Salon Suites",
+      "Unknown tenant",
+      "Upperhairchelon And Spa"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 10,
+     "people": 14,
+     "tenants": [
+      "AP Consulting TX LLC",
+      "Advanced Chiropractic Relief",
+      "Bellaire Wellness Center",
+      "InkMore Studios",
+      "Obex Worldwide Limited",
+      "The Art Artistry Beauty Suites",
+      "Unknown tenant"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 11,
+     "people": 2,
+     "tenants": [
+      "Regus"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 12,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 13,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 14,
+     "people": 30,
+     "tenants": [
+      "A And S Multi Service",
+      "Ameriprise Financial, Inc.",
+      "Beyond BeautyAcademy",
+      "Jewels Beauty LLC",
+      "The Wallace Law Firm"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 15,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 16,
+     "people": 5,
+     "tenants": [
+      "Argo Texas Group",
+      "Emerald Studio Suites",
+      "Square Biz Solutions"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 17,
+     "people": 6,
+     "tenants": [
+      "All The Rave",
+      "The Pink Spa And Lounge",
+      "Vip Spa"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 18,
+     "people": 10,
+     "tenants": [
+      "Count It All Joy LLC",
+      "Strategic Growth Alliance 366"
+     ],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 19,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    },
+    {
+     "floor": 20,
+     "people": 0,
+     "tenants": [],
+     "scanned": false,
+     "seen": null
+    }
+   ],
+   "hydrants": [
+    {
+     "m": 137,
+     "dir": "NE",
+     "lat": 29.942778928383923,
+     "lon": -95.39611704675329
+    }
+   ],
+   "staging": [
+    {
+     "m": 562,
+     "dir": "SW",
+     "lat": 29.938572839999996,
+     "lon": -95.401496885,
+     "score": 0.249
+    },
+    {
+     "m": 308,
+     "dir": "E",
+     "lat": 29.9415479,
+     "lon": -95.39394378499999,
+     "score": 0.228
+    },
+    {
+     "m": 387,
+     "dir": "E",
+     "lat": 29.940952895,
+     "lon": -95.39325714,
+     "score": 0.224
+    }
+   ],
+   "scan": {
+    "floor": 6,
+    "exact": true,
+    "link": "https://my.matterport.com/show/?m=Fv5Q2P8Kmsf"
+   },
+   "vision": {
+    "scan_points": 12,
+    "scan_points_with": {
+     "exit sign": 10,
+     "stairs": 0,
+     "fire extinguisher": 0,
+     "fire alarm pull station": 5
+    },
+    "image_urls": [
+     "/img/vision/Fv5Q2P8Kmsf/000_1.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/001_2.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/001_3.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/002_0.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/003_1.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/003_3.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/004_0.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/004_1.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/004_2.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/005_0.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/005_2.jpg",
+     "/img/vision/Fv5Q2P8Kmsf/006_1.jpg"
+    ]
+   },
+   "texts": [
+    {
+     "to": "property manager",
+     "text": "Fire Dept: EMS en route for a fall injury on floor 6, Northbelt 363 Sam Houston Pky. Please meet EMS at front entrance with freight elevator held in lobby. Where is the AED, if any?"
+    }
+   ],
+   "tenant_flags": [
+    {
+     "tenant": "Dream Counseling Center (Suite 605)",
+     "floor": 6,
+     "risk": "possible (from name only): vulnerable occupants. Counseling clients, possibly people in emotional distress, may be in the suite.",
+     "why": "The name suggests a counseling or mental health practice on the incident floor. Crews may meet clients in distress, so a calm approach and attention to privacy may help. There is no description or industry data to confirm this.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Crystal CoWorks (Suite 660)",
+     "floor": 6,
+     "risk": "possible (from name only): higher and changing occupancy. This may be a shared coworking space with many unrelated occupants and visitors.",
+     "why": "It is the largest suite on floor 6 at 4,536 sq ft, and the name suggests coworking. That could mean more people in the corridors and in the way of patient access or carry-out. No headcount is given.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Safe Have Mental Health Solutions",
+     "floor": 7,
+     "risk": "possible (from name only): vulnerable occupants. Mental health clients may be present.",
+     "why": "This is one floor above the incident. It matters only if crews stage there, the patient's location is uncertain, or a client is involved. No description is provided.",
+     "from_name_only": true
+    },
+    {
+     "tenant": "Resolurions Hospice",
+     "floor": 5,
+     "risk": "possible (from name only): likely an administrative office. Seriously ill patients are probably not on site, but this is not confirmed.",
+     "why": "Hospice providers usually care for patients at home, so this suite is probably office staff. It is listed only because it is one floor below the incident and no description confirms what goes on there. No sign of stored medical supplies or hazmat.",
+     "from_name_only": true
+    }
+   ],
+   "call": "Fall / injury on the 6th floor, 363 Sam Houston Pky, Houston."
+  }
+ },
+ "trace": "{\"t\": 0.0, \"step\": \"call_received\", \"detail\": \"Fall / injury on the 6th floor, 363 Sam Houston Pky, Houston.\"}\n{\"t\": 0.23, \"step\": \"address_lookup\", \"detail\": \"363 N Sam Houston Pky E, Houston -> 234022\"}\n{\"t\": 3.26, \"step\": \"find_building\", \"detail\": \"{\\\"address\\\": \\\"363 Sam Houston Pky, Houston\\\"}\"}\n{\"t\": 3.32, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/skills/medical/SKILL.md\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 3.4, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/incidents.json\\\", \\\"limit\\\": 1000}\"}\n{\"t\": 5.98, \"step\": \"gather_building\", \"detail\": \"{\\\"property_id\\\": 234022, \\\"floor\\\": 6, \\\"incident\\\": \\\"medical\\\", \\\"incident_type\\\": \\\"fall\\\"}\"}\n{\"t\": 6.07, \"step\": \"read_file\", \"detail\": \"{\\\"file_path\\\": \\\"/buildings/234022.md\\\"}\"}\n{\"t\": 17.64, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"tenant-risk\\\", \\\"description\\\": \\\"Incident: medical, fall/injury on floor 6, Northbelt, 363 Sam Houston Pky, Houston TX (property 234022). Analyze only; flag occupants that change the m\"}\n{\"t\": 17.71, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"notify-writer\\\", \\\"description\\\": \\\"Write and queue a short text (do not claim it was sent). Incident: medical, fall/injury, floor 6 (suite not given). Address: Northbelt, 363 Sam Houst\"}\n{\"t\": 17.79, \"step\": \"task\", \"detail\": \"{\\\"subagent_type\\\": \\\"inside-scout\\\", \\\"description\\\": \\\"Scan id Fv5Q2P8Kmsf (property 234022, floor 6, exact floor). Medical fall call. Find the nearest exit sign(s) and note whether any stairs were detecte\"}\n{\"t\": 19.82, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"Fv5Q2P8Kmsf\\\", \\\"target\\\": \\\"exit sign\\\"}\"}\n{\"t\": 19.89, \"step\": \"helper:walk_to\", \"detail\": \"{\\\"scan_id\\\": \\\"Fv5Q2P8Kmsf\\\", \\\"target\\\": \\\"stairs\\\"}\"}\n{\"t\": 26.42, \"step\": \"helper:queue_text\", \"detail\": \"{\\\"to\\\": \\\"property manager\\\", \\\"text\\\": \\\"Fire Dept: EMS en route for a fall injury on floor 6, Northbelt 363 Sam Houston Pky. Please meet EMS at front entrance with freight elevator held in lobby. Where is\"}\n{\"t\": 35.31, \"step\": \"add_building_note\", \"detail\": \"{\\\"property_id\\\": 234022, \\\"note\\\": \\\"Medical/fall call, floor 6, suite and fall details not given. Briefed: 1 freight + 7 passenger elevators on record; text queued for property manager Realty.com (not se\"}\n{\"t\": 52.01, \"step\": \"edit_file\", \"detail\": \"{\\\"file_path\\\": \\\"/playbook/AGENTS.md\\\", \\\"old_string\\\": \\\"- If the floor map is from a different floor, the line that mentions it says so.\\\", \\\"new_string\\\": \\\"- If the floor map is from a different floor, the \"}\n{\"t\": 65.12, \"step\": \"graded\", \"detail\": \"needs_revision - The first fact line is the FALL details line. For a medical call the ELEVATOR line (freight car fits a stretcher) must come first; move the FALL line after it.\"}\n{\"t\": 65.42, \"step\": \"graded\", \"detail\": \"satisfied\"}\n{\"t\": 65.47, \"step\": \"usage\", \"detail\": \"177718 in / 7652 out tokens, ~$0.86\"}\n{\"t\": 65.57, \"step\": \"done\", \"detail\": \"8 lines, 2 images\"}\n"
+}

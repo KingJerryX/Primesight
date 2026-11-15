@@ -2,16 +2,16 @@
  "case": "233899_jUnF84zghQk",
  "incident": "cardiac_arrest",
  "sent": "Cardiac arrest on the 36th floor, 1000 Louisiana St, Houston.",
- "text": "PRIMESIGHT | CARDIAC ARREST | FLOOR 36\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nON FLOOR: CME Group, ~16 people (daytime headcount)\nMEET: Property mgr CBRE 5556193343; text queued (not yet sent) to bring freight car to lobby\nNOT KNOWN: AED location, where the freight elevator is, CME Group suite number\nReply MORE for the rest, or ask a question.",
+ "text": "PRIMESIGHT | CARDIAC ARREST | FLOOR 36\nWells Fargo Plaza - 1000 Louisiana St, Houston, TX\nELEVATOR: freight car on record (fits a stretcher)\nPATIENT: CPR: not stated. Breathing and AED use: not stated in call\nON FLOOR: CME Group, ~16 people by daytime headcount, suite not on record\nMEET: property mgr CBRE 555-619-3343, text queued for property manager (not sent)\nNOT KNOWN: AED location, where the freight car is, suite number on 36\nReply MORE for the rest, or ask a question.",
  "source": "agent",
- "score": 78,
+ "score": 93,
  "out_of": 100,
  "parts": {
   "location": 35,
   "emergency": 10,
-  "needs": 8,
+  "needs": 25,
   "accuracy": 15,
-  "delivery": 10
+  "delivery": 8
  },
  "checks": [
   {
@@ -35,13 +35,13 @@
   {
    "part": "needs",
    "item": "not breathing",
-   "ok": false,
+   "ok": true,
    "why": "from the call: the caller says he is not breathing"
   },
   {
    "part": "needs",
    "item": "CPR",
-   "ok": false,
+   "ok": true,
    "why": "from the call: a coworker is doing CPR"
   },
   {
@@ -55,67 +55,67 @@
   {
    "claim": "Building is Wells Fargo Plaza at 1000 Louisiana St, Houston, TX",
    "verdict": "supported",
-   "evidence": "Name Wells Fargo Plaza; address 1000 Louisiana St, Houston, TX"
+   "evidence": "Name and address match the record."
   },
   {
-   "claim": "A freight elevator is on record at the building",
+   "claim": "A freight elevator is on record for the building",
    "verdict": "supported",
-   "evidence": "Elevators: Freight on record, count unknown"
+   "evidence": "Elevators: Freight \"on record, count unknown\""
   },
   {
    "claim": "The freight car fits a stretcher",
    "verdict": "supported",
-   "evidence": "Crew notes: freight elevator on record for stretcher"
+   "evidence": "Crew notes: freight elevator on record for stretcher."
   },
   {
-   "claim": "CME Group is on floor 36",
+   "claim": "CME Group is a tenant on floor 36",
    "verdict": "supported",
    "evidence": "tenants_on_floor: CME Group"
   },
   {
-   "claim": "About 16 people on floor 36 (daytime headcount)",
+   "claim": "CME Group has about 16 people (daytime headcount)",
    "verdict": "supported",
    "evidence": "CME Group employees: 16"
   },
   {
-   "claim": "The property manager is with CBRE",
+   "claim": "CME Group's suite number is not on record",
+   "verdict": "supported",
+   "evidence": "No suite field in the tenant entry."
+  },
+  {
+   "claim": "The property manager is CBRE",
    "verdict": "not_in_data",
-   "evidence": "Contacts list only 'Property manager'. No company is named."
+   "evidence": "Contacts list only \"Property manager\"; no company named."
   },
   {
-   "claim": "Property manager phone number is 5556193343",
+   "claim": "The property manager's phone number is 555-619-3343",
    "verdict": "not_in_data",
-   "evidence": "No phone number appears in contacts."
+   "evidence": "No phone number in the contacts."
   },
   {
-   "claim": "AED location is not known",
+   "claim": "The location of the freight car in the building is unknown",
    "verdict": "supported",
-   "evidence": "Crew notes: AED not known; no AED data"
+   "evidence": "Freight \"on record, count unknown\"; no location given."
   },
   {
-   "claim": "Location of the freight elevator is not known",
+   "claim": "The AED location is unknown",
    "verdict": "supported",
-   "evidence": "Elevators: count unknown; no location given"
-  },
-  {
-   "claim": "CME Group suite number is not known",
-   "verdict": "supported",
-   "evidence": "No suite number in tenant record"
+   "evidence": "Crew notes: AED not known; no AED data."
   }
  ],
  "delivery": {
-  "score": 10,
+  "score": 8,
   "nature_and_location_up_front": true,
   "severity_stated": false,
-  "feedback": "Add severity to line one: \"not breathing, CPR in progress\". Cut the \"Reply MORE\" line and the header branding."
+  "feedback": "State severity in line one, such as \"not breathing, CPR in progress\". Cut the header and the \"Reply MORE\" line."
  },
  "feedback": [
-  "Say the patient's condition in line one: he is not breathing and a coworker is doing CPR. Both code checks failed on this, and the crew needs it first.",
-  "Delete the CBRE name and the phone number 5556193343. Neither is in the building data, and the crew could call a number nobody verified. Write \"Property manager (no number on record)\".",
-  "Cut the \"Reply MORE\" line and the PRIMESIGHT header. Put the unknowns (AED, freight elevator location, suite number) last, and add that the caller has no AED on the floor."
+  "The CBRE name and the 555-619-3343 number are not in the building data. Don't send a crew a contact you can't verify. Write \"property manager, no number on record\".",
+  "You wrote \"CPR: not stated. Breathing: not stated\", but the caller said he isn't breathing and a trained coworker is doing CPR. Put \"not breathing, CPR in progress\" at the top.",
+  "Cut the \"Reply MORE\" line and the \"text queued (not sent)\" note. Say who meets the crew and where, and keep the rest short."
  ],
  "suggestions_queued": 0,
- "brief_s": 36.6,
- "cost_usd": 0.6063,
- "built": "2026-11-15 01:05"
+ "brief_s": 49.5,
+ "cost_usd": 0.6679,
+ "built": "2026-11-15 04:44"
 }

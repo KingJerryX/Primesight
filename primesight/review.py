@@ -17,13 +17,12 @@ J = "application/json"
 
 
 def board(ideas, decisions):
-    """Each idea with its newest decision; an accepted idea may carry the reviewer's edited wording."""
+    """Each idea with its newest decision; the wording is the newest decision's edit, else the grader's own."""
     out = [{"i": i, **d, "state": "pending"} for i, d in enumerate(ideas)]
     for d in decisions:
         if isinstance(d.get("i"), int) and 0 <= d["i"] < len(out) and d.get("state") in STATES:
             out[d["i"]]["state"] = d["state"]
-            if d.get("what"):
-                out[d["i"]]["what"] = d["what"]
+            out[d["i"]]["what"] = d.get("what") or ideas[d["i"]]["what"]
     return out
 
 
@@ -43,7 +42,8 @@ def lessons():
     for d in ok:
         by.setdefault(d["incident"], []).append(d["what"])
     return "Playbook additions the team approved (use the ones that fit this call):\n" + "\n".join(
-        f"- {inc.replace('_', ' ')}: {w}" for inc, ws in sorted(by.items()) for w in dict.fromkeys(ws))
+        f"- {w}" if w.lower().startswith(inc.split("_")[0]) else f"- {inc.replace('_', ' ')}: {w}"
+        for inc, ws in sorted(by.items()) for w in dict.fromkeys(ws))  # no "fall: Fall: ..." when the wording names it
 
 
 def _allowed(key):
@@ -72,6 +72,7 @@ if __name__ == "__main__":
     b = board(a, [{"i": 0, "state": "accepted"}, {"i": 2, "state": "accepted"}, {"i": 2, "state": "dismissed"},
                   {"i": 1, "state": "accepted", "what": "say the fall height"}, {"i": 9, "state": "accepted"}, {"i": 0, "state": "bogus"}])
     assert [d["state"] for d in b] == ["accepted", "accepted", "dismissed"] and b[1]["what"] == "say the fall height", b
+    assert board(a, [{"i": 1, "state": "accepted", "what": "edited"}, {"i": 1, "state": "pending"}])[1]["what"] == "say the height"
     os.environ["PRIMESIGHT_REVIEW_KEY"] = "k" * 32
     assert post("/review/list", {"key": "nope"})[0] == 403 and post("/review/list", {})[0] == 403 and post("/other", {}) is None
     assert _allowed("k" * 32) and not _allowed(None) and not _allowed("k" * 31)
