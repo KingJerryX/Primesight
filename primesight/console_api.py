@@ -12,6 +12,8 @@ POST /game/go     {"round"}                 -> {"ok"}; starts that round's clock
 POST /game/answer {"round", "q", "answer"}  -> {"ok", "fact"}; a wrong report costs PENALTY seconds; the last right one adds "done"
 POST /game/name   {"round", "name"}         -> the leaderboard, with this top-10 run on it
 GET  /game/board                            -> [{"name", "seconds", "date"}], fastest first, 10 at most
+POST /game/grade  {"case", "incident", "call", "message"} -> the player's dispatch message graded (primesight/grader.py):
+                  {"score", "out_of", "parts", "checks", "claims", "delivery", "feedback", "suggestions_queued"}
 """
 import json, math, os, random, re, tempfile, threading, time, uuid
 from concurrent.futures import ThreadPoolExecutor
@@ -261,6 +263,11 @@ def save_name(rid, name):
         return top
 
 
+def _grade(body):
+    from .grader import grade
+    return grade(body.get("case"), body.get("incident"), body.get("call", ""), body.get("message"))
+
+
 def post(path, body):
     """(status, body, content type) for a game POST, or None if the path isn't one."""
     if not path.startswith("/game/"):
@@ -268,7 +275,8 @@ def post(path, body):
     body = body if isinstance(body, dict) else {}
     out = {"/game/start": lambda: start(body.get("avoid")), "/game/go": lambda: go(body.get("round")),
            "/game/answer": lambda: answer(body.get("round"), body.get("q"), body.get("answer")),
-           "/game/name": lambda: save_name(body.get("round"), body.get("name"))}.get(path, lambda: None)()
+           "/game/name": lambda: save_name(body.get("round"), body.get("name")),
+           "/game/grade": lambda: _grade(body)}.get(path, lambda: None)()
     return (200, out, JSON) if out is not None else (400, {"error": "no such round or route, or the round or name doesn't qualify"}, JSON)
 
 
